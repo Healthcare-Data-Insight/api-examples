@@ -1,6 +1,8 @@
 import requests
 import env
-
+'''
+Upload files and get loaded claims
+'''
 
 def rebuild_analytics(api_url):
     api_url += '/analytics/rebuild'
@@ -8,19 +10,24 @@ def rebuild_analytics(api_url):
     requests.post(api_url, {'async': 'true'})
 
 
-def upload_files(api_url, file):
+def upload_files(api_url, files):
     files_api_url = api_url + '/files'
-    print('Uploading {} to {}'.format(file, files_api_url))
-    file_upload_response = requests.post(files_api_url, files={'files': open(file, 'rb')})
+
+    # we need to pass an array of tuples (field_name, file-like obj)
+    # The field name is always 'files'
+    field_and_file_objects=[]
+    for f in files:
+        field_and_file_objects.append(('files',  open(f, 'rb')))
+    file_upload_response = requests.post(files_api_url, files=field_and_file_objects)
     # Rebuild analytics after the upload
     rebuild_analytics(api_url)
     return file_upload_response.json()
 
 
-test_files_dir = "../../sample_files"
-test_file = test_files_dir + "/837/prof-encounter.dat"
-
-upload_info = upload_files(env.api_url, test_file)
+test_files_dir = '../../edi_files/837'
+# Upload multiple files. Files are processed in parallel, so it is always faster to upload multiple than one by one
+files_to_upload=[test_files_dir + '/prof-encounter.dat', test_files_dir + '/anesthesia.dat']
+upload_info = upload_files(env.api_url, files_to_upload)
 file_infos = upload_info['files']
 for file_info in file_infos:
     print('Getting claims for file {}'.format(file_info['name']))
@@ -32,4 +39,4 @@ for file_info in file_infos:
         pcn = claim['patientControlNumber']
         charge = claim['chargeAmount']
         billing_npi = claim['billingProvider']['identifier']
-        print("Claim {} from {} for the amount {}".format(pcn, billing_npi, charge))
+        print('Claim {} from {} for the amount {}'.format(pcn, billing_npi, charge))
