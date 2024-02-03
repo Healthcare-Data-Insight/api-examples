@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+    <variable name="loggingDir" value="./logs"/>
+    <variable name="loggingFilename" value="clinsight"/>
+    <variable name="ediLoggingFilename" value="submitted_edi"/>
+    <variable name="feedbackFilename" value="feedback"/>
+
+    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>DEBUG</level>
+        </filter>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%date{MM-dd HH:mm:ss.SSS} %-1.-1level %-10.10thread %-23.23(%logger{16}) | %message%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="logfileout" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <append>true</append>
+        <file>${loggingDir}/${loggingFilename}.log</file>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%date{yyyy-MM-dd HH:mm:ss.SSS} %-1.-1level %-12.12thread %-28.28(%logger{16}):%line | %message%n
+            </pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <!-- rollover daily -->
+            <fileNamePattern>${loggingDir}/${loggingFilename}-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <maxFileSize>20MB</maxFileSize>
+            <maxHistory>120</maxHistory>
+            <totalSizeCap>50GB</totalSizeCap>
+        </rollingPolicy>
+    </appender>
+
+
+    <appender name="edifileout" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <append>true</append>
+        <file>${loggingDir}/${ediLoggingFilename}.log</file>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%date{yyyy-MM-dd HH:mm:ss.SSS} %-1.-1level %-12.12thread %-28.28(%logger{16}):%line | %message%n
+            </pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <!-- rollover daily -->
+            <fileNamePattern>${loggingDir}/${ediLoggingFilename}-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <maxFileSize>20MB</maxFileSize>
+            <maxHistory>120</maxHistory>
+            <totalSizeCap>50GB</totalSizeCap>
+        </rollingPolicy>
+    </appender>
+
+    <appender name="feedbackfileout" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <append>true</append>
+        <file>${loggingDir}/${feedbackFilename}.log</file>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%date{yyyy-MM-dd HH:mm:ss.SSS} %-1.-1level %-12.12thread %-28.28(%logger{16}):%line | %message%n
+            </pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <!-- rollover daily -->
+            <fileNamePattern>${loggingDir}/${feedbackFilename}-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <maxFileSize>20MB</maxFileSize>
+            <maxHistory>120</maxHistory>
+            <totalSizeCap>50GB</totalSizeCap>
+        </rollingPolicy>
+    </appender>
+
+    <logger name="pit" level="${clinsight-log-level:-INFO}"/>
+    <logger name="claiminsight" level="${clinsight-log-level:-INFO}"/>
+    <logger name="hdi" level="${clinsight-log-level:-INFO}"/>
+
+    <logger name="org" level="INFO"/>
+    <logger name="dev-webpack" level="INFO"/>
+
+    <!-- Fine tuning spring logging -->
+    <logger name="_org.springframework.web.servlet.HandlerMapping.Mappings" level="INFO"/>
+
+    <logger name="org.springframework.boot.test" level="WARN"/>
+    <logger name="org.springframework.test.context.support" level="WARN"/>
+    <logger name="org.hibernate.validator.internal" level="WARN"/>
+    <logger name="org.hibernate.jpa.internal" level="WARN"/>
+    <logger name="org.springframework.scheduling.concurrent" level="WARN"/>
+    <logger name="org.apache.cxf" level="WARN"/>
+
+    <!-- Spring JDBC -->
+    <logger name="org.springframework.jdbc.core.JdbcTemplate" level="INFO"/>
+
+    <!-- Vaadin -->
+    <!-- Suppress warning for loose labels -->
+    <logger name="com.vaadin.flow.component.html.Label" level="ERROR"/>
+
+    <logger name="com" level="INFO"/>
+    <logger name="net" level="INFO"/>
+    <logger name="io" level="INFO"/>
+    <logger name="reactor" level="INFO"/>
+    <logger name="netty" level="INFO"/>
+
+    <logger name="EdiLogger" level="INFO" additivity="false">
+        <appender-ref ref="edifileout"/>
+    </logger>
+
+    <logger name="EdiConsoleLogger" level="INFO">
+        <appender-ref ref="edifileout"/>
+    </logger>
+
+    <logger name="FeedbackLogger" level="INFO">
+        <appender-ref ref="feedbackfileout"/>
+    </logger>
+
+    <!--
+        <logger name="claiminsight.job" level="INFO">
+            <appender-ref ref="stdout-thread"/>
+            <appender-ref ref="logfileout"/>
+        </logger>
+
+        <logger name="claiminsight.edi.ingest" level="INFO">
+            <appender-ref ref="stdout-thread"/>
+            <appender-ref ref="logfileout"/>
+        </logger>
+    -->
+    <root level="DEBUG">
+        <appender-ref ref="stdout"/>
+        <appender-ref ref="logfileout"/>
+    </root>
+
+
+</configuration>

@@ -1,0 +1,25 @@
+plugins {
+    id 'java-library'
+}
+
+group = 'hdi'
+
+repositories {
+    mavenCentral()
+    maven {
+        url = 'https://repo.datainsight.health/repository/maven-releases/'
+    }
+}
+
+dependencies {
+    implementation 'hdi:edi:2.2.1'
+
+    testImplementation 'junit:junit:4.+'
+    testImplementation 'org.assertj:assertj-core:3.24.+'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
