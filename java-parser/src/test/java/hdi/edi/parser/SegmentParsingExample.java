@@ -1,10 +1,6 @@
 package hdi.edi.parser;
 
 import hdi.edi.legacyparser.SegmentType;
-import hdi.edi.parser.EdiParser;
-import hdi.edi.parser.EdiParsingResults;
-import hdi.edi.parser.EdiSeg;
-import hdi.edi.parser.Elt;
 import hdi.edi.parserhelper.SegMatcher;
 import org.junit.Before;
 import org.junit.Test;
@@ -16,11 +12,13 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SuppressWarnings("NewClassNamingConvention")
-public class SegmentParsingExample {
-
+public class SegmentParsingExample implements ParsingExampleHelper{
 
     private EdiParser parser;
 
+    /**
+     * Find segments by type
+     */
     @Test
     public void findSegments() {
         EdiParsingResults results = parser.parse();
@@ -40,6 +38,9 @@ public class SegmentParsingExample {
         assertThat(dateSegs).isNotEmpty();
     }
 
+    /**
+     * Iterate over a segment's elements
+     */
     @Test
     public void elementsForTheSegment() {
 
@@ -73,6 +74,9 @@ public class SegmentParsingExample {
 
     }
 
+    /**
+     * Print segments with indentation
+     */
     @Test
     public void printSegments() {
         EdiParsingResults results = parser.parse();
@@ -86,14 +90,8 @@ public class SegmentParsingExample {
 
     @Before
     public void setup(){
-        var ediFile837p = new File("../edi_files/837/prof-encounter.dat");
+        var ediFile837p = new File(EDI_FILES_DIR +"/837/prof-encounter.dat");
         parser = new EdiParser(ediFile837p);
-    }
-
-    private void assertNotNull(Object ... vals) {
-        for(var val:vals){
-            assertThat(val).isNotNull();
-        }
     }
 
 }
