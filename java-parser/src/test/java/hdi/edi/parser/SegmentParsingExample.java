@@ -12,7 +12,7 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SuppressWarnings("NewClassNamingConvention")
-public class SegmentParsingExample implements ParsingExampleHelper{
+public class SegmentParsingExample implements ParsingExampleHelper {
 
     private EdiParser parser;
 
@@ -50,16 +50,16 @@ public class SegmentParsingExample implements ParsingExampleHelper{
 
         // iterate over elts and do something with them based on name or position (CLM01, CLM05, etc)
         // position is defined by the spec, elements could be omitted. for CLM, positions are 1, 2, 5, 7, 8,9
-        String patientAccountNumber=null;
-        BigDecimal chargeAmount=null;
+        String patientAccountNumber = null;
+        BigDecimal chargeAmount = null;
         String medicareAssessmentCode = null;
         for (Elt elt : claimSeg.eltSet().elts()) {
 
             switch (elt.position()) {
                 // CLM01
-                case 1 -> patientAccountNumber=elt.stringVal();
+                case 1 -> patientAccountNumber = elt.stringVal();
                 // CLM02, charge amount
-                case 2 -> chargeAmount=elt.bigDecimalVal();
+                case 2 -> chargeAmount = elt.bigDecimalVal();
                 // CLM07, medicare assignment code
                 case 7 -> medicareAssessmentCode = elt.stringVal();
             }
@@ -89,8 +89,8 @@ public class SegmentParsingExample implements ParsingExampleHelper{
 
 
     @Before
-    public void setup(){
-        var ediFile837p = new File(EDI_FILES_DIR +"/837/prof-encounter.dat");
+    public void setup() {
+        var ediFile837p = new File(EDI_FILES_DIR + "/837/prof-encounter.dat");
         parser = new EdiParser(ediFile837p);
     }
 

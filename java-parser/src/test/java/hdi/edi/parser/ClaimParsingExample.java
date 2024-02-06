@@ -1,9 +1,6 @@
 package hdi.edi.parser;
 
-import hdi.edi.parser.EdiParser;
-import hdi.edi.parser.EdiParsingResults;
 import hdi.model.PlaceOfServiceType;
-import hdi.model.ServiceLine;
 import hdi.model.claim.Claim;
 import hdi.model.enumtype.UnitType;
 import hdi.model.orgperson.EntityRole;
@@ -11,17 +8,13 @@ import hdi.model.orgperson.EntityType;
 import hdi.model.orgperson.GenderType;
 import hdi.model.orgperson.OrgOrPerson;
 import hdi.model.patientsubscriber.PatientSubscriber;
-import hdi.model.payment.ClaimStatus;
-import hdi.model.payment.Payment;
 import org.junit.Test;
 
 import java.io.File;
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.List;
 
-import static hdi.TestFilesLocations.EDI_INST_TEST_FILE;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SuppressWarnings("NewClassNamingConvention")

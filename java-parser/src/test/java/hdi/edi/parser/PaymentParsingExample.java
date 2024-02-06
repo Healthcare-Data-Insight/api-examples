@@ -1,13 +1,6 @@
 package hdi.edi.parser;
 
-import hdi.model.PlaceOfServiceType;
-import hdi.model.claim.Claim;
-import hdi.model.enumtype.UnitType;
-import hdi.model.orgperson.EntityRole;
-import hdi.model.orgperson.EntityType;
-import hdi.model.orgperson.GenderType;
 import hdi.model.orgperson.OrgOrPerson;
-import hdi.model.patientsubscriber.PatientSubscriber;
 import hdi.model.payment.ClaimStatus;
 import hdi.model.payment.Payment;
 import org.junit.Test;
