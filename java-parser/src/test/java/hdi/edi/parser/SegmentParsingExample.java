@@ -1,13 +1,17 @@
 package hdi.edi.parser;
 
+import com.fasterxml.jackson.databind.JsonNode;
 import hdi.edi.legacyparser.SegmentType;
+import hdi.edi.parserhelper.EdiSegJsonConverter;
 import hdi.edi.parserhelper.SegMatcher;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.io.File;
 import java.math.BigDecimal;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -85,6 +89,31 @@ public class SegmentParsingExample implements ParsingExampleHelper {
         System.out.println(claimSeg.toFormattedStringWithChildren());
         // or print all segments using the static method
         System.out.println(EdiSeg.toFormattedStringWithChildren(claimSegs));
+    }
+
+    /**
+     * You can use Jackson JSON API instead of EdiSeg
+     * Each segment is an object with segment_id property;
+     */
+    @Test
+    public void convertToJson() {
+        EdiSegJsonConverter jsonConverter = new EdiSegJsonConverter();
+        EdiParsingResults results = parser.parse();
+        var rootNode = jsonConverter.convert(results.segs());
+        for (JsonNode tranOrIsa : rootNode) {
+            if ("ST".equals(tranOrIsa.get("segment_id").asText())) {
+                // find claim
+                for (var tranChildNode : tranOrIsa) {
+                    if ("CLM".equals(tranChildNode.path("segment_id").asText())) {
+                        System.err.println("CLM elements:");
+                        for (Iterator<Map.Entry<String, JsonNode>> it = tranChildNode.fields(); it.hasNext(); ) {
+                            var clmNodeAndName = it.next();
+                            System.err.println(clmNodeAndName.getKey() + ": " + clmNodeAndName.getValue());
+                        }
+                    }
+                }
+            }
+        }
     }
 
 

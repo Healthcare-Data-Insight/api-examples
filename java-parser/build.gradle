@@ -12,11 +12,12 @@ repositories {
 }
 
 dependencies {
-    implementation 'hdi:edi:2.2.+'
+    implementation "hdi:edi:2.2.5"
 
     implementation "com.fasterxml.jackson.core:jackson-annotations:2.16.+"
-    testImplementation 'junit:junit:4.+'
-    testImplementation 'org.assertj:assertj-core:3.24.+'
+    implementation "com.fasterxml.jackson.core:jackson-databind:2.16.+"
+    testImplementation "junit:junit:4.+"
+    testImplementation "org.assertj:assertj-core:3.24.+"
 }
 
 java {
