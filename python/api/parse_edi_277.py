@@ -14,8 +14,10 @@ file_to_parse = edi_files_dir + '/claim_level_response.dat'
 
 with open(file_to_parse) as f:
     data = f.read()
+
 response = requests.post(parse_api_url, data)
 if response.status_code == 200 and 'segments' in response.json():
+
     root_segments = response.json()['segments']
     for root_seg in root_segments:
         if root_seg['segment_id'] == 'ST':
@@ -52,14 +54,14 @@ if response.status_code == 200 and 'segments' in response.json():
                                 subscriber_patient_name = subscriber_patient.get('patient_name')
                             print(subscriber_patient_name)
 
-                            # Patients can optionally have dependents
+                            # Patients can optionally have dependents, in which case the status is under dependent
                             subscriber_patient_dependent_list = [subscriber_patient]
                             dependent_list = subscriber_patient.get('dependent_level')
                             if dependent_list:
-                                subscriber_patient_dependent_list = [dependent_list]
+                                subscriber_patient_dependent_list = dependent_list
 
                             for subscriber_patient_dependent in subscriber_patient_dependent_list:
-                                print("\n")
+                                print('Dependent:')
                                 print(subscriber_patient_dependent)
                                 claim_statuses = subscriber_patient_dependent['claim_status_tracking_number']
                                 for status in claim_statuses:
