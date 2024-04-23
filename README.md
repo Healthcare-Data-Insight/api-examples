@@ -1,17 +1,16 @@
-# Claim Insight API Usage Examples
+# EDI Parsing and Conversion Examples
 
-[Claim Insight](https://datainsight.health/claim-insight/) is the data quality, data integration and analytics platform for working with [medical claims](https://datainsight.health/edi/claims/) and other healthcare administrative data. 
+This repo contains usage examples of [X12 EDI converter and parser](https://datainsight.health/products/edi-converter/) provided by [Healthcare Data Insight (HDI)](https://datainsight.health/).
 
-Claim Insight supports [X12 EDI](https://datainsight.health/edi/intro/) and [NCPDP](https://datainsight.health/ncpdp/intro/) (pharmacy) formats.
+Our parsers/converters are easy to use; they require no knowledge of EDI. 
 
-Claim Insight comes with extensive APIs for parsing, searching, and analyzing
-[claims](https://datainsight.health/posts/edi-json/), [payments](https://datainsight.health/posts/edi-payment-api/), and other [HIPAA EDI](https://datainsight.health/edi/claim-types/) transactions.
+You can use our [command-line converter](https://datainsight.health/docs/ediconvert-cli/) or [parsing API](https://datainsight.health/posts/edi-json/).
 
-You can find our generated API documentation [here](https://datainsight.health/clinsight/swagger-ui/index.html).
+Following are the key features of the converter:
 
-This repository contains Python examples for key REST API operations, such as uploading files, searching, analytics, and parsing.
-
-Examples using curl and Java will be added soon.
-
-If you want to try Claim Insight and its APIs, please [contact us](https://datainsight.health/claim-insight/access-request/). 
-
+* Forget about "loops" and "segments" -- no knowledge of X12 EDI is necessary (837 and 835 transactions)
+* Intuitive field and object names that speak your language
+* All X12 codes ("qualifier codes") are translated into "plain English."
+* 100% of fields are converted; nothing is left behind
+* Automated lookup of descriptions for all healthcare code sets (ICD, NDC, CPT, etc.)
+* Convert to JSON or CSV/Excel
