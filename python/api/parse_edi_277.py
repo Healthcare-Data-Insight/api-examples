@@ -59,6 +59,8 @@ if response.status_code == 200 and 'segments' in response.json():
                                 subscriber_patient_dependent_list = [dependent_list]
 
                             for subscriber_patient_dependent in subscriber_patient_dependent_list:
+                                print("\n")
+                                print(subscriber_patient_dependent)
                                 claim_statuses = subscriber_patient_dependent['claim_status_tracking_number']
                                 for status in claim_statuses:
                                     print(status)

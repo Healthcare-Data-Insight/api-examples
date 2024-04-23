@@ -15,4 +15,4 @@ for file_info in file_infos:
         pcn = claim['patientControlNumber']
         charge = claim['chargeAmount']
         billing_npi = claim['billingProvider']['identifier']
-        print('Claim {} from {} for the amount {}'.format(pcn, billing_npi, charge))
+        print(f'Claim {pcn} from {billing_npi} for the amount {charge}')
