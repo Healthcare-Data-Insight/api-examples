@@ -43,7 +43,7 @@ public class ClaimParsingExample implements ParsingExampleHelper {
         for (var line : claim.lines()) {
             String procedureCode = line.procedure().code();
             LocalDate serviceDate = line.serviceDateFrom();
-            Integer unitCount = line.unitCount();
+            BigDecimal unitCount = line.unitCount();
             UnitType unitType = line.unitType();
             BigDecimal lineChargeAmount = line.chargeAmount();
 
