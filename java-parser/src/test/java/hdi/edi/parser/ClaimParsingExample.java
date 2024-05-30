@@ -70,7 +70,7 @@ public class ClaimParsingExample implements ParsingExampleHelper {
         PlaceOfServiceType pos = claim.placeOfServiceType();
         assertThat(pos).isEqualTo(PlaceOfServiceType.OFFICE);
 
-        PatientSubscriber patient = claim.patient();
+        PatientSubscriber patient = claim.subscriber();
 
         EntityRole entityRole = patient.person().entityRole();
         assertThat(entityRole).isEqualTo(EntityRole.SUBSCRIBER);

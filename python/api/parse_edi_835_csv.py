@@ -1,7 +1,6 @@
 import requests
 import env
 import pandas as pd
-from io import StringIO
 from requests_toolbelt.downloadutils import stream
 
 '''
@@ -15,7 +14,6 @@ edi_files_dir = '../../edi_files/835'
 file_to_parse = edi_files_dir + '/negotiated_discount.dat'
 with open(file_to_parse) as f:
     data = f.read()
-# response = requests.post(parse_api_url, data=data)
 
 with open(csv_file, 'wb') as fd:
     response = requests.post(parse_api_url, data=data, stream=True)
@@ -27,8 +25,8 @@ df = pd.read_csv(csv_file, sep=',')
 print(df.shape)
 payment_id = ''
 for _, row in df.iterrows():
-    # ID is a unique string assign to each claim/payment
-    # payment data is duplicated for each line
+    # ID is a unique string assigned to each claim/payment
+    #  data is duplicated for each line
     current_payment_id = row['Id']
     pcn = row['PatientControlNumber']
     payerControlNumber = row['PayerControlNumber']
