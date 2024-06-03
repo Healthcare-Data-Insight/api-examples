@@ -13,8 +13,22 @@ repositories {
 
 dependencies {
     implementation "hdi:edi:2.6.2"
+    implementation "com.fasterxml.jackson.core:jackson-annotations:2.17.+"
+    implementation "com.fasterxml.jackson.core:jackson-databind:2.17.+"
     testImplementation "junit:junit:4.+"
     testImplementation "org.assertj:assertj-core:3.24.+"
+}
+
+test {
+    useJUnit()
+    testLogging {
+        showStandardStreams true
+        exceptionFormat 'full'
+    }
+    filter {
+        includeTestsMatching "TestSuite"
+    }
+
 }
 
 java {
