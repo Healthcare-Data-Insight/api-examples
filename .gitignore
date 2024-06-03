@@ -16,8 +16,6 @@ dist/
 # Log files
 *.log
 
-# Package files
-*.jar
 
 # Maven
 target/
@@ -25,6 +23,9 @@ dist/
 
 # JetBrains IDE
 .idea/
+
+java-parser/build
+java-parser/out
 
 # Unit test reports
 TEST*.xml
