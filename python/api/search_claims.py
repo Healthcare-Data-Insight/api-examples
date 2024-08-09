@@ -14,7 +14,8 @@ page_size = 50
 while True:
     # Fetch only professional claims with pagination
     claims = requests.get(claims_api_url,
-                          {'search': search_str, 'claimType':'prof', 'limit': page_size, 'offset': page_ind * page_size}).json()
+                          {'search': search_str, 'claimType': 'prof', 'limit': page_size,
+                           'offset': page_ind * page_size}).json()
     if not claims:
         break
 
@@ -25,4 +26,3 @@ while True:
         print('Claim {} from {} for the amount {}'.format(pcn, billing_npi, charge))
 
     page_ind += 1
-

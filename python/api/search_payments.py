@@ -20,7 +20,7 @@ while True:
     for pmt in payments:
         print("Payment {} from {} to {} ({})for the amount of {}. Billed amount: {}".format(
             pmt['payerControlNumber'], pmt['payer']['lastNameOrOrgName'],
-            pmt['payee']['lastNameOrOrgName'],pmt['payee']['identifier'],
+            pmt['payee']['lastNameOrOrgName'], pmt['payee']['identifier'],
             pmt['paymentAmount'], pmt['chargeAmount'])
         )
 

@@ -29,7 +29,7 @@ if response.status_code == 200 and 'segments' in response.json():
                     subscriber_list = receiver.get('subscriber_level')
                     for subscriber in subscriber_list:
                         subscriber_info = subscriber.get('subscriber_name')
-                        elig_list=subscriber_info.get('subscriber_eligibility_or_benefit_information')
+                        elig_list = subscriber_info.get('subscriber_eligibility_or_benefit_information')
                         for elig in elig_list:
                             print(elig)
 
