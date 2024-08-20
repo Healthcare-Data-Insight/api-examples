@@ -58,12 +58,16 @@ public class ClaimParsingExample implements ParsingExampleHelper {
         int claimCount = 0;
         var parser = new EdiParser(ediFile);
         while (true) {
-            // parse two claim at a time
+            // parse two claim at a time. In real life, use 200-500 as the optimal batch size
             var claims = parser.parse837(2);
             if (claims.isEmpty()) {
                 break;
             }
-            // your logic goes here
+            // Do something with each claim
+            for (var claim : claims) {
+                // your logic goes here
+                System.err.println(claim.patientControlNumber());
+            }
             // ...
             claimCount += claims.size();
         }

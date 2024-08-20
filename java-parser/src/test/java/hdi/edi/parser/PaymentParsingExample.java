@@ -53,10 +53,15 @@ public class PaymentParsingExample implements ParsingExampleHelper {
         int count = 0;
         var parser = new EdiParser(ediFile);
         while (true) {
-            // parse one payment at a time
+            // parse one payment at a time. In real life, use 200-500 as the optimal batch size
             var payments = parser.parse835(1);
             if (payments.isEmpty()) {
                 break;
+            }
+            // Do something with each payment
+            for (var payment : payments) {
+                // your logic goes here
+                System.err.println(payment.patientControlNumber());
             }
             // your logic goes here
             // ...
