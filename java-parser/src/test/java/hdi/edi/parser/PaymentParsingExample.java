@@ -16,12 +16,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class PaymentParsingExample implements ParsingExampleHelper {
 
     @Test
-    public void parsePayments() {
+    public void parsePayment() {
         var ediFile835 = new File(EDI_FILES_DIR + "/835/dollars_data_separate.dat");
         var parser = new EdiParser(ediFile835);
-
-        EdiParsingResults results = parser.parse();
-        List<Payment> payments = results.payments();
+        List<Payment> payments = parser.parse835(-1);
         assertThat(payments).isNotEmpty();
         Payment payment = payments.get(0);
         // Get key payment fields
@@ -44,6 +42,27 @@ public class PaymentParsingExample implements ParsingExampleHelper {
 
             assertNotNull(procedureCode, serviceDate, lineChargeAmount, linePaidAmount);
         }
+    }
 
+    /**
+     * For large files, we can parse in batches of N payments
+     */
+    @Test
+    public void parseInBatches() {
+        var ediFile = new File(EDI_FILES_DIR + "/835/dollars_data_separate.dat");
+        int count = 0;
+        var parser = new EdiParser(ediFile);
+        while (true) {
+            // parse one payment at a time
+            var payments = parser.parse835(1);
+            if (payments.isEmpty()) {
+                break;
+            }
+            // your logic goes here
+            // ...
+            count += payments.size();
+        }
+
+        assertThat(count).isEqualTo(2);
     }
 }

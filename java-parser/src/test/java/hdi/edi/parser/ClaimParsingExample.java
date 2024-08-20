@@ -21,14 +21,11 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class ClaimParsingExample implements ParsingExampleHelper {
 
     @Test
-    public void parseClaimsAndLines() {
+    public void parseClaim() {
         var ediFile837p = new File(EDI_FILES_DIR + "/837/prof-encounter.dat");
         var parser = new EdiParser(ediFile837p);
-
-        // parse all transactions in the file
-        EdiParsingResults results = parser.parse();
-        // results contains claims, payments, etc.
-        List<Claim> claims = results.claims();
+        // Parse all claims in the file
+        List<Claim> claims = parser.parse837(-1);
         assertThat(claims).isNotEmpty();
 
         Claim claim = claims.get(0);
@@ -50,10 +47,30 @@ public class ClaimParsingExample implements ParsingExampleHelper {
             assertNotNull(procedureCode, serviceDate, unitCount, unitType, lineChargeAmount);
         }
 
-        var transaction = results.ediTransactions().get(0);
-
-        System.err.println(transaction.seg().toFormattedStringWithChildren());
     }
+
+    /**
+     * For large files, we can parse in batches of N claims
+     */
+    @Test
+    public void parseInBatches() {
+        var ediFile = new File(EDI_FILES_DIR + "/837/multi-tran.dat");
+        int claimCount = 0;
+        var parser = new EdiParser(ediFile);
+        while (true) {
+            // parse two claim at a time
+            var claims = parser.parse837(2);
+            if (claims.isEmpty()) {
+                break;
+            }
+            // your logic goes here
+            // ...
+            claimCount += claims.size();
+        }
+
+        assertThat(claimCount).isEqualTo(3);
+    }
+
 
     /**
      * The parser translates EDI qualifiers and some of the codes to Java enums
@@ -62,10 +79,7 @@ public class ClaimParsingExample implements ParsingExampleHelper {
     public void parseEnums() {
         var ediFile837p = new File(EDI_FILES_DIR + "/837/prof-encounter.dat");
         var parser = new EdiParser(ediFile837p);
-
-        EdiParsingResults results = parser.parse();
-        List<Claim> claims = results.claims();
-
+        List<Claim> claims = parser.parse837(-1);
         Claim claim = claims.get(0);
         PlaceOfServiceType pos = claim.placeOfServiceType();
         assertThat(pos).isEqualTo(PlaceOfServiceType.OFFICE);
@@ -83,27 +97,4 @@ public class ClaimParsingExample implements ParsingExampleHelper {
     }
 
 
-    /**
-     * For large files, we can parse in chunks, several transactions at a time
-     */
-    @Test
-    public void parseInChunks() {
-        var ediFile = new File(EDI_FILES_DIR + "/837/multi-tran.dat");
-        int claimCount = 0;
-        var parser = new EdiParser(ediFile);
-        while (true) {
-            // parse 1 transaction at a time
-            var results = parser.parse(1);
-            if (results.isDone()) {
-                break;
-            }
-            // get all claims for this chunk
-            var claims = results.claims();
-            // your processing goes here
-            // ...
-            claimCount += claims.size();
-        }
-
-        assertThat(claimCount).isEqualTo(3);
-    }
 }
