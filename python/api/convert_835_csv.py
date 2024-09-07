@@ -4,7 +4,7 @@ import pandas as pd
 from requests_toolbelt.downloadutils import stream
 
 '''
-Parse EDI as CSV
+Convert 835 to CSV
 '''
 
 parse_api_url = env.api_url + '/edi/csv'

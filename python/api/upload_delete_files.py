@@ -1,15 +1,9 @@
 import requests
 import env
 
-'''
-Upload files, get loaded claims, delete files afterwards
-'''
-
-
-def rebuild_analytics(api_url):
-    api_url += '/analytics/rebuild'
-    # Don't block
-    requests.post(api_url, {'async': 'true'})
+"""
+Upload files to the database, get loaded claims, delete files afterwards
+"""
 
 
 def upload_files(api_url, files):
@@ -22,6 +16,12 @@ def upload_files(api_url, files):
     # Rebuild analytics after the upload
     rebuild_analytics(api_url)
     return file_upload_response.json()
+
+
+def rebuild_analytics(api_url):
+    api_url += '/analytics/rebuild'
+    # Don't block
+    requests.post(api_url, {'async': 'true'})
 
 
 files_api_url = env.api_url + '/files'
