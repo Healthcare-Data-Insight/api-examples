@@ -17,7 +17,7 @@ dependencies {
     implementation "com.fasterxml.jackson.core:jackson-databind:2.16.+"
 
     testImplementation "junit:junit:4.+"
-    testImplementation "org.assertj:assertj-core:3.24.+"
+    testImplementation 'org.assertj:assertj-core:3.26.3'
 }
 
 test {
