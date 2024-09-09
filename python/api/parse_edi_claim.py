@@ -1,11 +1,11 @@
 import requests
 import env
 
-'''
-Parse EDI without uploading the file
+"""
+Parse EDI by posting the content of the file
 The claim/payment representation is identical to search API
 Note: parse API can only handle small files. Use Convert APIs to parse large files
-'''
+"""
 
 parse_api_url = env.api_url + '/edi/parse'
 edi_files_dir = '../../edi_files/837'

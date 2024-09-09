@@ -1,14 +1,13 @@
 import requests
 import env
-
-'''
+"""
 Parse a 277 EDI file. The response contains EDI segment hierarchy matching the X12 spec.
 Each segment has a unique name, which is a key in the json dict
 Most loops are lists
 The hierarchy follows the X12 EDI spec
-'''
+"""
 
-parse_api_url = env.api_url + '/edi/parse'
+parse_api_url = env.api_url + '/edi/json'
 edi_files_dir = '../../edi_files/277'
 file_to_parse = edi_files_dir + '/claim_level_response.dat'
 
@@ -16,9 +15,9 @@ with open(file_to_parse) as f:
     data = f.read()
 
 response = requests.post(parse_api_url, data)
-if response.status_code == 200 and 'segments' in response.json():
+if response.status_code == 200:
 
-    root_segments = response.json()['segments']
+    root_segments = response.json()
     for root_seg in root_segments:
         if root_seg['segment_id'] == 'ST':
             tran = root_seg

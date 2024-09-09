@@ -4,8 +4,8 @@ import json
 import env
 
 """
-Upload 837/835 files using multipart request or by posting the file's content and get a line-delimited list 
-of claims/payments back
+Convert 837/835 files using multipart request or by posting the file's content. 
+Get a line-delimited list of claims/payments back
 This API can handle files and transactions of any size 
 """
 
@@ -27,7 +27,7 @@ def convert_files_using_multipart_upload(files, is_ndjson):
 
 
 def convert_file_using_post_text(file, is_ndjson):
-    """Read file"""
+    """Open file and post the content"""
     api_url = env.api_url + '/edi/json'
     # Always use splitTran: True for 837/835 transactions
     # If ndjson: True, the server will return a new-line separated list of objects (claims) instead of an array
@@ -35,11 +35,14 @@ def convert_file_using_post_text(file, is_ndjson):
 
     with open(file) as f:
         # Use stream=True to stream the response instead of loading it in memory
+        # Note that we're posing the file-like object instead of reading the file into memory
+        # This allows for streaming content to the server
         file_upload_response = requests.post(api_url, data=f, params=params, stream=True)
     return file_upload_response
 
 
-# Convert 837
+# ** 837
+# Multi-part upload
 edi_837_dir = '../../edi_files/837'
 # We can convert multiple files at the same time, 837p and 837i have the same response
 file_names_to_convert = ['prof-encounter.dat', 'chiro.dat', '837I-inst-claim.dat']
@@ -77,6 +80,7 @@ if response.status_code == 200:
     else:
         raise Exception(f'Error converting EDI files; Response from the server: {response.text}')
 
+# ** 835
 # Convert 835 using multi-part request
 edi_835_dir = '../../edi_files/835'
 file_names_to_convert = ['claim_adj_reason.dat', 'negotiated_discount.dat']
