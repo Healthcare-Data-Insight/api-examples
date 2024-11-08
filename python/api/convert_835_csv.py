@@ -3,23 +3,36 @@ import env
 import pandas as pd
 from requests_toolbelt.downloadutils import stream
 
-'''
-Convert 835 to CSV
-'''
+"""
+Converts 837/835 files using multipart request or by posting the file's content.
+The response is a CSV text.
+"""
 
-parse_api_url = env.api_url + '/edi/csv'
-csv_file = './out/payments.csv'
+
+def convert_file_using_post_text(file):
+    api_url = env.api_url + '/edi/csv'
+
+    with open(file) as f:
+        api_response = requests.post(api_url, data=f, stream=True)
+    if api_response.status_code != 200:
+        raise Exception(f'Error converting EDI; Error: {api_response.text}')
+    return api_response
+
 
 edi_files_dir = '../../edi_files/835'
-file_to_parse = edi_files_dir + '/negotiated_discount.dat'
-with open(file_to_parse) as f:
-    data = f.read()
+file_to_parse = edi_files_dir + '/835-all-fields.dat'
 
-with open(csv_file, 'wb') as fd:
-    response = requests.post(parse_api_url, data=data, stream=True)
-    if response.status_code != 200:
-        raise Exception('Error parsing file ' + file_to_parse)
-    stream.stream_response_to_file(response, path=fd)
+# Parse the file and print the CSV response
+response = convert_file_using_post_text(file_to_parse)
+for line in response.iter_lines(decode_unicode=True):
+    print(line)
+
+# Parse the file, save the CSV to a file and use pandas to read it
+response = convert_file_using_post_text(file_to_parse)
+
+csv_file = './out/payments.csv'
+with open(csv_file, 'wb') as f:
+    stream.stream_response_to_file(response, path=f)
 
 df = pd.read_csv(csv_file, sep=',')
 print(df.shape)
@@ -32,7 +45,7 @@ for _, row in df.iterrows():
     payerControlNumber = row['PayerControlNumber']
     status = row['ClaimStatus']
     memberId = row['SubscriberIdentifier']
-    memberName = row['SubscriberLastNameOrOrgName']
+    memberName = row['SubscriberLastName']
     charged = row['ChargeAmount']
     paid = row['PaymentAmount']
     # Print payment info only once

@@ -1,5 +1,6 @@
 import requests
 import env
+
 """
 Parse a 277 EDI file. The response contains EDI segment hierarchy matching the X12 spec.
 Each segment has a unique name, which is a key in the json dict
@@ -12,9 +13,7 @@ edi_files_dir = '../../edi_files/277'
 file_to_parse = edi_files_dir + '/claim_level_response.dat'
 
 with open(file_to_parse) as f:
-    data = f.read()
-
-response = requests.post(parse_api_url, data)
+    response = requests.post(parse_api_url, data=f, stream=True)
 if response.status_code == 200:
 
     root_segments = response.json()
@@ -67,4 +66,4 @@ if response.status_code == 200:
                                     print(status)
 
 else:
-    raise Exception('Error parsing file ' + file_to_parse)
+    raise Exception(f'Error parsing EDI files; Error: {response.text}')
