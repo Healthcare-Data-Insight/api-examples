@@ -25,7 +25,7 @@ def rebuild_analytics(api_url):
 
 
 files_api_url = env.api_url + '/files'
-test_files_dir = '../../edi_files/837'
+test_files_dir = '../../../edi_files/837'
 # Upload multiple files. Files are processed in parallel, so it is always faster to upload multiple than one by one
 files_to_upload = [test_files_dir + '/prof-encounter.dat', test_files_dir + '/anesthesia.dat']
 upload_info = upload_files(env.api_url, files_to_upload)

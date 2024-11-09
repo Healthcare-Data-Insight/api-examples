@@ -3,8 +3,7 @@ import env
 
 """
 Parse EDI by posting the content of the file
-The claim/payment representation is identical to search API
-Note: parse API can only handle small files. Use Convert APIs to parse large files
+Note: the "parse" endpoint can only handle small files. Use Convert APIs to parse large files
 """
 
 parse_api_url = env.api_url + '/edi/parse'
@@ -22,6 +21,6 @@ if response.status_code == 200 and 'claims' in response.json():
         print('Claim {} from {} for the amount {}'.format(pcn, billing_npi, charge))
 
 else:
-    raise Exception('Error parsing file ' + file_to_parse)
+    raise Exception(f'Error parsing EDI; Error: {response.text}')
 
 

@@ -8,6 +8,8 @@ Converts 837/835 files using multipart request or by posting the file's content.
 The response is an array of JSON objects or a line-delimited JSON (ndjson)
 This example use ndjson as it is more convenient for streaming.
 If you want to use well-formed JSON, make sure that your logic can handle large arrays if you have large EDI files.
+Documentation:
+https://datainsight.health/clinsight/swagger-ui/index.html#/EDI-to-JSON%20Parsing%20and%20Conversion
 """
 
 

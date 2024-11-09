@@ -6,6 +6,8 @@ from requests_toolbelt.downloadutils import stream
 """
 Converts 837/835 files using multipart request or by posting the file's content.
 The response is a CSV text.
+Documentation:
+https://datainsight.health/clinsight/swagger-ui/index.html#/EDI-to-CSV%20Conversion
 """
 
 
