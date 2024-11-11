@@ -1,6 +1,10 @@
 #!/bin/bash
 set -e
-export API_URL=http://localhost:5080/clinsight/api
+export API_URL=http://localhost:5080/api
+
+# get the app version and the license info
+curl -X GET $API_URL/about
+
 echo -- Upload multiple files and convert to JSON
 # Upload multiple files and get json back as ndjson
 curl -F files=@"../edi_files/837/prof-encounter.dat" -F files=@"../edi_files/837/anesthesia.dat" $API_URL/edi/json/upload?splitTran=true&ndjson=true
