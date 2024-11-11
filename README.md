@@ -15,6 +15,12 @@ The structure of this repo:
 * [Curl API examples](/curl)
 * [Java parser examples](/java-parser)
 
+Documentation:
+
+* [Getting Started Guide](https://datainsight.health/api-local-install/)
+* [JSON schema intro](https://datainsight.health/posts/edi-json/)
+* [API documentation](https://datainsight.health/clinsight/swagger-ui/index.html)
+
 ## Key Features
 
 * Intuitive [schema and object model](https://datainsight.health/posts/edi-convert-key-features/#object-model)
