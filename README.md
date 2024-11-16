@@ -9,7 +9,7 @@ We offer several options for converting [X12 EDI](https://datainsight.health/edi
 * [Java library](https://datainsight.health/tools/java-parser/) 
 * [EDI Viewer](https://datainsight.health/claim-insight/)
 
-The structure of this repo:
+Structure of this repo:
 
 * [Python API examples](/python/api)
 * [Curl API examples](/curl)

@@ -58,8 +58,11 @@ print('** Converting files:')
 print(*files_to_convert)
 response = convert_files_using_multipart_upload(files_to_convert, True)
 for claim_str in response.iter_lines():
-    # each line is a claim object
+    # each line is a claim object or could be an error
     claim = json.loads(claim_str)
+    # Check for errors; because of streaming, we can get an error even if the response status was 200
+    if claim['objectType'] == 'ERROR':
+        raise Exception(f'Error parsing EDI; Error: {claim}')
     file_name = claim['transaction']['fileInfo']['name']
     pcn = claim['patientControlNumber']
     charge = claim['chargeAmount']
@@ -74,6 +77,9 @@ response = convert_file_using_post_text(file_to_convert, True)
 for claim_str in response.iter_lines():
     # each line is a claim object
     claim = json.loads(claim_str)
+    if claim['objectType'] == 'ERROR':
+        raise Exception(f'Error parsing EDI; Error: {claim}')
+
     pcn = claim['patientControlNumber']
     charge = claim['chargeAmount']
     billing_npi = claim['billingProvider']['identifier']
@@ -91,6 +97,9 @@ response = convert_files_using_multipart_upload(files_to_convert, True)
 for payment_str in response.iter_lines():
     # each line is a payment object
     payment = json.loads(payment_str)
+    if payment['objectType'] == 'ERROR':
+        raise Exception(f'Error parsing EDI; Error: {payment}')
+
     file_name = payment['transaction']['fileInfo']['name']
     payer_name = payment['payer']['lastNameOrOrgName']
     pcn = payment['patientControlNumber']
