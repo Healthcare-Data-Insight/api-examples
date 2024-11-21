@@ -1,12 +1,13 @@
 services:
   ediconvert:
-    image: myarch/ediconvert:2.10
+    image: repo.datainsight.health/ediconvert:2.10
     restart: always
+    #environment:
+      # you can provide your license key as a variable instead of saving the license file to the etc volume
+      #- LICENSE_KEY=<your license key>
     volumes:
       # Copy your license file to the "etc" directory on your host
       - ./etc:/app/etc
-      # You can optionally make logs accessible on the host
-      - ./logs:/app/logs
     ports:
       # Change your port here if you need to
       - "127.0.0.1:5080:5080"
