@@ -7,7 +7,7 @@ from requests_toolbelt.downloadutils import stream
 Converts 837/835 files using multipart request or by posting the file's content.
 The response is a CSV text.
 Documentation:
-https://datainsight.health/clinsight/swagger-ui/index.html#/EDI-to-CSV%20Conversion
+https://datainsight.health/docs/ediconvert-api/reference/#tag/EDI-to-CSV
 """
 
 
@@ -27,6 +27,8 @@ file_to_parse = edi_files_dir + '/835-all-fields.dat'
 # Parse the file and print the CSV response
 response = convert_file_using_post_text(file_to_parse)
 for line in response.iter_lines(decode_unicode=True):
+    if line.startswith("ERROR"):
+        raise Exception(f'Error parsing EDI; Error: {line}')
     print(line)
 
 # Parse the file, save the CSV to a file and use pandas to read it

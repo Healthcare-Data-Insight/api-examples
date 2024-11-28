@@ -7,9 +7,9 @@ curl $API_URL/about
 
 echo -- Upload multiple files and convert to JSON
 # Upload multiple files and get json back as ndjson
-curl -F files=@"../edi_files/837/prof-encounter.dat" -F files=@"../edi_files/837/anesthesia.dat" "$API_URL/edi/json/upload?splitTran=true&ndjson=true"
+curl -F files=@"../edi_files/837/prof-encounter.dat" -F files=@"../edi_files/837/anesthesia.dat" "$API_URL/edi/json?splitTran=true&ndjson=true"
 # Or as regular JSON with array of claims
-curl -F files=@"../edi_files/837/prof-encounter.dat" -F files=@"../edi_files/837/anesthesia.dat" "$API_URL/edi/json/upload?splitTran=true"
+curl -F files=@"../edi_files/837/prof-encounter.dat" -F files=@"../edi_files/837/anesthesia.dat" "$API_URL/edi/json?splitTran=true"
 
 echo -- Post single file
 # Post content of 837 as a single file
@@ -20,4 +20,4 @@ curl -H "Content-Type: text/plain" --data-binary @../edi_files/835/negotiated_di
 
 echo -- Upload multiple files and convert to CSV
 # Same for CSV conversion, upload files and get CSV back
-curl -F files=@"../edi_files/837/prof-encounter.dat" -F files=@"../edi_files/837/anesthesia.dat" "$API_URL/edi/csv/upload"
+curl -F files=@"../edi_files/837/prof-encounter.dat" -F files=@"../edi_files/837/anesthesia.dat" "$API_URL/edi/csv"

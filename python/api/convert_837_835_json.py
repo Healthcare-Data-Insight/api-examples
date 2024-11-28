@@ -9,13 +9,13 @@ The response is an array of JSON objects or a line-delimited JSON (ndjson)
 This example use ndjson as it is more convenient for streaming.
 If you want to use well-formed JSON, make sure that your logic can handle large arrays if you have large EDI files.
 Documentation:
-https://datainsight.health/clinsight/swagger-ui/index.html#/EDI-to-JSON%20Parsing%20and%20Conversion
+https://datainsight.health/docs/ediconvert-api/reference/#tag/EDI-to-JSON
 """
 
 
 def convert_files_using_multipart_upload(files, is_ndjson):
     """Creates a multipart request with the list of files and posts it"""
-    api_url = env.api_url + '/edi/json/upload'
+    api_url = env.api_url + '/edi/json'
     # we need to pass an array of tuples (field_name, file-like obj)
     # The field name is always 'files'
     field_and_file_objects = []
@@ -49,8 +49,24 @@ def convert_file_using_post_text(file, is_ndjson):
 
 
 # ** 837
-# Multi-part upload
 edi_837_dir = '../../edi_files/837'
+# Convert by posting the file's content
+file_to_convert = edi_837_dir + '/prof-encounter.dat'
+print('** Converting ' + file_to_convert)
+response = convert_file_using_post_text(file_to_convert, True)
+for claim_str in response.iter_lines():
+    # each line is a claim object
+    claim = json.loads(claim_str)
+    if claim['objectType'] == 'ERROR':
+        raise Exception(f'Error parsing EDI; Error: {claim}')
+
+    pcn = claim['patientControlNumber']
+    charge = claim['chargeAmount']
+    billing_npi = claim['billingProvider']['identifier']
+
+    print(f'Claim {pcn} from {billing_npi} for the amount {charge}')
+
+# Convert multiple files using multi-part request
 # We can convert multiple files at the same time, 837p and 837i have the same response
 file_names_to_convert = ['prof-encounter.dat', 'chiro.dat', '837I-inst-claim.dat']
 files_to_convert = [edi_837_dir + '/' + file_name for file_name in file_names_to_convert]
@@ -70,24 +86,9 @@ for claim_str in response.iter_lines():
 
     print(f'File {file_name}: Claim {pcn} from {billing_npi} for the amount {charge}')
 
-# Convert by posting the file's content
-file_to_convert = edi_837_dir + '/prof-encounter.dat'
-print('** Converting ' + file_to_convert)
-response = convert_file_using_post_text(file_to_convert, True)
-for claim_str in response.iter_lines():
-    # each line is a claim object
-    claim = json.loads(claim_str)
-    if claim['objectType'] == 'ERROR':
-        raise Exception(f'Error parsing EDI; Error: {claim}')
-
-    pcn = claim['patientControlNumber']
-    charge = claim['chargeAmount']
-    billing_npi = claim['billingProvider']['identifier']
-
-    print(f'Claim {pcn} from {billing_npi} for the amount {charge}')
 
 # ** 835
-# Convert 835 using multi-part request
+# Convert multiple 835 filesusing multi-part request
 edi_835_dir = '../../edi_files/835'
 file_names_to_convert = ['claim_adj_reason.dat', 'negotiated_discount.dat']
 files_to_convert = [edi_835_dir + '/' + file_name for file_name in file_names_to_convert]
