@@ -1,3 +1,5 @@
+from typing import TextIO
+
 import requests
 import env
 import pandas as pd
@@ -11,11 +13,14 @@ https://datainsight.health/docs/ediconvert-api/reference/#tag/EDI-to-CSV
 """
 
 
-def convert_file_using_post_text(file):
+def convert_file_using_post_text(file, schema_name=None):
     api_url = env.api_url + '/edi/csv'
-
-    with open(file) as f:
-        api_response = requests.post(api_url, data=f, stream=True)
+    params = {}
+    if schema_name:
+        params = {'schemaName': schema_name}
+    fileIO: TextIO
+    with open(file) as fileIO:
+        api_response = requests.post(api_url, data=fileIO, params=params, stream=True)
     if api_response.status_code != 200:
         raise Exception(f'Error converting EDI; Error: {api_response.text}')
     return api_response
@@ -30,6 +35,14 @@ for line in response.iter_lines(decode_unicode=True):
     if line.startswith("ERROR"):
         raise Exception(f'Error parsing EDI; Error: {line}')
     print(line)
+
+# Parse the file using the named schema
+response = convert_file_using_post_text(file_to_parse, 'key-fields')
+for line in response.iter_lines(decode_unicode=True):
+    if line.startswith("ERROR"):
+        raise Exception(f'Error parsing EDI; Error: {line}')
+    print(line)
+
 
 # Parse the file, save the CSV to a file and use pandas to read it
 response = convert_file_using_post_text(file_to_parse)
