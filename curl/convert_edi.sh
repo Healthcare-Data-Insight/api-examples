@@ -21,3 +21,8 @@ curl -H "Content-Type: text/plain" --data-binary @../edi_files/835/negotiated_di
 echo -- Upload multiple files and convert to CSV
 # Same for CSV conversion, upload files and get CSV back
 curl -F files=@"../edi_files/837/prof-encounter.dat" -F files=@"../edi_files/837/anesthesia.dat" "$API_URL/edi/csv"
+
+# NCPDP
+echo -- Parse NCPDP telco b1 file
+curl -H "Content-Type: text/plain" --data-binary @../edi_files/ncpdp/b1_telco.dat "$API_URL/ncpdp/parse"
+
