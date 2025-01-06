@@ -18,8 +18,11 @@ public class PaymentParsingExample implements ParsingExampleHelper {
     @Test
     public void parsePayment() {
         var ediFile835 = new File(EDI_FILES_DIR + "/835/dollars_data_separate.dat");
-        var parser = new EdiParser(ediFile835);
-        List<Payment> payments = parser.parse835(-1);
+        List<Payment> payments;
+        try (var parser = new EdiParser(ediFile835)) {
+            // parse all payments
+            payments = parser.parse835(-1);
+        }
         assertThat(payments).isNotEmpty();
         Payment payment = payments.get(0);
         // Get key payment fields
@@ -51,23 +54,23 @@ public class PaymentParsingExample implements ParsingExampleHelper {
     public void parseInBatches() {
         var ediFile = new File(EDI_FILES_DIR + "/835/dollars_data_separate.dat");
         int count = 0;
-        var parser = new EdiParser(ediFile);
-        while (true) {
-            // parse one payment at a time. In real life, use 200-500 as the optimal batch size
-            var payments = parser.parse835(1);
-            if (payments.isEmpty()) {
-                break;
-            }
-            // Do something with each payment
-            for (var payment : payments) {
+        try (var parser = new EdiParser(ediFile)) {
+            while (true) {
+                // parse one payment at a time. In real life, use 200-500 as the optimal batch size
+                var payments = parser.parse835(1);
+                if (payments.isEmpty()) {
+                    break;
+                }
+                // Do something with each payment
+                for (var payment : payments) {
+                    // your logic goes here
+                    System.err.println(payment.patientControlNumber());
+                }
                 // your logic goes here
-                System.err.println(payment.patientControlNumber());
+                // ...
+                count += payments.size();
             }
-            // your logic goes here
-            // ...
-            count += payments.size();
+            assertThat(count).isEqualTo(2);
         }
-
-        assertThat(count).isEqualTo(2);
     }
 }

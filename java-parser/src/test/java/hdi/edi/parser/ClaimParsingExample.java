@@ -23,9 +23,11 @@ public class ClaimParsingExample implements ParsingExampleHelper {
     @Test
     public void parseClaim() {
         var ediFile837p = new File(EDI_FILES_DIR + "/837/prof-encounter.dat");
-        var parser = new EdiParser(ediFile837p);
-        // Parse all claims in the file
-        List<Claim> claims = parser.parse837(-1);
+        List<Claim> claims;
+        try (var parser = new EdiParser(ediFile837p)) {
+            // Parse all claims in the file
+            claims = parser.parse837(-1);
+        }
         assertThat(claims).isNotEmpty();
 
         Claim claim = claims.get(0);
@@ -56,23 +58,24 @@ public class ClaimParsingExample implements ParsingExampleHelper {
     public void parseInBatches() {
         var ediFile = new File(EDI_FILES_DIR + "/837/multi-tran.dat");
         int claimCount = 0;
-        var parser = new EdiParser(ediFile);
-        while (true) {
-            // parse two claims at a time. In real life, use 200-500 as the optimal batch size
-            var claims = parser.parse837(2);
-            if (claims.isEmpty()) {
-                break;
+        try (var parser = new EdiParser(ediFile)) {
+            while (true) {
+                // parse two claims at a time. In real life, use 200-500 as the optimal batch size
+                var claims = parser.parse837(2);
+                if (claims.isEmpty()) {
+                    break;
+                }
+                // Do something with each claim
+                for (var claim : claims) {
+                    // your logic goes here
+                    System.err.println(claim.patientControlNumber());
+                }
+                // ...
+                claimCount += claims.size();
             }
-            // Do something with each claim
-            for (var claim : claims) {
-                // your logic goes here
-                System.err.println(claim.patientControlNumber());
-            }
-            // ...
-            claimCount += claims.size();
-        }
 
-        assertThat(claimCount).isEqualTo(3);
+            assertThat(claimCount).isEqualTo(3);
+        }
     }
 
 
@@ -82,8 +85,11 @@ public class ClaimParsingExample implements ParsingExampleHelper {
     @Test
     public void parseEnums() {
         var ediFile837p = new File(EDI_FILES_DIR + "/837/prof-encounter.dat");
-        var parser = new EdiParser(ediFile837p);
-        List<Claim> claims = parser.parse837(-1);
+        List<Claim> claims;
+        try (var parser = new EdiParser(ediFile837p)) {
+            // Parse all claims in the file
+            claims = parser.parse837(-1);
+        }
         Claim claim = claims.get(0);
         PlaceOfServiceType pos = claim.placeOfServiceType();
         assertThat(pos).isEqualTo(PlaceOfServiceType.OFFICE);

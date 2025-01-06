@@ -11,8 +11,10 @@ repositories {
     }
 }
 
+java.sourceCompatibility = JavaVersion.VERSION_17
+
 dependencies {
-    implementation "hdi:edi:2.10.4"
+    implementation "hdi:edi:2.10.5"
     implementation "com.fasterxml.jackson.core:jackson-annotations:2.16.+"
     implementation "com.fasterxml.jackson.core:jackson-databind:2.16.+"
 
@@ -30,10 +32,4 @@ test {
         includeTestsMatching "TestSuite"
     }
 
-}
-
-java {
-    toolchain {
-        languageVersion = JavaLanguageVersion.of(17)
-    }
 }

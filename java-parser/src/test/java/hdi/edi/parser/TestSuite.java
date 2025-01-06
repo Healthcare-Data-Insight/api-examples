@@ -10,5 +10,6 @@ import org.junit.runners.Suite;
         PaymentParsingExample.class,
         SegmentParsingExample.class
 })
+
 public class TestSuite {
 }
