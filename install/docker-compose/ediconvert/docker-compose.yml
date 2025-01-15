@@ -3,8 +3,8 @@ services:
     image: repo.datainsight.health/ediconvert:2.10
     restart: always
 #    environment:
-      # you can provide your license key as a variable instead of saving the license file to the etc volume
-      #- LICENSE_KEY=<your license key>
+#     you can provide your license key as a variable instead of saving the license file to the etc volume
+#      - LICENSE_KEY=<your license key>
     volumes:
       # Copy your license file to the "etc" directory on your host
       - ./etc:/app/etc

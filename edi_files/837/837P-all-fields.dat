@@ -61,27 +61,27 @@ DTP*314*RD8*20050608-20050609~
 
 AMT*F5*152.45~
 
-REF*4N*Unmapped-ServiceAuthorizationExceptionCode~
-REF*F5*Unmapped-MedicareCrossoverInd~
-REF*EW*Unmapped-MammogCertNumber~
+REF*4N*ServiceAuthorizationExceptionCode~
+REF*F5*MedicareCrossoverInd~
+REF*EW*MammogCertNumber~
 REF*9F*ReferralNum~
 REF*G1*PriorAuth~
 REF*F8*PayerClaimControlNum~
-REF*X4*Unmapped-Clia~
+REF*X4*Clia~
 REF*9A*Repriced~
-REF*9C*Unmapped-AdjRepriced~
-REF*LX*Unmapped-InvDeviceExemp~
+REF*9C*AdjRepriced~
+REF*LX*InvDeviceExemp~
 REF*D9*ClaimIdForTransm~
 REF*EA*MedicalRecordNum~
 REF*P4*DemonstrProjectId~
-REF*1J*Unmapped-CarePlanOversight~
+REF*1J*CarePlanOversight~
 
 NTE*ADD*SURGERY WAS UNUSUALLY LONG~
 
 HI*ABK:J0300*ABF:Z1159~
 HI*BG:17*BG:67~
 
-NM1*DN*1*DOE*JONE*C***XX*5234567805~
+NM1*DN*1*DOE*JOHN*C***XX*5234567805~
 REF*G2*12345~
 
 NM1*82*1*DOE*JANE*C***XX*1234567804~
@@ -93,7 +93,7 @@ N3*123 FAKE STREET~
 N4*CITY*ST*123459999~
 REF*G2*12345~
 
-NM1*DQ*1*Sup*JONE*C***XX*SupProv~
+NM1*DQ*1*Sup*JOHN*C***XX*SupProv~
 REF*G2*12345~
 
 SBR*P*18*000000*PLAN NAME*****MB~
@@ -166,7 +166,7 @@ REF*VY*123456~
 NM1*82*1*DOE LINE*JANE*C***XX*1234567804~
 NM1*QB*2*PURCHASED LINE*JANE*C***XX*1234567809~
 REF*G2*12345~
-NM1*DQ*1*Sup*JONE*C***XX*SupProv~
+NM1*DQ*1*Sup*JOHN*C***XX*SupProv~
 REF*G2*12345~
 LX*2~
 SV1*HC:87088*15*UN*1***1~
