@@ -1,8 +1,7 @@
 ---
-# ** CSV Conversion Schemas for 835 and 837
-# CSV conversion schema for 837P
+# CSV conversion schema for 837
 # Creates two files, one for header and one for lines
-- transactionTypes: [ 837P ]
+- transactionTypes: [ "837P", "837D" ]
   name: default
   separator: ","
   excludedFields:
@@ -26,6 +25,9 @@
       # How many times to repeat the column (3 is the default)
       numberOfColumnRepeats: 5
 
+    - names: [ LineProcedureModifiers ]
+      numberOfColumnRepeats: 4
+
     - names: [ OtherSubscribers ]
       numberOfColumnRepeats: 1
 
@@ -40,6 +42,51 @@
         - "*ServiceFacilityContacts"
         - "*OrderingProviderContacts"
       numberOfColumnRepeats: 1
+
+- transactionTypes: [ "837I" ]
+  name: default
+  excludedFields:
+    # We excluded X12 EDI qualifiers since we translate them to enumeration types
+    - "*QualifierCode"
+    - "*AddressCountryCode"
+  listSchemas:
+    # Schema for the "main" header-level list, e.g., claims or payments
+    - names: [ Main ]
+      # Repeat these fields on the first line for child lists
+      repeatFields: [ Id, PatientControlNumber ]
+      # Repeat these fields from the repeatFields on every row for child lists
+      repeatEachRow: [ "*" ]
+
+    # Schema for the service line list
+    - names: [ Lines ]
+      # Create a list of lines in a separate file
+      strategy: ROWS
+
+    - names: [ OtherDiags ]
+      numberOfColumnRepeats: 5
+
+      # Institutional codes at the claim level
+    - names: [ OtherProcedures, Occurrences, OccurrenceSpans, Conditions, ValueInfos ]
+      numberOfColumnRepeats: 6
+
+    - names: [ LineProcedureModifiers ]
+      numberOfColumnRepeats: 4
+
+    - names: [ OtherSubscribers ]
+      numberOfColumnRepeats: 1
+
+    - names:
+        - "*additionalIds"
+        - "*ServiceIds"
+        - "*Contacts"
+        - "*ContactNumbers"
+      # Repeat columns 2 times (the default is 3)
+      numberOfColumnRepeats: 2
+    - names:
+        - "*ServiceFacilityContacts"
+        - "*OrderingProviderContacts"
+      numberOfColumnRepeats: 1
+
 
 # Schema for 835
 - transactionTypes: [ 835 ]
@@ -77,7 +124,7 @@
       numberOfColumnRepeats: 2
 
 # Single file; repeat all header's fields first row; only ID and PCN subsequent rows
-- transactionTypes: [ "837P", "835" ]
+- transactionTypes: [ "837P", "837I", "837D", "835" ]
   name: lines-with-header-repeat-first-row
   baseName: default
 
@@ -90,8 +137,8 @@
       # Repeat these fields from the repeatFields on every row for child lists
       repeatEachRow: [ Id, PatientControlNumber, PayerControlNumber ]
 
-# Single file; all fields from lines; only IDs from header
-- transactionTypes: [ "837P", "835" ]
+# Single file; all fields from lines; only IDs from the header
+- transactionTypes: [ "837P", "837I", "837D", "835" ]
   name: lines-only
   baseName: default
 
@@ -104,17 +151,8 @@
       # Repeat these fields from the repeatFields on every row for child lists
       repeatEachRow: [ "*" ]
 
-
-# Only header fields, no lines
-- transactionTypes: [ "837P", "835" ]
-  name: header-only
-  baseName: default
-  excludedFields: [ Line* ]
-  listSchemas:
-    - names: [ Main ]
-
 # Repeat all header's fields on all rows for child lists, e.g., for all lines
-- transactionTypes: [ "837P", "835" ]
+- transactionTypes: [ "837P", "837I", "837D", "835" ]
   name: lines-with-header-repeat-each-row
   baseName: default
 
@@ -126,6 +164,15 @@
       repeatFields: [ "*" ]
       # Repeat these fields from the repeatFields on every row for child lists
       repeatEachRow: [ "*" ]
+
+
+# Only header fields, no lines
+- transactionTypes: [ "837P", "837I", "837D", "835" ]
+  name: header-only
+  baseName: default
+  excludedFields: [ Line* ]
+  listSchemas:
+    - names: [ Main ]
 
 # Only key fields
 - transactionTypes: [ "835" ]
@@ -139,6 +186,7 @@
     - ChargeAmount
     - PaymentAmount
     - PatientResponsibilityAmount
+    - DrgCode
     - PaymentDate
     - CheckOrEftTraceNumber
     - TotalAdjAmount
@@ -155,6 +203,7 @@
 
     - LineControlNumber
     - LineProcedureCode
+    - LineRevenueCode
     - LineChargeAmount
     - LinePaidAmount
     - LineUnitCount
@@ -203,6 +252,51 @@
     - LineControlNumber
     - LineProcedureCode
     - LineProcedureModifier*
+    - LineChargeAmount
+    - LineUnitCount
+    - LineServiceDateFrom
+    - LineServiceDateTo
+
+  listSchemas:
+    - names: [ Main ]
+      # Suppress writing header to the output as a separate file
+      output: False
+      # Repeat these fields on the first line for child lists
+      repeatFields: [ "*" ]
+      # Repeat these fields from the repeatFields on every row for child lists
+      repeatEachRow: [ Id, FileName, PatientControlNumber ]
+
+- transactionTypes: [ "837I" ]
+  name: key-fields
+  baseName: default
+  includedFields:
+    - Id
+    - FileName
+    - PatientControlNumber
+    - ChargeAmount
+    - FacilityCode
+    - FrequencyTypeCode
+    - TransactionCreationDateTime
+    - StatementDateFrom
+    - StatementDateTo
+    - AdmissionDateAndHour
+    - SubscriberIdentifier
+    - SubscriberLastName
+    - SubscriberFirstName
+    - SubscriberPayerIdentifier
+    - SubscriberPayerName
+    - PriorAuthorizationNumber
+    - PayerClaimControlNum
+    - DrgCode
+    - PrincipalDiag
+    - AdmittingDiag
+    - OtherDiag*
+    - PrincipalProcedure
+    - OtherProcedure*
+
+    - LineControlNumber
+    - LineRevenueCode
+    - LineProcedureCode
     - LineChargeAmount
     - LineUnitCount
     - LineServiceDateFrom
