@@ -22,9 +22,13 @@ def convert_file_using_post_text(file, schema_name=None):
     """
     Opens file, post the content and return the response.
     """
-    params = {}
+    # ediFileName parameter will propagate the original file name to transaction.fileInfo.name field; if not provided,
+    # the converter will generate a name
+    # warningsInResponse tells the converter to return parsing warnings to the client (line starts with 'WARNING:')
+    params = {'warningsInResponse': True, 'ediFileName': file}
+
     if schema_name:
-        params = {'schemaName': schema_name}
+        params['schemaName'] = schema_name
     fileIO: TextIO
     with open(file) as fileIO:
         # Use stream=True to stream the response instead of loading it in memory
@@ -60,30 +64,35 @@ def print_row(row):
         row = defaultdict(lambda: '', row)
     # ID is a unique string assigned to each claim/payment, same for all lines for the same claim
     claim_id = row['Id']
-    if claim_id.startswith("ERROR"):
-        raise Exception(f'Error parsing EDI line {row_number}; Error: {claim_id}')
-    pcn = row['PatientControlNumber']
-    payer_control_number = row['PayerControlNumber']
-    status = row['ClaimStatus']
-    member_id = row['SubscriberIdentifier']
-    member_name = row['SubscriberLastName']
-    charged = row['ChargeAmount']
-    paid = row['PaymentAmount']
-    # Print payment info only once
-    if current_claim_id != claim_id:
-        print(
-            f'Payment {payer_control_number} for claim {pcn}; status {status}. Member: {member_id} - {member_name}. '
-            f'Charges: {charged}, Paid: {paid}')
-    # line-level fields
-    service_code = row['LineProcedureCode']
-    if not service_code:
-        service_code = row['LineRevenueCode']
-    if not service_code:
-        service_code = row['LineDrugCode']
-    line_charged = row['LineChargeAmount']
-    line_paid = row['LinePaidAmount']
-    print(f'Service line: service code: {service_code}, charges: {line_charged}, paid: {line_paid}')
-    current_claim_id = claim_id
+    # errors and warnings are reported in the first column (id)
+    if claim_id.startswith("ERROR:"):
+        raise Exception(f'Error parsing EDI file; Error: {claim_id}')
+    # since we set warningsInResponse=True, we need to check for warnings too
+    if claim_id.startswith("WARNING:"):
+        print(f'Parsing warning: {claim_id}')
+    else:
+        pcn = row['PatientControlNumber']
+        payer_control_number = row['PayerControlNumber']
+        status = row['ClaimStatus']
+        member_id = row['SubscriberIdentifier']
+        member_name = row['SubscriberLastName']
+        charged = row['ChargeAmount']
+        paid = row['PaymentAmount']
+        # Print payment info only once
+        if current_claim_id != claim_id:
+            print(
+                f'Payment {payer_control_number} for claim {pcn}; status {status}. Member: {member_id} - {member_name}. '
+                f'Charges: {charged}, Paid: {paid}')
+        # line-level fields
+        service_code = row['LineProcedureCode']
+        if not service_code:
+            service_code = row['LineRevenueCode']
+        if not service_code:
+            service_code = row['LineDrugCode']
+        line_charged = row['LineChargeAmount']
+        line_paid = row['LinePaidAmount']
+        print(f'Service line: service code: {service_code}, charges: {line_charged}, paid: {line_paid}')
+        current_claim_id = claim_id
 
 
 edi_files_dir = '../../edi_files/835'

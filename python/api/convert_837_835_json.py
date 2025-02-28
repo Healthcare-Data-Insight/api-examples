@@ -36,11 +36,14 @@ def convert_file_using_post_text(file, is_ndjson):
     api_url = env.api_url + '/edi/json'
     # Always use splitTran: True for 837/835 transactions
     # If ndjson: True, the server will return a new-line separated list of objects (claims) instead of an array
-    params = {'splitTran': True, 'ndjson': is_ndjson}
+    # ediFileName parameter will propagate the original file name to transaction.fileInfo.name field; if not provided,
+    # the converter will generate a name
+    # warningsInResponse tells the converter to return parsing warnings to the client as objects (objectType: WARNING)
+    params = {'splitTran': True, 'ndjson': is_ndjson, 'warningsInResponse': True, 'ediFileName': file}
 
     with open(file) as f:
         # Use stream=True to stream the response instead of loading it in memory
-        # Note that we're posing the file-like object instead of reading the file into memory
+        # Note that we're posting the file-like object instead of reading the file into memory
         # This allows for streaming content to the server
         api_response = requests.post(api_url, data=f, params=params, stream=True)
         if api_response.status_code != 200:
@@ -55,18 +58,25 @@ file_to_convert = edi_837_dir + '/prof-encounter.dat'
 print('** Converting ' + file_to_convert)
 response = convert_file_using_post_text(file_to_convert, True)
 for claim_str in response.iter_lines():
-    # each line is a claim object
+    # each line is a claim object; objectType=='CLAIM'.
+    # In case of errors or warnings, objectType is set to ERROR or WARNING
     claim = json.loads(claim_str)
+    # Most parsing issues are warnings;
     if claim['objectType'] == 'ERROR':
         raise Exception(f'Error parsing EDI; Error: {claim}')
+    # since we set warningsInResponse=True, we need to check for warnings too
+    if claim['objectType'] == 'WARNING':
+        fileName = claim['fileName']
+        message = claim['message']
+        print(f'Encountered parsing issue with file {fileName}. Warning: {message}')
+    else:
+        pcn = claim['patientControlNumber']
+        charge = claim['chargeAmount']
+        billing_npi = claim['billingProvider']['identifier']
 
-    pcn = claim['patientControlNumber']
-    charge = claim['chargeAmount']
-    billing_npi = claim['billingProvider']['identifier']
+        print(f'Claim {pcn} from {billing_npi} for the amount {charge}')
 
-    print(f'Claim {pcn} from {billing_npi} for the amount {charge}')
-
-# Convert multiple files using multi-part request
+# Convert multiple files using multipart request
 # We can convert multiple files at the same time, 837p and 837i have the same response
 file_names_to_convert = ['prof-encounter.dat', 'chiro.dat', '837I-inst-claim.dat']
 files_to_convert = [edi_837_dir + '/' + file_name for file_name in file_names_to_convert]
@@ -86,9 +96,8 @@ for claim_str in response.iter_lines():
 
     print(f'File {file_name}: Claim {pcn} from {billing_npi} for the amount {charge}')
 
-
 # ** 835
-# Convert multiple 835 filesusing multi-part request
+# Convert multiple 835 files using multi-part request
 edi_835_dir = '../../edi_files/835'
 file_names_to_convert = ['claim_adj_reason.dat', 'negotiated_discount.dat']
 files_to_convert = [edi_835_dir + '/' + file_name for file_name in file_names_to_convert]
