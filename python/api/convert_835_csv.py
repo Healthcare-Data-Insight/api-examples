@@ -149,9 +149,12 @@ with open(csv_file, mode='r') as csv_input:
 print('** Convert using streaming; print raw text')
 response = convert_file_using_post_text(file_to_parse)
 for line in response.iter_lines(decode_unicode=True):
-    if line.startswith("ERROR"):
+    if line.startswith("ERROR:"):
         raise Exception(f'Error parsing EDI; Error: {line}')
-    print(line)
+    if line.startswith("WARNING:"):
+        print(f'Parsing warning: {line}')
+    else:
+        print(line)
 
 print('** Convert using streaming and pandas; all fields')
 response = convert_file_using_post_text(file_to_parse)
