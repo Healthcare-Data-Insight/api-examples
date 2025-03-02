@@ -1,7 +1,6 @@
 package hdi.edi.parser;
 
 import com.fasterxml.jackson.databind.JsonNode;
-import hdi.edi.legacyparser.SegmentType;
 import hdi.edi.parserhelper.EdiSegJsonConverter;
 import hdi.edi.parserhelper.SegMatcher;
 import org.junit.Before;
