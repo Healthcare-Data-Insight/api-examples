@@ -2,12 +2,13 @@ services:
   ediconvert:
     image: repo.datainsight.health/ediconvert:2.11
     restart: always
-    #environment:
-#     you can provide your license key as a variable instead of saving the license file to the etc volume
-#      - LICENSE_KEY=<your license key>
+    environment:
+      - SERVER_SSL_CERTIFICATE=./etc/ssl/certificate.crt
+      - SERVER_SSL_CERTIFICATEPRIVATEKEY=./etc/ssl/private.key
+      #- SERVER_SSL_CERTIFICATEPRIVATEKEYPASSWORD=your_secret_password
     volumes:
       # Copy your license file to the "etc" directory on your host
       - ./etc:/app/etc
     ports:
       # Change the port here
-      - "127.0.0.1:5080:5080"
+      - "127.0.0.1:8443:5080"
