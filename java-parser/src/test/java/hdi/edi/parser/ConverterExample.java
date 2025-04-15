@@ -40,7 +40,7 @@ public class ConverterExample implements ParsingExampleHelper {
         converter.convertFiles(ediFile, // input EDI file or a directory
                 null, // Glob patterns if converting multiple files
                 false, // Recursively search for files
-                outFile, // output file or a directory
+                outFile, // output file or directory
                 null    // Writer if converting to something other than files
         );
     }
