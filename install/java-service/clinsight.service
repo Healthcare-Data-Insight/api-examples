@@ -1,0 +1,11 @@
+[Unit]
+Description=ediconvert
+
+[Service]
+Restart=always
+WorkingDirectory=/opt/ediconvert/app
+ExecStart=java -XshowSettings:vm -Xms1g -Xmx8g -XX:+ExitOnOutOfMemoryError --jar ediconvert.war  --spring.profiles.active=ediconvert
+ExecStop=/bin/kill -15 $MAINPID
+
+[Install]
+WantedBy=multi-user.target

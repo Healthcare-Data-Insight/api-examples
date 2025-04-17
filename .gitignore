@@ -1,4 +1,5 @@
-install/docker-compose/ediconvert/etc/edi-license.bin
+install/docker-compose/ediconvert/etc/edi-license.*
+install/docker/etc/edi-license.*
 scratch/
 
 # Node artifact files

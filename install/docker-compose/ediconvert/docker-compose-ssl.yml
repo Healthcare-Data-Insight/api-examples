@@ -1,6 +1,6 @@
 services:
   ediconvert:
-    image: repo.datainsight.health/ediconvert:2.11
+    image: repo.datainsight.health/ediconvert:2.12
     restart: always
     environment:
       - SERVER_SSL_CERTIFICATE=./etc/ssl/certificate.crt

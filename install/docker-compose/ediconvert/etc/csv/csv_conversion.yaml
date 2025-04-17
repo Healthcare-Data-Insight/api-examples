@@ -94,7 +94,7 @@
   separator: ","
   excludedFields:
     # We excluded X12 EDI qualifiers since we translate them to "types"
-    - "*QualifierCode"
+    - "*Id*QualifierCode"
     - "*AddressCountryCode"
   listSchemas:
     - names: [ Main ]
@@ -235,7 +235,7 @@
     - FileName
     - PatientControlNumber
     - ChargeAmount
-    - PlaceOfService
+    - FacilityCode
     - FrequencyTypeCode
     - TransactionCreationDateTime
     - ServiceDateFrom
