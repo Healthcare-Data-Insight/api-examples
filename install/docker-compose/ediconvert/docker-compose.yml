@@ -5,7 +5,6 @@ services:
       # environment:
       # you can provide your license key as a variable instead of saving the license file to the etc. volume. Copy the key from edi-license.txt and paste it here
       #- LICENSE_KEY=<your license key>
-    #- LICENSE_FILE=./etc/edi-license-old.txt
     volumes:
       # Copy your license file to the "etc" directory on your host
       - ./etc:/app/etc
