@@ -2,9 +2,10 @@ services:
   ediconvert:
     image: repo.datainsight.health/ediconvert:2.12
     restart: always
-    environment:
-#     you can provide your license key as a variable instead of saving the license file to the etc volume
-      - LICENSE_KEY=Ic5OXgAAABoAAAACAAAACwAAAANlbnRpdGxlbWVudEVESQAAABoAAAALAAAACmV4cGlyYXRpb24AAAHf/BJqAAAAAJwAAAABAAAAEAAAAIBsaWNlbnNlU2lnbmF0dXJlIXXhaKgwfzh1UnUeHPiSUre4uZYdckJB8nMYe/lJkgxxk24Nvg6DMuGVoBEtZpE+8/hITqqFVt5Geabnku/WNVL/8jS8RynSJcJaRyU0yXhFId+pjZwJ/CiKC6UtOFmPMG6XHPA9EyKvYHovdSRrCdaP6WPe0tovfMEg1P7ZhigAAAAiAAAAAgAAAA8AAAAHc2lnbmF0dXJlRGlnZXN0U0hBLTUxMg==
+      # environment:
+      # you can provide your license key as a variable instead of saving the license file to the etc. volume. Copy the key from edi-license.txt and paste it here
+      #- LICENSE_KEY=<your license key>
+    #- LICENSE_FILE=./etc/edi-license-old.txt
     volumes:
       # Copy your license file to the "etc" directory on your host
       - ./etc:/app/etc
