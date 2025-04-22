@@ -20,9 +20,7 @@ dependencies {
 
     // lombok is used only in tests, you can run the parser without this dependency
     def lombok = 'org.projectlombok:lombok:1.18.36'
-    compileOnly lombok
     testCompileOnly lombok
-    annotationProcessor lombok
     testAnnotationProcessor lombok
 }
 
