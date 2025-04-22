@@ -7,6 +7,7 @@ import org.junit.runners.Suite;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
+        ConverterExample.class,
         ClaimParsingExample.class,
         PaymentParsingExample.class,
         SegmentParsingExample.class,

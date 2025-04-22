@@ -14,7 +14,9 @@ repositories {
 java.sourceCompatibility = JavaVersion.VERSION_17
 
 dependencies {
-    implementation "hdi:edi:2.11.3"
+    implementation("hdi:edi:2.12.2") {
+        changing = true
+    }
     implementation "com.fasterxml.jackson.core:jackson-databind:2.18.+"
 
     testImplementation "junit:junit:4.+"
