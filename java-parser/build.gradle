@@ -1,5 +1,5 @@
 plugins {
-    id 'java-library'
+    id 'java'
 }
 
 group = 'hdi'
@@ -11,17 +11,14 @@ repositories {
     }
 }
 
-java.sourceCompatibility = JavaVersion.VERSION_17
-
 dependencies {
-    implementation("hdi:edi:2.12.2") {
-        changing = true
-    }
-    implementation "com.fasterxml.jackson.core:jackson-databind:2.18.+"
+    implementation 'hdi:edi:2.12.2'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.18.+'
 
-    testImplementation "junit:junit:4.+"
+    testImplementation 'junit:junit:4.+'
     testImplementation 'org.assertj:assertj-core:3.27.3'
 
+    // lombok is used in only in tests, you can run the parser without this dependency
     def lombok = 'org.projectlombok:lombok:1.18.36'
     compileOnly lombok
     testCompileOnly lombok
@@ -38,5 +35,4 @@ test {
     filter {
         includeTestsMatching "TestSuite"
     }
-
 }
