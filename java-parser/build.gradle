@@ -18,7 +18,7 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     testImplementation 'org.assertj:assertj-core:3.27.3'
 
-    // lombok is used in only in tests, you can run the parser without this dependency
+    // lombok is used only in tests, you can run the parser without this dependency
     def lombok = 'org.projectlombok:lombok:1.18.36'
     compileOnly lombok
     testCompileOnly lombok
