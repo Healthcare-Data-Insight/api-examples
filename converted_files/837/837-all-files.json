@@ -1,0 +1,5626 @@
+[
+  {
+    "id": "680d2843be4ece52a3011d87",
+    "objectType": "CLAIM",
+    "patientControlNumber": "051068",
+    "chargeAmount": 766.50,
+    "facilityCode": {
+      "subType": "PLACE_OF_SERVICE",
+      "code": "41"
+    },
+    "placeOfServiceType": "OTHER",
+    "frequencyCode": {
+      "subType": "FREQUENCY_CODE",
+      "code": "1"
+    },
+    "serviceDateFrom": "2005-02-08",
+    "serviceDateTo": "2005-02-08",
+    "subscriber": {
+      "payerResponsibilitySequence": "PRIMARY",
+      "relationshipType": "SELF",
+      "claimFilingIndicatorCode": "MB",
+      "insurancePlanType": "MEDICARE_B",
+      "person": {
+        "entityRole": "SUBSCRIBER",
+        "entityType": "INDIVIDUAL",
+        "identificationType": "MEMBER_ID",
+        "identifier": "012345678A",
+        "lastNameOrOrgName": "JONES",
+        "firstName": "SARAH",
+        "middleName": "A",
+        "birthDate": "1963-07-29",
+        "gender": "FEMALE",
+        "address": {
+          "line": "1129 REINDEER ROAD",
+          "city": "CARR",
+          "stateCode": "CO",
+          "zipCode": "80612"
+        }
+      },
+      "payer": {
+        "entityRole": "PAYER",
+        "entityType": "BUSINESS",
+        "identificationType": "PAYOR_ID",
+        "identifier": "123245",
+        "lastNameOrOrgName": "MEDICARE PART B",
+        "address": {
+          "line": "PO BOX 3543",
+          "city": "BALTIMORE",
+          "stateCode": "MD",
+          "zipCode": "666013543"
+        }
+      }
+    },
+    "providerSignatureIndicator": "Y",
+    "assignmentParticipationCode": "A",
+    "assignmentCertificationIndicator": "Y",
+    "releaseOfInformationCode": "Y",
+    "accidentDate": "2005-02-08",
+    "billingProvider": {
+      "entityRole": "BILLING_PROVIDER",
+      "entityType": "BUSINESS",
+      "identificationType": "NPI",
+      "identifier": "2366554859",
+      "taxId": "376985369",
+      "lastNameOrOrgName": "AAA AMBULANCE SERVICE",
+      "address": {
+        "line": "12202 AIRPORT WAY",
+        "city": "BROOMFIELD",
+        "stateCode": "CO",
+        "zipCode": "800210021"
+      },
+      "providerTaxonomy": {
+        "subType": "PROVIDER_TAXONOMY",
+        "code": "3416L0300X"
+      }
+    },
+    "providers": [
+      {
+        "entityRole": "PICKUP_ADDRESS",
+        "entityType": "BUSINESS",
+        "address": {
+          "line": "1129 REINDEER ROAD",
+          "city": "CARR",
+          "stateCode": "CO",
+          "zipCode": "80612"
+        }
+      },
+      {
+        "entityRole": "DROP_OFF_LOCATION",
+        "entityType": "BUSINESS",
+        "address": {
+          "line": "10005 BANNOCK ST",
+          "city": "CHEYENNE",
+          "stateCode": "WY",
+          "zipCode": "82009"
+        }
+      }
+    ],
+    "diags": [
+      {
+        "subType": "ICD_10_PRINCIPAL",
+        "code": "S279XXA"
+      },
+      {
+        "subType": "ICD_10",
+        "code": "W1830XA"
+      },
+      {
+        "subType": "ICD_10",
+        "code": "S4980XA"
+      }
+    ],
+    "serviceLines": [
+      {
+        "sourceLineId": "1001",
+        "emergencyIndicator": "Y",
+        "chargeAmount": 700.00,
+        "serviceDateFrom": "2005-02-08",
+        "unitType": "UNIT",
+        "unitCount": 1,
+        "lineNote": "CARDIAC EMERGENCY",
+        "procedure": {
+          "subType": "HCPCS",
+          "code": "A0427",
+          "modifiers": [
+            {
+              "subType": "HCPCS_MODIFIER",
+              "code": "RH"
+            }
+          ]
+        },
+        "providers": [
+          {
+            "entityRole": "PICKUP_ADDRESS",
+            "entityType": "BUSINESS",
+            "address": {
+              "line": "6666 REINDEER ROAD",
+              "city": "CARR",
+              "stateCode": "CO",
+              "zipCode": "80612"
+            }
+          },
+          {
+            "entityRole": "DROP_OFF_LOCATION",
+            "entityType": "BUSINESS",
+            "address": {
+              "line": "6666 BANNOCK ST",
+              "city": "CHEYENNE",
+              "stateCode": "WY",
+              "zipCode": "82009"
+            }
+          }
+        ],
+        "diagPointers": [
+          1,
+          2,
+          3
+        ],
+        "diags": [
+          {
+            "subType": "ICD_10_PRINCIPAL",
+            "code": "S279XXA"
+          },
+          {
+            "subType": "ICD_10",
+            "code": "W1830XA"
+          },
+          {
+            "subType": "ICD_10",
+            "code": "S4980XA"
+          }
+        ]
+      },
+      {
+        "sourceLineId": "1002",
+        "emergencyIndicator": "Y",
+        "chargeAmount": 8.20,
+        "serviceDateFrom": "2005-02-08",
+        "unitType": "UNIT",
+        "unitCount": 21,
+        "procedure": {
+          "subType": "HCPCS",
+          "code": "A0425",
+          "modifiers": [
+            {
+              "subType": "HCPCS_MODIFIER",
+              "code": "RH"
+            }
+          ]
+        },
+        "diagPointers": [
+          1,
+          2,
+          3
+        ],
+        "diags": [
+          {
+            "subType": "ICD_10_PRINCIPAL",
+            "code": "S279XXA"
+          },
+          {
+            "subType": "ICD_10",
+            "code": "W1830XA"
+          },
+          {
+            "subType": "ICD_10",
+            "code": "S4980XA"
+          }
+        ]
+      },
+      {
+        "sourceLineId": "1003",
+        "emergencyIndicator": "Y",
+        "chargeAmount": 46.00,
+        "serviceDateFrom": "2005-02-08",
+        "unitType": "UNIT",
+        "unitCount": 1,
+        "procedure": {
+          "subType": "HCPCS",
+          "code": "A0422",
+          "modifiers": [
+            {
+              "subType": "HCPCS_MODIFIER",
+              "code": "RH"
+            }
+          ]
+        },
+        "diagPointers": [
+          1,
+          2,
+          3
+        ],
+        "diags": [
+          {
+            "subType": "ICD_10_PRINCIPAL",
+            "code": "S279XXA"
+          },
+          {
+            "subType": "ICD_10",
+            "code": "W1830XA"
+          },
+          {
+            "subType": "ICD_10",
+            "code": "S4980XA"
+          }
+        ]
+      },
+      {
+        "sourceLineId": "1004",
+        "emergencyIndicator": "Y",
+        "chargeAmount": 12.30,
+        "serviceDateFrom": "2005-02-08",
+        "unitType": "UNIT",
+        "unitCount": 1,
+        "procedure": {
+          "subType": "HCPCS",
+          "code": "A0382",
+          "modifiers": [
+            {
+              "subType": "HCPCS_MODIFIER",
+              "code": "RH"
+            }
+          ]
+        },
+        "diagPointers": [
+          1,
+          2,
+          3
+        ],
+        "diags": [
+          {
+            "subType": "ICD_10_PRINCIPAL",
+            "code": "S279XXA"
+          },
+          {
+            "subType": "ICD_10",
+            "code": "W1830XA"
+          },
+          {
+            "subType": "ICD_10",
+            "code": "S4980XA"
+          }
+        ]
+      }
+    ],
+    "transaction": {
+      "id": "680d2843be4ece52a3011d4c",
+      "controlNumber": "000017712",
+      "transactionType": "PROF",
+      "purposeCode": "00",
+      "originatorApplicationTransactionId": "000017712",
+      "creationDate": "2005-02-08",
+      "creationTime": "11:12:00",
+      "claimOrEncounterIdentifierType": "CHARGEABLE",
+      "transactionSetIdentifierCode": "CLAIM",
+      "implementationConventionReference": "005010X222",
+      "fileInfo": {
+        "name": "ambulance.dat",
+        "url": "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/837/ambulance.dat",
+        "lastModifiedDateTime": "2025-04-07T22:10:01.716-04:00",
+        "fileType": "EDI"
+      },
+      "sender": {
+        "entityRole": "SUBMITTER",
+        "entityType": "BUSINESS",
+        "identificationType": "ETIN",
+        "identifier": "376985369",
+        "lastNameOrOrgName": "AAA AMBULANCE SERVICE",
+        "contacts": [
+          {
+            "name": "LISA SMITH",
+            "contactNumbers": [
+              {
+                "type": "PHONE",
+                "number": "3037752536"
+              }
+            ]
+          }
+        ]
+      },
+      "receiver": {
+        "entityRole": "RECEIVER",
+        "entityType": "BUSINESS",
+        "identificationType": "ETIN",
+        "identifier": "123245",
+        "lastNameOrOrgName": "MEDICARE B"
+      },
+      "creationDateTime": "2005-02-08T11:12:00"
+    }
+  },
+  {
+    "id": "680d2843be4ece52a3011db4",
+    "objectType": "CLAIM",
+    "patientControlNumber": "26462967",
+    "chargeAmount": 100.00,
+    "facilityCode": {
+      "subType": "PLACE_OF_SERVICE",
+      "code": "11"
+    },
+    "placeOfServiceType": "OFFICE",
+    "frequencyCode": {
+      "subType": "FREQUENCY_CODE",
+      "code": "1"
+    },
+    "serviceDateFrom": "2006-10-03",
+    "serviceDateTo": "2006-10-10",
+    "subscriber": {
+      "payerResponsibilitySequence": "PRIMARY",
+      "relationshipType": "SELF",
+      "groupOrPolicyNumber": "12312-A",
+      "claimFilingIndicatorCode": "HM",
+      "insurancePlanType": "HMO",
+      "person": {
+        "entityRole": "SUBSCRIBER",
+        "entityType": "INDIVIDUAL",
+        "identificationType": "MEMBER_ID",
+        "identifier": "00221111",
+        "lastNameOrOrgName": "SMITH",
+        "firstName": "TED",
+        "birthDate": "1943-05-01",
+        "gender": "MALE",
+        "address": {
+          "line": "236 N MAIN ST",
+          "city": "MIAMI",
+          "stateCode": "FL",
+          "zipCode": "33413"
+        }
+      },
+      "payer": {
+        "entityRole": "PAYER",
+        "entityType": "BUSINESS",
+        "identificationType": "PAYOR_ID",
+        "identifier": "741234",
+        "lastNameOrOrgName": "ALLIANCE HEALTH AND LIFE INSURANCE"
+      }
+    },
+    "providerSignatureIndicator": "Y",
+    "assignmentParticipationCode": "A",
+    "assignmentCertificationIndicator": "Y",
+    "releaseOfInformationCode": "I",
+    "onsetOfCurrentIllnessOrInjuryDate": "1998-10-03",
+    "clearinghouseTraceNumber": "17312345600006351",
+    "billingProvider": {
+      "entityRole": "BILLING_PROVIDER",
+      "entityType": "BUSINESS",
+      "identificationType": "NPI",
+      "identifier": "9876543210",
+      "taxId": "587654321",
+      "lastNameOrOrgName": "BEN KILDARE SERVICE",
+      "address": {
+        "line": "234 SEAWAY ST",
+        "city": "MIAMI",
+        "stateCode": "FL",
+        "zipCode": "33111"
+      },
+      "providerTaxonomy": {
+        "subType": "PROVIDER_TAXONOMY",
+        "code": "103GC0700X"
+      }
+    },
+    "providers": [
+      {
+        "entityRole": "SERVICE_FACILITY",
+        "entityType": "BUSINESS",
+        "identificationType": "NPI",
+        "identifier": "5812345679",
+        "lastNameOrOrgName": "KILDARE ASSOCIATES",
+        "address": {
+          "line": "2345 OCEAN BLVD",
+          "city": "MIAMI",
+          "stateCode": "FL",
+          "zipCode": "33111"
+        }
+      }
+    ],
+    "diags": [
+      {
+        "subType": "ICD_10_PRINCIPAL",
+        "code": "G35"
+      },
+      {
+        "subType": "ICD_10",
+        "code": "Z1159"
+      }
+    ],
+    "serviceLines": [
+      {
+        "chargeAmount": 40.00,
+        "serviceDateFrom": "2006-10-03",
+        "unitType": "UNIT",
+        "unitCount": 1,
+        "procedure": {
+          "subType": "CPT",
+          "code": "99213"
+        },
+        "diagPointers": [
+          1
+        ],
+        "diags": [
+          {
+            "subType": "ICD_10_PRINCIPAL",
+            "code": "G35"
+          }
+        ]
+      },
+      {
+        "chargeAmount": 15.00,
+        "serviceDateFrom": "2006-10-03",
+        "unitType": "UNIT",
+        "unitCount": 1,
+        "procedure": {
+          "subType": "CPT",
+          "code": "87070"
+        },
+        "diagPointers": [
+          1
+        ],
+        "diags": [
+          {
+            "subType": "ICD_10_PRINCIPAL",
+            "code": "G35"
+          }
+        ]
+      },
+      {
+        "chargeAmount": 35.00,
+        "serviceDateFrom": "2006-10-10",
+        "unitType": "UNIT",
+        "unitCount": 1,
+        "procedure": {
+          "subType": "CPT",
+          "code": "99214"
+        },
+        "diagPointers": [
+          2
+        ],
+        "diags": [
+          {
+            "subType": "ICD_10",
+            "code": "Z1159"
+          }
+        ]
+      },
+      {
+        "chargeAmount": 10.00,
+        "serviceDateFrom": "2006-10-10",
+        "unitType": "UNIT",
+        "unitCount": 1,
+        "procedure": {
+          "subType": "CPT",
+          "code": "86663"
+        },
+        "diagPointers": [
+          2
+        ],
+        "diags": [
+          {
+            "subType": "ICD_10",
+            "code": "Z1159"
+          }
+        ]
+      }
+    ],
+    "transaction": {
+      "id": "680d2843be4ece52a3011d8a",
+      "controlNumber": "0021",
+      "transactionType": "PROF",
+      "purposeCode": "00",
+      "originatorApplicationTransactionId": "0123",
+      "creationDate": "2006-10-15",
+      "creationTime": "10:23:00",
+      "claimOrEncounterIdentifierType": "REPORTING",
+      "transactionSetIdentifierCode": "CLAIM",
+      "implementationConventionReference": "005010X222",
+      "fileInfo": {
+        "name": "prof-encounter.dat",
+        "url": "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/837/prof-encounter.dat",
+        "lastModifiedDateTime": "2025-02-28T12:24:52.176-05:00",
+        "fileType": "EDI"
+      },
+      "sender": {
+        "entityRole": "SUBMITTER",
+        "entityType": "BUSINESS",
+        "identificationType": "ETIN",
+        "identifier": "TGJ23",
+        "lastNameOrOrgName": "PREMIER BILLING SERVICE",
+        "contacts": [
+          {
+            "name": "JERRY",
+            "contactNumbers": [
+              {
+                "type": "PHONE",
+                "number": "3055552222"
+              },
+              {
+                "type": "EXTENSION",
+                "number": "231"
+              }
+            ]
+          }
+        ]
+      },
+      "receiver": {
+        "entityRole": "RECEIVER",
+        "entityType": "BUSINESS",
+        "identificationType": "ETIN",
+        "identifier": "66783JJT",
+        "lastNameOrOrgName": "AHLIC"
+      },
+      "creationDateTime": "2006-10-15T10:23:00"
+    }
+  },
+  {
+    "id": "680d2843be4ece52a3011e4e",
+    "objectType": "CLAIM",
+    "patientControlNumber": "ABC0002",
+    "chargeAmount": 89.93,
+    "facilityCode": {
+      "subType": "FACILITY_TYPE",
+      "code": "11"
+    },
+    "placeOfServiceType": "INPATIENT",
+    "frequencyCode": {
+      "subType": "FREQUENCY_CODE",
+      "code": "1"
+    },
+    "statementDateFrom": "2019-03-10",
+    "statementDateTo": "2019-03-11",
+    "serviceDateFrom": "2019-03-10",
+    "serviceDateTo": "2019-05-11",
+    "subscriber": {
+      "payerResponsibilitySequence": "SECONDARY",
+      "relationshipType": "SELF",
+      "groupOrPolicyNumber": "S2345",
+      "groupName": "Other Insured Group Name",
+      "claimFilingIndicatorCode": "13",
+      "insurancePlanType": "POS",
+      "person": {
+        "entityRole": "SUBSCRIBER",
+        "entityType": "INDIVIDUAL",
+        "identificationType": "MEMBER_ID",
+        "identifier": "1008716534V004619",
+        "lastNameOrOrgName": "DOE",
+        "firstName": "JANE",
+        "middleName": "A",
+        "birthDate": "1991-10-10",
+        "gender": "FEMALE",
+        "address": {
+          "line": "444 ORANGE STREET",
+          "line2": "APT 4B",
+          "city": "LAKEVILLE",
+          "stateCode": "TX",
+          "zipCode": "557143298",
+          "countryCode": "USA"
+        }
+      },
+      "payer": {
+        "entityRole": "PAYER",
+        "entityType": "BUSINESS",
+        "identificationType": "PAYOR_ID",
+        "identifier": "PAYERID1234",
+        "taxId": "123456789",
+        "lastNameOrOrgName": "BEST PLAN SERVICE",
+        "address": {
+          "line": "3394 JACKSON DR",
+          "line2": "SUITE 117",
+          "city": "SPRINGFIELD",
+          "stateCode": "VA",
+          "zipCode": "22309"
+        },
+        "additionalIds": [
+          {
+            "qualifierCode": "G2",
+            "type": "PROVIDER_COMMERCIAL_NUMBER",
+            "identification": "12345"
+          }
+        ]
+      }
+    },
+    "patient": {
+      "relationshipType": "CHILD",
+      "person": {
+        "entityRole": "PATIENT",
+        "entityType": "INDIVIDUAL",
+        "lastNameOrOrgName": "DOE",
+        "firstName": "FRED",
+        "middleName": "J",
+        "birthDate": "2019-09-10",
+        "gender": "MALE",
+        "address": {
+          "line": "123 MAIN STREET",
+          "city": "KANSAS CITY",
+          "stateCode": "MO",
+          "zipCode": "64108"
+        }
+      }
+    },
+    "otherSubscribers": [
+      {
+        "payerResponsibilitySequence": "PRIMARY",
+        "relationshipType": "SELF",
+        "groupOrPolicyNumber": "GR00786",
+        "groupName": "Other Insured Group Name",
+        "claimFilingIndicatorCode": "CI",
+        "insurancePlanType": "COMMERCIAL",
+        "person": {
+          "entityRole": "SUBSCRIBER",
+          "entityType": "INDIVIDUAL",
+          "identificationType": "MEMBER_ID",
+          "identifier": "123456789",
+          "lastNameOrOrgName": "DOE",
+          "firstName": "JANE",
+          "middleName": "A",
+          "address": {
+            "line": "444 ORANGE STREET",
+            "line2": "APT 4B",
+            "city": "LAKEVILLE",
+            "stateCode": "TX",
+            "zipCode": "557143298"
+          }
+        },
+        "adjustments": [
+          {
+            "group": "CORRECTION",
+            "reasonCode": "26",
+            "reason": {
+              "subType": "CARC",
+              "code": "26"
+            },
+            "amount": 55.00,
+            "quantity": 1
+          },
+          {
+            "group": "CORRECTION",
+            "reasonCode": "90",
+            "reason": {
+              "subType": "CARC",
+              "code": "90"
+            },
+            "amount": 65.55,
+            "quantity": 1
+          },
+          {
+            "group": "CORRECTION",
+            "reasonCode": "70",
+            "reason": {
+              "subType": "CARC",
+              "code": "70"
+            },
+            "amount": 73.03,
+            "quantity": 2
+          },
+          {
+            "group": "CORRECTION",
+            "reasonCode": "20",
+            "reason": {
+              "subType": "CARC",
+              "code": "20"
+            },
+            "amount": 85.15,
+            "quantity": 1
+          },
+          {
+            "group": "CORRECTION",
+            "reasonCode": "102",
+            "reason": {
+              "subType": "CARC",
+              "code": "102"
+            },
+            "amount": 99.99,
+            "quantity": 1
+          },
+          {
+            "group": "CORRECTION",
+            "reasonCode": "4",
+            "reason": {
+              "subType": "CARC",
+              "code": "4"
+            },
+            "amount": 102.22,
+            "quantity": 1
+          },
+          {
+            "group": "PAYOR_INITIATED",
+            "reasonCode": "2",
+            "reason": {
+              "subType": "CARC",
+              "code": "2"
+            },
+            "amount": 25.00,
+            "quantity": 1
+          },
+          {
+            "group": "PAYOR_INITIATED",
+            "reasonCode": "3",
+            "reason": {
+              "subType": "CARC",
+              "code": "3"
+            },
+            "amount": 25.55,
+            "quantity": 1
+          },
+          {
+            "group": "PAYOR_INITIATED",
+            "reasonCode": "2",
+            "reason": {
+              "subType": "CARC",
+              "code": "2"
+            },
+            "amount": 33.03,
+            "quantity": 2
+          },
+          {
+            "group": "PAYOR_INITIATED",
+            "reasonCode": "75",
+            "reason": {
+              "subType": "CARC",
+              "code": "75"
+            },
+            "amount": 45.15,
+            "quantity": 1
+          },
+          {
+            "group": "PAYOR_INITIATED",
+            "reasonCode": "22",
+            "reason": {
+              "subType": "CARC",
+              "code": "22"
+            },
+            "amount": 59.99,
+            "quantity": 1
+          },
+          {
+            "group": "PAYOR_INITIATED",
+            "reasonCode": "2",
+            "reason": {
+              "subType": "CARC",
+              "code": "2"
+            },
+            "amount": 62.22,
+            "quantity": 1
+          }
+        ],
+        "payerPaidAmount": 8852.72,
+        "nonCoveredAmount": 780.00,
+        "remainingPatientLiabilityAmount": 60.00,
+        "payerClaimControlNumber": "CLAIM014",
+        "payer": {
+          "entityRole": "PAYER",
+          "entityType": "BUSINESS",
+          "identificationType": "PAYOR_ID",
+          "identifier": "12345",
+          "taxId": "987654321",
+          "lastNameOrOrgName": "OTHER PAYER",
+          "address": {
+            "line": "PO BOX 7901",
+            "line2": "DEP 2",
+            "city": "MADISON",
+            "stateCode": "MA",
+            "zipCode": "53707"
+          },
+          "additionalIds": [
+            {
+              "qualifierCode": "FY",
+              "type": "CLAIM_OFFICE_NUMBER",
+              "identification": "98765"
+            }
+          ]
+        },
+        "providers": [
+          {
+            "entityRole": "ATTENDING",
+            "entityType": "INDIVIDUAL",
+            "additionalIds": [
+              {
+                "qualifierCode": "G2",
+                "type": "PROVIDER_COMMERCIAL_NUMBER",
+                "identification": "12345"
+              }
+            ]
+          },
+          {
+            "entityRole": "OPERATING",
+            "entityType": "INDIVIDUAL",
+            "additionalIds": [
+              {
+                "qualifierCode": "G2",
+                "type": "PROVIDER_COMMERCIAL_NUMBER",
+                "identification": "12345"
+              }
+            ]
+          },
+          {
+            "entityRole": "OTHER_OPERATING",
+            "entityType": "INDIVIDUAL",
+            "additionalIds": [
+              {
+                "qualifierCode": "G2",
+                "type": "PROVIDER_COMMERCIAL_NUMBER",
+                "identification": "12345"
+              }
+            ]
+          },
+          {
+            "entityRole": "SERVICE_FACILITY",
+            "entityType": "INDIVIDUAL",
+            "additionalIds": [
+              {
+                "qualifierCode": "G2",
+                "type": "PROVIDER_COMMERCIAL_NUMBER",
+                "identification": "12345"
+              }
+            ]
+          },
+          {
+            "entityRole": "RENDERING",
+            "entityType": "INDIVIDUAL",
+            "additionalIds": [
+              {
+                "qualifierCode": "G2",
+                "type": "PROVIDER_COMMERCIAL_NUMBER",
+                "identification": "12345"
+              }
+            ]
+          },
+          {
+            "entityRole": "REFERRING",
+            "entityType": "INDIVIDUAL",
+            "additionalIds": [
+              {
+                "qualifierCode": "G2",
+                "type": "PROVIDER_COMMERCIAL_NUMBER",
+                "identification": "12345"
+              }
+            ]
+          },
+          {
+            "entityRole": "BILLING_PROVIDER",
+            "entityType": "INDIVIDUAL",
+            "additionalIds": [
+              {
+                "qualifierCode": "G2",
+                "type": "PROVIDER_COMMERCIAL_NUMBER",
+                "identification": "12345"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "assignmentParticipationCode": "A",
+    "assignmentCertificationIndicator": "Y",
+    "releaseOfInformationCode": "Y",
+    "referralNumber": "2410628868",
+    "priorAuthorizationNumber": "PA00000024",
+    "accidentState": "DD",
+    "medicalRecordNumber": "44444TH56",
+    "admissionDateAndHour": "2019-03-10T14:02:00",
+    "dischargeTime": "13:00:00",
+    "clearinghouseTraceNumber": "CLAIM0004",
+    "admissionTypeCode": "3",
+    "admissionSourceCode": "7",
+    "patientStatusCode": "01",
+    "originalReferenceNumber": "CLAIM04",
+    "serviceAuthorizationExceptionCode": "1",
+    "drg": {
+      "subType": "DRG",
+      "code": "025"
+    },
+    "claimNote": "PATIENT ALLERGIC TO PENICILLIN",
+    "billingNote": "Billing Note",
+    "billingProvider": {
+      "entityRole": "BILLING_PROVIDER",
+      "entityType": "BUSINESS",
+      "identificationType": "NPI",
+      "identifier": "0123456789",
+      "taxId": "123401234",
+      "lastNameOrOrgName": "BEST MEDICAL ASSOCIATES LLC",
+      "address": {
+        "line": "222 HEALTHY STREET",
+        "line2": "SUITE 200",
+        "city": "HERNDON",
+        "stateCode": "VA",
+        "zipCode": "201714444",
+        "countryCode": "USA"
+      },
+      "providerTaxonomy": {
+        "subType": "PROVIDER_TAXONOMY",
+        "code": "207L00000X"
+      },
+      "contacts": [
+        {
+          "name": "ATTN ALEX",
+          "contactNumbers": [
+            {
+              "type": "PHONE",
+              "number": "7031234567"
+            },
+            {
+              "type": "EXTENSION",
+              "number": "123"
+            },
+            {
+              "type": "EMAIL",
+              "number": "ALEX@BESTMED.NET"
+            }
+          ]
+        }
+      ]
+    },
+    "providers": [
+      {
+        "entityRole": "ATTENDING",
+        "entityType": "INDIVIDUAL",
+        "identificationType": "NPI",
+        "identifier": "1699222100",
+        "lastNameOrOrgName": "JONES",
+        "firstName": "ALEX",
+        "middleName": "A",
+        "providerTaxonomy": {
+          "subType": "PROVIDER_TAXONOMY",
+          "code": "208D00000X"
+        },
+        "additionalIds": [
+          {
+            "qualifierCode": "LU",
+            "type": "LOCATION_NUMBER",
+            "identification": "12345"
+          }
+        ]
+      },
+      {
+        "entityRole": "OPERATING",
+        "entityType": "INDIVIDUAL",
+        "identificationType": "NPI",
+        "identifier": "OPRDOC1234",
+        "lastNameOrOrgName": "BELL",
+        "firstName": "RITA",
+        "middleName": "H"
+      },
+      {
+        "entityRole": "OTHER_OPERATING",
+        "entityType": "INDIVIDUAL",
+        "identificationType": "NPI",
+        "identifier": "OTHOPR1234",
+        "lastNameOrOrgName": "JOHNSON",
+        "firstName": "SALLY",
+        "middleName": "M"
+      },
+      {
+        "entityRole": "RENDERING",
+        "entityType": "INDIVIDUAL",
+        "identificationType": "NPI",
+        "identifier": "9995553336",
+        "lastNameOrOrgName": "DAVIDSON",
+        "firstName": "MICHELLE",
+        "middleName": "S"
+      },
+      {
+        "entityRole": "SERVICE_FACILITY",
+        "entityType": "BUSINESS",
+        "identificationType": "NPI",
+        "identifier": "1689432123",
+        "lastNameOrOrgName": "BEST HEALTH CENTER",
+        "address": {
+          "line": "123 HEALTHY ST",
+          "line2": "SUITE 2000",
+          "city": "FAIRFAX",
+          "stateCode": "VA",
+          "zipCode": "22042",
+          "countryCode": "USA"
+        }
+      },
+      {
+        "entityRole": "REFERRING",
+        "entityType": "INDIVIDUAL",
+        "identificationType": "NPI",
+        "identifier": "ORDPRV2468",
+        "lastNameOrOrgName": "SMITH",
+        "firstName": "JOHN",
+        "middleName": "A"
+      }
+    ],
+    "diags": [
+      {
+        "subType": "ICD_10_PRINCIPAL",
+        "code": "M24562",
+        "presentOnAdmissionIndicator": "N"
+      },
+      {
+        "subType": "ICD_10_ADMITTING",
+        "code": "H5988"
+      },
+      {
+        "subType": "ICD_10_REASON_FOR_VISIT",
+        "code": "H59369"
+      },
+      {
+        "subType": "ICD_10_EXTERNAL_CAUSE_OF_INJURY",
+        "code": "V4312XA"
+      },
+      {
+        "subType": "ICD_10_EXTERNAL_CAUSE_OF_INJURY",
+        "code": "Z970"
+      },
+      {
+        "subType": "ICD_10_EXTERNAL_CAUSE_OF_INJURY",
+        "code": "Z9681"
+      },
+      {
+        "subType": "ICD_10",
+        "code": "E8359",
+        "presentOnAdmissionIndicator": "N"
+      },
+      {
+        "subType": "ICD_10",
+        "code": "A0102",
+        "presentOnAdmissionIndicator": "Y"
+      },
+      {
+        "subType": "ICD_10",
+        "code": "A0103",
+        "presentOnAdmissionIndicator": "Y"
+      }
+    ],
+    "procs": [
+      {
+        "subType": "ICD_10_PCS_PRINCIPAL",
+        "code": "009G0ZZ",
+        "occurrenceDate": "2017-10-03"
+      },
+      {
+        "subType": "ICD_10_PCS",
+        "code": "F01ZFEZ",
+        "occurrenceDate": "2017-10-04"
+      },
+      {
+        "subType": "ICD_10_PCS",
+        "code": "009G0ZZ",
+        "occurrenceDate": "2017-10-13"
+      },
+      {
+        "subType": "ICD_10_PCS",
+        "code": "009G0ZZ",
+        "occurrenceDate": "2017-10-23"
+      },
+      {
+        "subType": "ICD_10_PCS",
+        "code": "009K0ZZ",
+        "occurrenceDate": "2017-10-30"
+      },
+      {
+        "subType": "ICD_10_PCS",
+        "code": "009N0ZX",
+        "occurrenceDate": "2017-11-03"
+      },
+      {
+        "subType": "ICD_10_PCS",
+        "code": "B82600Z",
+        "occurrenceDate": "2017-11-03"
+      },
+      {
+        "subType": "ICD_10_PCS",
+        "code": "B806ZZZ",
+        "occurrenceDate": "2017-11-03"
+      },
+      {
+        "subType": "ICD_10_PCS",
+        "code": "B846ZZZ",
+        "occurrenceDate": "2017-11-03"
+      },
+      {
+        "subType": "ICD_10_PCS",
+        "code": "B845ZZZ",
+        "occurrenceDate": "2017-11-23"
+      },
+      {
+        "subType": "ICD_10_PCS",
+        "code": "B908YZZ",
+        "occurrenceDate": "2017-11-23"
+      },
+      {
+        "subType": "ICD_10_PCS",
+        "code": "B803ZZZ",
+        "occurrenceDate": "2017-11-23"
+      },
+      {
+        "subType": "ICD_10_PCS",
+        "code": "B8001ZZ",
+        "occurrenceDate": "2017-11-23"
+      }
+    ],
+    "occurrences": [
+      {
+        "subType": "OCCURRENCE",
+        "code": "40",
+        "occurrenceDate": "2016-01-03"
+      },
+      {
+        "subType": "OCCURRENCE",
+        "code": "10",
+        "occurrenceDate": "2018-01-01"
+      },
+      {
+        "subType": "OCCURRENCE",
+        "code": "11",
+        "occurrenceDate": "2017-10-10"
+      },
+      {
+        "subType": "OCCURRENCE",
+        "code": "16",
+        "occurrenceDate": "2017-08-10"
+      },
+      {
+        "subType": "OCCURRENCE",
+        "code": "18",
+        "occurrenceDate": "2015-12-12"
+      },
+      {
+        "subType": "OCCURRENCE",
+        "code": "17",
+        "occurrenceDate": "2017-12-24"
+      },
+      {
+        "subType": "OCCURRENCE",
+        "code": "36",
+        "occurrenceDate": "2017-10-03"
+      },
+      {
+        "subType": "OCCURRENCE",
+        "code": "A3",
+        "occurrenceDate": "2018-04-04"
+      },
+      {
+        "subType": "OCCURRENCE",
+        "code": "C3",
+        "occurrenceDate": "2018-04-22"
+      },
+      {
+        "subType": "OCCURRENCE",
+        "code": "25",
+        "occurrenceDate": "2018-04-04"
+      },
+      {
+        "subType": "OCCURRENCE",
+        "code": "22",
+        "occurrenceDate": "2018-04-30"
+      },
+      {
+        "subType": "OCCURRENCE",
+        "code": "24",
+        "occurrenceDate": "2018-05-06"
+      }
+    ],
+    "occurrenceSpans": [
+      {
+        "subType": "OCCURRENCE_SPAN",
+        "code": "01",
+        "occurrenceDate": "2016-01-03",
+        "occurrenceEndDate": "2016-01-08"
+      },
+      {
+        "subType": "OCCURRENCE_SPAN",
+        "code": "10",
+        "occurrenceDate": "2018-01-01",
+        "occurrenceEndDate": "2018-01-10"
+      },
+      {
+        "subType": "OCCURRENCE_SPAN",
+        "code": "11",
+        "occurrenceDate": "2017-10-10",
+        "occurrenceEndDate": "2017-10-12"
+      },
+      {
+        "subType": "OCCURRENCE_SPAN",
+        "code": "16",
+        "occurrenceDate": "2017-08-10",
+        "occurrenceEndDate": "2017-08-16"
+      },
+      {
+        "subType": "OCCURRENCE_SPAN",
+        "code": "18",
+        "occurrenceDate": "2015-12-12",
+        "occurrenceEndDate": "2015-12-22"
+      },
+      {
+        "subType": "OCCURRENCE_SPAN",
+        "code": "17",
+        "occurrenceDate": "2017-12-24",
+        "occurrenceEndDate": "2017-12-31"
+      },
+      {
+        "subType": "OCCURRENCE_SPAN",
+        "code": "36",
+        "occurrenceDate": "2017-10-03",
+        "occurrenceEndDate": "2017-11-23"
+      },
+      {
+        "subType": "OCCURRENCE_SPAN",
+        "code": "A3",
+        "occurrenceDate": "2018-04-04",
+        "occurrenceEndDate": "2018-06-04"
+      },
+      {
+        "subType": "OCCURRENCE_SPAN",
+        "code": "C3",
+        "occurrenceDate": "2018-04-22",
+        "occurrenceEndDate": "2018-04-24"
+      },
+      {
+        "subType": "OCCURRENCE_SPAN",
+        "code": "25",
+        "occurrenceDate": "2018-04-04",
+        "occurrenceEndDate": "2018-04-14"
+      },
+      {
+        "subType": "OCCURRENCE_SPAN",
+        "code": "22",
+        "occurrenceDate": "2018-04-30",
+        "occurrenceEndDate": "2018-05-01"
+      },
+      {
+        "subType": "OCCURRENCE_SPAN",
+        "code": "24",
+        "occurrenceDate": "2018-05-06",
+        "occurrenceEndDate": "2018-05-07"
+      }
+    ],
+    "conditions": [
+      {
+        "subType": "CONDITION",
+        "code": "03"
+      },
+      {
+        "subType": "CONDITION",
+        "code": "04"
+      },
+      {
+        "subType": "CONDITION",
+        "code": "12"
+      },
+      {
+        "subType": "CONDITION",
+        "code": "20"
+      },
+      {
+        "subType": "CONDITION",
+        "code": "22"
+      },
+      {
+        "subType": "CONDITION",
+        "code": "26"
+      },
+      {
+        "subType": "CONDITION",
+        "code": "28"
+      },
+      {
+        "subType": "CONDITION",
+        "code": "39"
+      },
+      {
+        "subType": "CONDITION",
+        "code": "41"
+      },
+      {
+        "subType": "CONDITION",
+        "code": "71"
+      },
+      {
+        "subType": "CONDITION",
+        "code": "73"
+      },
+      {
+        "subType": "CONDITION",
+        "code": "A0"
+      }
+    ],
+    "valueInfos": [
+      {
+        "subType": "VALUE",
+        "code": "01",
+        "amount": 73.42
+      },
+      {
+        "subType": "VALUE",
+        "code": "20",
+        "amount": 76.54
+      },
+      {
+        "subType": "VALUE",
+        "code": "17",
+        "amount": 1176.54
+      },
+      {
+        "subType": "VALUE",
+        "code": "31",
+        "amount": 2255.85
+      },
+      {
+        "subType": "VALUE",
+        "code": "B1",
+        "amount": 150.00
+      },
+      {
+        "subType": "VALUE",
+        "code": "23",
+        "amount": 4400.35
+      },
+      {
+        "subType": "VALUE",
+        "code": "24",
+        "amount": 1500.25
+      },
+      {
+        "subType": "VALUE",
+        "code": "47",
+        "amount": 876.54
+      },
+      {
+        "subType": "VALUE",
+        "code": "62",
+        "amount": 76.54
+      },
+      {
+        "subType": "VALUE",
+        "code": "70",
+        "amount": 16.54
+      },
+      {
+        "subType": "VALUE",
+        "code": "66",
+        "amount": 500.54
+      },
+      {
+        "subType": "VALUE",
+        "code": "55",
+        "amount": 6.99
+      },
+      {
+        "subType": "VALUE",
+        "code": "20",
+        "amount": 76.54
+      }
+    ],
+    "attachments": [
+      {
+        "reportTypeCode": "OZ",
+        "reportTransmissionCode": "BM",
+        "controlNumber": "DMN0012"
+      }
+    ],
+    "serviceLines": [
+      {
+        "sourceLineId": "LX0004-1",
+        "chargeAmount": 173.42,
+        "nonCoveredAmount": 11.07,
+        "serviceDateFrom": "2019-03-10",
+        "serviceDateTo": "2019-05-11",
+        "unitType": "UNIT",
+        "unitCount": 1,
+        "drug": {
+          "subType": "NDC",
+          "code": "00002143481"
+        },
+        "drugQuantity": 1.01,
+        "drugUnitType": "UNIT",
+        "prescriptionNumber": "123456",
+        "thirdPartyNote": "state regulation 123 was applied during the pricing of this claim",
+        "procedure": {
+          "subType": "CPT",
+          "code": "81099",
+          "descFromClaim": "Short description",
+          "modifiers": [
+            {
+              "subType": "HCPCS_MODIFIER",
+              "code": "A1"
+            },
+            {
+              "subType": "HCPCS_MODIFIER",
+              "code": "05"
+            },
+            {
+              "subType": "HCPCS_MODIFIER",
+              "code": "02"
+            },
+            {
+              "subType": "HCPCS_MODIFIER",
+              "code": "01"
+            }
+          ]
+        },
+        "revenueCode": {
+          "subType": "REVENUE_CODE",
+          "code": "0300"
+        },
+        "attachments": [
+          {
+            "reportTypeCode": "OZ",
+            "reportTransmissionCode": "BM",
+            "controlNumber": "DMN0012"
+          }
+        ],
+        "providers": [
+          {
+            "entityRole": "OPERATING",
+            "entityType": "INDIVIDUAL",
+            "identificationType": "NPI",
+            "identifier": "OPRPHY4321",
+            "lastNameOrOrgName": "HAMILTON",
+            "firstName": "ANAYA",
+            "middleName": "H"
+          },
+          {
+            "entityRole": "OTHER_OPERATING",
+            "entityType": "INDIVIDUAL",
+            "identificationType": "NPI",
+            "identifier": "OTHOPR4321",
+            "lastNameOrOrgName": "BLUE",
+            "firstName": "KELLY",
+            "middleName": "M"
+          },
+          {
+            "entityRole": "RENDERING",
+            "entityType": "INDIVIDUAL",
+            "identificationType": "NPI",
+            "identifier": "9998887777",
+            "lastNameOrOrgName": "BIG",
+            "firstName": "ANNA",
+            "middleName": "A"
+          },
+          {
+            "entityRole": "REFERRING",
+            "entityType": "INDIVIDUAL",
+            "identificationType": "NPI",
+            "identifier": "REFPRV8642",
+            "lastNameOrOrgName": "THRONBERRY",
+            "firstName": "JOHN",
+            "middleName": "L"
+          }
+        ],
+        "adjustments": [
+          {
+            "group": "OTHER",
+            "reasonCode": "12",
+            "reason": {
+              "subType": "CARC",
+              "code": "12"
+            },
+            "amount": 18.00,
+            "quantity": 1
+          },
+          {
+            "group": "OTHER",
+            "reasonCode": "2",
+            "reason": {
+              "subType": "CARC",
+              "code": "2"
+            },
+            "amount": 65.55,
+            "quantity": 1
+          },
+          {
+            "group": "OTHER",
+            "reasonCode": "91",
+            "reason": {
+              "subType": "CARC",
+              "code": "91"
+            },
+            "amount": 33.03,
+            "quantity": 2
+          },
+          {
+            "group": "OTHER",
+            "reasonCode": "3",
+            "reason": {
+              "subType": "CARC",
+              "code": "3"
+            },
+            "amount": 55.15,
+            "quantity": 1
+          },
+          {
+            "group": "OTHER",
+            "reasonCode": "161",
+            "reason": {
+              "subType": "CARC",
+              "code": "161"
+            },
+            "amount": 99.99,
+            "quantity": 1
+          },
+          {
+            "group": "OTHER",
+            "reasonCode": "130",
+            "reason": {
+              "subType": "CARC",
+              "code": "130"
+            },
+            "amount": 82.22,
+            "quantity": 1
+          },
+          {
+            "group": "PATIENT_RESPONSIBILITY",
+            "reasonCode": "2",
+            "reason": {
+              "subType": "CARC",
+              "code": "2"
+            },
+            "amount": 35.00,
+            "quantity": 1
+          },
+          {
+            "group": "PAYOR_INITIATED",
+            "reasonCode": "1",
+            "reason": {
+              "subType": "CARC",
+              "code": "1"
+            },
+            "amount": 6600.00,
+            "quantity": 1
+          }
+        ],
+        "remainingPatientLiabilityAmount": 75.00
+      },
+      {
+        "sourceLineId": "LX0004-2",
+        "chargeAmount": 86.54,
+        "nonCoveredAmount": 28.01,
+        "serviceDateFrom": "2019-03-10",
+        "unitType": "UNIT",
+        "unitCount": 1,
+        "drug": {
+          "subType": "NDC",
+          "code": "00093-0051-05"
+        },
+        "drugQuantity": 5,
+        "drugUnitType": "UNIT",
+        "prescriptionNumber": "945632",
+        "procedure": {
+          "subType": "CPT",
+          "code": "00842",
+          "descFromClaim": "Sample procedure",
+          "modifiers": [
+            {
+              "subType": "HCPCS_MODIFIER",
+              "code": "14"
+            },
+            {
+              "subType": "HCPCS_MODIFIER",
+              "code": "28"
+            },
+            {
+              "subType": "HCPCS_MODIFIER",
+              "code": "34"
+            },
+            {
+              "subType": "HCPCS_MODIFIER",
+              "code": "08"
+            }
+          ]
+        },
+        "revenueCode": {
+          "subType": "REVENUE_CODE",
+          "code": "0730"
+        },
+        "attachments": [
+          {
+            "reportTypeCode": "ZZ",
+            "reportTransmissionCode": "BC",
+            "controlNumber": "TPM0048"
+          }
+        ],
+        "providers": [
+          {
+            "entityRole": "OPERATING",
+            "entityType": "INDIVIDUAL",
+            "identificationType": "NPI",
+            "identifier": "OPRPHY4321",
+            "lastNameOrOrgName": "HAMILTON",
+            "firstName": "ANAYA",
+            "middleName": "H"
+          },
+          {
+            "entityRole": "OTHER_OPERATING",
+            "entityType": "INDIVIDUAL",
+            "identificationType": "NPI",
+            "identifier": "OTHOPR4321",
+            "lastNameOrOrgName": "BLUE",
+            "firstName": "KELLY",
+            "middleName": "M"
+          },
+          {
+            "entityRole": "RENDERING",
+            "entityType": "INDIVIDUAL",
+            "identificationType": "NPI",
+            "identifier": "9998887777",
+            "lastNameOrOrgName": "BIG",
+            "firstName": "ANNA",
+            "middleName": "A"
+          },
+          {
+            "entityRole": "REFERRING",
+            "entityType": "INDIVIDUAL",
+            "identificationType": "NPI",
+            "identifier": "REFPRV8642",
+            "lastNameOrOrgName": "THRONBERRY",
+            "firstName": "JOHN",
+            "middleName": "M"
+          }
+        ],
+        "adjustments": [
+          {
+            "group": "OTHER",
+            "reasonCode": "136",
+            "reason": {
+              "subType": "CARC",
+              "code": "136"
+            },
+            "amount": 15.00,
+            "quantity": 1
+          },
+          {
+            "group": "OTHER",
+            "reasonCode": "B4",
+            "reason": {
+              "subType": "CARC",
+              "code": "B4"
+            },
+            "amount": 95.55,
+            "quantity": 1
+          },
+          {
+            "group": "OTHER",
+            "reasonCode": "186",
+            "reason": {
+              "subType": "CARC",
+              "code": "186"
+            },
+            "amount": 73.03,
+            "quantity": 2
+          },
+          {
+            "group": "OTHER",
+            "reasonCode": "235",
+            "reason": {
+              "subType": "CARC",
+              "code": "235"
+            },
+            "amount": 15.15,
+            "quantity": 1
+          },
+          {
+            "group": "OTHER",
+            "reasonCode": "P29",
+            "reason": {
+              "subType": "CARC",
+              "code": "P29"
+            },
+            "amount": 39.99,
+            "quantity": 1
+          },
+          {
+            "group": "OTHER",
+            "reasonCode": "A0",
+            "reason": {
+              "subType": "CARC",
+              "code": "A0"
+            },
+            "amount": 92.22,
+            "quantity": 1
+          },
+          {
+            "group": "PATIENT_RESPONSIBILITY",
+            "reasonCode": "2",
+            "reason": {
+              "subType": "CARC",
+              "code": "2"
+            },
+            "amount": 65.00,
+            "quantity": 1
+          },
+          {
+            "group": "PAYOR_INITIATED",
+            "reasonCode": "1",
+            "reason": {
+              "subType": "CARC",
+              "code": "1"
+            },
+            "amount": 3600.00,
+            "quantity": 1
+          }
+        ],
+        "remainingPatientLiabilityAmount": 20.00
+      }
+    ],
+    "transaction": {
+      "id": "680d2843be4ece52a3011db7",
+      "controlNumber": "00000024",
+      "transactionType": "INST",
+      "purposeCode": "00",
+      "originatorApplicationTransactionId": "00000024",
+      "creationDate": "2019-03-11",
+      "creationTime": "09:46:03.1",
+      "claimOrEncounterIdentifierType": "CHARGEABLE",
+      "transactionSetIdentifierCode": "CLAIM",
+      "implementationConventionReference": "005010X223A2",
+      "fileInfo": {
+        "name": "837I-all-fields.dat",
+        "url": "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/837/837I-all-fields.dat",
+        "lastModifiedDateTime": "2025-01-15T17:23:46.651-05:00",
+        "fileType": "EDI"
+      },
+      "sender": {
+        "entityRole": "SUBMITTER",
+        "entityType": "BUSINESS",
+        "identificationType": "ETIN",
+        "identifier": "SUBMITID02",
+        "lastNameOrOrgName": "CHANGEHC",
+        "contacts": [
+          {
+            "name": "CHANGEHC",
+            "contactNumbers": [
+              {
+                "type": "PHONE",
+                "number": "8008456592"
+              }
+            ]
+          }
+        ]
+      },
+      "receiver": {
+        "entityRole": "RECEIVER",
+        "entityType": "BUSINESS",
+        "identificationType": "ETIN",
+        "identifier": "ETIN9999",
+        "lastNameOrOrgName": "BEST PLAN SERVICE"
+      },
+      "creationDateTime": "2019-03-11T09:46:03.1"
+    }
+  },
+  {
+    "id": "680d2844be4ece52a3011e6f",
+    "objectType": "CLAIM",
+    "patientControlNumber": "125WILL",
+    "chargeAmount": 145.50,
+    "facilityCode": {
+      "subType": "PLACE_OF_SERVICE",
+      "code": "11"
+    },
+    "placeOfServiceType": "OFFICE",
+    "frequencyCode": {
+      "subType": "FREQUENCY_CODE",
+      "code": "1"
+    },
+    "serviceDateFrom": "2005-02-15",
+    "serviceDateTo": "2005-02-15",
+    "subscriber": {
+      "payerResponsibilitySequence": "PRIMARY",
+      "relationshipType": "SELF",
+      "claimFilingIndicatorCode": "MB",
+      "insurancePlanType": "MEDICARE_B",
+      "person": {
+        "entityRole": "SUBSCRIBER",
+        "entityType": "INDIVIDUAL",
+        "identificationType": "MEMBER_ID",
+        "identifier": "123456789A",
+        "lastNameOrOrgName": "WILLIAMSON",
+        "firstName": "MATTHEW",
+        "middleName": "J",
+        "birthDate": "1925-01-10",
+        "gender": "MALE",
+        "address": {
+          "line": "128 BROADCREEK",
+          "city": "BALTIMORE",
+          "stateCode": "MD",
+          "zipCode": "21234"
+        }
+      },
+      "payer": {
+        "entityRole": "PAYER",
+        "entityType": "BUSINESS",
+        "identificationType": "PAYOR_ID",
+        "identifier": "C12345",
+        "lastNameOrOrgName": "MEDICARE PART B MARYLAND"
+      }
+    },
+    "providerSignatureIndicator": "Y",
+    "assignmentParticipationCode": "A",
+    "assignmentCertificationIndicator": "Y",
+    "releaseOfInformationCode": "Y",
+    "initialTreatmentDate": "2005-01-15",
+    "acuteManifestationDate": "2005-01-10",
+    "lastXRayDate": "2005-01-13",
+    "billingProvider": {
+      "entityRole": "BILLING_PROVIDER",
+      "entityType": "INDIVIDUAL",
+      "identificationType": "NPI",
+      "identifier": "1234567890",
+      "taxId": "987654321",
+      "lastNameOrOrgName": "GREENE",
+      "firstName": "DAVID",
+      "middleName": "M",
+      "address": {
+        "line": "1264 OAKWOOD AVE",
+        "city": "BALTIMORE",
+        "stateCode": "MD",
+        "zipCode": "21236"
+      },
+      "contacts": [
+        {
+          "name": "DR",
+          "contactNumbers": [
+            {
+              "type": "PHONE",
+              "number": "4105551212"
+            }
+          ]
+        }
+      ]
+    },
+    "diags": [
+      {
+        "subType": "ICD_10_PRINCIPAL",
+        "code": "M4820"
+      }
+    ],
+    "serviceLines": [
+      {
+        "sourceLineId": "01",
+        "chargeAmount": 145.50,
+        "serviceDateFrom": "2005-02-15",
+        "unitType": "UNIT",
+        "unitCount": 1,
+        "procedure": {
+          "subType": "CPT",
+          "code": "98940"
+        },
+        "diagPointers": [
+          1
+        ],
+        "diags": [
+          {
+            "subType": "ICD_10_PRINCIPAL",
+            "code": "M4820"
+          }
+        ]
+      }
+    ],
+    "transaction": {
+      "id": "680d2844be4ece52a3011e51",
+      "controlNumber": "3701",
+      "transactionType": "PROF",
+      "purposeCode": "00",
+      "originatorApplicationTransactionId": "007227",
+      "creationDate": "2005-02-15",
+      "creationTime": "07:54:20",
+      "claimOrEncounterIdentifierType": "CHARGEABLE",
+      "transactionSetIdentifierCode": "CLAIM",
+      "implementationConventionReference": "005010X222",
+      "fileInfo": {
+        "name": "chiro.dat",
+        "url": "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/837/chiro.dat",
+        "lastModifiedDateTime": "2024-01-31T20:06:16.189-05:00",
+        "fileType": "EDI"
+      },
+      "sender": {
+        "entityRole": "SUBMITTER",
+        "entityType": "BUSINESS",
+        "identificationType": "ETIN",
+        "identifier": "S01057",
+        "lastNameOrOrgName": "DAVID GREEN",
+        "contacts": [
+          {
+            "name": "KATHY SMITH",
+            "contactNumbers": [
+              {
+                "type": "PHONE",
+                "number": "4105558888"
+              }
+            ]
+          }
+        ]
+      },
+      "receiver": {
+        "entityRole": "RECEIVER",
+        "entityType": "BUSINESS",
+        "identificationType": "ETIN",
+        "identifier": "12345",
+        "lastNameOrOrgName": "MEDICARE PART B MARYLAND"
+      },
+      "creationDateTime": "2005-02-15T07:54:20"
+    }
+  },
+  {
+    "id": "680d2844be4ece52a3011eb5",
+    "objectType": "CLAIM",
+    "patientControlNumber": "26407789",
+    "chargeAmount": 79.04,
+    "facilityCode": {
+      "subType": "PLACE_OF_SERVICE",
+      "code": "11"
+    },
+    "placeOfServiceType": "OFFICE",
+    "frequencyCode": {
+      "subType": "FREQUENCY_CODE",
+      "code": "1"
+    },
+    "serviceDateFrom": "2005-10-03",
+    "serviceDateTo": "2005-10-03",
+    "subscriber": {
+      "payerResponsibilitySequence": "SECONDARY",
+      "relationshipType": "SELF",
+      "person": {
+        "entityRole": "SUBSCRIBER",
+        "entityType": "INDIVIDUAL",
+        "identificationType": "MEMBER_ID",
+        "identifier": "22233444",
+        "lastNameOrOrgName": "SMITH",
+        "firstName": "JACK",
+        "birthDate": "1943-10-22",
+        "gender": "MALE"
+      },
+      "payer": {
+        "entityRole": "PAYER",
+        "entityType": "BUSINESS",
+        "identificationType": "PAYOR_ID",
+        "identifier": "567890",
+        "lastNameOrOrgName": "GREAT PRAIRIES HEALTH",
+        "address": {
+          "line": "4456 SOUTH SHORE BLVD",
+          "city": "CHICAGO",
+          "stateCode": "IL",
+          "zipCode": "44444"
+        },
+        "additionalIds": [
+          {
+            "qualifierCode": "G2",
+            "type": "PROVIDER_COMMERCIAL_NUMBER",
+            "identification": "EJ6666"
+          }
+        ]
+      }
+    },
+    "patient": {
+      "relationshipType": "CHILD",
+      "person": {
+        "entityRole": "PATIENT",
+        "entityType": "INDIVIDUAL",
+        "lastNameOrOrgName": "SMITH",
+        "firstName": "TED",
+        "birthDate": "1973-05-01",
+        "gender": "MALE",
+        "address": {
+          "line": "236 N MAIN ST",
+          "city": "MIAMI",
+          "stateCode": "FL",
+          "zipCode": "33413"
+        }
+      }
+    },
+    "otherSubscribers": [
+      {
+        "payerResponsibilitySequence": "PRIMARY",
+        "relationshipType": "SPOUSE",
+        "claimFilingIndicatorCode": "CI",
+        "insurancePlanType": "COMMERCIAL",
+        "person": {
+          "entityRole": "SUBSCRIBER",
+          "entityType": "INDIVIDUAL",
+          "identificationType": "MEMBER_ID",
+          "identifier": "JS00111223333",
+          "lastNameOrOrgName": "SMITH",
+          "firstName": "JANE",
+          "address": {
+            "line": "236 N MAIN ST",
+            "city": "MIAMI",
+            "stateCode": "FL",
+            "zipCode": "33111"
+          }
+        },
+        "adjustments": [
+          {
+            "group": "PATIENT_RESPONSIBILITY",
+            "reasonCode": "1",
+            "reason": {
+              "subType": "CARC",
+              "code": "1"
+            },
+            "amount": 21.89
+          },
+          {
+            "group": "PATIENT_RESPONSIBILITY",
+            "reasonCode": "2",
+            "reason": {
+              "subType": "CARC",
+              "code": "2"
+            },
+            "amount": 15.00
+          }
+        ],
+        "payerPaidAmount": 39.15,
+        "nonCoveredAmount": 20.01,
+        "remainingPatientLiabilityAmount": 36.89,
+        "payer": {
+          "entityRole": "PAYER",
+          "entityType": "BUSINESS",
+          "identificationType": "PAYOR_ID",
+          "identifier": "999996666",
+          "lastNameOrOrgName": "KEY INSURANCE COMPANY"
+        },
+        "providers": [
+          {
+            "entityRole": "RENDERING",
+            "entityType": "INDIVIDUAL",
+            "additionalIds": [
+              {
+                "qualifierCode": "G2",
+                "type": "PROVIDER_COMMERCIAL_NUMBER",
+                "identification": "PBS3334"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "providerSignatureIndicator": "Y",
+    "assignmentParticipationCode": "A",
+    "assignmentCertificationIndicator": "Y",
+    "releaseOfInformationCode": "I",
+    "billingProvider": {
+      "entityRole": "BILLING_PROVIDER",
+      "entityType": "INDIVIDUAL",
+      "identificationType": "NPI",
+      "identifier": "1999996666",
+      "taxId": "123456789",
+      "lastNameOrOrgName": "KILDARE",
+      "firstName": "BEN",
+      "address": {
+        "line": "1234",
+        "line2": "SEAWAY ST",
+        "city": "MIAMI",
+        "stateCode": "FL",
+        "zipCode": "33111"
+      },
+      "contacts": [
+        {
+          "name": "CONNIE",
+          "contactNumbers": [
+            {
+              "type": "PHONE",
+              "number": "3055551234"
+            }
+          ]
+        }
+      ]
+    },
+    "providers": [
+      {
+        "entityRole": "RENDERING",
+        "entityType": "INDIVIDUAL",
+        "identificationType": "NPI",
+        "identifier": "1999996666",
+        "lastNameOrOrgName": "KILDARE",
+        "firstName": "BEN",
+        "providerTaxonomy": {
+          "subType": "PROVIDER_TAXONOMY",
+          "code": "204C00000X"
+        },
+        "additionalIds": [
+          {
+            "qualifierCode": "G2",
+            "type": "PROVIDER_COMMERCIAL_NUMBER",
+            "identification": "PBS3334"
+          }
+        ]
+      },
+      {
+        "entityRole": "SERVICE_FACILITY",
+        "entityType": "BUSINESS",
+        "identificationType": "NPI",
+        "identifier": "1581234567",
+        "lastNameOrOrgName": "KILDARE ASSOCIATES",
+        "address": {
+          "line": "2345 OCEAN BLVD",
+          "city": "MIAMI",
+          "stateCode": "FL",
+          "zipCode": "33111"
+        }
+      }
+    ],
+    "diags": [
+      {
+        "subType": "ICD_10_PRINCIPAL",
+        "code": "J309"
+      },
+      {
+        "subType": "ICD_10",
+        "code": "E784"
+      },
+      {
+        "subType": "ICD_10",
+        "code": "E6601"
+      },
+      {
+        "subType": "ICD_10",
+        "code": "K219"
+      }
+    ],
+    "serviceLines": [
+      {
+        "chargeAmount": 43.00,
+        "serviceDateFrom": "2005-10-03",
+        "unitType": "UNIT",
+        "unitCount": 1,
+        "procedure": {
+          "subType": "CPT",
+          "code": "99213"
+        },
+        "adjustments": [
+          {
+            "group": "CONTRACTUAL",
+            "reasonCode": "42",
+            "reason": {
+              "subType": "CARC",
+              "code": "42"
+            },
+            "amount": 3.00
+          }
+        ],
+        "remainingPatientLiabilityAmount": 5.00,
+        "diagPointers": [
+          1,
+          2,
+          3
+        ],
+        "diags": [
+          {
+            "subType": "ICD_10_PRINCIPAL",
+            "code": "J309"
+          },
+          {
+            "subType": "ICD_10",
+            "code": "E784"
+          },
+          {
+            "subType": "ICD_10",
+            "code": "E6601"
+          }
+        ]
+      },
+      {
+        "chargeAmount": 15.00,
+        "serviceDateFrom": "2005-10-03",
+        "unitType": "UNIT",
+        "unitCount": 1,
+        "procedure": {
+          "subType": "CPT",
+          "code": "96372"
+        },
+        "diagPointers": [
+          1,
+          2
+        ],
+        "diags": [
+          {
+            "subType": "ICD_10_PRINCIPAL",
+            "code": "J309"
+          },
+          {
+            "subType": "ICD_10",
+            "code": "E784"
+          }
+        ]
+      },
+      {
+        "chargeAmount": 21.04,
+        "serviceDateFrom": "2005-10-03",
+        "unitType": "UNIT",
+        "unitCount": 1,
+        "procedure": {
+          "subType": "HCPCS",
+          "code": "J3301"
+        },
+        "diagPointers": [
+          1,
+          2
+        ],
+        "diags": [
+          {
+            "subType": "ICD_10_PRINCIPAL",
+            "code": "J309"
+          },
+          {
+            "subType": "ICD_10",
+            "code": "E784"
+          }
+        ]
+      }
+    ],
+    "transaction": {
+      "id": "680d2844be4ece52a3011e72",
+      "controlNumber": "0024",
+      "transactionType": "PROF",
+      "purposeCode": "00",
+      "originatorApplicationTransactionId": "0123",
+      "creationDate": "2005-10-15",
+      "creationTime": "10:23:00",
+      "claimOrEncounterIdentifierType": "CHARGEABLE",
+      "transactionSetIdentifierCode": "CLAIM",
+      "implementationConventionReference": "005010X222",
+      "fileInfo": {
+        "name": "cob-payera-payerb.dat",
+        "url": "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/837/cob-payera-payerb.dat",
+        "lastModifiedDateTime": "2024-01-31T20:06:16.189-05:00",
+        "fileType": "EDI"
+      },
+      "sender": {
+        "entityRole": "SUBMITTER",
+        "entityType": "BUSINESS",
+        "identificationType": "ETIN",
+        "identifier": "999996666",
+        "lastNameOrOrgName": "KEY INSURANCE",
+        "contacts": [
+          {
+            "name": "JERRY",
+            "contactNumbers": [
+              {
+                "type": "PHONE",
+                "number": "3055552222"
+              }
+            ]
+          }
+        ]
+      },
+      "receiver": {
+        "entityRole": "RECEIVER",
+        "entityType": "BUSINESS",
+        "identificationType": "ETIN",
+        "identifier": "567890",
+        "lastNameOrOrgName": "GREAT PRAIRIES"
+      },
+      "creationDateTime": "2005-10-15T10:23:00"
+    }
+  },
+  {
+    "id": "680d2844be4ece52a3011ee0",
+    "objectType": "CLAIM",
+    "patientControlNumber": "26463774",
+    "chargeAmount": 100.00,
+    "facilityCode": {
+      "subType": "PLACE_OF_SERVICE",
+      "code": "11"
+    },
+    "placeOfServiceType": "OFFICE",
+    "frequencyCode": {
+      "subType": "FREQUENCY_CODE",
+      "code": "1"
+    },
+    "serviceDateFrom": "2006-10-03",
+    "serviceDateTo": "2006-10-10",
+    "subscriber": {
+      "payerResponsibilitySequence": "PRIMARY",
+      "relationshipType": "SELF",
+      "groupOrPolicyNumber": "2222-SJ",
+      "claimFilingIndicatorCode": "CI",
+      "insurancePlanType": "COMMERCIAL",
+      "person": {
+        "entityRole": "SUBSCRIBER",
+        "entityType": "INDIVIDUAL",
+        "identificationType": "MEMBER_ID",
+        "identifier": "JS00111223333",
+        "lastNameOrOrgName": "Smith",
+        "firstName": "Jane",
+        "birthDate": "1943-05-01",
+        "gender": "FEMALE"
+      },
+      "payer": {
+        "entityRole": "PAYER",
+        "entityType": "BUSINESS",
+        "identificationType": "PAYOR_ID",
+        "identifier": "999996666",
+        "lastNameOrOrgName": "KEY INSURANCE COMPANY",
+        "additionalIds": [
+          {
+            "qualifierCode": "G2",
+            "type": "PROVIDER_COMMERCIAL_NUMBER",
+            "identification": "KA6663"
+          }
+        ]
+      }
+    },
+    "patient": {
+      "relationshipType": "CHILD",
+      "person": {
+        "entityRole": "PATIENT",
+        "entityType": "INDIVIDUAL",
+        "lastNameOrOrgName": "Smith",
+        "firstName": "Ted",
+        "birthDate": "1973-05-01",
+        "gender": "MALE",
+        "address": {
+          "line": "236 N MAIN ST",
+          "city": "MIAMI",
+          "stateCode": "FL",
+          "zipCode": "33413"
+        }
+      }
+    },
+    "providerSignatureIndicator": "Y",
+    "assignmentParticipationCode": "A",
+    "assignmentCertificationIndicator": "Y",
+    "releaseOfInformationCode": "I",
+    "clearinghouseTraceNumber": "17312345600006351",
+    "billingProvider": {
+      "entityRole": "BILLING_PROVIDER",
+      "entityType": "BUSINESS",
+      "identificationType": "NPI",
+      "identifier": "9876543210",
+      "taxId": "587654321",
+      "lastNameOrOrgName": "Ben Kildare Service",
+      "address": {
+        "line": "234 SEAWAY ST",
+        "city": "MIAMI",
+        "stateCode": "FL",
+        "zipCode": "33111"
+      },
+      "providerTaxonomy": {
+        "subType": "PROVIDER_TAXONOMY",
+        "code": "103G00000X"
+      }
+    },
+    "diags": [
+      {
+        "subType": "ICD_10_PRINCIPAL",
+        "code": "J020"
+      },
+      {
+        "subType": "ICD_10",
+        "code": "Z1159"
+      }
+    ],
+    "serviceLines": [
+      {
+        "chargeAmount": 40.00,
+        "serviceDateFrom": "2006-10-03",
+        "unitType": "UNIT",
+        "unitCount": 1,
+        "procedure": {
+          "subType": "CPT",
+          "code": "99213"
+        },
+        "diagPointers": [
+          1
+        ],
+        "diags": [
+          {
+            "subType": "ICD_10_PRINCIPAL",
+            "code": "J020"
+          }
+        ]
+      },
+      {
+        "chargeAmount": 15.00,
+        "serviceDateFrom": "2006-10-03",
+        "unitType": "UNIT",
+        "unitCount": 1,
+        "procedure": {
+          "subType": "CPT",
+          "code": "87070"
+        },
+        "diagPointers": [
+          1
+        ],
+        "diags": [
+          {
+            "subType": "ICD_10_PRINCIPAL",
+            "code": "J020"
+          }
+        ]
+      },
+      {
+        "chargeAmount": 35.00,
+        "serviceDateFrom": "2006-10-10",
+        "unitType": "UNIT",
+        "unitCount": 1,
+        "procedure": {
+          "subType": "CPT",
+          "code": "99214"
+        },
+        "diagPointers": [
+          2
+        ],
+        "diags": [
+          {
+            "subType": "ICD_10",
+            "code": "Z1159"
+          }
+        ]
+      }
+    ],
+    "transaction": {
+      "id": "680d2844be4ece52a3011eb8",
+      "controlNumber": "0021",
+      "transactionType": "PROF",
+      "purposeCode": "00",
+      "originatorApplicationTransactionId": "244579",
+      "creationDate": "2006-10-15",
+      "creationTime": "10:23:00",
+      "claimOrEncounterIdentifierType": "CHARGEABLE",
+      "transactionSetIdentifierCode": "CLAIM",
+      "implementationConventionReference": "005010X222",
+      "fileInfo": {
+        "name": "commercial.dat",
+        "url": "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/837/commercial.dat",
+        "lastModifiedDateTime": "2024-01-31T20:06:16.189-05:00",
+        "fileType": "EDI"
+      },
+      "sender": {
+        "entityRole": "SUBMITTER",
+        "entityType": "BUSINESS",
+        "identificationType": "ETIN",
+        "identifier": "TGJ23",
+        "lastNameOrOrgName": "PREMIER BILLING SERVICE",
+        "contacts": [
+          {
+            "name": "JERRY",
+            "contactNumbers": [
+              {
+                "type": "PHONE",
+                "number": "3055552222"
+              },
+              {
+                "type": "EXTENSION",
+                "number": "231"
+              }
+            ]
+          }
+        ]
+      },
+      "receiver": {
+        "entityRole": "RECEIVER",
+        "entityType": "BUSINESS",
+        "identificationType": "ETIN",
+        "identifier": "66783JJT",
+        "lastNameOrOrgName": "KEY INSURANCE COMPANY"
+      },
+      "creationDateTime": "2006-10-15T10:23:00"
+    }
+  },
+  {
+    "id": "680d2844be4ece52a3011f4e",
+    "objectType": "CLAIM",
+    "patientControlNumber": "26462967",
+    "chargeAmount": 100.00,
+    "facilityCode": {
+      "subType": "PLACE_OF_SERVICE",
+      "code": "11"
+    },
+    "placeOfServiceType": "OFFICE",
+    "frequencyCode": {
+      "subType": "FREQUENCY_CODE",
+      "code": "1"
+    },
+    "serviceDateFrom": "2006-10-03",
+    "serviceDateTo": "2006-10-10",
+    "subscriber": {
+      "payerResponsibilitySequence": "PRIMARY",
+      "relationshipType": "SELF",
+      "groupOrPolicyNumber": "12312-A",
+      "claimFilingIndicatorCode": "HM",
+      "insurancePlanType": "HMO",
+      "person": {
+        "entityRole": "SUBSCRIBER",
+        "entityType": "INDIVIDUAL",
+        "identificationType": "MEMBER_ID",
+        "identifier": "00221111",
+        "lastNameOrOrgName": "SMITH",
+        "firstName": "TED",
+        "birthDate": "1943-05-01",
+        "gender": "MALE",
+        "address": {
+          "line": "236 N MAIN ST",
+          "city": "MIAMI",
+          "stateCode": "FL",
+          "zipCode": "33413"
+        }
+      },
+      "payer": {
+        "entityRole": "PAYER",
+        "entityType": "BUSINESS",
+        "identificationType": "PAYOR_ID",
+        "identifier": "741234",
+        "lastNameOrOrgName": "ALLIANCE HEALTH AND LIFE INSURANCE"
+      }
+    },
+    "providerSignatureIndicator": "Y",
+    "assignmentParticipationCode": "A",
+    "assignmentCertificationIndicator": "Y",
+    "releaseOfInformationCode": "I",
+    "onsetOfCurrentIllnessOrInjuryDate": "1998-10-03",
+    "clearinghouseTraceNumber": "17312345600006351",
+    "billingProvider": {
+      "entityRole": "BILLING_PROVIDER",
+      "entityType": "BUSINESS",
+      "identificationType": "NPI",
+      "identifier": "9876543210",
+      "taxId": "587654321",
+      "lastNameOrOrgName": "BEN KILDARE SERVICE",
+      "address": {
+        "line": "234 SEAWAY ST",
+        "city": "MIAMI",
+        "stateCode": "FL",
+        "zipCode": "33111"
+      },
+      "providerTaxonomy": {
+        "subType": "PROVIDER_TAXONOMY",
+        "code": "103GC0700X"
+      }
+    },
+    "providers": [
+      {
+        "entityRole": "SERVICE_FACILITY",
+        "entityType": "BUSINESS",
+        "identificationType": "NPI",
+        "identifier": "5812345679",
+        "lastNameOrOrgName": "KILDARE ASSOCIATES",
+        "address": {
+          "line": "2345 OCEAN BLVD",
+          "city": "MIAMI",
+          "stateCode": "FL",
+          "zipCode": "33111"
+        }
+      }
+    ],
+    "diags": [
+      {
+        "subType": "ICD_10_PRINCIPAL",
+        "code": "G35"
+      },
+      {
+        "subType": "ICD_10",
+        "code": "Z1159"
+      }
+    ],
+    "serviceLines": [
+      {
+        "chargeAmount": 40.00,
+        "serviceDateFrom": "2006-10-03",
+        "unitType": "UNIT",
+        "unitCount": 1,
+        "procedure": {
+          "subType": "CPT",
+          "code": "99213"
+        },
+        "diagPointers": [
+          1
+        ],
+        "diags": [
+          {
+            "subType": "ICD_10_PRINCIPAL",
+            "code": "G35"
+          }
+        ]
+      },
+      {
+        "chargeAmount": 15.00,
+        "serviceDateFrom": "2006-10-03",
+        "unitType": "UNIT",
+        "unitCount": 1,
+        "procedure": {
+          "subType": "CPT",
+          "code": "87070"
+        },
+        "diagPointers": [
+          1
+        ],
+        "diags": [
+          {
+            "subType": "ICD_10_PRINCIPAL",
+            "code": "G35"
+          }
+        ]
+      },
+      {
+        "chargeAmount": 35.00,
+        "serviceDateFrom": "2006-10-10",
+        "unitType": "UNIT",
+        "unitCount": 1,
+        "procedure": {
+          "subType": "CPT",
+          "code": "99214"
+        },
+        "diagPointers": [
+          2
+        ],
+        "diags": [
+          {
+            "subType": "ICD_10",
+            "code": "Z1159"
+          }
+        ]
+      },
+      {
+        "chargeAmount": 10.00,
+        "serviceDateFrom": "2006-10-10",
+        "unitType": "UNIT",
+        "unitCount": 1,
+        "procedure": {
+          "subType": "CPT",
+          "code": "86663"
+        },
+        "diagPointers": [
+          2
+        ],
+        "diags": [
+          {
+            "subType": "ICD_10",
+            "code": "Z1159"
+          }
+        ]
+      }
+    ],
+    "transaction": {
+      "id": "680d2844be4ece52a3011ee3",
+      "controlNumber": "0021",
+      "transactionType": "PROF",
+      "purposeCode": "00",
+      "originatorApplicationTransactionId": "0123",
+      "creationDate": "2006-10-15",
+      "creationTime": "10:23:00",
+      "claimOrEncounterIdentifierType": "REPORTING",
+      "transactionSetIdentifierCode": "CLAIM",
+      "implementationConventionReference": "005010X222",
+      "fileInfo": {
+        "name": "multi-tran.dat",
+        "url": "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/837/multi-tran.dat",
+        "lastModifiedDateTime": "2023-12-03T17:43:58.366-05:00",
+        "fileType": "EDI"
+      },
+      "sender": {
+        "entityRole": "SUBMITTER",
+        "entityType": "BUSINESS",
+        "identificationType": "ETIN",
+        "identifier": "TGJ23",
+        "lastNameOrOrgName": "PREMIER BILLING SERVICE",
+        "contacts": [
+          {
+            "name": "JERRY",
+            "contactNumbers": [
+              {
+                "type": "PHONE",
+                "number": "3055552222"
+              },
+              {
+                "type": "EXTENSION",
+                "number": "231"
+              }
+            ]
+          }
+        ]
+      },
+      "receiver": {
+        "entityRole": "RECEIVER",
+        "entityType": "BUSINESS",
+        "identificationType": "ETIN",
+        "identifier": "66783JJT",
+        "lastNameOrOrgName": "AHLIC"
+      },
+      "creationDateTime": "2006-10-15T10:23:00"
+    }
+  },
+  {
+    "id": "680d2844be4ece52a3011f4f",
+    "objectType": "CLAIM",
+    "patientControlNumber": "125WILL",
+    "chargeAmount": 145.50,
+    "facilityCode": {
+      "subType": "PLACE_OF_SERVICE",
+      "code": "11"
+    },
+    "placeOfServiceType": "OFFICE",
+    "frequencyCode": {
+      "subType": "FREQUENCY_CODE",
+      "code": "1"
+    },
+    "serviceDateFrom": "2005-02-15",
+    "serviceDateTo": "2005-02-15",
+    "subscriber": {
+      "payerResponsibilitySequence": "PRIMARY",
+      "relationshipType": "SELF",
+      "claimFilingIndicatorCode": "MB",
+      "insurancePlanType": "MEDICARE_B",
+      "person": {
+        "entityRole": "SUBSCRIBER",
+        "entityType": "INDIVIDUAL",
+        "identificationType": "MEMBER_ID",
+        "identifier": "123456789A",
+        "lastNameOrOrgName": "WILLIAMSON",
+        "firstName": "MATTHEW",
+        "middleName": "J",
+        "birthDate": "1925-01-10",
+        "gender": "MALE",
+        "address": {
+          "line": "128 BROADCREEK",
+          "city": "BALTIMORE",
+          "stateCode": "MD",
+          "zipCode": "21234"
+        }
+      },
+      "payer": {
+        "entityRole": "PAYER",
+        "entityType": "BUSINESS",
+        "identificationType": "PAYOR_ID",
+        "identifier": "C12345",
+        "lastNameOrOrgName": "MEDICARE PART B MARYLAND"
+      }
+    },
+    "providerSignatureIndicator": "Y",
+    "assignmentParticipationCode": "A",
+    "assignmentCertificationIndicator": "Y",
+    "releaseOfInformationCode": "Y",
+    "initialTreatmentDate": "2005-01-15",
+    "acuteManifestationDate": "2005-01-10",
+    "lastXRayDate": "2005-01-13",
+    "billingProvider": {
+      "entityRole": "BILLING_PROVIDER",
+      "entityType": "INDIVIDUAL",
+      "identificationType": "NPI",
+      "identifier": "1234567890",
+      "taxId": "987654321",
+      "lastNameOrOrgName": "GREENE",
+      "firstName": "DAVID",
+      "middleName": "M",
+      "address": {
+        "line": "1264 OAKWOOD AVE",
+        "city": "BALTIMORE",
+        "stateCode": "MD",
+        "zipCode": "21236"
+      },
+      "contacts": [
+        {
+          "name": "DR",
+          "contactNumbers": [
+            {
+              "type": "PHONE",
+              "number": "4105551212"
+            }
+          ]
+        }
+      ]
+    },
+    "diags": [
+      {
+        "subType": "ICD_10_PRINCIPAL",
+        "code": "M4820"
+      }
+    ],
+    "serviceLines": [
+      {
+        "sourceLineId": "01",
+        "chargeAmount": 145.50,
+        "serviceDateFrom": "2005-02-15",
+        "unitType": "UNIT",
+        "unitCount": 1,
+        "procedure": {
+          "subType": "CPT",
+          "code": "98940"
+        },
+        "diagPointers": [
+          1
+        ],
+        "diags": [
+          {
+            "subType": "ICD_10_PRINCIPAL",
+            "code": "M4820"
+          }
+        ]
+      }
+    ],
+    "transaction": {
+      "id": "680d2844be4ece52a3011f0e",
+      "controlNumber": "3701",
+      "transactionType": "PROF",
+      "purposeCode": "00",
+      "originatorApplicationTransactionId": "007227",
+      "creationDate": "2005-02-15",
+      "creationTime": "07:54:20",
+      "claimOrEncounterIdentifierType": "CHARGEABLE",
+      "transactionSetIdentifierCode": "CLAIM",
+      "implementationConventionReference": "005010X222",
+      "fileInfo": {
+        "name": "multi-tran.dat",
+        "url": "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/837/multi-tran.dat",
+        "lastModifiedDateTime": "2023-12-03T17:43:58.366-05:00",
+        "fileType": "EDI"
+      },
+      "sender": {
+        "entityRole": "SUBMITTER",
+        "entityType": "BUSINESS",
+        "identificationType": "ETIN",
+        "identifier": "S01057",
+        "lastNameOrOrgName": "DAVID GREEN",
+        "contacts": [
+          {
+            "name": "KATHY SMITH",
+            "contactNumbers": [
+              {
+                "type": "PHONE",
+                "number": "4105558888"
+              }
+            ]
+          }
+        ]
+      },
+      "receiver": {
+        "entityRole": "RECEIVER",
+        "entityType": "BUSINESS",
+        "identificationType": "ETIN",
+        "identifier": "12345",
+        "lastNameOrOrgName": "MEDICARE PART B MARYLAND"
+      },
+      "creationDateTime": "2005-02-15T07:54:20"
+    }
+  },
+  {
+    "id": "680d2844be4ece52a3011f50",
+    "objectType": "CLAIM",
+    "patientControlNumber": "153829140",
+    "chargeAmount": 827.00,
+    "facilityCode": {
+      "subType": "PLACE_OF_SERVICE",
+      "code": "22"
+    },
+    "placeOfServiceType": "OUTPATIENT",
+    "frequencyCode": {
+      "subType": "FREQUENCY_CODE",
+      "code": "1"
+    },
+    "serviceDateFrom": "2005-01-12",
+    "serviceDateTo": "2005-01-13",
+    "subscriber": {
+      "payerResponsibilitySequence": "PRIMARY",
+      "relationshipType": "SELF",
+      "claimFilingIndicatorCode": "MB",
+      "insurancePlanType": "MEDICARE_B",
+      "person": {
+        "entityRole": "SUBSCRIBER",
+        "entityType": "INDIVIDUAL",
+        "identificationType": "MEMBER_ID",
+        "identifier": "123456789A",
+        "lastNameOrOrgName": "JONES",
+        "firstName": "MARGARET",
+        "birthDate": "1974-03-03",
+        "gender": "FEMALE",
+        "address": {
+          "line": "123 RAINBOW ROAD",
+          "city": "NASHVILLE",
+          "stateCode": "TN",
+          "zipCode": "37232"
+        }
+      },
+      "payer": {
+        "entityRole": "PAYER",
+        "entityType": "BUSINESS",
+        "identificationType": "PAYOR_ID",
+        "identifier": "05440",
+        "lastNameOrOrgName": "ABC PAYER"
+      }
+    },
+    "providerSignatureIndicator": "Y",
+    "assignmentParticipationCode": "A",
+    "assignmentCertificationIndicator": "Y",
+    "releaseOfInformationCode": "Y",
+    "billingProvider": {
+      "entityRole": "BILLING_PROVIDER",
+      "entityType": "BUSINESS",
+      "identificationType": "NPI",
+      "identifier": "2366554859",
+      "taxId": "756473826",
+      "lastNameOrOrgName": "PROVIDER MEDICAL GROUP",
+      "address": {
+        "line": "1234 WESTEND AVE",
+        "city": "NASHVILLE",
+        "stateCode": "TN",
+        "zipCode": "37232"
+      }
+    },
+    "providers": [
+      {
+        "entityRole": "RENDERING",
+        "entityType": "INDIVIDUAL",
+        "identificationType": "NPI",
+        "identifier": "5678912345",
+        "lastNameOrOrgName": "TOWNSEND",
+        "firstName": "JACOB",
+        "middleName": "E",
+        "providerTaxonomy": {
+          "subType": "PROVIDER_TAXONOMY",
+          "code": "207L00000X"
+        },
+        "additionalIds": [
+          {
+            "qualifierCode": "1G",
+            "type": "PROVIDER_UPIN_NUMBER",
+            "identification": "A41234"
+          }
+        ]
+      },
+      {
+        "entityRole": "SERVICE_FACILITY",
+        "entityType": "BUSINESS",
+        "identificationType": "NPI",
+        "identifier": "432198765",
+        "lastNameOrOrgName": "PROVIDER OP HOSP",
+        "address": {
+          "line": "345 MAIN DRIVE",
+          "city": "NASHVILLE",
+          "stateCode": "TN",
+          "zipCode": "37232"
+        }
+      }
+    ],
+    "diags": [
+      {
+        "subType": "ICD_10_PRINCIPAL",
+        "code": "E15"
+      }
+    ],
+    "serviceLines": [
+      {
+        "chargeAmount": 827.00,
+        "serviceDateFrom": "2005-01-12",
+        "unitType": "MINUTES",
+        "unitCount": 61,
+        "procedure": {
+          "subType": "CPT",
+          "code": "00142",
+          "modifiers": [
+            {
+              "subType": "HCPCS_MODIFIER",
+              "code": "QK"
+            },
+            {
+              "subType": "HCPCS_MODIFIER",
+              "code": "QS"
+            },
+            {
+              "subType": "HCPCS_MODIFIER",
+              "code": "P1"
+            }
+          ]
+        },
+        "diagPointers": [
+          1
+        ],
+        "diags": [
+          {
+            "subType": "ICD_10_PRINCIPAL",
+            "code": "E15"
+          }
+        ]
+      },
+      {
+        "chargeAmount": 827.00,
+        "serviceDateFrom": "2005-01-13",
+        "unitType": "MINUTES",
+        "unitCount": 61,
+        "procedure": {
+          "subType": "CPT",
+          "code": "00142",
+          "modifiers": [
+            {
+              "subType": "HCPCS_MODIFIER",
+              "code": "QK"
+            },
+            {
+              "subType": "HCPCS_MODIFIER",
+              "code": "QS"
+            },
+            {
+              "subType": "HCPCS_MODIFIER",
+              "code": "P1"
+            }
+          ]
+        },
+        "diagPointers": [
+          1
+        ],
+        "diags": [
+          {
+            "subType": "ICD_10_PRINCIPAL",
+            "code": "E15"
+          }
+        ]
+      }
+    ],
+    "transaction": {
+      "id": "680d2844be4ece52a3011f2d",
+      "controlNumber": "0001",
+      "transactionType": "PROF",
+      "purposeCode": "00",
+      "originatorApplicationTransactionId": "0123",
+      "creationDate": "2005-01-17",
+      "creationTime": "10:23:00",
+      "claimOrEncounterIdentifierType": "CHARGEABLE",
+      "transactionSetIdentifierCode": "CLAIM",
+      "implementationConventionReference": "005010X222",
+      "fileInfo": {
+        "name": "multi-tran.dat",
+        "url": "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/837/multi-tran.dat",
+        "lastModifiedDateTime": "2023-12-03T17:43:58.366-05:00",
+        "fileType": "EDI"
+      },
+      "sender": {
+        "entityRole": "SUBMITTER",
+        "entityType": "BUSINESS",
+        "identificationType": "ETIN",
+        "identifier": "N305",
+        "lastNameOrOrgName": "PROVIDER MEDICAL GROUP",
+        "contacts": [
+          {
+            "name": "NINA",
+            "contactNumbers": [
+              {
+                "type": "PHONE",
+                "number": "6155551212"
+              },
+              {
+                "type": "EXTENSION",
+                "number": "911"
+              }
+            ]
+          }
+        ]
+      },
+      "receiver": {
+        "entityRole": "RECEIVER",
+        "entityType": "BUSINESS",
+        "identificationType": "ETIN",
+        "identifier": "05440",
+        "lastNameOrOrgName": "ABC PAYER"
+      },
+      "creationDateTime": "2005-01-17T10:23:00"
+    }
+  },
+  {
+    "id": "680d2844be4ece52a3011f7e",
+    "objectType": "CLAIM",
+    "patientControlNumber": "756048Q",
+    "chargeAmount": 89.93,
+    "facilityCode": {
+      "subType": "FACILITY_TYPE",
+      "code": "14"
+    },
+    "placeOfServiceType": "OUTPATIENT",
+    "frequencyCode": {
+      "subType": "FREQUENCY_CODE",
+      "code": "1"
+    },
+    "statementDateFrom": "2016-09-11",
+    "serviceDateFrom": "2016-09-11",
+    "serviceDateTo": "2016-09-11",
+    "subscriber": {
+      "payerResponsibilitySequence": "PRIMARY",
+      "relationshipType": "SELF",
+      "claimFilingIndicatorCode": "MB",
+      "insurancePlanType": "MEDICARE_B",
+      "person": {
+        "entityRole": "SUBSCRIBER",
+        "entityType": "INDIVIDUAL",
+        "identificationType": "MEMBER_ID",
+        "identifier": "030005074A",
+        "lastNameOrOrgName": "DOE",
+        "firstName": "JOHN",
+        "middleName": "T",
+        "birthDate": "1926-11-11",
+        "gender": "MALE",
+        "address": {
+          "line": "125 CITY AVENUE",
+          "city": "CENTERVILLE",
+          "stateCode": "PA",
+          "zipCode": "17111"
+        }
+      },
+      "payer": {
+        "entityRole": "PAYER",
+        "entityType": "BUSINESS",
+        "identificationType": "PAYOR_ID",
+        "identifier": "00435",
+        "lastNameOrOrgName": "MEDICARE B",
+        "additionalIds": [
+          {
+            "qualifierCode": "G2",
+            "type": "PROVIDER_COMMERCIAL_NUMBER",
+            "identification": "330127"
+          }
+        ]
+      }
+    },
+    "otherSubscribers": [
+      {
+        "payerResponsibilitySequence": "SECONDARY",
+        "relationshipType": "SPOUSE",
+        "groupOrPolicyNumber": "351630",
+        "groupName": "STATE TEACHERS",
+        "claimFilingIndicatorCode": "CI",
+        "insurancePlanType": "COMMERCIAL",
+        "person": {
+          "entityRole": "SUBSCRIBER",
+          "entityType": "INDIVIDUAL",
+          "identificationType": "MEMBER_ID",
+          "identifier": "222004433",
+          "lastNameOrOrgName": "DOE",
+          "firstName": "JANE",
+          "middleName": "S",
+          "address": {
+            "line": "125 CITY AVENUE",
+            "city": "CENTERVILLE",
+            "stateCode": "PA",
+            "zipCode": "17111"
+          }
+        },
+        "payer": {
+          "entityRole": "PAYER",
+          "entityType": "BUSINESS",
+          "identificationType": "PAYOR_ID",
+          "identifier": "1135",
+          "lastNameOrOrgName": "STATE TEACHERS"
+        }
+      }
+    ],
+    "assignmentParticipationCode": "A",
+    "assignmentCertificationIndicator": "Y",
+    "releaseOfInformationCode": "Y",
+    "admissionTypeCode": "3",
+    "patientStatusCode": "01",
+    "billingProvider": {
+      "entityRole": "BILLING_PROVIDER",
+      "entityType": "BUSINESS",
+      "identificationType": "NPI",
+      "identifier": "9876540809",
+      "taxId": "567891234",
+      "lastNameOrOrgName": "JONES HOSPITAL",
+      "address": {
+        "line": "225 MAIN STREET BARKLEY BUILDING",
+        "city": "CENTERVILLE",
+        "stateCode": "PA",
+        "zipCode": "17111"
+      },
+      "providerTaxonomy": {
+        "subType": "PROVIDER_TAXONOMY",
+        "code": "282N00000X"
+      }
+    },
+    "providers": [
+      {
+        "entityRole": "ATTENDING",
+        "entityType": "INDIVIDUAL",
+        "identificationType": "NPI",
+        "identifier": "1122334455",
+        "lastNameOrOrgName": "JONES",
+        "firstName": "JOHN",
+        "middleName": "J",
+        "additionalIds": [
+          {
+            "qualifierCode": "1G",
+            "type": "PROVIDER_UPIN_NUMBER",
+            "identification": "B99937"
+          }
+        ]
+      }
+    ],
+    "diags": [
+      {
+        "subType": "ICD_10_PRINCIPAL",
+        "code": "H269"
+      },
+      {
+        "subType": "ICD_10",
+        "code": "I10"
+      },
+      {
+        "subType": "ICD_10",
+        "code": "R9431"
+      }
+    ],
+    "occurrences": [
+      {
+        "subType": "OCCURRENCE",
+        "code": "A1",
+        "occurrenceDate": "1926-11-11"
+      },
+      {
+        "subType": "OCCURRENCE",
+        "code": "A2",
+        "occurrenceDate": "1991-11-01"
+      },
+      {
+        "subType": "OCCURRENCE",
+        "code": "B1",
+        "occurrenceDate": "1926-11-11"
+      },
+      {
+        "subType": "OCCURRENCE",
+        "code": "B2",
+        "occurrenceDate": "1987-01-01"
+      }
+    ],
+    "conditions": [
+      {
+        "subType": "CONDITION",
+        "code": "09"
+      }
+    ],
+    "valueInfos": [
+      {
+        "subType": "VALUE",
+        "code": "A2",
+        "amount": 15.31
+      }
+    ],
+    "serviceLines": [
+      {
+        "chargeAmount": 13.39,
+        "serviceDateFrom": "2016-09-11",
+        "unitType": "UNIT",
+        "unitCount": 1,
+        "procedure": {
+          "subType": "CPT",
+          "code": "85025"
+        },
+        "revenueCode": {
+          "subType": "REVENUE_CODE",
+          "code": "0305"
+        }
+      },
+      {
+        "chargeAmount": 76.54,
+        "serviceDateFrom": "2016-09-11",
+        "unitType": "UNIT",
+        "unitCount": 3,
+        "procedure": {
+          "subType": "CPT",
+          "code": "93005"
+        },
+        "revenueCode": {
+          "subType": "REVENUE_CODE",
+          "code": "0730"
+        }
+      }
+    ],
+    "transaction": {
+      "id": "680d2844be4ece52a3011f53",
+      "controlNumber": "987654",
+      "transactionType": "INST",
+      "purposeCode": "00",
+      "originatorApplicationTransactionId": "0123",
+      "creationDate": "2016-09-18",
+      "creationTime": "09:32:00",
+      "claimOrEncounterIdentifierType": "CHARGEABLE",
+      "transactionSetIdentifierCode": "CLAIM",
+      "implementationConventionReference": "005010X223",
+      "fileInfo": {
+        "name": "837I-inst-claim.dat",
+        "url": "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/837/837I-inst-claim.dat",
+        "lastModifiedDateTime": "2023-08-28T03:50:07.198-04:00",
+        "fileType": "EDI"
+      },
+      "sender": {
+        "entityRole": "SUBMITTER",
+        "entityType": "BUSINESS",
+        "identificationType": "ETIN",
+        "identifier": "12345",
+        "lastNameOrOrgName": "JONES HOSPITAL",
+        "contacts": [
+          {
+            "name": "JANE DOE",
+            "contactNumbers": [
+              {
+                "type": "PHONE",
+                "number": "9005555555"
+              }
+            ]
+          }
+        ]
+      },
+      "receiver": {
+        "entityRole": "RECEIVER",
+        "entityType": "BUSINESS",
+        "identificationType": "ETIN",
+        "identifier": "00120",
+        "lastNameOrOrgName": "MEDICARE"
+      },
+      "creationDateTime": "2016-09-18T09:32:00"
+    }
+  },
+  {
+    "id": "680d2844be4ece52a3011fac",
+    "objectType": "CLAIM",
+    "patientControlNumber": "26463774",
+    "chargeAmount": 100.00,
+    "facilityCode": {
+      "subType": "PLACE_OF_SERVICE",
+      "code": "11"
+    },
+    "placeOfServiceType": "OFFICE",
+    "frequencyCode": {
+      "subType": "FREQUENCY_CODE",
+      "code": "7"
+    },
+    "serviceDateFrom": "2006-10-03",
+    "serviceDateTo": "2006-10-10",
+    "subscriber": {
+      "payerResponsibilitySequence": "PRIMARY",
+      "relationshipType": "SELF",
+      "groupOrPolicyNumber": "2222-SJ",
+      "claimFilingIndicatorCode": "CI",
+      "insurancePlanType": "COMMERCIAL",
+      "person": {
+        "entityRole": "SUBSCRIBER",
+        "entityType": "INDIVIDUAL",
+        "identificationType": "MEMBER_ID",
+        "identifier": "JS00111223333",
+        "lastNameOrOrgName": "SMITH",
+        "firstName": "JANE",
+        "birthDate": "1943-05-01",
+        "gender": "FEMALE"
+      },
+      "payer": {
+        "entityRole": "PAYER",
+        "entityType": "BUSINESS",
+        "identificationType": "PAYOR_ID",
+        "identifier": "999996666",
+        "lastNameOrOrgName": "KEY INSURANCECOMPANY",
+        "additionalIds": [
+          {
+            "qualifierCode": "G2",
+            "type": "PROVIDER_COMMERCIAL_NUMBER",
+            "identification": "KA6663"
+          }
+        ]
+      }
+    },
+    "patient": {
+      "relationshipType": "CHILD",
+      "person": {
+        "entityRole": "PATIENT",
+        "entityType": "INDIVIDUAL",
+        "lastNameOrOrgName": "SMITH",
+        "firstName": "TED",
+        "birthDate": "1973-05-01",
+        "gender": "MALE",
+        "address": {
+          "line": "236 N MAIN ST",
+          "city": "MIAMI",
+          "stateCode": "FL",
+          "zipCode": "33413"
+        }
+      }
+    },
+    "providerSignatureIndicator": "Y",
+    "assignmentParticipationCode": "A",
+    "assignmentCertificationIndicator": "Y",
+    "releaseOfInformationCode": "I",
+    "clearinghouseTraceNumber": "17312345600006351",
+    "billingProvider": {
+      "entityRole": "BILLING_PROVIDER",
+      "entityType": "BUSINESS",
+      "identificationType": "NPI",
+      "identifier": "9876543210",
+      "taxId": "587654321",
+      "lastNameOrOrgName": "BEN KILDARE SERVICE",
+      "address": {
+        "line": "234 SEAWAY ST",
+        "city": "MIAMI",
+        "stateCode": "FL",
+        "zipCode": "33111"
+      },
+      "providerTaxonomy": {
+        "subType": "PROVIDER_TAXONOMY",
+        "code": "103GC0700X"
+      }
+    },
+    "diags": [
+      {
+        "subType": "ICD_10_PRINCIPAL",
+        "code": "J020"
+      },
+      {
+        "subType": "ICD_10",
+        "code": "Z1159"
+      }
+    ],
+    "serviceLines": [
+      {
+        "chargeAmount": 40.00,
+        "serviceDateFrom": "2006-10-03",
+        "unitType": "UNIT",
+        "unitCount": 1,
+        "procedure": {
+          "subType": "CPT",
+          "code": "99213"
+        },
+        "diagPointers": [
+          1
+        ],
+        "diags": [
+          {
+            "subType": "ICD_10_PRINCIPAL",
+            "code": "J020"
+          }
+        ]
+      },
+      {
+        "chargeAmount": 15.00,
+        "serviceDateFrom": "2006-10-03",
+        "unitType": "UNIT",
+        "unitCount": 1,
+        "procedure": {
+          "subType": "CPT",
+          "code": "87070"
+        },
+        "diagPointers": [
+          1
+        ],
+        "diags": [
+          {
+            "subType": "ICD_10_PRINCIPAL",
+            "code": "J020"
+          }
+        ]
+      },
+      {
+        "chargeAmount": 35.00,
+        "serviceDateFrom": "2006-10-10",
+        "unitType": "UNIT",
+        "unitCount": 1,
+        "procedure": {
+          "subType": "CPT",
+          "code": "99214"
+        },
+        "diagPointers": [
+          2
+        ],
+        "diags": [
+          {
+            "subType": "ICD_10",
+            "code": "Z1159"
+          }
+        ]
+      },
+      {
+        "chargeAmount": 10.00,
+        "serviceDateFrom": "2006-10-10",
+        "unitType": "UNIT",
+        "unitCount": 1,
+        "procedure": {
+          "subType": "CPT",
+          "code": "86663"
+        },
+        "diagPointers": [
+          2
+        ],
+        "diags": [
+          {
+            "subType": "ICD_10",
+            "code": "Z1159"
+          }
+        ]
+      }
+    ],
+    "transaction": {
+      "id": "680d2844be4ece52a3011f81",
+      "controlNumber": "0021",
+      "transactionType": "PROF",
+      "purposeCode": "00",
+      "originatorApplicationTransactionId": "244579",
+      "creationDate": "2006-11-15",
+      "creationTime": "10:23:00",
+      "claimOrEncounterIdentifierType": "CHARGEABLE",
+      "transactionSetIdentifierCode": "CLAIM",
+      "implementationConventionReference": "005010X222",
+      "fileInfo": {
+        "name": "commercial-replacement.dat",
+        "url": "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/837/commercial-replacement.dat",
+        "lastModifiedDateTime": "2024-01-31T20:06:16.189-05:00",
+        "fileType": "EDI"
+      },
+      "sender": {
+        "entityRole": "SUBMITTER",
+        "entityType": "BUSINESS",
+        "identificationType": "ETIN",
+        "identifier": "TGJ23",
+        "lastNameOrOrgName": "PREMIER BILLING SERVICE",
+        "contacts": [
+          {
+            "name": "JERRY",
+            "contactNumbers": [
+              {
+                "type": "PHONE",
+                "number": "3055552222"
+              },
+              {
+                "type": "EXTENSION",
+                "number": "231"
+              }
+            ]
+          }
+        ]
+      },
+      "receiver": {
+        "entityRole": "RECEIVER",
+        "entityType": "BUSINESS",
+        "identificationType": "ETIN",
+        "identifier": "66783JJT",
+        "lastNameOrOrgName": "KEY INSURANCE COMPANY"
+      },
+      "creationDateTime": "2006-11-15T10:23:00"
+    }
+  },
+  {
+    "id": "680d2844be4ece52a3011fd0",
+    "objectType": "CLAIM",
+    "patientControlNumber": "153829140",
+    "chargeAmount": 827.00,
+    "facilityCode": {
+      "subType": "PLACE_OF_SERVICE",
+      "code": "22"
+    },
+    "placeOfServiceType": "OUTPATIENT",
+    "frequencyCode": {
+      "subType": "FREQUENCY_CODE",
+      "code": "1"
+    },
+    "serviceDateFrom": "2005-01-12",
+    "serviceDateTo": "2005-01-13",
+    "subscriber": {
+      "payerResponsibilitySequence": "PRIMARY",
+      "relationshipType": "SELF",
+      "claimFilingIndicatorCode": "MB",
+      "insurancePlanType": "MEDICARE_B",
+      "person": {
+        "entityRole": "SUBSCRIBER",
+        "entityType": "INDIVIDUAL",
+        "identificationType": "MEMBER_ID",
+        "identifier": "123456789A",
+        "lastNameOrOrgName": "JONES",
+        "firstName": "MARGARET",
+        "birthDate": "1974-03-03",
+        "gender": "FEMALE",
+        "address": {
+          "line": "123 RAINBOW ROAD",
+          "city": "NASHVILLE",
+          "stateCode": "TN",
+          "zipCode": "37232"
+        }
+      },
+      "payer": {
+        "entityRole": "PAYER",
+        "entityType": "BUSINESS",
+        "identificationType": "PAYOR_ID",
+        "identifier": "05440",
+        "lastNameOrOrgName": "ABC PAYER"
+      }
+    },
+    "providerSignatureIndicator": "Y",
+    "assignmentParticipationCode": "A",
+    "assignmentCertificationIndicator": "Y",
+    "releaseOfInformationCode": "Y",
+    "billingProvider": {
+      "entityRole": "BILLING_PROVIDER",
+      "entityType": "BUSINESS",
+      "identificationType": "NPI",
+      "identifier": "2366554859",
+      "taxId": "756473826",
+      "lastNameOrOrgName": "PROVIDER MEDICAL GROUP",
+      "address": {
+        "line": "1234 WESTEND AVE",
+        "city": "NASHVILLE",
+        "stateCode": "TN",
+        "zipCode": "37232"
+      }
+    },
+    "providers": [
+      {
+        "entityRole": "RENDERING",
+        "entityType": "INDIVIDUAL",
+        "identificationType": "NPI",
+        "identifier": "5678912345",
+        "lastNameOrOrgName": "TOWNSEND",
+        "firstName": "JACOB",
+        "middleName": "E",
+        "providerTaxonomy": {
+          "subType": "PROVIDER_TAXONOMY",
+          "code": "207L00000X"
+        },
+        "additionalIds": [
+          {
+            "qualifierCode": "1G",
+            "type": "PROVIDER_UPIN_NUMBER",
+            "identification": "A41234"
+          }
+        ]
+      },
+      {
+        "entityRole": "SERVICE_FACILITY",
+        "entityType": "BUSINESS",
+        "identificationType": "NPI",
+        "identifier": "432198765",
+        "lastNameOrOrgName": "PROVIDER OP HOSP",
+        "address": {
+          "line": "345 MAIN DRIVE",
+          "city": "NASHVILLE",
+          "stateCode": "TN",
+          "zipCode": "37232"
+        }
+      }
+    ],
+    "diags": [
+      {
+        "subType": "ICD_10_PRINCIPAL",
+        "code": "E15"
+      }
+    ],
+    "serviceLines": [
+      {
+        "chargeAmount": 827.00,
+        "serviceDateFrom": "2005-01-12",
+        "unitType": "MINUTES",
+        "unitCount": 61,
+        "procedure": {
+          "subType": "CPT",
+          "code": "00142",
+          "modifiers": [
+            {
+              "subType": "HCPCS_MODIFIER",
+              "code": "QK"
+            },
+            {
+              "subType": "HCPCS_MODIFIER",
+              "code": "QS"
+            },
+            {
+              "subType": "HCPCS_MODIFIER",
+              "code": "P1"
+            }
+          ]
+        },
+        "diagPointers": [
+          1
+        ],
+        "diags": [
+          {
+            "subType": "ICD_10_PRINCIPAL",
+            "code": "E15"
+          }
+        ]
+      },
+      {
+        "chargeAmount": 827.00,
+        "serviceDateFrom": "2005-01-13",
+        "unitType": "MINUTES",
+        "unitCount": 61,
+        "procedure": {
+          "subType": "CPT",
+          "code": "00142",
+          "modifiers": [
+            {
+              "subType": "HCPCS_MODIFIER",
+              "code": "QK"
+            },
+            {
+              "subType": "HCPCS_MODIFIER",
+              "code": "QS"
+            },
+            {
+              "subType": "HCPCS_MODIFIER",
+              "code": "P1"
+            }
+          ]
+        },
+        "diagPointers": [
+          1
+        ],
+        "diags": [
+          {
+            "subType": "ICD_10_PRINCIPAL",
+            "code": "E15"
+          }
+        ]
+      }
+    ],
+    "transaction": {
+      "id": "680d2844be4ece52a3011faf",
+      "controlNumber": "0001",
+      "transactionType": "PROF",
+      "purposeCode": "00",
+      "originatorApplicationTransactionId": "0123",
+      "creationDate": "2005-01-17",
+      "creationTime": "10:23:00",
+      "claimOrEncounterIdentifierType": "CHARGEABLE",
+      "transactionSetIdentifierCode": "CLAIM",
+      "implementationConventionReference": "005010X222",
+      "fileInfo": {
+        "name": "anesthesia.dat",
+        "url": "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/837/anesthesia.dat",
+        "lastModifiedDateTime": "2024-01-31T20:06:16.188-05:00",
+        "fileType": "EDI"
+      },
+      "sender": {
+        "entityRole": "SUBMITTER",
+        "entityType": "BUSINESS",
+        "identificationType": "ETIN",
+        "identifier": "N305",
+        "lastNameOrOrgName": "PROVIDER MEDICAL GROUP",
+        "contacts": [
+          {
+            "name": "NINA",
+            "contactNumbers": [
+              {
+                "type": "PHONE",
+                "number": "6155551212"
+              },
+              {
+                "type": "EXTENSION",
+                "number": "911"
+              }
+            ]
+          }
+        ]
+      },
+      "receiver": {
+        "entityRole": "RECEIVER",
+        "entityType": "BUSINESS",
+        "identificationType": "ETIN",
+        "identifier": "05440",
+        "lastNameOrOrgName": "ABC PAYER"
+      },
+      "creationDateTime": "2005-01-17T10:23:00"
+    }
+  },
+  {
+    "id": "680d2844be4ece52a3011fff",
+    "objectType": "CLAIM",
+    "patientControlNumber": "SMI123",
+    "chargeAmount": 75.00,
+    "facilityCode": {
+      "subType": "PLACE_OF_SERVICE",
+      "code": "12"
+    },
+    "placeOfServiceType": "HOME",
+    "frequencyCode": {
+      "subType": "FREQUENCY_CODE",
+      "code": "1"
+    },
+    "serviceDateFrom": "2005-03-21",
+    "serviceDateTo": "2005-03-21",
+    "subscriber": {
+      "payerResponsibilitySequence": "PRIMARY",
+      "relationshipType": "SELF",
+      "claimFilingIndicatorCode": "MB",
+      "insurancePlanType": "MEDICARE_B",
+      "person": {
+        "entityRole": "SUBSCRIBER",
+        "entityType": "INDIVIDUAL",
+        "identificationType": "MEMBER_ID",
+        "identifier": "987654321A",
+        "lastNameOrOrgName": "SMITH",
+        "firstName": "JAMES",
+        "birthDate": "1920-10-23",
+        "gender": "MALE",
+        "address": {
+          "line": "12 MAIN ST",
+          "city": "FRANKFORT",
+          "stateCode": "IN",
+          "zipCode": "46209"
+        }
+      },
+      "weight": 155.00,
+      "payer": {
+        "entityRole": "PAYER",
+        "entityType": "BUSINESS",
+        "identificationType": "PAYOR_ID",
+        "identifier": "99999",
+        "lastNameOrOrgName": "DMERC CARRIER"
+      }
+    },
+    "providerSignatureIndicator": "Y",
+    "assignmentParticipationCode": "A",
+    "assignmentCertificationIndicator": "Y",
+    "releaseOfInformationCode": "Y",
+    "billingProvider": {
+      "entityRole": "BILLING_PROVIDER",
+      "entityType": "BUSINESS",
+      "identificationType": "NPI",
+      "identifier": "7778889999",
+      "taxId": "123567989",
+      "lastNameOrOrgName": "XYZ WHEELCHAIR INC",
+      "address": {
+        "line": "1440 NORTH STREET",
+        "city": "LAFAYETTE",
+        "stateCode": "IN",
+        "zipCode": "47904"
+      },
+      "additionalIds": [
+        {
+          "qualifierCode": "1G",
+          "type": "PROVIDER_UPIN_NUMBER",
+          "identification": "0426960001"
+        }
+      ]
+    },
+    "diags": [
+      {
+        "subType": "ICD_10_PRINCIPAL",
+        "code": "I6789"
+      },
+      {
+        "subType": "ICD_10",
+        "code": "G839"
+      }
+    ],
+    "serviceLines": [
+      {
+        "chargeAmount": 75.00,
+        "serviceDateFrom": "2005-03-21",
+        "serviceDateTo": "2005-03-21",
+        "beginTherapyDate": "2004-03-21",
+        "unitType": "UNIT",
+        "unitCount": 1,
+        "procedure": {
+          "subType": "HCPCS",
+          "code": "K0001",
+          "modifiers": [
+            {
+              "subType": "HCPCS_MODIFIER",
+              "code": "RR"
+            },
+            {
+              "subType": "HCPCS_MODIFIER",
+              "code": "KH"
+            },
+            {
+              "subType": "HCPCS_MODIFIER",
+              "code": "BR"
+            }
+          ]
+        },
+        "attachments": [
+          {
+            "reportTypeCode": "CT",
+            "reportTransmissionCode": "AD"
+          }
+        ],
+        "providers": [
+          {
+            "entityRole": "ORDERING",
+            "entityType": "INDIVIDUAL",
+            "identificationType": "NPI",
+            "identifier": "1111155555",
+            "lastNameOrOrgName": "WILSON",
+            "firstName": "RANDALL",
+            "address": {
+              "line": "1226 WEST RAILROAD STREET",
+              "city": "LAFAYETTE",
+              "stateCode": "IN",
+              "zipCode": "47905"
+            },
+            "contacts": [
+              {
+                "name": "LEE",
+                "contactNumbers": [
+                  {
+                    "type": "PHONE",
+                    "number": "7659259999"
+                  }
+                ]
+              }
+            ],
+            "additionalIds": [
+              {
+                "qualifierCode": "1G",
+                "type": "PROVIDER_UPIN_NUMBER",
+                "identification": "M12345"
+              }
+            ]
+          }
+        ],
+        "diagPointers": [
+          1,
+          2
+        ],
+        "diags": [
+          {
+            "subType": "ICD_10_PRINCIPAL",
+            "code": "I6789"
+          },
+          {
+            "subType": "ICD_10",
+            "code": "G839"
+          }
+        ]
+      }
+    ],
+    "transaction": {
+      "id": "680d2844be4ece52a3011fd3",
+      "controlNumber": "112233",
+      "transactionType": "PROF",
+      "purposeCode": "00",
+      "originatorApplicationTransactionId": "16",
+      "creationDate": "2005-03-26",
+      "creationTime": "10:36:00",
+      "claimOrEncounterIdentifierType": "CHARGEABLE",
+      "transactionSetIdentifierCode": "CLAIM",
+      "implementationConventionReference": "005010X222",
+      "fileInfo": {
+        "name": "wheelchair.dat",
+        "url": "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/837/wheelchair.dat",
+        "lastModifiedDateTime": "2024-01-31T20:06:16.19-05:00",
+        "fileType": "EDI"
+      },
+      "sender": {
+        "entityRole": "SUBMITTER",
+        "entityType": "BUSINESS",
+        "identificationType": "ETIN",
+        "identifier": "ABC55",
+        "lastNameOrOrgName": "XYZ WHEELCHAIRS INC",
+        "contacts": [
+          {
+            "name": "JANE",
+            "contactNumbers": [
+              {
+                "type": "PHONE",
+                "number": "2225551111"
+              }
+            ]
+          }
+        ]
+      },
+      "receiver": {
+        "entityRole": "RECEIVER",
+        "entityType": "BUSINESS",
+        "identificationType": "ETIN",
+        "identifier": "99999",
+        "lastNameOrOrgName": "DMERC CARRIER"
+      },
+      "creationDateTime": "2005-03-26T10:36:00"
+    }
+  },
+  {
+    "id": "680d2844be4ece52a301202a",
+    "objectType": "CLAIM",
+    "patientControlNumber": "ABC123-RI",
+    "chargeAmount": 28.75,
+    "facilityCode": {
+      "subType": "PLACE_OF_SERVICE",
+      "code": "11"
+    },
+    "placeOfServiceType": "OFFICE",
+    "frequencyCode": {
+      "subType": "FREQUENCY_CODE",
+      "code": "1"
+    },
+    "serviceDateFrom": "2005-05-14",
+    "serviceDateTo": "2005-05-14",
+    "subscriber": {
+      "payerResponsibilitySequence": "PRIMARY",
+      "relationshipType": "SELF",
+      "groupOrPolicyNumber": "123XYZ",
+      "claimFilingIndicatorCode": "CI",
+      "insurancePlanType": "COMMERCIAL",
+      "person": {
+        "entityRole": "SUBSCRIBER",
+        "entityType": "INDIVIDUAL",
+        "identificationType": "MEMBER_ID",
+        "identifier": "00124A089",
+        "lastNameOrOrgName": "RING",
+        "firstName": "DIAMOND",
+        "middleName": "D",
+        "birthDate": "1940-12-29",
+        "gender": "FEMALE",
+        "address": {
+          "line": "123 EXAMPLE DRIVE",
+          "city": "INDIANAPOLIS",
+          "stateCode": "IN",
+          "zipCode": "462290000"
+        }
+      },
+      "payer": {
+        "entityRole": "PAYER",
+        "entityType": "BUSINESS",
+        "identificationType": "PAYOR_ID",
+        "identifier": "12345",
+        "lastNameOrOrgName": "EXTRA HEALTHY INSURANCE"
+      }
+    },
+    "providerSignatureIndicator": "Y",
+    "assignmentParticipationCode": "A",
+    "assignmentCertificationIndicator": "Y",
+    "releaseOfInformationCode": "Y",
+    "clearinghouseTraceNumber": "061505501749388",
+    "billingProvider": {
+      "entityRole": "BILLING_PROVIDER",
+      "entityType": "BUSINESS",
+      "identificationType": "NPI",
+      "identifier": "1234567890",
+      "taxId": "555512345",
+      "lastNameOrOrgName": "HAPPY DOCTORS GROUP PRACTICE",
+      "address": {
+        "line": "P O BOX 123",
+        "city": "FORT WAYNE",
+        "stateCode": "IN",
+        "zipCode": "462540000"
+      },
+      "contacts": [
+        {
+          "name": "SUE BILLINGSWORTH",
+          "contactNumbers": [
+            {
+              "type": "PHONE",
+              "number": "8881231234"
+            }
+          ]
+        }
+      ]
+    },
+    "providers": [
+      {
+        "entityRole": "REFERRING",
+        "entityType": "INDIVIDUAL",
+        "identificationType": "NPI",
+        "identifier": "9988776655",
+        "lastNameOrOrgName": "DOE",
+        "firstName": "JOHN"
+      },
+      {
+        "entityRole": "RENDERING",
+        "entityType": "INDIVIDUAL",
+        "identificationType": "NPI",
+        "identifier": "1122334455",
+        "lastNameOrOrgName": "ANTHONY",
+        "firstName": "SUSAN",
+        "middleName": "B"
+      },
+      {
+        "entityRole": "SERVICE_FACILITY",
+        "entityType": "BUSINESS",
+        "lastNameOrOrgName": "HAPPY DOCTORS GROUP",
+        "address": {
+          "line": "123 FEEL GOOD ROAD",
+          "city": "WASHINGTON",
+          "stateCode": "IN",
+          "zipCode": "475010000"
+        }
+      }
+    ],
+    "diags": [
+      {
+        "subType": "ICD_10_PRINCIPAL",
+        "code": "J449"
+      },
+      {
+        "subType": "ICD_10",
+        "code": "E119"
+      }
+    ],
+    "serviceLines": [
+      {
+        "referralNumber": "V123456",
+        "chargeAmount": 25.00,
+        "serviceDateFrom": "2005-05-14",
+        "unitType": "UNIT",
+        "unitCount": 1,
+        "procedure": {
+          "subType": "HCPCS",
+          "code": "E0570",
+          "modifiers": [
+            {
+              "subType": "HCPCS_MODIFIER",
+              "code": "RR"
+            }
+          ]
+        },
+        "providers": [
+          {
+            "entityRole": "REFERRING",
+            "entityType": "INDIVIDUAL",
+            "identificationType": "NPI",
+            "identifier": "9988776655",
+            "lastNameOrOrgName": "DOE",
+            "firstName": "JOHN"
+          }
+        ],
+        "diagPointers": [
+          1,
+          2
+        ],
+        "diags": [
+          {
+            "subType": "ICD_10_PRINCIPAL",
+            "code": "J449"
+          },
+          {
+            "subType": "ICD_10",
+            "code": "E119"
+          }
+        ]
+      },
+      {
+        "chargeAmount": 3.75,
+        "serviceDateFrom": "2005-05-14",
+        "unitType": "UNIT",
+        "unitCount": 1,
+        "procedure": {
+          "subType": "HCPCS",
+          "code": "A7003",
+          "modifiers": [
+            {
+              "subType": "HCPCS_MODIFIER",
+              "code": "NU"
+            }
+          ]
+        },
+        "diagPointers": [
+          1
+        ],
+        "diags": [
+          {
+            "subType": "ICD_10_PRINCIPAL",
+            "code": "J449"
+          }
+        ]
+      }
+    ],
+    "transaction": {
+      "id": "680d2844be4ece52a3012002",
+      "controlNumber": "1002",
+      "transactionType": "PROF",
+      "purposeCode": "00",
+      "originatorApplicationTransactionId": "1002",
+      "creationDate": "2005-06-20",
+      "creationTime": "09:46:00",
+      "claimOrEncounterIdentifierType": "CHARGEABLE",
+      "transactionSetIdentifierCode": "CLAIM",
+      "implementationConventionReference": "005010X222",
+      "fileInfo": {
+        "name": "ppo-repriced.dat",
+        "url": "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/837/ppo-repriced.dat",
+        "lastModifiedDateTime": "2024-01-31T20:06:16.189-05:00",
+        "fileType": "EDI"
+      },
+      "sender": {
+        "entityRole": "SUBMITTER",
+        "entityType": "BUSINESS",
+        "identificationType": "ETIN",
+        "identifier": "123456789",
+        "lastNameOrOrgName": "REGIONAL PPO NETWORK",
+        "contacts": [
+          {
+            "name": "SUBMITTER CONTACT INFO",
+            "contactNumbers": [
+              {
+                "type": "PHONE",
+                "number": "8001231234"
+              }
+            ]
+          }
+        ]
+      },
+      "receiver": {
+        "entityRole": "RECEIVER",
+        "entityType": "BUSINESS",
+        "identificationType": "ETIN",
+        "identifier": "112244",
+        "lastNameOrOrgName": "EXTRA HEALTHY INSURANCE"
+      },
+      "creationDateTime": "2005-06-20T09:46:00"
+    }
+  },
+  {
+    "id": "680d2844be4ece52a3012062",
+    "objectType": "CLAIM",
+    "patientControlNumber": "26407789",
+    "chargeAmount": 79.04,
+    "facilityCode": {
+      "subType": "PLACE_OF_SERVICE",
+      "code": "11"
+    },
+    "placeOfServiceType": "OFFICE",
+    "frequencyCode": {
+      "subType": "FREQUENCY_CODE",
+      "code": "1"
+    },
+    "serviceDateFrom": "2005-10-03",
+    "serviceDateTo": "2005-10-03",
+    "subscriber": {
+      "payerResponsibilitySequence": "PRIMARY",
+      "relationshipType": "SELF",
+      "person": {
+        "entityRole": "SUBSCRIBER",
+        "entityType": "INDIVIDUAL",
+        "identificationType": "MEMBER_ID",
+        "identifier": "111223333",
+        "lastNameOrOrgName": "SMITH",
+        "firstName": "JANE",
+        "birthDate": "1943-05-01",
+        "gender": "FEMALE"
+      },
+      "payer": {
+        "entityRole": "PAYER",
+        "entityType": "BUSINESS",
+        "identificationType": "PAYOR_ID",
+        "identifier": "999996666",
+        "lastNameOrOrgName": "KEY INSURANCE COMPANY",
+        "address": {
+          "line": "3333OCEAN ST",
+          "city": "SOUTH MIAMI",
+          "stateCode": "FL",
+          "zipCode": "33000"
+        },
+        "additionalIds": [
+          {
+            "qualifierCode": "G2",
+            "type": "PROVIDER_COMMERCIAL_NUMBER",
+            "identification": "PBS3334"
+          }
+        ]
+      }
+    },
+    "patient": {
+      "relationshipType": "CHILD",
+      "person": {
+        "entityRole": "PATIENT",
+        "entityType": "INDIVIDUAL",
+        "lastNameOrOrgName": "SMITH",
+        "firstName": "TED",
+        "birthDate": "1973-05-01",
+        "gender": "MALE",
+        "address": {
+          "line": "236 N MAIN ST",
+          "city": "MIAMI",
+          "stateCode": "FL",
+          "zipCode": "33413"
+        }
+      }
+    },
+    "otherSubscribers": [
+      {
+        "payerResponsibilitySequence": "SECONDARY",
+        "relationshipType": "SPOUSE",
+        "claimFilingIndicatorCode": "CI",
+        "insurancePlanType": "COMMERCIAL",
+        "person": {
+          "entityRole": "SUBSCRIBER",
+          "entityType": "INDIVIDUAL",
+          "identificationType": "MEMBER_ID",
+          "identifier": "T55TY666",
+          "lastNameOrOrgName": "SMITH",
+          "firstName": "JACK",
+          "address": {
+            "line": "236 N MAIN ST",
+            "city": "MIAMI",
+            "stateCode": "FL",
+            "zipCode": "33111"
+          }
+        },
+        "payer": {
+          "entityRole": "PAYER",
+          "entityType": "BUSINESS",
+          "identificationType": "PAYOR_ID",
+          "identifier": "999996666",
+          "lastNameOrOrgName": "KEY INSURANCE COMPANY"
+        }
+      }
+    ],
+    "providerSignatureIndicator": "Y",
+    "assignmentParticipationCode": "A",
+    "assignmentCertificationIndicator": "Y",
+    "releaseOfInformationCode": "I",
+    "billingProvider": {
+      "entityRole": "BILLING_PROVIDER",
+      "entityType": "INDIVIDUAL",
+      "identificationType": "NPI",
+      "identifier": "1999996666",
+      "taxId": "123456789",
+      "lastNameOrOrgName": "KILDARE",
+      "firstName": "BEN",
+      "address": {
+        "line": "1234 SEAWAY ST",
+        "city": "MIAMI",
+        "stateCode": "FL",
+        "zipCode": "33111"
+      },
+      "contacts": [
+        {
+          "name": "CONNIE",
+          "contactNumbers": [
+            {
+              "type": "PHONE",
+              "number": "3055551234"
+            }
+          ]
+        }
+      ]
+    },
+    "providers": [
+      {
+        "entityRole": "RENDERING",
+        "entityType": "INDIVIDUAL",
+        "identificationType": "NPI",
+        "identifier": "1999996666",
+        "lastNameOrOrgName": "KILDARE",
+        "firstName": "BEN",
+        "providerTaxonomy": {
+          "subType": "PROVIDER_TAXONOMY",
+          "code": "204C00000X"
+        },
+        "additionalIds": [
+          {
+            "qualifierCode": "G2",
+            "type": "PROVIDER_COMMERCIAL_NUMBER",
+            "identification": "KA6663"
+          }
+        ]
+      },
+      {
+        "entityRole": "SERVICE_FACILITY",
+        "entityType": "BUSINESS",
+        "identificationType": "NPI",
+        "identifier": "1581234567",
+        "lastNameOrOrgName": "KILDARE ASSOCIATES",
+        "address": {
+          "line": "2345 OCEAN BLVD",
+          "city": "MIAMI",
+          "stateCode": "FL",
+          "zipCode": "33111"
+        }
+      }
+    ],
+    "diags": [
+      {
+        "subType": "ICD_10_PRINCIPAL",
+        "code": "J309"
+      },
+      {
+        "subType": "ICD_10",
+        "code": "E785"
+      },
+      {
+        "subType": "ICD_10",
+        "code": "E663"
+      }
+    ],
+    "serviceLines": [
+      {
+        "chargeAmount": 43.00,
+        "serviceDateFrom": "2005-10-03",
+        "unitType": "UNIT",
+        "unitCount": 1,
+        "procedure": {
+          "subType": "CPT",
+          "code": "99213"
+        },
+        "diagPointers": [
+          1,
+          2,
+          3
+        ],
+        "diags": [
+          {
+            "subType": "ICD_10_PRINCIPAL",
+            "code": "J309"
+          },
+          {
+            "subType": "ICD_10",
+            "code": "E785"
+          },
+          {
+            "subType": "ICD_10",
+            "code": "E663"
+          }
+        ]
+      },
+      {
+        "chargeAmount": 15.00,
+        "serviceDateFrom": "2005-10-03",
+        "unitType": "UNIT",
+        "unitCount": 1,
+        "procedure": {
+          "subType": "CPT",
+          "code": "96372"
+        },
+        "diagPointers": [
+          1,
+          2
+        ],
+        "diags": [
+          {
+            "subType": "ICD_10_PRINCIPAL",
+            "code": "J309"
+          },
+          {
+            "subType": "ICD_10",
+            "code": "E785"
+          }
+        ]
+      },
+      {
+        "chargeAmount": 21.04,
+        "serviceDateFrom": "2005-10-03",
+        "unitType": "UNIT",
+        "unitCount": 1,
+        "procedure": {
+          "subType": "HCPCS",
+          "code": "J3301"
+        },
+        "diagPointers": [
+          1,
+          2
+        ],
+        "diags": [
+          {
+            "subType": "ICD_10_PRINCIPAL",
+            "code": "J309"
+          },
+          {
+            "subType": "ICD_10",
+            "code": "E785"
+          }
+        ]
+      }
+    ],
+    "transaction": {
+      "id": "680d2844be4ece52a301202d",
+      "controlNumber": "0021",
+      "transactionType": "PROF",
+      "purposeCode": "00",
+      "originatorApplicationTransactionId": "0123",
+      "creationDate": "2005-10-15",
+      "creationTime": "10:23:00",
+      "claimOrEncounterIdentifierType": "CHARGEABLE",
+      "transactionSetIdentifierCode": "CLAIM",
+      "implementationConventionReference": "005010X222",
+      "fileInfo": {
+        "name": "cob-prov-payera.dat",
+        "url": "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/837/cob-prov-payera.dat",
+        "lastModifiedDateTime": "2024-01-31T20:06:16.189-05:00",
+        "fileType": "EDI"
+      },
+      "sender": {
+        "entityRole": "SUBMITTER",
+        "entityType": "BUSINESS",
+        "identificationType": "ETIN",
+        "identifier": "TGJ23",
+        "lastNameOrOrgName": "PREMIER BILLING SERVICE",
+        "contacts": [
+          {
+            "name": "JERRY",
+            "contactNumbers": [
+              {
+                "type": "PHONE",
+                "number": "3055552222"
+              }
+            ]
+          }
+        ]
+      },
+      "receiver": {
+        "entityRole": "RECEIVER",
+        "entityType": "BUSINESS",
+        "identificationType": "ETIN",
+        "identifier": "66783JJT",
+        "lastNameOrOrgName": "XYZ REPRICER"
+      },
+      "creationDateTime": "2005-10-15T10:23:00"
+    }
+  },
+  {
+    "id": "680d2844be4ece52a30120a7",
+    "objectType": "CLAIM",
+    "patientControlNumber": "CLMNO12345",
+    "chargeAmount": 2232.93,
+    "facilityCode": {
+      "subType": "PLACE_OF_SERVICE",
+      "code": "12"
+    },
+    "placeOfServiceType": "HOME",
+    "frequencyCode": {
+      "subType": "FREQUENCY_CODE",
+      "code": "1"
+    },
+    "serviceDateFrom": "2004-02-01",
+    "serviceDateTo": "2004-02-07",
+    "subscriber": {
+      "payerResponsibilitySequence": "PRIMARY",
+      "relationshipType": "SELF",
+      "groupOrPolicyNumber": "GRP01020102",
+      "claimFilingIndicatorCode": "CI",
+      "insurancePlanType": "COMMERCIAL",
+      "person": {
+        "entityRole": "SUBSCRIBER",
+        "entityType": "INDIVIDUAL",
+        "identificationType": "MEMBER_ID",
+        "identifier": "MBRID01234",
+        "lastNameOrOrgName": "Smith",
+        "firstName": "Steve",
+        "middleName": "A",
+        "birthDate": "1943-05-01",
+        "gender": "MALE",
+        "address": {
+          "line": "15210 Juliet Lane",
+          "city": "Libertyville",
+          "stateCode": "IL",
+          "zipCode": "60048"
+        }
+      },
+      "payer": {
+        "entityRole": "PAYER",
+        "entityType": "BUSINESS",
+        "identificationType": "CMS_PLAN_ID",
+        "identifier": "PLANID12345",
+        "lastNameOrOrgName": "R&R Health Plan"
+      }
+    },
+    "providerSignatureIndicator": "Y",
+    "assignmentParticipationCode": "A",
+    "assignmentCertificationIndicator": "Y",
+    "releaseOfInformationCode": "Y",
+    "billingProvider": {
+      "entityRole": "BILLING_PROVIDER",
+      "entityType": "BUSINESS",
+      "identificationType": "NPI",
+      "identifier": "1234567893",
+      "taxId": "10-1234567",
+      "lastNameOrOrgName": "Professional Home IV, LLC",
+      "address": {
+        "line": "1500 Industrial Drive",
+        "city": "Libertyville",
+        "stateCode": "IL",
+        "zipCode": "60048"
+      },
+      "contacts": [
+        {
+          "name": "Brenda Holly",
+          "contactNumbers": [
+            {
+              "type": "PHONE",
+              "number": "8019999999"
+            }
+          ]
+        }
+      ]
+    },
+    "diags": [
+      {
+        "subType": "ICD_10_PRINCIPAL",
+        "code": "J069"
+      }
+    ],
+    "serviceLines": [
+      {
+        "placeOfServiceType": "HOME",
+        "placeOfServiceCode": "12",
+        "chargeAmount": 1400.00,
+        "serviceDateFrom": "2004-02-01",
+        "serviceDateTo": "2004-02-07",
+        "unitType": "UNIT",
+        "unitCount": 7,
+        "procedure": {
+          "subType": "HCPCS",
+          "code": "S9500"
+        },
+        "providers": [
+          {
+            "entityRole": "ORDERING",
+            "entityType": "INDIVIDUAL",
+            "identificationType": "NPI",
+            "identifier": "1112223338",
+            "lastNameOrOrgName": "Welby",
+            "firstName": "Marcus"
+          }
+        ],
+        "diagPointers": [
+          1
+        ],
+        "diags": [
+          {
+            "subType": "ICD_10_PRINCIPAL",
+            "code": "J069"
+          }
+        ]
+      },
+      {
+        "placeOfServiceType": "HOME",
+        "placeOfServiceCode": "12",
+        "chargeAmount": 682.50,
+        "serviceDateFrom": "2004-02-01",
+        "serviceDateTo": "2004-02-07",
+        "prescriptionDate": "2004-01-30",
+        "unitType": "UNIT",
+        "unitCount": 7,
+        "drug": {
+          "subType": "NDC",
+          "code": "00003161201"
+        },
+        "drugQuantity": 7,
+        "drugUnitType": "UNIT",
+        "prescriptionNumber": "2530001",
+        "procedure": {
+          "subType": "HCPCS",
+          "code": "S5001"
+        },
+        "providers": [
+          {
+            "entityRole": "ORDERING",
+            "entityType": "INDIVIDUAL",
+            "identificationType": "NPI",
+            "identifier": "1112223338",
+            "lastNameOrOrgName": "Welby",
+            "firstName": "Marcus"
+          }
+        ],
+        "diagPointers": [
+          1
+        ],
+        "diags": [
+          {
+            "subType": "ICD_10_PRINCIPAL",
+            "code": "J069"
+          }
+        ]
+      },
+      {
+        "placeOfServiceType": "HOME",
+        "placeOfServiceCode": "12",
+        "chargeAmount": 15.12,
+        "serviceDateFrom": "2004-02-01",
+        "serviceDateTo": "2004-02-07",
+        "prescriptionDate": "2004-01-30",
+        "unitType": "UNIT",
+        "unitCount": 14,
+        "drug": {
+          "subType": "NDC",
+          "code": "63323025510"
+        },
+        "drugQuantity": 14,
+        "drugUnitType": "UNIT",
+        "prescriptionNumber": "2530001",
+        "procedure": {
+          "subType": "HCPCS",
+          "code": "S5000"
+        },
+        "providers": [
+          {
+            "entityRole": "ORDERING",
+            "entityType": "INDIVIDUAL",
+            "identificationType": "NPI",
+            "identifier": "1112223338",
+            "lastNameOrOrgName": "Welby",
+            "firstName": "Marcus"
+          }
+        ],
+        "diagPointers": [
+          1
+        ],
+        "diags": [
+          {
+            "subType": "ICD_10_PRINCIPAL",
+            "code": "J069"
+          }
+        ]
+      },
+      {
+        "placeOfServiceType": "HOME",
+        "placeOfServiceCode": "12",
+        "chargeAmount": 67.69,
+        "serviceDateFrom": "2004-02-01",
+        "serviceDateTo": "2004-02-07",
+        "prescriptionDate": "2004-01-30",
+        "unitType": "UNIT",
+        "unitCount": 7,
+        "drug": {
+          "subType": "NDC",
+          "code": "00338004938"
+        },
+        "drugQuantity": 7,
+        "drugUnitType": "UNIT",
+        "prescriptionNumber": "2530001",
+        "procedure": {
+          "subType": "HCPCS",
+          "code": "S5000"
+        },
+        "providers": [
+          {
+            "entityRole": "ORDERING",
+            "entityType": "INDIVIDUAL",
+            "identificationType": "NPI",
+            "identifier": "1112223338",
+            "lastNameOrOrgName": "Welby",
+            "firstName": "Marcus"
+          }
+        ],
+        "diagPointers": [
+          1
+        ],
+        "diags": [
+          {
+            "subType": "ICD_10_PRINCIPAL",
+            "code": "J069"
+          }
+        ]
+      },
+      {
+        "placeOfServiceType": "HOME",
+        "placeOfServiceCode": "12",
+        "chargeAmount": 57.12,
+        "serviceDateFrom": "2004-02-01",
+        "serviceDateTo": "2004-02-07",
+        "prescriptionDate": "2004-01-30",
+        "unitType": "UNIT",
+        "unitCount": 14,
+        "drug": {
+          "subType": "NDC",
+          "code": "08290326810"
+        },
+        "drugQuantity": 14,
+        "drugUnitType": "UNIT",
+        "prescriptionNumber": "2530002",
+        "procedure": {
+          "subType": "HCPCS",
+          "code": "S5000"
+        },
+        "providers": [
+          {
+            "entityRole": "ORDERING",
+            "entityType": "INDIVIDUAL",
+            "identificationType": "NPI",
+            "identifier": "1112223338",
+            "lastNameOrOrgName": "Welby",
+            "firstName": "Marcus"
+          }
+        ],
+        "diagPointers": [
+          1
+        ],
+        "diags": [
+          {
+            "subType": "ICD_10_PRINCIPAL",
+            "code": "J069"
+          }
+        ]
+      },
+      {
+        "placeOfServiceType": "HOME",
+        "placeOfServiceCode": "12",
+        "chargeAmount": 10.50,
+        "serviceDateFrom": "2004-02-01",
+        "serviceDateTo": "2004-02-07",
+        "prescriptionDate": "2004-01-30",
+        "unitType": "UNIT",
+        "unitCount": 7,
+        "drug": {
+          "subType": "NDC",
+          "code": "829080357005"
+        },
+        "drugQuantity": 7,
+        "drugUnitType": "UNIT",
+        "prescriptionNumber": "2530003",
+        "procedure": {
+          "subType": "HCPCS",
+          "code": "S5000"
+        },
+        "providers": [
+          {
+            "entityRole": "ORDERING",
+            "entityType": "INDIVIDUAL",
+            "identificationType": "NPI",
+            "identifier": "1112223338",
+            "lastNameOrOrgName": "Welby",
+            "firstName": "Marcus"
+          }
+        ],
+        "diagPointers": [
+          1
+        ],
+        "diags": [
+          {
+            "subType": "ICD_10_PRINCIPAL",
+            "code": "J069"
+          }
+        ]
+      }
+    ],
+    "transaction": {
+      "id": "680d2844be4ece52a3012065",
+      "controlNumber": "0711",
+      "transactionType": "PROF",
+      "purposeCode": "00",
+      "originatorApplicationTransactionId": "0013",
+      "creationDate": "2004-03-01",
+      "creationTime": "12:00:00",
+      "claimOrEncounterIdentifierType": "CHARGEABLE",
+      "transactionSetIdentifierCode": "CLAIM",
+      "implementationConventionReference": "005010X222",
+      "fileInfo": {
+        "name": "home-infusion-ndc.dat",
+        "url": "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/837/home-infusion-ndc.dat",
+        "lastModifiedDateTime": "2024-01-31T20:06:16.189-05:00",
+        "fileType": "EDI"
+      },
+      "sender": {
+        "entityRole": "SUBMITTER",
+        "entityType": "BUSINESS",
+        "identificationType": "ETIN",
+        "identifier": "587654321",
+        "lastNameOrOrgName": "Quality Billing Service Corporation",
+        "contacts": [
+          {
+            "name": "Bud Holly",
+            "contactNumbers": [
+              {
+                "type": "PHONE",
+                "number": "8017268899"
+              }
+            ]
+          }
+        ]
+      },
+      "receiver": {
+        "entityRole": "RECEIVER",
+        "entityType": "BUSINESS",
+        "identificationType": "ETIN",
+        "identifier": "369852758",
+        "lastNameOrOrgName": "XYZ Receiver"
+      },
+      "creationDateTime": "2004-03-01T12:00:00"
+    }
+  },
+  {
+    "id": "680d2844be4ece52a3012154",
+    "objectType": "CLAIM",
+    "patientControlNumber": "36463774",
+    "chargeAmount": 100.00,
+    "patientPaidAmount": 152.45,
+    "facilityCode": {
+      "subType": "PLACE_OF_SERVICE",
+      "code": "11"
+    },
+    "placeOfServiceType": "OFFICE",
+    "frequencyCode": {
+      "subType": "FREQUENCY_CODE",
+      "code": "1"
+    },
+    "serviceDateFrom": "2005-03-14",
+    "serviceDateTo": "2006-10-10",
+    "subscriber": {
+      "payerResponsibilitySequence": "PRIMARY",
+      "relationshipType": "SELF",
+      "groupOrPolicyNumber": "2222-SJ",
+      "claimFilingIndicatorCode": "CI",
+      "insurancePlanType": "COMMERCIAL",
+      "person": {
+        "entityRole": "SUBSCRIBER",
+        "entityType": "INDIVIDUAL",
+        "identificationType": "MEMBER_ID",
+        "identifier": "JS00111223333",
+        "taxId": "123450000",
+        "lastNameOrOrgName": "SMITH",
+        "firstName": "JANE",
+        "birthDate": "1943-05-01",
+        "gender": "FEMALE",
+        "address": {
+          "line": "236 N MAIN ST",
+          "city": "MIAMI",
+          "stateCode": "FL",
+          "zipCode": "33413"
+        }
+      },
+      "deathDate": "1990-02-01",
+      "weight": 176.00,
+      "pregnancyIndicator": "N",
+      "payer": {
+        "entityRole": "PAYER",
+        "entityType": "BUSINESS",
+        "identificationType": "PAYOR_ID",
+        "identifier": "999996666",
+        "taxId": "435261708",
+        "lastNameOrOrgName": "KEY INSURANCECOMPANY",
+        "address": {
+          "line": "P.O. BOX 569008",
+          "city": "MIAMI",
+          "stateCode": "FL",
+          "zipCode": "332560000"
+        },
+        "additionalIds": [
+          {
+            "qualifierCode": "G2",
+            "type": "PROVIDER_COMMERCIAL_NUMBER",
+            "identification": "12345"
+          }
+        ]
+      }
+    },
+    "patient": {
+      "relationshipType": "CHILD",
+      "person": {
+        "entityRole": "PATIENT",
+        "entityType": "INDIVIDUAL",
+        "lastNameOrOrgName": "SMITH",
+        "firstName": "TED",
+        "birthDate": "1973-05-01",
+        "gender": "MALE",
+        "address": {
+          "line": "237 N MAIN ST",
+          "city": "MIAMI",
+          "stateCode": "FL",
+          "zipCode": "33413"
+        }
+      },
+      "deathDate": "1997-03-14",
+      "weight": 156.00,
+      "pregnancyIndicator": "N"
+    },
+    "otherSubscribers": [
+      {
+        "payerResponsibilitySequence": "PRIMARY",
+        "relationshipType": "SELF",
+        "groupOrPolicyNumber": "000000",
+        "groupName": "PLAN NAME",
+        "claimFilingIndicatorCode": "MB",
+        "insurancePlanType": "MEDICARE_B",
+        "person": {
+          "entityRole": "SUBSCRIBER",
+          "entityType": "INDIVIDUAL",
+          "identificationType": "MEMBER_ID",
+          "identifier": "JS00111223999",
+          "lastNameOrOrgName": "SMITH",
+          "firstName": "JOHN",
+          "address": {
+            "line": "239 N MAIN ST",
+            "city": "MIAMI",
+            "stateCode": "FL",
+            "zipCode": "33415"
+          }
+        },
+        "adjustments": [
+          {
+            "group": "PATIENT_RESPONSIBILITY",
+            "reasonCode": "1",
+            "reason": {
+              "subType": "CARC",
+              "code": "1"
+            },
+            "amount": 21.89
+          },
+          {
+            "group": "PATIENT_RESPONSIBILITY",
+            "reasonCode": "2",
+            "reason": {
+              "subType": "CARC",
+              "code": "2"
+            },
+            "amount": 15.00
+          },
+          {
+            "group": "CORRECTION",
+            "reasonCode": "26",
+            "reason": {
+              "subType": "CARC",
+              "code": "26"
+            },
+            "amount": 55.00,
+            "quantity": 1
+          },
+          {
+            "group": "CORRECTION",
+            "reasonCode": "90",
+            "reason": {
+              "subType": "CARC",
+              "code": "90"
+            },
+            "amount": 65.55,
+            "quantity": 1
+          },
+          {
+            "group": "CORRECTION",
+            "reasonCode": "70",
+            "reason": {
+              "subType": "CARC",
+              "code": "70"
+            },
+            "amount": 73.03,
+            "quantity": 2
+          },
+          {
+            "group": "CORRECTION",
+            "reasonCode": "20",
+            "reason": {
+              "subType": "CARC",
+              "code": "20"
+            },
+            "amount": 85.15,
+            "quantity": 1
+          },
+          {
+            "group": "CORRECTION",
+            "reasonCode": "102",
+            "reason": {
+              "subType": "CARC",
+              "code": "102"
+            },
+            "amount": 99.99,
+            "quantity": 1
+          },
+          {
+            "group": "CORRECTION",
+            "reasonCode": "4",
+            "reason": {
+              "subType": "CARC",
+              "code": "4"
+            },
+            "amount": 102.22,
+            "quantity": 1
+          },
+          {
+            "group": "PAYOR_INITIATED",
+            "reasonCode": "2",
+            "reason": {
+              "subType": "CARC",
+              "code": "2"
+            },
+            "amount": 25.00,
+            "quantity": 1
+          },
+          {
+            "group": "PAYOR_INITIATED",
+            "reasonCode": "3",
+            "reason": {
+              "subType": "CARC",
+              "code": "3"
+            },
+            "amount": 25.55,
+            "quantity": 1
+          },
+          {
+            "group": "PAYOR_INITIATED",
+            "reasonCode": "2",
+            "reason": {
+              "subType": "CARC",
+              "code": "2"
+            },
+            "amount": 33.03,
+            "quantity": 2
+          },
+          {
+            "group": "PAYOR_INITIATED",
+            "reasonCode": "75",
+            "reason": {
+              "subType": "CARC",
+              "code": "75"
+            },
+            "amount": 45.15,
+            "quantity": 1
+          },
+          {
+            "group": "PAYOR_INITIATED",
+            "reasonCode": "22",
+            "reason": {
+              "subType": "CARC",
+              "code": "22"
+            },
+            "amount": 59.99,
+            "quantity": 1
+          },
+          {
+            "group": "PAYOR_INITIATED",
+            "reasonCode": "2",
+            "reason": {
+              "subType": "CARC",
+              "code": "2"
+            },
+            "amount": 62.22,
+            "quantity": 1
+          }
+        ],
+        "payerPaidAmount": 59.19,
+        "nonCoveredAmount": 273.00,
+        "remainingPatientLiabilityAmount": 14.83,
+        "payerClaimControlNumber": "CLAIM99",
+        "payer": {
+          "entityRole": "PAYER",
+          "entityType": "BUSINESS",
+          "identificationType": "PAYOR_ID",
+          "identifier": "OTP",
+          "taxId": "987654321",
+          "lastNameOrOrgName": "OTHER PAYER",
+          "address": {
+            "line": "PO BOX 7901",
+            "line2": "DEP 2",
+            "city": "MADISON",
+            "stateCode": "MA",
+            "zipCode": "53707"
+          },
+          "additionalIds": [
+            {
+              "qualifierCode": "FY",
+              "type": "CLAIM_OFFICE_NUMBER",
+              "identification": "98765"
+            }
+          ]
+        },
+        "providers": [
+          {
+            "entityRole": "REFERRING",
+            "entityType": "INDIVIDUAL",
+            "additionalIds": [
+              {
+                "qualifierCode": "G2",
+                "type": "PROVIDER_COMMERCIAL_NUMBER",
+                "identification": "12345"
+              }
+            ]
+          },
+          {
+            "entityRole": "RENDERING",
+            "entityType": "INDIVIDUAL",
+            "additionalIds": [
+              {
+                "qualifierCode": "G2",
+                "type": "PROVIDER_COMMERCIAL_NUMBER",
+                "identification": "12345"
+              }
+            ]
+          },
+          {
+            "entityRole": "PRIMARY_CARE",
+            "entityType": "INDIVIDUAL",
+            "additionalIds": [
+              {
+                "qualifierCode": "G2",
+                "type": "PROVIDER_COMMERCIAL_NUMBER",
+                "identification": "12345"
+              }
+            ]
+          },
+          {
+            "entityRole": "SERVICE_FACILITY",
+            "entityType": "INDIVIDUAL",
+            "additionalIds": [
+              {
+                "qualifierCode": "G2",
+                "type": "PROVIDER_COMMERCIAL_NUMBER",
+                "identification": "12345"
+              }
+            ]
+          },
+          {
+            "entityRole": "SUPERVISING",
+            "entityType": "INDIVIDUAL",
+            "additionalIds": [
+              {
+                "qualifierCode": "G2",
+                "type": "PROVIDER_COMMERCIAL_NUMBER",
+                "identification": "12345"
+              }
+            ]
+          },
+          {
+            "entityRole": "BILLING_PROVIDER",
+            "entityType": "INDIVIDUAL",
+            "additionalIds": [
+              {
+                "qualifierCode": "G2",
+                "type": "PROVIDER_COMMERCIAL_NUMBER",
+                "identification": "12345"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "providerSignatureIndicator": "Y",
+    "assignmentParticipationCode": "A",
+    "assignmentCertificationIndicator": "Y",
+    "releaseOfInformationCode": "Y",
+    "specialProgramCode": "05",
+    "delayReasonCode": "4",
+    "referralNumber": "ReferralNum",
+    "priorAuthorizationNumber": "PriorAuth",
+    "medicalRecordNumber": "MedicalRecordNum",
+    "demonstrationProjectIdentifier": "DemonstrProjectId",
+    "onsetOfCurrentIllnessOrInjuryDate": "2018-03-12",
+    "initialTreatmentDate": "2018-03-01",
+    "lastSeenDate": "2005-01-08",
+    "acuteManifestationDate": "2018-03-02",
+    "accidentDate": "2005-01-08",
+    "lastMenstrualPeriodDate": "2005-01-08",
+    "lastXRayDate": "2005-01-08",
+    "assumedCareDate": "2005-06-08",
+    "relinquishedCareDate": "2005-06-08",
+    "disabilityDateFrom": "2005-06-08",
+    "disabilityDateTo": "2005-06-09",
+    "admissionDate": "2005-05-08",
+    "dischargeDate": "2005-06-08",
+    "clearinghouseTraceNumber": "ClaimIdForTransm",
+    "originalReferenceNumber": "PayerClaimControlNum",
+    "serviceAuthorizationExceptionCode": "ServiceAuthorizationExceptionCode",
+    "claimNote": "SURGERY WAS UNUSUALLY LONG",
+    "billingProvider": {
+      "entityRole": "BILLING_PROVIDER",
+      "entityType": "BUSINESS",
+      "identificationType": "NPI",
+      "identifier": "9876543210",
+      "taxId": "587654321",
+      "lastNameOrOrgName": "BEN KILDARE SERVICE",
+      "address": {
+        "line": "234 SEAWAY ST",
+        "city": "MIAMI",
+        "stateCode": "FL",
+        "zipCode": "33111"
+      },
+      "providerTaxonomy": {
+        "subType": "PROVIDER_TAXONOMY",
+        "code": "203BF0100Y"
+      },
+      "contacts": [
+        {
+          "name": "JOHN SMITH",
+          "contactNumbers": [
+            {
+              "type": "PHONE",
+              "number": "5555551234"
+            },
+            {
+              "type": "EXTENSION",
+              "number": "123"
+            }
+          ]
+        }
+      ],
+      "additionalIds": [
+        {
+          "qualifierCode": "0B",
+          "type": "STATE_LICENSE_NUMBER",
+          "identification": "654321"
+        }
+      ]
+    },
+    "providers": [
+      {
+        "entityRole": "REFERRING",
+        "entityType": "INDIVIDUAL",
+        "identificationType": "NPI",
+        "identifier": "5234567805",
+        "lastNameOrOrgName": "DOE",
+        "firstName": "JONE",
+        "middleName": "C",
+        "additionalIds": [
+          {
+            "qualifierCode": "G2",
+            "type": "PROVIDER_COMMERCIAL_NUMBER",
+            "identification": "12345"
+          }
+        ]
+      },
+      {
+        "entityRole": "RENDERING",
+        "entityType": "INDIVIDUAL",
+        "identificationType": "NPI",
+        "identifier": "1234567804",
+        "lastNameOrOrgName": "DOE",
+        "firstName": "JANE",
+        "middleName": "C",
+        "providerTaxonomy": {
+          "subType": "PROVIDER_TAXONOMY",
+          "code": "000000000X"
+        },
+        "additionalIds": [
+          {
+            "qualifierCode": "LU",
+            "type": "LOCATION_NUMBER",
+            "identification": "12345"
+          }
+        ]
+      },
+      {
+        "entityRole": "SERVICE_FACILITY",
+        "entityType": "BUSINESS",
+        "identificationType": "NPI",
+        "identifier": "000000004",
+        "lastNameOrOrgName": "Service Facility",
+        "address": {
+          "line": "123 FAKE STREET",
+          "city": "CITY",
+          "stateCode": "ST",
+          "zipCode": "123459999"
+        },
+        "additionalIds": [
+          {
+            "qualifierCode": "G2",
+            "type": "PROVIDER_COMMERCIAL_NUMBER",
+            "identification": "12345"
+          }
+        ]
+      },
+      {
+        "entityRole": "SUPERVISING",
+        "entityType": "INDIVIDUAL",
+        "identificationType": "NPI",
+        "identifier": "SupProv",
+        "lastNameOrOrgName": "Sup",
+        "firstName": "JONE",
+        "middleName": "C",
+        "additionalIds": [
+          {
+            "qualifierCode": "G2",
+            "type": "PROVIDER_COMMERCIAL_NUMBER",
+            "identification": "12345"
+          }
+        ]
+      }
+    ],
+    "diags": [
+      {
+        "subType": "ICD_10_PRINCIPAL",
+        "code": "J0300"
+      },
+      {
+        "subType": "ICD_10",
+        "code": "Z1159"
+      }
+    ],
+    "procs": [
+      {
+        "subType": "HCPCS_PRINCIPAL",
+        "code": "33414"
+      }
+    ],
+    "conditions": [
+      {
+        "subType": "CONDITION",
+        "code": "17"
+      },
+      {
+        "subType": "CONDITION",
+        "code": "67"
+      }
+    ],
+    "attachments": [
+      {
+        "reportTypeCode": "OZ",
+        "reportTransmissionCode": "BM",
+        "controlNumber": "DMN0012"
+      }
+    ],
+    "serviceLines": [
+      {
+        "sourceLineId": "54321",
+        "placeOfServiceType": "OFFICE",
+        "placeOfServiceCode": "11",
+        "emergencyIndicator": "N",
+        "epsdtIndicator": "N",
+        "familyPlanningIndicator": "Y",
+        "copayStatusCode": "C",
+        "repricedReferenceNumber": "Repriced",
+        "adjustedRepricedReferenceNumber": "AdjRepriced",
+        "priorAuthorization": "PriorAuthorization",
+        "referralNumber": "ReferralNumber",
+        "chargeAmount": 40.00,
+        "serviceDateFrom": "2005-03-14",
+        "serviceDateTo": "2005-03-25",
+        "prescriptionDate": "2005-01-08",
+        "beginTherapyDate": "2005-01-12",
+        "lastSeenDate": "2005-01-08",
+        "testPerformedDate": "2005-01-12",
+        "lastXRayDate": "2005-01-08",
+        "initialTreatmentDate": "2005-01-08",
+        "unitType": "UNIT",
+        "unitCount": 1,
+        "drug": {
+          "subType": "NDC",
+          "code": "00002143481"
+        },
+        "drugQuantity": 1.01,
+        "drugUnitType": "UNIT",
+        "prescriptionNumber": "123456",
+        "lineNote": "PATIENT GOAL TO BE OFF OXYGEN BY END OF MONTH",
+        "thirdPartyNote": "STATE REGULATION 123 WAS APPLIED DURING THE PRICING OF THIS PROF CLAIM",
+        "procedure": {
+          "subType": "CPT",
+          "code": "99299",
+          "modifiers": [
+            {
+              "subType": "HCPCS_MODIFIER",
+              "code": "26"
+            },
+            {
+              "subType": "HCPCS_MODIFIER",
+              "code": "27"
+            },
+            {
+              "subType": "HCPCS_MODIFIER",
+              "code": "28"
+            },
+            {
+              "subType": "HCPCS_MODIFIER",
+              "code": "29"
+            }
+          ]
+        },
+        "attachments": [
+          {
+            "reportTypeCode": "OZ",
+            "reportTransmissionCode": "BM",
+            "controlNumber": "Line123"
+          },
+          {
+            "reportTypeCode": "CT",
+            "reportTransmissionCode": "AB"
+          }
+        ],
+        "providers": [
+          {
+            "entityRole": "RENDERING",
+            "entityType": "INDIVIDUAL",
+            "identificationType": "NPI",
+            "identifier": "1234567804",
+            "lastNameOrOrgName": "DOE LINE",
+            "firstName": "JANE",
+            "middleName": "C"
+          },
+          {
+            "entityRole": "PURCHASE_SERVICE",
+            "entityType": "BUSINESS",
+            "identificationType": "NPI",
+            "identifier": "1234567809",
+            "additionalIds": [
+              {
+                "qualifierCode": "G2",
+                "type": "PROVIDER_COMMERCIAL_NUMBER",
+                "identification": "12345"
+              }
+            ]
+          },
+          {
+            "entityRole": "SUPERVISING",
+            "entityType": "INDIVIDUAL",
+            "identificationType": "NPI",
+            "identifier": "SupProv",
+            "lastNameOrOrgName": "Sup",
+            "additionalIds": [
+              {
+                "qualifierCode": "G2",
+                "type": "PROVIDER_COMMERCIAL_NUMBER",
+                "identification": "12345"
+              }
+            ]
+          }
+        ],
+        "diagPointers": [
+          1,
+          2
+        ],
+        "diags": [
+          {
+            "subType": "ICD_10_PRINCIPAL",
+            "code": "J0300"
+          },
+          {
+            "subType": "ICD_10",
+            "code": "Z1159"
+          }
+        ]
+      },
+      {
+        "chargeAmount": 15.00,
+        "serviceDateFrom": "2006-10-03",
+        "unitType": "UNIT",
+        "unitCount": 1,
+        "procedure": {
+          "subType": "CPT",
+          "code": "87099"
+        },
+        "diagPointers": [
+          1
+        ],
+        "diags": [
+          {
+            "subType": "ICD_10_PRINCIPAL",
+            "code": "J0300"
+          }
+        ]
+      },
+      {
+        "chargeAmount": 35.00,
+        "unitType": "UNIT",
+        "unitCount": 1,
+        "procedure": {
+          "subType": "CPT",
+          "code": "99214"
+        },
+        "diagPointers": [
+          2
+        ],
+        "diags": [
+          {
+            "subType": "ICD_10",
+            "code": "Z1159"
+          }
+        ]
+      },
+      {
+        "chargeAmount": 10.00,
+        "serviceDateFrom": "2006-10-10",
+        "unitType": "UNIT",
+        "unitCount": 1,
+        "drug": {
+          "subType": "NDC",
+          "code": "01234567891"
+        },
+        "procedure": {
+          "subType": "CPT",
+          "code": "86663"
+        },
+        "diagPointers": [
+          2
+        ],
+        "diags": [
+          {
+            "subType": "ICD_10",
+            "code": "Z1159"
+          }
+        ]
+      }
+    ],
+    "transaction": {
+      "id": "680d2844be4ece52a30120aa",
+      "controlNumber": "0031",
+      "transactionType": "PROF",
+      "purposeCode": "00",
+      "originatorApplicationTransactionId": "0031",
+      "creationDate": "2006-10-15",
+      "creationTime": "10:23:00",
+      "claimOrEncounterIdentifierType": "CHARGEABLE",
+      "transactionSetIdentifierCode": "CLAIM",
+      "implementationConventionReference": "005010X222",
+      "fileInfo": {
+        "name": "837P-all-fields.dat",
+        "url": "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/837/837P-all-fields.dat",
+        "lastModifiedDateTime": "2025-04-07T12:22:02.272-04:00",
+        "fileType": "EDI"
+      },
+      "sender": {
+        "entityRole": "SUBMITTER",
+        "entityType": "BUSINESS",
+        "identificationType": "ETIN",
+        "identifier": "TGJ23",
+        "lastNameOrOrgName": "PREMIER BILLING SERVICE",
+        "contacts": [
+          {
+            "name": "JERRY",
+            "contactNumbers": [
+              {
+                "type": "PHONE",
+                "number": "3055552222"
+              },
+              {
+                "type": "EXTENSION",
+                "number": "231"
+              }
+            ]
+          }
+        ]
+      },
+      "receiver": {
+        "entityRole": "RECEIVER",
+        "entityType": "BUSINESS",
+        "identificationType": "ETIN",
+        "identifier": "66783JJT",
+        "lastNameOrOrgName": "KEY INSURANCE COMPANY"
+      },
+      "creationDateTime": "2006-10-15T10:23:00"
+    }
+  }
+]

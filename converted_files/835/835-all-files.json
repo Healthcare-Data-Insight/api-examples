@@ -1,0 +1,1885 @@
+[
+  {
+    "id": "680d294842dad96c0a754995",
+    "objectType": "PAYMENT",
+    "patientControlNumber": "PATACCT",
+    "chargeAmount": 400.00,
+    "paymentAmount": 80.00,
+    "facilityCode": {
+      "subType": "PLACE_OF_SERVICE",
+      "code": "11"
+    },
+    "placeOfServiceType": "OFFICE",
+    "frequencyCode": {
+      "subType": "FREQUENCY_CODE",
+      "code": "1"
+    },
+    "serviceDateFrom": "2019-01-01",
+    "serviceDateTo": "2019-01-01",
+    "patient": {
+      "person": {
+        "entityRole": "PATIENT",
+        "entityType": "INDIVIDUAL",
+        "identificationType": "MEMBER_ID",
+        "identifier": "ABC123456789",
+        "lastNameOrOrgName": "DOE",
+        "firstName": "JOHN",
+        "middleName": "N"
+      }
+    },
+    "claimStatusCode": "1",
+    "claimStatus": "PRIMARY",
+    "claimFilingIndicatorCode": "MC",
+    "insurancePlanType": "MEDICAID",
+    "payerControlNumber": "CLAIMNUMBER",
+    "otherClaimRelatedIds": [
+      {
+        "qualifierCode": "1L",
+        "type": "GROUP_OR_POLICY_NUMBER",
+        "identification": "12345F"
+      }
+    ],
+    "supplementalAmounts": [
+      {
+        "qualifierCode": "AU",
+        "type": "COVERAGE_AMOUNT",
+        "amount": 150.00
+      }
+    ],
+    "payer": {
+      "entityRole": "PAYER",
+      "entityType": "BUSINESS",
+      "identifier": "1234567890",
+      "lastNameOrOrgName": "ANY PLAN USA",
+      "address": {
+        "line": "1 WALK THIS WAY",
+        "city": "ANYCITY",
+        "stateCode": "OH",
+        "zipCode": "45209"
+      },
+      "contacts": [
+        {
+          "contactNumbers": [
+            {
+              "type": "PHONE",
+              "number": "8661112222"
+            }
+          ]
+        },
+        {
+          "name": "EDI",
+          "contactNumbers": [
+            {
+              "type": "PHONE",
+              "number": "8002223333"
+            },
+            {
+              "type": "EMAIL",
+              "number": "EDI.SUPPORT@ANYPAYER.COM"
+            }
+          ]
+        },
+        {
+          "contactNumbers": [
+            {
+              "type": "URL",
+              "number": "WWW.ANYPAYER.COM"
+            }
+          ]
+        }
+      ]
+    },
+    "payee": {
+      "entityRole": "PAYEE",
+      "entityType": "BUSINESS",
+      "identificationType": "NPI",
+      "identifier": "1123454567",
+      "taxId": "123456789",
+      "lastNameOrOrgName": "PROVIDER",
+      "address": {
+        "line": "2255 ANY ROAD",
+        "city": "ANY CITY",
+        "stateCode": "CA",
+        "zipCode": "12211"
+      }
+    },
+    "claimReceivedDate": "2019-02-09",
+    "serviceLines": [
+      {
+        "chargeAmount": 150.00,
+        "paidAmount": 80.00,
+        "supplementalAmounts": [
+          {
+            "qualifierCode": "B6",
+            "type": "ALLOWED_ACTUAL",
+            "amount": 80.00
+          }
+        ],
+        "serviceDateFrom": "2019-01-01",
+        "unitCount": 1,
+        "procedure": {
+          "subType": "CPT",
+          "code": "99213"
+        },
+        "adjustments": [
+          {
+            "group": "CONTRACTUAL",
+            "reasonCode": "45",
+            "reason": {
+              "subType": "CARC",
+              "code": "45"
+            },
+            "amount": 70.00
+          }
+        ]
+      },
+      {
+        "chargeAmount": 100.00,
+        "paidAmount": 0.00,
+        "serviceDateFrom": "2019-01-01",
+        "unitCount": 1,
+        "procedure": {
+          "subType": "CPT",
+          "code": "85003"
+        },
+        "adjustments": [
+          {
+            "group": "CONTRACTUAL",
+            "reasonCode": "204",
+            "reason": {
+              "subType": "CARC",
+              "code": "204"
+            },
+            "amount": 100.00
+          }
+        ]
+      },
+      {
+        "chargeAmount": 150.00,
+        "paidAmount": 0.00,
+        "serviceDateFrom": "2019-01-01",
+        "unitCount": 1,
+        "procedure": {
+          "subType": "CPT",
+          "code": "36415"
+        },
+        "adjustments": [
+          {
+            "group": "CONTRACTUAL",
+            "reasonCode": "97",
+            "reason": {
+              "subType": "CARC",
+              "code": "97"
+            },
+            "amount": 150.00
+          }
+        ]
+      }
+    ],
+    "transaction": {
+      "id": "680d294842dad96c0a754972",
+      "controlNumber": "10060875",
+      "transactionType": "PAYMENT",
+      "productionDate": "2019-08-27",
+      "totalPaymentAmount": 80.00,
+      "creditOrDebitFlagCode": "C",
+      "paymentMethodType": "CHECK",
+      "paymentDate": "2019-08-16",
+      "checkOrEftTraceNumber": "CK NUMBER 1",
+      "payerIdentifier": "1234567890",
+      "transactionSetIdentifierCode": "PAYMENT",
+      "fileInfo": {
+        "name": "claim_adj_reason.dat",
+        "url": "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/835/claim_adj_reason.dat",
+        "lastModifiedDateTime": "2023-08-28T03:50:07.198-04:00",
+        "fileType": "EDI"
+      },
+      "sender": {
+        "entityRole": "PAYER",
+        "entityType": "BUSINESS",
+        "identifier": "1234567890",
+        "lastNameOrOrgName": "ANY PLAN USA",
+        "address": {
+          "line": "1 WALK THIS WAY",
+          "city": "ANYCITY",
+          "stateCode": "OH",
+          "zipCode": "45209"
+        },
+        "contacts": [
+          {
+            "contactNumbers": [
+              {
+                "type": "PHONE",
+                "number": "8661112222"
+              }
+            ]
+          },
+          {
+            "name": "EDI",
+            "contactNumbers": [
+              {
+                "type": "PHONE",
+                "number": "8002223333"
+              },
+              {
+                "type": "EMAIL",
+                "number": "EDI.SUPPORT@ANYPAYER.COM"
+              }
+            ]
+          },
+          {
+            "contactNumbers": [
+              {
+                "type": "URL",
+                "number": "WWW.ANYPAYER.COM"
+              }
+            ]
+          }
+        ]
+      },
+      "receiver": {
+        "entityRole": "PAYEE",
+        "entityType": "BUSINESS",
+        "identificationType": "NPI",
+        "identifier": "1123454567",
+        "taxId": "123456789",
+        "lastNameOrOrgName": "PROVIDER",
+        "address": {
+          "line": "2255 ANY ROAD",
+          "city": "ANY CITY",
+          "stateCode": "CA",
+          "zipCode": "12211"
+        }
+      }
+    }
+  },
+  {
+    "id": "680d294842dad96c0a7549b6",
+    "objectType": "PAYMENT",
+    "patientControlNumber": "PATACCT",
+    "chargeAmount": 40000.00,
+    "paymentAmount": 8000.00,
+    "facilityCode": {
+      "subType": "PLACE_OF_SERVICE",
+      "code": "11"
+    },
+    "placeOfServiceType": "OFFICE",
+    "frequencyCode": {
+      "subType": "FREQUENCY_CODE",
+      "code": "1"
+    },
+    "statementDateFrom": "2019-01-01",
+    "statementDateTo": "2019-01-05",
+    "patient": {
+      "person": {
+        "entityRole": "PATIENT",
+        "entityType": "INDIVIDUAL",
+        "identificationType": "MEMBER_ID",
+        "identifier": "ABC123456789",
+        "lastNameOrOrgName": "DOE",
+        "firstName": "JOHN",
+        "middleName": "N"
+      }
+    },
+    "claimStatusCode": "1",
+    "claimStatus": "PRIMARY",
+    "claimFilingIndicatorCode": "MC",
+    "insurancePlanType": "MEDICAID",
+    "payerControlNumber": "CLAIMNUMBER",
+    "otherClaimRelatedIds": [
+      {
+        "qualifierCode": "1L",
+        "type": "GROUP_OR_POLICY_NUMBER",
+        "identification": "12345F"
+      }
+    ],
+    "supplementalAmounts": [
+      {
+        "qualifierCode": "AU",
+        "type": "COVERAGE_AMOUNT",
+        "amount": 38000.00
+      }
+    ],
+    "supplementalQuantities": [
+      {
+        "qualifierCode": "CA",
+        "type": "COVERED",
+        "quantity": 4
+      }
+    ],
+    "payer": {
+      "entityRole": "PAYER",
+      "entityType": "BUSINESS",
+      "identifier": "1234567890",
+      "lastNameOrOrgName": "ANY PLAN USA",
+      "address": {
+        "line": "1 WALK THIS WAY",
+        "city": "ANYCITY",
+        "stateCode": "OH",
+        "zipCode": "45209"
+      },
+      "contacts": [
+        {
+          "contactNumbers": [
+            {
+              "type": "PHONE",
+              "number": "8661112222"
+            }
+          ]
+        },
+        {
+          "name": "EDI",
+          "contactNumbers": [
+            {
+              "type": "PHONE",
+              "number": "8002223333"
+            },
+            {
+              "type": "EMAIL",
+              "number": "EDI.SUPPORT@ANYPAYER.COM"
+            }
+          ]
+        },
+        {
+          "contactNumbers": [
+            {
+              "type": "URL",
+              "number": "WWW.ANYPAYER.COM"
+            }
+          ]
+        }
+      ]
+    },
+    "payee": {
+      "entityRole": "PAYEE",
+      "entityType": "BUSINESS",
+      "identificationType": "NPI",
+      "identifier": "1123454567",
+      "taxId": "123456789",
+      "lastNameOrOrgName": "PROVIDER",
+      "address": {
+        "line": "2255 ANY ROAD",
+        "city": "ANY CITY",
+        "stateCode": "CA",
+        "zipCode": "12211"
+      }
+    },
+    "adjustments": [
+      {
+        "group": "CONTRACTUAL",
+        "reasonCode": "197",
+        "reason": {
+          "subType": "CARC",
+          "code": "197"
+        },
+        "amount": 2000.00,
+        "quantity": 1
+      },
+      {
+        "group": "CONTRACTUAL",
+        "reasonCode": "45",
+        "reason": {
+          "subType": "CARC",
+          "code": "45"
+        },
+        "amount": 30000.00
+      }
+    ],
+    "coverageExpirationDate": "2019-02-28",
+    "claimReceivedDate": "2019-02-09",
+    "serviceLines": [],
+    "transaction": {
+      "id": "680d294842dad96c0a754998",
+      "controlNumber": "10060875",
+      "transactionType": "PAYMENT",
+      "productionDate": "2019-08-27",
+      "totalPaymentAmount": 8000.00,
+      "creditOrDebitFlagCode": "C",
+      "paymentMethodType": "CHECK",
+      "paymentDate": "2019-08-16",
+      "checkOrEftTraceNumber": "CK NUMBER 1",
+      "payerIdentifier": "1234567890",
+      "transactionSetIdentifierCode": "PAYMENT",
+      "fileInfo": {
+        "name": "not_covered_inpatient.dat",
+        "url": "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/835/not_covered_inpatient.dat",
+        "lastModifiedDateTime": "2023-08-28T03:50:07.199-04:00",
+        "fileType": "EDI"
+      },
+      "sender": {
+        "entityRole": "PAYER",
+        "entityType": "BUSINESS",
+        "identifier": "1234567890",
+        "lastNameOrOrgName": "ANY PLAN USA",
+        "address": {
+          "line": "1 WALK THIS WAY",
+          "city": "ANYCITY",
+          "stateCode": "OH",
+          "zipCode": "45209"
+        },
+        "contacts": [
+          {
+            "contactNumbers": [
+              {
+                "type": "PHONE",
+                "number": "8661112222"
+              }
+            ]
+          },
+          {
+            "name": "EDI",
+            "contactNumbers": [
+              {
+                "type": "PHONE",
+                "number": "8002223333"
+              },
+              {
+                "type": "EMAIL",
+                "number": "EDI.SUPPORT@ANYPAYER.COM"
+              }
+            ]
+          },
+          {
+            "contactNumbers": [
+              {
+                "type": "URL",
+                "number": "WWW.ANYPAYER.COM"
+              }
+            ]
+          }
+        ]
+      },
+      "receiver": {
+        "entityRole": "PAYEE",
+        "entityType": "BUSINESS",
+        "identificationType": "NPI",
+        "identifier": "1123454567",
+        "taxId": "123456789",
+        "lastNameOrOrgName": "PROVIDER",
+        "address": {
+          "line": "2255 ANY ROAD",
+          "city": "ANY CITY",
+          "stateCode": "CA",
+          "zipCode": "12211"
+        }
+      }
+    }
+  },
+  {
+    "id": "680d294842dad96c0a754a03",
+    "objectType": "PAYMENT",
+    "patientControlNumber": "7722337",
+    "chargeAmount": 226.00,
+    "paymentAmount": 132.00,
+    "facilityCode": {
+      "subType": "PLACE_OF_SERVICE",
+      "code": "11"
+    },
+    "placeOfServiceType": "OFFICE",
+    "frequencyCode": {
+      "subType": "FREQUENCY_CODE",
+      "code": "1"
+    },
+    "statementDateFrom": "2022-09-15",
+    "statementDateTo": "2022-09-16",
+    "serviceDateFrom": "2019-03-24",
+    "serviceDateTo": "2019-03-25",
+    "subscriber": {
+      "person": {
+        "entityRole": "INSURED_SUBSCRIBER",
+        "entityType": "INDIVIDUAL",
+        "identificationType": "MEMBER_ID",
+        "identifier": "SJD11111",
+        "lastNameOrOrgName": "DOE",
+        "firstName": "John"
+      }
+    },
+    "patient": {
+      "person": {
+        "entityRole": "PATIENT",
+        "entityType": "INDIVIDUAL",
+        "lastNameOrOrgName": "DOE",
+        "firstName": "SALLY"
+      }
+    },
+    "otherSubscribers": [
+      {
+        "person": {
+          "entityRole": "OTHER_SUBSCRIBER",
+          "entityType": "INDIVIDUAL",
+          "lastNameOrOrgName": "Smith",
+          "firstName": "Jane"
+        }
+      }
+    ],
+    "claimStatusCode": "1",
+    "claimStatus": "PRIMARY",
+    "patientResponsibilityAmount": 10.00,
+    "claimFilingIndicatorCode": "12",
+    "insurancePlanType": "PPO",
+    "payerControlNumber": "119932404007801",
+    "otherClaimRelatedIds": [
+      {
+        "qualifierCode": "F8",
+        "type": "ORIGINAL_REFERENCE_NUMBER",
+        "identification": "12345"
+      },
+      {
+        "qualifierCode": "EA",
+        "type": "MEDICAL_RECORD_NUMBER",
+        "identification": "12345"
+      }
+    ],
+    "supplementalAmounts": [
+      {
+        "qualifierCode": "AU",
+        "type": "COVERAGE_AMOUNT",
+        "amount": 132.00
+      },
+      {
+        "qualifierCode": "D8",
+        "type": "DISCOUNT_AMOUNT",
+        "amount": 100.00
+      }
+    ],
+    "supplementalQuantities": [
+      {
+        "qualifierCode": "CA",
+        "type": "COVERED",
+        "quantity": 4
+      }
+    ],
+    "payer": {
+      "entityRole": "PAYER",
+      "entityType": "BUSINESS",
+      "lastNameOrOrgName": "DELTA DENTAL OF ABC",
+      "address": {
+        "line": "225 MAIN STREET",
+        "city": "CENTERVILLE",
+        "stateCode": "PA",
+        "zipCode": "17111"
+      },
+      "contacts": [
+        {
+          "name": "JANE DOE",
+          "contactNumbers": [
+            {
+              "type": "PHONE",
+              "number": "9005555555"
+            }
+          ]
+        }
+      ],
+      "additionalIds": [
+        {
+          "qualifierCode": "2U",
+          "type": "PAYER_IDENTIFICATION_NUMBER",
+          "identification": "0101"
+        },
+        {
+          "qualifierCode": "HI",
+          "type": "HEALTH_INDUSTRY_NUMBER",
+          "identification": "0202"
+        }
+      ]
+    },
+    "payee": {
+      "entityRole": "PAYEE",
+      "entityType": "BUSINESS",
+      "identificationType": "EIN",
+      "identifier": "999994703",
+      "taxId": "050595",
+      "lastNameOrOrgName": "BAN DDS LLC",
+      "address": {
+        "line": "225 MAIN STREET",
+        "city": "CENTERVILLE",
+        "stateCode": "PA",
+        "zipCode": "17111"
+      },
+      "additionalIds": [
+        {
+          "qualifierCode": "PQ",
+          "type": "PAYEE_IDENTIFICATION_NUMBER",
+          "identification": "0505"
+        }
+      ]
+    },
+    "adjustments": [
+      {
+        "group": "CONTRACTUAL",
+        "reasonCode": "197",
+        "reason": {
+          "subType": "CARC",
+          "code": "197"
+        },
+        "amount": 2000.00,
+        "quantity": 1
+      },
+      {
+        "group": "CONTRACTUAL",
+        "reasonCode": "45",
+        "reason": {
+          "subType": "CARC",
+          "code": "45"
+        },
+        "amount": 30000.00
+      },
+      {
+        "group": "PATIENT_RESPONSIBILITY",
+        "reasonCode": "132",
+        "reason": {
+          "subType": "CARC",
+          "code": "132"
+        },
+        "amount": 259.00
+      }
+    ],
+    "coverageExpirationDate": "2022-10-01",
+    "claimReceivedDate": "2022-11-24",
+    "serviceProvider": {
+      "entityRole": "RENDERING",
+      "entityType": "INDIVIDUAL",
+      "identificationType": "NPI",
+      "identifier": "1811901945",
+      "lastNameOrOrgName": "BAN",
+      "firstName": "ERIN",
+      "additionalIds": [
+        {
+          "qualifierCode": "1C",
+          "type": "MEDICARE_PROVIDER_NUMBER",
+          "identification": "12345678"
+        }
+      ]
+    },
+    "crossoverCarrier": {
+      "entityRole": "CROSSOVER_CARRIER",
+      "entityType": "INDIVIDUAL",
+      "identificationType": "CMS_PLAN_ID",
+      "identifier": "9876",
+      "lastNameOrOrgName": "ACME INSURANCE"
+    },
+    "correctedPayer": {
+      "entityRole": "PAYER",
+      "entityType": "BUSINESS",
+      "identificationType": "CMS_PLAN_ID",
+      "identifier": "8765",
+      "lastNameOrOrgName": "ACME INSURANCE"
+    },
+    "serviceLines": [
+      {
+        "sourceLineId": "A123",
+        "healthcarePolicyId": "1234\"5",
+        "chargeAmount": 46.00,
+        "paidAmount": 25.00,
+        "supplementalAmounts": [
+          {
+            "qualifierCode": "B6",
+            "type": "ALLOWED_ACTUAL",
+            "amount": 25.00
+          }
+        ],
+        "supplementalQuantities": [
+          {
+            "qualifierCode": "ZL",
+            "type": "MEDICARE_MEDICAID_CAT_2",
+            "quantity": 3.75
+          }
+        ],
+        "serviceDateFrom": "2019-03-24",
+        "unitCount": 3.1,
+        "originalUnitCount": 3.5,
+        "procedure": {
+          "subType": "ADA",
+          "code": "D0120",
+          "modifiers": [
+            {
+              "subType": "HCPCS_MODIFIER",
+              "code": "02"
+            },
+            {
+              "subType": "HCPCS_MODIFIER",
+              "code": "28"
+            }
+          ]
+        },
+        "revenueCode": {
+          "subType": "REVENUE_CODE",
+          "code": "0222"
+        },
+        "originalProcedure": {
+          "subType": "ADA",
+          "code": "D0140",
+          "modifiers": [
+            {
+              "subType": "HCPCS_MODIFIER",
+              "code": "1"
+            }
+          ]
+        },
+        "adjustments": [
+          {
+            "group": "CONTRACTUAL",
+            "reasonCode": "131",
+            "reason": {
+              "subType": "CARC",
+              "code": "131"
+            },
+            "amount": 21.00
+          }
+        ],
+        "remarkCodes": [
+          "M1",
+          "M2"
+        ],
+        "remarks": [
+          {
+            "subType": "RARC",
+            "code": "M1"
+          },
+          {
+            "subType": "RARC",
+            "code": "M2"
+          }
+        ],
+        "serviceIds": [
+          {
+            "qualifierCode": "RB",
+            "type": "RATE_CODE_NUMBER",
+            "identification": "100"
+          },
+          {
+            "qualifierCode": "1S",
+            "type": "APG_NUMBER",
+            "identification": "101"
+          },
+          {
+            "qualifierCode": "APC",
+            "type": "AMBULATORY_PAYMENT",
+            "identification": "102"
+          }
+        ],
+        "renderingProviderIds": [
+          {
+            "qualifierCode": "HPI",
+            "type": "CMS_NPI",
+            "identification": "P123"
+          },
+          {
+            "qualifierCode": "1C",
+            "type": "MEDICARE_PROVIDER_NUMBER",
+            "identification": "P234"
+          }
+        ]
+      },
+      {
+        "chargeAmount": 25.00,
+        "paidAmount": 14.00,
+        "supplementalAmounts": [
+          {
+            "qualifierCode": "B6",
+            "type": "ALLOWED_ACTUAL",
+            "amount": 14.00
+          }
+        ],
+        "serviceDateFrom": "2019-03-24",
+        "procedure": {
+          "subType": "ADA",
+          "code": "D0220"
+        },
+        "adjustments": [
+          {
+            "group": "CONTRACTUAL",
+            "reasonCode": "131",
+            "reason": {
+              "subType": "CARC",
+              "code": "131"
+            },
+            "amount": 11.00
+          }
+        ]
+      },
+      {
+        "chargeAmount": 22.00,
+        "paidAmount": 10.00,
+        "supplementalAmounts": [
+          {
+            "qualifierCode": "B6",
+            "type": "ALLOWED_ACTUAL",
+            "amount": 10.00
+          }
+        ],
+        "serviceDateFrom": "2019-03-24",
+        "procedure": {
+          "subType": "ADA",
+          "code": "D0230"
+        },
+        "adjustments": [
+          {
+            "group": "CONTRACTUAL",
+            "reasonCode": "131",
+            "reason": {
+              "subType": "CARC",
+              "code": "131"
+            },
+            "amount": 12.00
+          }
+        ]
+      },
+      {
+        "chargeAmount": 60.00,
+        "paidAmount": 34.00,
+        "supplementalAmounts": [
+          {
+            "qualifierCode": "B6",
+            "type": "ALLOWED_ACTUAL",
+            "amount": 34.00
+          }
+        ],
+        "serviceDateFrom": "2019-03-24",
+        "procedure": {
+          "subType": "ADA",
+          "code": "D0274"
+        },
+        "adjustments": [
+          {
+            "group": "CONTRACTUAL",
+            "reasonCode": "131",
+            "reason": {
+              "subType": "CARC",
+              "code": "131"
+            },
+            "amount": 26.00
+          }
+        ]
+      },
+      {
+        "chargeAmount": 73.00,
+        "paidAmount": 49.00,
+        "supplementalAmounts": [
+          {
+            "qualifierCode": "B6",
+            "type": "ALLOWED_ACTUAL",
+            "amount": 49.00
+          },
+          {
+            "qualifierCode": "KH",
+            "type": "DEDUCTION",
+            "amount": 50.00
+          }
+        ],
+        "serviceDateFrom": "2019-03-24",
+        "serviceDateTo": "2019-03-25",
+        "procedure": {
+          "subType": "ADA",
+          "code": "D1110"
+        },
+        "adjustments": [
+          {
+            "group": "CONTRACTUAL",
+            "reasonCode": "131",
+            "reason": {
+              "subType": "CARC",
+              "code": "131"
+            },
+            "amount": 24.00
+          },
+          {
+            "group": "CONTRACTUAL",
+            "reasonCode": "3",
+            "reason": {
+              "subType": "CARC",
+              "code": "3"
+            },
+            "amount": 25.00
+          },
+          {
+            "group": "OTHER",
+            "reasonCode": "131",
+            "reason": {
+              "subType": "CARC",
+              "code": "131"
+            },
+            "amount": 27.00
+          }
+        ]
+      }
+    ],
+    "transaction": {
+      "id": "680d294842dad96c0a7549b9",
+      "controlNumber": "35681",
+      "transactionType": "PAYMENT",
+      "productionDate": "2019-03-14",
+      "totalPaymentAmount": 132.00,
+      "creditOrDebitFlagCode": "C",
+      "paymentMethodType": "CHECK",
+      "receiverAccountNumber": "456",
+      "paymentDate": "2019-03-31",
+      "checkOrEftTraceNumber": "12345",
+      "payerIdentifier": "1512345678",
+      "transactionSetIdentifierCode": "PAYMENT",
+      "fileInfo": {
+        "name": "negotiated_discount.dat",
+        "url": "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/835/negotiated_discount.dat",
+        "lastModifiedDateTime": "2024-04-09T20:05:48.423-04:00",
+        "fileType": "EDI"
+      },
+      "sender": {
+        "entityRole": "PAYER",
+        "entityType": "BUSINESS",
+        "lastNameOrOrgName": "DELTA DENTAL OF ABC",
+        "address": {
+          "line": "225 MAIN STREET",
+          "city": "CENTERVILLE",
+          "stateCode": "PA",
+          "zipCode": "17111"
+        },
+        "contacts": [
+          {
+            "name": "JANE DOE",
+            "contactNumbers": [
+              {
+                "type": "PHONE",
+                "number": "9005555555"
+              }
+            ]
+          }
+        ],
+        "additionalIds": [
+          {
+            "qualifierCode": "2U",
+            "type": "PAYER_IDENTIFICATION_NUMBER",
+            "identification": "0101"
+          },
+          {
+            "qualifierCode": "HI",
+            "type": "HEALTH_INDUSTRY_NUMBER",
+            "identification": "0202"
+          }
+        ]
+      },
+      "receiver": {
+        "entityRole": "PAYEE",
+        "entityType": "BUSINESS",
+        "identificationType": "EIN",
+        "identifier": "999994703",
+        "taxId": "050595",
+        "lastNameOrOrgName": "BAN DDS LLC",
+        "address": {
+          "line": "225 MAIN STREET",
+          "city": "CENTERVILLE",
+          "stateCode": "PA",
+          "zipCode": "17111"
+        },
+        "additionalIds": [
+          {
+            "qualifierCode": "PQ",
+            "type": "PAYEE_IDENTIFICATION_NUMBER",
+            "identification": "0505"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "680d294842dad96c0a754a24",
+    "objectType": "PAYMENT",
+    "patientControlNumber": "5554555444",
+    "chargeAmount": 800.00,
+    "paymentAmount": 500.00,
+    "facilityCode": {
+      "subType": "PLACE_OF_SERVICE",
+      "code": "11"
+    },
+    "placeOfServiceType": "OFFICE",
+    "frequencyCode": {
+      "subType": "FREQUENCY_CODE",
+      "code": "1"
+    },
+    "serviceDateFrom": "2023-03-01",
+    "serviceDateTo": "2023-03-01",
+    "patient": {
+      "person": {
+        "entityRole": "PATIENT",
+        "entityType": "INDIVIDUAL",
+        "identificationType": "MEMBER_ID",
+        "identifier": "33344555510",
+        "lastNameOrOrgName": "BUDD",
+        "firstName": "WILLIAM"
+      }
+    },
+    "claimStatusCode": "1",
+    "claimStatus": "PRIMARY",
+    "patientResponsibilityAmount": 300.00,
+    "claimFilingIndicatorCode": "12",
+    "insurancePlanType": "PPO",
+    "payerControlNumber": "94060555410000",
+    "supplementalAmounts": [
+      {
+        "qualifierCode": "AU",
+        "type": "COVERAGE_AMOUNT",
+        "amount": 800.00
+      }
+    ],
+    "payer": {
+      "entityRole": "PAYER",
+      "entityType": "BUSINESS",
+      "identifier": "1935665544",
+      "lastNameOrOrgName": "RUSHMORE LIFE",
+      "address": {
+        "line": "10 SOUTH AVENUET",
+        "city": "RAPID CITY",
+        "stateCode": "SD",
+        "zipCode": "55111"
+      },
+      "contacts": [
+        {
+          "name": "JOHN WAYNE",
+          "contactNumbers": [
+            {
+              "type": "PHONE",
+              "number": "8005551212"
+            },
+            {
+              "type": "EXTENSION",
+              "number": "123"
+            }
+          ]
+        }
+      ]
+    },
+    "payee": {
+      "entityRole": "PAYEE",
+      "entityType": "BUSINESS",
+      "identificationType": "NPI",
+      "identifier": "5544667733",
+      "taxId": "777667755",
+      "lastNameOrOrgName": "ACME MEDICAL CENTER"
+    },
+    "serviceLines": [
+      {
+        "chargeAmount": 800.00,
+        "paidAmount": 500.00,
+        "supplementalAmounts": [
+          {
+            "qualifierCode": "B6",
+            "type": "ALLOWED_ACTUAL",
+            "amount": 800.00
+          }
+        ],
+        "serviceDateFrom": "2023-03-01",
+        "procedure": {
+          "subType": "CPT",
+          "code": "99211"
+        },
+        "adjustments": [
+          {
+            "group": "PATIENT_RESPONSIBILITY",
+            "reasonCode": "1",
+            "reason": {
+              "subType": "CARC",
+              "code": "1"
+            },
+            "amount": 300.00
+          }
+        ]
+      }
+    ],
+    "transaction": {
+      "id": "680d294842dad96c0a754a06",
+      "controlNumber": "112233",
+      "transactionType": "PAYMENT",
+      "productionDate": "2019-03-14",
+      "totalPaymentAmount": 1100.00,
+      "creditOrDebitFlagCode": "C",
+      "paymentMethodType": "ACH",
+      "receiverAccountNumber": "144444",
+      "paymentDate": "2019-03-16",
+      "checkOrEftTraceNumber": "71700666555",
+      "payerIdentifier": "1935665544",
+      "transactionSetIdentifierCode": "PAYMENT",
+      "fileInfo": {
+        "name": "dollars_data_separate.dat",
+        "url": "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/835/dollars_data_separate.dat",
+        "lastModifiedDateTime": "2023-08-28T03:50:07.198-04:00",
+        "fileType": "EDI"
+      },
+      "sender": {
+        "entityRole": "PAYER",
+        "entityType": "BUSINESS",
+        "identifier": "1935665544",
+        "lastNameOrOrgName": "RUSHMORE LIFE",
+        "address": {
+          "line": "10 SOUTH AVENUET",
+          "city": "RAPID CITY",
+          "stateCode": "SD",
+          "zipCode": "55111"
+        },
+        "contacts": [
+          {
+            "name": "JOHN WAYNE",
+            "contactNumbers": [
+              {
+                "type": "PHONE",
+                "number": "8005551212"
+              },
+              {
+                "type": "EXTENSION",
+                "number": "123"
+              }
+            ]
+          }
+        ]
+      },
+      "receiver": {
+        "entityRole": "PAYEE",
+        "entityType": "BUSINESS",
+        "identificationType": "NPI",
+        "identifier": "5544667733",
+        "taxId": "777667755",
+        "lastNameOrOrgName": "ACME MEDICAL CENTER"
+      }
+    }
+  },
+  {
+    "id": "680d294842dad96c0a754a25",
+    "objectType": "PAYMENT",
+    "patientControlNumber": "8765432112",
+    "chargeAmount": 1200.00,
+    "paymentAmount": 600.00,
+    "facilityCode": {
+      "subType": "PLACE_OF_SERVICE",
+      "code": "11"
+    },
+    "placeOfServiceType": "OFFICE",
+    "frequencyCode": {
+      "subType": "FREQUENCY_CODE",
+      "code": "1"
+    },
+    "serviceDateFrom": "2023-03-10",
+    "serviceDateTo": "2023-03-10",
+    "patient": {
+      "person": {
+        "entityRole": "PATIENT",
+        "entityType": "INDIVIDUAL",
+        "identificationType": "MEMBER_ID",
+        "identifier": "44455666610",
+        "lastNameOrOrgName": "SETTLE",
+        "firstName": "SUSAN"
+      }
+    },
+    "claimStatusCode": "1",
+    "claimStatus": "PRIMARY",
+    "patientResponsibilityAmount": 600.00,
+    "claimFilingIndicatorCode": "12",
+    "insurancePlanType": "PPO",
+    "payerControlNumber": "9407779923000",
+    "supplementalAmounts": [
+      {
+        "qualifierCode": "AU",
+        "type": "COVERAGE_AMOUNT",
+        "amount": 1200.00
+      }
+    ],
+    "payer": {
+      "entityRole": "PAYER",
+      "entityType": "BUSINESS",
+      "identifier": "1935665544",
+      "lastNameOrOrgName": "RUSHMORE LIFE",
+      "address": {
+        "line": "10 SOUTH AVENUET",
+        "city": "RAPID CITY",
+        "stateCode": "SD",
+        "zipCode": "55111"
+      },
+      "contacts": [
+        {
+          "name": "JOHN WAYNE",
+          "contactNumbers": [
+            {
+              "type": "PHONE",
+              "number": "8005551212"
+            },
+            {
+              "type": "EXTENSION",
+              "number": "123"
+            }
+          ]
+        }
+      ]
+    },
+    "payee": {
+      "entityRole": "PAYEE",
+      "entityType": "BUSINESS",
+      "identificationType": "NPI",
+      "identifier": "5544667733",
+      "taxId": "777667755",
+      "lastNameOrOrgName": "ACME MEDICAL CENTER"
+    },
+    "serviceLines": [
+      {
+        "chargeAmount": 1200.00,
+        "paidAmount": 600.00,
+        "supplementalAmounts": [
+          {
+            "qualifierCode": "B6",
+            "type": "ALLOWED_ACTUAL",
+            "amount": 1200.00
+          }
+        ],
+        "serviceDateFrom": "2023-03-10",
+        "procedure": {
+          "subType": "CPT",
+          "code": "93555"
+        },
+        "adjustments": [
+          {
+            "group": "PATIENT_RESPONSIBILITY",
+            "reasonCode": "1",
+            "reason": {
+              "subType": "CARC",
+              "code": "1"
+            },
+            "amount": 600.00
+          }
+        ]
+      }
+    ],
+    "transaction": {
+      "id": "680d294842dad96c0a754a06",
+      "controlNumber": "112233",
+      "transactionType": "PAYMENT",
+      "productionDate": "2019-03-14",
+      "totalPaymentAmount": 1100.00,
+      "creditOrDebitFlagCode": "C",
+      "paymentMethodType": "ACH",
+      "receiverAccountNumber": "144444",
+      "paymentDate": "2019-03-16",
+      "checkOrEftTraceNumber": "71700666555",
+      "payerIdentifier": "1935665544",
+      "transactionSetIdentifierCode": "PAYMENT",
+      "fileInfo": {
+        "name": "dollars_data_separate.dat",
+        "url": "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/835/dollars_data_separate.dat",
+        "lastModifiedDateTime": "2023-08-28T03:50:07.198-04:00",
+        "fileType": "EDI"
+      },
+      "sender": {
+        "entityRole": "PAYER",
+        "entityType": "BUSINESS",
+        "identifier": "1935665544",
+        "lastNameOrOrgName": "RUSHMORE LIFE",
+        "address": {
+          "line": "10 SOUTH AVENUET",
+          "city": "RAPID CITY",
+          "stateCode": "SD",
+          "zipCode": "55111"
+        },
+        "contacts": [
+          {
+            "name": "JOHN WAYNE",
+            "contactNumbers": [
+              {
+                "type": "PHONE",
+                "number": "8005551212"
+              },
+              {
+                "type": "EXTENSION",
+                "number": "123"
+              }
+            ]
+          }
+        ]
+      },
+      "receiver": {
+        "entityRole": "PAYEE",
+        "entityType": "BUSINESS",
+        "identificationType": "NPI",
+        "identifier": "5544667733",
+        "taxId": "777667755",
+        "lastNameOrOrgName": "ACME MEDICAL CENTER"
+      }
+    }
+  },
+  {
+    "id": "680d294842dad96c0a754a78",
+    "objectType": "PAYMENT",
+    "patientControlNumber": "7722337",
+    "chargeAmount": 226.00,
+    "paymentAmount": 132.00,
+    "facilityCode": {
+      "subType": "FACILITY_TYPE",
+      "code": "11"
+    },
+    "placeOfServiceType": "INPATIENT",
+    "frequencyCode": {
+      "subType": "FREQUENCY_CODE",
+      "code": "1"
+    },
+    "statementDateFrom": "2022-09-15",
+    "statementDateTo": "2022-09-16",
+    "serviceDateFrom": "2019-03-24",
+    "serviceDateTo": "2019-03-25",
+    "subscriber": {
+      "person": {
+        "entityRole": "INSURED_SUBSCRIBER",
+        "entityType": "INDIVIDUAL",
+        "identificationType": "MEMBER_ID",
+        "identifier": "SJD11111",
+        "lastNameOrOrgName": "DOE",
+        "firstName": "John"
+      }
+    },
+    "patient": {
+      "person": {
+        "entityRole": "PATIENT",
+        "entityType": "INDIVIDUAL",
+        "lastNameOrOrgName": "DOE",
+        "firstName": "SALLY"
+      }
+    },
+    "otherSubscribers": [
+      {
+        "person": {
+          "entityRole": "OTHER_SUBSCRIBER",
+          "entityType": "INDIVIDUAL",
+          "lastNameOrOrgName": "Smith",
+          "firstName": "Jane"
+        }
+      }
+    ],
+    "claimStatusCode": "1",
+    "claimStatus": "PRIMARY",
+    "patientResponsibilityAmount": 10.00,
+    "claimFilingIndicatorCode": "12",
+    "insurancePlanType": "PPO",
+    "payerControlNumber": "119932404007801",
+    "drg": {
+      "subType": "DRG",
+      "code": "025"
+    },
+    "drgWeight": 0.50,
+    "dischargeFraction": 0.40,
+    "otherClaimRelatedIds": [
+      {
+        "qualifierCode": "F8",
+        "type": "ORIGINAL_REFERENCE_NUMBER",
+        "identification": "12345"
+      },
+      {
+        "qualifierCode": "EA",
+        "type": "MEDICAL_RECORD_NUMBER",
+        "identification": "12345"
+      }
+    ],
+    "supplementalAmounts": [
+      {
+        "qualifierCode": "AU",
+        "type": "COVERAGE_AMOUNT",
+        "amount": 132.00
+      },
+      {
+        "qualifierCode": "D8",
+        "type": "DISCOUNT_AMOUNT",
+        "amount": 100.00
+      }
+    ],
+    "supplementalQuantities": [
+      {
+        "qualifierCode": "CA",
+        "type": "COVERED",
+        "quantity": 4
+      }
+    ],
+    "payer": {
+      "entityRole": "PAYER",
+      "entityType": "BUSINESS",
+      "lastNameOrOrgName": "DELTA DENTAL OF ABC",
+      "address": {
+        "line": "225 MAIN STREET",
+        "city": "CENTERVILLE",
+        "stateCode": "PA",
+        "zipCode": "17111"
+      },
+      "contacts": [
+        {
+          "name": "JANE DOE",
+          "contactNumbers": [
+            {
+              "type": "PHONE",
+              "number": "9005555555"
+            },
+            {
+              "type": "EXTENSION",
+              "number": "123"
+            }
+          ]
+        },
+        {
+          "contactNumbers": [
+            {
+              "type": "URL",
+              "number": "myplan.com/policies"
+            }
+          ]
+        }
+      ],
+      "additionalIds": [
+        {
+          "qualifierCode": "2U",
+          "type": "PAYER_IDENTIFICATION_NUMBER",
+          "identification": "0101"
+        },
+        {
+          "qualifierCode": "HI",
+          "type": "HEALTH_INDUSTRY_NUMBER",
+          "identification": "0202"
+        }
+      ]
+    },
+    "payee": {
+      "entityRole": "PAYEE",
+      "entityType": "BUSINESS",
+      "identificationType": "EIN",
+      "identifier": "999994703",
+      "taxId": "050595",
+      "lastNameOrOrgName": "BAN DDS LLC",
+      "address": {
+        "line": "225 MAIN STREET",
+        "city": "CENTERVILLE",
+        "stateCode": "PA",
+        "zipCode": "17111"
+      },
+      "additionalIds": [
+        {
+          "qualifierCode": "PQ",
+          "type": "PAYEE_IDENTIFICATION_NUMBER",
+          "identification": "0505"
+        }
+      ]
+    },
+    "adjustments": [
+      {
+        "group": "CONTRACTUAL",
+        "reasonCode": "197",
+        "reason": {
+          "subType": "CARC",
+          "code": "197"
+        },
+        "amount": 2000.00,
+        "quantity": 1
+      },
+      {
+        "group": "CONTRACTUAL",
+        "reasonCode": "45",
+        "reason": {
+          "subType": "CARC",
+          "code": "45"
+        },
+        "amount": 30000.00
+      },
+      {
+        "group": "PATIENT_RESPONSIBILITY",
+        "reasonCode": "132",
+        "reason": {
+          "subType": "CARC",
+          "code": "132"
+        },
+        "amount": 259.00
+      }
+    ],
+    "coverageExpirationDate": "2022-10-01",
+    "claimReceivedDate": "2022-11-24",
+    "serviceProvider": {
+      "entityRole": "RENDERING",
+      "entityType": "INDIVIDUAL",
+      "identificationType": "NPI",
+      "identifier": "1811901945",
+      "lastNameOrOrgName": "BAN",
+      "firstName": "ERIN",
+      "additionalIds": [
+        {
+          "qualifierCode": "1C",
+          "type": "MEDICARE_PROVIDER_NUMBER",
+          "identification": "12345678"
+        }
+      ]
+    },
+    "crossoverCarrier": {
+      "entityRole": "CROSSOVER_CARRIER",
+      "entityType": "INDIVIDUAL",
+      "identificationType": "CMS_PLAN_ID",
+      "identifier": "9876",
+      "lastNameOrOrgName": "ACME INSURANCE"
+    },
+    "correctedPayer": {
+      "entityRole": "PAYER",
+      "entityType": "BUSINESS",
+      "identificationType": "CMS_PLAN_ID",
+      "identifier": "8765",
+      "lastNameOrOrgName": "ACME INSURANCE"
+    },
+    "correctedInsured": {
+      "entityRole": "CORRECTED_INSURED",
+      "entityType": "INDIVIDUAL",
+      "identificationType": "INSURED_CHANGED_ID",
+      "identifier": "SJD999",
+      "lastNameOrOrgName": "Due"
+    },
+    "serviceLines": [
+      {
+        "sourceLineId": "A123",
+        "healthcarePolicyId": "1234\"5",
+        "chargeAmount": 46.00,
+        "paidAmount": 25.00,
+        "supplementalAmounts": [
+          {
+            "qualifierCode": "B6",
+            "type": "ALLOWED_ACTUAL",
+            "amount": 25.00
+          }
+        ],
+        "supplementalQuantities": [
+          {
+            "qualifierCode": "ZL",
+            "type": "MEDICARE_MEDICAID_CAT_2",
+            "quantity": 3.75
+          }
+        ],
+        "serviceDateFrom": "2019-03-24",
+        "unitCount": 3.1,
+        "originalUnitCount": 3.5,
+        "procedure": {
+          "subType": "ADA",
+          "code": "D0120",
+          "modifiers": [
+            {
+              "subType": "HCPCS_MODIFIER",
+              "code": "02"
+            },
+            {
+              "subType": "HCPCS_MODIFIER",
+              "code": "28"
+            }
+          ]
+        },
+        "revenueCode": {
+          "subType": "REVENUE_CODE",
+          "code": "0022"
+        },
+        "originalProcedure": {
+          "subType": "ADA",
+          "code": "D0140",
+          "modifiers": [
+            {
+              "subType": "HCPCS_MODIFIER",
+              "code": "1"
+            }
+          ]
+        },
+        "adjustments": [
+          {
+            "group": "CONTRACTUAL",
+            "reasonCode": "131",
+            "reason": {
+              "subType": "CARC",
+              "code": "131"
+            },
+            "amount": 21.00
+          }
+        ],
+        "remarkCodes": [
+          "M1",
+          "M2"
+        ],
+        "remarks": [
+          {
+            "subType": "RARC",
+            "code": "M1"
+          },
+          {
+            "subType": "RARC",
+            "code": "M2"
+          }
+        ],
+        "serviceIds": [
+          {
+            "qualifierCode": "RB",
+            "type": "RATE_CODE_NUMBER",
+            "identification": "100"
+          },
+          {
+            "qualifierCode": "1S",
+            "type": "APG_NUMBER",
+            "identification": "101"
+          },
+          {
+            "qualifierCode": "APC",
+            "type": "AMBULATORY_PAYMENT",
+            "identification": "102"
+          }
+        ],
+        "renderingProviderIds": [
+          {
+            "qualifierCode": "HPI",
+            "type": "CMS_NPI",
+            "identification": "P123"
+          },
+          {
+            "qualifierCode": "1C",
+            "type": "MEDICARE_PROVIDER_NUMBER",
+            "identification": "P234"
+          }
+        ]
+      },
+      {
+        "chargeAmount": 25.00,
+        "paidAmount": 14.00,
+        "supplementalAmounts": [
+          {
+            "qualifierCode": "B6",
+            "type": "ALLOWED_ACTUAL",
+            "amount": 14.00
+          }
+        ],
+        "serviceDateFrom": "2019-03-24",
+        "procedure": {
+          "subType": "ADA",
+          "code": "D0220"
+        },
+        "adjustments": [
+          {
+            "group": "CONTRACTUAL",
+            "reasonCode": "131",
+            "reason": {
+              "subType": "CARC",
+              "code": "131"
+            },
+            "amount": 11.00
+          }
+        ]
+      },
+      {
+        "chargeAmount": 22.00,
+        "paidAmount": 10.00,
+        "supplementalAmounts": [
+          {
+            "qualifierCode": "B6",
+            "type": "ALLOWED_ACTUAL",
+            "amount": 10.00
+          }
+        ],
+        "serviceDateFrom": "2019-03-24",
+        "procedure": {
+          "subType": "ADA",
+          "code": "D0230"
+        },
+        "adjustments": [
+          {
+            "group": "CONTRACTUAL",
+            "reasonCode": "131",
+            "reason": {
+              "subType": "CARC",
+              "code": "131"
+            },
+            "amount": 12.00
+          }
+        ]
+      },
+      {
+        "chargeAmount": 60.00,
+        "paidAmount": 34.00,
+        "supplementalAmounts": [
+          {
+            "qualifierCode": "B6",
+            "type": "ALLOWED_ACTUAL",
+            "amount": 34.00
+          }
+        ],
+        "serviceDateFrom": "2019-03-24",
+        "procedure": {
+          "subType": "ADA",
+          "code": "D0274"
+        },
+        "adjustments": [
+          {
+            "group": "CONTRACTUAL",
+            "reasonCode": "131",
+            "reason": {
+              "subType": "CARC",
+              "code": "131"
+            },
+            "amount": 26.00
+          }
+        ]
+      },
+      {
+        "chargeAmount": 99.00,
+        "paidAmount": 59.00,
+        "serviceDateFrom": "2019-03-24",
+        "unitCount": 1,
+        "originalUnitCount": 2,
+        "revenueCode": {
+          "subType": "REVENUE_CODE",
+          "code": "0022"
+        },
+        "originalRevenueCode": {
+          "subType": "REVENUE_CODE",
+          "code": "0023"
+        }
+      },
+      {
+        "chargeAmount": 73.00,
+        "paidAmount": 49.00,
+        "supplementalAmounts": [
+          {
+            "qualifierCode": "B6",
+            "type": "ALLOWED_ACTUAL",
+            "amount": 49.00
+          },
+          {
+            "qualifierCode": "KH",
+            "type": "DEDUCTION",
+            "amount": 50.00
+          }
+        ],
+        "serviceDateFrom": "2019-03-24",
+        "serviceDateTo": "2019-03-25",
+        "procedure": {
+          "subType": "ADA",
+          "code": "D1110"
+        },
+        "adjustments": [
+          {
+            "group": "CONTRACTUAL",
+            "reasonCode": "131",
+            "reason": {
+              "subType": "CARC",
+              "code": "131"
+            },
+            "amount": 24.00
+          },
+          {
+            "group": "CONTRACTUAL",
+            "reasonCode": "3",
+            "reason": {
+              "subType": "CARC",
+              "code": "3"
+            },
+            "amount": 25.00
+          },
+          {
+            "group": "OTHER",
+            "reasonCode": "131",
+            "reason": {
+              "subType": "CARC",
+              "code": "131"
+            },
+            "amount": 27.00
+          }
+        ]
+      },
+      {
+        "chargeAmount": 60.00,
+        "paidAmount": 59.00,
+        "serviceDateFrom": "2019-03-24",
+        "unitCount": 10.5,
+        "originalUnitCount": 9.2,
+        "drug": {
+          "subType": "NDC",
+          "code": "00002143481"
+        },
+        "originalDrug": {
+          "subType": "NDC",
+          "code": "00002143482"
+        }
+      }
+    ],
+    "transaction": {
+      "id": "680d294842dad96c0a754a28",
+      "controlNumber": "35681",
+      "transactionType": "PAYMENT",
+      "productionDate": "2019-03-14",
+      "totalPaymentAmount": 132.00,
+      "creditOrDebitFlagCode": "C",
+      "paymentMethodType": "CHECK",
+      "receiverAccountNumber": "456",
+      "paymentDate": "2019-03-31",
+      "checkOrEftTraceNumber": "12345",
+      "payerIdentifier": "1512345678",
+      "transactionSetIdentifierCode": "PAYMENT",
+      "fileInfo": {
+        "name": "835-all-fields.dat",
+        "url": "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/835/835-all-fields.dat",
+        "lastModifiedDateTime": "2025-02-28T13:00:41.379-05:00",
+        "fileType": "EDI"
+      },
+      "sender": {
+        "entityRole": "PAYER",
+        "entityType": "BUSINESS",
+        "lastNameOrOrgName": "DELTA DENTAL OF ABC",
+        "address": {
+          "line": "225 MAIN STREET",
+          "city": "CENTERVILLE",
+          "stateCode": "PA",
+          "zipCode": "17111"
+        },
+        "contacts": [
+          {
+            "name": "JANE DOE",
+            "contactNumbers": [
+              {
+                "type": "PHONE",
+                "number": "9005555555"
+              },
+              {
+                "type": "EXTENSION",
+                "number": "123"
+              }
+            ]
+          },
+          {
+            "contactNumbers": [
+              {
+                "type": "URL",
+                "number": "myplan.com/policies"
+              }
+            ]
+          }
+        ],
+        "additionalIds": [
+          {
+            "qualifierCode": "2U",
+            "type": "PAYER_IDENTIFICATION_NUMBER",
+            "identification": "0101"
+          },
+          {
+            "qualifierCode": "HI",
+            "type": "HEALTH_INDUSTRY_NUMBER",
+            "identification": "0202"
+          }
+        ]
+      },
+      "receiver": {
+        "entityRole": "PAYEE",
+        "entityType": "BUSINESS",
+        "identificationType": "EIN",
+        "identifier": "999994703",
+        "taxId": "050595",
+        "lastNameOrOrgName": "BAN DDS LLC",
+        "address": {
+          "line": "225 MAIN STREET",
+          "city": "CENTERVILLE",
+          "stateCode": "PA",
+          "zipCode": "17111"
+        },
+        "additionalIds": [
+          {
+            "qualifierCode": "PQ",
+            "type": "PAYEE_IDENTIFICATION_NUMBER",
+            "identification": "0505"
+          }
+        ]
+      }
+    }
+  }
+]
