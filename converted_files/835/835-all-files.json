@@ -1,6 +1,6 @@
 [
   {
-    "id": "680d294842dad96c0a754995",
+    "id": "680e4179daa41e125ad73e1f",
     "objectType": "PAYMENT",
     "patientControlNumber": "PATACCT",
     "chargeAmount": 400.00,
@@ -12,7 +12,8 @@
     "placeOfServiceType": "OFFICE",
     "frequencyCode": {
       "subType": "FREQUENCY_CODE",
-      "code": "1"
+      "code": "1",
+      "desc": "Original claim"
     },
     "serviceDateFrom": "2019-01-01",
     "serviceDateTo": "2019-01-01",
@@ -119,7 +120,8 @@
         "unitCount": 1,
         "procedure": {
           "subType": "CPT",
-          "code": "99213"
+          "code": "99213",
+          "desc": "Office or other outpatient visit for the evaluation and management of an established patient, which requires a medically appropriate history and/or examination and low level of medical decision making. When using total time on the date of the encounter for code selection, 20 minutes must be met or exceeded."
         },
         "adjustments": [
           {
@@ -127,7 +129,8 @@
             "reasonCode": "45",
             "reason": {
               "subType": "CARC",
-              "code": "45"
+              "code": "45",
+              "desc": "Charge exceeds fee schedule/maximum allowable or contracted/legislated fee arrangement."
             },
             "amount": 70.00
           }
@@ -148,7 +151,8 @@
             "reasonCode": "204",
             "reason": {
               "subType": "CARC",
-              "code": "204"
+              "code": "204",
+              "desc": "This service/equipment/drug is not covered under the patients current benefit plan"
             },
             "amount": 100.00
           }
@@ -161,7 +165,8 @@
         "unitCount": 1,
         "procedure": {
           "subType": "CPT",
-          "code": "36415"
+          "code": "36415",
+          "desc": "Collection of venous blood by venipuncture"
         },
         "adjustments": [
           {
@@ -169,7 +174,8 @@
             "reasonCode": "97",
             "reason": {
               "subType": "CARC",
-              "code": "97"
+              "code": "97",
+              "desc": "The benefit for this service is included in the payment/allowance for another service/procedure that has already been adjudicated."
             },
             "amount": 150.00
           }
@@ -177,7 +183,7 @@
       }
     ],
     "transaction": {
-      "id": "680d294842dad96c0a754972",
+      "id": "680e4179daa41e125ad73dfc",
       "controlNumber": "10060875",
       "transactionType": "PAYMENT",
       "productionDate": "2019-08-27",
@@ -254,7 +260,7 @@
     }
   },
   {
-    "id": "680d294842dad96c0a7549b6",
+    "id": "680e4179daa41e125ad73e40",
     "objectType": "PAYMENT",
     "patientControlNumber": "PATACCT",
     "chargeAmount": 40000.00,
@@ -266,7 +272,8 @@
     "placeOfServiceType": "OFFICE",
     "frequencyCode": {
       "subType": "FREQUENCY_CODE",
-      "code": "1"
+      "code": "1",
+      "desc": "Original claim"
     },
     "statementDateFrom": "2019-01-01",
     "statementDateTo": "2019-01-05",
@@ -370,7 +377,8 @@
         "reasonCode": "197",
         "reason": {
           "subType": "CARC",
-          "code": "197"
+          "code": "197",
+          "desc": "Precertification/authorization/notification/pre-treatment absent."
         },
         "amount": 2000.00,
         "quantity": 1
@@ -380,7 +388,8 @@
         "reasonCode": "45",
         "reason": {
           "subType": "CARC",
-          "code": "45"
+          "code": "45",
+          "desc": "Charge exceeds fee schedule/maximum allowable or contracted/legislated fee arrangement."
         },
         "amount": 30000.00
       }
@@ -389,7 +398,7 @@
     "claimReceivedDate": "2019-02-09",
     "serviceLines": [],
     "transaction": {
-      "id": "680d294842dad96c0a754998",
+      "id": "680e4179daa41e125ad73e22",
       "controlNumber": "10060875",
       "transactionType": "PAYMENT",
       "productionDate": "2019-08-27",
@@ -466,7 +475,7 @@
     }
   },
   {
-    "id": "680d294842dad96c0a754a03",
+    "id": "680e4179daa41e125ad73e8d",
     "objectType": "PAYMENT",
     "patientControlNumber": "7722337",
     "chargeAmount": 226.00,
@@ -478,7 +487,8 @@
     "placeOfServiceType": "OFFICE",
     "frequencyCode": {
       "subType": "FREQUENCY_CODE",
-      "code": "1"
+      "code": "1",
+      "desc": "Original claim"
     },
     "statementDateFrom": "2022-09-15",
     "statementDateTo": "2022-09-16",
@@ -610,7 +620,8 @@
         "reasonCode": "197",
         "reason": {
           "subType": "CARC",
-          "code": "197"
+          "code": "197",
+          "desc": "Precertification/authorization/notification/pre-treatment absent."
         },
         "amount": 2000.00,
         "quantity": 1
@@ -620,7 +631,8 @@
         "reasonCode": "45",
         "reason": {
           "subType": "CARC",
-          "code": "45"
+          "code": "45",
+          "desc": "Charge exceeds fee schedule/maximum allowable or contracted/legislated fee arrangement."
         },
         "amount": 30000.00
       },
@@ -629,7 +641,8 @@
         "reasonCode": "132",
         "reason": {
           "subType": "CARC",
-          "code": "132"
+          "code": "132",
+          "desc": "Prearranged demonstration project adjustment."
         },
         "amount": 259.00
       }
@@ -691,6 +704,7 @@
         "procedure": {
           "subType": "ADA",
           "code": "D0120",
+          "desc": "PERIODIC ORAL EVALUATION ESTABLISHED PATIENT",
           "modifiers": [
             {
               "subType": "HCPCS_MODIFIER",
@@ -704,11 +718,13 @@
         },
         "revenueCode": {
           "subType": "REVENUE_CODE",
-          "code": "0222"
+          "code": "0222",
+          "desc": "Special Charges-Technical Support Charge"
         },
         "originalProcedure": {
           "subType": "ADA",
           "code": "D0140",
+          "desc": "LIMITED ORAL EVALUATION - PROBLEM FOCUSED",
           "modifiers": [
             {
               "subType": "HCPCS_MODIFIER",
@@ -722,7 +738,8 @@
             "reasonCode": "131",
             "reason": {
               "subType": "CARC",
-              "code": "131"
+              "code": "131",
+              "desc": "Claim specific negotiated discount."
             },
             "amount": 21.00
           }
@@ -734,11 +751,13 @@
         "remarks": [
           {
             "subType": "RARC",
-            "code": "M1"
+            "code": "M1",
+            "desc": "X-ray not taken within the past 12 months or near enough to the start of treatment."
           },
           {
             "subType": "RARC",
-            "code": "M2"
+            "code": "M2",
+            "desc": "Not paid separately when the patient is an inpatient."
           }
         ],
         "serviceIds": [
@@ -784,7 +803,8 @@
         "serviceDateFrom": "2019-03-24",
         "procedure": {
           "subType": "ADA",
-          "code": "D0220"
+          "code": "D0220",
+          "desc": "INTRAORAL - PERIAPICAL FIRST RADIOGRAPHIC IMAGE"
         },
         "adjustments": [
           {
@@ -792,7 +812,8 @@
             "reasonCode": "131",
             "reason": {
               "subType": "CARC",
-              "code": "131"
+              "code": "131",
+              "desc": "Claim specific negotiated discount."
             },
             "amount": 11.00
           }
@@ -811,7 +832,8 @@
         "serviceDateFrom": "2019-03-24",
         "procedure": {
           "subType": "ADA",
-          "code": "D0230"
+          "code": "D0230",
+          "desc": "INTRAORAL - PERIAPICAL EACH ADD RADIOGRAPH IMAGE"
         },
         "adjustments": [
           {
@@ -819,7 +841,8 @@
             "reasonCode": "131",
             "reason": {
               "subType": "CARC",
-              "code": "131"
+              "code": "131",
+              "desc": "Claim specific negotiated discount."
             },
             "amount": 12.00
           }
@@ -838,7 +861,8 @@
         "serviceDateFrom": "2019-03-24",
         "procedure": {
           "subType": "ADA",
-          "code": "D0274"
+          "code": "D0274",
+          "desc": "BITEWINGS - FOUR RADIOGRAPHIC IMAGES"
         },
         "adjustments": [
           {
@@ -846,7 +870,8 @@
             "reasonCode": "131",
             "reason": {
               "subType": "CARC",
-              "code": "131"
+              "code": "131",
+              "desc": "Claim specific negotiated discount."
             },
             "amount": 26.00
           }
@@ -871,7 +896,8 @@
         "serviceDateTo": "2019-03-25",
         "procedure": {
           "subType": "ADA",
-          "code": "D1110"
+          "code": "D1110",
+          "desc": "PROPHYLAXIS - ADULT"
         },
         "adjustments": [
           {
@@ -879,7 +905,8 @@
             "reasonCode": "131",
             "reason": {
               "subType": "CARC",
-              "code": "131"
+              "code": "131",
+              "desc": "Claim specific negotiated discount."
             },
             "amount": 24.00
           },
@@ -888,7 +915,8 @@
             "reasonCode": "3",
             "reason": {
               "subType": "CARC",
-              "code": "3"
+              "code": "3",
+              "desc": "Co-payment Amount"
             },
             "amount": 25.00
           },
@@ -897,7 +925,8 @@
             "reasonCode": "131",
             "reason": {
               "subType": "CARC",
-              "code": "131"
+              "code": "131",
+              "desc": "Claim specific negotiated discount."
             },
             "amount": 27.00
           }
@@ -905,7 +934,7 @@
       }
     ],
     "transaction": {
-      "id": "680d294842dad96c0a7549b9",
+      "id": "680e4179daa41e125ad73e43",
       "controlNumber": "35681",
       "transactionType": "PAYMENT",
       "productionDate": "2019-03-14",
@@ -981,7 +1010,7 @@
     }
   },
   {
-    "id": "680d294842dad96c0a754a24",
+    "id": "680e4179daa41e125ad73eae",
     "objectType": "PAYMENT",
     "patientControlNumber": "5554555444",
     "chargeAmount": 800.00,
@@ -993,7 +1022,8 @@
     "placeOfServiceType": "OFFICE",
     "frequencyCode": {
       "subType": "FREQUENCY_CODE",
-      "code": "1"
+      "code": "1",
+      "desc": "Original claim"
     },
     "serviceDateFrom": "2023-03-01",
     "serviceDateTo": "2023-03-01",
@@ -1069,7 +1099,8 @@
         "serviceDateFrom": "2023-03-01",
         "procedure": {
           "subType": "CPT",
-          "code": "99211"
+          "code": "99211",
+          "desc": "Office or other outpatient visit for the evaluation and management of an established patient that may not require the presence of a physician or other qualified health care professional"
         },
         "adjustments": [
           {
@@ -1077,7 +1108,8 @@
             "reasonCode": "1",
             "reason": {
               "subType": "CARC",
-              "code": "1"
+              "code": "1",
+              "desc": "Deductible Amount"
             },
             "amount": 300.00
           }
@@ -1085,7 +1117,7 @@
       }
     ],
     "transaction": {
-      "id": "680d294842dad96c0a754a06",
+      "id": "680e4179daa41e125ad73e90",
       "controlNumber": "112233",
       "transactionType": "PAYMENT",
       "productionDate": "2019-03-14",
@@ -1141,7 +1173,7 @@
     }
   },
   {
-    "id": "680d294842dad96c0a754a25",
+    "id": "680e4179daa41e125ad73eaf",
     "objectType": "PAYMENT",
     "patientControlNumber": "8765432112",
     "chargeAmount": 1200.00,
@@ -1153,7 +1185,8 @@
     "placeOfServiceType": "OFFICE",
     "frequencyCode": {
       "subType": "FREQUENCY_CODE",
-      "code": "1"
+      "code": "1",
+      "desc": "Original claim"
     },
     "serviceDateFrom": "2023-03-10",
     "serviceDateTo": "2023-03-10",
@@ -1237,7 +1270,8 @@
             "reasonCode": "1",
             "reason": {
               "subType": "CARC",
-              "code": "1"
+              "code": "1",
+              "desc": "Deductible Amount"
             },
             "amount": 600.00
           }
@@ -1245,7 +1279,7 @@
       }
     ],
     "transaction": {
-      "id": "680d294842dad96c0a754a06",
+      "id": "680e4179daa41e125ad73e90",
       "controlNumber": "112233",
       "transactionType": "PAYMENT",
       "productionDate": "2019-03-14",
@@ -1301,19 +1335,21 @@
     }
   },
   {
-    "id": "680d294842dad96c0a754a78",
+    "id": "680e4179daa41e125ad73f02",
     "objectType": "PAYMENT",
     "patientControlNumber": "7722337",
     "chargeAmount": 226.00,
     "paymentAmount": 132.00,
     "facilityCode": {
       "subType": "FACILITY_TYPE",
-      "code": "11"
+      "code": "11",
+      "desc": "Hospital; inpatient"
     },
     "placeOfServiceType": "INPATIENT",
     "frequencyCode": {
       "subType": "FREQUENCY_CODE",
-      "code": "1"
+      "code": "1",
+      "desc": "Original claim"
     },
     "statementDateFrom": "2022-09-15",
     "statementDateTo": "2022-09-16",
@@ -1463,7 +1499,8 @@
         "reasonCode": "197",
         "reason": {
           "subType": "CARC",
-          "code": "197"
+          "code": "197",
+          "desc": "Precertification/authorization/notification/pre-treatment absent."
         },
         "amount": 2000.00,
         "quantity": 1
@@ -1473,7 +1510,8 @@
         "reasonCode": "45",
         "reason": {
           "subType": "CARC",
-          "code": "45"
+          "code": "45",
+          "desc": "Charge exceeds fee schedule/maximum allowable or contracted/legislated fee arrangement."
         },
         "amount": 30000.00
       },
@@ -1482,7 +1520,8 @@
         "reasonCode": "132",
         "reason": {
           "subType": "CARC",
-          "code": "132"
+          "code": "132",
+          "desc": "Prearranged demonstration project adjustment."
         },
         "amount": 259.00
       }
@@ -1551,6 +1590,7 @@
         "procedure": {
           "subType": "ADA",
           "code": "D0120",
+          "desc": "PERIODIC ORAL EVALUATION ESTABLISHED PATIENT",
           "modifiers": [
             {
               "subType": "HCPCS_MODIFIER",
@@ -1564,11 +1604,13 @@
         },
         "revenueCode": {
           "subType": "REVENUE_CODE",
-          "code": "0022"
+          "code": "0022",
+          "desc": "Skilled nursing facility prospective payment system (HIPPS)"
         },
         "originalProcedure": {
           "subType": "ADA",
           "code": "D0140",
+          "desc": "LIMITED ORAL EVALUATION - PROBLEM FOCUSED",
           "modifiers": [
             {
               "subType": "HCPCS_MODIFIER",
@@ -1582,7 +1624,8 @@
             "reasonCode": "131",
             "reason": {
               "subType": "CARC",
-              "code": "131"
+              "code": "131",
+              "desc": "Claim specific negotiated discount."
             },
             "amount": 21.00
           }
@@ -1594,11 +1637,13 @@
         "remarks": [
           {
             "subType": "RARC",
-            "code": "M1"
+            "code": "M1",
+            "desc": "X-ray not taken within the past 12 months or near enough to the start of treatment."
           },
           {
             "subType": "RARC",
-            "code": "M2"
+            "code": "M2",
+            "desc": "Not paid separately when the patient is an inpatient."
           }
         ],
         "serviceIds": [
@@ -1644,7 +1689,8 @@
         "serviceDateFrom": "2019-03-24",
         "procedure": {
           "subType": "ADA",
-          "code": "D0220"
+          "code": "D0220",
+          "desc": "INTRAORAL - PERIAPICAL FIRST RADIOGRAPHIC IMAGE"
         },
         "adjustments": [
           {
@@ -1652,7 +1698,8 @@
             "reasonCode": "131",
             "reason": {
               "subType": "CARC",
-              "code": "131"
+              "code": "131",
+              "desc": "Claim specific negotiated discount."
             },
             "amount": 11.00
           }
@@ -1671,7 +1718,8 @@
         "serviceDateFrom": "2019-03-24",
         "procedure": {
           "subType": "ADA",
-          "code": "D0230"
+          "code": "D0230",
+          "desc": "INTRAORAL - PERIAPICAL EACH ADD RADIOGRAPH IMAGE"
         },
         "adjustments": [
           {
@@ -1679,7 +1727,8 @@
             "reasonCode": "131",
             "reason": {
               "subType": "CARC",
-              "code": "131"
+              "code": "131",
+              "desc": "Claim specific negotiated discount."
             },
             "amount": 12.00
           }
@@ -1698,7 +1747,8 @@
         "serviceDateFrom": "2019-03-24",
         "procedure": {
           "subType": "ADA",
-          "code": "D0274"
+          "code": "D0274",
+          "desc": "BITEWINGS - FOUR RADIOGRAPHIC IMAGES"
         },
         "adjustments": [
           {
@@ -1706,7 +1756,8 @@
             "reasonCode": "131",
             "reason": {
               "subType": "CARC",
-              "code": "131"
+              "code": "131",
+              "desc": "Claim specific negotiated discount."
             },
             "amount": 26.00
           }
@@ -1720,11 +1771,13 @@
         "originalUnitCount": 2,
         "revenueCode": {
           "subType": "REVENUE_CODE",
-          "code": "0022"
+          "code": "0022",
+          "desc": "Skilled nursing facility prospective payment system (HIPPS)"
         },
         "originalRevenueCode": {
           "subType": "REVENUE_CODE",
-          "code": "0023"
+          "code": "0023",
+          "desc": "Home health prospective payment system (HIPPS)"
         }
       },
       {
@@ -1746,7 +1799,8 @@
         "serviceDateTo": "2019-03-25",
         "procedure": {
           "subType": "ADA",
-          "code": "D1110"
+          "code": "D1110",
+          "desc": "PROPHYLAXIS - ADULT"
         },
         "adjustments": [
           {
@@ -1754,7 +1808,8 @@
             "reasonCode": "131",
             "reason": {
               "subType": "CARC",
-              "code": "131"
+              "code": "131",
+              "desc": "Claim specific negotiated discount."
             },
             "amount": 24.00
           },
@@ -1763,7 +1818,8 @@
             "reasonCode": "3",
             "reason": {
               "subType": "CARC",
-              "code": "3"
+              "code": "3",
+              "desc": "Co-payment Amount"
             },
             "amount": 25.00
           },
@@ -1772,7 +1828,8 @@
             "reasonCode": "131",
             "reason": {
               "subType": "CARC",
-              "code": "131"
+              "code": "131",
+              "desc": "Claim specific negotiated discount."
             },
             "amount": 27.00
           }
@@ -1786,16 +1843,20 @@
         "originalUnitCount": 9.2,
         "drug": {
           "subType": "NDC",
-          "code": "00002143481"
+          "code": "00002143481",
+          "desc": "Trulicity (Dulaglutide)",
+          "formattedCode": "0002-1434-81"
         },
         "originalDrug": {
           "subType": "NDC",
-          "code": "00002143482"
+          "code": "00002143482",
+          "desc": "Trulicity (Dulaglutide)",
+          "formattedCode": "0002-1434-82"
         }
       }
     ],
     "transaction": {
-      "id": "680d294842dad96c0a754a28",
+      "id": "680e4179daa41e125ad73eb2",
       "controlNumber": "35681",
       "transactionType": "PAYMENT",
       "productionDate": "2019-03-14",

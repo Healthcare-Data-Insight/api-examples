@@ -1,5 +1,5 @@
 {
-  "id": "680d2844be4ece52a3012192",
+  "id": "680e3211a58f4f24d3e3bfeb",
   "objectType": "CLAIM",
   "patientControlNumber": "051068",
   "chargeAmount": 766.50,
@@ -10,7 +10,8 @@
   "placeOfServiceType": "OTHER",
   "frequencyCode": {
     "subType": "FREQUENCY_CODE",
-    "code": "1"
+    "code": "1",
+    "desc": "Original claim"
   },
   "serviceDateFrom": "2005-02-08",
   "serviceDateTo": "2005-02-08",
@@ -70,7 +71,8 @@
     },
     "providerTaxonomy": {
       "subType": "PROVIDER_TAXONOMY",
-      "code": "3416L0300X"
+      "code": "3416L0300X",
+      "desc": "Land Ambulance"
     }
   },
   "providers": [
@@ -98,15 +100,21 @@
   "diags": [
     {
       "subType": "ICD_10_PRINCIPAL",
-      "code": "S279XXA"
+      "code": "S279XXA",
+      "desc": "Injury of unspecified intrathoracic organ, initial encounter",
+      "formattedCode": "S27.9XXA"
     },
     {
       "subType": "ICD_10",
-      "code": "W1830XA"
+      "code": "W1830XA",
+      "desc": "Fall on same level, unspecified, initial encounter",
+      "formattedCode": "W18.30XA"
     },
     {
       "subType": "ICD_10",
-      "code": "S4980XA"
+      "code": "S4980XA",
+      "desc": "Other specified injuries of shoulder and upper arm, unspecified arm, initial encounter",
+      "formattedCode": "S49.80XA"
     }
   ],
   "serviceLines": [
@@ -121,6 +129,7 @@
       "procedure": {
         "subType": "HCPCS",
         "code": "A0427",
+        "desc": "Ambulance service, advanced life support, emergency transport, level 1 (als 1 - emergency)",
         "modifiers": [
           {
             "subType": "HCPCS_MODIFIER",
@@ -158,15 +167,21 @@
       "diags": [
         {
           "subType": "ICD_10_PRINCIPAL",
-          "code": "S279XXA"
+          "code": "S279XXA",
+          "desc": "Injury of unspecified intrathoracic organ, initial encounter",
+          "formattedCode": "S27.9XXA"
         },
         {
           "subType": "ICD_10",
-          "code": "W1830XA"
+          "code": "W1830XA",
+          "desc": "Fall on same level, unspecified, initial encounter",
+          "formattedCode": "W18.30XA"
         },
         {
           "subType": "ICD_10",
-          "code": "S4980XA"
+          "code": "S4980XA",
+          "desc": "Other specified injuries of shoulder and upper arm, unspecified arm, initial encounter",
+          "formattedCode": "S49.80XA"
         }
       ]
     },
@@ -180,6 +195,7 @@
       "procedure": {
         "subType": "HCPCS",
         "code": "A0425",
+        "desc": "Ground mileage, per statute mile",
         "modifiers": [
           {
             "subType": "HCPCS_MODIFIER",
@@ -195,15 +211,21 @@
       "diags": [
         {
           "subType": "ICD_10_PRINCIPAL",
-          "code": "S279XXA"
+          "code": "S279XXA",
+          "desc": "Injury of unspecified intrathoracic organ, initial encounter",
+          "formattedCode": "S27.9XXA"
         },
         {
           "subType": "ICD_10",
-          "code": "W1830XA"
+          "code": "W1830XA",
+          "desc": "Fall on same level, unspecified, initial encounter",
+          "formattedCode": "W18.30XA"
         },
         {
           "subType": "ICD_10",
-          "code": "S4980XA"
+          "code": "S4980XA",
+          "desc": "Other specified injuries of shoulder and upper arm, unspecified arm, initial encounter",
+          "formattedCode": "S49.80XA"
         }
       ]
     },
@@ -217,6 +239,7 @@
       "procedure": {
         "subType": "HCPCS",
         "code": "A0422",
+        "desc": "Ambulance (als or bls) oxygen and oxygen supplies, life sustaining situation",
         "modifiers": [
           {
             "subType": "HCPCS_MODIFIER",
@@ -232,15 +255,21 @@
       "diags": [
         {
           "subType": "ICD_10_PRINCIPAL",
-          "code": "S279XXA"
+          "code": "S279XXA",
+          "desc": "Injury of unspecified intrathoracic organ, initial encounter",
+          "formattedCode": "S27.9XXA"
         },
         {
           "subType": "ICD_10",
-          "code": "W1830XA"
+          "code": "W1830XA",
+          "desc": "Fall on same level, unspecified, initial encounter",
+          "formattedCode": "W18.30XA"
         },
         {
           "subType": "ICD_10",
-          "code": "S4980XA"
+          "code": "S4980XA",
+          "desc": "Other specified injuries of shoulder and upper arm, unspecified arm, initial encounter",
+          "formattedCode": "S49.80XA"
         }
       ]
     },
@@ -254,6 +283,7 @@
       "procedure": {
         "subType": "HCPCS",
         "code": "A0382",
+        "desc": "Bls routine disposable supplies",
         "modifiers": [
           {
             "subType": "HCPCS_MODIFIER",
@@ -269,21 +299,27 @@
       "diags": [
         {
           "subType": "ICD_10_PRINCIPAL",
-          "code": "S279XXA"
+          "code": "S279XXA",
+          "desc": "Injury of unspecified intrathoracic organ, initial encounter",
+          "formattedCode": "S27.9XXA"
         },
         {
           "subType": "ICD_10",
-          "code": "W1830XA"
+          "code": "W1830XA",
+          "desc": "Fall on same level, unspecified, initial encounter",
+          "formattedCode": "W18.30XA"
         },
         {
           "subType": "ICD_10",
-          "code": "S4980XA"
+          "code": "S4980XA",
+          "desc": "Other specified injuries of shoulder and upper arm, unspecified arm, initial encounter",
+          "formattedCode": "S49.80XA"
         }
       ]
     }
   ],
   "transaction": {
-    "id": "680d2844be4ece52a3012157",
+    "id": "680e3211a58f4f24d3e3bfb0",
     "controlNumber": "000017712",
     "transactionType": "PROF",
     "purposeCode": "00",
@@ -328,7 +364,7 @@
   }
 }
 {
-  "id": "680d2844be4ece52a30121bf",
+  "id": "680e3211a58f4f24d3e3c018",
   "objectType": "CLAIM",
   "patientControlNumber": "26462967",
   "chargeAmount": 100.00,
@@ -339,7 +375,8 @@
   "placeOfServiceType": "OFFICE",
   "frequencyCode": {
     "subType": "FREQUENCY_CODE",
-    "code": "1"
+    "code": "1",
+    "desc": "Original claim"
   },
   "serviceDateFrom": "2006-10-03",
   "serviceDateTo": "2006-10-10",
@@ -394,7 +431,8 @@
     },
     "providerTaxonomy": {
       "subType": "PROVIDER_TAXONOMY",
-      "code": "103GC0700X"
+      "code": "103GC0700X",
+      "desc": "Clinical Neuropsychologist"
     }
   },
   "providers": [
@@ -415,11 +453,15 @@
   "diags": [
     {
       "subType": "ICD_10_PRINCIPAL",
-      "code": "G35"
+      "code": "G35",
+      "desc": "Multiple sclerosis",
+      "formattedCode": "G35"
     },
     {
       "subType": "ICD_10",
-      "code": "Z1159"
+      "code": "Z1159",
+      "desc": "Encounter for screening for other viral diseases",
+      "formattedCode": "Z11.59"
     }
   ],
   "serviceLines": [
@@ -430,7 +472,8 @@
       "unitCount": 1,
       "procedure": {
         "subType": "CPT",
-        "code": "99213"
+        "code": "99213",
+        "desc": "Office or other outpatient visit for the evaluation and management of an established patient, which requires a medically appropriate history and/or examination and low level of medical decision making. When using total time on the date of the encounter for code selection, 20 minutes must be met or exceeded."
       },
       "diagPointers": [
         1
@@ -438,7 +481,9 @@
       "diags": [
         {
           "subType": "ICD_10_PRINCIPAL",
-          "code": "G35"
+          "code": "G35",
+          "desc": "Multiple sclerosis",
+          "formattedCode": "G35"
         }
       ]
     },
@@ -449,7 +494,8 @@
       "unitCount": 1,
       "procedure": {
         "subType": "CPT",
-        "code": "87070"
+        "code": "87070",
+        "desc": "Culture, bacterial; any other source except urine, blood or stool, aerobic, with isolation and presumptive identification of isolates"
       },
       "diagPointers": [
         1
@@ -457,7 +503,9 @@
       "diags": [
         {
           "subType": "ICD_10_PRINCIPAL",
-          "code": "G35"
+          "code": "G35",
+          "desc": "Multiple sclerosis",
+          "formattedCode": "G35"
         }
       ]
     },
@@ -468,7 +516,8 @@
       "unitCount": 1,
       "procedure": {
         "subType": "CPT",
-        "code": "99214"
+        "code": "99214",
+        "desc": "Office or other outpatient visit for the evaluation and management of an established patient, which requires a medically appropriate history and/or examination and moderate level of medical decision making. When using total time on the date of the encounter for code selection, 30 minutes must be met or exceeded."
       },
       "diagPointers": [
         2
@@ -476,7 +525,9 @@
       "diags": [
         {
           "subType": "ICD_10",
-          "code": "Z1159"
+          "code": "Z1159",
+          "desc": "Encounter for screening for other viral diseases",
+          "formattedCode": "Z11.59"
         }
       ]
     },
@@ -487,7 +538,8 @@
       "unitCount": 1,
       "procedure": {
         "subType": "CPT",
-        "code": "86663"
+        "code": "86663",
+        "desc": "Antibody; Epstein-Barr (EB) virus, early antigen (EA)"
       },
       "diagPointers": [
         2
@@ -495,13 +547,15 @@
       "diags": [
         {
           "subType": "ICD_10",
-          "code": "Z1159"
+          "code": "Z1159",
+          "desc": "Encounter for screening for other viral diseases",
+          "formattedCode": "Z11.59"
         }
       ]
     }
   ],
   "transaction": {
-    "id": "680d2844be4ece52a3012195",
+    "id": "680e3211a58f4f24d3e3bfee",
     "controlNumber": "0021",
     "transactionType": "PROF",
     "purposeCode": "00",
@@ -550,18 +604,20 @@
   }
 }
 {
-  "id": "680d2844be4ece52a3012259",
+  "id": "680e3211a58f4f24d3e3c0b2",
   "objectType": "CLAIM",
   "patientControlNumber": "ABC0002",
   "chargeAmount": 89.93,
   "facilityCode": {
     "subType": "FACILITY_TYPE",
-    "code": "11"
+    "code": "11",
+    "desc": "Hospital; inpatient"
   },
   "placeOfServiceType": "INPATIENT",
   "frequencyCode": {
     "subType": "FREQUENCY_CODE",
-    "code": "1"
+    "code": "1",
+    "desc": "Original claim"
   },
   "statementDateFrom": "2019-03-10",
   "statementDateTo": "2019-03-11",
@@ -664,7 +720,8 @@
           "reasonCode": "26",
           "reason": {
             "subType": "CARC",
-            "code": "26"
+            "code": "26",
+            "desc": "Expenses incurred prior to coverage."
           },
           "amount": 55.00,
           "quantity": 1
@@ -674,7 +731,8 @@
           "reasonCode": "90",
           "reason": {
             "subType": "CARC",
-            "code": "90"
+            "code": "90",
+            "desc": "Ingredient cost adjustment. Usage: To be used for pharmaceuticals only."
           },
           "amount": 65.55,
           "quantity": 1
@@ -684,7 +742,8 @@
           "reasonCode": "70",
           "reason": {
             "subType": "CARC",
-            "code": "70"
+            "code": "70",
+            "desc": "Cost outlier - Adjustment to compensate for additional costs."
           },
           "amount": 73.03,
           "quantity": 2
@@ -694,7 +753,8 @@
           "reasonCode": "20",
           "reason": {
             "subType": "CARC",
-            "code": "20"
+            "code": "20",
+            "desc": "This injury/illness is covered by the liability carrier."
           },
           "amount": 85.15,
           "quantity": 1
@@ -704,7 +764,8 @@
           "reasonCode": "102",
           "reason": {
             "subType": "CARC",
-            "code": "102"
+            "code": "102",
+            "desc": "Major Medical Adjustment."
           },
           "amount": 99.99,
           "quantity": 1
@@ -714,7 +775,8 @@
           "reasonCode": "4",
           "reason": {
             "subType": "CARC",
-            "code": "4"
+            "code": "4",
+            "desc": "The procedure code is inconsistent with the modifier used"
           },
           "amount": 102.22,
           "quantity": 1
@@ -724,7 +786,8 @@
           "reasonCode": "2",
           "reason": {
             "subType": "CARC",
-            "code": "2"
+            "code": "2",
+            "desc": "Coinsurance Amount"
           },
           "amount": 25.00,
           "quantity": 1
@@ -734,7 +797,8 @@
           "reasonCode": "3",
           "reason": {
             "subType": "CARC",
-            "code": "3"
+            "code": "3",
+            "desc": "Co-payment Amount"
           },
           "amount": 25.55,
           "quantity": 1
@@ -744,7 +808,8 @@
           "reasonCode": "2",
           "reason": {
             "subType": "CARC",
-            "code": "2"
+            "code": "2",
+            "desc": "Coinsurance Amount"
           },
           "amount": 33.03,
           "quantity": 2
@@ -754,7 +819,8 @@
           "reasonCode": "75",
           "reason": {
             "subType": "CARC",
-            "code": "75"
+            "code": "75",
+            "desc": "Direct Medical Education Adjustment."
           },
           "amount": 45.15,
           "quantity": 1
@@ -764,7 +830,8 @@
           "reasonCode": "22",
           "reason": {
             "subType": "CARC",
-            "code": "22"
+            "code": "22",
+            "desc": "This care may be covered by another payer per coordination of benefits."
           },
           "amount": 59.99,
           "quantity": 1
@@ -774,7 +841,8 @@
           "reasonCode": "2",
           "reason": {
             "subType": "CARC",
-            "code": "2"
+            "code": "2",
+            "desc": "Coinsurance Amount"
           },
           "amount": 62.22,
           "quantity": 1
@@ -925,7 +993,8 @@
     },
     "providerTaxonomy": {
       "subType": "PROVIDER_TAXONOMY",
-      "code": "207L00000X"
+      "code": "207L00000X",
+      "desc": "Anesthesiology Physician"
     },
     "contacts": [
       {
@@ -958,7 +1027,8 @@
       "middleName": "A",
       "providerTaxonomy": {
         "subType": "PROVIDER_TAXONOMY",
-        "code": "208D00000X"
+        "code": "208D00000X",
+        "desc": "General Practice Physician"
       },
       "additionalIds": [
         {
@@ -1024,41 +1094,59 @@
     {
       "subType": "ICD_10_PRINCIPAL",
       "code": "M24562",
+      "desc": "Contracture, left knee",
+      "formattedCode": "M24.562",
       "presentOnAdmissionIndicator": "N"
     },
     {
       "subType": "ICD_10_ADMITTING",
-      "code": "H5988"
+      "code": "H5988",
+      "desc": "Other intraoperative complications of eye and adnexa, not elsewhere classified",
+      "formattedCode": "H59.88"
     },
     {
       "subType": "ICD_10_REASON_FOR_VISIT",
-      "code": "H59369"
+      "code": "H59369",
+      "desc": "Postprocedural seroma of unspecified eye and adnexa following other procedure",
+      "formattedCode": "H59.369"
     },
     {
       "subType": "ICD_10_EXTERNAL_CAUSE_OF_INJURY",
-      "code": "V4312XA"
+      "code": "V4312XA",
+      "desc": "Car passenger injured in collision with other type car in nontraffic accident, initial encounter",
+      "formattedCode": "V43.12XA"
     },
     {
       "subType": "ICD_10_EXTERNAL_CAUSE_OF_INJURY",
-      "code": "Z970"
+      "code": "Z970",
+      "desc": "Presence of artificial eye",
+      "formattedCode": "Z97.0"
     },
     {
       "subType": "ICD_10_EXTERNAL_CAUSE_OF_INJURY",
-      "code": "Z9681"
+      "code": "Z9681",
+      "desc": "Presence of artificial skin",
+      "formattedCode": "Z96.81"
     },
     {
       "subType": "ICD_10",
       "code": "E8359",
+      "desc": "Other disorders of calcium metabolism",
+      "formattedCode": "E83.59",
       "presentOnAdmissionIndicator": "N"
     },
     {
       "subType": "ICD_10",
       "code": "A0102",
+      "desc": "Typhoid fever with heart involvement",
+      "formattedCode": "A01.02",
       "presentOnAdmissionIndicator": "Y"
     },
     {
       "subType": "ICD_10",
       "code": "A0103",
+      "desc": "Typhoid pneumonia",
+      "formattedCode": "A01.03",
       "presentOnAdmissionIndicator": "Y"
     }
   ],
@@ -1066,66 +1154,79 @@
     {
       "subType": "ICD_10_PCS_PRINCIPAL",
       "code": "009G0ZZ",
+      "desc": "Drainage of Optic Nerve, Open Approach",
       "occurrenceDate": "2017-10-03"
     },
     {
       "subType": "ICD_10_PCS",
       "code": "F01ZFEZ",
+      "desc": "Wheelchair Mobility Assessment using Orthosis",
       "occurrenceDate": "2017-10-04"
     },
     {
       "subType": "ICD_10_PCS",
       "code": "009G0ZZ",
+      "desc": "Drainage of Optic Nerve, Open Approach",
       "occurrenceDate": "2017-10-13"
     },
     {
       "subType": "ICD_10_PCS",
       "code": "009G0ZZ",
+      "desc": "Drainage of Optic Nerve, Open Approach",
       "occurrenceDate": "2017-10-23"
     },
     {
       "subType": "ICD_10_PCS",
       "code": "009K0ZZ",
+      "desc": "Drainage of Trigeminal Nerve, Open Approach",
       "occurrenceDate": "2017-10-30"
     },
     {
       "subType": "ICD_10_PCS",
       "code": "009N0ZX",
+      "desc": "Drainage of Acoustic Nerve, Open Approach, Diagnostic",
       "occurrenceDate": "2017-11-03"
     },
     {
       "subType": "ICD_10_PCS",
       "code": "B82600Z",
+      "desc": "Computerized Tomography (CT Scan) of Left Eye using High Osmolar Contrast, Unenhanced and Enhanced",
       "occurrenceDate": "2017-11-03"
     },
     {
       "subType": "ICD_10_PCS",
       "code": "B806ZZZ",
+      "desc": "Plain Radiography of Left Eye",
       "occurrenceDate": "2017-11-03"
     },
     {
       "subType": "ICD_10_PCS",
       "code": "B846ZZZ",
+      "desc": "Ultrasonography of Left Eye",
       "occurrenceDate": "2017-11-03"
     },
     {
       "subType": "ICD_10_PCS",
       "code": "B845ZZZ",
+      "desc": "Ultrasonography of Right Eye",
       "occurrenceDate": "2017-11-23"
     },
     {
       "subType": "ICD_10_PCS",
       "code": "B908YZZ",
+      "desc": "Plain Radiography of Left Submandibular Gland using Other Contrast",
       "occurrenceDate": "2017-11-23"
     },
     {
       "subType": "ICD_10_PCS",
       "code": "B803ZZZ",
+      "desc": "Plain Radiography of Right Optic Foramina",
       "occurrenceDate": "2017-11-23"
     },
     {
       "subType": "ICD_10_PCS",
       "code": "B8001ZZ",
+      "desc": "Plain Radiography of Right Lacrimal Duct using Low Osmolar Contrast",
       "occurrenceDate": "2017-11-23"
     }
   ],
@@ -1133,61 +1234,73 @@
     {
       "subType": "OCCURRENCE",
       "code": "40",
+      "desc": "SCHEDULED DATE OF ADMISSION",
       "occurrenceDate": "2016-01-03"
     },
     {
       "subType": "OCCURRENCE",
       "code": "10",
+      "desc": "LAST MENSTRUAL PERIOD",
       "occurrenceDate": "2018-01-01"
     },
     {
       "subType": "OCCURRENCE",
       "code": "11",
+      "desc": "ONSET OF SYMPTOMS/ILLNESS",
       "occurrenceDate": "2017-10-10"
     },
     {
       "subType": "OCCURRENCE",
       "code": "16",
+      "desc": "DATE OF LAST THERAPY",
       "occurrenceDate": "2017-08-10"
     },
     {
       "subType": "OCCURRENCE",
       "code": "18",
+      "desc": "DATE OF RETIREMENT OF PATIENT/BENEFICIARY",
       "occurrenceDate": "2015-12-12"
     },
     {
       "subType": "OCCURRENCE",
       "code": "17",
+      "desc": "DATE OUTPATIENT OCCUPATIONAL THERAPY PLAN ESTABLISHED OR LAST REVIEWED",
       "occurrenceDate": "2017-12-24"
     },
     {
       "subType": "OCCURRENCE",
       "code": "36",
+      "desc": "DATE OF INPATIENT HOSPITAL DISCHARGE FOR COVERED TRANSPLANT PATIENTS",
       "occurrenceDate": "2017-10-03"
     },
     {
       "subType": "OCCURRENCE",
       "code": "A3",
+      "desc": "BENEFITS EXHAUSTED",
       "occurrenceDate": "2018-04-04"
     },
     {
       "subType": "OCCURRENCE",
       "code": "C3",
+      "desc": "BENEFITS EXHAUSTED",
       "occurrenceDate": "2018-04-22"
     },
     {
       "subType": "OCCURRENCE",
       "code": "25",
+      "desc": "DATE BENEFITS TERMINATED BY PRIMARY PAYER",
       "occurrenceDate": "2018-04-04"
     },
     {
       "subType": "OCCURRENCE",
       "code": "22",
+      "desc": "DATE ACTIVE CARE ENDED",
       "occurrenceDate": "2018-04-30"
     },
     {
       "subType": "OCCURRENCE",
       "code": "24",
+      "desc": "DATE INSURANCE DENIED",
       "occurrenceDate": "2018-05-06"
     }
   ],
@@ -1268,117 +1381,153 @@
   "conditions": [
     {
       "subType": "CONDITION",
-      "code": "03"
+      "code": "03",
+      "desc": "PATIENT COVERED BY INSURANCE NOT REFLECTED HERE",
+      "instructionDesc": "This code indicates that the patient or patients representative stated that insurance coverage may exist beyond what is reported on the claim."
     },
     {
       "subType": "CONDITION",
-      "code": "04"
+      "code": "04",
+      "desc": "INFORMATION ONLY BILL",
+      "instructionDesc": "This code indicates that the bill is submitted for informational purposes only.  Examples include a bill submitted as a utilization report, or a bill for a beneficiary who is enrolled in a risk-based managed care plan (such as Medicare+Choice [M+C]), and the hospital expects to receive payment from the plan."
     },
     {
       "subType": "CONDITION",
-      "code": "12"
+      "code": "12",
+      "desc": "CODE FOR PAYER USE ONLY"
     },
     {
       "subType": "CONDITION",
-      "code": "20"
+      "code": "20",
+      "desc": "BENEFICIARY REQUESTED BILLING",
+      "instructionDesc": "This code indicates that the provider realizes that the services are noncovered or excluded from coverage, but the beneficiary requested a formal determination of coverage from Medicare or another payer."
     },
     {
       "subType": "CONDITION",
-      "code": "22"
+      "code": "22",
+      "desc": "PATIENT ON MULTIPLE DRUG REGIMEN",
+      "instructionDesc": "This code indicates that the patient is receiving multiple IV drugs while on home IV therapy."
     },
     {
       "subType": "CONDITION",
-      "code": "26"
+      "code": "26",
+      "desc": "VETERANS AFFAIRS-ELIGIBLE PATIENT CHOOSES TO RECEIVE SERVICES IN MEDICARE-CERTIFIED FACILITY",
+      "instructionDesc": "This code indicates that the patient is eligible for VA benefits but chooses to receive services in a Medicare-certified facility instead of a VA facility."
     },
     {
       "subType": "CONDITION",
-      "code": "28"
+      "code": "28",
+      "desc": "PATIENT AND/OR SPOUSE'S EGHP IS SECONDARY TO MEDICARE",
+      "instructionDesc": "This code indicates that, in response to MSP development questions, the patient and/or their spouse indicates that one or both are employed and there is group health insurance from an EGHP or other employer-sponsored or provided health insurance.  However, either the EGHP is a single employer plan and the employer has fewer than 20 full- and part-time employees, or the EGHP is a multi- or multiple-employer plan that elects to pay secondary to Medicare for employees and spouses aged 65 and older for the participating employers who have fewer than 20 employees."
     },
     {
       "subType": "CONDITION",
-      "code": "39"
+      "code": "39",
+      "desc": "PRIVATE ROOM MEDICALLY NECESSARY",
+      "instructionDesc": "This code indicates that the patient needed a private room for medical reasons."
     },
     {
       "subType": "CONDITION",
-      "code": "41"
+      "code": "41",
+      "desc": "PARTIAL HOSPITALIZATION",
+      "instructionDesc": "This code indicates that the claim is for partial hospitalization services.  For outpatients, this includes a variety of psychiatric (drug and alcohol) programs."
     },
     {
       "subType": "CONDITION",
-      "code": "71"
+      "code": "71",
+      "desc": "FULL CARE IN UNIT",
+      "instructionDesc": "This code indicates that the bill is for a patient who received staff-assisted dialysis services in a hospital or renal dialysis facility."
     },
     {
       "subType": "CONDITION",
-      "code": "73"
+      "code": "73",
+      "desc": "ESRD SELF-CARE TRAINING",
+      "instructionDesc": "This code indicates that the bill is for special dialysis services that involved teaching the patient and helper (if necessary) to perform dialysis."
     },
     {
       "subType": "CONDITION",
-      "code": "A0"
+      "code": "A0",
+      "desc": "TRICARE EXTERNAL PARTNERSHIP PROGRAM",
+      "instructionDesc": "External partnership program"
     }
   ],
   "valueInfos": [
     {
       "subType": "VALUE",
       "code": "01",
+      "desc": "Most Common Semiprivate Rate",
       "amount": 73.42
     },
     {
       "subType": "VALUE",
       "code": "20",
+      "desc": "Payer Code;Total PPS Capital Payment Amount",
       "amount": 76.54
     },
     {
       "subType": "VALUE",
       "code": "17",
+      "desc": "Payer Code; Outlier Amount",
       "amount": 1176.54
     },
     {
       "subType": "VALUE",
       "code": "31",
+      "desc": "Patient Liability amount",
       "amount": 2255.85
     },
     {
       "subType": "VALUE",
       "code": "B1",
+      "desc": "Deductible Payer B (reportable only on paper claims)",
       "amount": 150.00
     },
     {
       "subType": "VALUE",
       "code": "23",
+      "desc": "Recurring Monthly Income",
       "amount": 4400.35
     },
     {
       "subType": "VALUE",
       "code": "24",
+      "desc": "Medicaid Rate Code",
       "amount": 1500.25
     },
     {
       "subType": "VALUE",
       "code": "47",
+      "desc": "Any Liability Insurance",
       "amount": 876.54
     },
     {
       "subType": "VALUE",
       "code": "62",
+      "desc": "Payer Only Code; HHA Visits - Part A ,TOB 032X OR High Routine Home Care Days, TOB 081X, 082X",
       "amount": 76.54
     },
     {
       "subType": "VALUE",
       "code": "70",
+      "desc": "Payer Code:Interest Amount",
       "amount": 16.54
     },
     {
       "subType": "VALUE",
       "code": "66",
+      "desc": "Medicaid Spend Down Amount",
       "amount": 500.54
     },
     {
       "subType": "VALUE",
       "code": "55",
+      "desc": "Eligibility Threshold for Charity Care",
       "amount": 6.99
     },
     {
       "subType": "VALUE",
       "code": "20",
+      "desc": "Payer Code;Total PPS Capital Payment Amount",
       "amount": 76.54
     }
   ],
@@ -1400,7 +1549,9 @@
       "unitCount": 1,
       "drug": {
         "subType": "NDC",
-        "code": "00002143481"
+        "code": "00002143481",
+        "desc": "Trulicity (Dulaglutide)",
+        "formattedCode": "0002-1434-81"
       },
       "drugQuantity": 1.01,
       "drugUnitType": "UNIT",
@@ -1409,11 +1560,13 @@
       "procedure": {
         "subType": "CPT",
         "code": "81099",
+        "desc": "Unlisted urinalysis procedure",
         "descFromClaim": "Short description",
         "modifiers": [
           {
             "subType": "HCPCS_MODIFIER",
-            "code": "A1"
+            "code": "A1",
+            "desc": "Dressing for one wound"
           },
           {
             "subType": "HCPCS_MODIFIER",
@@ -1431,7 +1584,8 @@
       },
       "revenueCode": {
         "subType": "REVENUE_CODE",
-        "code": "0300"
+        "code": "0300",
+        "desc": "Laboratory-General"
       },
       "attachments": [
         {
@@ -1484,7 +1638,8 @@
           "reasonCode": "12",
           "reason": {
             "subType": "CARC",
-            "code": "12"
+            "code": "12",
+            "desc": "The diagnosis is inconsistent with the provider type."
           },
           "amount": 18.00,
           "quantity": 1
@@ -1494,7 +1649,8 @@
           "reasonCode": "2",
           "reason": {
             "subType": "CARC",
-            "code": "2"
+            "code": "2",
+            "desc": "Coinsurance Amount"
           },
           "amount": 65.55,
           "quantity": 1
@@ -1504,7 +1660,8 @@
           "reasonCode": "91",
           "reason": {
             "subType": "CARC",
-            "code": "91"
+            "code": "91",
+            "desc": "Dispensing fee adjustment."
           },
           "amount": 33.03,
           "quantity": 2
@@ -1514,7 +1671,8 @@
           "reasonCode": "3",
           "reason": {
             "subType": "CARC",
-            "code": "3"
+            "code": "3",
+            "desc": "Co-payment Amount"
           },
           "amount": 55.15,
           "quantity": 1
@@ -1524,7 +1682,8 @@
           "reasonCode": "161",
           "reason": {
             "subType": "CARC",
-            "code": "161"
+            "code": "161",
+            "desc": "Provider performance bonus"
           },
           "amount": 99.99,
           "quantity": 1
@@ -1534,7 +1693,8 @@
           "reasonCode": "130",
           "reason": {
             "subType": "CARC",
-            "code": "130"
+            "code": "130",
+            "desc": "Claim submission fee."
           },
           "amount": 82.22,
           "quantity": 1
@@ -1544,7 +1704,8 @@
           "reasonCode": "2",
           "reason": {
             "subType": "CARC",
-            "code": "2"
+            "code": "2",
+            "desc": "Coinsurance Amount"
           },
           "amount": 35.00,
           "quantity": 1
@@ -1554,7 +1715,8 @@
           "reasonCode": "1",
           "reason": {
             "subType": "CARC",
-            "code": "1"
+            "code": "1",
+            "desc": "Deductible Amount"
           },
           "amount": 6600.00,
           "quantity": 1
@@ -1571,7 +1733,9 @@
       "unitCount": 1,
       "drug": {
         "subType": "NDC",
-        "code": "00093-0051-05"
+        "code": "00093-0051-05",
+        "desc": "Carvedilol (Carvedilol)",
+        "formattedCode": "0093-0051-05"
       },
       "drugQuantity": 5,
       "drugUnitType": "UNIT",
@@ -1579,6 +1743,7 @@
       "procedure": {
         "subType": "CPT",
         "code": "00842",
+        "desc": "Anesthesia for intraperitoneal procedures in lower abdomen including laparoscopy; amniocentesis",
         "descFromClaim": "Sample procedure",
         "modifiers": [
           {
@@ -1601,7 +1766,8 @@
       },
       "revenueCode": {
         "subType": "REVENUE_CODE",
-        "code": "0730"
+        "code": "0730",
+        "desc": "EKG/ECG (Electrocardiogram)-General"
       },
       "attachments": [
         {
@@ -1654,7 +1820,8 @@
           "reasonCode": "136",
           "reason": {
             "subType": "CARC",
-            "code": "136"
+            "code": "136",
+            "desc": "Failure to follow prior payers coverage rules. (Use only with Group Code OA)"
           },
           "amount": 15.00,
           "quantity": 1
@@ -1664,7 +1831,8 @@
           "reasonCode": "B4",
           "reason": {
             "subType": "CARC",
-            "code": "B4"
+            "code": "B4",
+            "desc": "Late filing penalty."
           },
           "amount": 95.55,
           "quantity": 1
@@ -1674,7 +1842,8 @@
           "reasonCode": "186",
           "reason": {
             "subType": "CARC",
-            "code": "186"
+            "code": "186",
+            "desc": "Level of care change adjustment."
           },
           "amount": 73.03,
           "quantity": 2
@@ -1684,7 +1853,8 @@
           "reasonCode": "235",
           "reason": {
             "subType": "CARC",
-            "code": "235"
+            "code": "235",
+            "desc": "Sales Tax"
           },
           "amount": 15.15,
           "quantity": 1
@@ -1694,7 +1864,8 @@
           "reasonCode": "P29",
           "reason": {
             "subType": "CARC",
-            "code": "P29"
+            "code": "P29",
+            "desc": "Liability Benefits jurisdictional fee schedule adjustment."
           },
           "amount": 39.99,
           "quantity": 1
@@ -1704,7 +1875,8 @@
           "reasonCode": "A0",
           "reason": {
             "subType": "CARC",
-            "code": "A0"
+            "code": "A0",
+            "desc": "Patient refund amount."
           },
           "amount": 92.22,
           "quantity": 1
@@ -1714,7 +1886,8 @@
           "reasonCode": "2",
           "reason": {
             "subType": "CARC",
-            "code": "2"
+            "code": "2",
+            "desc": "Coinsurance Amount"
           },
           "amount": 65.00,
           "quantity": 1
@@ -1724,7 +1897,8 @@
           "reasonCode": "1",
           "reason": {
             "subType": "CARC",
-            "code": "1"
+            "code": "1",
+            "desc": "Deductible Amount"
           },
           "amount": 3600.00,
           "quantity": 1
@@ -1734,7 +1908,7 @@
     }
   ],
   "transaction": {
-    "id": "680d2844be4ece52a30121c2",
+    "id": "680e3211a58f4f24d3e3c01b",
     "controlNumber": "00000024",
     "transactionType": "INST",
     "purposeCode": "00",
@@ -1779,7 +1953,7 @@
   }
 }
 {
-  "id": "680d2844be4ece52a301227a",
+  "id": "680e3211a58f4f24d3e3c0d3",
   "objectType": "CLAIM",
   "patientControlNumber": "125WILL",
   "chargeAmount": 145.50,
@@ -1790,7 +1964,8 @@
   "placeOfServiceType": "OFFICE",
   "frequencyCode": {
     "subType": "FREQUENCY_CODE",
-    "code": "1"
+    "code": "1",
+    "desc": "Original claim"
   },
   "serviceDateFrom": "2005-02-15",
   "serviceDateTo": "2005-02-15",
@@ -1861,7 +2036,9 @@
   "diags": [
     {
       "subType": "ICD_10_PRINCIPAL",
-      "code": "M4820"
+      "code": "M4820",
+      "desc": "Kissing spine, site unspecified",
+      "formattedCode": "M48.20"
     }
   ],
   "serviceLines": [
@@ -1873,7 +2050,8 @@
       "unitCount": 1,
       "procedure": {
         "subType": "CPT",
-        "code": "98940"
+        "code": "98940",
+        "desc": "Chiropractic manipulative treatment (CMT); spinal, 1-2 regions"
       },
       "diagPointers": [
         1
@@ -1881,13 +2059,15 @@
       "diags": [
         {
           "subType": "ICD_10_PRINCIPAL",
-          "code": "M4820"
+          "code": "M4820",
+          "desc": "Kissing spine, site unspecified",
+          "formattedCode": "M48.20"
         }
       ]
     }
   ],
   "transaction": {
-    "id": "680d2844be4ece52a301225c",
+    "id": "680e3211a58f4f24d3e3c0b5",
     "controlNumber": "3701",
     "transactionType": "PROF",
     "purposeCode": "00",
@@ -1932,7 +2112,7 @@
   }
 }
 {
-  "id": "680d2844be4ece52a30122c0",
+  "id": "680e3211a58f4f24d3e3c119",
   "objectType": "CLAIM",
   "patientControlNumber": "26407789",
   "chargeAmount": 79.04,
@@ -1943,7 +2123,8 @@
   "placeOfServiceType": "OFFICE",
   "frequencyCode": {
     "subType": "FREQUENCY_CODE",
-    "code": "1"
+    "code": "1",
+    "desc": "Original claim"
   },
   "serviceDateFrom": "2005-10-03",
   "serviceDateTo": "2005-10-03",
@@ -2024,7 +2205,8 @@
           "reasonCode": "1",
           "reason": {
             "subType": "CARC",
-            "code": "1"
+            "code": "1",
+            "desc": "Deductible Amount"
           },
           "amount": 21.89
         },
@@ -2033,7 +2215,8 @@
           "reasonCode": "2",
           "reason": {
             "subType": "CARC",
-            "code": "2"
+            "code": "2",
+            "desc": "Coinsurance Amount"
           },
           "amount": 15.00
         }
@@ -2104,7 +2287,8 @@
       "firstName": "BEN",
       "providerTaxonomy": {
         "subType": "PROVIDER_TAXONOMY",
-        "code": "204C00000X"
+        "code": "204C00000X",
+        "desc": "Sports Medicine (Neuromusculoskeletal Medicine) Physician"
       },
       "additionalIds": [
         {
@@ -2131,19 +2315,27 @@
   "diags": [
     {
       "subType": "ICD_10_PRINCIPAL",
-      "code": "J309"
+      "code": "J309",
+      "desc": "Allergic rhinitis, unspecified",
+      "formattedCode": "J30.9"
     },
     {
       "subType": "ICD_10",
-      "code": "E784"
+      "code": "E784",
+      "desc": "Other hyperlipidemia",
+      "formattedCode": "E78.4"
     },
     {
       "subType": "ICD_10",
-      "code": "E6601"
+      "code": "E6601",
+      "desc": "Morbid (severe) obesity due to excess calories",
+      "formattedCode": "E66.01"
     },
     {
       "subType": "ICD_10",
-      "code": "K219"
+      "code": "K219",
+      "desc": "Gastro-esophageal reflux disease without esophagitis",
+      "formattedCode": "K21.9"
     }
   ],
   "serviceLines": [
@@ -2154,7 +2346,8 @@
       "unitCount": 1,
       "procedure": {
         "subType": "CPT",
-        "code": "99213"
+        "code": "99213",
+        "desc": "Office or other outpatient visit for the evaluation and management of an established patient, which requires a medically appropriate history and/or examination and low level of medical decision making. When using total time on the date of the encounter for code selection, 20 minutes must be met or exceeded."
       },
       "adjustments": [
         {
@@ -2176,15 +2369,21 @@
       "diags": [
         {
           "subType": "ICD_10_PRINCIPAL",
-          "code": "J309"
+          "code": "J309",
+          "desc": "Allergic rhinitis, unspecified",
+          "formattedCode": "J30.9"
         },
         {
           "subType": "ICD_10",
-          "code": "E784"
+          "code": "E784",
+          "desc": "Other hyperlipidemia",
+          "formattedCode": "E78.4"
         },
         {
           "subType": "ICD_10",
-          "code": "E6601"
+          "code": "E6601",
+          "desc": "Morbid (severe) obesity due to excess calories",
+          "formattedCode": "E66.01"
         }
       ]
     },
@@ -2195,7 +2394,8 @@
       "unitCount": 1,
       "procedure": {
         "subType": "CPT",
-        "code": "96372"
+        "code": "96372",
+        "desc": "Therapeutic, prophylactic, or diagnostic injection (specify substance or drug); subcutaneous or intramuscular"
       },
       "diagPointers": [
         1,
@@ -2204,11 +2404,15 @@
       "diags": [
         {
           "subType": "ICD_10_PRINCIPAL",
-          "code": "J309"
+          "code": "J309",
+          "desc": "Allergic rhinitis, unspecified",
+          "formattedCode": "J30.9"
         },
         {
           "subType": "ICD_10",
-          "code": "E784"
+          "code": "E784",
+          "desc": "Other hyperlipidemia",
+          "formattedCode": "E78.4"
         }
       ]
     },
@@ -2219,7 +2423,8 @@
       "unitCount": 1,
       "procedure": {
         "subType": "HCPCS",
-        "code": "J3301"
+        "code": "J3301",
+        "desc": "Injection, triamcinolone acetonide, not otherwise specified, 10 mg"
       },
       "diagPointers": [
         1,
@@ -2228,17 +2433,21 @@
       "diags": [
         {
           "subType": "ICD_10_PRINCIPAL",
-          "code": "J309"
+          "code": "J309",
+          "desc": "Allergic rhinitis, unspecified",
+          "formattedCode": "J30.9"
         },
         {
           "subType": "ICD_10",
-          "code": "E784"
+          "code": "E784",
+          "desc": "Other hyperlipidemia",
+          "formattedCode": "E78.4"
         }
       ]
     }
   ],
   "transaction": {
-    "id": "680d2844be4ece52a301227d",
+    "id": "680e3211a58f4f24d3e3c0d6",
     "controlNumber": "0024",
     "transactionType": "PROF",
     "purposeCode": "00",
@@ -2283,7 +2492,7 @@
   }
 }
 {
-  "id": "680d2844be4ece52a30122eb",
+  "id": "680e3211a58f4f24d3e3c144",
   "objectType": "CLAIM",
   "patientControlNumber": "26463774",
   "chargeAmount": 100.00,
@@ -2294,7 +2503,8 @@
   "placeOfServiceType": "OFFICE",
   "frequencyCode": {
     "subType": "FREQUENCY_CODE",
-    "code": "1"
+    "code": "1",
+    "desc": "Original claim"
   },
   "serviceDateFrom": "2006-10-03",
   "serviceDateTo": "2006-10-10",
@@ -2366,17 +2576,22 @@
     },
     "providerTaxonomy": {
       "subType": "PROVIDER_TAXONOMY",
-      "code": "103G00000X"
+      "code": "103G00000X",
+      "desc": "Clinical Neuropsychologist"
     }
   },
   "diags": [
     {
       "subType": "ICD_10_PRINCIPAL",
-      "code": "J020"
+      "code": "J020",
+      "desc": "Streptococcal pharyngitis",
+      "formattedCode": "J02.0"
     },
     {
       "subType": "ICD_10",
-      "code": "Z1159"
+      "code": "Z1159",
+      "desc": "Encounter for screening for other viral diseases",
+      "formattedCode": "Z11.59"
     }
   ],
   "serviceLines": [
@@ -2387,7 +2602,8 @@
       "unitCount": 1,
       "procedure": {
         "subType": "CPT",
-        "code": "99213"
+        "code": "99213",
+        "desc": "Office or other outpatient visit for the evaluation and management of an established patient, which requires a medically appropriate history and/or examination and low level of medical decision making. When using total time on the date of the encounter for code selection, 20 minutes must be met or exceeded."
       },
       "diagPointers": [
         1
@@ -2395,7 +2611,9 @@
       "diags": [
         {
           "subType": "ICD_10_PRINCIPAL",
-          "code": "J020"
+          "code": "J020",
+          "desc": "Streptococcal pharyngitis",
+          "formattedCode": "J02.0"
         }
       ]
     },
@@ -2406,7 +2624,8 @@
       "unitCount": 1,
       "procedure": {
         "subType": "CPT",
-        "code": "87070"
+        "code": "87070",
+        "desc": "Culture, bacterial; any other source except urine, blood or stool, aerobic, with isolation and presumptive identification of isolates"
       },
       "diagPointers": [
         1
@@ -2414,7 +2633,9 @@
       "diags": [
         {
           "subType": "ICD_10_PRINCIPAL",
-          "code": "J020"
+          "code": "J020",
+          "desc": "Streptococcal pharyngitis",
+          "formattedCode": "J02.0"
         }
       ]
     },
@@ -2425,7 +2646,8 @@
       "unitCount": 1,
       "procedure": {
         "subType": "CPT",
-        "code": "99214"
+        "code": "99214",
+        "desc": "Office or other outpatient visit for the evaluation and management of an established patient, which requires a medically appropriate history and/or examination and moderate level of medical decision making. When using total time on the date of the encounter for code selection, 30 minutes must be met or exceeded."
       },
       "diagPointers": [
         2
@@ -2433,13 +2655,15 @@
       "diags": [
         {
           "subType": "ICD_10",
-          "code": "Z1159"
+          "code": "Z1159",
+          "desc": "Encounter for screening for other viral diseases",
+          "formattedCode": "Z11.59"
         }
       ]
     }
   ],
   "transaction": {
-    "id": "680d2844be4ece52a30122c3",
+    "id": "680e3211a58f4f24d3e3c11c",
     "controlNumber": "0021",
     "transactionType": "PROF",
     "purposeCode": "00",
@@ -2488,7 +2712,7 @@
   }
 }
 {
-  "id": "680d2844be4ece52a3012359",
+  "id": "680e3211a58f4f24d3e3c1b2",
   "objectType": "CLAIM",
   "patientControlNumber": "26462967",
   "chargeAmount": 100.00,
@@ -2499,7 +2723,8 @@
   "placeOfServiceType": "OFFICE",
   "frequencyCode": {
     "subType": "FREQUENCY_CODE",
-    "code": "1"
+    "code": "1",
+    "desc": "Original claim"
   },
   "serviceDateFrom": "2006-10-03",
   "serviceDateTo": "2006-10-10",
@@ -2554,7 +2779,8 @@
     },
     "providerTaxonomy": {
       "subType": "PROVIDER_TAXONOMY",
-      "code": "103GC0700X"
+      "code": "103GC0700X",
+      "desc": "Clinical Neuropsychologist"
     }
   },
   "providers": [
@@ -2575,11 +2801,15 @@
   "diags": [
     {
       "subType": "ICD_10_PRINCIPAL",
-      "code": "G35"
+      "code": "G35",
+      "desc": "Multiple sclerosis",
+      "formattedCode": "G35"
     },
     {
       "subType": "ICD_10",
-      "code": "Z1159"
+      "code": "Z1159",
+      "desc": "Encounter for screening for other viral diseases",
+      "formattedCode": "Z11.59"
     }
   ],
   "serviceLines": [
@@ -2590,7 +2820,8 @@
       "unitCount": 1,
       "procedure": {
         "subType": "CPT",
-        "code": "99213"
+        "code": "99213",
+        "desc": "Office or other outpatient visit for the evaluation and management of an established patient, which requires a medically appropriate history and/or examination and low level of medical decision making. When using total time on the date of the encounter for code selection, 20 minutes must be met or exceeded."
       },
       "diagPointers": [
         1
@@ -2598,7 +2829,9 @@
       "diags": [
         {
           "subType": "ICD_10_PRINCIPAL",
-          "code": "G35"
+          "code": "G35",
+          "desc": "Multiple sclerosis",
+          "formattedCode": "G35"
         }
       ]
     },
@@ -2609,7 +2842,8 @@
       "unitCount": 1,
       "procedure": {
         "subType": "CPT",
-        "code": "87070"
+        "code": "87070",
+        "desc": "Culture, bacterial; any other source except urine, blood or stool, aerobic, with isolation and presumptive identification of isolates"
       },
       "diagPointers": [
         1
@@ -2617,7 +2851,9 @@
       "diags": [
         {
           "subType": "ICD_10_PRINCIPAL",
-          "code": "G35"
+          "code": "G35",
+          "desc": "Multiple sclerosis",
+          "formattedCode": "G35"
         }
       ]
     },
@@ -2628,7 +2864,8 @@
       "unitCount": 1,
       "procedure": {
         "subType": "CPT",
-        "code": "99214"
+        "code": "99214",
+        "desc": "Office or other outpatient visit for the evaluation and management of an established patient, which requires a medically appropriate history and/or examination and moderate level of medical decision making. When using total time on the date of the encounter for code selection, 30 minutes must be met or exceeded."
       },
       "diagPointers": [
         2
@@ -2636,7 +2873,9 @@
       "diags": [
         {
           "subType": "ICD_10",
-          "code": "Z1159"
+          "code": "Z1159",
+          "desc": "Encounter for screening for other viral diseases",
+          "formattedCode": "Z11.59"
         }
       ]
     },
@@ -2647,7 +2886,8 @@
       "unitCount": 1,
       "procedure": {
         "subType": "CPT",
-        "code": "86663"
+        "code": "86663",
+        "desc": "Antibody; Epstein-Barr (EB) virus, early antigen (EA)"
       },
       "diagPointers": [
         2
@@ -2655,13 +2895,15 @@
       "diags": [
         {
           "subType": "ICD_10",
-          "code": "Z1159"
+          "code": "Z1159",
+          "desc": "Encounter for screening for other viral diseases",
+          "formattedCode": "Z11.59"
         }
       ]
     }
   ],
   "transaction": {
-    "id": "680d2844be4ece52a30122ee",
+    "id": "680e3211a58f4f24d3e3c147",
     "controlNumber": "0021",
     "transactionType": "PROF",
     "purposeCode": "00",
@@ -2710,7 +2952,7 @@
   }
 }
 {
-  "id": "680d2844be4ece52a301235a",
+  "id": "680e3211a58f4f24d3e3c1b3",
   "objectType": "CLAIM",
   "patientControlNumber": "125WILL",
   "chargeAmount": 145.50,
@@ -2721,7 +2963,8 @@
   "placeOfServiceType": "OFFICE",
   "frequencyCode": {
     "subType": "FREQUENCY_CODE",
-    "code": "1"
+    "code": "1",
+    "desc": "Original claim"
   },
   "serviceDateFrom": "2005-02-15",
   "serviceDateTo": "2005-02-15",
@@ -2792,7 +3035,9 @@
   "diags": [
     {
       "subType": "ICD_10_PRINCIPAL",
-      "code": "M4820"
+      "code": "M4820",
+      "desc": "Kissing spine, site unspecified",
+      "formattedCode": "M48.20"
     }
   ],
   "serviceLines": [
@@ -2804,7 +3049,8 @@
       "unitCount": 1,
       "procedure": {
         "subType": "CPT",
-        "code": "98940"
+        "code": "98940",
+        "desc": "Chiropractic manipulative treatment (CMT); spinal, 1-2 regions"
       },
       "diagPointers": [
         1
@@ -2812,13 +3058,15 @@
       "diags": [
         {
           "subType": "ICD_10_PRINCIPAL",
-          "code": "M4820"
+          "code": "M4820",
+          "desc": "Kissing spine, site unspecified",
+          "formattedCode": "M48.20"
         }
       ]
     }
   ],
   "transaction": {
-    "id": "680d2844be4ece52a3012319",
+    "id": "680e3211a58f4f24d3e3c172",
     "controlNumber": "3701",
     "transactionType": "PROF",
     "purposeCode": "00",
@@ -2863,7 +3111,7 @@
   }
 }
 {
-  "id": "680d2844be4ece52a301235b",
+  "id": "680e3211a58f4f24d3e3c1b4",
   "objectType": "CLAIM",
   "patientControlNumber": "153829140",
   "chargeAmount": 827.00,
@@ -2874,7 +3122,8 @@
   "placeOfServiceType": "OUTPATIENT",
   "frequencyCode": {
     "subType": "FREQUENCY_CODE",
-    "code": "1"
+    "code": "1",
+    "desc": "Original claim"
   },
   "serviceDateFrom": "2005-01-12",
   "serviceDateTo": "2005-01-13",
@@ -2936,7 +3185,8 @@
       "middleName": "E",
       "providerTaxonomy": {
         "subType": "PROVIDER_TAXONOMY",
-        "code": "207L00000X"
+        "code": "207L00000X",
+        "desc": "Anesthesiology Physician"
       },
       "additionalIds": [
         {
@@ -2963,7 +3213,9 @@
   "diags": [
     {
       "subType": "ICD_10_PRINCIPAL",
-      "code": "E15"
+      "code": "E15",
+      "desc": "Nondiabetic hypoglycemic coma",
+      "formattedCode": "E15"
     }
   ],
   "serviceLines": [
@@ -2975,18 +3227,22 @@
       "procedure": {
         "subType": "CPT",
         "code": "00142",
+        "desc": "Anesthesia for procedures on eye; lens surgery",
         "modifiers": [
           {
             "subType": "HCPCS_MODIFIER",
-            "code": "QK"
+            "code": "QK",
+            "desc": "Medical direction of two, three, or four concurrent anesthesia procedures involving qualified individuals"
           },
           {
             "subType": "HCPCS_MODIFIER",
-            "code": "QS"
+            "code": "QS",
+            "desc": "Monitored anesthesia care service"
           },
           {
             "subType": "HCPCS_MODIFIER",
-            "code": "P1"
+            "code": "P1",
+            "desc": "A normal healthy patient"
           }
         ]
       },
@@ -2996,7 +3252,9 @@
       "diags": [
         {
           "subType": "ICD_10_PRINCIPAL",
-          "code": "E15"
+          "code": "E15",
+          "desc": "Nondiabetic hypoglycemic coma",
+          "formattedCode": "E15"
         }
       ]
     },
@@ -3008,18 +3266,22 @@
       "procedure": {
         "subType": "CPT",
         "code": "00142",
+        "desc": "Anesthesia for procedures on eye; lens surgery",
         "modifiers": [
           {
             "subType": "HCPCS_MODIFIER",
-            "code": "QK"
+            "code": "QK",
+            "desc": "Medical direction of two, three, or four concurrent anesthesia procedures involving qualified individuals"
           },
           {
             "subType": "HCPCS_MODIFIER",
-            "code": "QS"
+            "code": "QS",
+            "desc": "Monitored anesthesia care service"
           },
           {
             "subType": "HCPCS_MODIFIER",
-            "code": "P1"
+            "code": "P1",
+            "desc": "A normal healthy patient"
           }
         ]
       },
@@ -3029,13 +3291,15 @@
       "diags": [
         {
           "subType": "ICD_10_PRINCIPAL",
-          "code": "E15"
+          "code": "E15",
+          "desc": "Nondiabetic hypoglycemic coma",
+          "formattedCode": "E15"
         }
       ]
     }
   ],
   "transaction": {
-    "id": "680d2844be4ece52a3012338",
+    "id": "680e3211a58f4f24d3e3c191",
     "controlNumber": "0001",
     "transactionType": "PROF",
     "purposeCode": "00",
@@ -3084,18 +3348,20 @@
   }
 }
 {
-  "id": "680d2844be4ece52a3012389",
+  "id": "680e3211a58f4f24d3e3c1e2",
   "objectType": "CLAIM",
   "patientControlNumber": "756048Q",
   "chargeAmount": 89.93,
   "facilityCode": {
     "subType": "FACILITY_TYPE",
-    "code": "14"
+    "code": "14",
+    "desc": "Hospital; laboratory services provided to nonpatients"
   },
   "placeOfServiceType": "OUTPATIENT",
   "frequencyCode": {
     "subType": "FREQUENCY_CODE",
-    "code": "1"
+    "code": "1",
+    "desc": "Original claim"
   },
   "statementDateFrom": "2016-09-11",
   "serviceDateFrom": "2016-09-11",
@@ -3189,7 +3455,8 @@
     },
     "providerTaxonomy": {
       "subType": "PROVIDER_TAXONOMY",
-      "code": "282N00000X"
+      "code": "282N00000X",
+      "desc": "General Acute Care Hospital"
     }
   },
   "providers": [
@@ -3213,49 +3480,62 @@
   "diags": [
     {
       "subType": "ICD_10_PRINCIPAL",
-      "code": "H269"
+      "code": "H269",
+      "desc": "Unspecified cataract",
+      "formattedCode": "H26.9"
     },
     {
       "subType": "ICD_10",
-      "code": "I10"
+      "code": "I10",
+      "desc": "Essential (primary) hypertension",
+      "formattedCode": "I10"
     },
     {
       "subType": "ICD_10",
-      "code": "R9431"
+      "code": "R9431",
+      "desc": "Abnormal electrocardiogram [ECG] [EKG]",
+      "formattedCode": "R94.31"
     }
   ],
   "occurrences": [
     {
       "subType": "OCCURRENCE",
       "code": "A1",
+      "desc": "BIRTH DATE-INSURED A",
       "occurrenceDate": "1926-11-11"
     },
     {
       "subType": "OCCURRENCE",
       "code": "A2",
+      "desc": "EFFECTIVE DATE-INSURED A POLICY",
       "occurrenceDate": "1991-11-01"
     },
     {
       "subType": "OCCURRENCE",
       "code": "B1",
+      "desc": "BIRTH DATE-INSURED B",
       "occurrenceDate": "1926-11-11"
     },
     {
       "subType": "OCCURRENCE",
       "code": "B2",
+      "desc": "EFFECTIVE DATE-INSURED B POLICY",
       "occurrenceDate": "1987-01-01"
     }
   ],
   "conditions": [
     {
       "subType": "CONDITION",
-      "code": "09"
+      "code": "09",
+      "desc": "NEITHER PATIENT NOR SPOUSE IS EMPLOYED",
+      "instructionDesc": "This code indicates that the patient and spouse have denied having any employment in response to MSP development questions."
     }
   ],
   "valueInfos": [
     {
       "subType": "VALUE",
       "code": "A2",
+      "desc": "Coinsurance Payer A (reportable only on paper claims)",
       "amount": 15.31
     }
   ],
@@ -3267,11 +3547,13 @@
       "unitCount": 1,
       "procedure": {
         "subType": "CPT",
-        "code": "85025"
+        "code": "85025",
+        "desc": "Blood count; complete (CBC), automated (Hgb, Hct, RBC, WBC and platelet count) and automated differential WBC count"
       },
       "revenueCode": {
         "subType": "REVENUE_CODE",
-        "code": "0305"
+        "code": "0305",
+        "desc": "Laboratory-Hematology"
       }
     },
     {
@@ -3281,16 +3563,18 @@
       "unitCount": 3,
       "procedure": {
         "subType": "CPT",
-        "code": "93005"
+        "code": "93005",
+        "desc": "Electrocardiogram, routine ECG with at least 12 leads; tracing only, without interpretation and report"
       },
       "revenueCode": {
         "subType": "REVENUE_CODE",
-        "code": "0730"
+        "code": "0730",
+        "desc": "EKG/ECG (Electrocardiogram)-General"
       }
     }
   ],
   "transaction": {
-    "id": "680d2844be4ece52a301235e",
+    "id": "680e3211a58f4f24d3e3c1b7",
     "controlNumber": "987654",
     "transactionType": "INST",
     "purposeCode": "00",
@@ -3335,7 +3619,7 @@
   }
 }
 {
-  "id": "680d2844be4ece52a30123b7",
+  "id": "680e3211a58f4f24d3e3c210",
   "objectType": "CLAIM",
   "patientControlNumber": "26463774",
   "chargeAmount": 100.00,
@@ -3346,7 +3630,8 @@
   "placeOfServiceType": "OFFICE",
   "frequencyCode": {
     "subType": "FREQUENCY_CODE",
-    "code": "7"
+    "code": "7",
+    "desc": "Replacement"
   },
   "serviceDateFrom": "2006-10-03",
   "serviceDateTo": "2006-10-10",
@@ -3418,17 +3703,22 @@
     },
     "providerTaxonomy": {
       "subType": "PROVIDER_TAXONOMY",
-      "code": "103GC0700X"
+      "code": "103GC0700X",
+      "desc": "Clinical Neuropsychologist"
     }
   },
   "diags": [
     {
       "subType": "ICD_10_PRINCIPAL",
-      "code": "J020"
+      "code": "J020",
+      "desc": "Streptococcal pharyngitis",
+      "formattedCode": "J02.0"
     },
     {
       "subType": "ICD_10",
-      "code": "Z1159"
+      "code": "Z1159",
+      "desc": "Encounter for screening for other viral diseases",
+      "formattedCode": "Z11.59"
     }
   ],
   "serviceLines": [
@@ -3439,7 +3729,8 @@
       "unitCount": 1,
       "procedure": {
         "subType": "CPT",
-        "code": "99213"
+        "code": "99213",
+        "desc": "Office or other outpatient visit for the evaluation and management of an established patient, which requires a medically appropriate history and/or examination and low level of medical decision making. When using total time on the date of the encounter for code selection, 20 minutes must be met or exceeded."
       },
       "diagPointers": [
         1
@@ -3447,7 +3738,9 @@
       "diags": [
         {
           "subType": "ICD_10_PRINCIPAL",
-          "code": "J020"
+          "code": "J020",
+          "desc": "Streptococcal pharyngitis",
+          "formattedCode": "J02.0"
         }
       ]
     },
@@ -3458,7 +3751,8 @@
       "unitCount": 1,
       "procedure": {
         "subType": "CPT",
-        "code": "87070"
+        "code": "87070",
+        "desc": "Culture, bacterial; any other source except urine, blood or stool, aerobic, with isolation and presumptive identification of isolates"
       },
       "diagPointers": [
         1
@@ -3466,7 +3760,9 @@
       "diags": [
         {
           "subType": "ICD_10_PRINCIPAL",
-          "code": "J020"
+          "code": "J020",
+          "desc": "Streptococcal pharyngitis",
+          "formattedCode": "J02.0"
         }
       ]
     },
@@ -3477,7 +3773,8 @@
       "unitCount": 1,
       "procedure": {
         "subType": "CPT",
-        "code": "99214"
+        "code": "99214",
+        "desc": "Office or other outpatient visit for the evaluation and management of an established patient, which requires a medically appropriate history and/or examination and moderate level of medical decision making. When using total time on the date of the encounter for code selection, 30 minutes must be met or exceeded."
       },
       "diagPointers": [
         2
@@ -3485,7 +3782,9 @@
       "diags": [
         {
           "subType": "ICD_10",
-          "code": "Z1159"
+          "code": "Z1159",
+          "desc": "Encounter for screening for other viral diseases",
+          "formattedCode": "Z11.59"
         }
       ]
     },
@@ -3496,7 +3795,8 @@
       "unitCount": 1,
       "procedure": {
         "subType": "CPT",
-        "code": "86663"
+        "code": "86663",
+        "desc": "Antibody; Epstein-Barr (EB) virus, early antigen (EA)"
       },
       "diagPointers": [
         2
@@ -3504,13 +3804,15 @@
       "diags": [
         {
           "subType": "ICD_10",
-          "code": "Z1159"
+          "code": "Z1159",
+          "desc": "Encounter for screening for other viral diseases",
+          "formattedCode": "Z11.59"
         }
       ]
     }
   ],
   "transaction": {
-    "id": "680d2844be4ece52a301238c",
+    "id": "680e3211a58f4f24d3e3c1e5",
     "controlNumber": "0021",
     "transactionType": "PROF",
     "purposeCode": "00",
@@ -3559,7 +3861,7 @@
   }
 }
 {
-  "id": "680d2844be4ece52a30123db",
+  "id": "680e3211a58f4f24d3e3c234",
   "objectType": "CLAIM",
   "patientControlNumber": "153829140",
   "chargeAmount": 827.00,
@@ -3570,7 +3872,8 @@
   "placeOfServiceType": "OUTPATIENT",
   "frequencyCode": {
     "subType": "FREQUENCY_CODE",
-    "code": "1"
+    "code": "1",
+    "desc": "Original claim"
   },
   "serviceDateFrom": "2005-01-12",
   "serviceDateTo": "2005-01-13",
@@ -3632,7 +3935,8 @@
       "middleName": "E",
       "providerTaxonomy": {
         "subType": "PROVIDER_TAXONOMY",
-        "code": "207L00000X"
+        "code": "207L00000X",
+        "desc": "Anesthesiology Physician"
       },
       "additionalIds": [
         {
@@ -3659,7 +3963,9 @@
   "diags": [
     {
       "subType": "ICD_10_PRINCIPAL",
-      "code": "E15"
+      "code": "E15",
+      "desc": "Nondiabetic hypoglycemic coma",
+      "formattedCode": "E15"
     }
   ],
   "serviceLines": [
@@ -3671,18 +3977,22 @@
       "procedure": {
         "subType": "CPT",
         "code": "00142",
+        "desc": "Anesthesia for procedures on eye; lens surgery",
         "modifiers": [
           {
             "subType": "HCPCS_MODIFIER",
-            "code": "QK"
+            "code": "QK",
+            "desc": "Medical direction of two, three, or four concurrent anesthesia procedures involving qualified individuals"
           },
           {
             "subType": "HCPCS_MODIFIER",
-            "code": "QS"
+            "code": "QS",
+            "desc": "Monitored anesthesia care service"
           },
           {
             "subType": "HCPCS_MODIFIER",
-            "code": "P1"
+            "code": "P1",
+            "desc": "A normal healthy patient"
           }
         ]
       },
@@ -3692,7 +4002,9 @@
       "diags": [
         {
           "subType": "ICD_10_PRINCIPAL",
-          "code": "E15"
+          "code": "E15",
+          "desc": "Nondiabetic hypoglycemic coma",
+          "formattedCode": "E15"
         }
       ]
     },
@@ -3704,18 +4016,22 @@
       "procedure": {
         "subType": "CPT",
         "code": "00142",
+        "desc": "Anesthesia for procedures on eye; lens surgery",
         "modifiers": [
           {
             "subType": "HCPCS_MODIFIER",
-            "code": "QK"
+            "code": "QK",
+            "desc": "Medical direction of two, three, or four concurrent anesthesia procedures involving qualified individuals"
           },
           {
             "subType": "HCPCS_MODIFIER",
-            "code": "QS"
+            "code": "QS",
+            "desc": "Monitored anesthesia care service"
           },
           {
             "subType": "HCPCS_MODIFIER",
-            "code": "P1"
+            "code": "P1",
+            "desc": "A normal healthy patient"
           }
         ]
       },
@@ -3725,13 +4041,15 @@
       "diags": [
         {
           "subType": "ICD_10_PRINCIPAL",
-          "code": "E15"
+          "code": "E15",
+          "desc": "Nondiabetic hypoglycemic coma",
+          "formattedCode": "E15"
         }
       ]
     }
   ],
   "transaction": {
-    "id": "680d2844be4ece52a30123ba",
+    "id": "680e3211a58f4f24d3e3c213",
     "controlNumber": "0001",
     "transactionType": "PROF",
     "purposeCode": "00",
@@ -3780,7 +4098,7 @@
   }
 }
 {
-  "id": "680d2844be4ece52a301240a",
+  "id": "680e3211a58f4f24d3e3c263",
   "objectType": "CLAIM",
   "patientControlNumber": "SMI123",
   "chargeAmount": 75.00,
@@ -3791,7 +4109,8 @@
   "placeOfServiceType": "HOME",
   "frequencyCode": {
     "subType": "FREQUENCY_CODE",
-    "code": "1"
+    "code": "1",
+    "desc": "Original claim"
   },
   "serviceDateFrom": "2005-03-21",
   "serviceDateTo": "2005-03-21",
@@ -3853,11 +4172,15 @@
   "diags": [
     {
       "subType": "ICD_10_PRINCIPAL",
-      "code": "I6789"
+      "code": "I6789",
+      "desc": "Other cerebrovascular disease",
+      "formattedCode": "I67.89"
     },
     {
       "subType": "ICD_10",
-      "code": "G839"
+      "code": "G839",
+      "desc": "Paralytic syndrome, unspecified",
+      "formattedCode": "G83.9"
     }
   ],
   "serviceLines": [
@@ -3871,18 +4194,22 @@
       "procedure": {
         "subType": "HCPCS",
         "code": "K0001",
+        "desc": "Standard wheelchair",
         "modifiers": [
           {
             "subType": "HCPCS_MODIFIER",
-            "code": "RR"
+            "code": "RR",
+            "desc": "Rental (use the 'rr' modifier when dme is to be rented)"
           },
           {
             "subType": "HCPCS_MODIFIER",
-            "code": "KH"
+            "code": "KH",
+            "desc": "Dmepos item, initial claim, purchase or first month rental"
           },
           {
             "subType": "HCPCS_MODIFIER",
-            "code": "BR"
+            "code": "BR",
+            "desc": "The beneficiary has been informed of the purchase and rental options and has elected to rent the item"
           }
         ]
       },
@@ -3933,17 +4260,21 @@
       "diags": [
         {
           "subType": "ICD_10_PRINCIPAL",
-          "code": "I6789"
+          "code": "I6789",
+          "desc": "Other cerebrovascular disease",
+          "formattedCode": "I67.89"
         },
         {
           "subType": "ICD_10",
-          "code": "G839"
+          "code": "G839",
+          "desc": "Paralytic syndrome, unspecified",
+          "formattedCode": "G83.9"
         }
       ]
     }
   ],
   "transaction": {
-    "id": "680d2844be4ece52a30123de",
+    "id": "680e3211a58f4f24d3e3c237",
     "controlNumber": "112233",
     "transactionType": "PROF",
     "purposeCode": "00",
@@ -3988,7 +4319,7 @@
   }
 }
 {
-  "id": "680d2844be4ece52a3012435",
+  "id": "680e3211a58f4f24d3e3c28e",
   "objectType": "CLAIM",
   "patientControlNumber": "ABC123-RI",
   "chargeAmount": 28.75,
@@ -3999,7 +4330,8 @@
   "placeOfServiceType": "OFFICE",
   "frequencyCode": {
     "subType": "FREQUENCY_CODE",
-    "code": "1"
+    "code": "1",
+    "desc": "Original claim"
   },
   "serviceDateFrom": "2005-05-14",
   "serviceDateTo": "2005-05-14",
@@ -4097,11 +4429,15 @@
   "diags": [
     {
       "subType": "ICD_10_PRINCIPAL",
-      "code": "J449"
+      "code": "J449",
+      "desc": "Chronic obstructive pulmonary disease, unspecified",
+      "formattedCode": "J44.9"
     },
     {
       "subType": "ICD_10",
-      "code": "E119"
+      "code": "E119",
+      "desc": "Type 2 diabetes mellitus without complications",
+      "formattedCode": "E11.9"
     }
   ],
   "serviceLines": [
@@ -4114,10 +4450,12 @@
       "procedure": {
         "subType": "HCPCS",
         "code": "E0570",
+        "desc": "Nebulizer, with compressor",
         "modifiers": [
           {
             "subType": "HCPCS_MODIFIER",
-            "code": "RR"
+            "code": "RR",
+            "desc": "Rental (use the 'rr' modifier when dme is to be rented)"
           }
         ]
       },
@@ -4138,11 +4476,15 @@
       "diags": [
         {
           "subType": "ICD_10_PRINCIPAL",
-          "code": "J449"
+          "code": "J449",
+          "desc": "Chronic obstructive pulmonary disease, unspecified",
+          "formattedCode": "J44.9"
         },
         {
           "subType": "ICD_10",
-          "code": "E119"
+          "code": "E119",
+          "desc": "Type 2 diabetes mellitus without complications",
+          "formattedCode": "E11.9"
         }
       ]
     },
@@ -4154,10 +4496,12 @@
       "procedure": {
         "subType": "HCPCS",
         "code": "A7003",
+        "desc": "Administration set, with small volume nonfiltered pneumatic nebulizer, disposable",
         "modifiers": [
           {
             "subType": "HCPCS_MODIFIER",
-            "code": "NU"
+            "code": "NU",
+            "desc": "New equipment"
           }
         ]
       },
@@ -4167,13 +4511,15 @@
       "diags": [
         {
           "subType": "ICD_10_PRINCIPAL",
-          "code": "J449"
+          "code": "J449",
+          "desc": "Chronic obstructive pulmonary disease, unspecified",
+          "formattedCode": "J44.9"
         }
       ]
     }
   ],
   "transaction": {
-    "id": "680d2844be4ece52a301240d",
+    "id": "680e3211a58f4f24d3e3c266",
     "controlNumber": "1002",
     "transactionType": "PROF",
     "purposeCode": "00",
@@ -4218,7 +4564,7 @@
   }
 }
 {
-  "id": "680d2844be4ece52a301246d",
+  "id": "680e3211a58f4f24d3e3c2c6",
   "objectType": "CLAIM",
   "patientControlNumber": "26407789",
   "chargeAmount": 79.04,
@@ -4229,7 +4575,8 @@
   "placeOfServiceType": "OFFICE",
   "frequencyCode": {
     "subType": "FREQUENCY_CODE",
-    "code": "1"
+    "code": "1",
+    "desc": "Original claim"
   },
   "serviceDateFrom": "2005-10-03",
   "serviceDateTo": "2005-10-03",
@@ -4353,7 +4700,8 @@
       "firstName": "BEN",
       "providerTaxonomy": {
         "subType": "PROVIDER_TAXONOMY",
-        "code": "204C00000X"
+        "code": "204C00000X",
+        "desc": "Sports Medicine (Neuromusculoskeletal Medicine) Physician"
       },
       "additionalIds": [
         {
@@ -4380,15 +4728,21 @@
   "diags": [
     {
       "subType": "ICD_10_PRINCIPAL",
-      "code": "J309"
+      "code": "J309",
+      "desc": "Allergic rhinitis, unspecified",
+      "formattedCode": "J30.9"
     },
     {
       "subType": "ICD_10",
-      "code": "E785"
+      "code": "E785",
+      "desc": "Hyperlipidemia, unspecified",
+      "formattedCode": "E78.5"
     },
     {
       "subType": "ICD_10",
-      "code": "E663"
+      "code": "E663",
+      "desc": "Overweight",
+      "formattedCode": "E66.3"
     }
   ],
   "serviceLines": [
@@ -4399,7 +4753,8 @@
       "unitCount": 1,
       "procedure": {
         "subType": "CPT",
-        "code": "99213"
+        "code": "99213",
+        "desc": "Office or other outpatient visit for the evaluation and management of an established patient, which requires a medically appropriate history and/or examination and low level of medical decision making. When using total time on the date of the encounter for code selection, 20 minutes must be met or exceeded."
       },
       "diagPointers": [
         1,
@@ -4409,15 +4764,21 @@
       "diags": [
         {
           "subType": "ICD_10_PRINCIPAL",
-          "code": "J309"
+          "code": "J309",
+          "desc": "Allergic rhinitis, unspecified",
+          "formattedCode": "J30.9"
         },
         {
           "subType": "ICD_10",
-          "code": "E785"
+          "code": "E785",
+          "desc": "Hyperlipidemia, unspecified",
+          "formattedCode": "E78.5"
         },
         {
           "subType": "ICD_10",
-          "code": "E663"
+          "code": "E663",
+          "desc": "Overweight",
+          "formattedCode": "E66.3"
         }
       ]
     },
@@ -4428,7 +4789,8 @@
       "unitCount": 1,
       "procedure": {
         "subType": "CPT",
-        "code": "96372"
+        "code": "96372",
+        "desc": "Therapeutic, prophylactic, or diagnostic injection (specify substance or drug); subcutaneous or intramuscular"
       },
       "diagPointers": [
         1,
@@ -4437,11 +4799,15 @@
       "diags": [
         {
           "subType": "ICD_10_PRINCIPAL",
-          "code": "J309"
+          "code": "J309",
+          "desc": "Allergic rhinitis, unspecified",
+          "formattedCode": "J30.9"
         },
         {
           "subType": "ICD_10",
-          "code": "E785"
+          "code": "E785",
+          "desc": "Hyperlipidemia, unspecified",
+          "formattedCode": "E78.5"
         }
       ]
     },
@@ -4452,7 +4818,8 @@
       "unitCount": 1,
       "procedure": {
         "subType": "HCPCS",
-        "code": "J3301"
+        "code": "J3301",
+        "desc": "Injection, triamcinolone acetonide, not otherwise specified, 10 mg"
       },
       "diagPointers": [
         1,
@@ -4461,17 +4828,21 @@
       "diags": [
         {
           "subType": "ICD_10_PRINCIPAL",
-          "code": "J309"
+          "code": "J309",
+          "desc": "Allergic rhinitis, unspecified",
+          "formattedCode": "J30.9"
         },
         {
           "subType": "ICD_10",
-          "code": "E785"
+          "code": "E785",
+          "desc": "Hyperlipidemia, unspecified",
+          "formattedCode": "E78.5"
         }
       ]
     }
   ],
   "transaction": {
-    "id": "680d2844be4ece52a3012438",
+    "id": "680e3211a58f4f24d3e3c291",
     "controlNumber": "0021",
     "transactionType": "PROF",
     "purposeCode": "00",
@@ -4516,7 +4887,7 @@
   }
 }
 {
-  "id": "680d2844be4ece52a30124b2",
+  "id": "680e3211a58f4f24d3e3c30b",
   "objectType": "CLAIM",
   "patientControlNumber": "CLMNO12345",
   "chargeAmount": 2232.93,
@@ -4527,7 +4898,8 @@
   "placeOfServiceType": "HOME",
   "frequencyCode": {
     "subType": "FREQUENCY_CODE",
-    "code": "1"
+    "code": "1",
+    "desc": "Original claim"
   },
   "serviceDateFrom": "2004-02-01",
   "serviceDateTo": "2004-02-07",
@@ -4594,7 +4966,9 @@
   "diags": [
     {
       "subType": "ICD_10_PRINCIPAL",
-      "code": "J069"
+      "code": "J069",
+      "desc": "Acute upper respiratory infection, unspecified",
+      "formattedCode": "J06.9"
     }
   ],
   "serviceLines": [
@@ -4608,7 +4982,8 @@
       "unitCount": 7,
       "procedure": {
         "subType": "HCPCS",
-        "code": "S9500"
+        "code": "S9500",
+        "desc": "Home infusion therapy, antibiotic, antiviral, or antifungal therapy; once every 24 hours; administrative services, professional pharmacy services, care coordination, and all necessary supplies and equipment (drugs and nursing visits coded separately), per diem"
       },
       "providers": [
         {
@@ -4626,7 +5001,9 @@
       "diags": [
         {
           "subType": "ICD_10_PRINCIPAL",
-          "code": "J069"
+          "code": "J069",
+          "desc": "Acute upper respiratory infection, unspecified",
+          "formattedCode": "J06.9"
         }
       ]
     },
@@ -4641,14 +5018,17 @@
       "unitCount": 7,
       "drug": {
         "subType": "NDC",
-        "code": "00003161201"
+        "code": "00003161201",
+        "desc": "BARACLUDE (entecavir)",
+        "formattedCode": "0003-1612-01"
       },
       "drugQuantity": 7,
       "drugUnitType": "UNIT",
       "prescriptionNumber": "2530001",
       "procedure": {
         "subType": "HCPCS",
-        "code": "S5001"
+        "code": "S5001",
+        "desc": "Prescription drug, brand name"
       },
       "providers": [
         {
@@ -4666,7 +5046,9 @@
       "diags": [
         {
           "subType": "ICD_10_PRINCIPAL",
-          "code": "J069"
+          "code": "J069",
+          "desc": "Acute upper respiratory infection, unspecified",
+          "formattedCode": "J06.9"
         }
       ]
     },
@@ -4681,14 +5063,17 @@
       "unitCount": 14,
       "drug": {
         "subType": "NDC",
-        "code": "63323025510"
+        "code": "63323025510",
+        "desc": "Methylprednisolone Sodium Succinate (METHYLPREDNISOLONE SODIUM SUCCINATE)",
+        "formattedCode": "63323-255-10"
       },
       "drugQuantity": 14,
       "drugUnitType": "UNIT",
       "prescriptionNumber": "2530001",
       "procedure": {
         "subType": "HCPCS",
-        "code": "S5000"
+        "code": "S5000",
+        "desc": "Prescription drug, generic"
       },
       "providers": [
         {
@@ -4706,7 +5091,9 @@
       "diags": [
         {
           "subType": "ICD_10_PRINCIPAL",
-          "code": "J069"
+          "code": "J069",
+          "desc": "Acute upper respiratory infection, unspecified",
+          "formattedCode": "J06.9"
         }
       ]
     },
@@ -4721,14 +5108,17 @@
       "unitCount": 7,
       "drug": {
         "subType": "NDC",
-        "code": "00338004938"
+        "code": "00338004938",
+        "desc": "Sodium Chloride (Sodium Chloride)",
+        "formattedCode": "0338-0049-38"
       },
       "drugQuantity": 7,
       "drugUnitType": "UNIT",
       "prescriptionNumber": "2530001",
       "procedure": {
         "subType": "HCPCS",
-        "code": "S5000"
+        "code": "S5000",
+        "desc": "Prescription drug, generic"
       },
       "providers": [
         {
@@ -4746,7 +5136,9 @@
       "diags": [
         {
           "subType": "ICD_10_PRINCIPAL",
-          "code": "J069"
+          "code": "J069",
+          "desc": "Acute upper respiratory infection, unspecified",
+          "formattedCode": "J06.9"
         }
       ]
     },
@@ -4761,14 +5153,17 @@
       "unitCount": 14,
       "drug": {
         "subType": "NDC",
-        "code": "08290326810"
+        "code": "08290326810",
+        "desc": "Isopropyl Alcohol (Isopropyl Alcohol)",
+        "formattedCode": "8290-3268-10"
       },
       "drugQuantity": 14,
       "drugUnitType": "UNIT",
       "prescriptionNumber": "2530002",
       "procedure": {
         "subType": "HCPCS",
-        "code": "S5000"
+        "code": "S5000",
+        "desc": "Prescription drug, generic"
       },
       "providers": [
         {
@@ -4786,7 +5181,9 @@
       "diags": [
         {
           "subType": "ICD_10_PRINCIPAL",
-          "code": "J069"
+          "code": "J069",
+          "desc": "Acute upper respiratory infection, unspecified",
+          "formattedCode": "J06.9"
         }
       ]
     },
@@ -4801,14 +5198,17 @@
       "unitCount": 7,
       "drug": {
         "subType": "NDC",
-        "code": "829080357005"
+        "code": "829080357005",
+        "desc": "AMINO ACTIVE Topical Analgesic Cream (HISTAMINE DIHYDROCHLORIDE)",
+        "formattedCode": "82908-357-05"
       },
       "drugQuantity": 7,
       "drugUnitType": "UNIT",
       "prescriptionNumber": "2530003",
       "procedure": {
         "subType": "HCPCS",
-        "code": "S5000"
+        "code": "S5000",
+        "desc": "Prescription drug, generic"
       },
       "providers": [
         {
@@ -4826,13 +5226,15 @@
       "diags": [
         {
           "subType": "ICD_10_PRINCIPAL",
-          "code": "J069"
+          "code": "J069",
+          "desc": "Acute upper respiratory infection, unspecified",
+          "formattedCode": "J06.9"
         }
       ]
     }
   ],
   "transaction": {
-    "id": "680d2844be4ece52a3012470",
+    "id": "680e3211a58f4f24d3e3c2c9",
     "controlNumber": "0711",
     "transactionType": "PROF",
     "purposeCode": "00",
@@ -4877,7 +5279,7 @@
   }
 }
 {
-  "id": "680d2844be4ece52a301255f",
+  "id": "680e3211a58f4f24d3e3c3b8",
   "objectType": "CLAIM",
   "patientControlNumber": "36463774",
   "chargeAmount": 100.00,
@@ -4889,7 +5291,8 @@
   "placeOfServiceType": "OFFICE",
   "frequencyCode": {
     "subType": "FREQUENCY_CODE",
-    "code": "1"
+    "code": "1",
+    "desc": "Original claim"
   },
   "serviceDateFrom": "2005-03-14",
   "serviceDateTo": "2006-10-10",
@@ -4989,7 +5392,8 @@
           "reasonCode": "1",
           "reason": {
             "subType": "CARC",
-            "code": "1"
+            "code": "1",
+            "desc": "Deductible Amount"
           },
           "amount": 21.89
         },
@@ -4998,7 +5402,8 @@
           "reasonCode": "2",
           "reason": {
             "subType": "CARC",
-            "code": "2"
+            "code": "2",
+            "desc": "Coinsurance Amount"
           },
           "amount": 15.00
         },
@@ -5007,7 +5412,8 @@
           "reasonCode": "26",
           "reason": {
             "subType": "CARC",
-            "code": "26"
+            "code": "26",
+            "desc": "Expenses incurred prior to coverage."
           },
           "amount": 55.00,
           "quantity": 1
@@ -5017,7 +5423,8 @@
           "reasonCode": "90",
           "reason": {
             "subType": "CARC",
-            "code": "90"
+            "code": "90",
+            "desc": "Ingredient cost adjustment. Usage: To be used for pharmaceuticals only."
           },
           "amount": 65.55,
           "quantity": 1
@@ -5027,7 +5434,8 @@
           "reasonCode": "70",
           "reason": {
             "subType": "CARC",
-            "code": "70"
+            "code": "70",
+            "desc": "Cost outlier - Adjustment to compensate for additional costs."
           },
           "amount": 73.03,
           "quantity": 2
@@ -5037,7 +5445,8 @@
           "reasonCode": "20",
           "reason": {
             "subType": "CARC",
-            "code": "20"
+            "code": "20",
+            "desc": "This injury/illness is covered by the liability carrier."
           },
           "amount": 85.15,
           "quantity": 1
@@ -5047,7 +5456,8 @@
           "reasonCode": "102",
           "reason": {
             "subType": "CARC",
-            "code": "102"
+            "code": "102",
+            "desc": "Major Medical Adjustment."
           },
           "amount": 99.99,
           "quantity": 1
@@ -5057,7 +5467,8 @@
           "reasonCode": "4",
           "reason": {
             "subType": "CARC",
-            "code": "4"
+            "code": "4",
+            "desc": "The procedure code is inconsistent with the modifier used"
           },
           "amount": 102.22,
           "quantity": 1
@@ -5067,7 +5478,8 @@
           "reasonCode": "2",
           "reason": {
             "subType": "CARC",
-            "code": "2"
+            "code": "2",
+            "desc": "Coinsurance Amount"
           },
           "amount": 25.00,
           "quantity": 1
@@ -5077,7 +5489,8 @@
           "reasonCode": "3",
           "reason": {
             "subType": "CARC",
-            "code": "3"
+            "code": "3",
+            "desc": "Co-payment Amount"
           },
           "amount": 25.55,
           "quantity": 1
@@ -5087,7 +5500,8 @@
           "reasonCode": "2",
           "reason": {
             "subType": "CARC",
-            "code": "2"
+            "code": "2",
+            "desc": "Coinsurance Amount"
           },
           "amount": 33.03,
           "quantity": 2
@@ -5097,7 +5511,8 @@
           "reasonCode": "75",
           "reason": {
             "subType": "CARC",
-            "code": "75"
+            "code": "75",
+            "desc": "Direct Medical Education Adjustment."
           },
           "amount": 45.15,
           "quantity": 1
@@ -5107,7 +5522,8 @@
           "reasonCode": "22",
           "reason": {
             "subType": "CARC",
-            "code": "22"
+            "code": "22",
+            "desc": "This care may be covered by another payer per coordination of benefits."
           },
           "amount": 59.99,
           "quantity": 1
@@ -5117,7 +5533,8 @@
           "reasonCode": "2",
           "reason": {
             "subType": "CARC",
-            "code": "2"
+            "code": "2",
+            "desc": "Coinsurance Amount"
           },
           "amount": 62.22,
           "quantity": 1
@@ -5363,27 +5780,36 @@
   "diags": [
     {
       "subType": "ICD_10_PRINCIPAL",
-      "code": "J0300"
+      "code": "J0300",
+      "desc": "Acute streptococcal tonsillitis, unspecified",
+      "formattedCode": "J03.00"
     },
     {
       "subType": "ICD_10",
-      "code": "Z1159"
+      "code": "Z1159",
+      "desc": "Encounter for screening for other viral diseases",
+      "formattedCode": "Z11.59"
     }
   ],
   "procs": [
     {
       "subType": "HCPCS_PRINCIPAL",
-      "code": "33414"
+      "code": "33414",
+      "desc": "Repair of left ventricular outflow tract obstruction by patch enlargement of the outflow tract"
     }
   ],
   "conditions": [
     {
       "subType": "CONDITION",
-      "code": "17"
+      "code": "17",
+      "desc": "PATIENT IS HOMELESS",
+      "instructionDesc": "This code indicates that the patient is homeless."
     },
     {
       "subType": "CONDITION",
-      "code": "67"
+      "code": "67",
+      "desc": "BENEFICIARY ELECTS NOT TO USE LIFETIME RESERVE (LTR) DAYS",
+      "instructionDesc": "This code indicates that the beneficiary elects not to use LTR days."
     }
   ],
   "attachments": [
@@ -5419,7 +5845,9 @@
       "unitCount": 1,
       "drug": {
         "subType": "NDC",
-        "code": "00002143481"
+        "code": "00002143481",
+        "desc": "Trulicity (Dulaglutide)",
+        "formattedCode": "0002-1434-81"
       },
       "drugQuantity": 1.01,
       "drugUnitType": "UNIT",
@@ -5504,11 +5932,15 @@
       "diags": [
         {
           "subType": "ICD_10_PRINCIPAL",
-          "code": "J0300"
+          "code": "J0300",
+          "desc": "Acute streptococcal tonsillitis, unspecified",
+          "formattedCode": "J03.00"
         },
         {
           "subType": "ICD_10",
-          "code": "Z1159"
+          "code": "Z1159",
+          "desc": "Encounter for screening for other viral diseases",
+          "formattedCode": "Z11.59"
         }
       ]
     },
@@ -5527,7 +5959,9 @@
       "diags": [
         {
           "subType": "ICD_10_PRINCIPAL",
-          "code": "J0300"
+          "code": "J0300",
+          "desc": "Acute streptococcal tonsillitis, unspecified",
+          "formattedCode": "J03.00"
         }
       ]
     },
@@ -5537,7 +5971,8 @@
       "unitCount": 1,
       "procedure": {
         "subType": "CPT",
-        "code": "99214"
+        "code": "99214",
+        "desc": "Office or other outpatient visit for the evaluation and management of an established patient, which requires a medically appropriate history and/or examination and moderate level of medical decision making. When using total time on the date of the encounter for code selection, 30 minutes must be met or exceeded."
       },
       "diagPointers": [
         2
@@ -5545,7 +5980,9 @@
       "diags": [
         {
           "subType": "ICD_10",
-          "code": "Z1159"
+          "code": "Z1159",
+          "desc": "Encounter for screening for other viral diseases",
+          "formattedCode": "Z11.59"
         }
       ]
     },
@@ -5560,7 +5997,8 @@
       },
       "procedure": {
         "subType": "CPT",
-        "code": "86663"
+        "code": "86663",
+        "desc": "Antibody; Epstein-Barr (EB) virus, early antigen (EA)"
       },
       "diagPointers": [
         2
@@ -5568,13 +6006,15 @@
       "diags": [
         {
           "subType": "ICD_10",
-          "code": "Z1159"
+          "code": "Z1159",
+          "desc": "Encounter for screening for other viral diseases",
+          "formattedCode": "Z11.59"
         }
       ]
     }
   ],
   "transaction": {
-    "id": "680d2844be4ece52a30124b5",
+    "id": "680e3211a58f4f24d3e3c30e",
     "controlNumber": "0031",
     "transactionType": "PROF",
     "purposeCode": "00",

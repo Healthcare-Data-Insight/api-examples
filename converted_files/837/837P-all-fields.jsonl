@@ -1,5 +1,5 @@
 {
-  "id": "680d2845be4ece52a301330a",
+  "id": "680e3211a58f4f24d3e3c512",
   "objectType": "CLAIM",
   "patientControlNumber": "36463774",
   "chargeAmount": 100.00,
@@ -11,7 +11,8 @@
   "placeOfServiceType": "OFFICE",
   "frequencyCode": {
     "subType": "FREQUENCY_CODE",
-    "code": "1"
+    "code": "1",
+    "desc": "Original claim"
   },
   "serviceDateFrom": "2005-03-14",
   "serviceDateTo": "2006-10-10",
@@ -111,7 +112,8 @@
           "reasonCode": "1",
           "reason": {
             "subType": "CARC",
-            "code": "1"
+            "code": "1",
+            "desc": "Deductible Amount"
           },
           "amount": 21.89
         },
@@ -120,7 +122,8 @@
           "reasonCode": "2",
           "reason": {
             "subType": "CARC",
-            "code": "2"
+            "code": "2",
+            "desc": "Coinsurance Amount"
           },
           "amount": 15.00
         },
@@ -129,7 +132,8 @@
           "reasonCode": "26",
           "reason": {
             "subType": "CARC",
-            "code": "26"
+            "code": "26",
+            "desc": "Expenses incurred prior to coverage."
           },
           "amount": 55.00,
           "quantity": 1
@@ -139,7 +143,8 @@
           "reasonCode": "90",
           "reason": {
             "subType": "CARC",
-            "code": "90"
+            "code": "90",
+            "desc": "Ingredient cost adjustment. Usage: To be used for pharmaceuticals only."
           },
           "amount": 65.55,
           "quantity": 1
@@ -149,7 +154,8 @@
           "reasonCode": "70",
           "reason": {
             "subType": "CARC",
-            "code": "70"
+            "code": "70",
+            "desc": "Cost outlier - Adjustment to compensate for additional costs."
           },
           "amount": 73.03,
           "quantity": 2
@@ -159,7 +165,8 @@
           "reasonCode": "20",
           "reason": {
             "subType": "CARC",
-            "code": "20"
+            "code": "20",
+            "desc": "This injury/illness is covered by the liability carrier."
           },
           "amount": 85.15,
           "quantity": 1
@@ -169,7 +176,8 @@
           "reasonCode": "102",
           "reason": {
             "subType": "CARC",
-            "code": "102"
+            "code": "102",
+            "desc": "Major Medical Adjustment."
           },
           "amount": 99.99,
           "quantity": 1
@@ -179,7 +187,8 @@
           "reasonCode": "4",
           "reason": {
             "subType": "CARC",
-            "code": "4"
+            "code": "4",
+            "desc": "The procedure code is inconsistent with the modifier used"
           },
           "amount": 102.22,
           "quantity": 1
@@ -189,7 +198,8 @@
           "reasonCode": "2",
           "reason": {
             "subType": "CARC",
-            "code": "2"
+            "code": "2",
+            "desc": "Coinsurance Amount"
           },
           "amount": 25.00,
           "quantity": 1
@@ -199,7 +209,8 @@
           "reasonCode": "3",
           "reason": {
             "subType": "CARC",
-            "code": "3"
+            "code": "3",
+            "desc": "Co-payment Amount"
           },
           "amount": 25.55,
           "quantity": 1
@@ -209,7 +220,8 @@
           "reasonCode": "2",
           "reason": {
             "subType": "CARC",
-            "code": "2"
+            "code": "2",
+            "desc": "Coinsurance Amount"
           },
           "amount": 33.03,
           "quantity": 2
@@ -219,7 +231,8 @@
           "reasonCode": "75",
           "reason": {
             "subType": "CARC",
-            "code": "75"
+            "code": "75",
+            "desc": "Direct Medical Education Adjustment."
           },
           "amount": 45.15,
           "quantity": 1
@@ -229,7 +242,8 @@
           "reasonCode": "22",
           "reason": {
             "subType": "CARC",
-            "code": "22"
+            "code": "22",
+            "desc": "This care may be covered by another payer per coordination of benefits."
           },
           "amount": 59.99,
           "quantity": 1
@@ -239,7 +253,8 @@
           "reasonCode": "2",
           "reason": {
             "subType": "CARC",
-            "code": "2"
+            "code": "2",
+            "desc": "Coinsurance Amount"
           },
           "amount": 62.22,
           "quantity": 1
@@ -485,27 +500,36 @@
   "diags": [
     {
       "subType": "ICD_10_PRINCIPAL",
-      "code": "J0300"
+      "code": "J0300",
+      "desc": "Acute streptococcal tonsillitis, unspecified",
+      "formattedCode": "J03.00"
     },
     {
       "subType": "ICD_10",
-      "code": "Z1159"
+      "code": "Z1159",
+      "desc": "Encounter for screening for other viral diseases",
+      "formattedCode": "Z11.59"
     }
   ],
   "procs": [
     {
       "subType": "HCPCS_PRINCIPAL",
-      "code": "33414"
+      "code": "33414",
+      "desc": "Repair of left ventricular outflow tract obstruction by patch enlargement of the outflow tract"
     }
   ],
   "conditions": [
     {
       "subType": "CONDITION",
-      "code": "17"
+      "code": "17",
+      "desc": "PATIENT IS HOMELESS",
+      "instructionDesc": "This code indicates that the patient is homeless."
     },
     {
       "subType": "CONDITION",
-      "code": "67"
+      "code": "67",
+      "desc": "BENEFICIARY ELECTS NOT TO USE LIFETIME RESERVE (LTR) DAYS",
+      "instructionDesc": "This code indicates that the beneficiary elects not to use LTR days."
     }
   ],
   "attachments": [
@@ -541,7 +565,9 @@
       "unitCount": 1,
       "drug": {
         "subType": "NDC",
-        "code": "00002143481"
+        "code": "00002143481",
+        "desc": "Trulicity (Dulaglutide)",
+        "formattedCode": "0002-1434-81"
       },
       "drugQuantity": 1.01,
       "drugUnitType": "UNIT",
@@ -626,11 +652,15 @@
       "diags": [
         {
           "subType": "ICD_10_PRINCIPAL",
-          "code": "J0300"
+          "code": "J0300",
+          "desc": "Acute streptococcal tonsillitis, unspecified",
+          "formattedCode": "J03.00"
         },
         {
           "subType": "ICD_10",
-          "code": "Z1159"
+          "code": "Z1159",
+          "desc": "Encounter for screening for other viral diseases",
+          "formattedCode": "Z11.59"
         }
       ]
     },
@@ -649,7 +679,9 @@
       "diags": [
         {
           "subType": "ICD_10_PRINCIPAL",
-          "code": "J0300"
+          "code": "J0300",
+          "desc": "Acute streptococcal tonsillitis, unspecified",
+          "formattedCode": "J03.00"
         }
       ]
     },
@@ -659,7 +691,8 @@
       "unitCount": 1,
       "procedure": {
         "subType": "CPT",
-        "code": "99214"
+        "code": "99214",
+        "desc": "Office or other outpatient visit for the evaluation and management of an established patient, which requires a medically appropriate history and/or examination and moderate level of medical decision making. When using total time on the date of the encounter for code selection, 30 minutes must be met or exceeded."
       },
       "diagPointers": [
         2
@@ -667,7 +700,9 @@
       "diags": [
         {
           "subType": "ICD_10",
-          "code": "Z1159"
+          "code": "Z1159",
+          "desc": "Encounter for screening for other viral diseases",
+          "formattedCode": "Z11.59"
         }
       ]
     },
@@ -682,7 +717,8 @@
       },
       "procedure": {
         "subType": "CPT",
-        "code": "86663"
+        "code": "86663",
+        "desc": "Antibody; Epstein-Barr (EB) virus, early antigen (EA)"
       },
       "diagPointers": [
         2
@@ -690,13 +726,15 @@
       "diags": [
         {
           "subType": "ICD_10",
-          "code": "Z1159"
+          "code": "Z1159",
+          "desc": "Encounter for screening for other viral diseases",
+          "formattedCode": "Z11.59"
         }
       ]
     }
   ],
   "transaction": {
-    "id": "680d2845be4ece52a3013260",
+    "id": "680e3211a58f4f24d3e3c468",
     "controlNumber": "0031",
     "transactionType": "PROF",
     "purposeCode": "00",
