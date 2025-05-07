@@ -1,0 +1,574 @@
+[
+ {
+  "id" : "681aba343f8b9e0e00d740e2",
+  "objectType" : "CLAIM",
+  "patientControlNumber" : "26403774",
+  "chargeAmount" : 150.00,
+  "patientPaidAmount" : 152.45,
+  "facilityCode" : {
+    "subType" : "PLACE_OF_SERVICE",
+    "code" : "11"
+  },
+  "placeOfServiceType" : "OFFICE",
+  "frequencyCode" : {
+    "subType" : "FREQUENCY_CODE",
+    "code" : "1"
+  },
+  "serviceDateFrom" : "2023-03-01",
+  "serviceDateTo" : "2023-04-01",
+  "subscriber" : {
+    "payerResponsibilitySequence" : "PRIMARY",
+    "relationshipType" : "SELF",
+    "claimFilingIndicatorCode" : "CI",
+    "insurancePlanType" : "COMMERCIAL",
+    "person" : {
+      "entityRole" : "SUBSCRIBER",
+      "entityType" : "INDIVIDUAL",
+      "identificationType" : "MEMBER_ID",
+      "identifier" : "111223333",
+      "taxId" : "123450000",
+      "lastNameOrOrgName" : "SMITH",
+      "firstName" : "JANE",
+      "birthDate" : "1943-05-01",
+      "gender" : "FEMALE",
+      "address" : {
+        "line" : "236 N MAIN ST",
+        "city" : "MIAMI",
+        "stateCode" : "FL",
+        "zipCode" : "33413"
+      }
+    },
+    "payer" : {
+      "entityRole" : "PAYER",
+      "entityType" : "BUSINESS",
+      "identificationType" : "PAYOR_ID",
+      "identifier" : "66783JJT",
+      "taxId" : "435261708",
+      "lastNameOrOrgName" : "INSURANCE COMPANY XYZ",
+      "address" : {
+        "line" : "P.O. BOX 569008",
+        "city" : "MIAMI",
+        "stateCode" : "FL",
+        "zipCode" : "332560000"
+      },
+      "additionalIds" : [ {
+        "qualifierCode" : "2U",
+        "type" : "PAYER_IDENTIFICATION_NUMBER",
+        "identification" : "435261708"
+      }, {
+        "qualifierCode" : "LU",
+        "type" : "LOCATION_NUMBER",
+        "identification" : "12345"
+      } ]
+    }
+  },
+  "patient" : {
+    "relationshipType" : "CHILD",
+    "person" : {
+      "entityRole" : "PATIENT",
+      "entityType" : "INDIVIDUAL",
+      "lastNameOrOrgName" : "SMITH",
+      "firstName" : "TED",
+      "birthDate" : "1992-05-01",
+      "gender" : "MALE",
+      "address" : {
+        "line" : "236 N MAIN ST",
+        "city" : "MIAMI",
+        "stateCode" : "FL",
+        "zipCode" : "33413"
+      }
+    }
+  },
+  "otherSubscribers" : [ {
+    "payerResponsibilitySequence" : "PRIMARY",
+    "relationshipType" : "SELF",
+    "groupOrPolicyNumber" : "000000",
+    "groupName" : "PLAN NAME",
+    "claimFilingIndicatorCode" : "MB",
+    "insurancePlanType" : "MEDICARE_B",
+    "person" : {
+      "entityRole" : "SUBSCRIBER",
+      "entityType" : "INDIVIDUAL",
+      "identificationType" : "MEMBER_ID",
+      "identifier" : "JS00111223999",
+      "lastNameOrOrgName" : "SMITH",
+      "firstName" : "JOHN",
+      "address" : {
+        "line" : "239 N MAIN ST",
+        "city" : "MIAMI",
+        "stateCode" : "FL",
+        "zipCode" : "33415"
+      }
+    },
+    "adjustments" : [ {
+      "group" : "PATIENT_RESPONSIBILITY",
+      "reasonCode" : "1",
+      "reason" : {
+        "subType" : "CARC",
+        "code" : "1"
+      },
+      "amount" : 21.89
+    }, {
+      "group" : "PATIENT_RESPONSIBILITY",
+      "reasonCode" : "2",
+      "reason" : {
+        "subType" : "CARC",
+        "code" : "2"
+      },
+      "amount" : 15.00
+    }, {
+      "group" : "CORRECTION",
+      "reasonCode" : "26",
+      "reason" : {
+        "subType" : "CARC",
+        "code" : "26"
+      },
+      "amount" : 55.00,
+      "quantity" : 1
+    } ],
+    "payerPaidAmount" : 59.19,
+    "nonCoveredAmount" : 273.00,
+    "remainingPatientLiabilityAmount" : 14.83,
+    "payerClaimControlNumber" : "OtherPayerClaimControlNum",
+    "payer" : {
+      "entityRole" : "PAYER",
+      "entityType" : "BUSINESS",
+      "identificationType" : "PAYOR_ID",
+      "identifier" : "OtherPayerPredeterminationOfBenefitsID",
+      "taxId" : "OtherPayerTin",
+      "lastNameOrOrgName" : "OTHER PAYER",
+      "address" : {
+        "line" : "PO BOX 7901",
+        "line2" : "DEP 2",
+        "city" : "MADISON",
+        "stateCode" : "MA",
+        "zipCode" : "53707"
+      },
+      "additionalIds" : [ {
+        "qualifierCode" : "FY",
+        "type" : "CLAIM_OFFICE_NUMBER",
+        "identification" : "OtherPayerSecondaryClaimOfficeNum"
+      }, {
+        "qualifierCode" : "2U",
+        "type" : "PAYER_IDENTIFICATION_NUMBER",
+        "identification" : "OtherPayerSecondaryId"
+      } ]
+    },
+    "providers" : [ {
+      "entityRole" : "REFERRING",
+      "entityType" : "INDIVIDUAL",
+      "additionalIds" : [ {
+        "qualifierCode" : "G2",
+        "type" : "PROVIDER_COMMERCIAL_NUMBER",
+        "identification" : "12345"
+      } ]
+    }, {
+      "entityRole" : "RENDERING",
+      "entityType" : "INDIVIDUAL",
+      "additionalIds" : [ {
+        "qualifierCode" : "G2",
+        "type" : "PROVIDER_COMMERCIAL_NUMBER",
+        "identification" : "12345"
+      } ]
+    }, {
+      "entityRole" : "SUPERVISING",
+      "entityType" : "INDIVIDUAL",
+      "additionalIds" : [ {
+        "qualifierCode" : "G2",
+        "type" : "PROVIDER_COMMERCIAL_NUMBER",
+        "identification" : "12345"
+      } ]
+    }, {
+      "entityRole" : "BILLING_PROVIDER",
+      "entityType" : "INDIVIDUAL",
+      "additionalIds" : [ {
+        "qualifierCode" : "G2",
+        "type" : "PROVIDER_COMMERCIAL_NUMBER",
+        "identification" : "12345"
+      } ]
+    }, {
+      "entityRole" : "SERVICE_FACILITY",
+      "entityType" : "INDIVIDUAL",
+      "additionalIds" : [ {
+        "qualifierCode" : "G2",
+        "type" : "PROVIDER_COMMERCIAL_NUMBER",
+        "identification" : "12345"
+      } ]
+    }, {
+      "entityRole" : "ASSISTANT_SURGEON",
+      "entityType" : "INDIVIDUAL",
+      "additionalIds" : [ {
+        "qualifierCode" : "G2",
+        "type" : "PROVIDER_COMMERCIAL_NUMBER",
+        "identification" : "12345"
+      } ]
+    } ]
+  } ],
+  "providerSignatureIndicator" : "Y",
+  "assignmentParticipationCode" : "A",
+  "assignmentCertificationIndicator" : "Y",
+  "releaseOfInformationCode" : "I",
+  "referralNumber" : "Referral",
+  "priorAuthorizationNumber" : "priorAuth",
+  "repricedReferenceNumber" : "RepricedClaimNumber",
+  "adjustedRepricedReferenceNumber" : "AdjustedRepricedClaimNumber",
+  "accidentDate" : "2023-03-01",
+  "orthodonticBandingDate" : "2023-03-02",
+  "repricerReceivedDate" : "2023-03-04",
+  "orthodonticInfo" : {
+    "treatmentMonthsCount" : 36.00,
+    "treatmentMonthsRemainingCount" : 27.00,
+    "treatmentIndicator" : "Y"
+  },
+  "toothStatuses" : [ {
+    "toothNumber" : "8",
+    "statusCode" : "E"
+  }, {
+    "toothNumber" : "9",
+    "statusCode" : "M"
+  }, {
+    "toothNumber" : "12",
+    "statusCode" : "M"
+  } ],
+  "clearinghouseTraceNumber" : "ClearinghouseTraceNumber",
+  "originalReferenceNumber" : "payerClaimControlNumber",
+  "serviceAuthorizationExceptionCode" : "serviceAuthorizationException",
+  "predeterminationOfBenefitsIdentifier" : "PredeterminationOfBenefitsId",
+  "fixedFormatRecords" : [ "Record1", "Record2" ],
+  "claimNote" : "Note1\nNote2",
+  "billingProvider" : {
+    "entityRole" : "BILLING_PROVIDER",
+    "entityType" : "BUSINESS",
+    "identificationType" : "NPI",
+    "identifier" : "1234567890",
+    "taxId" : "587654321",
+    "lastNameOrOrgName" : "DENTAL ASSOCIATES",
+    "address" : {
+      "line" : "234 SEAWAY ST",
+      "city" : "MIAMI",
+      "stateCode" : "FL",
+      "zipCode" : "33111"
+    },
+    "providerTaxonomy" : {
+      "subType" : "PROVIDER_TAXONOMY",
+      "code" : "1223G0001X"
+    }
+  },
+  "providers" : [ {
+    "entityRole" : "REFERRING",
+    "entityType" : "INDIVIDUAL",
+    "identificationType" : "NPI",
+    "identifier" : "5234567805",
+    "lastNameOrOrgName" : "DOE",
+    "firstName" : "JONE",
+    "middleName" : "C",
+    "additionalIds" : [ {
+      "qualifierCode" : "G2",
+      "type" : "PROVIDER_COMMERCIAL_NUMBER",
+      "identification" : "12345"
+    } ]
+  }, {
+    "entityRole" : "RENDERING",
+    "entityType" : "INDIVIDUAL",
+    "identificationType" : "NPI",
+    "identifier" : "1234567804",
+    "lastNameOrOrgName" : "DOE",
+    "firstName" : "JANE",
+    "middleName" : "C",
+    "providerTaxonomy" : {
+      "subType" : "PROVIDER_TAXONOMY",
+      "code" : "000000000X"
+    },
+    "additionalIds" : [ {
+      "qualifierCode" : "LU",
+      "type" : "LOCATION_NUMBER",
+      "identification" : "12345"
+    } ]
+  }, {
+    "entityRole" : "SERVICE_FACILITY",
+    "entityType" : "BUSINESS",
+    "identificationType" : "NPI",
+    "identifier" : "000000004",
+    "lastNameOrOrgName" : "Service Facility",
+    "address" : {
+      "line" : "123 FAKE STREET",
+      "city" : "CITY",
+      "stateCode" : "ST",
+      "zipCode" : "123459999"
+    },
+    "additionalIds" : [ {
+      "qualifierCode" : "G2",
+      "type" : "PROVIDER_COMMERCIAL_NUMBER",
+      "identification" : "12345"
+    } ]
+  }, {
+    "entityRole" : "ASSISTANT_SURGEON",
+    "entityType" : "INDIVIDUAL",
+    "identificationType" : "NPI",
+    "identifier" : "1234567809",
+    "lastNameOrOrgName" : "DOE",
+    "firstName" : "SURGEON",
+    "middleName" : "C",
+    "providerTaxonomy" : {
+      "subType" : "PROVIDER_TAXONOMY",
+      "code" : "000000000X"
+    },
+    "additionalIds" : [ {
+      "qualifierCode" : "LU",
+      "type" : "LOCATION_NUMBER",
+      "identification" : "12349"
+    } ]
+  }, {
+    "entityRole" : "SUPERVISING",
+    "entityType" : "INDIVIDUAL",
+    "identificationType" : "NPI",
+    "identifier" : "SupProv",
+    "lastNameOrOrgName" : "Sup",
+    "firstName" : "JONE",
+    "middleName" : "C",
+    "additionalIds" : [ {
+      "qualifierCode" : "G2",
+      "type" : "PROVIDER_COMMERCIAL_NUMBER",
+      "identification" : "12345"
+    } ]
+  } ],
+  "diags" : [ {
+    "subType" : "ICD_10_PRINCIPAL",
+    "code" : "J0300"
+  }, {
+    "subType" : "ICD_10",
+    "code" : "Z1159"
+  } ],
+  "attachments" : [ {
+    "reportTypeCode" : "OZ",
+    "reportTransmissionCode" : "BM",
+    "controlNumber" : "DENT22"
+  } ],
+  "serviceLines" : [ {
+    "sourceLineId" : "ControlNumber",
+    "placeOfServiceType" : "URGENT_CARE",
+    "placeOfServiceCode" : "20",
+    "oralCavityDesignationCodes" : [ "C1", "C2" ],
+    "prosthesisCrownOrInlayCode" : "R",
+    "predeterminationOfBenefitsIdentifier" : "LinePredeterminationOfBenefitsId",
+    "repricedReferenceNumber" : "LineRepricedClaimNumber",
+    "adjustedRepricedReferenceNumber" : "LineAdjustedRepricedClaimNumber",
+    "priorAuthorization" : "LinePriorAuth",
+    "referralNumber" : "LineReferral",
+    "chargeAmount" : 100.00,
+    "salesTaxAmount" : 45.00,
+    "priorPlacementDate" : "2023-04-01",
+    "orthodonticBandingDate" : "2023-04-02",
+    "replacementDate" : "2023-04-03",
+    "treatmentStartDate" : "2023-04-04",
+    "treatmentCompletionDate" : "2023-04-05",
+    "unitCount" : 1,
+    "procedure" : {
+      "subType" : "ADA",
+      "code" : "D2150"
+    },
+    "providers" : [ {
+      "entityRole" : "RENDERING",
+      "entityType" : "INDIVIDUAL",
+      "identificationType" : "NPI",
+      "identifier" : "1234567804",
+      "lastNameOrOrgName" : "DOE",
+      "firstName" : "JANE",
+      "middleName" : "C",
+      "providerTaxonomy" : {
+        "subType" : "PROVIDER_TAXONOMY",
+        "code" : "000000000X"
+      },
+      "additionalIds" : [ {
+        "qualifierCode" : "LU",
+        "type" : "LOCATION_NUMBER",
+        "identification" : "12345"
+      } ]
+    }, {
+      "entityRole" : "ASSISTANT_SURGEON",
+      "entityType" : "INDIVIDUAL",
+      "identificationType" : "NPI",
+      "identifier" : "1234567809",
+      "lastNameOrOrgName" : "DOE",
+      "firstName" : "SURGEON",
+      "middleName" : "C",
+      "providerTaxonomy" : {
+        "subType" : "PROVIDER_TAXONOMY",
+        "code" : "000000000X"
+      },
+      "additionalIds" : [ {
+        "qualifierCode" : "LU",
+        "type" : "LOCATION_NUMBER",
+        "identification" : "12349"
+      } ]
+    }, {
+      "entityRole" : "SUPERVISING",
+      "entityType" : "INDIVIDUAL",
+      "identificationType" : "NPI",
+      "identifier" : "SupProv",
+      "lastNameOrOrgName" : "Sup",
+      "firstName" : "JONE",
+      "middleName" : "C",
+      "additionalIds" : [ {
+        "qualifierCode" : "G2",
+        "type" : "PROVIDER_COMMERCIAL_NUMBER",
+        "identification" : "12345"
+      } ]
+    }, {
+      "entityRole" : "SERVICE_FACILITY",
+      "entityType" : "BUSINESS",
+      "identificationType" : "NPI",
+      "identifier" : "000000004",
+      "lastNameOrOrgName" : "Service Facility",
+      "address" : {
+        "line" : "123 FAKE STREET",
+        "city" : "CITY",
+        "stateCode" : "ST",
+        "zipCode" : "123459999"
+      },
+      "additionalIds" : [ {
+        "qualifierCode" : "1G",
+        "type" : "PROVIDER_UPIN_NUMBER",
+        "identification" : "12345"
+      } ]
+    } ],
+    "adjudications" : [ {
+      "payerIdentifier" : "43",
+      "paidAmount" : 55.00,
+      "unitCount" : 1.00,
+      "bundledOrUnbundledLineNumber" : 2,
+      "procedure" : {
+        "subType" : "ADA",
+        "code" : "D0330"
+      },
+      "adjustments" : [ {
+        "group" : "PATIENT_RESPONSIBILITY",
+        "reasonCode" : "1",
+        "reason" : {
+          "subType" : "CARC",
+          "code" : "1"
+        },
+        "amount" : 21.89
+      }, {
+        "group" : "PATIENT_RESPONSIBILITY",
+        "reasonCode" : "2",
+        "reason" : {
+          "subType" : "CARC",
+          "code" : "2"
+        },
+        "amount" : 15.00
+      }, {
+        "group" : "CORRECTION",
+        "reasonCode" : "26",
+        "reason" : {
+          "subType" : "CARC",
+          "code" : "26"
+        },
+        "amount" : 55.00,
+        "quantity" : 1
+      }, {
+        "group" : "CORRECTION",
+        "reasonCode" : "90",
+        "reason" : {
+          "subType" : "CARC",
+          "code" : "90"
+        },
+        "amount" : 65.55
+      } ],
+      "adjudicationOrPaymentDate" : "2023-06-03",
+      "remainingPatientLiabilityAmount" : 75.00
+    }, {
+      "payerIdentifier" : "22",
+      "paidAmount" : 50.00,
+      "unitCount" : 1.00,
+      "bundledOrUnbundledLineNumber" : 1,
+      "procedure" : {
+        "subType" : "ADA",
+        "code" : "D0330"
+      },
+      "adjustments" : [ {
+        "group" : "PATIENT_RESPONSIBILITY",
+        "reasonCode" : "1",
+        "reason" : {
+          "subType" : "CARC",
+          "code" : "1"
+        },
+        "amount" : 21.89
+      }, {
+        "group" : "PATIENT_RESPONSIBILITY",
+        "reasonCode" : "2",
+        "reason" : {
+          "subType" : "CARC",
+          "code" : "2"
+        },
+        "amount" : 15.00
+      } ],
+      "adjudicationOrPaymentDate" : "2023-06-04",
+      "remainingPatientLiabilityAmount" : 76.00
+    } ],
+    "fixedFormatRecords" : [ "LineRecord1", "LineRecord2" ],
+    "toothInfos" : [ {
+      "code" : "12",
+      "surfaceCodes" : [ "M" ]
+    }, {
+      "code" : "11",
+      "surfaceCodes" : [ "F", "L", "I" ]
+    } ],
+    "diagPointers" : [ 1, 2 ],
+    "diags" : [ {
+      "subType" : "ICD_10_PRINCIPAL",
+      "code" : "J0300"
+    }, {
+      "subType" : "ICD_10",
+      "code" : "Z1159"
+    } ]
+  }, {
+    "chargeAmount" : 50.00,
+    "unitCount" : 1,
+    "procedure" : {
+      "subType" : "ADA",
+      "code" : "D1110"
+    }
+  } ],
+  "transaction" : {
+    "id" : "681aba333f8b9e0e00d7404e",
+    "controlNumber" : "3456",
+    "transactionType" : "DENTAL",
+    "purposeCode" : "00",
+    "originatorApplicationTransactionId" : "0123",
+    "creationDate" : "2006-11-23",
+    "creationTime" : "10:23:00",
+    "claimOrEncounterIdentifierType" : "CHARGEABLE",
+    "transactionSetIdentifierCode" : "837",
+    "implementationConventionReference" : "005010X224",
+    "fileInfo" : {
+      "name" : "837d-all-fields.dat",
+      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/claiminsight/clinsight/data_files/claims/in/comprehensive_test_files/837d-all-fields.dat",
+      "lastModifiedDateTime" : "2025-05-06T18:45:51.852-04:00",
+      "fileType" : "EDI"
+    },
+    "sender" : {
+      "entityRole" : "SUBMITTER",
+      "entityType" : "BUSINESS",
+      "identificationType" : "ETIN",
+      "identifier" : "TGJ23",
+      "lastNameOrOrgName" : "PREMIER BILLING SERVICE",
+      "contacts" : [ {
+        "name" : "JERRY",
+        "contactNumbers" : [ {
+          "type" : "PHONE",
+          "number" : "7176149999"
+        } ]
+      } ]
+    },
+    "receiver" : {
+      "entityRole" : "RECEIVER",
+      "entityType" : "BUSINESS",
+      "identificationType" : "ETIN",
+      "identifier" : "66783JJT",
+      "lastNameOrOrgName" : "INSURANCE COMPANY XYZ"
+    },
+    "creationDateTime" : "2006-11-23T10:23:00"
+  }
+}
+ ]
