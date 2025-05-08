@@ -15,6 +15,8 @@
       repeatFields: [ Id, PatientControlNumber ]
       # Repeat these fields from the repeatFields on every row for child lists
       repeatEachRow: [ "*" ]
+      # By default, the claim-level list doesn't have a suffix, but you can override it here
+      #fileSuffix: Claims
 
     # Schema for the service line list
     - names: [ Lines ]
@@ -102,6 +104,7 @@
       repeatFields: [ Id, PatientControlNumber, PayerControlNumber ]
       # Repeat these fields from the repeatFields on every row for child lists
       repeatEachRow: [ "*" ]
+      #fileSuffix: Payments
 
     # Schema for the line list
     - names: [ Lines ]
