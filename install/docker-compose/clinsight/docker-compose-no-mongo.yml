@@ -1,0 +1,25 @@
+# Used for the demo
+services:
+#  mongo:
+#    image: mongo:7.0.7
+#    restart: always
+#    volumes:
+#      - /opt/mongo_data:/data/db
+#    ports:
+#      - "127.0.0.1:27017:27017"
+  app:
+    image: repo.datainsight.health/claim-insight:2.13
+    restart: always
+#    environment:
+#      - mongodb_host=mongo
+#    depends_on:
+#      - mongo
+    volumes:
+      - ./uploads:/app/uploads
+      - ./load:/app/load
+      - ./etc:/app/etc
+    ports:
+      - "5080:5080"
+    # if you don't want to use mongo db container, define the host with mongo db here
+    extra_hosts:
+      - "mongo:host-gateway"

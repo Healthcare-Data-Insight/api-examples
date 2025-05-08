@@ -1,0 +1,21 @@
+# ClaimInsight app with MongoDB
+services:
+  mongo:
+    image: mongo:7
+    restart: always
+    volumes:
+      - ./mongo_data:/data/db
+# Uncomment if you need to connect to MongoDB from your host
+#    ports:
+#      - "27017:27017"
+  app:
+    image: repo.datainsight.health/claim-insight:2.13
+    restart: always
+    depends_on:
+      - mongo
+    volumes:
+      - ./uploads:/app/uploads
+      - ./load:/app/load
+      - ./etc:/app/etc
+    ports:
+      - "5080:5080"
