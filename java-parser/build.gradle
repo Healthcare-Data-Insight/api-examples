@@ -12,14 +12,14 @@ repositories {
 }
 
 dependencies {
-    implementation 'hdi:edi:2.12.2'
+    implementation 'hdi:edi:2.13.1'
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.18.+'
 
     testImplementation 'junit:junit:4.+'
     testImplementation 'org.assertj:assertj-core:3.27.3'
 
     // lombok is used only in tests, you can run the parser without this dependency
-    def lombok = 'org.projectlombok:lombok:1.18.36'
+    def lombok = 'org.projectlombok:lombok:1.18.38'
     testCompileOnly lombok
     testAnnotationProcessor lombok
 }
