@@ -1,6 +1,6 @@
 [
  {
-  "id" : "681aba343f8b9e0e00d740e2",
+  "id" : "681b8c9035f84e2137ad6663",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26403774",
   "chargeAmount" : 150.00,
@@ -129,6 +129,9 @@
     "payerPaidAmount" : 59.19,
     "nonCoveredAmount" : 273.00,
     "remainingPatientLiabilityAmount" : 14.83,
+    "payerPriorAuthorizationNumber" : "OtherPayerPriorAuthNum",
+    "payerReferralNumber" : "OtherPayerReferralNum",
+    "payerPredeterminationOfBenefitsIdentifier" : "OtherPayerPredeterminationOfBenefitsID",
     "payerClaimControlNumber" : "OtherPayerClaimControlNum",
     "payer" : {
       "entityRole" : "PAYER",
@@ -161,6 +164,10 @@
         "qualifierCode" : "G2",
         "type" : "PROVIDER_COMMERCIAL_NUMBER",
         "identification" : "12345"
+      }, {
+        "qualifierCode" : "0B",
+        "type" : "STATE_LICENSE_NUMBER",
+        "identification" : "StateLicenseNumber"
       } ]
     }, {
       "entityRole" : "RENDERING",
@@ -531,7 +538,7 @@
     }
   } ],
   "transaction" : {
-    "id" : "681aba333f8b9e0e00d7404e",
+    "id" : "681b8c9035f84e2137ad65ce",
     "controlNumber" : "3456",
     "transactionType" : "DENTAL",
     "purposeCode" : "00",
@@ -542,9 +549,9 @@
     "transactionSetIdentifierCode" : "837",
     "implementationConventionReference" : "005010X224",
     "fileInfo" : {
-      "name" : "837d-all-fields.dat",
-      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/claiminsight/clinsight/data_files/claims/in/comprehensive_test_files/837d-all-fields.dat",
-      "lastModifiedDateTime" : "2025-05-06T18:45:51.852-04:00",
+      "name" : "837D-all-fields.dat",
+      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/claiminsight/clinsight/data_files/claims/in/comprehensive_test_files/837D-all-fields.dat",
+      "lastModifiedDateTime" : "2025-05-07T12:28:55.701-04:00",
       "fileType" : "EDI"
     },
     "sender" : {

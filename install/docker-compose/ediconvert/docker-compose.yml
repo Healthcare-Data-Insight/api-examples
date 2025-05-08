@@ -1,6 +1,6 @@
 services:
   ediconvert:
-    image: repo.datainsight.health/ediconvert:2.12
+    image: repo.datainsight.health/ediconvert:2.13
     restart: always
       # environment:
       # you can provide your license key as a variable instead of saving the license file to the etc. volume. Copy the key from edi-license.txt and paste it here
