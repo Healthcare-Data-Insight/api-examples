@@ -12,15 +12,15 @@ import java.math.BigDecimal;
 public class AdditionalItemData {
     public static EdiObjectMapper<AdditionalItemData> mapper = new EdiObjectMapper<>();
 
-    @EdiElt(segType = "IT3", pos = 1)
+    @EdiElt(seg = "IT3", pos = 1)
     private BigDecimal numberOfUnits;
-    @EdiElt(segType = "IT3", pos = 2)
+    @EdiElt(seg = "IT3", pos = 2)
     private String unitTypeCode;
-    @EdiElt(segType = "IT3", pos = 3)
+    @EdiElt(seg = "IT3", pos = 3)
     private String statusCode;
-    @EdiElt(segType = "IT3", pos = 4)
+    @EdiElt(seg = "IT3", pos = 4)
     private BigDecimal quantityDifference;
-    @EdiElt(segType = "IT3", pos = 5)
+    @EdiElt(seg = "IT3", pos = 5)
     private String changeReasonCode;
 
 }

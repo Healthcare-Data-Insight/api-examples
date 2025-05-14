@@ -54,7 +54,7 @@ public class PaymentParsingExample implements ParsingExampleHelper {
     public void parseInBatches() {
         var ediFile = new File(EDI_FILES_DIR + "/835/dollars_data_separate.dat");
         int count = 0;
-        try (var parser = new EdiParser(ediFile)) {
+        try (var parser = new EdiParser(ediFile).isSplitMode(true)) {
             while (true) {
                 // parse one payment at a time. In real life, use 200-500 as the optimal batch size
                 var payments = parser.parse835(1);

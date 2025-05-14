@@ -16,6 +16,6 @@ public class InvoiceHeader {
 
     private LocalDate date;
     private String invoiceNumber;
-    @EdiElt(segType = "BIG", pos = 4)
+    @EdiElt(seg = "BIG", pos = 4)
     private String purchaseOrderNumber;
 }

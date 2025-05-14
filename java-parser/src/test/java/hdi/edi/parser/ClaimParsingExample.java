@@ -58,7 +58,7 @@ public class ClaimParsingExample implements ParsingExampleHelper {
     public void parseInBatches() {
         var ediFile = new File(EDI_FILES_DIR + "/837/multi-tran.dat");
         int claimCount = 0;
-        try (var parser = new EdiParser(ediFile)) {
+        try (var parser = new EdiParser(ediFile).isSplitMode(true)) {
             while (true) {
                 // parse two claims at a time. In real life, use 200-500 as the optimal batch size
                 var claims = parser.parse837(2);
