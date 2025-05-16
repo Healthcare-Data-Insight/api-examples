@@ -535,7 +535,7 @@
       "transactionSetIdentifierCode": "PAYMENT",
       "fileInfo": {
         "name": "835-all-fields.dat",
-        "url": "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/835/835-all-fields.dat",
+        "url": "file:./835-all-fields.dat",
         "lastModifiedDateTime": "2025-02-28T13:00:41.379-05:00",
         "fileType": "EDI"
       },
