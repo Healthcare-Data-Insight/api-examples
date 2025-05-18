@@ -1,0 +1,80 @@
+{
+  "transactions": [
+    {
+      "transaction_header": {
+        "segment_id": "G1",
+        "transaction_reference_number": "1234567890",
+        "bin_number": 123456,
+        "version_release_number": "D1",
+        "transaction_code": "B1",
+        "process_or_control_number": "01",
+        "transaction_count": "1",
+        "service_provider_id_qualifier": "23",
+        "service_provider_id": "4567890123",
+        "date_of_service": "2021-08-21",
+        "software_vendor_certification_id": "0000000100"
+      },
+      "insurance": {
+        "segment_id": "AM04",
+        "cardholder_id": "123456789",
+        "cardholder_first_name": "JANE",
+        "cardholder_last_name": "DOE",
+        "plan_id": "MYPLAN",
+        "eligibility_clarification_code": "0",
+        "group_id": "GR1",
+        "person_code": "001",
+        "patient_relationship_code": "2"
+      },
+      "patient": {
+        "segment_id": "AM01",
+        "date_of_birth": "1980-02-25",
+        "patient_gender_code": {
+          "code": "F",
+          "desc": "Female"
+        },
+        "patient_first_name": "JANE",
+        "patient_last_name": "DOE",
+        "patient_street_address": "100 MAIN STR",
+        "patient_city_address": "WASHINGTON",
+        "patient_state_province_address": "DC",
+        "patient_zip_postal_zone": "100010000",
+        "patient_phone_number": "5551234567"
+      },
+      "claim": {
+        "segment_id": "AM07",
+        "prescription_service_reference_number_qualifier": "1",
+        "prescription_service_reference_number": "000000123456",
+        "product_service_id_qualifier": {
+          "code": "N4",
+          "desc": "Drug Info - NDC"
+        },
+        "product_service_id": "00003089421",
+        "quantity_dispensed": 30.000,
+        "fill_number": "01",
+        "days_supply": 30,
+        "dispense_as_written": "0",
+        "date_prescription_written": "2021-07-01",
+        "prescription_origin_code": "3",
+        "other_coverage_code": "00",
+        "special_packaging_indicator": "3",
+        "unit_of_measure": "EA"
+      },
+      "pricing": {
+        "segment_id": "AM11",
+        "ingredient_cost_submitted": 5.71,
+        "dispensing_fee_submitted": 2.75,
+        "patient_paid_amount_submitted": 1.62,
+        "usual_and_customary_charge": 0,
+        "gross_amount_due": 8.46,
+        "basis_of_cost_determination": "07"
+      },
+      "prescriber": {
+        "segment_id": "AM03",
+        "prescriber_id_qualifier": "01",
+        "prescriber_id": "1234567890",
+        "prescriber_last_name": "EVIL",
+        "prescriber_phone_number": "5557654321"
+      }
+    }
+  ]
+}
