@@ -2,7 +2,9 @@
 # CSV conversion schema for 837
 # Creates two files, one for header and one for lines
 - transactionTypes: [ "837P", "837D" ]
-  name: default
+  name: claim-line-separate-files
+  aliases:
+    - default
   separator: ","
   excludedFields:
     # We excluded X12 EDI qualifiers since we translate them to enumeration types
@@ -45,8 +47,41 @@
         - "*OrderingProviderContacts"
       numberOfColumnRepeats: 1
 
+- transactionTypes: [ "834" ]
+  name: member-coverages-single-file
+  aliases: [ single-file, default, lines-with-header-repeat-first-row ]
+  excludedFields:
+    - "*AddressCountryCode"
+    - correctedInsured
+
+  listSchemas:
+    - names: [ Main ]
+      repeatFields: [ "*" ]
+      repeatEachRow: [ "*" ]
+      output: False
+
+    - names: [ healthCoverages ]
+      strategy: ROWS
+
+    # How many times to repeat these lists (the default is 3)
+    - names:
+        - supplementalIdentifiers
+        - statusInfoEffectiveDates
+        - contractAmounts
+        - "*coverageDates"
+        - "*groupOrPolicyNumbers"
+      numberOfColumnRepeats: 5
+    - names:
+        - "*Contacts"
+      numberOfColumnRepeats: 1
+    - names:
+        - "*ContactNumbers"
+      numberOfColumnRepeats: 2
+
 - transactionTypes: [ "837I" ]
-  name: default
+  name: claim-line-separate-files
+  aliases:
+    - default
   excludedFields:
     # We excluded X12 EDI qualifiers since we translate them to enumeration types
     - "*QualifierCode"
@@ -92,7 +127,9 @@
 
 # Schema for 835
 - transactionTypes: [ 835 ]
-  name: default
+  name: claim-line-separate-files
+  aliases:
+    - default
   separator: ","
   excludedFields:
     # We excluded X12 EDI qualifiers since we translate them to "types"
@@ -129,6 +166,8 @@
 # Single file; repeat all header's fields first row; only ID and PCN subsequent rows
 - transactionTypes: [ "837P", "837I", "837D", "835" ]
   name: lines-with-header-repeat-first-row
+  aliases:
+    - single-file
   baseName: default
 
   listSchemas:
