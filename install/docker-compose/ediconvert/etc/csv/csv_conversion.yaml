@@ -1,11 +1,8 @@
 ---
-# CSV conversion schema for 837
-# Creates two files, one for header and one for lines
 - transactionTypes: [ "837P", "837D" ]
   name: claim-line-separate-files
   aliases:
     - default
-  separator: ","
   excludedFields:
     # We excluded X12 EDI qualifiers since we translate them to enumeration types
     - "*QualifierCode"
@@ -83,11 +80,10 @@
   aliases:
     - default
   excludedFields:
-    # We excluded X12 EDI qualifiers since we translate them to enumeration types
     - "*QualifierCode"
     - "*AddressCountryCode"
   listSchemas:
-    # Schema for the "main" header-level list, e.g., claims or payments
+    # Schema for the "main" header-level list, i.e., claims
     - names: [ Main ]
       # Repeat these fields on the first line for child lists
       repeatFields: [ Id, PatientControlNumber ]
@@ -124,15 +120,11 @@
         - "*OrderingProviderContacts"
       numberOfColumnRepeats: 1
 
-
-# Schema for 835
 - transactionTypes: [ 835 ]
   name: claim-line-separate-files
   aliases:
     - default
-  separator: ","
   excludedFields:
-    # We excluded X12 EDI qualifiers since we translate them to "types"
     - "*Id*QualifierCode"
     - "*AddressCountryCode"
   listSchemas:
@@ -151,7 +143,6 @@
     - names: [ LineAdjs, Adjs, LineRemarkCodes ]
       numberOfColumnRepeats: 5
 
-    # Schemas for the lists that are converted into repeated columns
     - names:
         - "*additionalIds"
         - "*OtherClaimRelatedIds"
@@ -163,7 +154,7 @@
       # Repeat columns 2 times (the default is 3)
       numberOfColumnRepeats: 2
 
-# Single file; repeat all header's fields first row; only ID and PCN subsequent rows
+# Single file; repeat all header's fields first row; only ID and PCN on subsequent rows
 - transactionTypes: [ "837P", "837I", "837D", "835" ]
   name: lines-with-header-repeat-first-row
   aliases:
