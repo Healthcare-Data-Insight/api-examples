@@ -16,6 +16,21 @@
     "identifier" : "654456654",
     "lastNameOrOrgName" : "Insurer"
   },
+  "tpas" : [ {
+    "entityRole" : "TPA",
+    "entityType" : "BUSINESS",
+    "identificationType" : "CMS_PLAN_ID",
+    "identifier" : "tpaID",
+    "lastNameOrOrgName" : "TPA",
+    "accountNumber" : "account1",
+    "accountNumber2" : "account2"
+  }, {
+    "entityRole" : "TPA",
+    "entityType" : "BUSINESS",
+    "identificationType" : "CMS_PLAN_ID",
+    "identifier" : "tpa2ID",
+    "lastNameOrOrgName" : "TPA2"
+  } ],
   "memberIndicator" : "Y",
   "relationshipCode" : "18",
   "maintenanceTypeCode" : "021",
@@ -73,14 +88,108 @@
   "employers" : [ {
     "entityRole" : "EMPLOYER",
     "entityType" : "BUSINESS",
+    "identificationType" : "EMPLOYER_ID",
+    "identifier" : "emp1ID",
     "lastNameOrOrgName" : "EMPLOYER1",
+    "firstName" : "First",
+    "middleName" : "M",
     "address" : {
       "line" : "9715 EMPLOYER1 AVENUE",
       "city" : "ANYTOWN",
       "stateCode" : "PA",
       "zipCode" : "971110000"
-    }
+    },
+    "contacts" : [ {
+      "name" : "Employer's contact",
+      "contactNumbers" : [ {
+        "type" : "HOME_PHONE",
+        "number" : "9172343334"
+      }, {
+        "type" : "WORK_PHONE",
+        "number" : "9172341240"
+      } ]
+    } ]
   } ],
+  "schools" : [ {
+    "entityRole" : "EDUCATIONAL_INSTITUTION",
+    "entityType" : "BUSINESS",
+    "lastNameOrOrgName" : "School1",
+    "address" : {
+      "line" : "9715 SCHOOL AVENUE",
+      "city" : "ANYTOWN",
+      "stateCode" : "PA",
+      "zipCode" : "971110000"
+    },
+    "contacts" : [ {
+      "name" : "School's contact",
+      "contactNumbers" : [ {
+        "type" : "HOME_PHONE",
+        "number" : "9172343334"
+      }, {
+        "type" : "WORK_PHONE",
+        "number" : "9172341240"
+      } ]
+    } ]
+  } ],
+  "custodialParent" : {
+    "entityRole" : "CUSTODIAL_PARENT",
+    "entityType" : "INDIVIDUAL",
+    "identificationType" : "MUTUALLY_DEFINED",
+    "identifier" : "custodialParentID",
+    "lastNameOrOrgName" : "Custodial",
+    "firstName" : "Parent",
+    "middleName" : "M",
+    "address" : {
+      "line" : "9715 CUSTODIAL AVENUE",
+      "city" : "ANYTOWN",
+      "stateCode" : "PA",
+      "zipCode" : "971110000"
+    },
+    "contacts" : [ {
+      "contactNumbers" : [ {
+        "type" : "HOME_PHONE",
+        "number" : "9172343334"
+      }, {
+        "type" : "WORK_PHONE",
+        "number" : "9172341240"
+      } ]
+    } ]
+  },
+  "responsiblePersons" : [ {
+    "entityRole" : "RESPONSIBLE_PARTY",
+    "entityType" : "INDIVIDUAL",
+    "identificationType" : "SSN",
+    "identifier" : "responsiblePersonID",
+    "lastNameOrOrgName" : "Responsible",
+    "firstName" : "Person",
+    "middleName" : "M",
+    "address" : {
+      "line" : "9715 RESPONSIBLE AVENUE",
+      "city" : "ANYTOWN",
+      "stateCode" : "PA",
+      "zipCode" : "971110000"
+    },
+    "contacts" : [ {
+      "contactNumbers" : [ {
+        "type" : "HOME_PHONE",
+        "number" : "9172343334"
+      }, {
+        "type" : "WORK_PHONE",
+        "number" : "9172341240"
+      } ]
+    } ]
+  } ],
+  "dropOffLocation" : {
+    "entityRole" : "DROP_OFF_LOCATION",
+    "entityType" : "INDIVIDUAL",
+    "lastNameOrOrgName" : "DropOff",
+    "address" : {
+      "line" : "9715 DROPOFF AVENUE",
+      "city" : "ANYTOWN",
+      "stateCode" : "PA",
+      "zipCode" : "971110000"
+    }
+  },
   "healthCoverages" : [ {
     "maintenanceTypeCode" : "021",
     "insuranceLineCode" : "HMO",
@@ -105,7 +214,7 @@
       "entityRole" : "PRIMARY_CARE",
       "entityType" : "INDIVIDUAL",
       "identificationType" : "SERVICE_PROVIDER",
-      "identifier" : "143766",
+      "identifier" : "prov1ID",
       "lastNameOrOrgName" : "BROWN",
       "firstName" : "BERNARD",
       "address" : {
@@ -113,11 +222,6 @@
         "city" : "ANYTOWN",
         "stateCode" : "PA",
         "zipCode" : "271110000"
-      },
-      "changeReason" : {
-        "actionCode" : "2",
-        "effectiveDate" : "2024-05-01",
-        "reasonCode" : "AI"
       },
       "contacts" : [ {
         "contactNumbers" : [ {
@@ -127,7 +231,12 @@
           "type" : "WORK_PHONE",
           "number" : "2172341240"
         } ]
-      } ]
+      } ],
+      "changeReason" : {
+        "actionCode" : "2",
+        "effectiveDate" : "2024-05-01",
+        "reasonCode" : "AI"
+      }
     }, {
       "entityRole" : "MANAGED_CARE",
       "entityType" : "INDIVIDUAL",
@@ -147,18 +256,45 @@
         "reasonCode" : "AI"
       }
     } ]
+  }, {
+    "maintenanceTypeCode" : "021",
+    "insuranceLineCode" : "EPO",
+    "planDescription" : "PlanDesc2",
+    "coverageLevelCode" : "FAM",
+    "lateEnrollmentIndicator" : "N",
+    "coverageDates" : [ {
+      "qualifierCode" : "348",
+      "date" : "2025-05-01"
+    } ],
+    "contractAmounts" : [ {
+      "qualifierCode" : "C1",
+      "amount" : 20.00
+    } ],
+    "groupOrPolicyNumbers" : [ {
+      "qualifierCode" : "1L",
+      "type" : "GROUP_OR_POLICY_NUMBER",
+      "identification" : "PolicyNumber2"
+    } ],
+    "priorCoverageMonthCount" : "0"
   } ],
   "transaction" : {
-    "id" : "6823d6b7ff95f84d6923e15b",
+    "id" : "684069aa8d7bad67d99c4200",
     "controlNumber" : "1",
     "transactionType" : "MEMBER_COVERAGE",
+    "purposeCode" : "00",
+    "originatorApplicationTransactionId" : "1",
+    "creationDate" : "1998-05-20",
+    "creationTime" : "12:00:00",
+    "originalTransactionSetReferenceNumber" : "OrigID",
+    "actionCode" : "2",
     "transactionSetIdentifierCode" : "834",
     "fileInfo" : {
       "name" : "834-all-fields.edi",
       "url" : "file:/Users/aananiev/myarchdev/healthcaredata/claiminsight/clinsight/data_files/834/834-all-fields.edi",
-      "lastModifiedDateTime" : "2025-05-13T19:20:20.977-04:00",
+      "lastModifiedDateTime" : "2025-06-01T12:36:13.924-04:00",
       "fileType" : "EDI"
-    }
+    },
+    "creationDateTime" : "1998-05-20T12:00:00"
   }
 }
 , {
@@ -178,6 +314,21 @@
     "identifier" : "654456654",
     "lastNameOrOrgName" : "Insurer"
   },
+  "tpas" : [ {
+    "entityRole" : "TPA",
+    "entityType" : "BUSINESS",
+    "identificationType" : "CMS_PLAN_ID",
+    "identifier" : "tpaID",
+    "lastNameOrOrgName" : "TPA",
+    "accountNumber" : "account1",
+    "accountNumber2" : "account2"
+  }, {
+    "entityRole" : "TPA",
+    "entityType" : "BUSINESS",
+    "identificationType" : "CMS_PLAN_ID",
+    "identifier" : "tpa2ID",
+    "lastNameOrOrgName" : "TPA2"
+  } ],
   "memberIndicator" : "Y",
   "relationshipCode" : "18",
   "maintenanceTypeCode" : "021",
@@ -237,16 +388,23 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6823d6b7ff95f84d6923e15b",
+    "id" : "684069aa8d7bad67d99c4200",
     "controlNumber" : "1",
     "transactionType" : "MEMBER_COVERAGE",
+    "purposeCode" : "00",
+    "originatorApplicationTransactionId" : "1",
+    "creationDate" : "1998-05-20",
+    "creationTime" : "12:00:00",
+    "originalTransactionSetReferenceNumber" : "OrigID",
+    "actionCode" : "2",
     "transactionSetIdentifierCode" : "834",
     "fileInfo" : {
       "name" : "834-all-fields.edi",
-      "url" : "file:./834/834-all-fields.edi",
-      "lastModifiedDateTime" : "2025-05-13T19:20:20.977-04:00",
+      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/claiminsight/clinsight/data_files/834/834-all-fields.edi",
+      "lastModifiedDateTime" : "2025-06-01T12:36:13.924-04:00",
       "fileType" : "EDI"
-    }
+    },
+    "creationDateTime" : "1998-05-20T12:00:00"
   }
 }
 , {
@@ -315,16 +473,22 @@
     "amount" : 100.00
   } ],
   "transaction" : {
-    "id" : "6823d6b7ff95f84d6923e197",
+    "id" : "684069aa8d7bad67d99c4254",
     "controlNumber" : "2",
     "transactionType" : "MEMBER_COVERAGE",
+    "purposeCode" : "00",
+    "originatorApplicationTransactionId" : "1",
+    "creationDate" : "1998-05-20",
+    "creationTime" : "12:00:00",
+    "actionCode" : "2",
     "transactionSetIdentifierCode" : "834",
     "fileInfo" : {
       "name" : "834-all-fields.edi",
-      "url" : "file:./834-all-fields.edi",
-      "lastModifiedDateTime" : "2025-05-13T19:20:20.977-04:00",
+      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/claiminsight/clinsight/data_files/834/834-all-fields.edi",
+      "lastModifiedDateTime" : "2025-06-01T12:36:13.924-04:00",
       "fileType" : "EDI"
-    }
+    },
+    "creationDateTime" : "1998-05-20T12:00:00"
   }
 }
  ]
