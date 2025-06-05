@@ -1,5 +1,7 @@
 install/docker-compose/ediconvert/etc/edi-license.*
 install/docker/etc/edi-license.*
+install/terraform/**/.terraform
+install/terraform/**/*.lock.hcl
 scratch/
 
 # Node artifact files
