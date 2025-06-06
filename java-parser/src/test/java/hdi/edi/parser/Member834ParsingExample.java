@@ -1,6 +1,7 @@
 package hdi.edi.parser;
 
 import hdi.model.coverage.HealthCoverage;
+import hdi.model.coverage.Member;
 import hdi.model.coverage.MemberCoverage;
 import org.junit.Test;
 
@@ -28,10 +29,13 @@ public class Member834ParsingExample implements ParsingExampleHelper {
         String memberGroup = memberCoverage.groupOrPolicyNumber();
 
         assertNotNull(sponsorId, insurerId, memberIdentifier, memberGroup);
+        Member member = memberCoverage.subscriber();
+        System.out.println(member);
         List<HealthCoverage> healthCoverages = memberCoverage.healthCoverages();
         assertThat(healthCoverages).isNotEmpty();
         // HealthCoverage: HD segment and related segments and loops (2300)
         HealthCoverage healthCoverage = healthCoverages.get(0);
         System.out.println(healthCoverage);
+
     }
 }
