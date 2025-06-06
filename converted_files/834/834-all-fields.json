@@ -73,7 +73,32 @@
         "type" : "WORK_PHONE",
         "number" : "7172341240"
       } ]
-    } ]
+    } ],
+    "maritalStatusCode" : "M",
+    "ethnicityCode" : "B",
+    "citizenshipCode" : "1",
+    "employmentClassCodes" : [ "04", "06", "07", "09", "10", "11" ],
+    "wageFrequencyCode" : "1",
+    "wageAmount" : 425.25,
+    "workHoursCount" : 40,
+    "employerLocationIdentificationCode" : "LocCode",
+    "salaryGradeCode" : "SalaryGrade",
+    "healthRelatedCode" : "X",
+    "height" : 74,
+    "weight" : 210
+  },
+  "incorrectMember" : {
+    "entityRole" : "PRIOR_INCORRECT_INSURED",
+    "entityType" : "INDIVIDUAL",
+    "identificationType" : "SSN",
+    "identifier" : "202443309",
+    "lastNameOrOrgName" : "DOE",
+    "firstName" : "JOE",
+    "birthDate" : "1970-06-14",
+    "gender" : "MALE",
+    "maritalStatusCode" : "M",
+    "ethnicityCode" : "B",
+    "citizenshipCode" : "1"
   },
   "contractAmounts" : [ {
     "qualifierCode" : "D2",
@@ -190,6 +215,12 @@
       "zipCode" : "971110000"
     }
   },
+  "disabilities" : [ {
+    "typeCode" : "2",
+    "diagnosisCode" : "585",
+    "dateFrom" : "2025-04-01",
+    "dateTo" : "2025-05-01"
+  } ],
   "healthCoverages" : [ {
     "maintenanceTypeCode" : "021",
     "insuranceLineCode" : "HMO",
@@ -210,6 +241,12 @@
       "identification" : "PolicyNumber"
     } ],
     "priorCoverageMonthCount" : "0",
+    "idCards" : [ {
+      "planDesc" : "PlanDesc",
+      "typeCode" : "H",
+      "count" : 5,
+      "actionCode" : "RX"
+    } ],
     "providers" : [ {
       "entityRole" : "PRIMARY_CARE",
       "entityType" : "INDIVIDUAL",
@@ -255,6 +292,45 @@
         "effectiveDate" : "2023-05-01",
         "reasonCode" : "AI"
       }
+    } ],
+    "cobs" : [ {
+      "payerResponsibilitySequenceCode" : "P",
+      "payerResponsibilitySequence" : "PRIMARY",
+      "groupOrPolicyNumber" : "XYZ123",
+      "coordinationOfBenefitsCode" : "1",
+      "additionalIdentifiers" : [ {
+        "qualifierCode" : "6P",
+        "type" : "GROUP_NUMBER",
+        "identification" : "COB-GroupNumber"
+      }, {
+        "qualifierCode" : "SY",
+        "type" : "SSN",
+        "identification" : "COB-SSN"
+      } ],
+      "startDate" : "2025-02-01",
+      "endDate" : "2025-02-28",
+      "insurers" : [ {
+        "entityRole" : "EMPLOYER",
+        "entityType" : "BUSINESS",
+        "identificationType" : "EIN",
+        "identifier" : "COB-EmployerId",
+        "lastNameOrOrgName" : "COB-Employer",
+        "address" : {
+          "line" : "9715 RESPONSIBLE AVENUE",
+          "city" : "ANYTOWN",
+          "stateCode" : "PA",
+          "zipCode" : "971110000"
+        },
+        "contacts" : [ {
+          "contactNumbers" : [ {
+            "type" : "HOME_PHONE",
+            "number" : "9172343334"
+          }, {
+            "type" : "WORK_PHONE",
+            "number" : "9172341240"
+          } ]
+        } ]
+      } ]
     } ]
   }, {
     "maintenanceTypeCode" : "021",
@@ -277,8 +353,22 @@
     } ],
     "priorCoverageMonthCount" : "0"
   } ],
+  "reportingCategories" : [ {
+    "name" : "SOUTHEASTERN UNION",
+    "identifierQualifierCode" : "26",
+    "identifierType" : "UNION_NUMBER",
+    "identifier" : "442",
+    "date" : "2025-03-01",
+    "dateTo" : "2025-05-31"
+  }, {
+    "name" : "PAYER2",
+    "identifierQualifierCode" : "26",
+    "identifierType" : "UNION_NUMBER",
+    "identifier" : "442",
+    "date" : "2004-01-01"
+  } ],
   "transaction" : {
-    "id" : "684069aa8d7bad67d99c4200",
+    "id" : "684333016c9b557f539f38cb",
     "controlNumber" : "1",
     "transactionType" : "MEMBER_COVERAGE",
     "purposeCode" : "00",
@@ -288,10 +378,28 @@
     "originalTransactionSetReferenceNumber" : "OrigID",
     "actionCode" : "2",
     "transactionSetIdentifierCode" : "834",
+    "fileEffectiveDates" : [ {
+      "qualifierCode" : "007",
+      "type" : "EFFECTIVE",
+      "date" : "2025-01-02"
+    }, {
+      "qualifierCode" : "382",
+      "type" : "ENROLLMENT",
+      "date" : "2025-01-02"
+    } ],
+    "controlTotals" : [ {
+      "qualifierCode" : "TO",
+      "type" : "TOTAL",
+      "quantity" : 10000
+    }, {
+      "qualifierCode" : "ET",
+      "type" : "EMPLOYEE_TOTAL",
+      "quantity" : 100
+    } ],
     "fileInfo" : {
       "name" : "834-all-fields.edi",
       "url" : "file:/Users/aananiev/myarchdev/healthcaredata/claiminsight/clinsight/data_files/834/834-all-fields.edi",
-      "lastModifiedDateTime" : "2025-06-01T12:36:13.924-04:00",
+      "lastModifiedDateTime" : "2025-06-06T13:56:04.446-04:00",
       "fileType" : "EDI"
     },
     "creationDateTime" : "1998-05-20T12:00:00"
@@ -388,7 +496,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "684069aa8d7bad67d99c4200",
+    "id" : "684333016c9b557f539f38cb",
     "controlNumber" : "1",
     "transactionType" : "MEMBER_COVERAGE",
     "purposeCode" : "00",
@@ -398,10 +506,28 @@
     "originalTransactionSetReferenceNumber" : "OrigID",
     "actionCode" : "2",
     "transactionSetIdentifierCode" : "834",
+    "fileEffectiveDates" : [ {
+      "qualifierCode" : "007",
+      "type" : "EFFECTIVE",
+      "date" : "2025-01-02"
+    }, {
+      "qualifierCode" : "382",
+      "type" : "ENROLLMENT",
+      "date" : "2025-01-02"
+    } ],
+    "controlTotals" : [ {
+      "qualifierCode" : "TO",
+      "type" : "TOTAL",
+      "quantity" : 10000
+    }, {
+      "qualifierCode" : "ET",
+      "type" : "EMPLOYEE_TOTAL",
+      "quantity" : 100
+    } ],
     "fileInfo" : {
       "name" : "834-all-fields.edi",
       "url" : "file:/Users/aananiev/myarchdev/healthcaredata/claiminsight/clinsight/data_files/834/834-all-fields.edi",
-      "lastModifiedDateTime" : "2025-06-01T12:36:13.924-04:00",
+      "lastModifiedDateTime" : "2025-06-06T13:56:04.446-04:00",
       "fileType" : "EDI"
     },
     "creationDateTime" : "1998-05-20T12:00:00"
@@ -473,7 +599,7 @@
     "amount" : 100.00
   } ],
   "transaction" : {
-    "id" : "684069aa8d7bad67d99c4254",
+    "id" : "684333016c9b557f539f3940",
     "controlNumber" : "2",
     "transactionType" : "MEMBER_COVERAGE",
     "purposeCode" : "00",
@@ -485,7 +611,7 @@
     "fileInfo" : {
       "name" : "834-all-fields.edi",
       "url" : "file:/Users/aananiev/myarchdev/healthcaredata/claiminsight/clinsight/data_files/834/834-all-fields.edi",
-      "lastModifiedDateTime" : "2025-06-01T12:36:13.924-04:00",
+      "lastModifiedDateTime" : "2025-06-06T13:56:04.446-04:00",
       "fileType" : "EDI"
     },
     "creationDateTime" : "1998-05-20T12:00:00"
