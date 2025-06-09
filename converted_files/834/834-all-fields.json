@@ -50,7 +50,7 @@
     "qualifierCode" : "356",
     "date" : "1996-01-12"
   } ],
-  "subscriber" : {
+  "member" : {
     "entityRole" : "INSURED_SUBSCRIBER",
     "entityType" : "INDIVIDUAL",
     "identificationType" : "SSN",
@@ -221,6 +221,20 @@
     "dateFrom" : "2025-04-01",
     "dateTo" : "2025-05-01"
   } ],
+  "reportingCategories" : [ {
+    "name" : "SOUTHEASTERN UNION",
+    "identifierQualifierCode" : "26",
+    "identifierType" : "UNION_NUMBER",
+    "identifier" : "442",
+    "date" : "2025-03-01",
+    "dateTo" : "2025-05-31"
+  }, {
+    "name" : "PAYER2",
+    "identifierQualifierCode" : "26",
+    "identifierType" : "UNION_NUMBER",
+    "identifier" : "442",
+    "date" : "2004-01-01"
+  } ],
   "healthCoverages" : [ {
     "maintenanceTypeCode" : "021",
     "insuranceLineCode" : "HMO",
@@ -353,22 +367,8 @@
     } ],
     "priorCoverageMonthCount" : "0"
   } ],
-  "reportingCategories" : [ {
-    "name" : "SOUTHEASTERN UNION",
-    "identifierQualifierCode" : "26",
-    "identifierType" : "UNION_NUMBER",
-    "identifier" : "442",
-    "date" : "2025-03-01",
-    "dateTo" : "2025-05-31"
-  }, {
-    "name" : "PAYER2",
-    "identifierQualifierCode" : "26",
-    "identifierType" : "UNION_NUMBER",
-    "identifier" : "442",
-    "date" : "2004-01-01"
-  } ],
   "transaction" : {
-    "id" : "684333016c9b557f539f38cb",
+    "id" : "68463f5662151b0f4a2ae0f0",
     "controlNumber" : "1",
     "transactionType" : "MEMBER_COVERAGE",
     "purposeCode" : "00",
@@ -449,7 +449,7 @@
     "qualifierCode" : "356",
     "date" : "1996-01-12"
   } ],
-  "subscriber" : {
+  "member" : {
     "entityRole" : "INSURED_SUBSCRIBER",
     "entityType" : "INDIVIDUAL",
     "identificationType" : "SSN",
@@ -496,7 +496,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "684333016c9b557f539f38cb",
+    "id" : "68463f5662151b0f4a2ae0f0",
     "controlNumber" : "1",
     "transactionType" : "MEMBER_COVERAGE",
     "purposeCode" : "00",
@@ -569,7 +569,7 @@
     "qualifierCode" : "356",
     "date" : "1996-01-12"
   } ],
-  "subscriber" : {
+  "member" : {
     "entityRole" : "INSURED_SUBSCRIBER",
     "entityType" : "INDIVIDUAL",
     "identificationType" : "SSN",
@@ -599,7 +599,7 @@
     "amount" : 100.00
   } ],
   "transaction" : {
-    "id" : "684333016c9b557f539f3940",
+    "id" : "68463f5662151b0f4a2ae165",
     "controlNumber" : "2",
     "transactionType" : "MEMBER_COVERAGE",
     "purposeCode" : "00",
