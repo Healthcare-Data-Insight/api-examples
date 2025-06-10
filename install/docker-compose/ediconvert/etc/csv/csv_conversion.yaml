@@ -3,6 +3,7 @@
   name: claim-line-separate-files
   aliases:
     - default
+    - two-files
   excludedFields:
     # We excluded X12 EDI qualifiers since we translate them to enumeration types
     - "*QualifierCode"
@@ -49,7 +50,7 @@
   aliases: [ single-file, default, lines-with-header-repeat-first-row ]
   excludedFields:
     - "*AddressCountryCode"
-    - correctedInsured
+    - "*AdditionalIdentifier*Type"
 
   listSchemas:
     - names: [ Main ]
@@ -67,18 +68,27 @@
         - contractAmounts
         - "*coverageDates"
         - "*groupOrPolicyNumbers"
+        - MemberEmploymentClassCodes
       numberOfColumnRepeats: 5
     - names:
         - "*Contacts"
+        - HealthCoverageIdCards
       numberOfColumnRepeats: 1
     - names:
         - "*ContactNumbers"
+        - "*Cob*AdditionalIdentifiers"
+        - "*Cobs"
+        - "HealthCoverageCob*Insurers"
+        - tpas
+        - employers
+        - schools
       numberOfColumnRepeats: 2
 
 - transactionTypes: [ "837I" ]
   name: claim-line-separate-files
   aliases:
     - default
+    - two-files
   excludedFields:
     - "*QualifierCode"
     - "*AddressCountryCode"
@@ -124,6 +134,7 @@
   name: claim-line-separate-files
   aliases:
     - default
+    - two-files
   excludedFields:
     - "*Id*QualifierCode"
     - "*AddressCountryCode"
@@ -154,7 +165,7 @@
       # Repeat columns 2 times (the default is 3)
       numberOfColumnRepeats: 2
 
-# Single file; repeat all header's fields first row; only ID and PCN on subsequent rows
+# Single file; repeat all header's fields for the first row; only ID and PCN on subsequent rows
 - transactionTypes: [ "837P", "837I", "837D", "835" ]
   name: lines-with-header-repeat-first-row
   aliases:

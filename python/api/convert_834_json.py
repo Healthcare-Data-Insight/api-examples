@@ -21,7 +21,7 @@ for member_coverage_str in response.iter_lines():
     # each line is a member coverage object
     member_coverage = obj
     member_id = member_coverage['identifier']
-    subscriber = member_coverage['subscriber']
+    subscriber = member_coverage['member']
     group = member_coverage['groupOrPolicyNumber']
     sponsor = member_coverage['sponsor']
 
