@@ -2,15 +2,14 @@ import requests
 import env
 
 """
-Parse a 277 EDI file. The response contains EDI segment hierarchy matching the X12 spec.
+Parses a 277 EDI file. The response contains EDI segment hierarchy matching the X12 spec.
 Each segment has a unique name, which is a key in the json dict
-Most loops are lists
-The hierarchy follows the X12 EDI spec
+Most loops are lists.
 """
 
 parse_api_url = env.api_url + '/edi/json'
 edi_files_dir = '../../edi_files/277'
-file_to_parse = edi_files_dir + '/claim_level_response.dat'
+file_to_parse = edi_files_dir + '/X212-277-claim-response.edi'
 
 with open(file_to_parse) as f:
     response = requests.post(parse_api_url, data=f, stream=True)
