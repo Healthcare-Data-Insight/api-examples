@@ -29,7 +29,7 @@ public class Member834ParsingExample implements ParsingExampleHelper {
         String memberGroup = memberCoverage.groupOrPolicyNumber();
 
         assertNotNull(sponsorId, insurerId, memberIdentifier, memberGroup);
-        Member member = memberCoverage.subscriber();
+        Member member = memberCoverage.member();
         System.out.println(member);
         List<HealthCoverage> healthCoverages = memberCoverage.healthCoverages();
         assertThat(healthCoverages).isNotEmpty();

@@ -10,6 +10,7 @@ import org.junit.runners.Suite;
         ConverterExample.class,
         ClaimParsingExample.class,
         PaymentParsingExample.class,
+        Member834ParsingExample.class,
         SegmentParsingExample.class,
         Edi810ParsingExample.class
 })
