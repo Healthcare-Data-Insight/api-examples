@@ -1,0 +1,67 @@
+[
+ {
+  "id" : "685d571fe29351212dc46910",
+  "objectType" : "MEMBER_COVERAGE",
+  "sponsor" : {
+    "entityRole" : "PLAN_SPONSOR",
+    "entityType" : "BUSINESS",
+    "identificationType" : "EIN",
+    "identifier" : "000111000",
+    "lastNameOrOrgName" : "GENERIC INC"
+  },
+  "insurer" : {
+    "entityRole" : "INSURER",
+    "entityType" : "BUSINESS",
+    "identificationType" : "EIN",
+    "identifier" : "654456654",
+    "lastNameOrOrgName" : "ABC INSURANCE"
+  },
+  "memberIndicator" : "Y",
+  "relationshipCode" : "18",
+  "maintenanceTypeCode" : "001",
+  "maintenanceReasonCode" : "25",
+  "benefitStatusCode" : "A",
+  "employmentStatusCode" : "FT",
+  "identifier" : "123456789",
+  "groupOrPolicyNumber" : "123456001",
+  "member" : {
+    "entityRole" : "INSURED_SUBSCRIBER",
+    "entityType" : "INDIVIDUAL",
+    "identificationType" : "SSN",
+    "identifier" : "103229876",
+    "lastNameOrOrgName" : "DOE",
+    "firstName" : "JAMES",
+    "middleName" : "E",
+    "birthDate" : "1950-04-15",
+    "gender" : "MALE"
+  },
+  "incorrectMember" : {
+    "entityRole" : "PRIOR_INCORRECT_INSURED",
+    "entityType" : "INDIVIDUAL",
+    "lastNameOrOrgName" : "DOE",
+    "firstName" : "JAMES",
+    "middleName" : "E",
+    "birthDate" : "1950-04-16",
+    "gender" : "MALE"
+  },
+  "transaction" : {
+    "id" : "685d571fe29351212dc4690b",
+    "controlNumber" : "12345",
+    "transactionType" : "MEMBER_COVERAGE",
+    "purposeCode" : "00",
+    "originatorApplicationTransactionId" : "12456",
+    "creationDate" : "1998-05-20",
+    "creationTime" : "12:00:00",
+    "actionCode" : "2",
+    "transactionSetIdentifierCode" : "834",
+    "implementationConventionReference" : "005010X220A1",
+    "fileInfo" : {
+      "name" : "X220-change-subscriber-information.edi",
+      "url" : "file:/edi-samples/edi_files/834/X220-change-subscriber-information.edi",
+      "lastModifiedDateTime" : "2025-05-13T18:22:23.984-04:00",
+      "fileType" : "EDI"
+    },
+    "creationDateTime" : "1998-05-20T12:00:00"
+  }
+}
+ ]

@@ -1,0 +1,231 @@
+[
+ {
+  "id" : "685d6a78b5939c4ba8ce151a",
+  "objectType" : "PAYMENT",
+  "patientControlNumber" : "PATACCT",
+  "chargeAmount" : 400.00,
+  "paymentAmount" : 80.00,
+  "facilityCode" : {
+    "subType" : "PLACE_OF_SERVICE",
+    "code" : "11"
+  },
+  "placeOfServiceType" : "OFFICE",
+  "frequencyCode" : {
+    "subType" : "FREQUENCY_CODE",
+    "code" : "1",
+    "desc" : "Original claim"
+  },
+  "serviceDateFrom" : "2019-01-01",
+  "serviceDateTo" : "2019-01-01",
+  "patient" : {
+    "person" : {
+      "entityRole" : "PATIENT",
+      "entityType" : "INDIVIDUAL",
+      "identificationType" : "MEMBER_ID",
+      "identifier" : "ABC123456789",
+      "lastNameOrOrgName" : "DOE",
+      "firstName" : "JOHN",
+      "middleName" : "N"
+    }
+  },
+  "claimStatusCode" : "1",
+  "claimStatus" : "PRIMARY",
+  "claimFilingIndicatorCode" : "MC",
+  "insurancePlanType" : "MEDICAID",
+  "payerControlNumber" : "CLAIMNUMBER",
+  "otherClaimRelatedIds" : [ {
+    "qualifierCode" : "1L",
+    "type" : "GROUP_OR_POLICY_NUMBER",
+    "identification" : "12345F"
+  } ],
+  "supplementalAmounts" : [ {
+    "qualifierCode" : "AU",
+    "type" : "COVERAGE_AMOUNT",
+    "amount" : 150.00
+  } ],
+  "payer" : {
+    "entityRole" : "PAYER",
+    "entityType" : "BUSINESS",
+    "identifier" : "1234567890",
+    "lastNameOrOrgName" : "ANY PLAN USA",
+    "address" : {
+      "line" : "1 WALK THIS WAY",
+      "city" : "ANYCITY",
+      "stateCode" : "OH",
+      "zipCode" : "45209"
+    },
+    "contacts" : [ {
+      "contactNumbers" : [ {
+        "type" : "PHONE",
+        "number" : "8661112222"
+      } ]
+    }, {
+      "name" : "EDI",
+      "contactNumbers" : [ {
+        "type" : "PHONE",
+        "number" : "8002223333"
+      }, {
+        "type" : "EMAIL",
+        "number" : "EDI.SUPPORT@ANYPAYER.COM"
+      } ]
+    }, {
+      "contactNumbers" : [ {
+        "type" : "URL",
+        "number" : "WWW.ANYPAYER.COM"
+      } ]
+    } ]
+  },
+  "payee" : {
+    "entityRole" : "PAYEE",
+    "entityType" : "BUSINESS",
+    "identificationType" : "NPI",
+    "identifier" : "1123454567",
+    "taxId" : "123456789",
+    "lastNameOrOrgName" : "PROVIDER",
+    "address" : {
+      "line" : "2255 ANY ROAD",
+      "city" : "ANY CITY",
+      "stateCode" : "CA",
+      "zipCode" : "12211"
+    }
+  },
+  "claimReceivedDate" : "2019-02-09",
+  "claimContacts" : [ {
+    "name" : "G CUSTOMER SERVICE DEPARTMENT",
+    "contactNumbers" : [ {
+      "type" : "PHONE",
+      "number" : "8004074627"
+    } ]
+  } ],
+  "serviceLines" : [ {
+    "chargeAmount" : 150.00,
+    "paidAmount" : 80.00,
+    "supplementalAmounts" : [ {
+      "qualifierCode" : "B6",
+      "type" : "ALLOWED_ACTUAL",
+      "amount" : 80.00
+    } ],
+    "serviceDateFrom" : "2019-01-01",
+    "unitCount" : 1,
+    "procedure" : {
+      "subType" : "CPT",
+      "code" : "99213",
+      "desc" : "Office or other outpatient visit for the evaluation and management of an established patient, which requires a medically appropriate history and/or examination and low level of medical decision making. When using total time on the date of the encounter for code selection, 20 minutes must be met or exceeded."
+    },
+    "adjustments" : [ {
+      "group" : "CONTRACTUAL",
+      "reasonCode" : "45",
+      "reason" : {
+        "subType" : "CARC",
+        "code" : "45",
+        "desc" : "Charge exceeds fee schedule/maximum allowable or contracted/legislated fee arrangement."
+      },
+      "amount" : 70.00
+    } ]
+  }, {
+    "chargeAmount" : 100.00,
+    "paidAmount" : 0.00,
+    "serviceDateFrom" : "2019-01-01",
+    "unitCount" : 1,
+    "procedure" : {
+      "subType" : "CPT",
+      "code" : "85003"
+    },
+    "adjustments" : [ {
+      "group" : "CONTRACTUAL",
+      "reasonCode" : "204",
+      "reason" : {
+        "subType" : "CARC",
+        "code" : "204",
+        "desc" : "This service/equipment/drug is not covered under the patients current benefit plan"
+      },
+      "amount" : 100.00
+    } ]
+  }, {
+    "chargeAmount" : 150.00,
+    "paidAmount" : 0.00,
+    "serviceDateFrom" : "2019-01-01",
+    "unitCount" : 1,
+    "procedure" : {
+      "subType" : "CPT",
+      "code" : "36415",
+      "desc" : "Collection of venous blood by venipuncture"
+    },
+    "adjustments" : [ {
+      "group" : "CONTRACTUAL",
+      "reasonCode" : "97",
+      "reason" : {
+        "subType" : "CARC",
+        "code" : "97",
+        "desc" : "The benefit for this service is included in the payment/allowance for another service/procedure that has already been adjudicated."
+      },
+      "amount" : 150.00
+    } ]
+  } ],
+  "transaction" : {
+    "id" : "685d6a78b5939c4ba8ce14f7",
+    "controlNumber" : "10060875",
+    "transactionType" : "PAYMENT",
+    "productionDate" : "2019-08-27",
+    "totalPaymentAmount" : 80.00,
+    "creditOrDebitFlagCode" : "C",
+    "paymentMethodType" : "CHECK",
+    "paymentDate" : "2019-08-16",
+    "checkOrEftTraceNumber" : "CK NUMBER 1",
+    "payerIdentifier" : "1234567890",
+    "transactionSetIdentifierCode" : "835",
+    "fileInfo" : {
+      "name" : "claim_adj_reason.dat",
+      "url" : "file:/edi-samples/edi_files/835/claim_adj_reason.dat",
+      "lastModifiedDateTime" : "2023-08-28T03:50:07.198-04:00",
+      "fileType" : "EDI"
+    },
+    "sender" : {
+      "entityRole" : "PAYER",
+      "entityType" : "BUSINESS",
+      "identifier" : "1234567890",
+      "lastNameOrOrgName" : "ANY PLAN USA",
+      "address" : {
+        "line" : "1 WALK THIS WAY",
+        "city" : "ANYCITY",
+        "stateCode" : "OH",
+        "zipCode" : "45209"
+      },
+      "contacts" : [ {
+        "contactNumbers" : [ {
+          "type" : "PHONE",
+          "number" : "8661112222"
+        } ]
+      }, {
+        "name" : "EDI",
+        "contactNumbers" : [ {
+          "type" : "PHONE",
+          "number" : "8002223333"
+        }, {
+          "type" : "EMAIL",
+          "number" : "EDI.SUPPORT@ANYPAYER.COM"
+        } ]
+      }, {
+        "contactNumbers" : [ {
+          "type" : "URL",
+          "number" : "WWW.ANYPAYER.COM"
+        } ]
+      } ]
+    },
+    "receiver" : {
+      "entityRole" : "PAYEE",
+      "entityType" : "BUSINESS",
+      "identificationType" : "NPI",
+      "identifier" : "1123454567",
+      "taxId" : "123456789",
+      "lastNameOrOrgName" : "PROVIDER",
+      "address" : {
+        "line" : "2255 ANY ROAD",
+        "city" : "ANY CITY",
+        "stateCode" : "CA",
+        "zipCode" : "12211"
+      }
+    }
+  }
+}
+ ]

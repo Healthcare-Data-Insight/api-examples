@@ -1,0 +1,74 @@
+[
+ {
+  "id" : "685d571fe29351212dc468fe",
+  "objectType" : "MEMBER_COVERAGE",
+  "masterPolicyNumber" : "ABCD012354",
+  "sponsor" : {
+    "entityRole" : "PLAN_SPONSOR",
+    "entityType" : "BUSINESS",
+    "identificationType" : "EIN",
+    "identifier" : "999888777"
+  },
+  "insurer" : {
+    "entityRole" : "INSURER",
+    "entityType" : "BUSINESS",
+    "identificationType" : "EIN",
+    "identifier" : "654456654"
+  },
+  "memberIndicator" : "N",
+  "relationshipCode" : "19",
+  "maintenanceTypeCode" : "021",
+  "maintenanceReasonCode" : "28",
+  "benefitStatusCode" : "A",
+  "studentStatusCode" : "F",
+  "identifier" : "123456789",
+  "groupOrPolicyNumber" : "123456001",
+  "statusInfoEffectiveDates" : [ {
+    "qualifierCode" : "351",
+    "date" : "1998-05-15"
+  } ],
+  "member" : {
+    "entityRole" : "INSURED_SUBSCRIBER",
+    "entityType" : "INDIVIDUAL",
+    "identificationType" : "SSN",
+    "identifier" : "103229876",
+    "lastNameOrOrgName" : "DOE",
+    "firstName" : "JAMES",
+    "middleName" : "E",
+    "birthDate" : "1977-08-16",
+    "gender" : "MALE"
+  },
+  "schools" : [ {
+    "entityRole" : "EDUCATIONAL_INSTITUTION",
+    "entityType" : "BUSINESS",
+    "lastNameOrOrgName" : "PENN STATE UNIVERSITY"
+  } ],
+  "healthCoverages" : [ {
+    "maintenanceTypeCode" : "021",
+    "insuranceLineCode" : "HLT",
+    "coverageDates" : [ {
+      "qualifierCode" : "348",
+      "date" : "1996-06-01"
+    } ]
+  } ],
+  "transaction" : {
+    "id" : "685d571fe29351212dc468f8",
+    "controlNumber" : "12345",
+    "transactionType" : "MEMBER_COVERAGE",
+    "purposeCode" : "00",
+    "originatorApplicationTransactionId" : "12456",
+    "creationDate" : "1998-05-20",
+    "creationTime" : "12:00:00",
+    "actionCode" : "2",
+    "transactionSetIdentifierCode" : "834",
+    "implementationConventionReference" : "005010X220A1",
+    "fileInfo" : {
+      "name" : "X220-add-dependent-(full-time-student)-to-existing-enrollment.edi",
+      "url" : "file:/edi-samples/edi_files/834/X220-add-dependent-(full-time-student)-to-existing-enrollment.edi",
+      "lastModifiedDateTime" : "2025-05-13T18:23:17.491-04:00",
+      "fileType" : "EDI"
+    },
+    "creationDateTime" : "1998-05-20T12:00:00"
+  }
+}
+ ]

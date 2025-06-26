@@ -3,10 +3,11 @@
   "segment_id" : "ST",
   "loop_id" : "0000",
   "transaction_set_identifier_code" : {
-    "code" : "277"
+    "code" : "277",
+    "desc" : "Health Care Claim Status"
   },
   "transaction_set_control_number" : "0001",
-  "implementation_convention_preference" : "005010X212",
+  "implementation_convention_reference" : "005010X212",
   "beginning_of_hierarchical_transaction" : {
     "segment_id" : "BHT",
     "loop_id" : "0000",
@@ -55,7 +56,8 @@
       "hierarchical_id_number" : "2",
       "hierarchical_parent_id_number" : "1",
       "hierarchical_level_code" : {
-        "code" : "21"
+        "code" : "21",
+        "desc" : "Information Receiver"
       },
       "hierarchical_child_code" : {
         "code" : "1",
@@ -85,7 +87,8 @@
         "hierarchical_id_number" : "3",
         "hierarchical_parent_id_number" : "2",
         "hierarchical_level_code" : {
-          "code" : "19"
+          "code" : "19",
+          "desc" : "Provider of Service"
         },
         "hierarchical_child_code" : {
           "code" : "1",
@@ -160,7 +163,8 @@
               "segment_id" : "REF",
               "loop_id" : "2200D",
               "reference_identification_qualifier" : {
-                "code" : "1K"
+                "code" : "1K",
+                "desc" : "Payer Claim Number"
               },
               "member_group_or_policy_number" : "05347006051"
             },
@@ -168,7 +172,8 @@
               "segment_id" : "REF",
               "loop_id" : "2200D",
               "reference_identification_qualifier" : {
-                "code" : "BLT"
+                "code" : "BLT",
+                "desc" : "Bill Type"
               },
               "member_group_or_policy_number" : "111"
             },
@@ -247,7 +252,8 @@
               "segment_id" : "REF",
               "loop_id" : "2200D",
               "reference_identification_qualifier" : {
-                "code" : "1K"
+                "code" : "1K",
+                "desc" : "Payer Claim Number"
               },
               "member_group_or_policy_number" : "0529675341"
             },
@@ -255,7 +261,8 @@
               "segment_id" : "REF",
               "loop_id" : "2200D",
               "reference_identification_qualifier" : {
-                "code" : "BLT"
+                "code" : "BLT",
+                "desc" : "Bill Type"
               },
               "member_group_or_policy_number" : "111"
             },
@@ -289,7 +296,8 @@
         "hierarchical_id_number" : "6",
         "hierarchical_parent_id_number" : "2",
         "hierarchical_level_code" : {
-          "code" : "19"
+          "code" : "19",
+          "desc" : "Provider of Service"
         },
         "hierarchical_child_code" : {
           "code" : "1",
@@ -392,7 +400,8 @@
                 "segment_id" : "REF",
                 "loop_id" : "2200E",
                 "reference_identification_qualifier" : {
-                  "code" : "1K"
+                  "code" : "1K",
+                  "desc" : "Payer Claim Number"
                 },
                 "member_group_or_policy_number" : "051681010827"
               },

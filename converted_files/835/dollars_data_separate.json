@@ -1,0 +1,291 @@
+[
+ {
+  "id" : "685d6a78b5939c4ba8ce15a9",
+  "objectType" : "PAYMENT",
+  "patientControlNumber" : "5554555444",
+  "chargeAmount" : 800.00,
+  "paymentAmount" : 500.00,
+  "facilityCode" : {
+    "subType" : "PLACE_OF_SERVICE",
+    "code" : "11"
+  },
+  "placeOfServiceType" : "OFFICE",
+  "frequencyCode" : {
+    "subType" : "FREQUENCY_CODE",
+    "code" : "1",
+    "desc" : "Original claim"
+  },
+  "serviceDateFrom" : "2023-03-01",
+  "serviceDateTo" : "2023-03-01",
+  "patient" : {
+    "person" : {
+      "entityRole" : "PATIENT",
+      "entityType" : "INDIVIDUAL",
+      "identificationType" : "MEMBER_ID",
+      "identifier" : "33344555510",
+      "lastNameOrOrgName" : "BUDD",
+      "firstName" : "WILLIAM"
+    }
+  },
+  "claimStatusCode" : "1",
+  "claimStatus" : "PRIMARY",
+  "patientResponsibilityAmount" : 300.00,
+  "claimFilingIndicatorCode" : "12",
+  "insurancePlanType" : "PPO",
+  "payerControlNumber" : "94060555410000",
+  "supplementalAmounts" : [ {
+    "qualifierCode" : "AU",
+    "type" : "COVERAGE_AMOUNT",
+    "amount" : 800.00
+  } ],
+  "payer" : {
+    "entityRole" : "PAYER",
+    "entityType" : "BUSINESS",
+    "identifier" : "1935665544",
+    "lastNameOrOrgName" : "RUSHMORE LIFE",
+    "address" : {
+      "line" : "10 SOUTH AVENUET",
+      "city" : "RAPID CITY",
+      "stateCode" : "SD",
+      "zipCode" : "55111"
+    },
+    "contacts" : [ {
+      "name" : "JOHN WAYNE",
+      "contactNumbers" : [ {
+        "type" : "PHONE",
+        "number" : "8005551212"
+      }, {
+        "type" : "EXTENSION",
+        "number" : "123"
+      } ]
+    } ]
+  },
+  "payee" : {
+    "entityRole" : "PAYEE",
+    "entityType" : "BUSINESS",
+    "identificationType" : "NPI",
+    "identifier" : "5544667733",
+    "taxId" : "777667755",
+    "lastNameOrOrgName" : "ACME MEDICAL CENTER"
+  },
+  "serviceLines" : [ {
+    "chargeAmount" : 800.00,
+    "paidAmount" : 500.00,
+    "supplementalAmounts" : [ {
+      "qualifierCode" : "B6",
+      "type" : "ALLOWED_ACTUAL",
+      "amount" : 800.00
+    } ],
+    "serviceDateFrom" : "2023-03-01",
+    "procedure" : {
+      "subType" : "CPT",
+      "code" : "99211",
+      "desc" : "Office or other outpatient visit for the evaluation and management of an established patient that may not require the presence of a physician or other qualified health care professional"
+    },
+    "adjustments" : [ {
+      "group" : "PATIENT_RESPONSIBILITY",
+      "reasonCode" : "1",
+      "reason" : {
+        "subType" : "CARC",
+        "code" : "1",
+        "desc" : "Deductible Amount"
+      },
+      "amount" : 300.00
+    } ]
+  } ],
+  "transaction" : {
+    "id" : "685d6a78b5939c4ba8ce158b",
+    "controlNumber" : "112233",
+    "transactionType" : "PAYMENT",
+    "productionDate" : "2019-03-14",
+    "totalPaymentAmount" : 1100.00,
+    "creditOrDebitFlagCode" : "C",
+    "paymentMethodType" : "ACH",
+    "receiverAccountNumber" : "144444",
+    "paymentDate" : "2019-03-16",
+    "checkOrEftTraceNumber" : "71700666555",
+    "payerIdentifier" : "1935665544",
+    "transactionSetIdentifierCode" : "835",
+    "fileInfo" : {
+      "name" : "dollars_data_separate.dat",
+      "url" : "file:/edi-samples/edi_files/835/dollars_data_separate.dat",
+      "lastModifiedDateTime" : "2023-08-28T03:50:07.198-04:00",
+      "fileType" : "EDI"
+    },
+    "sender" : {
+      "entityRole" : "PAYER",
+      "entityType" : "BUSINESS",
+      "identifier" : "1935665544",
+      "lastNameOrOrgName" : "RUSHMORE LIFE",
+      "address" : {
+        "line" : "10 SOUTH AVENUET",
+        "city" : "RAPID CITY",
+        "stateCode" : "SD",
+        "zipCode" : "55111"
+      },
+      "contacts" : [ {
+        "name" : "JOHN WAYNE",
+        "contactNumbers" : [ {
+          "type" : "PHONE",
+          "number" : "8005551212"
+        }, {
+          "type" : "EXTENSION",
+          "number" : "123"
+        } ]
+      } ]
+    },
+    "receiver" : {
+      "entityRole" : "PAYEE",
+      "entityType" : "BUSINESS",
+      "identificationType" : "NPI",
+      "identifier" : "5544667733",
+      "taxId" : "777667755",
+      "lastNameOrOrgName" : "ACME MEDICAL CENTER"
+    }
+  }
+}
+, {
+  "id" : "685d6a78b5939c4ba8ce15aa",
+  "objectType" : "PAYMENT",
+  "patientControlNumber" : "8765432112",
+  "chargeAmount" : 1200.00,
+  "paymentAmount" : 600.00,
+  "facilityCode" : {
+    "subType" : "PLACE_OF_SERVICE",
+    "code" : "11"
+  },
+  "placeOfServiceType" : "OFFICE",
+  "frequencyCode" : {
+    "subType" : "FREQUENCY_CODE",
+    "code" : "1",
+    "desc" : "Original claim"
+  },
+  "serviceDateFrom" : "2023-03-10",
+  "serviceDateTo" : "2023-03-10",
+  "patient" : {
+    "person" : {
+      "entityRole" : "PATIENT",
+      "entityType" : "INDIVIDUAL",
+      "identificationType" : "MEMBER_ID",
+      "identifier" : "44455666610",
+      "lastNameOrOrgName" : "SETTLE",
+      "firstName" : "SUSAN"
+    }
+  },
+  "claimStatusCode" : "1",
+  "claimStatus" : "PRIMARY",
+  "patientResponsibilityAmount" : 600.00,
+  "claimFilingIndicatorCode" : "12",
+  "insurancePlanType" : "PPO",
+  "payerControlNumber" : "9407779923000",
+  "supplementalAmounts" : [ {
+    "qualifierCode" : "AU",
+    "type" : "COVERAGE_AMOUNT",
+    "amount" : 1200.00
+  } ],
+  "payer" : {
+    "entityRole" : "PAYER",
+    "entityType" : "BUSINESS",
+    "identifier" : "1935665544",
+    "lastNameOrOrgName" : "RUSHMORE LIFE",
+    "address" : {
+      "line" : "10 SOUTH AVENUET",
+      "city" : "RAPID CITY",
+      "stateCode" : "SD",
+      "zipCode" : "55111"
+    },
+    "contacts" : [ {
+      "name" : "JOHN WAYNE",
+      "contactNumbers" : [ {
+        "type" : "PHONE",
+        "number" : "8005551212"
+      }, {
+        "type" : "EXTENSION",
+        "number" : "123"
+      } ]
+    } ]
+  },
+  "payee" : {
+    "entityRole" : "PAYEE",
+    "entityType" : "BUSINESS",
+    "identificationType" : "NPI",
+    "identifier" : "5544667733",
+    "taxId" : "777667755",
+    "lastNameOrOrgName" : "ACME MEDICAL CENTER"
+  },
+  "serviceLines" : [ {
+    "chargeAmount" : 1200.00,
+    "paidAmount" : 600.00,
+    "supplementalAmounts" : [ {
+      "qualifierCode" : "B6",
+      "type" : "ALLOWED_ACTUAL",
+      "amount" : 1200.00
+    } ],
+    "serviceDateFrom" : "2023-03-10",
+    "procedure" : {
+      "subType" : "CPT",
+      "code" : "93555"
+    },
+    "adjustments" : [ {
+      "group" : "PATIENT_RESPONSIBILITY",
+      "reasonCode" : "1",
+      "reason" : {
+        "subType" : "CARC",
+        "code" : "1",
+        "desc" : "Deductible Amount"
+      },
+      "amount" : 600.00
+    } ]
+  } ],
+  "transaction" : {
+    "id" : "685d6a78b5939c4ba8ce158b",
+    "controlNumber" : "112233",
+    "transactionType" : "PAYMENT",
+    "productionDate" : "2019-03-14",
+    "totalPaymentAmount" : 1100.00,
+    "creditOrDebitFlagCode" : "C",
+    "paymentMethodType" : "ACH",
+    "receiverAccountNumber" : "144444",
+    "paymentDate" : "2019-03-16",
+    "checkOrEftTraceNumber" : "71700666555",
+    "payerIdentifier" : "1935665544",
+    "transactionSetIdentifierCode" : "835",
+    "fileInfo" : {
+      "name" : "dollars_data_separate.dat",
+      "url" : "file:/edi-samples/edi_files/835/dollars_data_separate.dat",
+      "lastModifiedDateTime" : "2023-08-28T03:50:07.198-04:00",
+      "fileType" : "EDI"
+    },
+    "sender" : {
+      "entityRole" : "PAYER",
+      "entityType" : "BUSINESS",
+      "identifier" : "1935665544",
+      "lastNameOrOrgName" : "RUSHMORE LIFE",
+      "address" : {
+        "line" : "10 SOUTH AVENUET",
+        "city" : "RAPID CITY",
+        "stateCode" : "SD",
+        "zipCode" : "55111"
+      },
+      "contacts" : [ {
+        "name" : "JOHN WAYNE",
+        "contactNumbers" : [ {
+          "type" : "PHONE",
+          "number" : "8005551212"
+        }, {
+          "type" : "EXTENSION",
+          "number" : "123"
+        } ]
+      } ]
+    },
+    "receiver" : {
+      "entityRole" : "PAYEE",
+      "entityType" : "BUSINESS",
+      "identificationType" : "NPI",
+      "identifier" : "5544667733",
+      "taxId" : "777667755",
+      "lastNameOrOrgName" : "ACME MEDICAL CENTER"
+    }
+  }
+}
+ ]

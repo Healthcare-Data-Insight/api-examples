@@ -1,0 +1,341 @@
+[
+ {
+  "id" : "685d7ce9fc42e4481ffb5080",
+  "objectType" : "CLAIM",
+  "patientControlNumber" : "CLMNO12345",
+  "chargeAmount" : 2232.93,
+  "facilityCode" : {
+    "subType" : "PLACE_OF_SERVICE",
+    "code" : "12"
+  },
+  "placeOfServiceType" : "HOME",
+  "frequencyCode" : {
+    "subType" : "FREQUENCY_CODE",
+    "code" : "1",
+    "desc" : "Original claim"
+  },
+  "serviceDateFrom" : "2004-02-01",
+  "serviceDateTo" : "2004-02-07",
+  "subscriber" : {
+    "payerResponsibilitySequence" : "PRIMARY",
+    "relationshipType" : "SELF",
+    "groupOrPolicyNumber" : "GRP01020102",
+    "claimFilingIndicatorCode" : "CI",
+    "insurancePlanType" : "COMMERCIAL",
+    "person" : {
+      "entityRole" : "SUBSCRIBER",
+      "entityType" : "INDIVIDUAL",
+      "identificationType" : "MEMBER_ID",
+      "identifier" : "MBRID01234",
+      "lastNameOrOrgName" : "Smith",
+      "firstName" : "Steve",
+      "middleName" : "A",
+      "birthDate" : "1943-05-01",
+      "gender" : "MALE",
+      "address" : {
+        "line" : "15210 Juliet Lane",
+        "city" : "Libertyville",
+        "stateCode" : "IL",
+        "zipCode" : "60048"
+      }
+    },
+    "payer" : {
+      "entityRole" : "PAYER",
+      "entityType" : "BUSINESS",
+      "identificationType" : "CMS_PLAN_ID",
+      "identifier" : "PLANID12345",
+      "lastNameOrOrgName" : "R&R Health Plan"
+    }
+  },
+  "providerSignatureIndicator" : "Y",
+  "assignmentParticipationCode" : "A",
+  "assignmentCertificationIndicator" : "Y",
+  "releaseOfInformationCode" : "Y",
+  "billingProvider" : {
+    "entityRole" : "BILLING_PROVIDER",
+    "entityType" : "BUSINESS",
+    "identificationType" : "NPI",
+    "identifier" : "1234567893",
+    "taxId" : "10-1234567",
+    "lastNameOrOrgName" : "Professional Home IV, LLC",
+    "address" : {
+      "line" : "1500 Industrial Drive",
+      "city" : "Libertyville",
+      "stateCode" : "IL",
+      "zipCode" : "60048"
+    },
+    "contacts" : [ {
+      "name" : "Brenda Holly",
+      "contactNumbers" : [ {
+        "type" : "PHONE",
+        "number" : "8019999999"
+      } ]
+    } ]
+  },
+  "diags" : [ {
+    "subType" : "ICD_10_PRINCIPAL",
+    "code" : "J069",
+    "desc" : "Acute upper respiratory infection, unspecified",
+    "formattedCode" : "J06.9"
+  } ],
+  "serviceLines" : [ {
+    "placeOfServiceType" : "HOME",
+    "placeOfServiceCode" : "12",
+    "chargeAmount" : 1400.00,
+    "serviceDateFrom" : "2004-02-01",
+    "serviceDateTo" : "2004-02-07",
+    "unitType" : "UNIT",
+    "unitCount" : 7,
+    "procedure" : {
+      "subType" : "HCPCS",
+      "code" : "S9500",
+      "desc" : "Home infusion therapy, antibiotic, antiviral, or antifungal therapy; once every 24 hours; administrative services, professional pharmacy services, care coordination, and all necessary supplies and equipment (drugs and nursing visits coded separately), per diem"
+    },
+    "providers" : [ {
+      "entityRole" : "ORDERING",
+      "entityType" : "INDIVIDUAL",
+      "identificationType" : "NPI",
+      "identifier" : "1112223338",
+      "lastNameOrOrgName" : "Welby",
+      "firstName" : "Marcus"
+    } ],
+    "diagPointers" : [ 1 ],
+    "diags" : [ {
+      "subType" : "ICD_10_PRINCIPAL",
+      "code" : "J069",
+      "desc" : "Acute upper respiratory infection, unspecified",
+      "formattedCode" : "J06.9"
+    } ]
+  }, {
+    "placeOfServiceType" : "HOME",
+    "placeOfServiceCode" : "12",
+    "chargeAmount" : 682.50,
+    "serviceDateFrom" : "2004-02-01",
+    "serviceDateTo" : "2004-02-07",
+    "prescriptionDate" : "2004-01-30",
+    "unitType" : "UNIT",
+    "unitCount" : 7,
+    "drug" : {
+      "subType" : "NDC",
+      "code" : "00003161201",
+      "desc" : "BARACLUDE (entecavir)",
+      "formattedCode" : "0003-1612-01"
+    },
+    "drugQuantity" : 7,
+    "drugUnitType" : "UNIT",
+    "prescriptionNumber" : "2530001",
+    "procedure" : {
+      "subType" : "HCPCS",
+      "code" : "S5001",
+      "desc" : "Prescription drug, brand name"
+    },
+    "providers" : [ {
+      "entityRole" : "ORDERING",
+      "entityType" : "INDIVIDUAL",
+      "identificationType" : "NPI",
+      "identifier" : "1112223338",
+      "lastNameOrOrgName" : "Welby",
+      "firstName" : "Marcus"
+    } ],
+    "diagPointers" : [ 1 ],
+    "diags" : [ {
+      "subType" : "ICD_10_PRINCIPAL",
+      "code" : "J069",
+      "desc" : "Acute upper respiratory infection, unspecified",
+      "formattedCode" : "J06.9"
+    } ]
+  }, {
+    "placeOfServiceType" : "HOME",
+    "placeOfServiceCode" : "12",
+    "chargeAmount" : 15.12,
+    "serviceDateFrom" : "2004-02-01",
+    "serviceDateTo" : "2004-02-07",
+    "prescriptionDate" : "2004-01-30",
+    "unitType" : "UNIT",
+    "unitCount" : 14,
+    "drug" : {
+      "subType" : "NDC",
+      "code" : "63323025510",
+      "desc" : "Methylprednisolone Sodium Succinate (METHYLPREDNISOLONE SODIUM SUCCINATE)",
+      "formattedCode" : "63323-255-10"
+    },
+    "drugQuantity" : 14,
+    "drugUnitType" : "UNIT",
+    "prescriptionNumber" : "2530001",
+    "procedure" : {
+      "subType" : "HCPCS",
+      "code" : "S5000",
+      "desc" : "Prescription drug, generic"
+    },
+    "providers" : [ {
+      "entityRole" : "ORDERING",
+      "entityType" : "INDIVIDUAL",
+      "identificationType" : "NPI",
+      "identifier" : "1112223338",
+      "lastNameOrOrgName" : "Welby",
+      "firstName" : "Marcus"
+    } ],
+    "diagPointers" : [ 1 ],
+    "diags" : [ {
+      "subType" : "ICD_10_PRINCIPAL",
+      "code" : "J069",
+      "desc" : "Acute upper respiratory infection, unspecified",
+      "formattedCode" : "J06.9"
+    } ]
+  }, {
+    "placeOfServiceType" : "HOME",
+    "placeOfServiceCode" : "12",
+    "chargeAmount" : 67.69,
+    "serviceDateFrom" : "2004-02-01",
+    "serviceDateTo" : "2004-02-07",
+    "prescriptionDate" : "2004-01-30",
+    "unitType" : "UNIT",
+    "unitCount" : 7,
+    "drug" : {
+      "subType" : "NDC",
+      "code" : "00338004938",
+      "desc" : "Sodium Chloride (Sodium Chloride)",
+      "formattedCode" : "0338-0049-38"
+    },
+    "drugQuantity" : 7,
+    "drugUnitType" : "UNIT",
+    "prescriptionNumber" : "2530001",
+    "procedure" : {
+      "subType" : "HCPCS",
+      "code" : "S5000",
+      "desc" : "Prescription drug, generic"
+    },
+    "providers" : [ {
+      "entityRole" : "ORDERING",
+      "entityType" : "INDIVIDUAL",
+      "identificationType" : "NPI",
+      "identifier" : "1112223338",
+      "lastNameOrOrgName" : "Welby",
+      "firstName" : "Marcus"
+    } ],
+    "diagPointers" : [ 1 ],
+    "diags" : [ {
+      "subType" : "ICD_10_PRINCIPAL",
+      "code" : "J069",
+      "desc" : "Acute upper respiratory infection, unspecified",
+      "formattedCode" : "J06.9"
+    } ]
+  }, {
+    "placeOfServiceType" : "HOME",
+    "placeOfServiceCode" : "12",
+    "chargeAmount" : 57.12,
+    "serviceDateFrom" : "2004-02-01",
+    "serviceDateTo" : "2004-02-07",
+    "prescriptionDate" : "2004-01-30",
+    "unitType" : "UNIT",
+    "unitCount" : 14,
+    "drug" : {
+      "subType" : "NDC",
+      "code" : "08290326810",
+      "desc" : "Isopropyl Alcohol (Isopropyl Alcohol)",
+      "formattedCode" : "8290-3268-10"
+    },
+    "drugQuantity" : 14,
+    "drugUnitType" : "UNIT",
+    "prescriptionNumber" : "2530002",
+    "procedure" : {
+      "subType" : "HCPCS",
+      "code" : "S5000",
+      "desc" : "Prescription drug, generic"
+    },
+    "providers" : [ {
+      "entityRole" : "ORDERING",
+      "entityType" : "INDIVIDUAL",
+      "identificationType" : "NPI",
+      "identifier" : "1112223338",
+      "lastNameOrOrgName" : "Welby",
+      "firstName" : "Marcus"
+    } ],
+    "diagPointers" : [ 1 ],
+    "diags" : [ {
+      "subType" : "ICD_10_PRINCIPAL",
+      "code" : "J069",
+      "desc" : "Acute upper respiratory infection, unspecified",
+      "formattedCode" : "J06.9"
+    } ]
+  }, {
+    "placeOfServiceType" : "HOME",
+    "placeOfServiceCode" : "12",
+    "chargeAmount" : 10.50,
+    "serviceDateFrom" : "2004-02-01",
+    "serviceDateTo" : "2004-02-07",
+    "prescriptionDate" : "2004-01-30",
+    "unitType" : "UNIT",
+    "unitCount" : 7,
+    "drug" : {
+      "subType" : "NDC",
+      "code" : "829080357005",
+      "desc" : "AMINO ACTIVE Topical Analgesic Cream (HISTAMINE DIHYDROCHLORIDE)",
+      "formattedCode" : "82908-357-05"
+    },
+    "drugQuantity" : 7,
+    "drugUnitType" : "UNIT",
+    "prescriptionNumber" : "2530003",
+    "procedure" : {
+      "subType" : "HCPCS",
+      "code" : "S5000",
+      "desc" : "Prescription drug, generic"
+    },
+    "providers" : [ {
+      "entityRole" : "ORDERING",
+      "entityType" : "INDIVIDUAL",
+      "identificationType" : "NPI",
+      "identifier" : "1112223338",
+      "lastNameOrOrgName" : "Welby",
+      "firstName" : "Marcus"
+    } ],
+    "diagPointers" : [ 1 ],
+    "diags" : [ {
+      "subType" : "ICD_10_PRINCIPAL",
+      "code" : "J069",
+      "desc" : "Acute upper respiratory infection, unspecified",
+      "formattedCode" : "J06.9"
+    } ]
+  } ],
+  "transaction" : {
+    "id" : "685d7ce9fc42e4481ffb503e",
+    "controlNumber" : "0711",
+    "transactionType" : "PROF",
+    "purposeCode" : "00",
+    "originatorApplicationTransactionId" : "0013",
+    "creationDate" : "2004-03-01",
+    "creationTime" : "12:00:00",
+    "claimOrEncounterIdentifierType" : "CHARGEABLE",
+    "transactionSetIdentifierCode" : "837",
+    "implementationConventionReference" : "005010X222",
+    "fileInfo" : {
+      "name" : "home-infusion-ndc.dat",
+      "url" : "file:/edi-samples/edi_files/837/home-infusion-ndc.dat",
+      "lastModifiedDateTime" : "2024-01-31T20:06:16.189-05:00",
+      "fileType" : "EDI"
+    },
+    "sender" : {
+      "entityRole" : "SUBMITTER",
+      "entityType" : "BUSINESS",
+      "identificationType" : "ETIN",
+      "identifier" : "587654321",
+      "lastNameOrOrgName" : "Quality Billing Service Corporation",
+      "contacts" : [ {
+        "name" : "Bud Holly",
+        "contactNumbers" : [ {
+          "type" : "PHONE",
+          "number" : "8017268899"
+        } ]
+      } ]
+    },
+    "receiver" : {
+      "entityRole" : "RECEIVER",
+      "entityType" : "BUSINESS",
+      "identificationType" : "ETIN",
+      "identifier" : "369852758",
+      "lastNameOrOrgName" : "XYZ Receiver"
+    },
+    "creationDateTime" : "2004-03-01T12:00:00"
+  }
+}
+ ]

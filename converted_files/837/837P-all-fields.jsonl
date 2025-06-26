@@ -746,7 +746,7 @@
     "implementationConventionReference": "005010X222",
     "fileInfo": {
       "name": "837P-all-fields.dat",
-      "url": "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/837/837P-all-fields.dat",
+      "url": "file:/edi-samples/edi_files/837/837P-all-fields.dat",
       "lastModifiedDateTime": "2025-04-07T12:22:02.272-04:00",
       "fileType": "EDI"
     },

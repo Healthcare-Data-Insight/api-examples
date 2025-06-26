@@ -1,0 +1,374 @@
+[
+ {
+  "id" : "685d571fe29351212dc467f0",
+  "objectType" : "MEMBER_COVERAGE",
+  "sponsor" : {
+    "entityRole" : "PLAN_SPONSOR",
+    "entityType" : "BUSINESS",
+    "identificationType" : "EIN",
+    "identifier" : "999888777"
+  },
+  "insurer" : {
+    "entityRole" : "INSURER",
+    "entityType" : "BUSINESS",
+    "identificationType" : "EIN",
+    "identifier" : "654456654"
+  },
+  "memberIndicator" : "Y",
+  "relationshipCode" : "18",
+  "maintenanceTypeCode" : "021",
+  "maintenanceReasonCode" : "20",
+  "benefitStatusCode" : "A",
+  "employmentStatusCode" : "FT",
+  "identifier" : "member1",
+  "groupOrPolicyNumber" : "group1",
+  "statusInfoEffectiveDates" : [ {
+    "qualifierCode" : "356",
+    "date" : "1996-01-12"
+  } ],
+  "member" : {
+    "entityRole" : "INSURED_SUBSCRIBER",
+    "entityType" : "INDIVIDUAL",
+    "identificationType" : "SSN",
+    "identifier" : "202443307",
+    "lastNameOrOrgName" : "SMITH",
+    "firstName" : "WILLIAM",
+    "birthDate" : "1970-06-14",
+    "gender" : "MALE",
+    "address" : {
+      "line" : "1715 SOUTHWIND AVENUE",
+      "city" : "ANYTOWN",
+      "stateCode" : "PA",
+      "zipCode" : "171110000"
+    },
+    "contacts" : [ {
+      "contactNumbers" : [ {
+        "type" : "HOME_PHONE",
+        "number" : "7172343334"
+      }, {
+        "type" : "WORK_PHONE",
+        "number" : "7172341240"
+      } ]
+    } ]
+  },
+  "healthCoverages" : [ {
+    "maintenanceTypeCode" : "021",
+    "insuranceLineCode" : "HMO",
+    "coverageDates" : [ {
+      "qualifierCode" : "348",
+      "date" : "1996-06-01"
+    } ],
+    "providers" : [ {
+      "entityRole" : "PRIMARY_CARE",
+      "entityType" : "INDIVIDUAL",
+      "identificationType" : "SERVICE_PROVIDER",
+      "identifier" : "143766",
+      "lastNameOrOrgName" : "BROWN",
+      "firstName" : "BERNARD",
+      "changeReason" : {
+        "actionCode" : "2",
+        "effectiveDate" : "2024-05-01",
+        "reasonCode" : "AI"
+      }
+    } ]
+  } ],
+  "transaction" : {
+    "id" : "685d571fe29351212dc467eb",
+    "controlNumber" : "12345",
+    "transactionType" : "MEMBER_COVERAGE",
+    "purposeCode" : "00",
+    "originatorApplicationTransactionId" : "1",
+    "creationDate" : "1998-05-20",
+    "creationTime" : "12:00:00",
+    "actionCode" : "2",
+    "transactionSetIdentifierCode" : "834",
+    "implementationConventionReference" : "005010X220A1",
+    "fileInfo" : {
+      "name" : "X220-enroll-employee-in-managed-care-product.edi",
+      "url" : "file:/edi-samples/edi_files/834/X220-enroll-employee-in-managed-care-product.edi",
+      "lastModifiedDateTime" : "2025-05-11T17:48:18.759-04:00",
+      "fileType" : "EDI"
+    },
+    "creationDateTime" : "1998-05-20T12:00:00"
+  }
+}
+, {
+  "id" : "685d571fe29351212dc46800",
+  "objectType" : "MEMBER_COVERAGE",
+  "sponsor" : {
+    "entityRole" : "PLAN_SPONSOR",
+    "entityType" : "BUSINESS",
+    "identificationType" : "EIN",
+    "identifier" : "999888777"
+  },
+  "insurer" : {
+    "entityRole" : "INSURER",
+    "entityType" : "BUSINESS",
+    "identificationType" : "EIN",
+    "identifier" : "654456654"
+  },
+  "memberIndicator" : "Y",
+  "relationshipCode" : "18",
+  "maintenanceTypeCode" : "021",
+  "maintenanceReasonCode" : "20",
+  "benefitStatusCode" : "A",
+  "employmentStatusCode" : "FT",
+  "identifier" : "member2",
+  "groupOrPolicyNumber" : "group2",
+  "statusInfoEffectiveDates" : [ {
+    "qualifierCode" : "356",
+    "date" : "1996-01-12"
+  } ],
+  "member" : {
+    "entityRole" : "INSURED_SUBSCRIBER",
+    "entityType" : "INDIVIDUAL",
+    "identificationType" : "SSN",
+    "identifier" : "202443309",
+    "lastNameOrOrgName" : "SMITH",
+    "firstName" : "Jane",
+    "birthDate" : "1970-06-14",
+    "gender" : "MALE",
+    "address" : {
+      "line" : "1715 SOUTHWIND AVENUE",
+      "city" : "ANYTOWN",
+      "stateCode" : "PA",
+      "zipCode" : "171110000"
+    },
+    "contacts" : [ {
+      "contactNumbers" : [ {
+        "type" : "HOME_PHONE",
+        "number" : "7172343334"
+      }, {
+        "type" : "WORK_PHONE",
+        "number" : "7172341240"
+      } ]
+    } ]
+  },
+  "healthCoverages" : [ {
+    "maintenanceTypeCode" : "021",
+    "insuranceLineCode" : "HMO",
+    "coverageDates" : [ {
+      "qualifierCode" : "348",
+      "date" : "1996-06-01"
+    } ],
+    "providers" : [ {
+      "entityRole" : "PRIMARY_CARE",
+      "entityType" : "INDIVIDUAL",
+      "identificationType" : "SERVICE_PROVIDER",
+      "identifier" : "143766",
+      "lastNameOrOrgName" : "BROWN",
+      "firstName" : "BERNARD",
+      "changeReason" : {
+        "actionCode" : "2",
+        "effectiveDate" : "2024-05-01",
+        "reasonCode" : "AI"
+      }
+    } ]
+  } ],
+  "transaction" : {
+    "id" : "685d571fe29351212dc467eb",
+    "controlNumber" : "12345",
+    "transactionType" : "MEMBER_COVERAGE",
+    "purposeCode" : "00",
+    "originatorApplicationTransactionId" : "1",
+    "creationDate" : "1998-05-20",
+    "creationTime" : "12:00:00",
+    "actionCode" : "2",
+    "transactionSetIdentifierCode" : "834",
+    "implementationConventionReference" : "005010X220A1",
+    "fileInfo" : {
+      "name" : "X220-enroll-employee-in-managed-care-product.edi",
+      "url" : "file:/edi-samples/edi_files/834/X220-enroll-employee-in-managed-care-product.edi",
+      "lastModifiedDateTime" : "2025-05-11T17:48:18.759-04:00",
+      "fileType" : "EDI"
+    },
+    "creationDateTime" : "1998-05-20T12:00:00"
+  }
+}
+, {
+  "id" : "685d571fe29351212dc46816",
+  "objectType" : "MEMBER_COVERAGE",
+  "sponsor" : {
+    "entityRole" : "PLAN_SPONSOR",
+    "entityType" : "BUSINESS",
+    "identificationType" : "EIN",
+    "identifier" : "999888777"
+  },
+  "insurer" : {
+    "entityRole" : "INSURER",
+    "entityType" : "BUSINESS",
+    "identificationType" : "EIN",
+    "identifier" : "654456654"
+  },
+  "memberIndicator" : "Y",
+  "relationshipCode" : "18",
+  "maintenanceTypeCode" : "021",
+  "maintenanceReasonCode" : "20",
+  "benefitStatusCode" : "A",
+  "employmentStatusCode" : "FT",
+  "identifier" : "member3",
+  "groupOrPolicyNumber" : "group3",
+  "statusInfoEffectiveDates" : [ {
+    "qualifierCode" : "356",
+    "date" : "1996-01-12"
+  } ],
+  "member" : {
+    "entityRole" : "INSURED_SUBSCRIBER",
+    "entityType" : "INDIVIDUAL",
+    "identificationType" : "SSN",
+    "identifier" : "202443327",
+    "lastNameOrOrgName" : "SMITH",
+    "firstName" : "WILLIAM",
+    "birthDate" : "1970-06-14",
+    "gender" : "MALE",
+    "address" : {
+      "line" : "1715 SOUTHWIND AVENUE",
+      "city" : "ANYTOWN",
+      "stateCode" : "PA",
+      "zipCode" : "171110000"
+    },
+    "contacts" : [ {
+      "contactNumbers" : [ {
+        "type" : "HOME_PHONE",
+        "number" : "7172343334"
+      }, {
+        "type" : "WORK_PHONE",
+        "number" : "7172341240"
+      } ]
+    } ]
+  },
+  "healthCoverages" : [ {
+    "maintenanceTypeCode" : "021",
+    "insuranceLineCode" : "HMO",
+    "coverageDates" : [ {
+      "qualifierCode" : "348",
+      "date" : "1996-06-01"
+    } ],
+    "providers" : [ {
+      "entityRole" : "PRIMARY_CARE",
+      "entityType" : "INDIVIDUAL",
+      "identificationType" : "SERVICE_PROVIDER",
+      "identifier" : "143766",
+      "lastNameOrOrgName" : "BROWN",
+      "firstName" : "BERNARD",
+      "changeReason" : {
+        "actionCode" : "2",
+        "effectiveDate" : "2024-05-01",
+        "reasonCode" : "AI"
+      }
+    } ]
+  } ],
+  "transaction" : {
+    "id" : "685d571fe29351212dc46811",
+    "controlNumber" : "12345",
+    "transactionType" : "MEMBER_COVERAGE",
+    "purposeCode" : "00",
+    "originatorApplicationTransactionId" : "2",
+    "creationDate" : "1998-05-20",
+    "creationTime" : "12:00:00",
+    "actionCode" : "2",
+    "transactionSetIdentifierCode" : "834",
+    "implementationConventionReference" : "005010X220A1",
+    "fileInfo" : {
+      "name" : "X220-enroll-employee-in-managed-care-product.edi",
+      "url" : "file:/edi-samples/edi_files/834/X220-enroll-employee-in-managed-care-product.edi",
+      "lastModifiedDateTime" : "2025-05-11T17:48:18.759-04:00",
+      "fileType" : "EDI"
+    },
+    "creationDateTime" : "1998-05-20T12:00:00"
+  }
+}
+, {
+  "id" : "685d571fe29351212dc46826",
+  "objectType" : "MEMBER_COVERAGE",
+  "sponsor" : {
+    "entityRole" : "PLAN_SPONSOR",
+    "entityType" : "BUSINESS",
+    "identificationType" : "EIN",
+    "identifier" : "999888777"
+  },
+  "insurer" : {
+    "entityRole" : "INSURER",
+    "entityType" : "BUSINESS",
+    "identificationType" : "EIN",
+    "identifier" : "654456654"
+  },
+  "memberIndicator" : "Y",
+  "relationshipCode" : "18",
+  "maintenanceTypeCode" : "021",
+  "maintenanceReasonCode" : "20",
+  "benefitStatusCode" : "A",
+  "employmentStatusCode" : "FT",
+  "identifier" : "member4",
+  "groupOrPolicyNumber" : "group4",
+  "statusInfoEffectiveDates" : [ {
+    "qualifierCode" : "356",
+    "date" : "1996-01-12"
+  } ],
+  "member" : {
+    "entityRole" : "INSURED_SUBSCRIBER",
+    "entityType" : "INDIVIDUAL",
+    "identificationType" : "SSN",
+    "identifier" : "202443329",
+    "lastNameOrOrgName" : "SMITH",
+    "firstName" : "Jane",
+    "birthDate" : "1970-06-14",
+    "gender" : "MALE",
+    "address" : {
+      "line" : "1715 SOUTHWIND AVENUE",
+      "city" : "ANYTOWN",
+      "stateCode" : "PA",
+      "zipCode" : "171110000"
+    },
+    "contacts" : [ {
+      "contactNumbers" : [ {
+        "type" : "HOME_PHONE",
+        "number" : "7172343334"
+      }, {
+        "type" : "WORK_PHONE",
+        "number" : "7172341240"
+      } ]
+    } ]
+  },
+  "healthCoverages" : [ {
+    "maintenanceTypeCode" : "021",
+    "insuranceLineCode" : "HMO",
+    "coverageDates" : [ {
+      "qualifierCode" : "348",
+      "date" : "1996-06-01"
+    } ],
+    "providers" : [ {
+      "entityRole" : "PRIMARY_CARE",
+      "entityType" : "INDIVIDUAL",
+      "identificationType" : "SERVICE_PROVIDER",
+      "identifier" : "143766",
+      "lastNameOrOrgName" : "BROWN",
+      "firstName" : "BERNARD",
+      "changeReason" : {
+        "actionCode" : "2",
+        "effectiveDate" : "2024-05-01",
+        "reasonCode" : "AI"
+      }
+    } ]
+  } ],
+  "transaction" : {
+    "id" : "685d571fe29351212dc46811",
+    "controlNumber" : "12345",
+    "transactionType" : "MEMBER_COVERAGE",
+    "purposeCode" : "00",
+    "originatorApplicationTransactionId" : "2",
+    "creationDate" : "1998-05-20",
+    "creationTime" : "12:00:00",
+    "actionCode" : "2",
+    "transactionSetIdentifierCode" : "834",
+    "implementationConventionReference" : "005010X220A1",
+    "fileInfo" : {
+      "name" : "X220-enroll-employee-in-managed-care-product.edi",
+      "url" : "file:/edi-samples/edi_files/834/X220-enroll-employee-in-managed-care-product.edi",
+      "lastModifiedDateTime" : "2025-05-11T17:48:18.759-04:00",
+      "fileType" : "EDI"
+    },
+    "creationDateTime" : "1998-05-20T12:00:00"
+  }
+}
+ ]

@@ -1,0 +1,214 @@
+[
+ {
+  "id" : "685d7ce9fc42e4481ffb5003",
+  "objectType" : "CLAIM",
+  "patientControlNumber" : "ABC123-RI",
+  "chargeAmount" : 28.75,
+  "facilityCode" : {
+    "subType" : "PLACE_OF_SERVICE",
+    "code" : "11"
+  },
+  "placeOfServiceType" : "OFFICE",
+  "frequencyCode" : {
+    "subType" : "FREQUENCY_CODE",
+    "code" : "1",
+    "desc" : "Original claim"
+  },
+  "serviceDateFrom" : "2005-05-14",
+  "serviceDateTo" : "2005-05-14",
+  "subscriber" : {
+    "payerResponsibilitySequence" : "PRIMARY",
+    "relationshipType" : "SELF",
+    "groupOrPolicyNumber" : "123XYZ",
+    "claimFilingIndicatorCode" : "CI",
+    "insurancePlanType" : "COMMERCIAL",
+    "person" : {
+      "entityRole" : "SUBSCRIBER",
+      "entityType" : "INDIVIDUAL",
+      "identificationType" : "MEMBER_ID",
+      "identifier" : "00124A089",
+      "lastNameOrOrgName" : "RING",
+      "firstName" : "DIAMOND",
+      "middleName" : "D",
+      "birthDate" : "1940-12-29",
+      "gender" : "FEMALE",
+      "address" : {
+        "line" : "123 EXAMPLE DRIVE",
+        "city" : "INDIANAPOLIS",
+        "stateCode" : "IN",
+        "zipCode" : "462290000"
+      }
+    },
+    "payer" : {
+      "entityRole" : "PAYER",
+      "entityType" : "BUSINESS",
+      "identificationType" : "PAYOR_ID",
+      "identifier" : "12345",
+      "lastNameOrOrgName" : "EXTRA HEALTHY INSURANCE"
+    }
+  },
+  "providerSignatureIndicator" : "Y",
+  "assignmentParticipationCode" : "A",
+  "assignmentCertificationIndicator" : "Y",
+  "releaseOfInformationCode" : "Y",
+  "repricedReferenceNumber" : "0902352342",
+  "clearinghouseTraceNumber" : "061505501749388",
+  "billingProvider" : {
+    "entityRole" : "BILLING_PROVIDER",
+    "entityType" : "BUSINESS",
+    "identificationType" : "NPI",
+    "identifier" : "1234567890",
+    "taxId" : "555512345",
+    "lastNameOrOrgName" : "HAPPY DOCTORS GROUP PRACTICE",
+    "address" : {
+      "line" : "P O BOX 123",
+      "city" : "FORT WAYNE",
+      "stateCode" : "IN",
+      "zipCode" : "462540000"
+    },
+    "contacts" : [ {
+      "name" : "SUE BILLINGSWORTH",
+      "contactNumbers" : [ {
+        "type" : "PHONE",
+        "number" : "8881231234"
+      } ]
+    } ]
+  },
+  "providers" : [ {
+    "entityRole" : "REFERRING",
+    "entityType" : "INDIVIDUAL",
+    "identificationType" : "NPI",
+    "identifier" : "9988776655",
+    "lastNameOrOrgName" : "DOE",
+    "firstName" : "JOHN"
+  }, {
+    "entityRole" : "RENDERING",
+    "entityType" : "INDIVIDUAL",
+    "identificationType" : "NPI",
+    "identifier" : "1122334455",
+    "lastNameOrOrgName" : "ANTHONY",
+    "firstName" : "SUSAN",
+    "middleName" : "B"
+  }, {
+    "entityRole" : "SERVICE_FACILITY",
+    "entityType" : "BUSINESS",
+    "lastNameOrOrgName" : "HAPPY DOCTORS GROUP",
+    "address" : {
+      "line" : "123 FEEL GOOD ROAD",
+      "city" : "WASHINGTON",
+      "stateCode" : "IN",
+      "zipCode" : "475010000"
+    }
+  } ],
+  "diags" : [ {
+    "subType" : "ICD_10_PRINCIPAL",
+    "code" : "J449",
+    "desc" : "Chronic obstructive pulmonary disease, unspecified",
+    "formattedCode" : "J44.9"
+  }, {
+    "subType" : "ICD_10",
+    "code" : "E119",
+    "desc" : "Type 2 diabetes mellitus without complications",
+    "formattedCode" : "E11.9"
+  } ],
+  "serviceLines" : [ {
+    "referralNumber" : "V123456",
+    "chargeAmount" : 25.00,
+    "serviceDateFrom" : "2005-05-14",
+    "unitType" : "UNIT",
+    "unitCount" : 1,
+    "procedure" : {
+      "subType" : "HCPCS",
+      "code" : "E0570",
+      "desc" : "Nebulizer, with compressor",
+      "modifiers" : [ {
+        "subType" : "HCPCS_MODIFIER",
+        "code" : "RR",
+        "desc" : "Rental (use the 'rr' modifier when dme is to be rented)"
+      } ]
+    },
+    "providers" : [ {
+      "entityRole" : "REFERRING",
+      "entityType" : "INDIVIDUAL",
+      "identificationType" : "NPI",
+      "identifier" : "9988776655",
+      "lastNameOrOrgName" : "DOE",
+      "firstName" : "JOHN"
+    } ],
+    "diagPointers" : [ 1, 2 ],
+    "diags" : [ {
+      "subType" : "ICD_10_PRINCIPAL",
+      "code" : "J449",
+      "desc" : "Chronic obstructive pulmonary disease, unspecified",
+      "formattedCode" : "J44.9"
+    }, {
+      "subType" : "ICD_10",
+      "code" : "E119",
+      "desc" : "Type 2 diabetes mellitus without complications",
+      "formattedCode" : "E11.9"
+    } ]
+  }, {
+    "chargeAmount" : 3.75,
+    "serviceDateFrom" : "2005-05-14",
+    "unitType" : "UNIT",
+    "unitCount" : 1,
+    "procedure" : {
+      "subType" : "HCPCS",
+      "code" : "A7003",
+      "desc" : "Administration set, with small volume nonfiltered pneumatic nebulizer, disposable",
+      "modifiers" : [ {
+        "subType" : "HCPCS_MODIFIER",
+        "code" : "NU",
+        "desc" : "New equipment"
+      } ]
+    },
+    "diagPointers" : [ 1 ],
+    "diags" : [ {
+      "subType" : "ICD_10_PRINCIPAL",
+      "code" : "J449",
+      "desc" : "Chronic obstructive pulmonary disease, unspecified",
+      "formattedCode" : "J44.9"
+    } ]
+  } ],
+  "transaction" : {
+    "id" : "685d7ce9fc42e4481ffb4fdb",
+    "controlNumber" : "1002",
+    "transactionType" : "PROF",
+    "purposeCode" : "00",
+    "originatorApplicationTransactionId" : "1002",
+    "creationDate" : "2005-06-20",
+    "creationTime" : "09:46:00",
+    "claimOrEncounterIdentifierType" : "CHARGEABLE",
+    "transactionSetIdentifierCode" : "837",
+    "implementationConventionReference" : "005010X222",
+    "fileInfo" : {
+      "name" : "ppo-repriced.dat",
+      "url" : "file:/edi-samples/edi_files/837/ppo-repriced.dat",
+      "lastModifiedDateTime" : "2024-01-31T20:06:16.189-05:00",
+      "fileType" : "EDI"
+    },
+    "sender" : {
+      "entityRole" : "SUBMITTER",
+      "entityType" : "BUSINESS",
+      "identificationType" : "ETIN",
+      "identifier" : "123456789",
+      "lastNameOrOrgName" : "REGIONAL PPO NETWORK",
+      "contacts" : [ {
+        "name" : "SUBMITTER CONTACT INFO",
+        "contactNumbers" : [ {
+          "type" : "PHONE",
+          "number" : "8001231234"
+        } ]
+      } ]
+    },
+    "receiver" : {
+      "entityRole" : "RECEIVER",
+      "entityType" : "BUSINESS",
+      "identificationType" : "ETIN",
+      "identifier" : "112244",
+      "lastNameOrOrgName" : "EXTRA HEALTHY INSURANCE"
+    },
+    "creationDateTime" : "2005-06-20T09:46:00"
+  }
+}
+ ]

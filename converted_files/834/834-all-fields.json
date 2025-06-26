@@ -1,5 +1,6 @@
 [
  {
+  "id" : "685d571fe29351212dc4685e",
   "objectType" : "MEMBER_COVERAGE",
   "masterPolicyNumber" : "MasterPolicyNumber",
   "sponsor" : {
@@ -368,7 +369,7 @@
     "priorCoverageMonthCount" : "0"
   } ],
   "transaction" : {
-    "id" : "684715d1f38a641c7ae977ec",
+    "id" : "685d571fe29351212dc46851",
     "controlNumber" : "1",
     "transactionType" : "MEMBER_COVERAGE",
     "purposeCode" : "00",
@@ -378,6 +379,7 @@
     "originalTransactionSetReferenceNumber" : "OrigID",
     "actionCode" : "2",
     "transactionSetIdentifierCode" : "834",
+    "implementationConventionReference" : "005010X220A1",
     "fileEffectiveDates" : [ {
       "qualifierCode" : "007",
       "type" : "EFFECTIVE",
@@ -398,7 +400,7 @@
     } ],
     "fileInfo" : {
       "name" : "834-all-fields.edi",
-      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/claiminsight/clinsight/data_files/834/834-all-fields.edi",
+      "url" : "file:/edi-samples/edi_files/834/834-all-fields.edi",
       "lastModifiedDateTime" : "2025-06-06T13:56:04.446-04:00",
       "fileType" : "EDI"
     },
@@ -406,6 +408,7 @@
   }
 }
 , {
+  "id" : "685d571fe29351212dc468b3",
   "objectType" : "MEMBER_COVERAGE",
   "masterPolicyNumber" : "MasterPolicyNumber",
   "sponsor" : {
@@ -496,7 +499,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "684715d1f38a641c7ae977ec",
+    "id" : "685d571fe29351212dc46851",
     "controlNumber" : "1",
     "transactionType" : "MEMBER_COVERAGE",
     "purposeCode" : "00",
@@ -506,6 +509,7 @@
     "originalTransactionSetReferenceNumber" : "OrigID",
     "actionCode" : "2",
     "transactionSetIdentifierCode" : "834",
+    "implementationConventionReference" : "005010X220A1",
     "fileEffectiveDates" : [ {
       "qualifierCode" : "007",
       "type" : "EFFECTIVE",
@@ -526,7 +530,7 @@
     } ],
     "fileInfo" : {
       "name" : "834-all-fields.edi",
-      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/claiminsight/clinsight/data_files/834/834-all-fields.edi",
+      "url" : "file:/edi-samples/edi_files/834/834-all-fields.edi",
       "lastModifiedDateTime" : "2025-06-06T13:56:04.446-04:00",
       "fileType" : "EDI"
     },
@@ -534,6 +538,7 @@
   }
 }
 , {
+  "id" : "685d571fe29351212dc468ca",
   "objectType" : "MEMBER_COVERAGE",
   "masterPolicyNumber" : "MasterPolicyNumbe2",
   "sponsor" : {
@@ -599,7 +604,7 @@
     "amount" : 100.00
   } ],
   "transaction" : {
-    "id" : "684715d1f38a641c7ae97861",
+    "id" : "685d571fe29351212dc468c4",
     "controlNumber" : "2",
     "transactionType" : "MEMBER_COVERAGE",
     "purposeCode" : "00",
@@ -608,9 +613,10 @@
     "creationTime" : "12:00:00",
     "actionCode" : "2",
     "transactionSetIdentifierCode" : "834",
+    "implementationConventionReference" : "005010X220A1",
     "fileInfo" : {
       "name" : "834-all-fields.edi",
-      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/claiminsight/clinsight/data_files/834/834-all-fields.edi",
+      "url" : "file:/edi-samples/edi_files/834/834-all-fields.edi",
       "lastModifiedDateTime" : "2025-06-06T13:56:04.446-04:00",
       "fileType" : "EDI"
     },

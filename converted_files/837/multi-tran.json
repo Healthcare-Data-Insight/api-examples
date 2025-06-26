@@ -1,0 +1,560 @@
+[
+ {
+  "id" : "685d7ce9fc42e4481ffb4f27",
+  "objectType" : "CLAIM",
+  "patientControlNumber" : "26462967",
+  "chargeAmount" : 100.00,
+  "facilityCode" : {
+    "subType" : "PLACE_OF_SERVICE",
+    "code" : "11"
+  },
+  "placeOfServiceType" : "OFFICE",
+  "frequencyCode" : {
+    "subType" : "FREQUENCY_CODE",
+    "code" : "1",
+    "desc" : "Original claim"
+  },
+  "serviceDateFrom" : "2006-10-03",
+  "serviceDateTo" : "2006-10-10",
+  "subscriber" : {
+    "payerResponsibilitySequence" : "PRIMARY",
+    "relationshipType" : "SELF",
+    "groupOrPolicyNumber" : "12312-A",
+    "claimFilingIndicatorCode" : "HM",
+    "insurancePlanType" : "HMO",
+    "person" : {
+      "entityRole" : "SUBSCRIBER",
+      "entityType" : "INDIVIDUAL",
+      "identificationType" : "MEMBER_ID",
+      "identifier" : "00221111",
+      "lastNameOrOrgName" : "SMITH",
+      "firstName" : "TED",
+      "birthDate" : "1943-05-01",
+      "gender" : "MALE",
+      "address" : {
+        "line" : "236 N MAIN ST",
+        "city" : "MIAMI",
+        "stateCode" : "FL",
+        "zipCode" : "33413"
+      }
+    },
+    "payer" : {
+      "entityRole" : "PAYER",
+      "entityType" : "BUSINESS",
+      "identificationType" : "PAYOR_ID",
+      "identifier" : "741234",
+      "lastNameOrOrgName" : "ALLIANCE HEALTH AND LIFE INSURANCE"
+    }
+  },
+  "providerSignatureIndicator" : "Y",
+  "assignmentParticipationCode" : "A",
+  "assignmentCertificationIndicator" : "Y",
+  "releaseOfInformationCode" : "I",
+  "onsetOfCurrentIllnessOrInjuryDate" : "1998-10-03",
+  "clearinghouseTraceNumber" : "17312345600006351",
+  "billingProvider" : {
+    "entityRole" : "BILLING_PROVIDER",
+    "entityType" : "BUSINESS",
+    "identificationType" : "NPI",
+    "identifier" : "9876543210",
+    "taxId" : "587654321",
+    "lastNameOrOrgName" : "BEN KILDARE SERVICE",
+    "address" : {
+      "line" : "234 SEAWAY ST",
+      "city" : "MIAMI",
+      "stateCode" : "FL",
+      "zipCode" : "33111"
+    },
+    "providerTaxonomy" : {
+      "subType" : "PROVIDER_TAXONOMY",
+      "code" : "103GC0700X",
+      "desc" : "Clinical Neuropsychologist"
+    }
+  },
+  "providers" : [ {
+    "entityRole" : "SERVICE_FACILITY",
+    "entityType" : "BUSINESS",
+    "identificationType" : "NPI",
+    "identifier" : "5812345679",
+    "lastNameOrOrgName" : "KILDARE ASSOCIATES",
+    "address" : {
+      "line" : "2345 OCEAN BLVD",
+      "city" : "MIAMI",
+      "stateCode" : "FL",
+      "zipCode" : "33111"
+    }
+  } ],
+  "diags" : [ {
+    "subType" : "ICD_10_PRINCIPAL",
+    "code" : "G35",
+    "desc" : "Multiple sclerosis",
+    "formattedCode" : "G35"
+  }, {
+    "subType" : "ICD_10",
+    "code" : "Z1159",
+    "desc" : "Encounter for screening for other viral diseases",
+    "formattedCode" : "Z11.59"
+  } ],
+  "serviceLines" : [ {
+    "chargeAmount" : 40.00,
+    "serviceDateFrom" : "2006-10-03",
+    "unitType" : "UNIT",
+    "unitCount" : 1,
+    "procedure" : {
+      "subType" : "CPT",
+      "code" : "99213",
+      "desc" : "Office or other outpatient visit for the evaluation and management of an established patient, which requires a medically appropriate history and/or examination and low level of medical decision making. When using total time on the date of the encounter for code selection, 20 minutes must be met or exceeded."
+    },
+    "diagPointers" : [ 1 ],
+    "diags" : [ {
+      "subType" : "ICD_10_PRINCIPAL",
+      "code" : "G35",
+      "desc" : "Multiple sclerosis",
+      "formattedCode" : "G35"
+    } ]
+  }, {
+    "chargeAmount" : 15.00,
+    "serviceDateFrom" : "2006-10-03",
+    "unitType" : "UNIT",
+    "unitCount" : 1,
+    "procedure" : {
+      "subType" : "CPT",
+      "code" : "87070",
+      "desc" : "Culture, bacterial; any other source except urine, blood or stool, aerobic, with isolation and presumptive identification of isolates"
+    },
+    "diagPointers" : [ 1 ],
+    "diags" : [ {
+      "subType" : "ICD_10_PRINCIPAL",
+      "code" : "G35",
+      "desc" : "Multiple sclerosis",
+      "formattedCode" : "G35"
+    } ]
+  }, {
+    "chargeAmount" : 35.00,
+    "serviceDateFrom" : "2006-10-10",
+    "unitType" : "UNIT",
+    "unitCount" : 1,
+    "procedure" : {
+      "subType" : "CPT",
+      "code" : "99214",
+      "desc" : "Office or other outpatient visit for the evaluation and management of an established patient, which requires a medically appropriate history and/or examination and moderate level of medical decision making. When using total time on the date of the encounter for code selection, 30 minutes must be met or exceeded."
+    },
+    "diagPointers" : [ 2 ],
+    "diags" : [ {
+      "subType" : "ICD_10",
+      "code" : "Z1159",
+      "desc" : "Encounter for screening for other viral diseases",
+      "formattedCode" : "Z11.59"
+    } ]
+  }, {
+    "chargeAmount" : 10.00,
+    "serviceDateFrom" : "2006-10-10",
+    "unitType" : "UNIT",
+    "unitCount" : 1,
+    "procedure" : {
+      "subType" : "CPT",
+      "code" : "86663",
+      "desc" : "Antibody; Epstein-Barr (EB) virus, early antigen (EA)"
+    },
+    "diagPointers" : [ 2 ],
+    "diags" : [ {
+      "subType" : "ICD_10",
+      "code" : "Z1159",
+      "desc" : "Encounter for screening for other viral diseases",
+      "formattedCode" : "Z11.59"
+    } ]
+  } ],
+  "transaction" : {
+    "id" : "685d7ce9fc42e4481ffb4ebc",
+    "controlNumber" : "0021",
+    "transactionType" : "PROF",
+    "purposeCode" : "00",
+    "originatorApplicationTransactionId" : "0123",
+    "creationDate" : "2006-10-15",
+    "creationTime" : "10:23:00",
+    "claimOrEncounterIdentifierType" : "REPORTING",
+    "transactionSetIdentifierCode" : "837",
+    "implementationConventionReference" : "005010X222",
+    "fileInfo" : {
+      "name" : "multi-tran.dat",
+      "url" : "file:/edi-samples/edi_files/837/multi-tran.dat",
+      "lastModifiedDateTime" : "2023-12-03T17:43:58.366-05:00",
+      "fileType" : "EDI"
+    },
+    "sender" : {
+      "entityRole" : "SUBMITTER",
+      "entityType" : "BUSINESS",
+      "identificationType" : "ETIN",
+      "identifier" : "TGJ23",
+      "lastNameOrOrgName" : "PREMIER BILLING SERVICE",
+      "contacts" : [ {
+        "name" : "JERRY",
+        "contactNumbers" : [ {
+          "type" : "PHONE",
+          "number" : "3055552222"
+        }, {
+          "type" : "EXTENSION",
+          "number" : "231"
+        } ]
+      } ]
+    },
+    "receiver" : {
+      "entityRole" : "RECEIVER",
+      "entityType" : "BUSINESS",
+      "identificationType" : "ETIN",
+      "identifier" : "66783JJT",
+      "lastNameOrOrgName" : "AHLIC"
+    },
+    "creationDateTime" : "2006-10-15T10:23:00"
+  }
+}
+, {
+  "id" : "685d7ce9fc42e4481ffb4f28",
+  "objectType" : "CLAIM",
+  "patientControlNumber" : "125WILL",
+  "chargeAmount" : 145.50,
+  "facilityCode" : {
+    "subType" : "PLACE_OF_SERVICE",
+    "code" : "11"
+  },
+  "placeOfServiceType" : "OFFICE",
+  "frequencyCode" : {
+    "subType" : "FREQUENCY_CODE",
+    "code" : "1",
+    "desc" : "Original claim"
+  },
+  "serviceDateFrom" : "2005-02-15",
+  "serviceDateTo" : "2005-02-15",
+  "subscriber" : {
+    "payerResponsibilitySequence" : "PRIMARY",
+    "relationshipType" : "SELF",
+    "claimFilingIndicatorCode" : "MB",
+    "insurancePlanType" : "MEDICARE_B",
+    "person" : {
+      "entityRole" : "SUBSCRIBER",
+      "entityType" : "INDIVIDUAL",
+      "identificationType" : "MEMBER_ID",
+      "identifier" : "123456789A",
+      "lastNameOrOrgName" : "WILLIAMSON",
+      "firstName" : "MATTHEW",
+      "middleName" : "J",
+      "birthDate" : "1925-01-10",
+      "gender" : "MALE",
+      "address" : {
+        "line" : "128 BROADCREEK",
+        "city" : "BALTIMORE",
+        "stateCode" : "MD",
+        "zipCode" : "21234"
+      }
+    },
+    "payer" : {
+      "entityRole" : "PAYER",
+      "entityType" : "BUSINESS",
+      "identificationType" : "PAYOR_ID",
+      "identifier" : "C12345",
+      "lastNameOrOrgName" : "MEDICARE PART B MARYLAND"
+    }
+  },
+  "providerSignatureIndicator" : "Y",
+  "assignmentParticipationCode" : "A",
+  "assignmentCertificationIndicator" : "Y",
+  "releaseOfInformationCode" : "Y",
+  "initialTreatmentDate" : "2005-01-15",
+  "acuteManifestationDate" : "2005-01-10",
+  "lastXRayDate" : "2005-01-13",
+  "billingProvider" : {
+    "entityRole" : "BILLING_PROVIDER",
+    "entityType" : "INDIVIDUAL",
+    "identificationType" : "NPI",
+    "identifier" : "1234567890",
+    "taxId" : "987654321",
+    "lastNameOrOrgName" : "GREENE",
+    "firstName" : "DAVID",
+    "middleName" : "M",
+    "address" : {
+      "line" : "1264 OAKWOOD AVE",
+      "city" : "BALTIMORE",
+      "stateCode" : "MD",
+      "zipCode" : "21236"
+    },
+    "contacts" : [ {
+      "name" : "DR",
+      "contactNumbers" : [ {
+        "type" : "PHONE",
+        "number" : "4105551212"
+      } ]
+    } ]
+  },
+  "diags" : [ {
+    "subType" : "ICD_10_PRINCIPAL",
+    "code" : "M4820",
+    "desc" : "Kissing spine, site unspecified",
+    "formattedCode" : "M48.20"
+  } ],
+  "serviceLines" : [ {
+    "sourceLineId" : "01",
+    "chargeAmount" : 145.50,
+    "serviceDateFrom" : "2005-02-15",
+    "unitType" : "UNIT",
+    "unitCount" : 1,
+    "procedure" : {
+      "subType" : "CPT",
+      "code" : "98940",
+      "desc" : "Chiropractic manipulative treatment (CMT); spinal, 1-2 regions"
+    },
+    "diagPointers" : [ 1 ],
+    "diags" : [ {
+      "subType" : "ICD_10_PRINCIPAL",
+      "code" : "M4820",
+      "desc" : "Kissing spine, site unspecified",
+      "formattedCode" : "M48.20"
+    } ]
+  } ],
+  "transaction" : {
+    "id" : "685d7ce9fc42e4481ffb4ee7",
+    "controlNumber" : "3701",
+    "transactionType" : "PROF",
+    "purposeCode" : "00",
+    "originatorApplicationTransactionId" : "007227",
+    "creationDate" : "2005-02-15",
+    "creationTime" : "07:54:20",
+    "claimOrEncounterIdentifierType" : "CHARGEABLE",
+    "transactionSetIdentifierCode" : "837",
+    "implementationConventionReference" : "005010X222",
+    "fileInfo" : {
+      "name" : "multi-tran.dat",
+      "url" : "file:/edi-samples/edi_files/837/multi-tran.dat",
+      "lastModifiedDateTime" : "2023-12-03T17:43:58.366-05:00",
+      "fileType" : "EDI"
+    },
+    "sender" : {
+      "entityRole" : "SUBMITTER",
+      "entityType" : "BUSINESS",
+      "identificationType" : "ETIN",
+      "identifier" : "S01057",
+      "lastNameOrOrgName" : "DAVID GREEN",
+      "contacts" : [ {
+        "name" : "KATHY SMITH",
+        "contactNumbers" : [ {
+          "type" : "PHONE",
+          "number" : "4105558888"
+        } ]
+      } ]
+    },
+    "receiver" : {
+      "entityRole" : "RECEIVER",
+      "entityType" : "BUSINESS",
+      "identificationType" : "ETIN",
+      "identifier" : "12345",
+      "lastNameOrOrgName" : "MEDICARE PART B MARYLAND"
+    },
+    "creationDateTime" : "2005-02-15T07:54:20"
+  }
+}
+, {
+  "id" : "685d7ce9fc42e4481ffb4f29",
+  "objectType" : "CLAIM",
+  "patientControlNumber" : "153829140",
+  "chargeAmount" : 827.00,
+  "facilityCode" : {
+    "subType" : "PLACE_OF_SERVICE",
+    "code" : "22"
+  },
+  "placeOfServiceType" : "OUTPATIENT",
+  "frequencyCode" : {
+    "subType" : "FREQUENCY_CODE",
+    "code" : "1",
+    "desc" : "Original claim"
+  },
+  "serviceDateFrom" : "2005-01-12",
+  "serviceDateTo" : "2005-01-13",
+  "subscriber" : {
+    "payerResponsibilitySequence" : "PRIMARY",
+    "relationshipType" : "SELF",
+    "claimFilingIndicatorCode" : "MB",
+    "insurancePlanType" : "MEDICARE_B",
+    "person" : {
+      "entityRole" : "SUBSCRIBER",
+      "entityType" : "INDIVIDUAL",
+      "identificationType" : "MEMBER_ID",
+      "identifier" : "123456789A",
+      "lastNameOrOrgName" : "JONES",
+      "firstName" : "MARGARET",
+      "birthDate" : "1974-03-03",
+      "gender" : "FEMALE",
+      "address" : {
+        "line" : "123 RAINBOW ROAD",
+        "city" : "NASHVILLE",
+        "stateCode" : "TN",
+        "zipCode" : "37232"
+      }
+    },
+    "payer" : {
+      "entityRole" : "PAYER",
+      "entityType" : "BUSINESS",
+      "identificationType" : "PAYOR_ID",
+      "identifier" : "05440",
+      "lastNameOrOrgName" : "ABC PAYER"
+    }
+  },
+  "providerSignatureIndicator" : "Y",
+  "assignmentParticipationCode" : "A",
+  "assignmentCertificationIndicator" : "Y",
+  "releaseOfInformationCode" : "Y",
+  "billingProvider" : {
+    "entityRole" : "BILLING_PROVIDER",
+    "entityType" : "BUSINESS",
+    "identificationType" : "NPI",
+    "identifier" : "2366554859",
+    "taxId" : "756473826",
+    "lastNameOrOrgName" : "PROVIDER MEDICAL GROUP",
+    "address" : {
+      "line" : "1234 WESTEND AVE",
+      "city" : "NASHVILLE",
+      "stateCode" : "TN",
+      "zipCode" : "37232"
+    }
+  },
+  "providers" : [ {
+    "entityRole" : "RENDERING",
+    "entityType" : "INDIVIDUAL",
+    "identificationType" : "NPI",
+    "identifier" : "5678912345",
+    "lastNameOrOrgName" : "TOWNSEND",
+    "firstName" : "JACOB",
+    "middleName" : "E",
+    "providerTaxonomy" : {
+      "subType" : "PROVIDER_TAXONOMY",
+      "code" : "207L00000X",
+      "desc" : "Anesthesiology Physician"
+    },
+    "additionalIds" : [ {
+      "qualifierCode" : "1G",
+      "type" : "PROVIDER_UPIN_NUMBER",
+      "identification" : "A41234"
+    } ]
+  }, {
+    "entityRole" : "SERVICE_FACILITY",
+    "entityType" : "BUSINESS",
+    "identificationType" : "NPI",
+    "identifier" : "432198765",
+    "lastNameOrOrgName" : "PROVIDER OP HOSP",
+    "address" : {
+      "line" : "345 MAIN DRIVE",
+      "city" : "NASHVILLE",
+      "stateCode" : "TN",
+      "zipCode" : "37232"
+    }
+  } ],
+  "diags" : [ {
+    "subType" : "ICD_10_PRINCIPAL",
+    "code" : "E15",
+    "desc" : "Nondiabetic hypoglycemic coma",
+    "formattedCode" : "E15"
+  } ],
+  "serviceLines" : [ {
+    "chargeAmount" : 827.00,
+    "serviceDateFrom" : "2005-01-12",
+    "unitType" : "MINUTES",
+    "unitCount" : 61,
+    "procedure" : {
+      "subType" : "CPT",
+      "code" : "00142",
+      "desc" : "Anesthesia for procedures on eye; lens surgery",
+      "modifiers" : [ {
+        "subType" : "HCPCS_MODIFIER",
+        "code" : "QK",
+        "desc" : "Medical direction of two, three, or four concurrent anesthesia procedures involving qualified individuals"
+      }, {
+        "subType" : "HCPCS_MODIFIER",
+        "code" : "QS",
+        "desc" : "Monitored anesthesia care service"
+      }, {
+        "subType" : "HCPCS_MODIFIER",
+        "code" : "P1",
+        "desc" : "A normal healthy patient"
+      } ]
+    },
+    "diagPointers" : [ 1 ],
+    "diags" : [ {
+      "subType" : "ICD_10_PRINCIPAL",
+      "code" : "E15",
+      "desc" : "Nondiabetic hypoglycemic coma",
+      "formattedCode" : "E15"
+    } ]
+  }, {
+    "chargeAmount" : 827.00,
+    "serviceDateFrom" : "2005-01-13",
+    "unitType" : "MINUTES",
+    "unitCount" : 61,
+    "procedure" : {
+      "subType" : "CPT",
+      "code" : "00142",
+      "desc" : "Anesthesia for procedures on eye; lens surgery",
+      "modifiers" : [ {
+        "subType" : "HCPCS_MODIFIER",
+        "code" : "QK",
+        "desc" : "Medical direction of two, three, or four concurrent anesthesia procedures involving qualified individuals"
+      }, {
+        "subType" : "HCPCS_MODIFIER",
+        "code" : "QS",
+        "desc" : "Monitored anesthesia care service"
+      }, {
+        "subType" : "HCPCS_MODIFIER",
+        "code" : "P1",
+        "desc" : "A normal healthy patient"
+      } ]
+    },
+    "diagPointers" : [ 1 ],
+    "diags" : [ {
+      "subType" : "ICD_10_PRINCIPAL",
+      "code" : "E15",
+      "desc" : "Nondiabetic hypoglycemic coma",
+      "formattedCode" : "E15"
+    } ]
+  } ],
+  "transaction" : {
+    "id" : "685d7ce9fc42e4481ffb4f06",
+    "controlNumber" : "0001",
+    "transactionType" : "PROF",
+    "purposeCode" : "00",
+    "originatorApplicationTransactionId" : "0123",
+    "creationDate" : "2005-01-17",
+    "creationTime" : "10:23:00",
+    "claimOrEncounterIdentifierType" : "CHARGEABLE",
+    "transactionSetIdentifierCode" : "837",
+    "implementationConventionReference" : "005010X222",
+    "fileInfo" : {
+      "name" : "multi-tran.dat",
+      "url" : "file:/edi-samples/edi_files/837/multi-tran.dat",
+      "lastModifiedDateTime" : "2023-12-03T17:43:58.366-05:00",
+      "fileType" : "EDI"
+    },
+    "sender" : {
+      "entityRole" : "SUBMITTER",
+      "entityType" : "BUSINESS",
+      "identificationType" : "ETIN",
+      "identifier" : "N305",
+      "lastNameOrOrgName" : "PROVIDER MEDICAL GROUP",
+      "contacts" : [ {
+        "name" : "NINA",
+        "contactNumbers" : [ {
+          "type" : "PHONE",
+          "number" : "6155551212"
+        }, {
+          "type" : "EXTENSION",
+          "number" : "911"
+        } ]
+      } ]
+    },
+    "receiver" : {
+      "entityRole" : "RECEIVER",
+      "entityType" : "BUSINESS",
+      "identificationType" : "ETIN",
+      "identifier" : "05440",
+      "lastNameOrOrgName" : "ABC PAYER"
+    },
+    "creationDateTime" : "2005-01-17T10:23:00"
+  }
+}
+ ]

@@ -1,0 +1,145 @@
+[
+ {
+  "id" : "685d7ce9fc42e4481ffb4e48",
+  "objectType" : "CLAIM",
+  "patientControlNumber" : "125WILL",
+  "chargeAmount" : 145.50,
+  "facilityCode" : {
+    "subType" : "PLACE_OF_SERVICE",
+    "code" : "11"
+  },
+  "placeOfServiceType" : "OFFICE",
+  "frequencyCode" : {
+    "subType" : "FREQUENCY_CODE",
+    "code" : "1",
+    "desc" : "Original claim"
+  },
+  "serviceDateFrom" : "2005-02-15",
+  "serviceDateTo" : "2005-02-15",
+  "subscriber" : {
+    "payerResponsibilitySequence" : "PRIMARY",
+    "relationshipType" : "SELF",
+    "claimFilingIndicatorCode" : "MB",
+    "insurancePlanType" : "MEDICARE_B",
+    "person" : {
+      "entityRole" : "SUBSCRIBER",
+      "entityType" : "INDIVIDUAL",
+      "identificationType" : "MEMBER_ID",
+      "identifier" : "123456789A",
+      "lastNameOrOrgName" : "WILLIAMSON",
+      "firstName" : "MATTHEW",
+      "middleName" : "J",
+      "birthDate" : "1925-01-10",
+      "gender" : "MALE",
+      "address" : {
+        "line" : "128 BROADCREEK",
+        "city" : "BALTIMORE",
+        "stateCode" : "MD",
+        "zipCode" : "21234"
+      }
+    },
+    "payer" : {
+      "entityRole" : "PAYER",
+      "entityType" : "BUSINESS",
+      "identificationType" : "PAYOR_ID",
+      "identifier" : "C12345",
+      "lastNameOrOrgName" : "MEDICARE PART B MARYLAND"
+    }
+  },
+  "providerSignatureIndicator" : "Y",
+  "assignmentParticipationCode" : "A",
+  "assignmentCertificationIndicator" : "Y",
+  "releaseOfInformationCode" : "Y",
+  "initialTreatmentDate" : "2005-01-15",
+  "acuteManifestationDate" : "2005-01-10",
+  "lastXRayDate" : "2005-01-13",
+  "billingProvider" : {
+    "entityRole" : "BILLING_PROVIDER",
+    "entityType" : "INDIVIDUAL",
+    "identificationType" : "NPI",
+    "identifier" : "1234567890",
+    "taxId" : "987654321",
+    "lastNameOrOrgName" : "GREENE",
+    "firstName" : "DAVID",
+    "middleName" : "M",
+    "address" : {
+      "line" : "1264 OAKWOOD AVE",
+      "city" : "BALTIMORE",
+      "stateCode" : "MD",
+      "zipCode" : "21236"
+    },
+    "contacts" : [ {
+      "name" : "DR",
+      "contactNumbers" : [ {
+        "type" : "PHONE",
+        "number" : "4105551212"
+      } ]
+    } ]
+  },
+  "diags" : [ {
+    "subType" : "ICD_10_PRINCIPAL",
+    "code" : "M4820",
+    "desc" : "Kissing spine, site unspecified",
+    "formattedCode" : "M48.20"
+  } ],
+  "serviceLines" : [ {
+    "sourceLineId" : "01",
+    "chargeAmount" : 145.50,
+    "serviceDateFrom" : "2005-02-15",
+    "unitType" : "UNIT",
+    "unitCount" : 1,
+    "procedure" : {
+      "subType" : "CPT",
+      "code" : "98940",
+      "desc" : "Chiropractic manipulative treatment (CMT); spinal, 1-2 regions"
+    },
+    "diagPointers" : [ 1 ],
+    "diags" : [ {
+      "subType" : "ICD_10_PRINCIPAL",
+      "code" : "M4820",
+      "desc" : "Kissing spine, site unspecified",
+      "formattedCode" : "M48.20"
+    } ]
+  } ],
+  "transaction" : {
+    "id" : "685d7ce9fc42e4481ffb4e2a",
+    "controlNumber" : "3701",
+    "transactionType" : "PROF",
+    "purposeCode" : "00",
+    "originatorApplicationTransactionId" : "007227",
+    "creationDate" : "2005-02-15",
+    "creationTime" : "07:54:20",
+    "claimOrEncounterIdentifierType" : "CHARGEABLE",
+    "transactionSetIdentifierCode" : "837",
+    "implementationConventionReference" : "005010X222",
+    "fileInfo" : {
+      "name" : "chiro.dat",
+      "url" : "file:/edi-samples/edi_files/837/chiro.dat",
+      "lastModifiedDateTime" : "2024-01-31T20:06:16.189-05:00",
+      "fileType" : "EDI"
+    },
+    "sender" : {
+      "entityRole" : "SUBMITTER",
+      "entityType" : "BUSINESS",
+      "identificationType" : "ETIN",
+      "identifier" : "S01057",
+      "lastNameOrOrgName" : "DAVID GREEN",
+      "contacts" : [ {
+        "name" : "KATHY SMITH",
+        "contactNumbers" : [ {
+          "type" : "PHONE",
+          "number" : "4105558888"
+        } ]
+      } ]
+    },
+    "receiver" : {
+      "entityRole" : "RECEIVER",
+      "entityType" : "BUSINESS",
+      "identificationType" : "ETIN",
+      "identifier" : "12345",
+      "lastNameOrOrgName" : "MEDICARE PART B MARYLAND"
+    },
+    "creationDateTime" : "2005-02-15T07:54:20"
+  }
+}
+ ]

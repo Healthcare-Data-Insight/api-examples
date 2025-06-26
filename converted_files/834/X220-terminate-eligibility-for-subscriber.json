@@ -1,0 +1,58 @@
+[
+ {
+  "id" : "685d571fe29351212dc467c4",
+  "objectType" : "MEMBER_COVERAGE",
+  "sponsor" : {
+    "entityRole" : "PLAN_SPONSOR",
+    "entityType" : "BUSINESS",
+    "identificationType" : "EIN",
+    "identifier" : "999888777"
+  },
+  "insurer" : {
+    "entityRole" : "INSURER",
+    "entityType" : "BUSINESS",
+    "identificationType" : "EIN",
+    "identifier" : "654456654"
+  },
+  "memberIndicator" : "Y",
+  "relationshipCode" : "18",
+  "maintenanceTypeCode" : "024",
+  "maintenanceReasonCode" : "08",
+  "benefitStatusCode" : "A",
+  "employmentStatusCode" : "TE",
+  "identifier" : "123456789",
+  "groupOrPolicyNumber" : "123456001",
+  "statusInfoEffectiveDates" : [ {
+    "qualifierCode" : "357",
+    "date" : "1996-10-01"
+  } ],
+  "member" : {
+    "entityRole" : "INSURED_SUBSCRIBER",
+    "entityType" : "INDIVIDUAL",
+    "identificationType" : "SSN",
+    "identifier" : "103229876",
+    "lastNameOrOrgName" : "DOE",
+    "firstName" : "JOHN",
+    "middleName" : "E"
+  },
+  "transaction" : {
+    "id" : "685d571fe29351212dc467bf",
+    "controlNumber" : "12345",
+    "transactionType" : "MEMBER_COVERAGE",
+    "purposeCode" : "00",
+    "originatorApplicationTransactionId" : "12456",
+    "creationDate" : "1998-05-20",
+    "creationTime" : "12:00:00",
+    "actionCode" : "2",
+    "transactionSetIdentifierCode" : "834",
+    "implementationConventionReference" : "005010X220A1",
+    "fileInfo" : {
+      "name" : "X220-terminate-eligibility-for-subscriber.edi",
+      "url" : "file:/edi-samples/edi_files/834/X220-terminate-eligibility-for-subscriber.edi",
+      "lastModifiedDateTime" : "2025-05-13T18:22:08.093-04:00",
+      "fileType" : "EDI"
+    },
+    "creationDateTime" : "1998-05-20T12:00:00"
+  }
+}
+ ]

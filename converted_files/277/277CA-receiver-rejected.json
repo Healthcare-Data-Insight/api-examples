@@ -1,0 +1,62 @@
+[
+ {
+  "objectType" : "RECEIVER_STATUS",
+  "id" : "685d7e7ab20b946549f1af59",
+  "receiver" : {
+    "entityRole" : "SUBMITTER",
+    "entityType" : "INDIVIDUAL",
+    "identificationType" : "ETIN",
+    "identifier" : "S00005",
+    "lastNameOrOrgName" : "KING",
+    "firstName" : "EWELL",
+    "middleName" : "B"
+  },
+  "batchStatus" : {
+    "traceIdentifier" : "200203207890",
+    "statusInfos" : [ {
+      "effectiveDate" : "2023-03-21",
+      "actionCode" : "U",
+      "actionType" : "REJECT",
+      "chargeAmount" : 150.00,
+      "statusCodeInfos" : [ {
+        "categoryCode" : "A3",
+        "statusCode" : "24",
+        "entityCode" : "41",
+        "entityRole" : "SUBMITTER"
+      } ]
+    } ],
+    "acceptedQuantity" : 3,
+    "acceptedAmount" : 155.00,
+    "rejectedQuantity" : 5,
+    "rejectedAmount" : 300.00
+  },
+  "transaction" : {
+    "id" : "685d7e79b20b946549f1af51",
+    "controlNumber" : "0004",
+    "transactionType" : "CLAIM_ACK",
+    "purposeCode" : "08",
+    "creationDate" : "2023-03-21",
+    "creationTime" : "10:25:00",
+    "claimOrEncounterIdentifierType" : "RECEIPT_ACK_ADVICE",
+    "traceIdentifier" : "00911232",
+    "transactionSetIdentifierCode" : "277",
+    "implementationConventionReference" : "005010X214",
+    "receiptDate" : "2023-03-20",
+    "processDate" : "2023-03-21",
+    "fileInfo" : {
+      "name" : "277CA-receiver-rejected.edi",
+      "url" : "file:/edi-samples/edi_files/277/277CA-receiver-rejected.edi",
+      "lastModifiedDateTime" : "2025-06-23T15:02:50.114-04:00",
+      "fileType" : "EDI"
+    },
+    "sender" : {
+      "entityRole" : "PAYER",
+      "entityType" : "BUSINESS",
+      "identificationType" : "PAYOR_ID",
+      "identifier" : "OIC02",
+      "lastNameOrOrgName" : "OUR INSURANCE COMPANY"
+    },
+    "creationDateTime" : "2023-03-21T10:25:00"
+  }
+}
+ ]

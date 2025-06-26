@@ -1,0 +1,404 @@
+[
+ {
+  "id" : "685d7ce9fc42e4481ffb4e8e",
+  "objectType" : "CLAIM",
+  "patientControlNumber" : "26407789",
+  "chargeAmount" : 79.04,
+  "facilityCode" : {
+    "subType" : "PLACE_OF_SERVICE",
+    "code" : "11"
+  },
+  "placeOfServiceType" : "OFFICE",
+  "frequencyCode" : {
+    "subType" : "FREQUENCY_CODE",
+    "code" : "1",
+    "desc" : "Original claim"
+  },
+  "serviceDateFrom" : "2005-10-03",
+  "serviceDateTo" : "2005-10-03",
+  "subscriber" : {
+    "payerResponsibilitySequence" : "SECONDARY",
+    "relationshipType" : "SELF",
+    "person" : {
+      "entityRole" : "SUBSCRIBER",
+      "entityType" : "INDIVIDUAL",
+      "identificationType" : "MEMBER_ID",
+      "identifier" : "22233444",
+      "lastNameOrOrgName" : "SMITH",
+      "firstName" : "JACK",
+      "birthDate" : "1943-10-22",
+      "gender" : "MALE"
+    },
+    "payer" : {
+      "entityRole" : "PAYER",
+      "entityType" : "BUSINESS",
+      "identificationType" : "PAYOR_ID",
+      "identifier" : "567890",
+      "lastNameOrOrgName" : "GREAT PRAIRIES HEALTH",
+      "address" : {
+        "line" : "4456 SOUTH SHORE BLVD",
+        "city" : "CHICAGO",
+        "stateCode" : "IL",
+        "zipCode" : "44444"
+      },
+      "additionalIds" : [ {
+        "qualifierCode" : "G2",
+        "type" : "PROVIDER_COMMERCIAL_NUMBER",
+        "identification" : "EJ6666"
+      } ]
+    }
+  },
+  "patient" : {
+    "relationshipType" : "CHILD",
+    "person" : {
+      "entityRole" : "PATIENT",
+      "entityType" : "INDIVIDUAL",
+      "lastNameOrOrgName" : "SMITH",
+      "firstName" : "TED",
+      "birthDate" : "1973-05-01",
+      "gender" : "MALE",
+      "address" : {
+        "line" : "236 N MAIN ST",
+        "city" : "MIAMI",
+        "stateCode" : "FL",
+        "zipCode" : "33413"
+      }
+    }
+  },
+  "otherSubscribers" : [ {
+    "payerResponsibilitySequence" : "PRIMARY",
+    "relationshipType" : "SPOUSE",
+    "claimFilingIndicatorCode" : "CI",
+    "insurancePlanType" : "COMMERCIAL",
+    "person" : {
+      "entityRole" : "SUBSCRIBER",
+      "entityType" : "INDIVIDUAL",
+      "identificationType" : "MEMBER_ID",
+      "identifier" : "JS00111223333",
+      "lastNameOrOrgName" : "SMITH",
+      "firstName" : "JANE",
+      "address" : {
+        "line" : "236 N MAIN ST",
+        "city" : "MIAMI",
+        "stateCode" : "FL",
+        "zipCode" : "33111"
+      }
+    },
+    "adjustments" : [ {
+      "group" : "PATIENT_RESPONSIBILITY",
+      "reasonCode" : "1",
+      "reason" : {
+        "subType" : "CARC",
+        "code" : "1",
+        "desc" : "Deductible Amount"
+      },
+      "amount" : 21.89
+    }, {
+      "group" : "PATIENT_RESPONSIBILITY",
+      "reasonCode" : "2",
+      "reason" : {
+        "subType" : "CARC",
+        "code" : "2",
+        "desc" : "Coinsurance Amount"
+      },
+      "amount" : 15.00
+    } ],
+    "payerPaidAmount" : 39.15,
+    "nonCoveredAmount" : 20.01,
+    "remainingPatientLiabilityAmount" : 36.89,
+    "payer" : {
+      "entityRole" : "PAYER",
+      "entityType" : "BUSINESS",
+      "identificationType" : "PAYOR_ID",
+      "identifier" : "999996666",
+      "lastNameOrOrgName" : "KEY INSURANCE COMPANY"
+    },
+    "providers" : [ {
+      "entityRole" : "RENDERING",
+      "entityType" : "INDIVIDUAL",
+      "additionalIds" : [ {
+        "qualifierCode" : "G2",
+        "type" : "PROVIDER_COMMERCIAL_NUMBER",
+        "identification" : "PBS3334"
+      } ]
+    } ]
+  } ],
+  "providerSignatureIndicator" : "Y",
+  "assignmentParticipationCode" : "A",
+  "assignmentCertificationIndicator" : "Y",
+  "releaseOfInformationCode" : "I",
+  "billingProvider" : {
+    "entityRole" : "BILLING_PROVIDER",
+    "entityType" : "INDIVIDUAL",
+    "identificationType" : "NPI",
+    "identifier" : "1999996666",
+    "taxId" : "123456789",
+    "lastNameOrOrgName" : "KILDARE",
+    "firstName" : "BEN",
+    "address" : {
+      "line" : "1234",
+      "line2" : "SEAWAY ST",
+      "city" : "MIAMI",
+      "stateCode" : "FL",
+      "zipCode" : "33111"
+    },
+    "contacts" : [ {
+      "name" : "CONNIE",
+      "contactNumbers" : [ {
+        "type" : "PHONE",
+        "number" : "3055551234"
+      } ]
+    } ]
+  },
+  "providers" : [ {
+    "entityRole" : "RENDERING",
+    "entityType" : "INDIVIDUAL",
+    "identificationType" : "NPI",
+    "identifier" : "1999996666",
+    "lastNameOrOrgName" : "KILDARE",
+    "firstName" : "BEN",
+    "providerTaxonomy" : {
+      "subType" : "PROVIDER_TAXONOMY",
+      "code" : "204C00000X",
+      "desc" : "Sports Medicine (Neuromusculoskeletal Medicine) Physician"
+    },
+    "additionalIds" : [ {
+      "qualifierCode" : "G2",
+      "type" : "PROVIDER_COMMERCIAL_NUMBER",
+      "identification" : "PBS3334"
+    } ]
+  }, {
+    "entityRole" : "SERVICE_FACILITY",
+    "entityType" : "BUSINESS",
+    "identificationType" : "NPI",
+    "identifier" : "1581234567",
+    "lastNameOrOrgName" : "KILDARE ASSOCIATES",
+    "address" : {
+      "line" : "2345 OCEAN BLVD",
+      "city" : "MIAMI",
+      "stateCode" : "FL",
+      "zipCode" : "33111"
+    }
+  } ],
+  "diags" : [ {
+    "subType" : "ICD_10_PRINCIPAL",
+    "code" : "J309",
+    "desc" : "Allergic rhinitis, unspecified",
+    "formattedCode" : "J30.9"
+  }, {
+    "subType" : "ICD_10",
+    "code" : "E784",
+    "desc" : "Other hyperlipidemia",
+    "formattedCode" : "E78.4"
+  }, {
+    "subType" : "ICD_10",
+    "code" : "E6601",
+    "desc" : "Morbid (severe) obesity due to excess calories",
+    "formattedCode" : "E66.01"
+  }, {
+    "subType" : "ICD_10",
+    "code" : "K219",
+    "desc" : "Gastro-esophageal reflux disease without esophagitis",
+    "formattedCode" : "K21.9"
+  } ],
+  "serviceLines" : [ {
+    "chargeAmount" : 43.00,
+    "serviceDateFrom" : "2005-10-03",
+    "unitType" : "UNIT",
+    "unitCount" : 1,
+    "procedure" : {
+      "subType" : "CPT",
+      "code" : "99213",
+      "desc" : "Office or other outpatient visit for the evaluation and management of an established patient, which requires a medically appropriate history and/or examination and low level of medical decision making. When using total time on the date of the encounter for code selection, 20 minutes must be met or exceeded."
+    },
+    "adjudications" : [ {
+      "payerIdentifier" : "999996666",
+      "paidAmount" : 40.00,
+      "unitCount" : 1.00,
+      "procedure" : {
+        "type" : "PROCEDURE",
+        "subType" : "CPT",
+        "code" : "99213",
+        "desc" : "Office or other outpatient visit for the evaluation and management of an established patient, which requires a medically appropriate history and/or examination and low level of medical decision making. When using total time on the date of the encounter for code selection, 20 minutes must be met or exceeded.",
+        "fullDesc" : "Office or other outpatient visit for the evaluation and management of an established patient, which requires a medically appropriate history and/or examination and low level of medical decision making. When using total time on the date of the encounter for code selection, 20 minutes must be met or exceeded.",
+        "shortDesc" : "OFFICE O/P EST LOW 20 MIN",
+        "startDate" : "1993-01-01",
+        "categories" : [ {
+          "type" : "RBCS_TAXONOMY",
+          "subType" : "RBCS_CATEGORY",
+          "code" : "E",
+          "desc" : "E&M"
+        }, {
+          "type" : "RBCS_TAXONOMY",
+          "subType" : "RBCS_SUB_CATEGORY",
+          "code" : "EV",
+          "desc" : "Office/Outpatient Services"
+        } ]
+      },
+      "adjustments" : [ {
+        "group" : "CONTRACTUAL",
+        "reasonCode" : "42",
+        "reason" : {
+          "subType" : "CARC",
+          "code" : "42"
+        },
+        "amount" : 3.00
+      } ],
+      "adjudicationOrPaymentDate" : "2005-10-15",
+      "remainingPatientLiabilityAmount" : 5.00
+    } ],
+    "diagPointers" : [ 1, 2, 3 ],
+    "diags" : [ {
+      "subType" : "ICD_10_PRINCIPAL",
+      "code" : "J309",
+      "desc" : "Allergic rhinitis, unspecified",
+      "formattedCode" : "J30.9"
+    }, {
+      "subType" : "ICD_10",
+      "code" : "E784",
+      "desc" : "Other hyperlipidemia",
+      "formattedCode" : "E78.4"
+    }, {
+      "subType" : "ICD_10",
+      "code" : "E6601",
+      "desc" : "Morbid (severe) obesity due to excess calories",
+      "formattedCode" : "E66.01"
+    } ]
+  }, {
+    "chargeAmount" : 15.00,
+    "serviceDateFrom" : "2005-10-03",
+    "unitType" : "UNIT",
+    "unitCount" : 1,
+    "procedure" : {
+      "subType" : "CPT",
+      "code" : "96372",
+      "desc" : "Therapeutic, prophylactic, or diagnostic injection (specify substance or drug); subcutaneous or intramuscular"
+    },
+    "adjudications" : [ {
+      "payerIdentifier" : "999996666",
+      "paidAmount" : 15.00,
+      "unitCount" : 1.00,
+      "procedure" : {
+        "type" : "PROCEDURE",
+        "subType" : "CPT",
+        "code" : "96372",
+        "desc" : "Therapeutic, prophylactic, or diagnostic injection (specify substance or drug); subcutaneous or intramuscular",
+        "fullDesc" : "Therapeutic, prophylactic, or diagnostic injection (specify substance or drug); subcutaneous or intramuscular",
+        "shortDesc" : "THER/PROPH/DIAG INJ SC/IM",
+        "startDate" : "2009-01-01",
+        "categories" : [ {
+          "type" : "RBCS_TAXONOMY",
+          "subType" : "RBCS_CATEGORY",
+          "code" : "R",
+          "desc" : "Treatment"
+        }, {
+          "type" : "RBCS_TAXONOMY",
+          "subType" : "RBCS_SUB_CATEGORY",
+          "code" : "RI",
+          "desc" : "Injections and Infusions (nononcologic)"
+        } ]
+      },
+      "adjudicationOrPaymentDate" : "2005-10-15"
+    } ],
+    "diagPointers" : [ 1, 2 ],
+    "diags" : [ {
+      "subType" : "ICD_10_PRINCIPAL",
+      "code" : "J309",
+      "desc" : "Allergic rhinitis, unspecified",
+      "formattedCode" : "J30.9"
+    }, {
+      "subType" : "ICD_10",
+      "code" : "E784",
+      "desc" : "Other hyperlipidemia",
+      "formattedCode" : "E78.4"
+    } ]
+  }, {
+    "chargeAmount" : 21.04,
+    "serviceDateFrom" : "2005-10-03",
+    "unitType" : "UNIT",
+    "unitCount" : 1,
+    "procedure" : {
+      "subType" : "HCPCS",
+      "code" : "J3301",
+      "desc" : "Injection, triamcinolone acetonide, not otherwise specified, 10 mg"
+    },
+    "adjudications" : [ {
+      "payerIdentifier" : "999996666",
+      "paidAmount" : 21.04,
+      "unitCount" : 1.00,
+      "procedure" : {
+        "type" : "PROCEDURE",
+        "subType" : "HCPCS",
+        "code" : "J3301",
+        "desc" : "Injection, triamcinolone acetonide, not otherwise specified, 10 mg",
+        "shortDesc" : "Triamcinolone acet inj nos",
+        "startDate" : "1991-01-01",
+        "categories" : [ {
+          "type" : "RBCS_TAXONOMY",
+          "subType" : "RBCS_CATEGORY",
+          "code" : "R",
+          "desc" : "Treatment"
+        }, {
+          "type" : "RBCS_TAXONOMY",
+          "subType" : "RBCS_SUB_CATEGORY",
+          "code" : "RI",
+          "desc" : "Injections and Infusions (nononcologic)"
+        } ]
+      },
+      "adjudicationOrPaymentDate" : "2005-10-15"
+    } ],
+    "diagPointers" : [ 1, 2 ],
+    "diags" : [ {
+      "subType" : "ICD_10_PRINCIPAL",
+      "code" : "J309",
+      "desc" : "Allergic rhinitis, unspecified",
+      "formattedCode" : "J30.9"
+    }, {
+      "subType" : "ICD_10",
+      "code" : "E784",
+      "desc" : "Other hyperlipidemia",
+      "formattedCode" : "E78.4"
+    } ]
+  } ],
+  "transaction" : {
+    "id" : "685d7ce9fc42e4481ffb4e4b",
+    "controlNumber" : "0024",
+    "transactionType" : "PROF",
+    "purposeCode" : "00",
+    "originatorApplicationTransactionId" : "0123",
+    "creationDate" : "2005-10-15",
+    "creationTime" : "10:23:00",
+    "claimOrEncounterIdentifierType" : "CHARGEABLE",
+    "transactionSetIdentifierCode" : "837",
+    "implementationConventionReference" : "005010X222",
+    "fileInfo" : {
+      "name" : "cob-payera-payerb.dat",
+      "url" : "file:/edi-samples/edi_files/837/cob-payera-payerb.dat",
+      "lastModifiedDateTime" : "2024-01-31T20:06:16.189-05:00",
+      "fileType" : "EDI"
+    },
+    "sender" : {
+      "entityRole" : "SUBMITTER",
+      "entityType" : "BUSINESS",
+      "identificationType" : "ETIN",
+      "identifier" : "999996666",
+      "lastNameOrOrgName" : "KEY INSURANCE",
+      "contacts" : [ {
+        "name" : "JERRY",
+        "contactNumbers" : [ {
+          "type" : "PHONE",
+          "number" : "3055552222"
+        } ]
+      } ]
+    },
+    "receiver" : {
+      "entityRole" : "RECEIVER",
+      "entityType" : "BUSINESS",
+      "identificationType" : "ETIN",
+      "identifier" : "567890",
+      "lastNameOrOrgName" : "GREAT PRAIRIES"
+    },
+    "creationDateTime" : "2005-10-15T10:23:00"
+  }
+}
+ ]

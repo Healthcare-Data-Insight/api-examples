@@ -1,0 +1,308 @@
+[
+ {
+  "id" : "685d7ce9fc42e4481ffb4d60",
+  "objectType" : "CLAIM",
+  "patientControlNumber" : "051068",
+  "chargeAmount" : 766.50,
+  "facilityCode" : {
+    "subType" : "PLACE_OF_SERVICE",
+    "code" : "41"
+  },
+  "placeOfServiceType" : "OTHER",
+  "frequencyCode" : {
+    "subType" : "FREQUENCY_CODE",
+    "code" : "1",
+    "desc" : "Original claim"
+  },
+  "serviceDateFrom" : "2005-02-08",
+  "serviceDateTo" : "2005-02-08",
+  "subscriber" : {
+    "payerResponsibilitySequence" : "PRIMARY",
+    "relationshipType" : "SELF",
+    "claimFilingIndicatorCode" : "MB",
+    "insurancePlanType" : "MEDICARE_B",
+    "person" : {
+      "entityRole" : "SUBSCRIBER",
+      "entityType" : "INDIVIDUAL",
+      "identificationType" : "MEMBER_ID",
+      "identifier" : "012345678A",
+      "lastNameOrOrgName" : "JONES",
+      "firstName" : "SARAH",
+      "middleName" : "A",
+      "birthDate" : "1963-07-29",
+      "gender" : "FEMALE",
+      "address" : {
+        "line" : "1129 REINDEER ROAD",
+        "city" : "CARR",
+        "stateCode" : "CO",
+        "zipCode" : "80612"
+      }
+    },
+    "payer" : {
+      "entityRole" : "PAYER",
+      "entityType" : "BUSINESS",
+      "identificationType" : "PAYOR_ID",
+      "identifier" : "123245",
+      "lastNameOrOrgName" : "MEDICARE PART B",
+      "address" : {
+        "line" : "PO BOX 3543",
+        "city" : "BALTIMORE",
+        "stateCode" : "MD",
+        "zipCode" : "666013543"
+      }
+    }
+  },
+  "providerSignatureIndicator" : "Y",
+  "assignmentParticipationCode" : "A",
+  "assignmentCertificationIndicator" : "Y",
+  "releaseOfInformationCode" : "Y",
+  "accidentDate" : "2005-02-08",
+  "billingProvider" : {
+    "entityRole" : "BILLING_PROVIDER",
+    "entityType" : "BUSINESS",
+    "identificationType" : "NPI",
+    "identifier" : "2366554859",
+    "taxId" : "376985369",
+    "lastNameOrOrgName" : "AAA AMBULANCE SERVICE",
+    "address" : {
+      "line" : "12202 AIRPORT WAY",
+      "city" : "BROOMFIELD",
+      "stateCode" : "CO",
+      "zipCode" : "800210021"
+    },
+    "providerTaxonomy" : {
+      "subType" : "PROVIDER_TAXONOMY",
+      "code" : "3416L0300X",
+      "desc" : "Land Ambulance"
+    }
+  },
+  "providers" : [ {
+    "entityRole" : "PICKUP_ADDRESS",
+    "entityType" : "BUSINESS",
+    "address" : {
+      "line" : "1129 REINDEER ROAD",
+      "city" : "CARR",
+      "stateCode" : "CO",
+      "zipCode" : "80612"
+    }
+  }, {
+    "entityRole" : "DROP_OFF_LOCATION",
+    "entityType" : "BUSINESS",
+    "address" : {
+      "line" : "10005 BANNOCK ST",
+      "city" : "CHEYENNE",
+      "stateCode" : "WY",
+      "zipCode" : "82009"
+    }
+  } ],
+  "diags" : [ {
+    "subType" : "ICD_10_PRINCIPAL",
+    "code" : "S279XXA",
+    "desc" : "Injury of unspecified intrathoracic organ, initial encounter",
+    "formattedCode" : "S27.9XXA"
+  }, {
+    "subType" : "ICD_10",
+    "code" : "W1830XA",
+    "desc" : "Fall on same level, unspecified, initial encounter",
+    "formattedCode" : "W18.30XA"
+  }, {
+    "subType" : "ICD_10",
+    "code" : "S4980XA",
+    "desc" : "Other specified injuries of shoulder and upper arm, unspecified arm, initial encounter",
+    "formattedCode" : "S49.80XA"
+  } ],
+  "serviceLines" : [ {
+    "sourceLineId" : "1001",
+    "emergencyIndicator" : "Y",
+    "chargeAmount" : 700.00,
+    "serviceDateFrom" : "2005-02-08",
+    "unitType" : "UNIT",
+    "unitCount" : 1,
+    "lineNote" : "CARDIAC EMERGENCY",
+    "procedure" : {
+      "subType" : "HCPCS",
+      "code" : "A0427",
+      "desc" : "Ambulance service, advanced life support, emergency transport, level 1 (als 1 - emergency)",
+      "modifiers" : [ {
+        "subType" : "HCPCS_MODIFIER",
+        "code" : "RH"
+      } ]
+    },
+    "providers" : [ {
+      "entityRole" : "PICKUP_ADDRESS",
+      "entityType" : "BUSINESS",
+      "address" : {
+        "line" : "6666 REINDEER ROAD",
+        "city" : "CARR",
+        "stateCode" : "CO",
+        "zipCode" : "80612"
+      }
+    }, {
+      "entityRole" : "DROP_OFF_LOCATION",
+      "entityType" : "BUSINESS",
+      "address" : {
+        "line" : "6666 BANNOCK ST",
+        "city" : "CHEYENNE",
+        "stateCode" : "WY",
+        "zipCode" : "82009"
+      }
+    } ],
+    "diagPointers" : [ 1, 2, 3 ],
+    "diags" : [ {
+      "subType" : "ICD_10_PRINCIPAL",
+      "code" : "S279XXA",
+      "desc" : "Injury of unspecified intrathoracic organ, initial encounter",
+      "formattedCode" : "S27.9XXA"
+    }, {
+      "subType" : "ICD_10",
+      "code" : "W1830XA",
+      "desc" : "Fall on same level, unspecified, initial encounter",
+      "formattedCode" : "W18.30XA"
+    }, {
+      "subType" : "ICD_10",
+      "code" : "S4980XA",
+      "desc" : "Other specified injuries of shoulder and upper arm, unspecified arm, initial encounter",
+      "formattedCode" : "S49.80XA"
+    } ]
+  }, {
+    "sourceLineId" : "1002",
+    "emergencyIndicator" : "Y",
+    "chargeAmount" : 8.20,
+    "serviceDateFrom" : "2005-02-08",
+    "unitType" : "UNIT",
+    "unitCount" : 21,
+    "procedure" : {
+      "subType" : "HCPCS",
+      "code" : "A0425",
+      "desc" : "Ground mileage, per statute mile",
+      "modifiers" : [ {
+        "subType" : "HCPCS_MODIFIER",
+        "code" : "RH"
+      } ]
+    },
+    "diagPointers" : [ 1, 2, 3 ],
+    "diags" : [ {
+      "subType" : "ICD_10_PRINCIPAL",
+      "code" : "S279XXA",
+      "desc" : "Injury of unspecified intrathoracic organ, initial encounter",
+      "formattedCode" : "S27.9XXA"
+    }, {
+      "subType" : "ICD_10",
+      "code" : "W1830XA",
+      "desc" : "Fall on same level, unspecified, initial encounter",
+      "formattedCode" : "W18.30XA"
+    }, {
+      "subType" : "ICD_10",
+      "code" : "S4980XA",
+      "desc" : "Other specified injuries of shoulder and upper arm, unspecified arm, initial encounter",
+      "formattedCode" : "S49.80XA"
+    } ]
+  }, {
+    "sourceLineId" : "1003",
+    "emergencyIndicator" : "Y",
+    "chargeAmount" : 46.00,
+    "serviceDateFrom" : "2005-02-08",
+    "unitType" : "UNIT",
+    "unitCount" : 1,
+    "procedure" : {
+      "subType" : "HCPCS",
+      "code" : "A0422",
+      "desc" : "Ambulance (als or bls) oxygen and oxygen supplies, life sustaining situation",
+      "modifiers" : [ {
+        "subType" : "HCPCS_MODIFIER",
+        "code" : "RH"
+      } ]
+    },
+    "diagPointers" : [ 1, 2, 3 ],
+    "diags" : [ {
+      "subType" : "ICD_10_PRINCIPAL",
+      "code" : "S279XXA",
+      "desc" : "Injury of unspecified intrathoracic organ, initial encounter",
+      "formattedCode" : "S27.9XXA"
+    }, {
+      "subType" : "ICD_10",
+      "code" : "W1830XA",
+      "desc" : "Fall on same level, unspecified, initial encounter",
+      "formattedCode" : "W18.30XA"
+    }, {
+      "subType" : "ICD_10",
+      "code" : "S4980XA",
+      "desc" : "Other specified injuries of shoulder and upper arm, unspecified arm, initial encounter",
+      "formattedCode" : "S49.80XA"
+    } ]
+  }, {
+    "sourceLineId" : "1004",
+    "emergencyIndicator" : "Y",
+    "chargeAmount" : 12.30,
+    "serviceDateFrom" : "2005-02-08",
+    "unitType" : "UNIT",
+    "unitCount" : 1,
+    "procedure" : {
+      "subType" : "HCPCS",
+      "code" : "A0382",
+      "desc" : "Bls routine disposable supplies",
+      "modifiers" : [ {
+        "subType" : "HCPCS_MODIFIER",
+        "code" : "RH"
+      } ]
+    },
+    "diagPointers" : [ 1, 2, 3 ],
+    "diags" : [ {
+      "subType" : "ICD_10_PRINCIPAL",
+      "code" : "S279XXA",
+      "desc" : "Injury of unspecified intrathoracic organ, initial encounter",
+      "formattedCode" : "S27.9XXA"
+    }, {
+      "subType" : "ICD_10",
+      "code" : "W1830XA",
+      "desc" : "Fall on same level, unspecified, initial encounter",
+      "formattedCode" : "W18.30XA"
+    }, {
+      "subType" : "ICD_10",
+      "code" : "S4980XA",
+      "desc" : "Other specified injuries of shoulder and upper arm, unspecified arm, initial encounter",
+      "formattedCode" : "S49.80XA"
+    } ]
+  } ],
+  "transaction" : {
+    "id" : "685d7ce9fc42e4481ffb4d25",
+    "controlNumber" : "000017712",
+    "transactionType" : "PROF",
+    "purposeCode" : "00",
+    "originatorApplicationTransactionId" : "000017712",
+    "creationDate" : "2005-02-08",
+    "creationTime" : "11:12:00",
+    "claimOrEncounterIdentifierType" : "CHARGEABLE",
+    "transactionSetIdentifierCode" : "837",
+    "implementationConventionReference" : "005010X222",
+    "fileInfo" : {
+      "name" : "ambulance.dat",
+      "url" : "file:/edi-samples/edi_files/837/ambulance.dat",
+      "lastModifiedDateTime" : "2025-04-07T22:10:01.716-04:00",
+      "fileType" : "EDI"
+    },
+    "sender" : {
+      "entityRole" : "SUBMITTER",
+      "entityType" : "BUSINESS",
+      "identificationType" : "ETIN",
+      "identifier" : "376985369",
+      "lastNameOrOrgName" : "AAA AMBULANCE SERVICE",
+      "contacts" : [ {
+        "name" : "LISA SMITH",
+        "contactNumbers" : [ {
+          "type" : "PHONE",
+          "number" : "3037752536"
+        } ]
+      } ]
+    },
+    "receiver" : {
+      "entityRole" : "RECEIVER",
+      "entityType" : "BUSINESS",
+      "identificationType" : "ETIN",
+      "identifier" : "123245",
+      "lastNameOrOrgName" : "MEDICARE B"
+    },
+    "creationDateTime" : "2005-02-08T11:12:00"
+  }
+}
+ ]

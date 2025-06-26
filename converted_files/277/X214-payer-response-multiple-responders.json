@@ -1,0 +1,631 @@
+[
+ {
+  "id" : "685d7e7ab20b946549f1b029",
+  "objectType" : "CLAIM_STATUS",
+  "patient" : {
+    "entityRole" : "PATIENT",
+    "entityType" : "INDIVIDUAL",
+    "identificationType" : "MEMBER_ID",
+    "identifier" : "2222222222",
+    "lastNameOrOrgName" : "PATIENT",
+    "firstName" : "FEMALE"
+  },
+  "patientControlNumber" : "PATIENT22222",
+  "statusInfos" : [ {
+    "effectiveDate" : "2023-03-21",
+    "actionCode" : "WQ",
+    "actionType" : "ACCEPT",
+    "chargeAmount" : 55.00,
+    "statusCodeInfos" : [ {
+      "categoryCode" : "A2",
+      "statusCode" : "20"
+    } ]
+  } ],
+  "payerClaimControlNumber" : "22021635900803X",
+  "serviceDateFrom" : "2023-03-14",
+  "serviceDateTo" : "2023-03-14",
+  "receiver" : {
+    "entityRole" : "SUBMITTER",
+    "entityType" : "INDIVIDUAL",
+    "identificationType" : "ETIN",
+    "identifier" : "S00005",
+    "lastNameOrOrgName" : "KING",
+    "firstName" : "EWELL",
+    "middleName" : "B"
+  },
+  "receiverBatchStatus" : {
+    "traceIdentifier" : "200203207890",
+    "statusInfos" : [ {
+      "effectiveDate" : "2023-03-21",
+      "actionCode" : "WQ",
+      "actionType" : "ACCEPT",
+      "chargeAmount" : 455.00,
+      "statusCodeInfos" : [ {
+        "categoryCode" : "A1",
+        "statusCode" : "19",
+        "entityCode" : "PR",
+        "entityRole" : "PAYER"
+      } ]
+    } ],
+    "acceptedQuantity" : 3,
+    "acceptedAmount" : 155.00,
+    "rejectedQuantity" : 5,
+    "rejectedAmount" : 300.00
+  },
+  "provider" : {
+    "entityRole" : "BILLING_PROVIDER",
+    "entityType" : "INDIVIDUAL",
+    "identificationType" : "NPI",
+    "identifier" : "5365432101",
+    "lastNameOrOrgName" : "KING",
+    "firstName" : "EWELL",
+    "middleName" : "B"
+  },
+  "providerBatchStatus" : {
+    "traceIdentifier" : "00098765432",
+    "statusInfos" : [ {
+      "actionCode" : "WQ",
+      "actionType" : "ACCEPT",
+      "chargeAmount" : 305.00,
+      "statusCodeInfos" : [ {
+        "categoryCode" : "A1",
+        "statusCode" : "19",
+        "entityCode" : "PR",
+        "entityRole" : "PAYER"
+      } ]
+    } ],
+    "acceptedQuantity" : 3,
+    "acceptedAmount" : 155.00,
+    "rejectedQuantity" : 2,
+    "rejectedAmount" : 150.00
+  },
+  "transaction" : {
+    "id" : "685d7e7ab20b946549f1b00b",
+    "controlNumber" : "0004",
+    "transactionType" : "CLAIM_ACK",
+    "purposeCode" : "08",
+    "creationDate" : "2023-03-21",
+    "creationTime" : "10:25:00",
+    "claimOrEncounterIdentifierType" : "RECEIPT_ACK_ADVICE",
+    "traceIdentifier" : "00911232",
+    "transactionSetIdentifierCode" : "277",
+    "implementationConventionReference" : "005010X214",
+    "receiptDate" : "2023-03-20",
+    "processDate" : "2023-03-21",
+    "fileInfo" : {
+      "name" : "X214-payer-response-multiple-responders.edi",
+      "url" : "file:/edi-samples/edi_files/277/X214-payer-response-multiple-responders.edi",
+      "lastModifiedDateTime" : "2025-06-11T23:23:22.182-04:00",
+      "fileType" : "EDI"
+    },
+    "sender" : {
+      "entityRole" : "PAYER",
+      "entityType" : "BUSINESS",
+      "identificationType" : "PAYOR_ID",
+      "identifier" : "OIC02",
+      "lastNameOrOrgName" : "OUR INSURANCE COMPANY"
+    },
+    "creationDateTime" : "2023-03-21T10:25:00"
+  }
+}
+, {
+  "id" : "685d7e7ab20b946549f1b031",
+  "objectType" : "CLAIM_STATUS",
+  "patient" : {
+    "entityRole" : "PATIENT",
+    "entityType" : "INDIVIDUAL",
+    "identificationType" : "MEMBER_ID",
+    "identifier" : "3333333333",
+    "lastNameOrOrgName" : "PATIENT",
+    "firstName" : "MALE"
+  },
+  "patientControlNumber" : "PATIENT33333",
+  "statusInfos" : [ {
+    "effectiveDate" : "2023-03-21",
+    "actionCode" : "U",
+    "actionType" : "REJECT",
+    "chargeAmount" : 50.00,
+    "statusCodeInfos" : [ {
+      "categoryCode" : "A3",
+      "statusCode" : "21"
+    }, {
+      "categoryCode" : "A3",
+      "statusCode" : "187"
+    } ]
+  } ],
+  "receiver" : {
+    "entityRole" : "SUBMITTER",
+    "entityType" : "INDIVIDUAL",
+    "identificationType" : "ETIN",
+    "identifier" : "S00005",
+    "lastNameOrOrgName" : "KING",
+    "firstName" : "EWELL",
+    "middleName" : "B"
+  },
+  "receiverBatchStatus" : {
+    "traceIdentifier" : "200203207890",
+    "statusInfos" : [ {
+      "effectiveDate" : "2023-03-21",
+      "actionCode" : "WQ",
+      "actionType" : "ACCEPT",
+      "chargeAmount" : 455.00,
+      "statusCodeInfos" : [ {
+        "categoryCode" : "A1",
+        "statusCode" : "19",
+        "entityCode" : "PR",
+        "entityRole" : "PAYER"
+      } ]
+    } ],
+    "acceptedQuantity" : 3,
+    "acceptedAmount" : 155.00,
+    "rejectedQuantity" : 5,
+    "rejectedAmount" : 300.00
+  },
+  "provider" : {
+    "entityRole" : "BILLING_PROVIDER",
+    "entityType" : "INDIVIDUAL",
+    "identificationType" : "NPI",
+    "identifier" : "5365432101",
+    "lastNameOrOrgName" : "KING",
+    "firstName" : "EWELL",
+    "middleName" : "B"
+  },
+  "providerBatchStatus" : {
+    "traceIdentifier" : "00098765432",
+    "statusInfos" : [ {
+      "actionCode" : "WQ",
+      "actionType" : "ACCEPT",
+      "chargeAmount" : 305.00,
+      "statusCodeInfos" : [ {
+        "categoryCode" : "A1",
+        "statusCode" : "19",
+        "entityCode" : "PR",
+        "entityRole" : "PAYER"
+      } ]
+    } ],
+    "acceptedQuantity" : 3,
+    "acceptedAmount" : 155.00,
+    "rejectedQuantity" : 2,
+    "rejectedAmount" : 150.00
+  },
+  "transaction" : {
+    "id" : "685d7e7ab20b946549f1b00b",
+    "controlNumber" : "0004",
+    "transactionType" : "CLAIM_ACK",
+    "purposeCode" : "08",
+    "creationDate" : "2023-03-21",
+    "creationTime" : "10:25:00",
+    "claimOrEncounterIdentifierType" : "RECEIPT_ACK_ADVICE",
+    "traceIdentifier" : "00911232",
+    "transactionSetIdentifierCode" : "277",
+    "implementationConventionReference" : "005010X214",
+    "receiptDate" : "2023-03-20",
+    "processDate" : "2023-03-21",
+    "fileInfo" : {
+      "name" : "X214-payer-response-multiple-responders.edi",
+      "url" : "file:/edi-samples/edi_files/277/X214-payer-response-multiple-responders.edi",
+      "lastModifiedDateTime" : "2025-06-11T23:23:22.182-04:00",
+      "fileType" : "EDI"
+    },
+    "sender" : {
+      "entityRole" : "PAYER",
+      "entityType" : "BUSINESS",
+      "identificationType" : "PAYOR_ID",
+      "identifier" : "OIC02",
+      "lastNameOrOrgName" : "OUR INSURANCE COMPANY"
+    },
+    "creationDateTime" : "2023-03-21T10:25:00"
+  }
+}
+, {
+  "id" : "685d7e7ab20b946549f1b038",
+  "objectType" : "CLAIM_STATUS",
+  "patient" : {
+    "entityRole" : "PATIENT",
+    "entityType" : "INDIVIDUAL",
+    "identificationType" : "MEMBER_ID",
+    "identifier" : "4444444444",
+    "lastNameOrOrgName" : "JONES",
+    "firstName" : "MARY"
+  },
+  "patientControlNumber" : "JONES44444",
+  "statusInfos" : [ {
+    "effectiveDate" : "2023-03-21",
+    "actionCode" : "U",
+    "actionType" : "REJECT",
+    "chargeAmount" : 100.00,
+    "statusCodeInfos" : [ {
+      "categoryCode" : "A3",
+      "statusCode" : "116"
+    } ]
+  } ],
+  "serviceDateFrom" : "2023-03-14",
+  "serviceDateTo" : "2023-03-14",
+  "receiver" : {
+    "entityRole" : "SUBMITTER",
+    "entityType" : "INDIVIDUAL",
+    "identificationType" : "ETIN",
+    "identifier" : "S00005",
+    "lastNameOrOrgName" : "KING",
+    "firstName" : "EWELL",
+    "middleName" : "B"
+  },
+  "receiverBatchStatus" : {
+    "traceIdentifier" : "200203207890",
+    "statusInfos" : [ {
+      "effectiveDate" : "2023-03-21",
+      "actionCode" : "WQ",
+      "actionType" : "ACCEPT",
+      "chargeAmount" : 455.00,
+      "statusCodeInfos" : [ {
+        "categoryCode" : "A1",
+        "statusCode" : "19",
+        "entityCode" : "PR",
+        "entityRole" : "PAYER"
+      } ]
+    } ],
+    "acceptedQuantity" : 3,
+    "acceptedAmount" : 155.00,
+    "rejectedQuantity" : 5,
+    "rejectedAmount" : 300.00
+  },
+  "provider" : {
+    "entityRole" : "BILLING_PROVIDER",
+    "entityType" : "INDIVIDUAL",
+    "identificationType" : "NPI",
+    "identifier" : "5365432101",
+    "lastNameOrOrgName" : "KING",
+    "firstName" : "EWELL",
+    "middleName" : "B"
+  },
+  "providerBatchStatus" : {
+    "traceIdentifier" : "00098765432",
+    "statusInfos" : [ {
+      "actionCode" : "WQ",
+      "actionType" : "ACCEPT",
+      "chargeAmount" : 305.00,
+      "statusCodeInfos" : [ {
+        "categoryCode" : "A1",
+        "statusCode" : "19",
+        "entityCode" : "PR",
+        "entityRole" : "PAYER"
+      } ]
+    } ],
+    "acceptedQuantity" : 3,
+    "acceptedAmount" : 155.00,
+    "rejectedQuantity" : 2,
+    "rejectedAmount" : 150.00
+  },
+  "transaction" : {
+    "id" : "685d7e7ab20b946549f1b00b",
+    "controlNumber" : "0004",
+    "transactionType" : "CLAIM_ACK",
+    "purposeCode" : "08",
+    "creationDate" : "2023-03-21",
+    "creationTime" : "10:25:00",
+    "claimOrEncounterIdentifierType" : "RECEIPT_ACK_ADVICE",
+    "traceIdentifier" : "00911232",
+    "transactionSetIdentifierCode" : "277",
+    "implementationConventionReference" : "005010X214",
+    "receiptDate" : "2023-03-20",
+    "processDate" : "2023-03-21",
+    "fileInfo" : {
+      "name" : "X214-payer-response-multiple-responders.edi",
+      "url" : "file:/edi-samples/edi_files/277/X214-payer-response-multiple-responders.edi",
+      "lastModifiedDateTime" : "2025-06-11T23:23:22.182-04:00",
+      "fileType" : "EDI"
+    },
+    "sender" : {
+      "entityRole" : "PAYER",
+      "entityType" : "BUSINESS",
+      "identificationType" : "PAYOR_ID",
+      "identifier" : "OIC02",
+      "lastNameOrOrgName" : "OUR INSURANCE COMPANY"
+    },
+    "creationDateTime" : "2023-03-21T10:25:00"
+  }
+}
+, {
+  "id" : "685d7e7ab20b946549f1b03f",
+  "objectType" : "CLAIM_STATUS",
+  "patient" : {
+    "entityRole" : "PATIENT",
+    "entityType" : "INDIVIDUAL",
+    "identificationType" : "MEMBER_ID",
+    "identifier" : "5555555555",
+    "lastNameOrOrgName" : "JOHNSON",
+    "firstName" : "JIMMY"
+  },
+  "patientControlNumber" : "JOHNSON55555",
+  "statusInfos" : [ {
+    "effectiveDate" : "2023-03-21",
+    "actionCode" : "WQ",
+    "actionType" : "ACCEPT",
+    "chargeAmount" : 50.00,
+    "statusCodeInfos" : [ {
+      "categoryCode" : "A2",
+      "statusCode" : "20"
+    } ]
+  } ],
+  "payerClaimControlNumber" : "2202163599926X",
+  "serviceDateFrom" : "2023-03-10",
+  "serviceDateTo" : "2023-03-10",
+  "receiver" : {
+    "entityRole" : "SUBMITTER",
+    "entityType" : "INDIVIDUAL",
+    "identificationType" : "ETIN",
+    "identifier" : "S00005",
+    "lastNameOrOrgName" : "KING",
+    "firstName" : "EWELL",
+    "middleName" : "B"
+  },
+  "receiverBatchStatus" : {
+    "traceIdentifier" : "200203207890",
+    "statusInfos" : [ {
+      "effectiveDate" : "2023-03-21",
+      "actionCode" : "WQ",
+      "actionType" : "ACCEPT",
+      "chargeAmount" : 455.00,
+      "statusCodeInfos" : [ {
+        "categoryCode" : "A1",
+        "statusCode" : "19",
+        "entityCode" : "PR",
+        "entityRole" : "PAYER"
+      } ]
+    } ],
+    "acceptedQuantity" : 3,
+    "acceptedAmount" : 155.00,
+    "rejectedQuantity" : 5,
+    "rejectedAmount" : 300.00
+  },
+  "provider" : {
+    "entityRole" : "BILLING_PROVIDER",
+    "entityType" : "INDIVIDUAL",
+    "identificationType" : "NPI",
+    "identifier" : "5365432101",
+    "lastNameOrOrgName" : "KING",
+    "firstName" : "EWELL",
+    "middleName" : "B"
+  },
+  "providerBatchStatus" : {
+    "traceIdentifier" : "00098765432",
+    "statusInfos" : [ {
+      "actionCode" : "WQ",
+      "actionType" : "ACCEPT",
+      "chargeAmount" : 305.00,
+      "statusCodeInfos" : [ {
+        "categoryCode" : "A1",
+        "statusCode" : "19",
+        "entityCode" : "PR",
+        "entityRole" : "PAYER"
+      } ]
+    } ],
+    "acceptedQuantity" : 3,
+    "acceptedAmount" : 155.00,
+    "rejectedQuantity" : 2,
+    "rejectedAmount" : 150.00
+  },
+  "transaction" : {
+    "id" : "685d7e7ab20b946549f1b00b",
+    "controlNumber" : "0004",
+    "transactionType" : "CLAIM_ACK",
+    "purposeCode" : "08",
+    "creationDate" : "2023-03-21",
+    "creationTime" : "10:25:00",
+    "claimOrEncounterIdentifierType" : "RECEIPT_ACK_ADVICE",
+    "traceIdentifier" : "00911232",
+    "transactionSetIdentifierCode" : "277",
+    "implementationConventionReference" : "005010X214",
+    "receiptDate" : "2023-03-20",
+    "processDate" : "2023-03-21",
+    "fileInfo" : {
+      "name" : "X214-payer-response-multiple-responders.edi",
+      "url" : "file:/edi-samples/edi_files/277/X214-payer-response-multiple-responders.edi",
+      "lastModifiedDateTime" : "2025-06-11T23:23:22.182-04:00",
+      "fileType" : "EDI"
+    },
+    "sender" : {
+      "entityRole" : "PAYER",
+      "entityType" : "BUSINESS",
+      "identificationType" : "PAYOR_ID",
+      "identifier" : "OIC02",
+      "lastNameOrOrgName" : "OUR INSURANCE COMPANY"
+    },
+    "creationDateTime" : "2023-03-21T10:25:00"
+  }
+}
+, {
+  "id" : "685d7e7ab20b946549f1b047",
+  "objectType" : "CLAIM_STATUS",
+  "patient" : {
+    "entityRole" : "PATIENT",
+    "entityType" : "INDIVIDUAL",
+    "identificationType" : "MEMBER_ID",
+    "identifier" : "6666666666",
+    "lastNameOrOrgName" : "MILSON",
+    "firstName" : "HARLEY"
+  },
+  "patientControlNumber" : "MILSO66666",
+  "statusInfos" : [ {
+    "effectiveDate" : "2023-03-21",
+    "actionCode" : "WQ",
+    "actionType" : "ACCEPT",
+    "chargeAmount" : 50.00,
+    "statusCodeInfos" : [ {
+      "categoryCode" : "A2",
+      "statusCode" : "20"
+    } ]
+  } ],
+  "payerClaimControlNumber" : "2202163599943X",
+  "serviceDateFrom" : "2023-03-05",
+  "serviceDateTo" : "2023-03-05",
+  "receiver" : {
+    "entityRole" : "SUBMITTER",
+    "entityType" : "INDIVIDUAL",
+    "identificationType" : "ETIN",
+    "identifier" : "S00005",
+    "lastNameOrOrgName" : "KING",
+    "firstName" : "EWELL",
+    "middleName" : "B"
+  },
+  "receiverBatchStatus" : {
+    "traceIdentifier" : "200203207890",
+    "statusInfos" : [ {
+      "effectiveDate" : "2023-03-21",
+      "actionCode" : "WQ",
+      "actionType" : "ACCEPT",
+      "chargeAmount" : 455.00,
+      "statusCodeInfos" : [ {
+        "categoryCode" : "A1",
+        "statusCode" : "19",
+        "entityCode" : "PR",
+        "entityRole" : "PAYER"
+      } ]
+    } ],
+    "acceptedQuantity" : 3,
+    "acceptedAmount" : 155.00,
+    "rejectedQuantity" : 5,
+    "rejectedAmount" : 300.00
+  },
+  "provider" : {
+    "entityRole" : "BILLING_PROVIDER",
+    "entityType" : "INDIVIDUAL",
+    "identificationType" : "NPI",
+    "identifier" : "5365432101",
+    "lastNameOrOrgName" : "KING",
+    "firstName" : "EWELL",
+    "middleName" : "B"
+  },
+  "providerBatchStatus" : {
+    "traceIdentifier" : "00098765432",
+    "statusInfos" : [ {
+      "actionCode" : "WQ",
+      "actionType" : "ACCEPT",
+      "chargeAmount" : 305.00,
+      "statusCodeInfos" : [ {
+        "categoryCode" : "A1",
+        "statusCode" : "19",
+        "entityCode" : "PR",
+        "entityRole" : "PAYER"
+      } ]
+    } ],
+    "acceptedQuantity" : 3,
+    "acceptedAmount" : 155.00,
+    "rejectedQuantity" : 2,
+    "rejectedAmount" : 150.00
+  },
+  "transaction" : {
+    "id" : "685d7e7ab20b946549f1b00b",
+    "controlNumber" : "0004",
+    "transactionType" : "CLAIM_ACK",
+    "purposeCode" : "08",
+    "creationDate" : "2023-03-21",
+    "creationTime" : "10:25:00",
+    "claimOrEncounterIdentifierType" : "RECEIPT_ACK_ADVICE",
+    "traceIdentifier" : "00911232",
+    "transactionSetIdentifierCode" : "277",
+    "implementationConventionReference" : "005010X214",
+    "receiptDate" : "2023-03-20",
+    "processDate" : "2023-03-21",
+    "fileInfo" : {
+      "name" : "X214-payer-response-multiple-responders.edi",
+      "url" : "file:/edi-samples/edi_files/277/X214-payer-response-multiple-responders.edi",
+      "lastModifiedDateTime" : "2025-06-11T23:23:22.182-04:00",
+      "fileType" : "EDI"
+    },
+    "sender" : {
+      "entityRole" : "PAYER",
+      "entityType" : "BUSINESS",
+      "identificationType" : "PAYOR_ID",
+      "identifier" : "OIC02",
+      "lastNameOrOrgName" : "OUR INSURANCE COMPANY"
+    },
+    "creationDateTime" : "2023-03-21T10:25:00"
+  }
+}
+, {
+  "objectType" : "PROVIDER_STATUS",
+  "id" : "685d7e7ab20b946549f1b04d",
+  "provider" : {
+    "entityRole" : "BILLING_PROVIDER",
+    "entityType" : "INDIVIDUAL",
+    "identificationType" : "NPI",
+    "identifier" : "1222334499",
+    "lastNameOrOrgName" : "REED",
+    "firstName" : "IVAN"
+  },
+  "batchStatus" : {
+    "traceIdentifier" : "00023456789",
+    "statusInfos" : [ {
+      "effectiveDate" : "2023-03-21",
+      "actionCode" : "U",
+      "actionType" : "REJECT",
+      "chargeAmount" : 150.00,
+      "statusCodeInfos" : [ {
+        "categoryCode" : "A3",
+        "statusCode" : "24",
+        "entityCode" : "85",
+        "entityRole" : "BILLING_PROVIDER"
+      } ]
+    } ],
+    "rejectedQuantity" : 3,
+    "rejectedAmount" : 150.00
+  },
+  "transaction" : {
+    "id" : "685d7e7ab20b946549f1b00b",
+    "controlNumber" : "0004",
+    "transactionType" : "CLAIM_ACK",
+    "purposeCode" : "08",
+    "creationDate" : "2023-03-21",
+    "creationTime" : "10:25:00",
+    "claimOrEncounterIdentifierType" : "RECEIPT_ACK_ADVICE",
+    "traceIdentifier" : "00911232",
+    "transactionSetIdentifierCode" : "277",
+    "implementationConventionReference" : "005010X214",
+    "receiptDate" : "2023-03-20",
+    "processDate" : "2023-03-21",
+    "fileInfo" : {
+      "name" : "X214-payer-response-multiple-responders.edi",
+      "url" : "file:/edi-samples/edi_files/277/X214-payer-response-multiple-responders.edi",
+      "lastModifiedDateTime" : "2025-06-11T23:23:22.182-04:00",
+      "fileType" : "EDI"
+    },
+    "sender" : {
+      "entityRole" : "PAYER",
+      "entityType" : "BUSINESS",
+      "identificationType" : "PAYOR_ID",
+      "identifier" : "OIC02",
+      "lastNameOrOrgName" : "OUR INSURANCE COMPANY"
+    },
+    "creationDateTime" : "2023-03-21T10:25:00"
+  },
+  "receiver" : {
+    "entityRole" : "SUBMITTER",
+    "entityType" : "INDIVIDUAL",
+    "identificationType" : "ETIN",
+    "identifier" : "S00005",
+    "lastNameOrOrgName" : "KING",
+    "firstName" : "EWELL",
+    "middleName" : "B"
+  },
+  "receiverBatchStatus" : {
+    "traceIdentifier" : "200203207890",
+    "statusInfos" : [ {
+      "effectiveDate" : "2023-03-21",
+      "actionCode" : "WQ",
+      "actionType" : "ACCEPT",
+      "chargeAmount" : 455.00,
+      "statusCodeInfos" : [ {
+        "categoryCode" : "A1",
+        "statusCode" : "19",
+        "entityCode" : "PR",
+        "entityRole" : "PAYER"
+      } ]
+    } ],
+    "acceptedQuantity" : 3,
+    "acceptedAmount" : 155.00,
+    "rejectedQuantity" : 5,
+    "rejectedAmount" : 300.00
+  }
+}
+ ]

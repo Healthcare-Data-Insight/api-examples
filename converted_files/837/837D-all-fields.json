@@ -1,6 +1,6 @@
 [
  {
-  "id" : "681b8c9035f84e2137ad6663",
+  "id" : "685d7ce9fc42e4481ffb4d22",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26403774",
   "chargeAmount" : 150.00,
@@ -12,7 +12,8 @@
   "placeOfServiceType" : "OFFICE",
   "frequencyCode" : {
     "subType" : "FREQUENCY_CODE",
-    "code" : "1"
+    "code" : "1",
+    "desc" : "Original claim"
   },
   "serviceDateFrom" : "2023-03-01",
   "serviceDateTo" : "2023-04-01",
@@ -105,7 +106,8 @@
       "reasonCode" : "1",
       "reason" : {
         "subType" : "CARC",
-        "code" : "1"
+        "code" : "1",
+        "desc" : "Deductible Amount"
       },
       "amount" : 21.89
     }, {
@@ -113,7 +115,8 @@
       "reasonCode" : "2",
       "reason" : {
         "subType" : "CARC",
-        "code" : "2"
+        "code" : "2",
+        "desc" : "Coinsurance Amount"
       },
       "amount" : 15.00
     }, {
@@ -121,7 +124,8 @@
       "reasonCode" : "26",
       "reason" : {
         "subType" : "CARC",
-        "code" : "26"
+        "code" : "26",
+        "desc" : "Expenses incurred prior to coverage."
       },
       "amount" : 55.00,
       "quantity" : 1
@@ -164,10 +168,6 @@
         "qualifierCode" : "G2",
         "type" : "PROVIDER_COMMERCIAL_NUMBER",
         "identification" : "12345"
-      }, {
-        "qualifierCode" : "0B",
-        "type" : "STATE_LICENSE_NUMBER",
-        "identification" : "StateLicenseNumber"
       } ]
     }, {
       "entityRole" : "RENDERING",
@@ -258,7 +258,8 @@
     },
     "providerTaxonomy" : {
       "subType" : "PROVIDER_TAXONOMY",
-      "code" : "1223G0001X"
+      "code" : "1223G0001X",
+      "desc" : "General Practice Dentistry"
     }
   },
   "providers" : [ {
@@ -341,10 +342,14 @@
   } ],
   "diags" : [ {
     "subType" : "ICD_10_PRINCIPAL",
-    "code" : "J0300"
+    "code" : "J0300",
+    "desc" : "Acute streptococcal tonsillitis, unspecified",
+    "formattedCode" : "J03.00"
   }, {
     "subType" : "ICD_10",
-    "code" : "Z1159"
+    "code" : "Z1159",
+    "desc" : "Encounter for screening for other viral diseases",
+    "formattedCode" : "Z11.59"
   } ],
   "attachments" : [ {
     "reportTypeCode" : "OZ",
@@ -372,7 +377,8 @@
     "unitCount" : 1,
     "procedure" : {
       "subType" : "ADA",
-      "code" : "D2150"
+      "code" : "D2150",
+      "desc" : "AMALGAM-TWO SURFACES PRIMARY OR PERMANENT"
     },
     "providers" : [ {
       "entityRole" : "RENDERING",
@@ -445,15 +451,30 @@
       "unitCount" : 1.00,
       "bundledOrUnbundledLineNumber" : 2,
       "procedure" : {
+        "type" : "PROCEDURE",
         "subType" : "ADA",
-        "code" : "D0330"
+        "code" : "D0330",
+        "desc" : "PANORAMIC RADIOGRAPHIC IMAGE",
+        "fullDesc" : "panoramic radiographic image",
+        "categories" : [ {
+          "type" : "RBCS_TAXONOMY",
+          "subType" : "RBCS_CATEGORY",
+          "code" : "I",
+          "desc" : "Imaging"
+        }, {
+          "type" : "RBCS_TAXONOMY",
+          "subType" : "RBCS_SUB_CATEGORY",
+          "code" : "IS",
+          "desc" : "Standard X-ray"
+        } ]
       },
       "adjustments" : [ {
         "group" : "PATIENT_RESPONSIBILITY",
         "reasonCode" : "1",
         "reason" : {
           "subType" : "CARC",
-          "code" : "1"
+          "code" : "1",
+          "desc" : "Deductible Amount"
         },
         "amount" : 21.89
       }, {
@@ -461,7 +482,8 @@
         "reasonCode" : "2",
         "reason" : {
           "subType" : "CARC",
-          "code" : "2"
+          "code" : "2",
+          "desc" : "Coinsurance Amount"
         },
         "amount" : 15.00
       }, {
@@ -469,7 +491,8 @@
         "reasonCode" : "26",
         "reason" : {
           "subType" : "CARC",
-          "code" : "26"
+          "code" : "26",
+          "desc" : "Expenses incurred prior to coverage."
         },
         "amount" : 55.00,
         "quantity" : 1
@@ -478,7 +501,8 @@
         "reasonCode" : "90",
         "reason" : {
           "subType" : "CARC",
-          "code" : "90"
+          "code" : "90",
+          "desc" : "Ingredient cost adjustment. Usage: To be used for pharmaceuticals only."
         },
         "amount" : 65.55
       } ],
@@ -490,15 +514,30 @@
       "unitCount" : 1.00,
       "bundledOrUnbundledLineNumber" : 1,
       "procedure" : {
+        "type" : "PROCEDURE",
         "subType" : "ADA",
-        "code" : "D0330"
+        "code" : "D0330",
+        "desc" : "PANORAMIC RADIOGRAPHIC IMAGE",
+        "fullDesc" : "panoramic radiographic image",
+        "categories" : [ {
+          "type" : "RBCS_TAXONOMY",
+          "subType" : "RBCS_CATEGORY",
+          "code" : "I",
+          "desc" : "Imaging"
+        }, {
+          "type" : "RBCS_TAXONOMY",
+          "subType" : "RBCS_SUB_CATEGORY",
+          "code" : "IS",
+          "desc" : "Standard X-ray"
+        } ]
       },
       "adjustments" : [ {
         "group" : "PATIENT_RESPONSIBILITY",
         "reasonCode" : "1",
         "reason" : {
           "subType" : "CARC",
-          "code" : "1"
+          "code" : "1",
+          "desc" : "Deductible Amount"
         },
         "amount" : 21.89
       }, {
@@ -506,7 +545,8 @@
         "reasonCode" : "2",
         "reason" : {
           "subType" : "CARC",
-          "code" : "2"
+          "code" : "2",
+          "desc" : "Coinsurance Amount"
         },
         "amount" : 15.00
       } ],
@@ -524,21 +564,26 @@
     "diagPointers" : [ 1, 2 ],
     "diags" : [ {
       "subType" : "ICD_10_PRINCIPAL",
-      "code" : "J0300"
+      "code" : "J0300",
+      "desc" : "Acute streptococcal tonsillitis, unspecified",
+      "formattedCode" : "J03.00"
     }, {
       "subType" : "ICD_10",
-      "code" : "Z1159"
+      "code" : "Z1159",
+      "desc" : "Encounter for screening for other viral diseases",
+      "formattedCode" : "Z11.59"
     } ]
   }, {
     "chargeAmount" : 50.00,
     "unitCount" : 1,
     "procedure" : {
       "subType" : "ADA",
-      "code" : "D1110"
+      "code" : "D1110",
+      "desc" : "PROPHYLAXIS - ADULT"
     }
   } ],
   "transaction" : {
-    "id" : "681b8c9035f84e2137ad65ce",
+    "id" : "685d7ce9fc42e4481ffb4c92",
     "controlNumber" : "3456",
     "transactionType" : "DENTAL",
     "purposeCode" : "00",
@@ -550,8 +595,8 @@
     "implementationConventionReference" : "005010X224",
     "fileInfo" : {
       "name" : "837D-all-fields.dat",
-      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/claiminsight/clinsight/data_files/claims/in/comprehensive_test_files/837D-all-fields.dat",
-      "lastModifiedDateTime" : "2025-05-07T12:28:55.701-04:00",
+      "url" : "file:/edi-samples/edi_files/837/837D-all-fields.dat",
+      "lastModifiedDateTime" : "2025-05-06T18:45:51.852-04:00",
       "fileType" : "EDI"
     },
     "sender" : {

@@ -1,6 +1,6 @@
 [
  {
-  "id" : "680e49f8167d006ebebce4a4",
+  "id" : "685d7ce9fc42e4481ffb4e27",
   "objectType" : "CLAIM",
   "patientControlNumber" : "ABC0002",
   "chargeAmount" : 89.93,
@@ -880,88 +880,116 @@
       "firstName" : "JOHN",
       "middleName" : "L"
     } ],
-    "adjustments" : [ {
-      "group" : "OTHER",
-      "reasonCode" : "12",
-      "reason" : {
-        "subType" : "CARC",
-        "code" : "12",
-        "desc" : "The diagnosis is inconsistent with the provider type."
+    "adjudications" : [ {
+      "payerIdentifier" : "P123",
+      "paidAmount" : 173.42,
+      "unitCount" : 2.00,
+      "bundledOrUnbundledLineNumber" : 3,
+      "procedure" : {
+        "type" : "PROCEDURE",
+        "subType" : "CPT",
+        "code" : "81099",
+        "desc" : "Unlisted urinalysis procedure",
+        "fullDesc" : "Unlisted urinalysis procedure",
+        "shortDesc" : "UNLISTED URINALYSIS PX",
+        "startDate" : "1993-01-01",
+        "descFromClaim" : "UNLISTED URINALYSIS PROCEDURE",
+        "categories" : [ {
+          "type" : "RBCS_TAXONOMY",
+          "subType" : "RBCS_CATEGORY",
+          "code" : "T",
+          "desc" : "Test"
+        }, {
+          "type" : "RBCS_TAXONOMY",
+          "subType" : "RBCS_SUB_CATEGORY",
+          "code" : "TL",
+          "desc" : "General Laboratory"
+        } ]
       },
-      "amount" : 18.00,
-      "quantity" : 1
-    }, {
-      "group" : "OTHER",
-      "reasonCode" : "2",
-      "reason" : {
-        "subType" : "CARC",
-        "code" : "2",
-        "desc" : "Coinsurance Amount"
-      },
-      "amount" : 65.55,
-      "quantity" : 1
-    }, {
-      "group" : "OTHER",
-      "reasonCode" : "91",
-      "reason" : {
-        "subType" : "CARC",
-        "code" : "91",
-        "desc" : "Dispensing fee adjustment."
-      },
-      "amount" : 33.03,
-      "quantity" : 2
-    }, {
-      "group" : "OTHER",
-      "reasonCode" : "3",
-      "reason" : {
-        "subType" : "CARC",
-        "code" : "3",
-        "desc" : "Co-payment Amount"
-      },
-      "amount" : 55.15,
-      "quantity" : 1
-    }, {
-      "group" : "OTHER",
-      "reasonCode" : "161",
-      "reason" : {
-        "subType" : "CARC",
-        "code" : "161",
-        "desc" : "Provider performance bonus"
-      },
-      "amount" : 99.99,
-      "quantity" : 1
-    }, {
-      "group" : "OTHER",
-      "reasonCode" : "130",
-      "reason" : {
-        "subType" : "CARC",
-        "code" : "130",
-        "desc" : "Claim submission fee."
-      },
-      "amount" : 82.22,
-      "quantity" : 1
-    }, {
-      "group" : "PATIENT_RESPONSIBILITY",
-      "reasonCode" : "2",
-      "reason" : {
-        "subType" : "CARC",
-        "code" : "2",
-        "desc" : "Coinsurance Amount"
-      },
-      "amount" : 35.00,
-      "quantity" : 1
-    }, {
-      "group" : "PAYOR_INITIATED",
-      "reasonCode" : "1",
-      "reason" : {
-        "subType" : "CARC",
-        "code" : "1",
-        "desc" : "Deductible Amount"
-      },
-      "amount" : 6600.00,
-      "quantity" : 1
-    } ],
-    "remainingPatientLiabilityAmount" : 75.00
+      "adjustments" : [ {
+        "group" : "OTHER",
+        "reasonCode" : "12",
+        "reason" : {
+          "subType" : "CARC",
+          "code" : "12",
+          "desc" : "The diagnosis is inconsistent with the provider type."
+        },
+        "amount" : 18.00,
+        "quantity" : 1
+      }, {
+        "group" : "OTHER",
+        "reasonCode" : "2",
+        "reason" : {
+          "subType" : "CARC",
+          "code" : "2",
+          "desc" : "Coinsurance Amount"
+        },
+        "amount" : 65.55,
+        "quantity" : 1
+      }, {
+        "group" : "OTHER",
+        "reasonCode" : "91",
+        "reason" : {
+          "subType" : "CARC",
+          "code" : "91",
+          "desc" : "Dispensing fee adjustment."
+        },
+        "amount" : 33.03,
+        "quantity" : 2
+      }, {
+        "group" : "OTHER",
+        "reasonCode" : "3",
+        "reason" : {
+          "subType" : "CARC",
+          "code" : "3",
+          "desc" : "Co-payment Amount"
+        },
+        "amount" : 55.15,
+        "quantity" : 1
+      }, {
+        "group" : "OTHER",
+        "reasonCode" : "161",
+        "reason" : {
+          "subType" : "CARC",
+          "code" : "161",
+          "desc" : "Provider performance bonus"
+        },
+        "amount" : 99.99,
+        "quantity" : 1
+      }, {
+        "group" : "OTHER",
+        "reasonCode" : "130",
+        "reason" : {
+          "subType" : "CARC",
+          "code" : "130",
+          "desc" : "Claim submission fee."
+        },
+        "amount" : 82.22,
+        "quantity" : 1
+      }, {
+        "group" : "PATIENT_RESPONSIBILITY",
+        "reasonCode" : "2",
+        "reason" : {
+          "subType" : "CARC",
+          "code" : "2",
+          "desc" : "Coinsurance Amount"
+        },
+        "amount" : 35.00,
+        "quantity" : 1
+      }, {
+        "group" : "PAYOR_INITIATED",
+        "reasonCode" : "1",
+        "reason" : {
+          "subType" : "CARC",
+          "code" : "1",
+          "desc" : "Deductible Amount"
+        },
+        "amount" : 6600.00,
+        "quantity" : 1
+      } ],
+      "adjudicationOrPaymentDate" : "2019-03-10",
+      "remainingPatientLiabilityAmount" : 75.00
+    } ]
   }, {
     "sourceLineId" : "LX0004-2",
     "chargeAmount" : 86.54,
@@ -1040,91 +1068,119 @@
       "firstName" : "JOHN",
       "middleName" : "M"
     } ],
-    "adjustments" : [ {
-      "group" : "OTHER",
-      "reasonCode" : "136",
-      "reason" : {
-        "subType" : "CARC",
-        "code" : "136",
-        "desc" : "Failure to follow prior payers coverage rules. (Use only with Group Code OA)"
+    "adjudications" : [ {
+      "payerIdentifier" : "P123",
+      "paidAmount" : 76.54,
+      "unitCount" : 1.00,
+      "bundledOrUnbundledLineNumber" : 5,
+      "procedure" : {
+        "type" : "PROCEDURE",
+        "subType" : "CPT",
+        "code" : "93005",
+        "desc" : "Electrocardiogram, routine ECG with at least 12 leads; tracing only, without interpretation and report",
+        "fullDesc" : "Electrocardiogram, routine ECG with at least 12 leads; tracing only, without interpretation and report",
+        "shortDesc" : "ELECTROCARDIOGRAM TRACING",
+        "startDate" : "1993-01-01",
+        "descFromClaim" : "ECG ROUTINE ECG W/LEAST 12 LDS TRCG ONLY W/O I&R",
+        "categories" : [ {
+          "type" : "RBCS_TAXONOMY",
+          "subType" : "RBCS_CATEGORY",
+          "code" : "T",
+          "desc" : "Test"
+        }, {
+          "type" : "RBCS_TAXONOMY",
+          "subType" : "RBCS_SUB_CATEGORY",
+          "code" : "TC",
+          "desc" : "Cardiography"
+        } ]
       },
-      "amount" : 15.00,
-      "quantity" : 1
-    }, {
-      "group" : "OTHER",
-      "reasonCode" : "B4",
-      "reason" : {
-        "subType" : "CARC",
-        "code" : "B4",
-        "desc" : "Late filing penalty."
-      },
-      "amount" : 95.55,
-      "quantity" : 1
-    }, {
-      "group" : "OTHER",
-      "reasonCode" : "186",
-      "reason" : {
-        "subType" : "CARC",
-        "code" : "186",
-        "desc" : "Level of care change adjustment."
-      },
-      "amount" : 73.03,
-      "quantity" : 2
-    }, {
-      "group" : "OTHER",
-      "reasonCode" : "235",
-      "reason" : {
-        "subType" : "CARC",
-        "code" : "235",
-        "desc" : "Sales Tax"
-      },
-      "amount" : 15.15,
-      "quantity" : 1
-    }, {
-      "group" : "OTHER",
-      "reasonCode" : "P29",
-      "reason" : {
-        "subType" : "CARC",
-        "code" : "P29",
-        "desc" : "Liability Benefits jurisdictional fee schedule adjustment."
-      },
-      "amount" : 39.99,
-      "quantity" : 1
-    }, {
-      "group" : "OTHER",
-      "reasonCode" : "A0",
-      "reason" : {
-        "subType" : "CARC",
-        "code" : "A0",
-        "desc" : "Patient refund amount."
-      },
-      "amount" : 92.22,
-      "quantity" : 1
-    }, {
-      "group" : "PATIENT_RESPONSIBILITY",
-      "reasonCode" : "2",
-      "reason" : {
-        "subType" : "CARC",
-        "code" : "2",
-        "desc" : "Coinsurance Amount"
-      },
-      "amount" : 65.00,
-      "quantity" : 1
-    }, {
-      "group" : "PAYOR_INITIATED",
-      "reasonCode" : "1",
-      "reason" : {
-        "subType" : "CARC",
-        "code" : "1",
-        "desc" : "Deductible Amount"
-      },
-      "amount" : 3600.00,
-      "quantity" : 1
-    } ],
-    "remainingPatientLiabilityAmount" : 20.00
+      "adjustments" : [ {
+        "group" : "OTHER",
+        "reasonCode" : "136",
+        "reason" : {
+          "subType" : "CARC",
+          "code" : "136",
+          "desc" : "Failure to follow prior payers coverage rules. (Use only with Group Code OA)"
+        },
+        "amount" : 15.00,
+        "quantity" : 1
+      }, {
+        "group" : "OTHER",
+        "reasonCode" : "B4",
+        "reason" : {
+          "subType" : "CARC",
+          "code" : "B4",
+          "desc" : "Late filing penalty."
+        },
+        "amount" : 95.55,
+        "quantity" : 1
+      }, {
+        "group" : "OTHER",
+        "reasonCode" : "186",
+        "reason" : {
+          "subType" : "CARC",
+          "code" : "186",
+          "desc" : "Level of care change adjustment."
+        },
+        "amount" : 73.03,
+        "quantity" : 2
+      }, {
+        "group" : "OTHER",
+        "reasonCode" : "235",
+        "reason" : {
+          "subType" : "CARC",
+          "code" : "235",
+          "desc" : "Sales Tax"
+        },
+        "amount" : 15.15,
+        "quantity" : 1
+      }, {
+        "group" : "OTHER",
+        "reasonCode" : "P29",
+        "reason" : {
+          "subType" : "CARC",
+          "code" : "P29",
+          "desc" : "Liability Benefits jurisdictional fee schedule adjustment."
+        },
+        "amount" : 39.99,
+        "quantity" : 1
+      }, {
+        "group" : "OTHER",
+        "reasonCode" : "A0",
+        "reason" : {
+          "subType" : "CARC",
+          "code" : "A0",
+          "desc" : "Patient refund amount."
+        },
+        "amount" : 92.22,
+        "quantity" : 1
+      }, {
+        "group" : "PATIENT_RESPONSIBILITY",
+        "reasonCode" : "2",
+        "reason" : {
+          "subType" : "CARC",
+          "code" : "2",
+          "desc" : "Coinsurance Amount"
+        },
+        "amount" : 65.00,
+        "quantity" : 1
+      }, {
+        "group" : "PAYOR_INITIATED",
+        "reasonCode" : "1",
+        "reason" : {
+          "subType" : "CARC",
+          "code" : "1",
+          "desc" : "Deductible Amount"
+        },
+        "amount" : 3600.00,
+        "quantity" : 1
+      } ],
+      "adjudicationOrPaymentDate" : "2019-03-10",
+      "remainingPatientLiabilityAmount" : 20.00
+    } ]
   } ],
   "transaction" : {
-    "id" : "680e49f8167d006ebebce40d",
+    "id" : "685d7ce9fc42e4481ffb4d90",
     "controlNumber" : "00000024",
     "transactionType" : "INST",
     "purposeCode" : "00",
@@ -1132,11 +1188,11 @@
     "creationDate" : "2019-03-11",
     "creationTime" : "09:46:03.1",
     "claimOrEncounterIdentifierType" : "CHARGEABLE",
-    "transactionSetIdentifierCode" : "CLAIM",
+    "transactionSetIdentifierCode" : "837",
     "implementationConventionReference" : "005010X223A2",
     "fileInfo" : {
       "name" : "837I-all-fields.dat",
-      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/837/837I-all-fields.dat",
+      "url" : "file:/edi-samples/edi_files/837/837I-all-fields.dat",
       "lastModifiedDateTime" : "2025-01-15T17:23:46.651-05:00",
       "fileType" : "EDI"
     },
