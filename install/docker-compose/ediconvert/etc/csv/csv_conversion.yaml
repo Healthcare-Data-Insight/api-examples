@@ -47,7 +47,7 @@
 
 - transactionTypes: [ "834" ]
   name: member-coverages-single-file
-  aliases: [ single-file, default, lines-with-header-repeat-first-row ]
+  aliases: [ single-file, default, lines-with-header-repeat-first-row, lines-with-header-repeat-each-row ]
   excludedFields:
     - "*AddressCountryCode"
     - "*AdditionalIdentifier*Type"
