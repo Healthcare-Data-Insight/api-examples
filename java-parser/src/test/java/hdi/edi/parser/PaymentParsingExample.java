@@ -17,7 +17,7 @@ public class PaymentParsingExample implements ParsingExampleHelper {
 
     @Test
     public void parsePayment() {
-        var ediFile835 = new File(EDI_FILES_DIR + "/835/dollars_data_separate.dat");
+        var ediFile835 = new File(EDI_FILES_DIR + "/835/835-all-fields.dat");
         List<Payment> payments;
         try (var parser = new EdiParser(ediFile835)) {
             // parse all payments
@@ -36,14 +36,45 @@ public class PaymentParsingExample implements ParsingExampleHelper {
 
         assertNotNull(payerControlNumber, status, patientControlNumber, chargeAmount, paidAmount, patientControlNumber, payeeNpi);
 
+        // adjustments at the claim level
+        if (payment.adjustments() != null) {
+            for (var claimAdj : payment.adjustments()) {
+                BigDecimal adjAmount = claimAdj.amount();
+                String adjReasonCode = claimAdj.reasonCode();
+                assertNotNull(adjAmount, adjReasonCode);
+            }
+        }
         // iterate over lines and get key fields
         for (var line : payment.lines()) {
-            String procedureCode = line.procedure().code();
+            String serviceCode = null;
+            if (line.procedure() != null) {
+                serviceCode = line.procedure().code();
+            }
+            if (line.revenueCode() != null) {
+                serviceCode = line.revenueCode().code();
+            }
+            if (line.drug() != null) {
+                serviceCode = line.drug().code();
+            }
             LocalDate serviceDate = line.serviceDateFrom();
             BigDecimal lineChargeAmount = line.chargeAmount();
             BigDecimal linePaidAmount = line.paidAmount();
 
-            assertNotNull(procedureCode, serviceDate, lineChargeAmount, linePaidAmount);
+            assertNotNull(serviceCode, serviceDate, lineChargeAmount, linePaidAmount);
+            // adjustments at the line level
+            if (line.adjustments() != null) {
+                for (var lineAdj : line.adjustments()) {
+                    BigDecimal adjAmount = lineAdj.amount();
+                    String adjReasonCode = lineAdj.reasonCode();
+                    assertNotNull(adjAmount, adjReasonCode);
+                }
+            }
+            // remark codes (RARC)
+            if (line.remarkCodes() != null) {
+                for (var remarkCode : line.remarkCodes()) {
+                    assertNotNull(remarkCode);
+                }
+            }
         }
     }
 
