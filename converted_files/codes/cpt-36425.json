@@ -1,0 +1,680 @@
+{
+  "type": "PROCEDURE",
+  "subType": "CPT",
+  "code": "36425",
+  "desc": "Venipuncture, cutdown; age 1 or over",
+  "fullDesc": "Venipuncture, cutdown; age 1 or over",
+  "shortDesc": "VENIPUNCTURE CUTDOWN 1 YR/>",
+  "startDate": "1993-01-01",
+  "categories": [
+    {
+      "type": "RBCS_TAXONOMY",
+      "subType": "RBCS_CATEGORY",
+      "code": "P",
+      "desc": "Procedure"
+    },
+    {
+      "type": "RBCS_TAXONOMY",
+      "subType": "RBCS_SUB_CATEGORY",
+      "code": "PV",
+      "desc": "Vascular"
+    }
+  ],
+  "edits": {
+    "mueLimits": [
+      {
+        "claimType": "HOSPITAL",
+        "maxUnits": 2,
+        "rationale": "Clinical: CMS Workgroup"
+      },
+      {
+        "claimType": "PRACTITIONER",
+        "maxUnits": 2,
+        "rationale": "Clinical: CMS Workgroup"
+      }
+    ],
+    "minAge": 1,
+    "maxAge": 124,
+    "checkTypes": [
+      "MUE",
+      "MIN_AGE",
+      "MAX_AGE",
+      "PTP"
+    ],
+    "disallowedCodes": [
+      {
+        "code": "0543T",
+        "rationale": "Misuse of column two code with column one code",
+        "claimTypes": [
+          "PRACTITIONER",
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "0544T",
+        "rationale": "Misuse of column two code with column one code",
+        "claimTypes": [
+          "PRACTITIONER",
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "0545T",
+        "rationale": "Misuse of column two code with column one code",
+        "claimTypes": [
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "0548T",
+        "rationale": "Misuse of column two code with column one code",
+        "claimTypes": [
+          "PRACTITIONER",
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "0553T",
+        "rationale": "Misuse of column two code with column one code",
+        "claimTypes": [
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "0563T",
+        "rationale": "Misuse of column two code with column one code",
+        "claimTypes": [
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "0565T",
+        "rationale": "Misuse of column two code with column one code",
+        "claimTypes": [
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "0566T",
+        "rationale": "Misuse of column two code with column one code",
+        "claimTypes": [
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "0567T",
+        "rationale": "Misuse of column two code with column one code",
+        "claimTypes": [
+          "PRACTITIONER",
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "0568T",
+        "rationale": "Misuse of column two code with column one code",
+        "claimTypes": [
+          "PRACTITIONER",
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "0569T",
+        "rationale": "Misuse of column two code with column one code",
+        "claimTypes": [
+          "PRACTITIONER",
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "0570T",
+        "rationale": "Misuse of column two code with column one code",
+        "claimTypes": [
+          "PRACTITIONER",
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "0571T",
+        "rationale": "Misuse of column two code with column one code",
+        "claimTypes": [
+          "PRACTITIONER",
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "0572T",
+        "rationale": "Misuse of column two code with column one code",
+        "claimTypes": [
+          "PRACTITIONER",
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "0573T",
+        "rationale": "Misuse of column two code with column one code",
+        "claimTypes": [
+          "PRACTITIONER",
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "0574T",
+        "rationale": "Misuse of column two code with column one code",
+        "claimTypes": [
+          "PRACTITIONER",
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "0580T",
+        "rationale": "Misuse of column two code with column one code",
+        "claimTypes": [
+          "PRACTITIONER",
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "0581T",
+        "rationale": "Misuse of column two code with column one code",
+        "claimTypes": [
+          "PRACTITIONER",
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "0582T",
+        "rationale": "Misuse of column two code with column one code",
+        "claimTypes": [
+          "PRACTITIONER",
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "0655T",
+        "rationale": "Misuse of column two code with column one code",
+        "claimTypes": [
+          "PRACTITIONER",
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "15772",
+        "rationale": "Misuse of column two code with column one code",
+        "claimTypes": [
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "15774",
+        "rationale": "Misuse of column two code with column one code",
+        "claimTypes": [
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "20560",
+        "rationale": "Misuse of column two code with column one code",
+        "claimTypes": [
+          "PRACTITIONER",
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "20561",
+        "rationale": "Misuse of column two code with column one code",
+        "claimTypes": [
+          "PRACTITIONER",
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "20700",
+        "rationale": "Misuse of column two code with column one code",
+        "claimTypes": [
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "20701",
+        "rationale": "Misuse of column two code with column one code",
+        "claimTypes": [
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "20702",
+        "rationale": "Misuse of column two code with column one code",
+        "claimTypes": [
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "20703",
+        "rationale": "Misuse of column two code with column one code",
+        "claimTypes": [
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "20704",
+        "rationale": "Misuse of column two code with column one code",
+        "claimTypes": [
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "20705",
+        "rationale": "Misuse of column two code with column one code",
+        "claimTypes": [
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "21602",
+        "rationale": "Misuse of column two code with column one code",
+        "claimTypes": [
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "21603",
+        "rationale": "Misuse of column two code with column one code",
+        "claimTypes": [
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "33017",
+        "rationale": "Misuse of column two code with column one code",
+        "claimTypes": [
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "33018",
+        "rationale": "Misuse of column two code with column one code",
+        "claimTypes": [
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "33019",
+        "rationale": "Misuse of column two code with column one code",
+        "claimTypes": [
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "33858",
+        "rationale": "Misuse of column two code with column one code",
+        "claimTypes": [
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "33859",
+        "rationale": "Misuse of column two code with column one code",
+        "claimTypes": [
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "33871",
+        "rationale": "Misuse of column two code with column one code",
+        "claimTypes": [
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "34717",
+        "rationale": "CPT Manual or CMS manual coding instructions",
+        "claimTypes": [
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "34718",
+        "rationale": "CPT Manual or CMS manual coding instructions",
+        "claimTypes": [
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "35702",
+        "rationale": "Misuse of column two code with column one code",
+        "claimTypes": [
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "35703",
+        "rationale": "Misuse of column two code with column one code",
+        "claimTypes": [
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "36410",
+        "rationale": "CPT \"separate procedure\" definition",
+        "claimTypes": [
+          "PRACTITIONER",
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "36420",
+        "rationale": "Mutually exclusive procedures",
+        "claimTypes": [
+          "PRACTITIONER",
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "37202",
+        "rationale": "Misuse of column two code with column one code",
+        "claimTypes": [
+          "PRACTITIONER",
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "49013",
+        "rationale": "Misuse of column two code with column one code",
+        "claimTypes": [
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "49014",
+        "rationale": "Misuse of column two code with column one code",
+        "claimTypes": [
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "62318",
+        "rationale": "Misuse of column two code with column one code",
+        "claimTypes": [
+          "PRACTITIONER",
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "62319",
+        "rationale": "Misuse of column two code with column one code",
+        "claimTypes": [
+          "PRACTITIONER",
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "64415",
+        "rationale": "Misuse of column two code with column one code",
+        "claimTypes": [
+          "PRACTITIONER",
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "64416",
+        "rationale": "Misuse of column two code with column one code",
+        "claimTypes": [
+          "PRACTITIONER",
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "64417",
+        "rationale": "Misuse of column two code with column one code",
+        "claimTypes": [
+          "PRACTITIONER",
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "64450",
+        "rationale": "Misuse of column two code with column one code",
+        "claimTypes": [
+          "PRACTITIONER",
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "64470",
+        "rationale": "Misuse of column two code with column one code",
+        "claimTypes": [
+          "PRACTITIONER",
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "64475",
+        "rationale": "Misuse of column two code with column one code",
+        "claimTypes": [
+          "PRACTITIONER",
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "64490",
+        "rationale": "Misuse of column two code with column one code",
+        "claimTypes": [
+          "PRACTITIONER",
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "64493",
+        "rationale": "Misuse of column two code with column one code",
+        "claimTypes": [
+          "PRACTITIONER",
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "66987",
+        "rationale": "Misuse of column two code with column one code",
+        "claimTypes": [
+          "PRACTITIONER",
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "66988",
+        "rationale": "Misuse of column two code with column one code",
+        "claimTypes": [
+          "PRACTITIONER",
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "69990",
+        "rationale": "Misuse of column two code with column one code",
+        "claimTypes": [
+          "PRACTITIONER",
+          "HOSPITAL"
+        ],
+        "modifierAllowed": false
+      },
+      {
+        "code": "90772",
+        "rationale": "Standards of medical / surgical practice",
+        "claimTypes": [
+          "PRACTITIONER",
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "90774",
+        "rationale": "Standards of medical / surgical practice",
+        "claimTypes": [
+          "PRACTITIONER",
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "90775",
+        "rationale": "Standards of medical / surgical practice",
+        "claimTypes": [
+          "PRACTITIONER",
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "96372",
+        "rationale": "Standards of medical / surgical practice",
+        "claimTypes": [
+          "PRACTITIONER",
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "96374",
+        "rationale": "Standards of medical / surgical practice",
+        "claimTypes": [
+          "PRACTITIONER",
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "96375",
+        "rationale": "Standards of medical / surgical practice",
+        "claimTypes": [
+          "PRACTITIONER",
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "96376",
+        "rationale": "Standards of medical / surgical practice",
+        "claimTypes": [
+          "PRACTITIONER",
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "C8952",
+        "rationale": "Standards of medical / surgical practice",
+        "claimTypes": [
+          "PRACTITIONER",
+          "HOSPITAL"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "36591",
+        "rationale": "CPT Manual or CMS manual coding instructions",
+        "claimTypes": [
+          "PRACTITIONER"
+        ],
+        "modifierAllowed": false
+      },
+      {
+        "code": "36592",
+        "rationale": "CPT Manual or CMS manual coding instructions",
+        "claimTypes": [
+          "PRACTITIONER"
+        ],
+        "modifierAllowed": false
+      },
+      {
+        "code": "96523",
+        "rationale": "CPT Manual or CMS manual coding instructions",
+        "claimTypes": [
+          "PRACTITIONER"
+        ],
+        "modifierAllowed": false
+      },
+      {
+        "code": "G0351",
+        "rationale": "Standards of medical / surgical practice",
+        "claimTypes": [
+          "PRACTITIONER"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "G0353",
+        "rationale": "Standards of medical / surgical practice",
+        "claimTypes": [
+          "PRACTITIONER"
+        ],
+        "modifierAllowed": true
+      },
+      {
+        "code": "G0354",
+        "rationale": "Standards of medical / surgical practice",
+        "claimTypes": [
+          "PRACTITIONER"
+        ],
+        "modifierAllowed": true
+      }
+    ]
+  }
+}

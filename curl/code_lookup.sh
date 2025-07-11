@@ -12,6 +12,10 @@ curl -H "X-Api-Key: $API_KEY" -G "$API_URL/code/search?type=procedure" --data-ur
 # Initial code letter + description
 curl -H "X-Api-Key: $API_KEY" -G "$API_URL/code/search?type=procedure" --data-urlencode 'query=code:j adrenalin'
 
+# * Code details including its NCCI edits
+
+curl -H "X-Api-Key: $API_KEY" "$API_URL/code/36425?type=procedure"
+
 # * CSV export
 # All procedures
 curl -H "X-Api-Key: $API_KEY" -G "$API_URL/code/csv?type=procedure"

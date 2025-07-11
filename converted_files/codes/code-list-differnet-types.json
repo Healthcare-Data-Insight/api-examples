@@ -1,0 +1,28 @@
+[
+  {
+    "type": "DIAGNOSIS",
+    "subType": "ICD_10",
+    "code": "A049",
+    "desc": "Bacterial intestinal infection, unspecified",
+    "formattedCode": "A04.9"
+  },
+  {
+    "type": "DRUG",
+    "subType": "NDC",
+    "code": "0002-1243",
+    "desc": "MOUNJARO (tirzepatide)",
+    "fullDesc": "MOUNJARO (tirzepatide); Form: Injection, solution; Route: Subcutaneous; Labeler: Eli Lilly and Company",
+    "startDate": "2023-07-28",
+    "endDate": "2024-12-31"
+  },
+  {
+    "type": "PROCEDURE",
+    "subType": "CPT",
+    "code": "0001A",
+    "desc": "Immunization administration by intramuscular injection of severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) (coronavirus disease [COVID-19]) vaccine, mRNA-LNP, spike protein, preservative free, 30 mcg/0.3mL dosage, diluent reconstituted; first dose",
+    "fullDesc": "Immunization administration by intramuscular injection of severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) (coronavirus disease [COVID-19]) vaccine, mRNA-LNP, spike protein, preservative free, 30 mcg/0.3mL dosage, diluent reconstituted; first dose",
+    "shortDesc": "ADM SARSCOV2 30MCG/0.3ML 1ST",
+    "startDate": "2020-12-11",
+    "endDate": "2023-10-31"
+  }
+]
