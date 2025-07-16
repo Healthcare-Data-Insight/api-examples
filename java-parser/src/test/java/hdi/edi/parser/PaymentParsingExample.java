@@ -3,6 +3,7 @@ package hdi.edi.parser;
 import hdi.model.orgperson.OrgOrPerson;
 import hdi.model.payment.ClaimStatus;
 import hdi.model.payment.Payment;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 
 import java.io.File;
@@ -13,11 +14,12 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SuppressWarnings("NewClassNamingConvention")
+@Slf4j
 public class PaymentParsingExample implements ParsingExampleHelper {
 
     @Test
     public void parsePayment() {
-        var ediFile835 = new File(EDI_FILES_DIR + "/835/835-all-fields.dat");
+        var ediFile835 = new File(EDI_FILES_DIR, "/835/835-all-fields.dat");
         List<Payment> payments;
         try (var parser = new EdiParser(ediFile835)) {
             // parse all payments
@@ -37,12 +39,10 @@ public class PaymentParsingExample implements ParsingExampleHelper {
         assertNotNull(payerControlNumber, status, patientControlNumber, chargeAmount, paidAmount, patientControlNumber, payeeNpi);
 
         // adjustments at the claim level
-        if (payment.adjustments() != null) {
-            for (var claimAdj : payment.adjustments()) {
-                BigDecimal adjAmount = claimAdj.amount();
-                String adjReasonCode = claimAdj.reasonCode();
-                assertNotNull(adjAmount, adjReasonCode);
-            }
+        for (var claimAdj : payment.adjustments()) {
+            BigDecimal adjAmount = claimAdj.amount();
+            String adjReasonCode = claimAdj.reasonCode();
+            assertNotNull(adjAmount, adjReasonCode);
         }
         // iterate over lines and get key fields
         for (var line : payment.lines()) {
@@ -61,19 +61,14 @@ public class PaymentParsingExample implements ParsingExampleHelper {
             BigDecimal linePaidAmount = line.paidAmount();
 
             assertNotNull(serviceCode, serviceDate, lineChargeAmount, linePaidAmount);
-            // adjustments at the line level
-            if (line.adjustments() != null) {
-                for (var lineAdj : line.adjustments()) {
-                    BigDecimal adjAmount = lineAdj.amount();
-                    String adjReasonCode = lineAdj.reasonCode();
-                    assertNotNull(adjAmount, adjReasonCode);
-                }
+            for (var lineAdj : line.adjustments()) {
+                BigDecimal adjAmount = lineAdj.amount();
+                String adjReasonCode = lineAdj.reasonCode();
+                assertNotNull(adjAmount, adjReasonCode);
             }
             // remark codes (RARC)
-            if (line.remarkCodes() != null) {
-                for (var remarkCode : line.remarkCodes()) {
-                    assertNotNull(remarkCode);
-                }
+            for (var remark : line.remarks()) {
+                assertNotNull(remark.code());
             }
         }
     }
@@ -83,7 +78,7 @@ public class PaymentParsingExample implements ParsingExampleHelper {
      */
     @Test
     public void parseInBatches() {
-        var ediFile = new File(EDI_FILES_DIR + "/835/dollars_data_separate.dat");
+        var ediFile = new File(EDI_FILES_DIR, "/835/dollars_data_separate.dat");
         int count = 0;
         try (var parser = new EdiParser(ediFile).isSplitMode(true)) {
             while (true) {

@@ -11,6 +11,7 @@ import org.junit.runners.Suite;
         ClaimParsingExample.class,
         PaymentParsingExample.class,
         Member834ParsingExample.class,
+        ClaimStatus277CAParsingExample.class,
         SegmentParsingExample.class,
         Edi810ParsingExample.class
 })
