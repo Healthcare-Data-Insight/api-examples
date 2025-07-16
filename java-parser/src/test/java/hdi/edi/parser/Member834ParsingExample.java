@@ -36,6 +36,5 @@ public class Member834ParsingExample implements ParsingExampleHelper {
         // HealthCoverage: HD segment and related segments and loops (2300)
         HealthCoverage healthCoverage = healthCoverages.get(0);
         System.out.println(healthCoverage);
-
     }
 }
