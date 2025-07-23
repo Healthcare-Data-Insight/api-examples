@@ -1,0 +1,75 @@
+---
+type: "object"
+description: "<div class='obj-edi-examples'>Loop: 835:2110<br/>837:2400, Segment:\
+  \ 835:SVC<br/>837P:SV1<br/>837I:SV2<br/>837D:SV3</div>\n"
+properties:
+  sourceLineId:
+    description: "Line item control number. EDI: REF02 *6R"
+    type: "string"
+  repricedReferenceNumber:
+    description: "Repriced reference number. EDI: REF02 *9A"
+    type: "string"
+  adjustedRepricedReferenceNumber:
+    description: "Adjusted repriced reference number. EDI: REF02 *9D"
+    type: "string"
+  chargeAmount:
+    description: "Charge amount. EDI: SV203"
+    type: "number"
+    format: "float"
+  nonCoveredAmount:
+    description: "Non covered amount. EDI: AMT02 *A8"
+    type: "number"
+    format: "float"
+  serviceTaxAmount:
+    description: "Service tax amount. EDI: AMT02 *GT"
+    type: "number"
+    format: "float"
+  facilityTaxAmount:
+    description: "Facility tax amount. EDI: AMT02 *N8"
+    type: "number"
+    format: "float"
+  unitType:
+    description: "Unit type. EDI: SV204"
+    type: "string"
+  unitCount:
+    description: "Unit count. EDI: SV205"
+    type: "number"
+    format: "float"
+  thirdPartyNote:
+    description: "Third party note. EDI: NTE02 *TPO"
+    type: "string"
+  procedure:
+    description: "Procedure<br/><a href='https://datainsight.health/code-lookup/?type=PROCEDURE'\
+      \ target='_blank'>View codes and descriptions</a>. EDI: SV202 *HC, SV202 *AD,\
+      \ SV202 *WK, SV202 *IV"
+    $ref: "./Procedure.yaml"
+  revenueCode:
+    description: "Revenue code<br/><a href='https://datainsight.health/code-lookup/?type=UB04_REVENUE_CODE'\
+      \ target='_blank'>View codes and descriptions</a>. EDI: SV201 *RC,NU"
+    $ref: "./Code.yaml"
+  attachments:
+    description: "Attachments. EDI: PWK"
+    type: "array"
+    items:
+      $ref: "./Attachment.yaml"
+  providers:
+    description: "Providers for this service line"
+    type: "array"
+    items:
+      $ref: "./Party.yaml"
+  adjudications:
+    description: "Adjudications. EDI: SVD<br/>Loop: 2430"
+    type: "array"
+    items:
+      $ref: "./Adjudication.yaml"
+  adjustments:
+    description: "Copy of line adjustments from the adjudication list for backward\
+      \ compatibility. EDI: CAS"
+    type: "array"
+    items:
+      $ref: "./Adjustment.yaml"
+  fixedFormatRecords:
+    description: "Fixed format records. EDI: K301"
+    type: "array"
+    items:
+      type: "string"

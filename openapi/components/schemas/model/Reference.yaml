@@ -1,0 +1,15 @@
+---
+type: "object"
+description: "<div class='obj-edi-examples'>Segment: REF</div>\n"
+properties:
+  qualifierCode:
+    description: "Code qualifying the reference identification. EDI: REF01"
+    type: "string"
+  type:
+    description: "Type of reference; qualifier code as a string constant (enum)<br/><a\
+      \ href='https://datainsight.health/code-lookup/?type=X12_REFERENCE_IDENTIFICATION_QUALIFIER_CODE'\
+      \ target='_blank'>View codes and descriptions</a>. EDI: REF01"
+    type: "string"
+  identification:
+    description: "Reference identification. EDI: REF02"
+    type: "string"

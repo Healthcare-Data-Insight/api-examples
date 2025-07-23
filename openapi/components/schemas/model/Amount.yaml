@@ -1,0 +1,17 @@
+---
+type: "object"
+description: "<div class='obj-edi-examples'>Segment: AMT</div>\n"
+properties:
+  qualifierCode:
+    description: "Code specifying the type of amount (amount qualifier code). EDI:\
+      \ AMT01"
+    type: "string"
+  type:
+    description: "Type of amount; qualifier code translated to a mnemonic string constant\
+      \ (enum)<br/><a href='https://datainsight.health/code-lookup/?type=X12_AMOUNT_QUALIFIER_CODE'\
+      \ target='_blank'>View codes and descriptions</a>. EDI: AMT01"
+    type: "string"
+  amount:
+    description: "Amount. EDI: AMT02"
+    type: "number"
+    format: "float"

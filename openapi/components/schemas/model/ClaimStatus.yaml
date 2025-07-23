@@ -1,0 +1,67 @@
+---
+type: "object"
+description: "<div class='obj-desc'>Status of a single claim. Also contains patient,\
+  \ provider and receiver information.</div>\n<div class='obj-edi-examples'>Loop:\
+  \ 2200D <a class='file-example-link' href='https://github.com/Healthcare-Data-Insight/api-examples/tree/main/converted_files/277/277CA-all-fields.json'\
+  \ target='_blank'>JSON Example</a> <a class='file-example-link' href='https://datainsight.health/edi/277/277ca-all-fields/'\
+  \ target='_blank'>Interactive Example</a></div>\n"
+properties:
+  id:
+    description: "Unique payment identifier assigned by the converter"
+    type: "string"
+  objectType:
+    description: "Type of this object, always set to 'CLAIM_STATUS'"
+    type: "string"
+  patient:
+    description: "The insured (subscriber) or patient as stated on 837 claim. EDI:\
+      \ NM1 *QC<br/>Loop: 2100D"
+    $ref: "./PartyIdName.yaml"
+  patientControlNumber:
+    description: "Patient control number. EDI: TRN02"
+    type: "string"
+  statusInfos:
+    description: "Status infos"
+    type: "array"
+    items:
+      $ref: "./StatusInfo.yaml"
+  payerClaimControlNumber:
+    description: "Payer claim control number. EDI: REF02 *1K"
+    type: "string"
+  clearinghouseTraceNumber:
+    description: "Clearinghouse trace number. EDI: REF02 *D9"
+    type: "string"
+  billTypeCode:
+    description: "Bill type code. EDI: REF02 *BLT"
+    type: "string"
+  serviceDateFrom:
+    description: "Service date for professional or statement date for institutional.\
+      \ EDI: DTP03 *472"
+    type: "string"
+    format: "date"
+  serviceDateTo:
+    description: "The end date of the service or statement date period. Set to 'serviceDateFrom'\
+      \ if the period is a single date. EDI: DTP03 *472"
+    type: "string"
+    format: "date"
+  receiver:
+    description: "The Receiver is the entity that expects the response from the Source.\
+      \ Can be a provider, a provider group, a claims clearinghouse, etc.. EDI: NM1\
+      \ *40<br/>Loop: 2000B"
+    $ref: "./PartyIdName.yaml"
+  receiverBatchStatus:
+    description: "Receiver batch status. EDI: Loop: 2200B"
+    $ref: "./BatchStatus.yaml"
+  provider:
+    description: "Billing provider for 277CA. EDI: NM1 *85<br/>Loop: 2100C"
+    $ref: "./PartyIdName.yaml"
+  providerBatchStatus:
+    description: "Provider batch status. EDI: Loop: 2200C"
+    $ref: "./BatchStatus.yaml"
+  lineStatuses:
+    description: "Rejected service lines. EDI: Loop: 2220D"
+    type: "array"
+    items:
+      $ref: "./ServiceLineStatus.yaml"
+  transaction:
+    description: "Parent EDI transaction for this object"
+    $ref: "./Transaction277.yaml"

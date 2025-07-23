@@ -1,0 +1,141 @@
+---
+type: "object"
+description: "<div class='obj-edi-examples'>Loop: 2400</div>\n"
+properties:
+  controlNumber:
+    description: "Control number. EDI: REF02 *6R"
+    type: "string"
+  procedure:
+    description: "Procedure<br/><a href='https://datainsight.health/code-lookup/?type=PROCEDURE'\
+      \ target='_blank'>View codes and descriptions</a>. EDI: SV101 *HC, SV101 *AD,\
+      \ SV101 *WK, SV101 *IV"
+    $ref: "./Procedure.yaml"
+  chargeAmount:
+    description: "Charge amount. EDI: SV102"
+    type: "number"
+    format: "float"
+  unitType:
+    description: "Unit type. EDI: SV103"
+    type: "string"
+  unitCount:
+    description: "Unit count. EDI: SV104"
+    type: "number"
+    format: "float"
+  placeOfService:
+    description: "Place of service. EDI: SV105"
+    type: "string"
+  placeOfServiceCode:
+    description: "Place of service code. EDI: SV105"
+    type: "string"
+  diagPointers:
+    description: "Diag pointers. EDI: SV107"
+    type: "array"
+    items:
+      format: "int32"
+      type: "integer"
+  emergencyIndicator:
+    description: "Emergency indicator. EDI: SV109"
+    type: "string"
+  epsdtIndicator:
+    description: "Epsdt indicator. EDI: SV111"
+    type: "string"
+  familyPlanningIndicator:
+    description: "Family planning indicator. EDI: SV112"
+    type: "string"
+  copayStatusCode:
+    description: "Copay status code. EDI: SV115"
+    type: "string"
+  serviceDateFrom:
+    description: "Service period start date. EDI: DTP03 *472, DTP03 *150"
+    type: "string"
+    format: "date"
+  serviceDateTo:
+    description: "Service period end date. If not provided in EDI (single day), it\
+      \ is set to 'serviceDateFrom'. EDI: DTP03 *151"
+    type: "string"
+    format: "date"
+  prescriptionDate:
+    description: "Prescription date. EDI: DTP03 *471"
+    type: "string"
+    format: "date"
+  beginTherapyDate:
+    description: "Begin therapy date. EDI: DTP03 *463"
+    type: "string"
+    format: "date"
+  lastSeenDate:
+    description: "Last seen date. EDI: DTP03 *304"
+    type: "string"
+    format: "date"
+  testPerformedDate:
+    description: "Test performed date. EDI: DTP03 *738, DTP03 *739"
+    type: "string"
+    format: "date"
+  lastXRayDate:
+    description: "Last xray date. EDI: DTP03 *455"
+    type: "string"
+    format: "date"
+  initialTreatmentDate:
+    description: "Initial treatment date. EDI: DTP03 *454"
+    type: "string"
+    format: "date"
+  priorAuthorization:
+    description: "Prior authorization. EDI: REF02 *G1"
+    type: "string"
+  referralNumber:
+    description: "Referral number. EDI: REF02 *9F"
+    type: "string"
+  repricedReferenceNumber:
+    description: "Repriced reference number. EDI: REF02 *9B"
+    type: "string"
+  adjustedRepricedReferenceNumber:
+    description: "Adjusted repriced reference number. EDI: REF02 *9D"
+    type: "string"
+  note:
+    description: "Note. EDI: NTE02 *ADD, NTE02 *DCP"
+    type: "string"
+  thirdPartyNote:
+    description: "Third party note. EDI: NTE02"
+    type: "string"
+  drug:
+    description: "Drug<br/><a href='https://datainsight.health/code-lookup/?type=DRUG'\
+      \ target='_blank'>View codes and descriptions</a>. EDI: LIN03"
+    $ref: "./Code.yaml"
+  drugQuantity:
+    description: "Drug quantity. EDI: CTP04"
+    type: "number"
+    format: "float"
+  drugUnitType:
+    description: "Drug unit type. EDI: CTP05-1"
+    type: "string"
+  prescriptionNumber:
+    description: "Prescription number. EDI: REF02 *XZ"
+    type: "string"
+  attachments:
+    description: "Attachments. EDI: PWK"
+    type: "array"
+    items:
+      $ref: "./Attachment.yaml"
+  renderingProvider:
+    description: "Rendering provider. EDI: NM1 *82"
+    $ref: "./Party.yaml"
+  purchasedServiceProvider:
+    description: "Purchased service provider. EDI: NM1 *QB"
+    $ref: "./Party.yaml"
+  serviceFacility:
+    description: "Service facility. EDI: NM1 *77"
+    $ref: "./Party.yaml"
+  supervisingProvider:
+    description: "Supervising provider. EDI: NM1 *DQ"
+    $ref: "./Party.yaml"
+  referringProvider:
+    description: "Referring provider. EDI: NM1 *DN"
+    $ref: "./Party.yaml"
+  orderingProvider:
+    description: "Ordering provider. EDI: NM1 *DK"
+    $ref: "./Party.yaml"
+  ambulancePickUp:
+    description: "Ambulance pick up. EDI: NM1 *PW"
+    $ref: "./Party.yaml"
+  ambulanceDropOff:
+    description: "Ambulance drop off. EDI: NM1 *45"
+    $ref: "./Party.yaml"

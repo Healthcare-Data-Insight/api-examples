@@ -1,0 +1,12 @@
+---
+type: "object"
+description: "<div class='obj-edi-examples'>Segment: TOO</div>\n"
+properties:
+  code:
+    description: "Code. EDI: TOO02"
+    type: "string"
+  surfaceCodes:
+    description: "Surface codes. EDI: TOO03"
+    type: "array"
+    items:
+      type: "string"

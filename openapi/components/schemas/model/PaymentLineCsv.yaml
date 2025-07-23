@@ -1,0 +1,107 @@
+---
+type: "object"
+description: "<div class='obj-edi-examples'>Loop: 2110, Segment: SVC</div>\n"
+properties:
+  controlNumber:
+    description: "Line item control number from 837. EDI: REF02 *6R"
+    type: "string"
+  procedure:
+    description: "Adjudicated procedure code<br/><a href='https://datainsight.health/code-lookup/?type=procedure'\
+      \ target='_blank'>View codes and descriptions</a>. EDI: SVC01 *HC, SVC01 *AD,\
+      \ SVC01 *WK, SVC01 *IV"
+    $ref: "./Procedure.yaml"
+  revenueCode:
+    description: "Adjudicated revenue code<br/><a href='https://datainsight.health/code-lookup/?type=UB04_REVENUE_CODE'\
+      \ target='_blank'>View codes and descriptions</a>. EDI: SVC01 *RC,NU, SVC04\
+      \ *RC,NU"
+    type: "string"
+  drugCode:
+    description: "Adjudicated drug code (NDC)<br/><a href='https://datainsight.health/code-lookup/?type=drug'\
+      \ target='_blank'>View codes and descriptions</a>. EDI: SVC01"
+    type: "string"
+  chargeAmount:
+    description: "Charge amount. EDI: SVC02"
+    type: "number"
+    format: "float"
+  paidAmount:
+    description: "Paid amount. EDI: SVC03"
+    type: "number"
+    format: "float"
+  unitCount:
+    description: "Unit count. EDI: SVC05"
+    type: "number"
+    format: "float"
+  originalProcedure:
+    description: "Submitted procedure code from the claim if it is different from\
+      \ the adjudicated procedure<br/><a href='https://datainsight.health/code-lookup/?type=procedure'\
+      \ target='_blank'>View codes and descriptions</a>. EDI: SVC06 *HC, SVC06 *AD,\
+      \ SVC06 *WK, SVC06 *IV"
+    $ref: "./Procedure.yaml"
+  originalRevenueCode:
+    description: "Submitted revenue code from the claim if it is different from the\
+      \ adjudicated revenue code<br/><a href='https://datainsight.health/code-lookup/?type=UB04_REVENUE_CODE'\
+      \ target='_blank'>View codes and descriptions</a>. EDI: SVC06 *RC,NU"
+    type: "string"
+  originalDrugCode:
+    description: "Submitted drug (NDC) code from the claim if it is different from\
+      \ the adjudicated drug code<br/><a href='https://datainsight.health/code-lookup/?type=drug'\
+      \ target='_blank'>View codes and descriptions</a>. EDI: SVC06"
+    type: "string"
+  originalUnitCount:
+    description: "Original unit count. EDI: SVC07"
+    type: "number"
+    format: "float"
+  serviceDateFrom:
+    description: "Service period start date. EDI: DTP03 *472, DTP03 *150"
+    type: "string"
+    format: "date"
+  serviceDateTo:
+    description: "Service period end date. If not provided in EDI (single day), it\
+      \ is set to 'serviceDateFrom'. EDI: DTP03 *151"
+    type: "string"
+    format: "date"
+  totalAdjAmount:
+    description: "Sum total of all adjustments for this service line"
+    type: "number"
+    format: "float"
+  adjs:
+    description: "Line adjustments. EDI: CAS"
+    type: "array"
+    items:
+      $ref: "./Adjustment.yaml"
+  serviceIds:
+    description: "Related service-specific identifiers that were used in the process\
+      \ of adjudicating this service. EDI: REF"
+    type: "array"
+    items:
+      $ref: "./Reference.yaml"
+  healthcarePolicyId:
+    description: "Healthcare policy id. EDI: REF02 *0K"
+    type: "string"
+  renderingProviderIds:
+    description: "Rendering provider identifiers. EDI: REF"
+    type: "array"
+    items:
+      $ref: "./Reference.yaml"
+  allowedAmount:
+    description: "Allowed amount -- this is one of the amounts from the list of supplemental\
+      \ amounts"
+    type: "number"
+    format: "float"
+  supplementalAmts:
+    description: "Supplemental amounts, such as allowed amount, deduction amount,\
+      \ etc.. EDI: AMT"
+    type: "array"
+    items:
+      $ref: "./Amount.yaml"
+  supplementalQties:
+    description: "Supplemental quantities. EDI: QTY"
+    type: "array"
+    items:
+      $ref: "./Quantity.yaml"
+  remarkCodes:
+    description: "Remark codes<br/><a href='https://datainsight.health/code-lookup/?type=carc_rarc&search=cat:rarc'\
+      \ target='_blank'>View codes and descriptions</a>. EDI: LQ"
+    type: "array"
+    items:
+      type: "string"

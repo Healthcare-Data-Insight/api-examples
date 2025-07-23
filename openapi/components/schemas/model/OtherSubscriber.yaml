@@ -1,0 +1,58 @@
+---
+type: "object"
+properties:
+  payerResponsibilitySequence:
+    description: "Payer responsibility sequence. EDI: SBR01"
+    type: "string"
+  relationshipType:
+    description: "Relationship type. EDI: SBR02"
+    type: "string"
+  groupOrPolicyNumber:
+    description: "Group or policy number. EDI: SBR03"
+    type: "string"
+  groupName:
+    description: "Group name. EDI: SBR04"
+    type: "string"
+  claimFilingIndicatorCode:
+    description: "Claim filing indicator code. EDI: SBR09"
+    type: "string"
+  insurancePlanType:
+    description: "Insurance plan type. EDI: SBR09"
+    type: "string"
+  person:
+    description: "Person. EDI: NM1"
+    $ref: "./PersonWithDemographic.yaml"
+  adjustments:
+    description: "Claim-level adjustments from this payer. EDI: CAS"
+    type: "array"
+    items:
+      $ref: "./Adjustment.yaml"
+  payerPaidAmount:
+    description: "Payer paid amount. EDI: AMT02 *D"
+    type: "number"
+    format: "float"
+  nonCoveredAmount:
+    description: "Non covered amount. EDI: AMT02 *A8"
+    type: "number"
+    format: "float"
+  remainingPatientLiabilityAmount:
+    description: "Remaining patient liability amount. EDI: AMT02 *EAF"
+    type: "number"
+    format: "float"
+  payerPriorAuthorizationNumber:
+    description: "Payer prior authorization number. EDI: REF02 *G1"
+    type: "string"
+  payerReferralNumber:
+    description: "Payer referral number. EDI: REF02 *9F"
+    type: "string"
+  payerClaimControlNumber:
+    description: "Payer claim control number. EDI: REF02 *F8"
+    type: "string"
+  payer:
+    description: "Payer. EDI: NM1 *PR<br/>Loop: 2330B"
+    $ref: "./Party.yaml"
+  providers:
+    description: "Other payer's providers. EDI: NM1"
+    type: "array"
+    items:
+      $ref: "./Party.yaml"

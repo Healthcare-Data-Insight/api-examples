@@ -1,0 +1,12 @@
+---
+allOf:
+- $ref: "./Code.yaml"
+- type: "object"
+  description: "<div class='obj-desc'>Procedure code with description and optional\
+    \ modifiers</div>\n<div class='obj-edi-examples'>Segment: HI,SV1,SV2,SV3,SVC</div>\n"
+  properties:
+    modifiers:
+      description: "Modifiers"
+      type: "array"
+      items:
+        $ref: "./Code.yaml"

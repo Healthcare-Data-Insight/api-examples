@@ -1,0 +1,21 @@
+---
+type: "object"
+properties:
+  line:
+    description: "Line. EDI: N301"
+    type: "string"
+  line2:
+    description: "Line2. EDI: N302"
+    type: "string"
+  city:
+    description: "City. EDI: N401"
+    type: "string"
+  stateCode:
+    description: "State code. EDI: N402"
+    type: "string"
+  zipCode:
+    description: "Zip code. EDI: N403"
+    type: "string"
+  countryCode:
+    description: "Country code. EDI: N404"
+    type: "string"

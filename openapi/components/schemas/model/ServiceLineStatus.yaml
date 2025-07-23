@@ -1,0 +1,41 @@
+---
+type: "object"
+description: "<div class='obj-desc'>Service line information and its status</div>\n\
+  <div class='obj-edi-examples'>Loop: 2220D</div>\n"
+properties:
+  controlNumber:
+    description: "Line item control number from 837. EDI: REF02 *6R"
+    type: "string"
+  chargeAmount:
+    description: "Charge amount. EDI: SVC02"
+    type: "number"
+    format: "float"
+  unitCount:
+    description: "Unit count. EDI: SVC07"
+    type: "number"
+    format: "float"
+  procedure:
+    description: "Procedure<br/><a href='https://datainsight.health/code-lookup/?type=PROCEDURE'\
+      \ target='_blank'>View codes and descriptions</a>. EDI: SVC01"
+    $ref: "./Procedure.yaml"
+  revenueCode:
+    description: "Revenue code<br/><a href='https://datainsight.health/code-lookup/?type=UB04_REVENUE_CODE'\
+      \ target='_blank'>View codes and descriptions</a>. EDI: SVC01,SVC04"
+    $ref: "./Code.yaml"
+  prescriptionNumber:
+    description: "Prescription number. EDI: REF02 *XZ"
+    type: "string"
+  serviceDateFrom:
+    description: "Service period start date. EDI: DTP03 *472, DTP03 *150"
+    type: "string"
+    format: "date"
+  serviceDateTo:
+    description: "Service period end date. If not provided in EDI (single day), it\
+      \ is set to 'serviceDateFrom'. EDI: DTP03 *151"
+    type: "string"
+    format: "date"
+  statusInfos:
+    description: "Status infos"
+    type: "array"
+    items:
+      $ref: "./StatusInfo.yaml"

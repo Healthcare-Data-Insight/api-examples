@@ -1,0 +1,41 @@
+---
+type: "object"
+properties:
+  payerResponsibilitySequence:
+    description: "Payer responsibility sequence. EDI: SBR01"
+    type: "string"
+  relationshipType:
+    description: "Relationship type. EDI: SBR02"
+    type: "string"
+  groupOrPolicyNumber:
+    description: "Group or policy number. EDI: SBR03"
+    type: "string"
+  groupName:
+    description: "Group name. EDI: SBR04"
+    type: "string"
+  claimFilingIndicatorCode:
+    description: "Claim filing indicator code. EDI: SBR09"
+    type: "string"
+  insurancePlanType:
+    description: "Insurance plan type. EDI: SBR09"
+    type: "string"
+  person:
+    description: "Person. EDI: NM1"
+    $ref: "./PersonWithDemographic.yaml"
+  deathDate:
+    description: "Death date. EDI: PAT06"
+    type: "string"
+    format: "date"
+  weight:
+    description: "Patient weight in pounds. EDI: PAT09"
+    type: "number"
+    format: "float"
+  pregnancyIndicator:
+    description: "Pregnancy indicator. EDI: PAT09"
+    type: "string"
+  propertyCasualtyClaimNumber:
+    description: "Property casualty claim number. EDI: REF02 *Y4"
+    type: "string"
+  payer:
+    description: "Payer. EDI: NM1 *PR<br/>Loop: 2330B"
+    $ref: "./Party.yaml"

@@ -1,0 +1,28 @@
+---
+type: "object"
+description: "<div class='obj-desc'>Status Information</div>\n<div class='obj-edi-examples'>Segment:\
+  \ STC</div>\n"
+properties:
+  effectiveDate:
+    description: "Effective date. EDI: STC02"
+    type: "string"
+    format: "date"
+  actionCode:
+    description: "Action code. EDI: STC03"
+    type: "string"
+  actionType:
+    description: "Status action type (action code translated to constant/enum), ACCEPT\
+      \ or REJECT. EDI: STC03"
+    type: "string"
+  chargeAmount:
+    description: "Charge amount. EDI: STC04"
+    type: "number"
+    format: "float"
+  statusCodeInfos:
+    description: "Status code infos. EDI: STC01,STC10,STC11"
+    type: "array"
+    items:
+      $ref: "./StatusCodeInfo.yaml"
+  message:
+    description: "Message. EDI: STC12"
+    type: "string"

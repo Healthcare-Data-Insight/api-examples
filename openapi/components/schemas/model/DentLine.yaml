@@ -1,0 +1,116 @@
+---
+type: "object"
+description: "<div class='obj-edi-examples'>Loop: 835:2110<br/>837:2400, Segment:\
+  \ 835:SVC<br/>837P:SV1<br/>837I:SV2<br/>837D:SV3</div>\n"
+properties:
+  sourceLineId:
+    description: "Line item control number. EDI: REF02 *6R"
+    type: "string"
+  oralCavityDesignationCodes:
+    description: "Oral cavity designation codes. EDI: SV304"
+    type: "array"
+    items:
+      type: "string"
+  prosthesisCrownOrInlayCode:
+    description: "Prosthesis crown or inlay code. EDI: SV305"
+    type: "string"
+  predeterminationOfBenefitsIdentifier:
+    description: "Predetermination of benefits identifier. EDI: REF02 *G3"
+    type: "string"
+  repricedReferenceNumber:
+    description: "Repriced reference number. EDI: REF02 *9A"
+    type: "string"
+  adjustedRepricedReferenceNumber:
+    description: "Adjusted repriced reference number. EDI: REF02 *9D"
+    type: "string"
+  priorAuthorization:
+    description: "Prior authorization. EDI: REF02 *G1"
+    type: "string"
+  referralNumber:
+    description: "Referral number. EDI: REF02 *9F"
+    type: "string"
+  chargeAmount:
+    description: "Charge amount. EDI: SV302"
+    type: "number"
+    format: "float"
+  salesTaxAmount:
+    description: "Sales tax amount. EDI: AMT02 *T"
+    type: "number"
+    format: "float"
+  priorPlacementDate:
+    description: "Prior placement date. EDI: DTP03 *441, DTP03 *139"
+    type: "string"
+    format: "date"
+  orthodonticBandingDate:
+    description: "Orthodontic banding date. EDI: DTP03 *452"
+    type: "string"
+    format: "date"
+  replacementDate:
+    description: "Replacement date. EDI: DTP03 *446"
+    type: "string"
+    format: "date"
+  treatmentStartDate:
+    description: "Treatment start date. EDI: DTP03 *196"
+    type: "string"
+    format: "date"
+  treatmentCompletionDate:
+    description: "Treatment completion date. EDI: DTP03 *198"
+    type: "string"
+    format: "date"
+  unitType:
+    description: "Unit type. EDI: SV304"
+    type: "string"
+  unitCount:
+    description: "Unit count. EDI: SV305"
+    type: "number"
+    format: "float"
+  procedure:
+    description: "Procedure<br/><a href='https://datainsight.health/code-lookup/?type=PROCEDURE'\
+      \ target='_blank'>View codes and descriptions</a>. EDI: SV302 *HC, SV302 *AD,\
+      \ SV302 *WK, SV302 *IV"
+    $ref: "./Procedure.yaml"
+  attachments:
+    description: "Attachments. EDI: PWK"
+    type: "array"
+    items:
+      $ref: "./Attachment.yaml"
+  providers:
+    description: "Providers for this service line"
+    type: "array"
+    items:
+      $ref: "./Party.yaml"
+  adjudications:
+    description: "Adjudications. EDI: SVD<br/>Loop: 2430"
+    type: "array"
+    items:
+      $ref: "./Adjudication.yaml"
+  adjustments:
+    description: "Copy of line adjustments from the adjudication list for backward\
+      \ compatibility. EDI: CAS"
+    type: "array"
+    items:
+      $ref: "./Adjustment.yaml"
+  fixedFormatRecords:
+    description: "Fixed format records. EDI: K301"
+    type: "array"
+    items:
+      type: "string"
+  toothInfos:
+    description: "Tooth infos"
+    type: "array"
+    items:
+      $ref: "./ToothInfo.yaml"
+  diagPointers:
+    description: "Diagnosis pointers. Each pointer is an index of the diagnosis in\
+      \ the 'diags' array at the claim level.. EDI: SV302"
+    type: "array"
+    items:
+      format: "int32"
+      type: "integer"
+  diags:
+    description: "Copy of diagnosis codes from the claim based on diagnosis pointers<br/><a\
+      \ href='https://datainsight.health/code-lookup/?type=DIAGNOSIS' target='_blank'>View\
+      \ codes and descriptions</a>. EDI: SV302"
+    type: "array"
+    items:
+      $ref: "./Code.yaml"

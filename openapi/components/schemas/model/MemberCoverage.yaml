@@ -1,0 +1,135 @@
+---
+type: "object"
+description: "<div class='obj-desc'>Main object for 834, contains the member and their\
+  \ health coverage information.</div>\n<div class='obj-edi-examples'>Loop: 2000,\
+  \ Segment: INS <a class='file-example-link' href='https://github.com/Healthcare-Data-Insight/api-examples/tree/main/converted_files/834/834-all-fields.json'\
+  \ target='_blank'>JSON Example</a> <a class='file-example-link' href='https://github.com/Healthcare-Data-Insight/api-examples/tree/main/converted_files/834/834-all-fields.csv'\
+  \ target='_blank'>CSV Example</a> <a class='file-example-link' href='https://datainsight.health/edi/834/834-all-fields/'\
+  \ target='_blank'>Interactive Example</a></div>\n"
+properties:
+  transactionControlNumber:
+    description: "Transaction control number. EDI: ST02"
+    type: "string"
+  transactionSetPurposeCode:
+    description: "Transaction set purpose code. EDI: BGN01"
+    type: "string"
+  originatorApplicationTransactionId:
+    description: "Originator application transaction id. EDI: BGN02"
+    type: "string"
+  transactionCreationDateTime:
+    description: "Transaction creation date time. EDI: BGN03,BGN04"
+    type: "string"
+    format: "date-time"
+  transactionActionCode:
+    description: "Transaction action code. EDI: BGN08"
+    type: "string"
+  fileEffectiveDates:
+    description: "File effective dates. EDI: DTP"
+    type: "array"
+    items:
+      $ref: "./Date.yaml"
+  masterPolicyNumber:
+    description: "Master policy number. EDI: REF02 *34"
+    type: "string"
+  sponsor:
+    description: "Sponsor. EDI: Loop: 1000A"
+    $ref: "./PartyIdName.yaml"
+  insurer:
+    description: "Insurer. EDI: Loop: 1000B"
+    $ref: "./PartyIdName.yaml"
+  tpas:
+    description: "Tpas. EDI: Loop: 1000C"
+    type: "array"
+    items:
+      $ref: "./Tpa.yaml"
+  memberIndicator:
+    description: "Member indicator. EDI: INS01"
+    type: "string"
+  relationshipCode:
+    description: "Relationship code. EDI: INS02"
+    type: "string"
+  maintenanceTypeCode:
+    description: "Maintenance type code. EDI: INS03"
+    type: "string"
+  maintenanceReasonCode:
+    description: "Maintenance reason code. EDI: INS04"
+    type: "string"
+  benefitStatusCode:
+    description: "Benefit status code. EDI: INS05"
+    type: "string"
+  cobraEventCode:
+    description: "Cobra event code. EDI: INS07"
+    type: "string"
+  employmentStatusCode:
+    description: "Employment status code. EDI: INS08"
+    type: "string"
+  studentStatusCode:
+    description: "Student status code. EDI: INS09"
+    type: "string"
+  handicapIndicator:
+    description: "Handicap indicator. EDI: INS10"
+    type: "string"
+  confidentialityCode:
+    description: "Confidentiality code. EDI: INS13"
+    type: "string"
+  birthSequenceNumber:
+    description: "Birth sequence number. EDI: INS17"
+    type: "integer"
+  identifier:
+    description: "Member identifier. EDI: REF02 *0F"
+    type: "string"
+  groupOrPolicyNumber:
+    description: "Group or policy number. EDI: REF02 *1L"
+    type: "string"
+  supplementalIdentifiers:
+    description: "Supplemental identifiers. EDI: REF"
+    type: "array"
+    items:
+      $ref: "./Reference.yaml"
+  statusInfoEffectiveDates:
+    description: "Status info effective dates. EDI: DTP"
+    type: "array"
+    items:
+      $ref: "./Date.yaml"
+  member:
+    description: "Member. EDI: NM1 *IL<br/>Loop: 2100A"
+    $ref: "./Member.yaml"
+  contractAmounts:
+    description: "Member policy amounts from the member loop 2100A. EDI: AMT"
+    type: "array"
+    items:
+      $ref: "./Amount.yaml"
+  mailingAddress:
+    description: "Member mailing address"
+    $ref: "./Address.yaml"
+  employers:
+    description: "Employers. EDI: Loop: 2100D"
+    type: "array"
+    items:
+      $ref: "./Party.yaml"
+  schools:
+    description: "Schools. EDI: Loop: 2100E"
+    type: "array"
+    items:
+      $ref: "./Party.yaml"
+  custodialParent:
+    description: "Custodial parent. EDI: Loop: 2100F"
+    $ref: "./Party.yaml"
+  responsiblePersons:
+    description: "Responsible persons. EDI: Loop: 2100G"
+    type: "array"
+    items:
+      $ref: "./Party.yaml"
+  reportingCategories:
+    description: "Reporting categories. EDI: Loop: 2750"
+    type: "array"
+    items:
+      $ref: "./ReportingCategory.yaml"
+  healthCoverages:
+    description: "Health coverages. EDI: Loop: 2300"
+    type: "array"
+    items:
+      $ref: "./HealthCoverage.yaml"
+  transaction:
+    description: "Parent EDI transaction for this object"
+    $ref: "./Transaction834.yaml"

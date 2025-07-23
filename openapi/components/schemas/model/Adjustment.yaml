@@ -1,0 +1,19 @@
+---
+type: "object"
+description: "<div class='obj-edi-examples'>Segment: CAS</div>\n"
+properties:
+  group:
+    description: "Claim adjustment group code as a string constant (enum). EDI: CAS01"
+    type: "string"
+  reasonCode:
+    description: "Claim adjustment reason code<br/><a href='https://datainsight.health/code-lookup/?type=carc_rarc&search=cat:carc'\
+      \ target='_blank'>View codes and descriptions</a>. EDI: CAS02"
+    type: "string"
+  amount:
+    description: "Adjustment amount. EDI: CAS03"
+    type: "number"
+    format: "float"
+  quantity:
+    description: "Adjustment quantity. EDI: CAS04"
+    type: "number"
+    format: "float"

@@ -1,0 +1,72 @@
+---
+type: "object"
+description: "<div class='obj-edi-examples'>Loop: 2100A, Segment: NM1</div>\n"
+properties:
+  entityRole:
+    description: "Entity role<br/><a href='https://datainsight.health/code-lookup/?type=X12_ENTITY_IDENTIFIER_CODE'\
+      \ target='_blank'>View codes and descriptions</a>. EDI: NM102, N101"
+    type: "string"
+  identifier:
+    description: "Identifier. EDI: NM109, N104"
+    type: "string"
+  lastNameOrOrgName:
+    description: "Organization name or person last name. EDI: NM103, N102"
+    type: "string"
+  firstName:
+    description: "First name. EDI: NM104"
+    type: "string"
+  middleName:
+    description: "Middle name. EDI: NM105"
+    type: "string"
+  birthDate:
+    description: "Birth date. EDI: DMG02"
+    type: "string"
+    format: "date"
+  gender:
+    description: "Gender. EDI: DMG03"
+    type: "string"
+  address:
+    description: "Address"
+    $ref: "./Address.yaml"
+  maritalStatusCode:
+    description: "Marital status code. EDI: DMG04"
+    type: "string"
+  ethnicityCode:
+    description: "Ethnicity code. EDI: DMG05"
+    type: "string"
+  citizenshipCode:
+    description: "Citizenship code. EDI: DMG06"
+    type: "string"
+  employmentClassCodes:
+    description: "Employment class codes. EDI: EC01,EC02,EC03"
+    type: "array"
+    items:
+      type: "string"
+  wageFrequencyCode:
+    description: "Wage frequency code. EDI: ICM01"
+    type: "string"
+  wageAmount:
+    description: "Wage amount. EDI: ICM02"
+    type: "number"
+    format: "float"
+  workHoursCount:
+    description: "Work hours count. EDI: ICM03"
+    type: "number"
+    format: "float"
+  employerLocationIdentificationCode:
+    description: "Employer location identification code. EDI: ICM04"
+    type: "string"
+  salaryGradeCode:
+    description: "Salary grade code. EDI: ICM05"
+    type: "string"
+  healthRelatedCode:
+    description: "Health related code. EDI: HLH01"
+    type: "string"
+  height:
+    description: "Height. EDI: HLH02"
+    type: "number"
+    format: "float"
+  weight:
+    description: "Weight. EDI: HLH03"
+    type: "number"
+    format: "float"

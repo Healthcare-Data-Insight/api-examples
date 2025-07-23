@@ -1,0 +1,7 @@
+---
+type: "object"
+description: "<div class='obj-desc'>Insured subscriber of patient for 835</div>\n"
+properties:
+  person:
+    description: "Person. EDI: NM1"
+    $ref: "./Party.yaml"

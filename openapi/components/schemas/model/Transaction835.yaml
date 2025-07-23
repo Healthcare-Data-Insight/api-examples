@@ -1,0 +1,43 @@
+---
+type: "object"
+properties:
+  controlNumber:
+    description: "Control number. EDI: ST02"
+    type: "string"
+  transactionType:
+    description: "Transaction type translated to string constant, PROF for 837P, INST\
+      \ for 837I, etc.. EDI: ST01,ST03"
+    type: "string"
+  productionDate:
+    description: "Production date. EDI: DTP03 *405"
+    type: "string"
+    format: "date"
+  totalPaymentAmount:
+    description: "Total payment amount. EDI: BPR02"
+    type: "number"
+    format: "float"
+  creditOrDebitFlagCode:
+    description: "Credit or debit flag code. EDI: BPR03"
+    type: "string"
+  paymentMethodType:
+    description: "Payment method type. EDI: BPR04"
+    type: "string"
+  receiverAccountNumber:
+    description: "Receiver account number. EDI: BPR15"
+    type: "string"
+  paymentDate:
+    description: "Payment date. EDI: BPR16"
+    type: "string"
+    format: "date"
+  checkOrEftTraceNumber:
+    description: "Check or eft trace number. EDI: TRN02"
+    type: "string"
+  payerIdentifier:
+    description: "Payer identifier. EDI: TRN03"
+    type: "string"
+  transactionSetIdentifierCode:
+    description: "Transaction set identifier code. EDI: ST01"
+    type: "string"
+  implementationConventionReference:
+    description: "Implementation convention reference. EDI: ST03"
+    type: "string"

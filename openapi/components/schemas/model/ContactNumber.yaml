@@ -1,0 +1,10 @@
+---
+type: "object"
+description: "<div class='obj-edi-examples'>Segment: PER</div>\n"
+properties:
+  type:
+    description: "Type of contact number, such as PHONE, EMAIL, URL. EDI: PER03,PER05,PER07"
+    type: "string"
+  number:
+    description: "Number. EDI: PER04,PER06,PER08"
+    type: "string"

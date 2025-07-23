@@ -1,0 +1,139 @@
+---
+type: "object"
+description: "<div class='obj-edi-examples'>Loop: 835:2110<br/>837:2400, Segment:\
+  \ 835:SVC<br/>837P:SV1<br/>837I:SV2<br/>837D:SV3</div>\n"
+properties:
+  sourceLineId:
+    description: "Line item control number. EDI: REF02 *6R"
+    type: "string"
+  placeOfServiceCode:
+    description: "Place of service code. EDI: SV105"
+    type: "string"
+  emergencyIndicator:
+    description: "Emergency indicator. EDI: SV109"
+    type: "string"
+  epsdtIndicator:
+    description: "Epsdt indicator. EDI: SV111"
+    type: "string"
+  familyPlanningIndicator:
+    description: "Family planning indicator. EDI: SV112"
+    type: "string"
+  copayStatusCode:
+    description: "Copay status code. EDI: SV115"
+    type: "string"
+  repricedReferenceNumber:
+    description: "Repriced reference number. EDI: REF02 *9A"
+    type: "string"
+  adjustedRepricedReferenceNumber:
+    description: "Adjusted repriced reference number. EDI: REF02 *9D"
+    type: "string"
+  priorAuthorization:
+    description: "Prior authorization. EDI: REF02 *G1"
+    type: "string"
+  referralNumber:
+    description: "Referral number. EDI: REF02 *9F"
+    type: "string"
+  chargeAmount:
+    description: "Charge amount. EDI: SV102"
+    type: "number"
+    format: "float"
+  salesTaxAmount:
+    description: "Sales tax amount. EDI: AMT02 *T"
+    type: "number"
+    format: "float"
+  prescriptionDate:
+    description: "Prescription date. EDI: DTP03 *471"
+    type: "string"
+    format: "date"
+  beginTherapyDate:
+    description: "Begin therapy date. EDI: DTP03 *463"
+    type: "string"
+    format: "date"
+  lastSeenDate:
+    description: "Last seen date. EDI: DTP03 *304"
+    type: "string"
+    format: "date"
+  testPerformedDate:
+    description: "Test performed date. EDI: DTP03 *738, DTP03 *739"
+    type: "string"
+    format: "date"
+  lastXRayDate:
+    description: "Last xray date. EDI: DTP03 *455"
+    type: "string"
+    format: "date"
+  initialTreatmentDate:
+    description: "Initial treatment date. EDI: DTP03 *454"
+    type: "string"
+    format: "date"
+  unitType:
+    description: "Unit type. EDI: SV103"
+    type: "string"
+  unitCount:
+    description: "Unit count. EDI: SV104"
+    type: "number"
+    format: "float"
+  drug:
+    description: "Drug code (NDC)<br/><a href='https://datainsight.health/code-lookup/?type=drug'\
+      \ target='_blank'>View codes and descriptions</a>. EDI: LIN03"
+    $ref: "./Code.yaml"
+  drugQuantity:
+    description: "Drug quantity. EDI: CTP04"
+    type: "number"
+    format: "float"
+  drugUnitType:
+    description: "Drug unit type. EDI: CTP05-1"
+    type: "string"
+  prescriptionNumber:
+    description: "Prescription number. EDI: REF02 *XZ"
+    type: "string"
+  lineNote:
+    description: "Line note. EDI: NTE02 *ADD, NTE02 *DCP"
+    type: "string"
+  thirdPartyNote:
+    description: "Third party note. EDI: NTE02 *TPO"
+    type: "string"
+  procedure:
+    description: "Procedure<br/><a href='https://datainsight.health/code-lookup/?type=PROCEDURE'\
+      \ target='_blank'>View codes and descriptions</a>. EDI: SV101 *HC, SV101 *AD,\
+      \ SV101 *WK, SV101 *IV"
+    $ref: "./Procedure.yaml"
+  attachments:
+    description: "Attachments. EDI: PWK"
+    type: "array"
+    items:
+      $ref: "./Attachment.yaml"
+  providers:
+    description: "Providers for this service line"
+    type: "array"
+    items:
+      $ref: "./Party.yaml"
+  adjudications:
+    description: "Adjudications. EDI: SVD<br/>Loop: 2430"
+    type: "array"
+    items:
+      $ref: "./Adjudication.yaml"
+  adjustments:
+    description: "Copy of line adjustments from the adjudication list for backward\
+      \ compatibility. EDI: CAS"
+    type: "array"
+    items:
+      $ref: "./Adjustment.yaml"
+  fixedFormatRecords:
+    description: "Fixed format records. EDI: K301"
+    type: "array"
+    items:
+      type: "string"
+  diagPointers:
+    description: "Diagnosis pointers. Each pointer is an index of the diagnosis in\
+      \ the 'diags' array at the claim level.. EDI: SV107"
+    type: "array"
+    items:
+      format: "int32"
+      type: "integer"
+  diags:
+    description: "Copy of diagnosis codes from the claim based on diagnosis pointers<br/><a\
+      \ href='https://datainsight.health/code-lookup/?type=DIAGNOSIS' target='_blank'>View\
+      \ codes and descriptions</a>. EDI: SV107"
+    type: "array"
+    items:
+      $ref: "./Code.yaml"

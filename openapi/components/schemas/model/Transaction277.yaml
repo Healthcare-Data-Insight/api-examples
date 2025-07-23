@@ -1,0 +1,44 @@
+---
+type: "object"
+properties:
+  controlNumber:
+    description: "Control number. EDI: ST02"
+    type: "string"
+  transactionType:
+    description: "Transaction type translated to string constant, PROF for 837P, INST\
+      \ for 837I, etc.. EDI: ST01,ST03"
+    type: "string"
+  purposeCode:
+    description: "Purpose code. EDI: BHT02"
+    type: "string"
+  originatorApplicationTransactionId:
+    description: "Originator application transaction id. EDI: BHT03"
+    type: "string"
+  creationDate:
+    description: "Creation date. EDI: BHT04"
+    type: "string"
+    format: "date"
+  creationTime:
+    description: "Creation time. EDI: BHT05"
+    type: "string"
+    format: "date-time"
+  traceIdentifier:
+    description: "Trace identifier. EDI: TRN02"
+    type: "string"
+  transactionSetIdentifierCode:
+    description: "Transaction set identifier code. EDI: ST01"
+    type: "string"
+  implementationConventionReference:
+    description: "Implementation convention reference. EDI: ST03"
+    type: "string"
+  receiptDate:
+    description: "Receipt date. EDI: DTP03 *050"
+    type: "string"
+    format: "date"
+  processDate:
+    description: "Process date. EDI: DTP03 *009"
+    type: "string"
+    format: "date"
+  sender:
+    description: "Information source name"
+    $ref: "./PartyIdName.yaml"

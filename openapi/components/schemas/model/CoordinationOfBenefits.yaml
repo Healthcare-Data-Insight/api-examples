@@ -1,0 +1,31 @@
+---
+type: "object"
+description: "<div class='obj-edi-examples'>Loop: 2320, Segment: COB</div>\n"
+properties:
+  payerResponsibilitySequenceCode:
+    description: "Payer responsibility sequence code. EDI: COB01"
+    type: "string"
+  groupOrPolicyNumber:
+    description: "Group or policy number. EDI: COB02"
+    type: "string"
+  coordinationOfBenefitsCode:
+    description: "Coordination of benefits code. EDI: COB03"
+    type: "string"
+  additionalIdentifiers:
+    description: "Additional identifiers. EDI: REF"
+    type: "array"
+    items:
+      $ref: "./Reference.yaml"
+  dateFrom:
+    description: "Date from. EDI: DTP03 *344"
+    type: "string"
+    format: "date"
+  dateTo:
+    description: "Date to. EDI: DTP03 *345"
+    type: "string"
+    format: "date"
+  insurers:
+    description: "Insurers"
+    type: "array"
+    items:
+      $ref: "./Party.yaml"

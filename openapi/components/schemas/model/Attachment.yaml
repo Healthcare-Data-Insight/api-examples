@@ -1,0 +1,13 @@
+---
+type: "object"
+description: "<div class='obj-edi-examples'>Segment: PWK</div>\n"
+properties:
+  reportTypeCode:
+    description: "Report type code. EDI: PWK01"
+    type: "string"
+  reportTransmissionCode:
+    description: "Report transmission code. EDI: PWK02"
+    type: "string"
+  controlNumber:
+    description: "Control number. EDI: PWK06"
+    type: "string"

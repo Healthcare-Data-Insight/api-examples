@@ -1,0 +1,12 @@
+---
+type: "object"
+properties:
+  objectType:
+    description: "Type of error, could be ERROR or WARNING"
+    type: "string"
+  message:
+    description: "Detailed error message"
+    type: "string"
+  fileName:
+    description: "File name where the error or warning occurred"
+    type: "string"

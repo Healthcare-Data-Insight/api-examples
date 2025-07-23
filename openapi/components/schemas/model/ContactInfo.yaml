@@ -1,0 +1,12 @@
+---
+type: "object"
+description: "<div class='obj-edi-examples'>Segment: PER</div>\n"
+properties:
+  name:
+    description: "Name. EDI: PER02"
+    type: "string"
+  contactNumbers:
+    description: "Contact numbers"
+    type: "array"
+    items:
+      $ref: "./ContactNumber.yaml"

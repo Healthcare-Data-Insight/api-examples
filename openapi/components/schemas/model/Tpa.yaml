@@ -1,0 +1,12 @@
+---
+allOf:
+- $ref: "./Party.yaml"
+- type: "object"
+  description: "<div class='obj-edi-examples'>Loop: 1000C, 1100C</div>\n"
+  properties:
+    accountNumber:
+      description: "Account number. EDI: ACT01"
+      type: "string"
+    accountNumber2:
+      description: "Account number2. EDI: ACT06"
+      type: "string"

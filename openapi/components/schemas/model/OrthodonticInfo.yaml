@@ -1,0 +1,15 @@
+---
+type: "object"
+description: "<div class='obj-edi-examples'>Segment: DN1</div>\n"
+properties:
+  treatmentMonthsCount:
+    description: "Treatment months count. EDI: DN101"
+    type: "number"
+    format: "float"
+  treatmentMonthsRemainingCount:
+    description: "Treatment months remaining count. EDI: DN102"
+    type: "number"
+    format: "float"
+  treatmentIndicator:
+    description: "Treatment indicator. EDI: DN104"
+    type: "string"

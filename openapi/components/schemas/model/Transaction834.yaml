@@ -1,0 +1,46 @@
+---
+type: "object"
+properties:
+  controlNumber:
+    description: "Control number. EDI: ST02"
+    type: "string"
+  transactionType:
+    description: "Transaction type translated to string constant, PROF for 837P, INST\
+      \ for 837I, etc.. EDI: ST01,ST03"
+    type: "string"
+  purposeCode:
+    description: "Purpose code. EDI: BGN01"
+    type: "string"
+  originatorApplicationTransactionId:
+    description: "Originator application transaction id. EDI: BGN02"
+    type: "string"
+  creationDate:
+    description: "Creation date. EDI: BGN03"
+    type: "string"
+    format: "date"
+  creationTime:
+    description: "Creation time. EDI: BGN04"
+    type: "string"
+    format: "date-time"
+  originalTransactionSetReferenceNumber:
+    description: "Original transaction set reference number. EDI: BGN06"
+    type: "string"
+  actionCode:
+    description: "Action code. EDI: BGN08"
+    type: "string"
+  transactionSetIdentifierCode:
+    description: "Transaction set identifier code. EDI: ST01"
+    type: "string"
+  implementationConventionReference:
+    description: "Implementation convention reference. EDI: ST03"
+    type: "string"
+  fileEffectiveDates:
+    description: "File effective dates. EDI: DTP"
+    type: "array"
+    items:
+      $ref: "./Date.yaml"
+  controlTotals:
+    description: "Control totals. EDI: QTY"
+    type: "array"
+    items:
+      $ref: "./Quantity.yaml"

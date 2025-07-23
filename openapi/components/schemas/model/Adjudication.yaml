@@ -1,0 +1,35 @@
+---
+type: "object"
+description: "<div class='obj-edi-examples'>Loop: 2430, Segment: SVD</div>\n"
+properties:
+  payerIdentifier:
+    description: "Payer identifier. EDI: SVD01"
+    type: "string"
+  paidAmount:
+    description: "Paid amount. EDI: SVD02"
+    type: "number"
+    format: "float"
+  unitCount:
+    description: "Unit count. EDI: SVD05"
+    type: "number"
+    format: "float"
+  bundledOrUnbundledLineNumber:
+    description: "Bundled or unbundled line number. EDI: SVD06"
+    type: "integer"
+  procedure:
+    description: "Procedure<br/><a href='https://datainsight.health/code-lookup/?type=PROCEDURE'\
+      \ target='_blank'>View codes and descriptions</a>. EDI: SVD03"
+    $ref: "./Procedure.yaml"
+  adjustments:
+    description: "Line adjustments. EDI: CAS"
+    type: "array"
+    items:
+      $ref: "./Adjustment.yaml"
+  adjudicationOrPaymentDate:
+    description: "Adjudication or payment date. EDI: DTP03 *573"
+    type: "string"
+    format: "date"
+  remainingPatientLiabilityAmount:
+    description: "Remaining patient liability amount. EDI: AMT02 *EAF"
+    type: "number"
+    format: "float"

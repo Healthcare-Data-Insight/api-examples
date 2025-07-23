@@ -1,0 +1,183 @@
+---
+type: "object"
+description: "<div class='obj-edi-examples'>Loop: 2100, Segment: CLP <a class='file-example-link'\
+  \ href='https://github.com/Healthcare-Data-Insight/api-examples/tree/main/converted_files/835/835-all-fields.csv'\
+  \ target='_blank'>CSV Example</a> <a class='file-example-link' href='https://datainsight.health/edi/payments/comprehensive/'\
+  \ target='_blank'>Interactive Example</a></div>\n"
+properties:
+  id:
+    description: "Unique payment identifier assigned by the converter"
+    type: "string"
+  transactionType:
+    description: "Transaction set identifier code. EDI: ST01"
+    type: "string"
+  fileName:
+    description: "Converted X12 EDI file name"
+    type: "string"
+  transactionControlNumber:
+    description: "Transaction set control number. EDI: ST02"
+    type: "string"
+  patientControlNumber:
+    description: "Identifier used to track a claim from creation by the health care\
+      \ provider through payment. EDI: CLP01"
+    type: "string"
+  claimStatus:
+    description: "Claim status"
+    type: "string"
+  chargeAmount:
+    description: "Charge amount. EDI: CLP03"
+    type: "number"
+    format: "float"
+  paymentAmount:
+    description: "Payment amount. EDI: CLP04"
+    type: "number"
+    format: "float"
+  patientResponsibilityAmount:
+    description: "Patient responsibility amount. EDI: CLP05"
+    type: "number"
+    format: "float"
+  claimFilingIndicatorCode:
+    description: "Claim filing indicator code. EDI: CLP06"
+    type: "string"
+  payerControlNumber:
+    description: "Payer control number. EDI: CLP07"
+    type: "string"
+  facility:
+    description: "Place of service code (professional/dental) or UB facility code\
+      \ (institutional) from the original claim<br/><a href='https://datainsight.health/code-lookup/?type=FACILITY_TYPE'\
+      \ target='_blank'>View codes and descriptions</a>. EDI: CLP08"
+    $ref: "./Code.yaml"
+  frequencyTypeCode:
+    description: "Frequency type code<br/><a href='https://datainsight.health/code-lookup/?type=frequency_code'\
+      \ target='_blank'>View codes and descriptions</a>. EDI: CLP09"
+    type: "string"
+  drgCode:
+    description: "Diagnosis-related group code. Institutional claims only.. EDI: CLP11"
+    type: "string"
+  drgWeight:
+    description: "Adjudicated DRG weight. Institutional claims only.. EDI: CLP12"
+    type: "number"
+    format: "float"
+  dischargeFraction:
+    description: "Adjudicated discharge fraction. Institutional claims only. This\
+      \ is a percentage expressed as decimal.. EDI: CLP13"
+    type: "number"
+    format: "float"
+  totalPaymentAmount:
+    description: "Total payment amount. EDI: BPR02"
+    type: "number"
+    format: "float"
+  creditOrDebitFlagCode:
+    description: "Credit or debit flag code. EDI: BPR03"
+    type: "string"
+  paymentMethodType:
+    description: "Payment method type. EDI: BPR04"
+    type: "string"
+  receiverAccountNumber:
+    description: "Receiver account number. EDI: BPR15"
+    type: "string"
+  paymentDate:
+    description: "Payment date. EDI: BPR16"
+    type: "string"
+    format: "date"
+  checkOrEftTraceNumber:
+    description: "Check or eft trace number. EDI: TRN02"
+    type: "string"
+  payerEin:
+    description: "Payer identifier. This must be a '1' followed by the payer EIN.\
+      \ This field is also copied to the payerIdentifier field if it wasn't provided\
+      \ in N104.. EDI: TRN03"
+    type: "string"
+  productionDate:
+    description: "Production date. EDI: DTP03 *405"
+    type: "string"
+    format: "date"
+  totalAdjAmount:
+    description: "Sum total of all adjustments from all service lines"
+    type: "number"
+    format: "float"
+  adjs:
+    description: "Claim adjustments. EDI: CAS"
+    type: "array"
+    items:
+      $ref: "./Adjustment.yaml"
+  payer:
+    description: "Payer. EDI: N1 *PR"
+    $ref: "./Party.yaml"
+  payee:
+    description: "Payee. EDI: N1 *PE"
+    $ref: "./Party.yaml"
+  patient:
+    description: "The insured (subscriber) or patient from the original claim. EDI:\
+      \ NM1 *QC"
+    $ref: "./PartyIdName.yaml"
+  subscriber:
+    description: "The insured (subscriber) from the original claim if the insured\
+      \ is different from the patient. EDI: NM1 *44"
+    $ref: "./PartyIdName.yaml"
+  correctedPatient:
+    description: "Corrected patient. EDI: NM1 *74"
+    $ref: "./PartyIdName.yaml"
+  serviceProvider:
+    description: "Service provider. EDI: NM1 *SJ"
+    $ref: "./PartyIdName.yaml"
+  crossoverCarrier:
+    description: "Crossover carrier. EDI: NM1 *TT"
+    $ref: "./PartyIdName.yaml"
+  correctedPayer:
+    description: "Corrected priority payer, meaning that current payer believes that\
+      \ another payer has priority for making a payment. EDI: NM1 *PR"
+    $ref: "./PartyIdName.yaml"
+  otherSubscriber:
+    description: "Other subscriber. EDI: NM1 *GB"
+    $ref: "./PartyIdName.yaml"
+  otherClaimRelatedIds:
+    description: "Other claim-related identifications. EDI: REF"
+    type: "array"
+    items:
+      $ref: "./Reference.yaml"
+  serviceDateFrom:
+    description: "The earliest service date from service lines"
+    type: "string"
+    format: "date"
+  serviceDateTo:
+    description: "The latest service date from service lines"
+    type: "string"
+    format: "date"
+  statementDateFrom:
+    description: "Statement date from. EDI: DTP03 *232"
+    type: "string"
+    format: "date"
+  statementDateTo:
+    description: "Statement date to. EDI: DTP03 *233"
+    type: "string"
+    format: "date"
+  coverageExpirationDate:
+    description: "Coverage expiration date. EDI: DTP03 *036"
+    type: "string"
+    format: "date"
+  claimReceivedDate:
+    description: "Claim received date. EDI: DTP03 *050"
+    type: "string"
+    format: "date"
+  coverageAmount:
+    description: "Coverage amount from the list of supplemental amounts. EDI: AMT02\
+      \ *AU"
+    type: "number"
+    format: "float"
+  supplementalAmts:
+    description: "Supplemental claim/payment amounts, such as coverage amount, discount\
+      \ amount, etc.. EDI: AMT"
+    type: "array"
+    items:
+      $ref: "./Amount.yaml"
+  supplementalQties:
+    description: "Supplemental claim/payment quantities. EDI: QTY"
+    type: "array"
+    items:
+      $ref: "./Quantity.yaml"
+  lines:
+    description: "Service payment information. EDI: Loop: 2110"
+    type: "array"
+    items:
+      $ref: "./PaymentLineCsv.yaml"

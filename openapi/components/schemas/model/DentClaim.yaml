@@ -1,0 +1,155 @@
+---
+type: "object"
+description: "<div class='obj-edi-examples'>Loop: 2300, Segment: CLM <a class='file-example-link'\
+  \ href='https://github.com/Healthcare-Data-Insight/api-examples/tree/main/converted_files/837P:837/837P-all-fields<br/>837I:837/837I-all-fields<br/>837D:837/837D-all-fields.json'\
+  \ target='_blank'>JSON Example</a> <a class='file-example-link' href='https://datainsight.health/edi/837P:claims/comprehensive/<br/>837I:claims/institutional-837i/all-fields/'\
+  \ target='_blank'>Interactive Example</a></div>\n"
+properties:
+  id:
+    description: "Unique payment identifier assigned by the converter"
+    type: "string"
+  objectType:
+    description: "Type of this object, set to 'CLAIM'"
+    type: "string"
+  patientControlNumber:
+    description: "Identifier used to track a claim from creation by the health care\
+      \ provider through payment. EDI: CLM01"
+    type: "string"
+  chargeAmount:
+    description: "Charge amount. EDI: CLM02"
+    type: "number"
+    format: "float"
+  patientPaidAmount:
+    description: "Patient paid amount. EDI: AMT02 *F5"
+    type: "number"
+    format: "float"
+  facilityCode:
+    description: "Place of service code (professional/dental) or UB facility code\
+      \ (institutional) from the original claim<br/><a href='https://datainsight.health/code-lookup/?type=FACILITY_TYPE'\
+      \ target='_blank'>View codes and descriptions</a>. EDI: CLM05-1"
+    $ref: "./Code.yaml"
+  frequencyCode:
+    description: "Frequency code<br/><a href='https://datainsight.health/code-lookup/?type=frequency_code'\
+      \ target='_blank'>View codes and descriptions</a>. EDI: CLM05-3"
+    $ref: "./Code.yaml"
+  serviceDateFrom:
+    description: "The earliest service date from service lines"
+    type: "string"
+    format: "date"
+  serviceDateTo:
+    description: "The latest service date from service lines"
+    type: "string"
+    format: "date"
+  subscriber:
+    description: "The insured (subscriber). EDI: Loop: 2000B"
+    $ref: "./Subscriber.yaml"
+  patient:
+    description: "Patient if different from the the insured (subscriber). EDI: Loop:\
+      \ 2110CA"
+    $ref: "./Patient.yaml"
+  otherSubscribers:
+    description: "Other subscribers and their payer's information. EDI: Loop: 2320"
+    type: "array"
+    items:
+      $ref: "./OtherSubscriber.yaml"
+  serviceLines:
+    description: "Service lines. EDI: Loop: 2400"
+    type: "array"
+    items:
+      $ref: "./DentLine.yaml"
+  transaction:
+    description: "Parent EDI transaction for this object"
+    $ref: "./Transaction837.yaml"
+  providerSignatureIndicator:
+    description: "Provider signature indicator. EDI: CLM06"
+    type: "string"
+  assignmentParticipationCode:
+    description: "Assignment participation code. EDI: CLM07"
+    type: "string"
+  assignmentCertificationIndicator:
+    description: "Assignment certification indicator. EDI: CLM08"
+    type: "string"
+  releaseOfInformationCode:
+    description: "Release of information code. EDI: CLM09"
+    type: "string"
+  specialProgramCode:
+    description: "Special program code. EDI: CLM12"
+    type: "string"
+  delayReasonCode:
+    description: "Delay reason code. EDI: CLM20"
+    type: "string"
+  referralNumber:
+    description: "Referral number. EDI: REF02 *9F"
+    type: "string"
+  priorAuthorizationNumber:
+    description: "Prior authorization number. EDI: REF02 *G1"
+    type: "string"
+  repricedReferenceNumber:
+    description: "Repriced reference number. EDI: REF02 *9A"
+    type: "string"
+  adjustedRepricedReferenceNumber:
+    description: "Adjusted repriced reference number. EDI: REF02 *9C"
+    type: "string"
+  medicalRecordNumber:
+    description: "Medical record number. EDI: REF02 *EA"
+    type: "string"
+  accidentDate:
+    description: "Accident date. EDI: DTP03 *439"
+    type: "string"
+    format: "date"
+  orthodonticBandingDate:
+    description: "Orthodontic banding date. EDI: DTP03 *452"
+    type: "string"
+    format: "date"
+  repricerReceivedDate:
+    description: "Repricer received date. EDI: DTP03 *050"
+    type: "string"
+    format: "date"
+  orthodonticInfo:
+    description: "Orthodontic info"
+    $ref: "./OrthodonticInfo.yaml"
+  toothStatuses:
+    description: "Tooth statuses"
+    type: "array"
+    items:
+      $ref: "./ToothStatus.yaml"
+  clearinghouseTraceNumber:
+    description: "Clearinghouse trace number. EDI: REF02 *D9"
+    type: "string"
+  originalReferenceNumber:
+    description: "Original reference number. EDI: REF02 *F8"
+    type: "string"
+  serviceAuthorizationExceptionCode:
+    description: "Service authorization exception code. EDI: REF02 *4N"
+    type: "string"
+  predeterminationOfBenefitsIdentifier:
+    description: "Predetermination of benefits identifier. EDI: REF02 *G3"
+    type: "string"
+  fixedFormatRecords:
+    description: "Fixed format records. EDI: K301"
+    type: "array"
+    items:
+      type: "string"
+  claimNote:
+    description: "Free-form comments or instructions. All note segments are concatenated\
+      \ together into this field.. EDI: NTE02"
+    type: "string"
+  billingProvider:
+    description: "Billing provider. EDI: NM1 *85"
+    $ref: "./Party.yaml"
+  providers:
+    description: "Providers for this claim, except for the billing provider"
+    type: "array"
+    items:
+      $ref: "./Party.yaml"
+  diags:
+    description: "Diagnosis codes<br/><a href='https://datainsight.health/code-lookup/?type=DIAGNOSIS'\
+      \ target='_blank'>View codes and descriptions</a>"
+    type: "array"
+    items:
+      $ref: "./Code.yaml"
+  attachments:
+    description: "Attachments. EDI: PWK"
+    type: "array"
+    items:
+      $ref: "./Attachment.yaml"

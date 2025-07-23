@@ -1,0 +1,47 @@
+---
+type: "object"
+description: "<div class='obj-edi-examples'>Loop: 2300, Segment: HD</div>\n"
+properties:
+  maintenanceTypeCode:
+    description: "Maintenance type code. EDI: HD01"
+    type: "string"
+  insuranceLineCode:
+    description: "Insurance line code. EDI: HD03"
+    type: "string"
+  planDescription:
+    description: "Plan description. EDI: HD04"
+    type: "string"
+  coverageLevelCode:
+    description: "Coverage level code. EDI: HD05"
+    type: "string"
+  lateEnrollmentIndicator:
+    description: "Late enrollment indicator. EDI: HD09"
+    type: "string"
+  coverageDates:
+    description: "Coverage dates. EDI: DTP"
+    type: "array"
+    items:
+      $ref: "./Date.yaml"
+  contractAmounts:
+    description: "Contract amounts. EDI: AMT"
+    type: "array"
+    items:
+      $ref: "./Amount.yaml"
+  groupOrPolicyNumbers:
+    description: "Group or policy numbers. EDI: REF"
+    type: "array"
+    items:
+      $ref: "./Reference.yaml"
+  priorCoverageMonthCount:
+    description: "Prior coverage month count. EDI: REF02 *QQ"
+    type: "string"
+  providers:
+    description: "Providers"
+    type: "array"
+    items:
+      $ref: "./Party.yaml"
+  cobs:
+    description: "Coordination of Benefits"
+    type: "array"
+    items:
+      $ref: "./CoordinationOfBenefits.yaml"

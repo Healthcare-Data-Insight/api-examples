@@ -1,0 +1,17 @@
+---
+type: "object"
+description: "<div class='obj-edi-examples'>Segment: QTY</div>\n"
+properties:
+  qualifierCode:
+    description: "Code specifying the type of quantity (quantity qualifier code).\
+      \ EDI: QTY01"
+    type: "string"
+  type:
+    description: "Type of quantity; qualifier code translated to a mnemonic string\
+      \ constant (enum)<br/><a href='https://datainsight.health/code-lookup/?type=X12_QUANTITY_QUALIFIER_CODE'\
+      \ target='_blank'>View codes and descriptions</a>. EDI: QTY01"
+    type: "string"
+  quantity:
+    description: "Quantity. EDI: QTY02"
+    type: "number"
+    format: "float"

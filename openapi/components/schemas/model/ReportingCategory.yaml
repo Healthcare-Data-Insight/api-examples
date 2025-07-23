@@ -1,0 +1,23 @@
+---
+type: "object"
+properties:
+  name:
+    description: "Name. EDI: N102"
+    type: "string"
+  identifierQualifierCode:
+    description: "Identifier qualifier code. EDI: REF01"
+    type: "string"
+  identifierType:
+    description: "Identifier type. EDI: REF01"
+    type: "string"
+  identifier:
+    description: "Identifier. EDI: REF02"
+    type: "string"
+  date:
+    description: "Effective date. EDI: DTP03 *007"
+    type: "string"
+    format: "date"
+  dateTo:
+    description: "End date. EDI: DTP03"
+    type: "string"
+    format: "date"

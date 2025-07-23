@@ -1,0 +1,10 @@
+---
+type: "object"
+description: "<div class='obj-desc'>Code and description</div>\n"
+properties:
+  code:
+    description: "Healthcare code"
+    type: "string"
+  desc:
+    description: "Code description"
+    type: "string"

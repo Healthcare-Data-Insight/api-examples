@@ -1,0 +1,17 @@
+---
+type: "object"
+properties:
+  person:
+    description: "Person. EDI: NM1"
+    $ref: "./PersonWithDemographic.yaml"
+  deathDate:
+    description: "Death date. EDI: PAT06"
+    type: "string"
+    format: "date"
+  weight:
+    description: "Patient weight in pounds. EDI: PAT09"
+    type: "number"
+    format: "float"
+  pregnancyIndicator:
+    description: "Pregnancy indicator. EDI: PAT09"
+    type: "string"
