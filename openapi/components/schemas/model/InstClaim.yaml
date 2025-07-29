@@ -29,11 +29,11 @@ properties:
       \ target='_blank'>View codes and descriptions</a>. EDI: CLM05-3"
     $ref: "./Code.yaml"
   statementDateFrom:
-    description: "Statement date from. EDI: DTP03 *434, DTP03 *232"
+    description: "Statement date from. EDI: DTP03 *434"
     type: "string"
     format: "date"
   statementDateTo:
-    description: "Statement date to. EDI: DTP03 *434, DTP03 *233"
+    description: "Statement date to. EDI: DTP03 *434"
     type: "string"
     format: "date"
   serviceDateFrom:

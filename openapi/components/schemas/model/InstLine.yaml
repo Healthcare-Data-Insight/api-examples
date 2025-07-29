@@ -28,6 +28,14 @@ properties:
     description: "Facility tax amount. EDI: AMT02 *N8"
     type: "number"
     format: "float"
+  serviceDateFrom:
+    description: "Service date from. EDI: DTP03 *472"
+    type: "string"
+    format: "date"
+  serviceDateTo:
+    description: "Service date to. EDI: DTP03 *472"
+    type: "string"
+    format: "date"
   unitType:
     description: "Unit type. EDI: SV204"
     type: "string"

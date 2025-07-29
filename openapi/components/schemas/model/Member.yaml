@@ -4,7 +4,7 @@ description: "<div class='obj-edi-examples'>Loop: 2100A, Segment: NM1</div>\n"
 properties:
   entityRole:
     description: "Entity role<br/><a href='https://datainsight.health/code-lookup/?type=X12_ENTITY_IDENTIFIER_CODE'\
-      \ target='_blank'>View codes and descriptions</a>. EDI: NM102, N101"
+      \ target='_blank'>View codes and descriptions</a>. EDI: NM101, N101"
     type: "string"
   identifier:
     description: "Identifier. EDI: NM109, N104"

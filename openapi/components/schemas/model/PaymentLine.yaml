@@ -34,6 +34,14 @@ properties:
     type: "array"
     items:
       $ref: "./Quantity.yaml"
+  serviceDateFrom:
+    description: "Service date from. EDI: DTP03 *472"
+    type: "string"
+    format: "date"
+  serviceDateTo:
+    description: "Service date to. EDI: DTP03 *472"
+    type: "string"
+    format: "date"
   unitType:
     description: "Unit type"
     type: "string"

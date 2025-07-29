@@ -37,6 +37,14 @@ properties:
     description: "Sales tax amount. EDI: AMT02 *T"
     type: "number"
     format: "float"
+  serviceDateFrom:
+    description: "Service date from. EDI: DTP03 *472"
+    type: "string"
+    format: "date"
+  serviceDateTo:
+    description: "Service date to. EDI: DTP03 *472"
+    type: "string"
+    format: "date"
   priorPlacementDate:
     description: "Prior placement date. EDI: DTP03 *441, DTP03 *139"
     type: "string"

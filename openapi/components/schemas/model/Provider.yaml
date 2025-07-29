@@ -3,7 +3,7 @@ type: "object"
 properties:
   entityRole:
     description: "Entity role<br/><a href='https://datainsight.health/code-lookup/?type=X12_ENTITY_IDENTIFIER_CODE'\
-      \ target='_blank'>View codes and descriptions</a>. EDI: NM102, N101"
+      \ target='_blank'>View codes and descriptions</a>. EDI: NM101, N101"
     type: "string"
   entityType:
     description: "Entity type. EDI: NM102"
