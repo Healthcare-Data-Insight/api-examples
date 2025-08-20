@@ -97,7 +97,7 @@ public class ClaimParsingExample implements ParsingExampleHelper {
         PatientSubscriber patient = claim.subscriber();
 
         EntityRole entityRole = patient.person().entityRole();
-        assertThat(entityRole).isEqualTo(EntityRole.SUBSCRIBER);
+        assertThat(entityRole).isEqualTo(EntityRole.INSURED_SUBSCRIBER);
 
         EntityType entityType = patient.person().entityType();
         assertThat(entityType).isEqualTo(EntityType.INDIVIDUAL);
