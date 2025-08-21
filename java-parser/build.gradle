@@ -16,7 +16,7 @@ java.sourceCompatibility = JavaVersion.VERSION_17
 dependencies {
     implementation 'hdi:edi:2.14.1'
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.18.+'
-
+    implementation 'commons-io:commons-io:2.18.0'
     testImplementation 'junit:junit:4.+'
     testImplementation 'org.assertj:assertj-core:3.27.3'
     // lombok is used only in tests, you can run the parser without this dependency
