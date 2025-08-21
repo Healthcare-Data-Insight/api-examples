@@ -3,10 +3,8 @@ package hdi.edi.writer;
 import hdi.codeent.CodeEntity;
 import hdi.edi.EdiTransaction;
 import hdi.edi.ediwriter.EdiWriter;
-import hdi.edi.parser.EdiParser;
 import hdi.edi.parser.ParsingExampleHelper;
 import hdi.edi.parser.TransactionType;
-import hdi.model.PlaceOfServiceType;
 import hdi.model.ServiceLine;
 import hdi.model.claim.Claim;
 import hdi.model.control.FunctionalGroup;
@@ -16,7 +14,6 @@ import hdi.model.enumtype.UbCodeType;
 import hdi.model.enumtype.UnitType;
 import hdi.model.orgperson.*;
 import hdi.model.patientsubscriber.PatientSubscriber;
-import lombok.SneakyThrows;
 import org.apache.commons.io.FileUtils;
 import org.junit.Test;
 
@@ -28,15 +25,13 @@ import java.nio.charset.Charset;
 import java.time.LocalDate;
 import java.util.List;
 
-import static org.assertj.core.api.Assertions.assertThat;
-
 @SuppressWarnings("NewClassNamingConvention")
 public class ClaimToEdiExample implements ParsingExampleHelper {
 
     @Test
     public void write837pEdi() throws IOException {
-        File ediFile = new File(OUT_EDI_FILES_DIR , "837p-simple.edi");
-        try (var fileWriter = new FileWriter(ediFile);var ediWriter = new EdiWriter(fileWriter)) {
+        File ediFile = new File(OUT_EDI_FILES_DIR, "837p-simple.edi");
+        try (var fileWriter = new FileWriter(ediFile); var ediWriter = new EdiWriter(fileWriter)) {
             writeIsaAndGs(ediWriter, TransactionType.PROF);
             var tran = createEdiTransaction(TransactionType.PROF);
             ediWriter.writeTransaction(tran);
@@ -45,6 +40,7 @@ public class ClaimToEdiExample implements ParsingExampleHelper {
             claim.billingProvider(createBillingProv());
             claim.subscriber(createSubscriber());
             ediWriter.writeClaim(claim);
+            // Closing segments will be written automatically when the writer is closed
         }
         var s = FileUtils.readFileToString(ediFile, Charset.defaultCharset());
         System.err.println(s);
@@ -52,8 +48,8 @@ public class ClaimToEdiExample implements ParsingExampleHelper {
 
     @Test
     public void write837iEdi() throws IOException {
-        File ediFile = new File(OUT_EDI_FILES_DIR , "837i-simple.edi");
-        try (var fileWriter = new FileWriter(ediFile);var ediWriter = new EdiWriter(fileWriter)) {
+        File ediFile = new File(OUT_EDI_FILES_DIR, "837i-simple.edi");
+        try (var fileWriter = new FileWriter(ediFile); var ediWriter = new EdiWriter(fileWriter)) {
             writeIsaAndGs(ediWriter, TransactionType.INST);
             var tran = createEdiTransaction(TransactionType.INST);
             ediWriter.writeTransaction(tran);
@@ -68,23 +64,23 @@ public class ClaimToEdiExample implements ParsingExampleHelper {
     }
 
     private void writeIsaAndGs(EdiWriter ediWriter, TransactionType transactionType) {
+        // EDI writer will assign a unique interchange control number
         var isa = new Isa("ZZ", "123", "ZZ", "456");
+        // EDI writer will assign a unique group control number
         var gs = new FunctionalGroup(transactionType, "1", "2");
         ediWriter.writeIsa(isa);
         ediWriter.writeFunctionalGroup(gs);
     }
 
     private Claim createSimpleProfClaim() {
-        var claim = Claim.createProfClaim("1234567890", new BigDecimal("100.00"), "11");
+        var claim = Claim.createProfClaim("1234567890", new BigDecimal("100"), "11");
         claim.addDiagCodes(List.of("J0300", "Z1159"));
-
-        // providers
         var renderingProv = new OrgOrPerson(EntityRole.RENDERING, EntityType.INDIVIDUAL, IdentificationType.NPI, "1234567890", "Rendering", "Provider");
         claim.addProvider(renderingProv);
         var serviceFacility = new OrgOrPerson(EntityRole.SERVICE_FACILITY, IdentificationType.NPI, "1234567890", "Facility");
         serviceFacility.address(new Address("987 Main St", null, "Anytown", "CA", "12345"));
         claim.addProvider(serviceFacility);
-
+        // Create a line with required fields
         var line1 = ServiceLine.createProfLine("99213", new BigDecimal("100.00"), BigDecimal.ONE, LocalDate.of(2025, 1, 1), List.of(1, 2));
         line1.procedure().addModifier("25");
         claim.addLine(line1);
@@ -92,7 +88,8 @@ public class ClaimToEdiExample implements ParsingExampleHelper {
     }
 
     private Claim createSimpleInstClaim() {
-        var claim = Claim.createInstClaim("1234567890", new BigDecimal("100.00"), "11", "01", LocalDate.of(2025, 1, 1), LocalDate.of(2025, 1, 31));
+        var claim = Claim.createInstClaim("1234567890", new BigDecimal("100"), "11", "01", LocalDate.of(2025, 1, 1), LocalDate.of(2025, 1, 31));
+        // The first diagnosis code is the principal code
         claim.addDiagCodes(List.of("M24562", "E8359", "Z1159"));
         // The first diagnosis was present on admission
         claim.diags().get(0).isPresentOnAdmission(true);
@@ -100,35 +97,40 @@ public class ClaimToEdiExample implements ParsingExampleHelper {
         claim.addCodeEntity(new CodeEntity(UbCodeType.OCCURRENCE, "01").occurrenceDate(LocalDate.of(2025, 1, 1)));
         claim.addCodeEntity(new CodeEntity(UbCodeType.VALUE, "01").amount(new BigDecimal("100")));
 
-        var line1 = ServiceLine.createInstLine("300", new BigDecimal("100.00"), new BigDecimal("5"))
+        var line1 = ServiceLine.createInstLine("300", new BigDecimal("100"), new BigDecimal("5"))
                 // The default is UNIT
                 .unitType(UnitType.DAYS)
-                .serviceDateFrom(LocalDate.of(2025, 1, 1));
+                .serviceDateFrom(LocalDate.of(2025, 1, 1))
+                .serviceDateTo(LocalDate.of(2025, 1, 6));
         claim.addLine(line1);
         return claim;
     }
 
     private PatientSubscriber createSubscriber() {
-        var payer = new OrgOrPerson(EntityRole.PAYER, EntityType.BUSINESS, IdentificationType.PAYOR_ID, "1234567890", "Payer", null);
+        var payer = new OrgOrPerson(EntityRole.PAYER, IdentificationType.PAYOR_ID, "1234567890", "Payer");
         payer.address(new Address("456 Main St", null, "Anytown", "CA", "12345"));
 
         var subscriber = PatientSubscriber.createSubscriber("123", "Doe", "John", "1234567890", LocalDate.of(1990, 1, 1), GenderType.MALE);
         subscriber.person().address(new Address("789 Main St", null, "Anytown", "CA", "12345"));
+        // subscriber must have a payer
         subscriber.payer(payer);
         return subscriber;
     }
 
     private OrgOrPerson createBillingProv() {
-        var billing = new OrgOrPerson(EntityRole.BILLING_PROVIDER, EntityType.BUSINESS, IdentificationType.NPI, "1234567890", "Billing Provider", null);
+        var billing = new OrgOrPerson(EntityRole.BILLING_PROVIDER, IdentificationType.NPI, "1234567890", "Billing Provider");
+        // Tax ID is required for the billing provider
         billing.taxId("1234567890");
         billing.address(new Address("123 Main St", null, "Anytown", "CA", "12345"));
         return billing;
     }
 
     private EdiTransaction createEdiTransaction(TransactionType tranType) {
+        // The writer will assign a unique Originator Application ID if not set
         var tran = new EdiTransaction(tranType);
-
+        // submitter and receiver are required
         var submitter = new OrgOrPerson(EntityRole.SUBMITTER, IdentificationType.ETIN, "TGJ23", "PREMIER BILLING SERVICE");
+        // Contact is required for the submitter
         var submitterContact = new ContactInfo();
         submitterContact.addContactNumber(ContactType.EMAIL, "test@test.com");
         submitter.addContact(submitterContact);
