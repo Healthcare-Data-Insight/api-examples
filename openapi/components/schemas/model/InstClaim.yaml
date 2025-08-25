@@ -76,11 +76,17 @@ properties:
   delayReasonCode:
     description: "Delay reason code. EDI: CLM20"
     type: "string"
+  serviceAuthorizationExceptionCode:
+    description: "Service authorization exception code. EDI: REF02 *4N"
+    type: "string"
   referralNumber:
     description: "Referral number. EDI: REF02 *9F"
     type: "string"
   priorAuthorizationNumber:
     description: "Prior authorization number. EDI: REF02 *G1"
+    type: "string"
+  originalReferenceNumber:
+    description: "Original reference number. EDI: REF02 *F8"
     type: "string"
   repricedReferenceNumber:
     description: "Repriced reference number. EDI: REF02 *9A"
@@ -88,11 +94,17 @@ properties:
   adjustedRepricedReferenceNumber:
     description: "Adjusted repriced reference number. EDI: REF02 *9C"
     type: "string"
+  clearinghouseTraceNumber:
+    description: "Clearinghouse trace number. EDI: REF02 *D9"
+    type: "string"
   accidentState:
     description: "Accident state. EDI: REF02 *LU"
     type: "string"
   medicalRecordNumber:
     description: "Medical record number. EDI: REF02 *EA"
+    type: "string"
+  peerReviewAuthorizationNumber:
+    description: "Peer review authorization number. EDI: REF02 *G4"
     type: "string"
   demonstrationProjectIdentifier:
     description: "Demonstration project identifier. EDI: REF02 *P4"
@@ -105,9 +117,6 @@ properties:
     description: "Discharge time. EDI: DTP03 *096"
     type: "string"
     format: "date-time"
-  clearinghouseTraceNumber:
-    description: "Clearinghouse trace number. EDI: REF02 *D9"
-    type: "string"
   admissionTypeCode:
     description: "Admission type code. EDI: CL101"
     type: "string"
@@ -117,16 +126,10 @@ properties:
   patientStatusCode:
     description: "Patient status code. EDI: CL103"
     type: "string"
-  originalReferenceNumber:
-    description: "Original reference number. EDI: REF02 *F8"
-    type: "string"
   patientResponsibilityAmount:
     description: "Patient responsibility amount. EDI: AMT02 *F3"
     type: "number"
     format: "float"
-  serviceAuthorizationExceptionCode:
-    description: "Service authorization exception code. EDI: REF02 *4N"
-    type: "string"
   fixedFormatRecords:
     description: "Fixed format records. EDI: K301"
     type: "array"
@@ -148,19 +151,16 @@ properties:
     items:
       $ref: "./Party.yaml"
   diags:
-    description: "Diagnosis codes"
+    description: "Diagnosis codes. EDI: HI"
     type: "array"
     items:
       $ref: "./InstDiagnosis.yaml"
+  drg:
+    description: "Drg. EDI: HI *DR"
+    $ref: "./Code.yaml"
   procs:
     description: "Claim-level procedures<br/><a href='https://datainsight.health/code-lookup/?type=PROCEDURE'\
-      \ target='_blank'>View codes and descriptions</a>"
-    type: "array"
-    items:
-      $ref: "./CodeAndDate.yaml"
-  occurrences:
-    description: "Occurrences<br/><a href='https://datainsight.health/code-lookup/?type=UB04_OCCURRENCE_CODE'\
-      \ target='_blank'>View codes and descriptions</a>. EDI: HI *BH"
+      \ target='_blank'>View codes and descriptions</a>. EDI: HI"
     type: "array"
     items:
       $ref: "./CodeAndDate.yaml"
@@ -170,15 +170,21 @@ properties:
     type: "array"
     items:
       $ref: "./CodeAndDate.yaml"
-  conditions:
-    description: "Conditions<br/><a href='https://datainsight.health/code-lookup/?type=UB04_CONDITION_CODE'\
-      \ target='_blank'>View codes and descriptions</a>. EDI: HI *BG"
+  occurrences:
+    description: "Occurrences<br/><a href='https://datainsight.health/code-lookup/?type=UB04_OCCURRENCE_CODE'\
+      \ target='_blank'>View codes and descriptions</a>. EDI: HI *BH"
     type: "array"
     items:
-      $ref: "./Code.yaml"
+      $ref: "./CodeAndDate.yaml"
   valueInfos:
     description: "Value infos<br/><a href='https://datainsight.health/code-lookup/?type=UB04_VALUE_CODE'\
       \ target='_blank'>View codes and descriptions</a>. EDI: HI *BE"
+    type: "array"
+    items:
+      $ref: "./Code.yaml"
+  conditions:
+    description: "Conditions<br/><a href='https://datainsight.health/code-lookup/?type=UB04_CONDITION_CODE'\
+      \ target='_blank'>View codes and descriptions</a>. EDI: HI *BG"
     type: "array"
     items:
       $ref: "./Code.yaml"
@@ -187,3 +193,5 @@ properties:
     type: "array"
     items:
       $ref: "./Attachment.yaml"
+required:
+- "patientStatusCode"

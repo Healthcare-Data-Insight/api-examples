@@ -5,7 +5,7 @@ properties:
     description: "Payer responsibility sequence. EDI: SBR01"
     type: "string"
   relationshipType:
-    description: "Relationship type. EDI: SBR02"
+    description: "Relationship type. EDI: SBR02, PAT01"
     type: "string"
   groupOrPolicyNumber:
     description: "Group or policy number. EDI: SBR03"
@@ -56,3 +56,5 @@ properties:
     type: "array"
     items:
       $ref: "./Party.yaml"
+required:
+- "payerResponsibilitySequence"

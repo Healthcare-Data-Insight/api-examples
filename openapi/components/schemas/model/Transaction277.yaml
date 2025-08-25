@@ -6,7 +6,10 @@ properties:
     type: "string"
   transactionType:
     description: "Transaction type translated to string constant, PROF for 837P, INST\
-      \ for 837I, etc.. EDI: ST01,ST03"
+      \ for 837I, etc.. EDI: ST01, ST03"
+    type: "string"
+  hierarchicalStructureCode:
+    description: "Hierarchical structure code. EDI: BHT01"
     type: "string"
   purposeCode:
     description: "Purpose code. EDI: BHT02"

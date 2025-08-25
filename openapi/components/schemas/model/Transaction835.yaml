@@ -6,7 +6,7 @@ properties:
     type: "string"
   transactionType:
     description: "Transaction type translated to string constant, PROF for 837P, INST\
-      \ for 837I, etc.. EDI: ST01,ST03"
+      \ for 837I, etc.. EDI: ST01, ST03"
     type: "string"
   productionDate:
     description: "Production date. EDI: DTP03 *405"

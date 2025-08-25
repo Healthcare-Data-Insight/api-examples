@@ -78,11 +78,17 @@ properties:
   delayReasonCode:
     description: "Delay reason code. EDI: CLM20"
     type: "string"
+  serviceAuthorizationExceptionCode:
+    description: "Service authorization exception code. EDI: REF02 *4N"
+    type: "string"
   referralNumber:
     description: "Referral number. EDI: REF02 *9F"
     type: "string"
   priorAuthorizationNumber:
     description: "Prior authorization number. EDI: REF02 *G1"
+    type: "string"
+  originalReferenceNumber:
+    description: "Original reference number. EDI: REF02 *F8"
     type: "string"
   repricedReferenceNumber:
     description: "Repriced reference number. EDI: REF02 *9A"
@@ -90,8 +96,14 @@ properties:
   adjustedRepricedReferenceNumber:
     description: "Adjusted repriced reference number. EDI: REF02 *9C"
     type: "string"
+  clearinghouseTraceNumber:
+    description: "Clearinghouse trace number. EDI: REF02 *D9"
+    type: "string"
   medicalRecordNumber:
     description: "Medical record number. EDI: REF02 *EA"
+    type: "string"
+  demonstrationProjectIdentifier:
+    description: "Demonstration project identifier. EDI: REF02 *P4"
     type: "string"
   accidentDate:
     description: "Accident date. EDI: DTP03 *439"
@@ -113,15 +125,6 @@ properties:
     type: "array"
     items:
       $ref: "./ToothStatus.yaml"
-  clearinghouseTraceNumber:
-    description: "Clearinghouse trace number. EDI: REF02 *D9"
-    type: "string"
-  originalReferenceNumber:
-    description: "Original reference number. EDI: REF02 *F8"
-    type: "string"
-  serviceAuthorizationExceptionCode:
-    description: "Service authorization exception code. EDI: REF02 *4N"
-    type: "string"
   predeterminationOfBenefitsIdentifier:
     description: "Predetermination of benefits identifier. EDI: REF02 *G3"
     type: "string"
@@ -144,7 +147,7 @@ properties:
       $ref: "./Party.yaml"
   diags:
     description: "Diagnosis codes<br/><a href='https://datainsight.health/code-lookup/?type=DIAGNOSIS'\
-      \ target='_blank'>View codes and descriptions</a>"
+      \ target='_blank'>View codes and descriptions</a>. EDI: HI"
     type: "array"
     items:
       $ref: "./Code.yaml"

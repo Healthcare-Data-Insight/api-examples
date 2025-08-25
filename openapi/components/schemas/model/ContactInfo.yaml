@@ -2,6 +2,9 @@
 type: "object"
 description: "<div class='obj-edi-examples'>Segment: PER</div>\n"
 properties:
+  functionCode:
+    description: "Function code. EDI: PER01"
+    type: "string"
   name:
     description: "Name. EDI: PER02"
     type: "string"

@@ -22,7 +22,7 @@ properties:
     description: "Copay status code. EDI: SV115"
     type: "string"
   repricedReferenceNumber:
-    description: "Repriced reference number. EDI: REF02 *9A"
+    description: "Repriced reference number. EDI: REF02 *9B"
     type: "string"
   adjustedRepricedReferenceNumber:
     description: "Adjusted repriced reference number. EDI: REF02 *9D"

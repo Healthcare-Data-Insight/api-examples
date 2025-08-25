@@ -115,11 +115,11 @@ properties:
     type: "string"
     format: "date"
   assumedCareDate:
-    description: "Assumed care date. EDI: DTP03 *90"
+    description: "Assumed care date. EDI: DTP03 *090"
     type: "string"
     format: "date"
   relinquishedCareDate:
-    description: "Relinquished care date. EDI: DTP03 *91"
+    description: "Relinquished care date. EDI: DTP03 *091"
     type: "string"
     format: "date"
   admissionDate:
@@ -157,6 +157,9 @@ properties:
     type: "string"
   medicalRecordNumber:
     description: "Medical record number. EDI: REF02 *EA"
+    type: "string"
+  demonstrationProjectIdentifier:
+    description: "Demonstration project identifier. EDI: REF02 *P4"
     type: "string"
   note:
     description: "Free-form comments or instructions. All note segments are concatenated\

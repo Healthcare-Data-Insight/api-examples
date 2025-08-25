@@ -78,11 +78,17 @@ properties:
   delayReasonCode:
     description: "Delay reason code. EDI: CLM20"
     type: "string"
+  serviceAuthorizationExceptionCode:
+    description: "Service authorization exception code. EDI: REF02 *4N"
+    type: "string"
   referralNumber:
     description: "Referral number. EDI: REF02 *9F"
     type: "string"
   priorAuthorizationNumber:
     description: "Prior authorization number. EDI: REF02 *G1"
+    type: "string"
+  originalReferenceNumber:
+    description: "Original reference number. EDI: REF02 *F8"
     type: "string"
   repricedReferenceNumber:
     description: "Repriced reference number. EDI: REF02 *9A"
@@ -90,8 +96,14 @@ properties:
   adjustedRepricedReferenceNumber:
     description: "Adjusted repriced reference number. EDI: REF02 *9C"
     type: "string"
+  clearinghouseTraceNumber:
+    description: "Clearinghouse trace number. EDI: REF02 *D9"
+    type: "string"
   medicalRecordNumber:
     description: "Medical record number. EDI: REF02 *EA"
+    type: "string"
+  demonstrationProjectIdentifier:
+    description: "Demonstration project identifier. EDI: REF02 *P4"
     type: "string"
   onsetOfCurrentIllnessOrInjuryDate:
     description: "Onset of current illness or injury date. EDI: DTP03 *431"
@@ -125,20 +137,8 @@ properties:
     description: "Hearing and vision prescription date. EDI: DTP03 *471"
     type: "string"
     format: "date"
-  assumedCareDate:
-    description: "Assumed care date. EDI: DTP03 *90"
-    type: "string"
-    format: "date"
-  relinquishedCareDate:
-    description: "Relinquished care date. EDI: DTP03 *91"
-    type: "string"
-    format: "date"
-  propertyCasualtyFirstContactDate:
-    description: "Property casualty first contact date. EDI: DTP03 *444"
-    type: "string"
-    format: "date"
   disabilityDateFrom:
-    description: "Disability date from. EDI: DTP03 *360"
+    description: "Disability date from. EDI: DTP03 *314"
     type: "string"
     format: "date"
   disabilityDateTo:
@@ -161,19 +161,22 @@ properties:
     description: "Discharge date. EDI: DTP03 *096"
     type: "string"
     format: "date"
+  assumedCareDate:
+    description: "Assumed care date. EDI: DTP03 *090"
+    type: "string"
+    format: "date"
+  relinquishedCareDate:
+    description: "Relinquished care date. EDI: DTP03 *091"
+    type: "string"
+    format: "date"
+  propertyCasualtyFirstContactDate:
+    description: "Property casualty first contact date. EDI: DTP03 *444"
+    type: "string"
+    format: "date"
   repricerReceivedDate:
     description: "Repricer received date. EDI: DTP03 *050"
     type: "string"
     format: "date"
-  clearinghouseTraceNumber:
-    description: "Clearinghouse trace number. EDI: REF02 *D9"
-    type: "string"
-  originalReferenceNumber:
-    description: "Original reference number. EDI: REF02 *F8"
-    type: "string"
-  serviceAuthorizationExceptionCode:
-    description: "Service authorization exception code. EDI: REF02 *4N"
-    type: "string"
   fixedFormatRecords:
     description: "Fixed format records. EDI: K301"
     type: "array"
@@ -193,13 +196,13 @@ properties:
       $ref: "./Party.yaml"
   diags:
     description: "Diagnosis codes<br/><a href='https://datainsight.health/code-lookup/?type=DIAGNOSIS'\
-      \ target='_blank'>View codes and descriptions</a>"
+      \ target='_blank'>View codes and descriptions</a>. EDI: HI"
     type: "array"
     items:
       $ref: "./Code.yaml"
   procs:
     description: "Anesthesia-related procedures<br/><a href='https://datainsight.health/code-lookup/?type=PROCEDURE'\
-      \ target='_blank'>View codes and descriptions</a>"
+      \ target='_blank'>View codes and descriptions</a>. EDI: HI"
     type: "array"
     items:
       $ref: "./Code.yaml"

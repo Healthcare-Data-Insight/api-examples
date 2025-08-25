@@ -228,3 +228,5 @@ properties:
     type: "array"
     items:
       $ref: "./InstLineCsv.yaml"
+required:
+- "patientStatusCode"

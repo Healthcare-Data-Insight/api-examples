@@ -15,6 +15,9 @@ properties:
   identifier:
     description: "Identifier. EDI: NM109, N104"
     type: "string"
+  taxId:
+    description: "Tax id. EDI: REF02 *TJ"
+    type: "string"
   lastNameOrOrgName:
     description: "Organization name or person last name. EDI: NM103, N102"
     type: "string"

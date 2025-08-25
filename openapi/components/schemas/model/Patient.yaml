@@ -1,6 +1,9 @@
 ---
 type: "object"
 properties:
+  relationshipType:
+    description: "Relationship type. EDI: SBR02, PAT01"
+    type: "string"
   person:
     description: "Person. EDI: NM1"
     $ref: "./PersonWithDemographic.yaml"
@@ -9,7 +12,7 @@ properties:
     type: "string"
     format: "date"
   weight:
-    description: "Patient weight in pounds. EDI: PAT09"
+    description: "Patient weight in pounds. EDI: PAT08"
     type: "number"
     format: "float"
   pregnancyIndicator:

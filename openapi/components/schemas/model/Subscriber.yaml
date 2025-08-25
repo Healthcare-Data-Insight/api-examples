@@ -5,7 +5,7 @@ properties:
     description: "Payer responsibility sequence. EDI: SBR01"
     type: "string"
   relationshipType:
-    description: "Relationship type. EDI: SBR02"
+    description: "Relationship type. EDI: SBR02, PAT01"
     type: "string"
   groupOrPolicyNumber:
     description: "Group or policy number. EDI: SBR03"
@@ -27,7 +27,7 @@ properties:
     type: "string"
     format: "date"
   weight:
-    description: "Patient weight in pounds. EDI: PAT09"
+    description: "Patient weight in pounds. EDI: PAT08"
     type: "number"
     format: "float"
   pregnancyIndicator:
@@ -39,3 +39,5 @@ properties:
   payer:
     description: "Payer. EDI: NM1 *PR<br/>Loop: 2330B"
     $ref: "./Party.yaml"
+required:
+- "payerResponsibilitySequence"
