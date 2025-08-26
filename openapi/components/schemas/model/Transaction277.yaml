@@ -42,6 +42,9 @@ properties:
     description: "Process date. EDI: DTP03 *009"
     type: "string"
     format: "date"
+  fileInfo:
+    description: "File info"
+    $ref: "./FileInfo.yaml"
   sender:
     description: "Information source name"
     $ref: "./PartyIdName.yaml"

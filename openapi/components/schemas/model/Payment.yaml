@@ -156,3 +156,7 @@ properties:
     type: "array"
     items:
       $ref: "./ContactInfo.yaml"
+required:
+- "patientControlNumber"
+- "chargeAmount"
+- "paymentAmount"

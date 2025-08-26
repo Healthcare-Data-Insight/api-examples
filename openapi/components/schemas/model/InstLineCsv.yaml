@@ -76,13 +76,18 @@ properties:
       $ref: "./Attachment.yaml"
   operatingPhysician:
     description: "Operating physician. EDI: NM1 *72"
-    $ref: "./Party.yaml"
+    $ref: "./Provider.yaml"
   otherOperatingPhysician:
     description: "Other operating physician. EDI: NM1 *ZZ"
     $ref: "./Party.yaml"
   renderingProvider:
     description: "Rendering provider. EDI: NM1 *82"
-    $ref: "./Party.yaml"
+    $ref: "./Provider.yaml"
   referringProvider:
     description: "Referring provider. EDI: NM1 *DN"
     $ref: "./Party.yaml"
+required:
+- "revenueCode"
+- "chargeAmount"
+- "unitType"
+- "unitCount"

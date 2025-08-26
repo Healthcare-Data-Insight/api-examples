@@ -144,12 +144,12 @@ properties:
     type: "string"
   billingProvider:
     description: "Billing provider. EDI: NM1 *85"
-    $ref: "./Party.yaml"
+    $ref: "./Provider.yaml"
   providers:
     description: "Providers for this claim, except for the billing provider"
     type: "array"
     items:
-      $ref: "./Party.yaml"
+      $ref: "./Provider.yaml"
   diags:
     description: "Diagnosis codes. EDI: HI"
     type: "array"
@@ -181,7 +181,7 @@ properties:
       \ target='_blank'>View codes and descriptions</a>. EDI: HI *BE"
     type: "array"
     items:
-      $ref: "./Code.yaml"
+      $ref: "./CodeAndAmount.yaml"
   conditions:
     description: "Conditions<br/><a href='https://datainsight.health/code-lookup/?type=UB04_CONDITION_CODE'\
       \ target='_blank'>View codes and descriptions</a>. EDI: HI *BG"
@@ -194,4 +194,11 @@ properties:
     items:
       $ref: "./Attachment.yaml"
 required:
+- "patientControlNumber"
+- "chargeAmount"
+- "facilityCode"
+- "frequencyCode"
+- "assignmentParticipationCode"
+- "assignmentCertificationIndicator"
+- "releaseOfInformationCode"
 - "patientStatusCode"

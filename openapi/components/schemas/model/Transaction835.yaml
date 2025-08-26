@@ -41,3 +41,6 @@ properties:
   implementationConventionReference:
     description: "Implementation convention reference. EDI: ST03"
     type: "string"
+  fileInfo:
+    description: "File info"
+    $ref: "./FileInfo.yaml"

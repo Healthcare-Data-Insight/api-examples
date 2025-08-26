@@ -44,3 +44,6 @@ properties:
     type: "array"
     items:
       $ref: "./Quantity.yaml"
+  fileInfo:
+    description: "File info"
+    $ref: "./FileInfo.yaml"

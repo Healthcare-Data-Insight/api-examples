@@ -13,3 +13,6 @@ properties:
   identification:
     description: "Reference identification. EDI: REF02"
     type: "string"
+required:
+- "qualifierCode"
+- "identification"

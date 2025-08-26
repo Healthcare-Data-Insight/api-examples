@@ -1,0 +1,9 @@
+---
+allOf:
+- $ref: "./Code.yaml"
+- type: "object"
+  properties:
+    amount:
+      description: "Amount. EDI: HI01-5"
+      type: "number"
+      format: "float"

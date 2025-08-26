@@ -66,7 +66,7 @@ properties:
     type: "string"
   billingProvider:
     description: "Billing provider. EDI: NM1 *85"
-    $ref: "./Party.yaml"
+    $ref: "./Provider.yaml"
   subscriber:
     description: "The insured (subscriber). EDI: NM1 *44"
     $ref: "./Subscriber.yaml"
@@ -191,7 +191,7 @@ properties:
     $ref: "./Party.yaml"
   renderingProvider:
     description: "Rendering provider. EDI: NM1 *82"
-    $ref: "./Party.yaml"
+    $ref: "./Provider.yaml"
   serviceFacility:
     description: "Service facility. EDI: NM1 *77"
     $ref: "./Party.yaml"

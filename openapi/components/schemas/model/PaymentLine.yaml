@@ -87,7 +87,7 @@ properties:
     description: "Providers for this service line"
     type: "array"
     items:
-      $ref: "./Party.yaml"
+      $ref: "./Provider.yaml"
   adjustments:
     description: "Line adjustments. EDI: CAS"
     type: "array"
@@ -116,3 +116,6 @@ properties:
     type: "array"
     items:
       $ref: "./Reference.yaml"
+required:
+- "chargeAmount"
+- "paidAmount"

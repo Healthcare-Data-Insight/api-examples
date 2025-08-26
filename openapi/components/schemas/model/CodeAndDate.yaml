@@ -1,13 +1,9 @@
 ---
-type: "object"
-properties:
-  code:
-    description: "Healthcare code"
-    type: "string"
-  desc:
-    description: "Code description"
-    type: "string"
-  occurrenceDate:
-    description: "Occurrence date. EDI: HI01-4"
-    type: "string"
-    format: "date"
+allOf:
+- $ref: "./Code.yaml"
+- type: "object"
+  properties:
+    occurrenceDate:
+      description: "Occurrence date. EDI: HI01-4"
+      type: "string"
+      format: "date"

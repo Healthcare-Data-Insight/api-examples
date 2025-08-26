@@ -8,3 +8,6 @@ properties:
   number:
     description: "Number. EDI: PER04,PER06,PER08"
     type: "string"
+required:
+- "type"
+- "number"

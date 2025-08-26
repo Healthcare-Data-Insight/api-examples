@@ -11,3 +11,6 @@ properties:
   controlNumber:
     description: "Control number. EDI: PWK06"
     type: "string"
+required:
+- "reportTypeCode"
+- "reportTransmissionCode"

@@ -1,0 +1,13 @@
+---
+type: "object"
+properties:
+  name:
+    description: "File name"
+    type: "string"
+  url:
+    description: "URL of the file, including the full path"
+    type: "string"
+  lastModifiedDateTime:
+    description: "Last modified date and time of the file"
+    type: "string"
+    format: "date-time"

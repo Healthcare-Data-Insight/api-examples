@@ -17,3 +17,7 @@ properties:
     description: "Adjustment quantity. EDI: CAS04"
     type: "number"
     format: "float"
+required:
+- "group"
+- "reasonCode"
+- "amount"

@@ -139,12 +139,12 @@ properties:
     type: "string"
   billingProvider:
     description: "Billing provider. EDI: NM1 *85"
-    $ref: "./Party.yaml"
+    $ref: "./Provider.yaml"
   providers:
     description: "Providers for this claim, except for the billing provider"
     type: "array"
     items:
-      $ref: "./Party.yaml"
+      $ref: "./Provider.yaml"
   diags:
     description: "Diagnosis codes<br/><a href='https://datainsight.health/code-lookup/?type=DIAGNOSIS'\
       \ target='_blank'>View codes and descriptions</a>. EDI: HI"
@@ -156,3 +156,12 @@ properties:
     type: "array"
     items:
       $ref: "./Attachment.yaml"
+required:
+- "patientControlNumber"
+- "chargeAmount"
+- "facilityCode"
+- "frequencyCode"
+- "providerSignatureIndicator"
+- "assignmentParticipationCode"
+- "assignmentCertificationIndicator"
+- "releaseOfInformationCode"

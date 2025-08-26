@@ -15,3 +15,6 @@ properties:
     description: "Amount. EDI: AMT02"
     type: "number"
     format: "float"
+required:
+- "qualifierCode"
+- "amount"

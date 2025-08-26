@@ -13,3 +13,5 @@ properties:
     type: "array"
     items:
       $ref: "./ContactNumber.yaml"
+required:
+- "functionCode"

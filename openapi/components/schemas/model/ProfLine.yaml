@@ -114,7 +114,7 @@ properties:
     description: "Providers for this service line"
     type: "array"
     items:
-      $ref: "./Party.yaml"
+      $ref: "./Provider.yaml"
   adjudications:
     description: "Adjudications. EDI: SVD<br/>Loop: 2430"
     type: "array"
@@ -145,3 +145,8 @@ properties:
     type: "array"
     items:
       $ref: "./Code.yaml"
+required:
+- "chargeAmount"
+- "unitType"
+- "unitCount"
+- "diagPointers"

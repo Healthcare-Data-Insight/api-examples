@@ -60,7 +60,7 @@ properties:
     type: "string"
   billingProvider:
     description: "Billing provider. EDI: NM1 *85"
-    $ref: "./Party.yaml"
+    $ref: "./Provider.yaml"
   subscriber:
     description: "The insured (subscriber). EDI: NM1 *44"
     $ref: "./Subscriber.yaml"
@@ -194,7 +194,7 @@ properties:
       \ target='_blank'>View codes and descriptions</a>. EDI: HI *BE"
     type: "array"
     items:
-      $ref: "./Code.yaml"
+      $ref: "./CodeAndAmount.yaml"
   attachments:
     description: "Attachments. EDI: PWK"
     type: "array"
@@ -205,7 +205,7 @@ properties:
     $ref: "./Party.yaml"
   operatingPhysician:
     description: "Operating physician. EDI: NM1 *72"
-    $ref: "./Party.yaml"
+    $ref: "./Provider.yaml"
   otherOperatingPhysician:
     description: "Other operating physician. EDI: NM1 *ZZ"
     $ref: "./Party.yaml"
@@ -214,7 +214,7 @@ properties:
     $ref: "./Party.yaml"
   renderingProvider:
     description: "Rendering provider. EDI: NM1 *82"
-    $ref: "./Party.yaml"
+    $ref: "./Provider.yaml"
   serviceFacility:
     description: "Service facility. EDI: NM1 *77"
     $ref: "./Party.yaml"

@@ -1,12 +1,8 @@
 ---
-type: "object"
-properties:
-  code:
-    description: "Healthcare code"
-    type: "string"
-  desc:
-    description: "Code description"
-    type: "string"
-  presentOnAdmissionIndicator:
-    description: "Present on admission indicator. EDI: HI01-9"
-    type: "string"
+allOf:
+- $ref: "./Code.yaml"
+- type: "object"
+  properties:
+    presentOnAdmissionIndicator:
+      description: "Present on admission indicator. EDI: HI01-9"
+      type: "string"

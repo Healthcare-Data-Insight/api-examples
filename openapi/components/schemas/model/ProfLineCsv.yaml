@@ -117,7 +117,7 @@ properties:
       $ref: "./Attachment.yaml"
   renderingProvider:
     description: "Rendering provider. EDI: NM1 *82"
-    $ref: "./Party.yaml"
+    $ref: "./Provider.yaml"
   purchasedServiceProvider:
     description: "Purchased service provider. EDI: NM1 *QB"
     $ref: "./Party.yaml"
@@ -139,3 +139,8 @@ properties:
   ambulanceDropOff:
     description: "Ambulance drop off. EDI: NM1 *45"
     $ref: "./Party.yaml"
+required:
+- "chargeAmount"
+- "unitType"
+- "unitCount"
+- "diagPointers"
