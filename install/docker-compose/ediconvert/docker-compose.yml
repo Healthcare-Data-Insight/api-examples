@@ -1,13 +1,15 @@
 services:
   ediconvert:
     image: repo.datainsight.health/ediconvert:2.13
-    restart: always
+    restart: unless-stopped
       # environment:
       # you can provide your license key as a variable instead of saving the license file to the etc. volume. Copy the key from edi-license.txt and paste it here
       #- LICENSE_KEY=<your license key>
     volumes:
-      # Copy your license file to the "etc" directory on your host
+      # Copy your license file to the "etc" directory on your host unless you use LICENSE_KEY
       - ./etc:/app/etc
+      # Volume used by the EDI Viewer to load files from when the "file" query parameter is provided
+      - ./load:/app/load
     ports:
       # Change the port here
       - "5080:5080"
