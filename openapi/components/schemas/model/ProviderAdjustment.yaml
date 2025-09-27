@@ -1,0 +1,31 @@
+---
+type: "object"
+description: "<div class='obj-desc'>Provider level adjustment information for debit\
+  \ or credit transactions such as, accelerated payments, cost report settlements\
+  \ for a fiscal year and timeliness report penalties unrelated to a specific claim\
+  \ or service</div>\n<div class='obj-edi-examples'>Segment: PLB</div>\n"
+properties:
+  id:
+    description: "Unique payment identifier assigned by the converter"
+    type: "string"
+  objectType:
+    description: "Type of this object, always set to 'PROVIDER_ADJUSTMENT'"
+    type: "string"
+  providerIdentifier:
+    description: "Provider identifier. EDI: PLB01"
+    type: "string"
+  fiscalPeriodDate:
+    description: "Fiscal period date. EDI: PLB02"
+    type: "string"
+    format: "date"
+  adjustments:
+    description: "Adjustments"
+    type: "array"
+    items:
+      $ref: "./ProviderAdjustmentReasonAmount.yaml"
+  transaction:
+    description: "Parent EDI transaction for this adjustment"
+    $ref: "./Transaction835.yaml"
+required:
+- "providerIdentifier"
+- "fiscalPeriodDate"

@@ -226,3 +226,4 @@ required:
 - "assignmentParticipationCode"
 - "assignmentCertificationIndicator"
 - "releaseOfInformationCode"
+- "diags"

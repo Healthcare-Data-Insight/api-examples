@@ -145,12 +145,6 @@ properties:
     type: "array"
     items:
       $ref: "./Provider.yaml"
-  diags:
-    description: "Diagnosis codes<br/><a href='https://datainsight.health/code-lookup/?type=DIAGNOSIS'\
-      \ target='_blank'>View codes and descriptions</a>. EDI: HI"
-    type: "array"
-    items:
-      $ref: "./Code.yaml"
   attachments:
     description: "Attachments. EDI: PWK"
     type: "array"

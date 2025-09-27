@@ -202,3 +202,4 @@ required:
 - "assignmentCertificationIndicator"
 - "releaseOfInformationCode"
 - "patientStatusCode"
+- "diags"

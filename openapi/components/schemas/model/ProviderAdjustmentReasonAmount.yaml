@@ -1,0 +1,18 @@
+---
+type: "object"
+description: "<div class='obj-desc'>Provider-level payment adjustment containing the\
+  \ reason code and the amount</div>\n"
+properties:
+  reason:
+    description: "Provider adjustment reason code. EDI: PLB03-1"
+    $ref: "./Code.yaml"
+  referenceIdentification:
+    description: "Reference identification. EDI: PLB03-2"
+    type: "string"
+  amount:
+    description: "Amount. EDI: PLB04"
+    type: "number"
+    format: "float"
+required:
+- "reason"
+- "amount"

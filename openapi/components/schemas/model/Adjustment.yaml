@@ -5,10 +5,10 @@ properties:
   group:
     description: "Claim adjustment group code as a string constant (enum). EDI: CAS01"
     type: "string"
-  reasonCode:
+  reason:
     description: "Claim adjustment reason code<br/><a href='https://datainsight.health/code-lookup/?type=carc_rarc&search=cat:carc'\
       \ target='_blank'>View codes and descriptions</a>. EDI: CAS02"
-    type: "string"
+    $ref: "./Code.yaml"
   amount:
     description: "Adjustment amount. EDI: CAS03"
     type: "number"
@@ -19,5 +19,5 @@ properties:
     format: "float"
 required:
 - "group"
-- "reasonCode"
+- "reason"
 - "amount"
