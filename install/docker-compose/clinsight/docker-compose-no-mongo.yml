@@ -9,7 +9,7 @@ services:
 #      - "127.0.0.1:27017:27017"
   app:
     image: repo.datainsight.health/claim-insight:2.13
-    restart: always
+    restart: unless-stopped
 #    environment:
 #      - mongodb_host=mongo
 #    depends_on:

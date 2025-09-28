@@ -1,7 +1,7 @@
 services:
   ediconvert:
-    image: repo.datainsight.health/ediconvert:2.12
-    restart: always
+    image: repo.datainsight.health/ediconvert:2.14
+    restart: unless-stopped
     environment:
       - SERVER_SSL_CERTIFICATE=./etc/ssl/certificate.crt
       - SERVER_SSL_CERTIFICATEPRIVATEKEY=./etc/ssl/private.key

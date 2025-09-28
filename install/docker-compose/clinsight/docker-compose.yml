@@ -2,7 +2,7 @@
 services:
   mongo:
     image: mongo:7
-    restart: always
+    restart: unless-stopped
     volumes:
       - ./mongo_data:/data/db
 # Uncomment if you need to connect to MongoDB from your host
