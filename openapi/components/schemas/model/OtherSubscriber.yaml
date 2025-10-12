@@ -39,6 +39,9 @@ properties:
     description: "Remaining patient liability amount. EDI: AMT02 *EAF"
     type: "number"
     format: "float"
+  outpatientAdjudication:
+    description: "Outpatient adjudication. EDI: MOA"
+    $ref: "./OutpatientAdjudication.yaml"
   payerPriorAuthorizationNumber:
     description: "Payer prior authorization number. EDI: REF02 *G1"
     type: "string"

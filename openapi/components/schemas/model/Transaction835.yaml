@@ -12,6 +12,9 @@ properties:
     description: "Production date. EDI: DTP03 *405"
     type: "string"
     format: "date"
+  transactionHandlingType:
+    description: "Transaction handling type. EDI: BPR01"
+    type: "string"
   totalPaymentAmount:
     description: "Total payment amount. EDI: BPR02"
     type: "number"
@@ -21,6 +24,24 @@ properties:
     type: "string"
   paymentMethodType:
     description: "Payment method type. EDI: BPR04"
+    type: "string"
+  paymentFormatCode:
+    description: "Payment format code. EDI: BPR05"
+    type: "string"
+  senderBankRoutingNumber:
+    description: "Sender bank routing number. EDI: BPR07"
+    type: "string"
+  senderAccountNumber:
+    description: "Sender account number. EDI: BPR09"
+    type: "string"
+  originatingCompanyId:
+    description: "If provided, should be identical to payerIdentifier. EDI: BPR10"
+    type: "string"
+  originatingCompanySupplementalCode:
+    description: "Originating company supplemental code. EDI: BPR11,TRN04"
+    type: "string"
+  receiverBankRoutingNumber:
+    description: "Receiver bank routing number. EDI: BPR13"
     type: "string"
   receiverAccountNumber:
     description: "Receiver account number. EDI: BPR15"
@@ -33,7 +54,13 @@ properties:
     description: "Check or eft trace number. EDI: TRN02"
     type: "string"
   payerIdentifier:
-    description: "Payer identifier. EDI: TRN03"
+    description: "This must be a 1 followed by the payer's EIN or TIN. This ID will\
+      \ be used as the identifier in the payer object if no other identifier was provided.\
+      \ EDI: TRN03"
+    type: "string"
+  receiverIdentifier:
+    description: "Receiver's identifier when different from payee (e.g., a clearinghouse).\
+      \ EDI: REF02 *EV"
     type: "string"
   transactionSetIdentifierCode:
     description: "Transaction set identifier code. EDI: ST01"
@@ -44,3 +71,11 @@ properties:
   fileInfo:
     description: "File info"
     $ref: "./FileInfo.yaml"
+required:
+- "transactionHandlingType"
+- "totalPaymentAmount"
+- "creditOrDebitFlagCode"
+- "paymentMethodType"
+- "paymentDate"
+- "checkOrEftTraceNumber"
+- "payerIdentifier"

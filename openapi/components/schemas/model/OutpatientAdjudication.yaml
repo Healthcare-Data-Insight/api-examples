@@ -1,0 +1,28 @@
+---
+type: "object"
+description: "<div class='obj-desc'>Contains Remittance Advice Remark Codes at the\
+  \ claim level and/or Medicare or Medicaid-specific amounts for outpatient claims</div>\n\
+  <div class='obj-edi-examples'>Segment: MOA</div>\n"
+properties:
+  reimbursementRate:
+    description: "Reimbursement rate. EDI: MOA01"
+    type: "number"
+    format: "float"
+  hcpcsPayableAmount:
+    description: "Claim HCPCS Payable Amount. EDI: MOA02"
+    type: "number"
+    format: "float"
+  esrdPaymentAmount:
+    description: "Esrd payment amount. EDI: MOA08"
+    type: "number"
+    format: "float"
+  nonPayableProfessionalComponentAmount:
+    description: "Nonpayable Professional Component Amount. EDI: MOA09"
+    type: "number"
+    format: "float"
+  remarks:
+    description: "Remark codes<br/><a href='https://datainsight.health/code-lookup/?type=carc_rarc&search=cat:rarc'\
+      \ target='_blank'>View codes and descriptions</a>"
+    type: "array"
+    items:
+      $ref: "./Code.yaml"

@@ -3,7 +3,9 @@ type: "object"
 description: "<div class='obj-desc'>Provider level adjustment information for debit\
   \ or credit transactions such as, accelerated payments, cost report settlements\
   \ for a fiscal year and timeliness report penalties unrelated to a specific claim\
-  \ or service</div>\n<div class='obj-edi-examples'>Segment: PLB</div>\n"
+  \ or service</div>\n<div class='obj-edi-examples'>Segment: PLB <a class='file-example-link'\
+  \ href='https://github.com/Healthcare-Data-Insight/api-examples/tree/main/converted_files/835/835-provider-level-adjustment.json'\
+  \ target='_blank'>JSON Example</a></div>\n"
 properties:
   id:
     description: "Unique payment identifier assigned by the converter"
@@ -23,6 +25,12 @@ properties:
     type: "array"
     items:
       $ref: "./ProviderAdjustmentReasonAmount.yaml"
+  payer:
+    description: "Payer. EDI: N1 *PR"
+    $ref: "./Party.yaml"
+  payee:
+    description: "Payee. EDI: N1 *PE"
+    $ref: "./Party.yaml"
   transaction:
     description: "Parent EDI transaction for this adjustment"
     $ref: "./Transaction835.yaml"

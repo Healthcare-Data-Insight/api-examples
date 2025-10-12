@@ -125,6 +125,12 @@ properties:
   payee:
     description: "Payee. EDI: N1 *PE"
     $ref: "./Party.yaml"
+  outpatientAdjudication:
+    description: "Outpatient adjudication. EDI: MOA"
+    $ref: "./OutpatientAdjudication.yaml"
+  inpatientAdjudication:
+    description: "Inpatient adjudication. EDI: MIA"
+    $ref: "./InpatientAdjudication.yaml"
   adjustments:
     description: "Claim adjustments. EDI: CAS"
     type: "array"
