@@ -1,6 +1,6 @@
 [
  {
-  "id" : "685d6a78b5939c4ba8ce153b",
+  "id" : "68ec56cace2f64368d1779b9",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "PATACCT",
   "chargeAmount" : 40000.00,
@@ -51,6 +51,7 @@
   "payer" : {
     "entityRole" : "PAYER",
     "entityType" : "BUSINESS",
+    "identificationType" : "PAYOR_ID",
     "identifier" : "1234567890",
     "lastNameOrOrgName" : "ANY PLAN USA",
     "address" : {
@@ -60,11 +61,13 @@
       "zipCode" : "45209"
     },
     "contacts" : [ {
+      "functionCode" : "CX",
       "contactNumbers" : [ {
         "type" : "PHONE",
         "number" : "8661112222"
       } ]
     }, {
+      "functionCode" : "BL",
       "name" : "EDI",
       "contactNumbers" : [ {
         "type" : "PHONE",
@@ -74,6 +77,7 @@
         "number" : "EDI.SUPPORT@ANYPAYER.COM"
       } ]
     }, {
+      "functionCode" : "IC",
       "contactNumbers" : [ {
         "type" : "URL",
         "number" : "WWW.ANYPAYER.COM"
@@ -117,6 +121,7 @@
   "coverageExpirationDate" : "2019-02-28",
   "claimReceivedDate" : "2019-02-09",
   "claimContacts" : [ {
+    "functionCode" : "CX",
     "name" : "G CUSTOMER SERVICE DEPARTMENT",
     "contactNumbers" : [ {
       "type" : "PHONE",
@@ -125,68 +130,24 @@
   } ],
   "serviceLines" : [ ],
   "transaction" : {
-    "id" : "685d6a78b5939c4ba8ce151d",
+    "id" : "68ec56cace2f64368d1779ad",
     "controlNumber" : "10060875",
     "transactionType" : "PAYMENT",
     "productionDate" : "2019-08-27",
+    "transactionHandlingType" : "INFORMATION_ONLY",
     "totalPaymentAmount" : 8000.00,
     "creditOrDebitFlagCode" : "C",
     "paymentMethodType" : "CHECK",
     "paymentDate" : "2019-08-16",
     "checkOrEftTraceNumber" : "CK NUMBER 1",
     "payerIdentifier" : "1234567890",
+    "receiverIdentifier" : "FAC",
     "transactionSetIdentifierCode" : "835",
     "fileInfo" : {
       "name" : "not_covered_inpatient.dat",
-      "url" : "file:/edi-samples/edi_files/835/not_covered_inpatient.dat",
+      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/835/not_covered_inpatient.dat",
       "lastModifiedDateTime" : "2023-08-28T03:50:07.199-04:00",
       "fileType" : "EDI"
-    },
-    "sender" : {
-      "entityRole" : "PAYER",
-      "entityType" : "BUSINESS",
-      "identifier" : "1234567890",
-      "lastNameOrOrgName" : "ANY PLAN USA",
-      "address" : {
-        "line" : "1 WALK THIS WAY",
-        "city" : "ANYCITY",
-        "stateCode" : "OH",
-        "zipCode" : "45209"
-      },
-      "contacts" : [ {
-        "contactNumbers" : [ {
-          "type" : "PHONE",
-          "number" : "8661112222"
-        } ]
-      }, {
-        "name" : "EDI",
-        "contactNumbers" : [ {
-          "type" : "PHONE",
-          "number" : "8002223333"
-        }, {
-          "type" : "EMAIL",
-          "number" : "EDI.SUPPORT@ANYPAYER.COM"
-        } ]
-      }, {
-        "contactNumbers" : [ {
-          "type" : "URL",
-          "number" : "WWW.ANYPAYER.COM"
-        } ]
-      } ]
-    },
-    "receiver" : {
-      "entityRole" : "PAYEE",
-      "entityType" : "BUSINESS",
-      "identificationType" : "NPI",
-      "identifier" : "1123454567",
-      "taxId" : "123456789",
-      "lastNameOrOrgName" : "PROVIDER",
-      "address" : {
-        "line" : "2255 ANY ROAD",
-        "city" : "ANY CITY",
-        "stateCode" : "CA",
-        "zipCode" : "12211"
-      }
     }
   }
 }

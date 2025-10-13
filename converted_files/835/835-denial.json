@@ -1,10 +1,10 @@
 [
  {
-  "id" : "68ec56cace2f64368d177997",
+  "id" : "68ec56cace2f64368d177a4e",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "PATACCT",
-  "chargeAmount" : 400.00,
-  "paymentAmount" : 80.00,
+  "chargeAmount" : 150.00,
+  "paymentAmount" : 0.00,
   "facilityCode" : {
     "subType" : "PLACE_OF_SERVICE",
     "code" : "11"
@@ -28,14 +28,14 @@
       "middleName" : "N"
     }
   },
-  "claimStatusCode" : "1",
-  "claimStatus" : "PRIMARY",
+  "claimStatusCode" : "4",
+  "claimStatus" : "DENIED",
   "claimFilingIndicatorCode" : "MC",
   "insurancePlanType" : "MEDICAID",
   "payerControlNumber" : "CLAIMNUMBER",
   "otherClaimRelatedIds" : [ {
-    "qualifierCode" : "1L",
-    "type" : "GROUP_OR_POLICY_NUMBER",
+    "qualifierCode" : "EA",
+    "type" : "MEDICAL_RECORD_NUMBER",
     "identification" : "12345F"
   } ],
   "supplementalAmounts" : [ {
@@ -103,13 +103,9 @@
     } ]
   } ],
   "serviceLines" : [ {
+    "sourceLineId" : "1234",
     "chargeAmount" : 150.00,
-    "paidAmount" : 80.00,
-    "supplementalAmounts" : [ {
-      "qualifierCode" : "B6",
-      "type" : "ALLOWED_ACTUAL",
-      "amount" : 80.00
-    } ],
+    "paidAmount" : 0.00,
     "serviceDateFrom" : "2019-01-01",
     "unitCount" : 1,
     "procedure" : {
@@ -118,73 +114,45 @@
       "desc" : "Office or other outpatient visit for the evaluation and management of an established patient, which requires a medically appropriate history and/or examination and low level of medical decision making. When using total time on the date of the encounter for code selection, 20 minutes must be met or exceeded."
     },
     "adjustments" : [ {
-      "group" : "CONTRACTUAL",
-      "reasonCode" : "45",
+      "group" : "OTHER",
+      "reasonCode" : "252",
       "reason" : {
         "subType" : "CARC",
-        "code" : "45",
-        "desc" : "Charge exceeds fee schedule/maximum allowable or contracted/legislated fee arrangement."
-      },
-      "amount" : 70.00
-    } ]
-  }, {
-    "chargeAmount" : 100.00,
-    "paidAmount" : 0.00,
-    "serviceDateFrom" : "2019-01-01",
-    "unitCount" : 1,
-    "procedure" : {
-      "subType" : "CPT",
-      "code" : "85003"
-    },
-    "adjustments" : [ {
-      "group" : "CONTRACTUAL",
-      "reasonCode" : "204",
-      "reason" : {
-        "subType" : "CARC",
-        "code" : "204",
-        "desc" : "This service/equipment/drug is not covered under the patients current benefit plan"
-      },
-      "amount" : 100.00
-    } ]
-  }, {
-    "chargeAmount" : 150.00,
-    "paidAmount" : 0.00,
-    "serviceDateFrom" : "2019-01-01",
-    "unitCount" : 1,
-    "procedure" : {
-      "subType" : "CPT",
-      "code" : "36415",
-      "desc" : "Collection of venous blood by venipuncture"
-    },
-    "adjustments" : [ {
-      "group" : "CONTRACTUAL",
-      "reasonCode" : "97",
-      "reason" : {
-        "subType" : "CARC",
-        "code" : "97",
-        "desc" : "The benefit for this service is included in the payment/allowance for another service/procedure that has already been adjudicated."
+        "code" : "252",
+        "desc" : "An attachment/other documentation is required to adjudicate this claim/service."
       },
       "amount" : 150.00
+    } ],
+    "remarkCodes" : [ "M143" ],
+    "remarks" : [ {
+      "subType" : "RARC",
+      "code" : "M143",
+      "desc" : "The provider must update license information with the payer."
+    } ],
+    "renderingProviderIds" : [ {
+      "qualifierCode" : "HPI",
+      "type" : "CMS_NPI",
+      "identification" : "99123"
     } ]
   } ],
   "transaction" : {
-    "id" : "68ec56cace2f64368d177986",
+    "id" : "68ec56cace2f64368d177a41",
     "controlNumber" : "10060875",
     "transactionType" : "PAYMENT",
     "productionDate" : "2019-08-27",
-    "transactionHandlingType" : "INFORMATION_ONLY",
-    "totalPaymentAmount" : 80.00,
+    "transactionHandlingType" : "NOTIFICATION_ONLY",
+    "totalPaymentAmount" : 0.00,
     "creditOrDebitFlagCode" : "C",
-    "paymentMethodType" : "CHECK",
+    "paymentMethodType" : "NON_PAYMENT",
     "paymentDate" : "2019-08-16",
-    "checkOrEftTraceNumber" : "CK NUMBER 1",
+    "checkOrEftTraceNumber" : "TRACE123",
     "payerIdentifier" : "1234567890",
     "receiverIdentifier" : "FAC",
     "transactionSetIdentifierCode" : "835",
     "fileInfo" : {
-      "name" : "claim_adj_reason.dat",
-      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/835/claim_adj_reason.dat",
-      "lastModifiedDateTime" : "2023-08-28T03:50:07.198-04:00",
+      "name" : "835-denial.dat",
+      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/835/835-denial.dat",
+      "lastModifiedDateTime" : "2025-09-22T10:36:36.673-04:00",
       "fileType" : "EDI"
     }
   }

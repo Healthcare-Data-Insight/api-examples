@@ -1,15 +1,16 @@
 [
  {
-  "id" : "685d6a78b5939c4ba8ce1588",
+  "id" : "68ec56cace2f64368d177a07",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "7722337",
   "chargeAmount" : 226.00,
   "paymentAmount" : 132.00,
   "facilityCode" : {
-    "subType" : "PLACE_OF_SERVICE",
-    "code" : "11"
+    "subType" : "FACILITY_TYPE",
+    "code" : "11",
+    "desc" : "Hospital; inpatient"
   },
-  "placeOfServiceType" : "OFFICE",
+  "placeOfServiceType" : "INPATIENT",
   "frequencyCode" : {
     "subType" : "FREQUENCY_CODE",
     "code" : "1",
@@ -77,6 +78,8 @@
   "payer" : {
     "entityRole" : "PAYER",
     "entityType" : "BUSINESS",
+    "identificationType" : "PAYOR_ID",
+    "identifier" : "0101",
     "lastNameOrOrgName" : "DELTA DENTAL OF ABC",
     "address" : {
       "line" : "225 MAIN STREET",
@@ -85,6 +88,7 @@
       "zipCode" : "17111"
     },
     "contacts" : [ {
+      "functionCode" : "BL",
       "name" : "JANE DOE",
       "contactNumbers" : [ {
         "type" : "PHONE",
@@ -385,10 +389,11 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "685d6a78b5939c4ba8ce153e",
+    "id" : "68ec56cace2f64368d1779d2",
     "controlNumber" : "35681",
     "transactionType" : "PAYMENT",
     "productionDate" : "2019-03-14",
+    "transactionHandlingType" : "INFORMATION_ONLY",
     "totalPaymentAmount" : 132.00,
     "creditOrDebitFlagCode" : "C",
     "paymentMethodType" : "CHECK",
@@ -396,58 +401,13 @@
     "paymentDate" : "2019-03-31",
     "checkOrEftTraceNumber" : "12345",
     "payerIdentifier" : "1512345678",
+    "receiverIdentifier" : "CLEARINGHOUSE",
     "transactionSetIdentifierCode" : "835",
     "fileInfo" : {
       "name" : "negotiated_discount.dat",
-      "url" : "file:/edi-samples/edi_files/835/negotiated_discount.dat",
-      "lastModifiedDateTime" : "2024-04-09T20:05:48.423-04:00",
+      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/835/negotiated_discount.dat",
+      "lastModifiedDateTime" : "2025-07-03T18:09:16.075-04:00",
       "fileType" : "EDI"
-    },
-    "sender" : {
-      "entityRole" : "PAYER",
-      "entityType" : "BUSINESS",
-      "lastNameOrOrgName" : "DELTA DENTAL OF ABC",
-      "address" : {
-        "line" : "225 MAIN STREET",
-        "city" : "CENTERVILLE",
-        "stateCode" : "PA",
-        "zipCode" : "17111"
-      },
-      "contacts" : [ {
-        "name" : "JANE DOE",
-        "contactNumbers" : [ {
-          "type" : "PHONE",
-          "number" : "9005555555"
-        } ]
-      } ],
-      "additionalIds" : [ {
-        "qualifierCode" : "2U",
-        "type" : "PAYER_IDENTIFICATION_NUMBER",
-        "identification" : "0101"
-      }, {
-        "qualifierCode" : "HI",
-        "type" : "HEALTH_INDUSTRY_NUMBER",
-        "identification" : "0202"
-      } ]
-    },
-    "receiver" : {
-      "entityRole" : "PAYEE",
-      "entityType" : "BUSINESS",
-      "identificationType" : "EIN",
-      "identifier" : "999994703",
-      "taxId" : "050595",
-      "lastNameOrOrgName" : "BAN DDS LLC",
-      "address" : {
-        "line" : "225 MAIN STREET",
-        "city" : "CENTERVILLE",
-        "stateCode" : "PA",
-        "zipCode" : "17111"
-      },
-      "additionalIds" : [ {
-        "qualifierCode" : "PQ",
-        "type" : "PAYEE_IDENTIFICATION_NUMBER",
-        "identification" : "0505"
-      } ]
     }
   }
 }

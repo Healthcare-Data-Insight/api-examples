@@ -1,6 +1,6 @@
 [
  {
-  "id" : "685d6a78b5939c4ba8ce15fd",
+  "id" : "68ec56cace2f64368d177ab0",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "7722337",
   "chargeAmount" : 226.00,
@@ -66,6 +66,50 @@
     "qualifierCode" : "EA",
     "type" : "MEDICAL_RECORD_NUMBER",
     "identification" : "12345"
+  }, {
+    "qualifierCode" : "1L",
+    "type" : "GROUP_OR_POLICY_NUMBER",
+    "identification" : "12345678"
+  }, {
+    "qualifierCode" : "1W",
+    "type" : "MEMBER_IDENTIFICATION_NUMBER",
+    "identification" : "12345678"
+  }, {
+    "qualifierCode" : "28",
+    "type" : "EMPLOYEE_IDENTIFICATION_NUMBER",
+    "identification" : "12345678"
+  }, {
+    "qualifierCode" : "6P",
+    "type" : "GROUP_NUMBER",
+    "identification" : "12345678"
+  }, {
+    "qualifierCode" : "9A",
+    "type" : "REPRICED_REFERENCE_NUMBER",
+    "identification" : "12345678"
+  }, {
+    "qualifierCode" : "9C",
+    "type" : "ADJUSTED_REPRICED_REFERENCE_NUMBER",
+    "identification" : "12345678"
+  }, {
+    "qualifierCode" : "BB",
+    "type" : "AUTHORIZATION_NUMBER",
+    "identification" : "12345678"
+  }, {
+    "qualifierCode" : "CE",
+    "type" : "CLASS_OF_CONTRACT_CODE",
+    "identification" : "12345678"
+  }, {
+    "qualifierCode" : "G1",
+    "type" : "PRIOR_AUTHORIZATION_NUMBER",
+    "identification" : "12345678"
+  }, {
+    "qualifierCode" : "G3",
+    "type" : "PREDETERMINATION_OF_BENEFITS_NUMBER",
+    "identification" : "12345678"
+  }, {
+    "qualifierCode" : "SY",
+    "type" : "SSN",
+    "identification" : "12345678"
   } ],
   "supplementalAmounts" : [ {
     "qualifierCode" : "AU",
@@ -84,6 +128,8 @@
   "payer" : {
     "entityRole" : "PAYER",
     "entityType" : "BUSINESS",
+    "identificationType" : "PAYOR_ID",
+    "identifier" : "0101",
     "lastNameOrOrgName" : "DELTA DENTAL OF ABC",
     "address" : {
       "line" : "225 MAIN STREET",
@@ -92,6 +138,7 @@
       "zipCode" : "17111"
     },
     "contacts" : [ {
+      "functionCode" : "BL",
       "name" : "JANE DOE",
       "contactNumbers" : [ {
         "type" : "PHONE",
@@ -101,6 +148,7 @@
         "number" : "123"
       } ]
     }, {
+      "functionCode" : "IC",
       "contactNumbers" : [ {
         "type" : "URL",
         "number" : "myplan.com/policies"
@@ -133,6 +181,21 @@
       "qualifierCode" : "PQ",
       "type" : "PAYEE_IDENTIFICATION_NUMBER",
       "identification" : "0505"
+    } ]
+  },
+  "outpatientAdjudication" : {
+    "reimbursementRate" : 0.4,
+    "hcpcsPayableAmount" : 50.00,
+    "esrdPaymentAmount" : 30.00,
+    "nonPayableProfessionalComponentAmount" : 10.01,
+    "remarks" : [ {
+      "subType" : "RARC",
+      "code" : "MA01",
+      "desc" : "If you do not agree with what we approved for these services, you may appeal our decision. To make sure that we are fair to you, we require another individual that did not process your initial claim to conduct the appeal. However, in order to be eligible for an appeal, you must write to us within 120 days of the date you received this notice, unless you have a good reason for being late."
+    }, {
+      "subType" : "RARC",
+      "code" : "MA07",
+      "desc" : "The claim information has also been forwarded to Medicaid for review."
     } ]
   },
   "adjustments" : [ {
@@ -177,6 +240,10 @@
       "qualifierCode" : "1C",
       "type" : "MEDICARE_PROVIDER_NUMBER",
       "identification" : "12345678"
+    }, {
+      "qualifierCode" : "1G",
+      "type" : "PROVIDER_UPIN_NUMBER",
+      "identification" : "12345678"
     } ]
   },
   "crossoverCarrier" : {
@@ -200,6 +267,13 @@
     "identifier" : "SJD999",
     "lastNameOrOrgName" : "Due"
   },
+  "claimContacts" : [ {
+    "functionCode" : "CX",
+    "contactNumbers" : [ {
+      "type" : "PHONE",
+      "number" : "8008889900"
+    } ]
+  } ],
   "serviceLines" : [ {
     "sourceLineId" : "A123",
     "healthcarePolicyId" : "1234\"5",
@@ -441,77 +515,30 @@
     }
   } ],
   "transaction" : {
-    "id" : "685d6a78b5939c4ba8ce15ad",
+    "id" : "68ec56cace2f64368d177a68",
     "controlNumber" : "35681",
     "transactionType" : "PAYMENT",
     "productionDate" : "2019-03-14",
+    "transactionHandlingType" : "INFORMATION_ONLY",
     "totalPaymentAmount" : 132.00,
     "creditOrDebitFlagCode" : "C",
-    "paymentMethodType" : "CHECK",
-    "receiverAccountNumber" : "456",
-    "paymentDate" : "2019-03-31",
-    "checkOrEftTraceNumber" : "12345",
-    "payerIdentifier" : "1512345678",
+    "paymentMethodType" : "ACH",
+    "paymentFormatCode" : "CCP",
+    "senderBankRoutingNumber" : "011900449",
+    "senderAccountNumber" : "0000009999",
+    "originatingCompanyId" : "106609999",
+    "receiverBankRoutingNumber" : "107001235",
+    "receiverAccountNumber" : "2200008888",
+    "paymentDate" : "2025-04-09",
+    "checkOrEftTraceNumber" : "882509401093167",
+    "payerIdentifier" : "106609999",
+    "receiverIdentifier" : "CLEARINGHOUSE",
     "transactionSetIdentifierCode" : "835",
     "fileInfo" : {
       "name" : "835-all-fields.dat",
-      "url" : "file:/edi-samples/edi_files/835/835-all-fields.dat",
-      "lastModifiedDateTime" : "2025-02-28T13:00:41.379-05:00",
+      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/835/835-all-fields.dat",
+      "lastModifiedDateTime" : "2025-10-12T18:40:42.875-04:00",
       "fileType" : "EDI"
-    },
-    "sender" : {
-      "entityRole" : "PAYER",
-      "entityType" : "BUSINESS",
-      "lastNameOrOrgName" : "DELTA DENTAL OF ABC",
-      "address" : {
-        "line" : "225 MAIN STREET",
-        "city" : "CENTERVILLE",
-        "stateCode" : "PA",
-        "zipCode" : "17111"
-      },
-      "contacts" : [ {
-        "name" : "JANE DOE",
-        "contactNumbers" : [ {
-          "type" : "PHONE",
-          "number" : "9005555555"
-        }, {
-          "type" : "EXTENSION",
-          "number" : "123"
-        } ]
-      }, {
-        "contactNumbers" : [ {
-          "type" : "URL",
-          "number" : "myplan.com/policies"
-        } ]
-      } ],
-      "additionalIds" : [ {
-        "qualifierCode" : "2U",
-        "type" : "PAYER_IDENTIFICATION_NUMBER",
-        "identification" : "0101"
-      }, {
-        "qualifierCode" : "HI",
-        "type" : "HEALTH_INDUSTRY_NUMBER",
-        "identification" : "0202"
-      } ]
-    },
-    "receiver" : {
-      "entityRole" : "PAYEE",
-      "entityType" : "BUSINESS",
-      "identificationType" : "EIN",
-      "identifier" : "999994703",
-      "taxId" : "050595",
-      "lastNameOrOrgName" : "BAN DDS LLC",
-      "address" : {
-        "line" : "225 MAIN STREET",
-        "city" : "CENTERVILLE",
-        "stateCode" : "PA",
-        "zipCode" : "17111"
-      },
-      "additionalIds" : [ {
-        "qualifierCode" : "PQ",
-        "type" : "PAYEE_IDENTIFICATION_NUMBER",
-        "identification" : "0505"
-      } ]
     }
   }
 }

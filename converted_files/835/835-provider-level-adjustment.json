@@ -1,0 +1,522 @@
+[
+ {
+  "id" : "68ec56cace2f64368d177932",
+  "objectType" : "PROVIDER_ADJUSTMENT",
+  "providerIdentifier" : "PAYEE_ID1",
+  "fiscalPeriodDate" : "2024-12-31",
+  "adjustments" : [ {
+    "reason" : {
+      "subType" : "PARC",
+      "code" : "WO"
+    },
+    "referenceIdentification" : "3243079284",
+    "amount" : 298.18
+  }, {
+    "reason" : {
+      "subType" : "PARC",
+      "code" : "72"
+    },
+    "referenceIdentification" : "3243079284",
+    "amount" : -298.18
+  } ],
+  "payer" : {
+    "entityRole" : "PAYER",
+    "entityType" : "BUSINESS",
+    "identificationType" : "PAYOR_ID",
+    "identifier" : "ADDNL_PAYER_ID",
+    "lastNameOrOrgName" : "ANY PLAN USA",
+    "address" : {
+      "line" : "1 WALK THIS WAY",
+      "city" : "ANYCITY",
+      "stateCode" : "OH",
+      "zipCode" : "45209"
+    },
+    "contacts" : [ {
+      "functionCode" : "CX",
+      "contactNumbers" : [ {
+        "type" : "PHONE",
+        "number" : "8661112222"
+      } ]
+    }, {
+      "functionCode" : "BL",
+      "name" : "EDI",
+      "contactNumbers" : [ {
+        "type" : "PHONE",
+        "number" : "8002223333"
+      }, {
+        "type" : "EMAIL",
+        "number" : "EDI.SUPPORT@ANYPAYER.COM"
+      } ]
+    } ],
+    "additionalIds" : [ {
+      "qualifierCode" : "2U",
+      "type" : "PAYER_IDENTIFICATION_NUMBER",
+      "identification" : "ADDNL_PAYER_ID"
+    } ]
+  },
+  "payee" : {
+    "entityRole" : "PAYEE",
+    "entityType" : "BUSINESS",
+    "identificationType" : "NPI",
+    "identifier" : "PROVIDER1_NPI",
+    "taxId" : "123456789",
+    "lastNameOrOrgName" : "PROVIDER",
+    "address" : {
+      "line" : "2255 ANY ROAD",
+      "city" : "ANY CITY",
+      "stateCode" : "CA",
+      "zipCode" : "12211"
+    },
+    "additionalIds" : [ {
+      "qualifierCode" : "PQ",
+      "type" : "PAYEE_IDENTIFICATION_NUMBER",
+      "identification" : "PAYEE_ID1"
+    } ]
+  },
+  "transaction" : {
+    "id" : "68ec56cace2f64368d177934",
+    "controlNumber" : "0001",
+    "transactionType" : "PAYMENT",
+    "productionDate" : "2024-12-23",
+    "transactionHandlingType" : "NOTIFICATION_ONLY",
+    "totalPaymentAmount" : 0.00,
+    "creditOrDebitFlagCode" : "C",
+    "paymentMethodType" : "NON_PAYMENT",
+    "originatingCompanySupplementalCode" : "SUPPL_CDE",
+    "paymentDate" : "2024-12-24",
+    "checkOrEftTraceNumber" : "TRN1",
+    "payerIdentifier" : "PAYER_ID",
+    "receiverIdentifier" : "CLEARINGHOUSE_ID",
+    "transactionSetIdentifierCode" : "835",
+    "fileInfo" : {
+      "name" : "835-provider-level-adjustment.dat",
+      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/835/835-provider-level-adjustment.dat",
+      "lastModifiedDateTime" : "2025-10-12T13:27:35.454-04:00",
+      "fileType" : "EDI"
+    }
+  }
+}
+, {
+  "id" : "68ec56cace2f64368d177936",
+  "objectType" : "PROVIDER_ADJUSTMENT",
+  "providerIdentifier" : "PAYEE_ID99",
+  "fiscalPeriodDate" : "2024-12-31",
+  "adjustments" : [ {
+    "reason" : {
+      "subType" : "PARC",
+      "code" : "WO"
+    },
+    "referenceIdentification" : "3243079284",
+    "amount" : 298.18
+  }, {
+    "reason" : {
+      "subType" : "PARC",
+      "code" : "72"
+    },
+    "referenceIdentification" : "3243079284",
+    "amount" : -298.18
+  } ],
+  "payer" : {
+    "entityRole" : "PAYER",
+    "entityType" : "BUSINESS",
+    "identificationType" : "PAYOR_ID",
+    "identifier" : "ADDNL_PAYER_ID",
+    "lastNameOrOrgName" : "ANY PLAN USA",
+    "address" : {
+      "line" : "1 WALK THIS WAY",
+      "city" : "ANYCITY",
+      "stateCode" : "OH",
+      "zipCode" : "45209"
+    },
+    "contacts" : [ {
+      "functionCode" : "CX",
+      "contactNumbers" : [ {
+        "type" : "PHONE",
+        "number" : "8661112222"
+      } ]
+    }, {
+      "functionCode" : "BL",
+      "name" : "EDI",
+      "contactNumbers" : [ {
+        "type" : "PHONE",
+        "number" : "8002223333"
+      }, {
+        "type" : "EMAIL",
+        "number" : "EDI.SUPPORT@ANYPAYER.COM"
+      } ]
+    } ],
+    "additionalIds" : [ {
+      "qualifierCode" : "2U",
+      "type" : "PAYER_IDENTIFICATION_NUMBER",
+      "identification" : "ADDNL_PAYER_ID"
+    } ]
+  },
+  "payee" : {
+    "entityRole" : "PAYEE",
+    "entityType" : "BUSINESS",
+    "identificationType" : "NPI",
+    "identifier" : "PROVIDER1_NPI",
+    "taxId" : "123456789",
+    "lastNameOrOrgName" : "PROVIDER",
+    "address" : {
+      "line" : "2255 ANY ROAD",
+      "city" : "ANY CITY",
+      "stateCode" : "CA",
+      "zipCode" : "12211"
+    },
+    "additionalIds" : [ {
+      "qualifierCode" : "PQ",
+      "type" : "PAYEE_IDENTIFICATION_NUMBER",
+      "identification" : "PAYEE_ID1"
+    } ]
+  },
+  "transaction" : {
+    "id" : "68ec56cace2f64368d177938",
+    "controlNumber" : "0001",
+    "transactionType" : "PAYMENT",
+    "productionDate" : "2024-12-23",
+    "transactionHandlingType" : "NOTIFICATION_ONLY",
+    "totalPaymentAmount" : 0.00,
+    "creditOrDebitFlagCode" : "C",
+    "paymentMethodType" : "NON_PAYMENT",
+    "originatingCompanySupplementalCode" : "SUPPL_CDE",
+    "paymentDate" : "2024-12-24",
+    "checkOrEftTraceNumber" : "TRN1",
+    "payerIdentifier" : "PAYER_ID",
+    "receiverIdentifier" : "CLEARINGHOUSE_ID",
+    "transactionSetIdentifierCode" : "835",
+    "fileInfo" : {
+      "name" : "835-provider-level-adjustment.dat",
+      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/835/835-provider-level-adjustment.dat",
+      "lastModifiedDateTime" : "2025-10-12T13:27:35.454-04:00",
+      "fileType" : "EDI"
+    }
+  }
+}
+, {
+  "id" : "68ec56cace2f64368d177970",
+  "objectType" : "PAYMENT",
+  "patientControlNumber" : "5554555444",
+  "chargeAmount" : 800.00,
+  "paymentAmount" : 500.00,
+  "facilityCode" : {
+    "subType" : "PLACE_OF_SERVICE",
+    "code" : "11"
+  },
+  "placeOfServiceType" : "OFFICE",
+  "frequencyCode" : {
+    "subType" : "FREQUENCY_CODE",
+    "code" : "1",
+    "desc" : "Original claim"
+  },
+  "serviceDateFrom" : "2024-03-01",
+  "serviceDateTo" : "2024-03-01",
+  "patient" : {
+    "person" : {
+      "entityRole" : "PATIENT",
+      "entityType" : "INDIVIDUAL",
+      "identificationType" : "MEMBER_ID",
+      "identifier" : "33344555510",
+      "lastNameOrOrgName" : "BUDD",
+      "firstName" : "WILLIAM"
+    }
+  },
+  "claimStatusCode" : "1",
+  "claimStatus" : "PRIMARY",
+  "patientResponsibilityAmount" : 300.00,
+  "claimFilingIndicatorCode" : "12",
+  "insurancePlanType" : "PPO",
+  "payerControlNumber" : "94060555410000",
+  "payer" : {
+    "entityRole" : "PAYER",
+    "entityType" : "BUSINESS",
+    "identificationType" : "PAYOR_ID",
+    "identifier" : "ADDNL_PAYER_ID",
+    "lastNameOrOrgName" : "ANY PLAN USA",
+    "address" : {
+      "line" : "1 WALK THIS WAY",
+      "city" : "ANYCITY",
+      "stateCode" : "OH",
+      "zipCode" : "45209"
+    },
+    "contacts" : [ {
+      "functionCode" : "CX",
+      "contactNumbers" : [ {
+        "type" : "PHONE",
+        "number" : "8661112222"
+      } ]
+    }, {
+      "functionCode" : "BL",
+      "name" : "EDI",
+      "contactNumbers" : [ {
+        "type" : "PHONE",
+        "number" : "8002223333"
+      }, {
+        "type" : "EMAIL",
+        "number" : "EDI.SUPPORT@ANYPAYER.COM"
+      } ]
+    } ],
+    "additionalIds" : [ {
+      "qualifierCode" : "2U",
+      "type" : "PAYER_IDENTIFICATION_NUMBER",
+      "identification" : "ADDNL_PAYER_ID"
+    } ]
+  },
+  "payee" : {
+    "entityRole" : "PAYEE",
+    "entityType" : "BUSINESS",
+    "identificationType" : "NPI",
+    "identifier" : "PROVIDER2_NPI",
+    "taxId" : "123456789",
+    "lastNameOrOrgName" : "PROVIDER",
+    "address" : {
+      "line" : "2255 ANY ROAD",
+      "city" : "ANY CITY",
+      "stateCode" : "CA",
+      "zipCode" : "12211"
+    },
+    "additionalIds" : [ {
+      "qualifierCode" : "PQ",
+      "type" : "PAYEE_IDENTIFICATION_NUMBER",
+      "identification" : "PAYEE_ID2"
+    } ]
+  },
+  "serviceLines" : [ {
+    "chargeAmount" : 800.00,
+    "paidAmount" : 500.00,
+    "supplementalAmounts" : [ {
+      "qualifierCode" : "B6",
+      "type" : "ALLOWED_ACTUAL",
+      "amount" : 800.00
+    } ],
+    "serviceDateFrom" : "2024-03-01",
+    "procedure" : {
+      "subType" : "CPT",
+      "code" : "99211",
+      "desc" : "Office or other outpatient visit for the evaluation and management of an established patient that may not require the presence of a physician or other qualified health care professional"
+    },
+    "adjustments" : [ {
+      "group" : "PATIENT_RESPONSIBILITY",
+      "reasonCode" : "1",
+      "reason" : {
+        "subType" : "CARC",
+        "code" : "1",
+        "desc" : "Deductible Amount"
+      },
+      "amount" : 300.00
+    } ]
+  } ],
+  "transaction" : {
+    "id" : "68ec56cace2f64368d17794f",
+    "controlNumber" : "0002",
+    "transactionType" : "PAYMENT",
+    "productionDate" : "2024-12-23",
+    "transactionHandlingType" : "PAYMENT_AND_ADVICE",
+    "totalPaymentAmount" : 500.00,
+    "creditOrDebitFlagCode" : "C",
+    "paymentMethodType" : "CHECK",
+    "paymentFormatCode" : "5",
+    "senderBankRoutingNumber" : "7",
+    "senderAccountNumber" : "9",
+    "originatingCompanyId" : "PAYERACTID",
+    "originatingCompanySupplementalCode" : "SUPPL_CDE",
+    "receiverAccountNumber" : "RECEIVER_ACCT_1",
+    "paymentDate" : "2024-12-25",
+    "checkOrEftTraceNumber" : "CHECK_1",
+    "payerIdentifier" : "PAYER_ID",
+    "receiverIdentifier" : "CLEARINGHOUSE_ID",
+    "transactionSetIdentifierCode" : "835",
+    "fileInfo" : {
+      "name" : "835-provider-level-adjustment.dat",
+      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/835/835-provider-level-adjustment.dat",
+      "lastModifiedDateTime" : "2025-10-12T13:27:35.454-04:00",
+      "fileType" : "EDI"
+    }
+  }
+}
+, {
+  "id" : "68ec56cace2f64368d177956",
+  "objectType" : "PROVIDER_ADJUSTMENT",
+  "providerIdentifier" : "PAYEE_ID2",
+  "fiscalPeriodDate" : "2023-12-31",
+  "adjustments" : [ {
+    "reason" : {
+      "subType" : "PARC",
+      "code" : "WO"
+    },
+    "referenceIdentification" : "3243079284",
+    "amount" : 298.18
+  } ],
+  "payer" : {
+    "entityRole" : "PAYER",
+    "entityType" : "BUSINESS",
+    "identificationType" : "PAYOR_ID",
+    "identifier" : "ADDNL_PAYER_ID",
+    "lastNameOrOrgName" : "ANY PLAN USA",
+    "address" : {
+      "line" : "1 WALK THIS WAY",
+      "city" : "ANYCITY",
+      "stateCode" : "OH",
+      "zipCode" : "45209"
+    },
+    "contacts" : [ {
+      "functionCode" : "CX",
+      "contactNumbers" : [ {
+        "type" : "PHONE",
+        "number" : "8661112222"
+      } ]
+    }, {
+      "functionCode" : "BL",
+      "name" : "EDI",
+      "contactNumbers" : [ {
+        "type" : "PHONE",
+        "number" : "8002223333"
+      }, {
+        "type" : "EMAIL",
+        "number" : "EDI.SUPPORT@ANYPAYER.COM"
+      } ]
+    } ],
+    "additionalIds" : [ {
+      "qualifierCode" : "2U",
+      "type" : "PAYER_IDENTIFICATION_NUMBER",
+      "identification" : "ADDNL_PAYER_ID"
+    } ]
+  },
+  "payee" : {
+    "entityRole" : "PAYEE",
+    "entityType" : "BUSINESS",
+    "identificationType" : "NPI",
+    "identifier" : "PROVIDER2_NPI",
+    "taxId" : "123456789",
+    "lastNameOrOrgName" : "PROVIDER",
+    "address" : {
+      "line" : "2255 ANY ROAD",
+      "city" : "ANY CITY",
+      "stateCode" : "CA",
+      "zipCode" : "12211"
+    },
+    "additionalIds" : [ {
+      "qualifierCode" : "PQ",
+      "type" : "PAYEE_IDENTIFICATION_NUMBER",
+      "identification" : "PAYEE_ID2"
+    } ]
+  },
+  "transaction" : {
+    "id" : "68ec56cace2f64368d177958",
+    "controlNumber" : "0002",
+    "transactionType" : "PAYMENT",
+    "productionDate" : "2024-12-23",
+    "transactionHandlingType" : "PAYMENT_AND_ADVICE",
+    "totalPaymentAmount" : 500.00,
+    "creditOrDebitFlagCode" : "C",
+    "paymentMethodType" : "CHECK",
+    "paymentFormatCode" : "5",
+    "senderBankRoutingNumber" : "7",
+    "senderAccountNumber" : "9",
+    "originatingCompanyId" : "PAYERACTID",
+    "originatingCompanySupplementalCode" : "SUPPL_CDE",
+    "receiverAccountNumber" : "RECEIVER_ACCT_1",
+    "paymentDate" : "2024-12-25",
+    "checkOrEftTraceNumber" : "CHECK_1",
+    "payerIdentifier" : "PAYER_ID",
+    "receiverIdentifier" : "CLEARINGHOUSE_ID",
+    "transactionSetIdentifierCode" : "835",
+    "fileInfo" : {
+      "name" : "835-provider-level-adjustment.dat",
+      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/835/835-provider-level-adjustment.dat",
+      "lastModifiedDateTime" : "2025-10-12T13:27:35.454-04:00",
+      "fileType" : "EDI"
+    }
+  }
+}
+, {
+  "id" : "68ec56cace2f64368d17796c",
+  "objectType" : "PROVIDER_ADJUSTMENT",
+  "providerIdentifier" : "PAYEE_ID3",
+  "fiscalPeriodDate" : "2022-12-31",
+  "adjustments" : [ {
+    "reason" : {
+      "subType" : "PARC",
+      "code" : "WO"
+    },
+    "referenceIdentification" : "3243079284",
+    "amount" : 298.18
+  } ],
+  "payer" : {
+    "entityRole" : "PAYER",
+    "entityType" : "BUSINESS",
+    "identificationType" : "PAYOR_ID",
+    "identifier" : "ADDNL_PAYER_ID",
+    "lastNameOrOrgName" : "ANY PLAN USA",
+    "address" : {
+      "line" : "1 WALK THIS WAY",
+      "city" : "ANYCITY",
+      "stateCode" : "OH",
+      "zipCode" : "45209"
+    },
+    "contacts" : [ {
+      "functionCode" : "CX",
+      "contactNumbers" : [ {
+        "type" : "PHONE",
+        "number" : "8661112222"
+      } ]
+    }, {
+      "functionCode" : "BL",
+      "name" : "EDI",
+      "contactNumbers" : [ {
+        "type" : "PHONE",
+        "number" : "8002223333"
+      }, {
+        "type" : "EMAIL",
+        "number" : "EDI.SUPPORT@ANYPAYER.COM"
+      } ]
+    } ],
+    "additionalIds" : [ {
+      "qualifierCode" : "2U",
+      "type" : "PAYER_IDENTIFICATION_NUMBER",
+      "identification" : "ADDNL_PAYER_ID"
+    } ]
+  },
+  "payee" : {
+    "entityRole" : "PAYEE",
+    "entityType" : "BUSINESS",
+    "identificationType" : "NPI",
+    "identifier" : "PROVIDER3_NPI",
+    "taxId" : "123456789",
+    "lastNameOrOrgName" : "PROVIDER",
+    "address" : {
+      "line" : "2255 ANY ROAD",
+      "city" : "ANY CITY",
+      "stateCode" : "CA",
+      "zipCode" : "12211"
+    },
+    "additionalIds" : [ {
+      "qualifierCode" : "PQ",
+      "type" : "PAYEE_IDENTIFICATION_NUMBER",
+      "identification" : "PAYEE_ID3"
+    } ]
+  },
+  "transaction" : {
+    "id" : "68ec56cace2f64368d17796e",
+    "controlNumber" : "0003",
+    "transactionType" : "PAYMENT",
+    "productionDate" : "2024-12-23",
+    "transactionHandlingType" : "NOTIFICATION_ONLY",
+    "totalPaymentAmount" : 0.00,
+    "creditOrDebitFlagCode" : "C",
+    "paymentMethodType" : "NON_PAYMENT",
+    "originatingCompanySupplementalCode" : "SUPPL_CODE",
+    "paymentDate" : "2024-12-24",
+    "checkOrEftTraceNumber" : "TRN3",
+    "payerIdentifier" : "PAYER_ID",
+    "receiverIdentifier" : "CLEARINGHOUSE_ID",
+    "transactionSetIdentifierCode" : "835",
+    "fileInfo" : {
+      "name" : "835-provider-level-adjustment.dat",
+      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/835/835-provider-level-adjustment.dat",
+      "lastModifiedDateTime" : "2025-10-12T13:27:35.454-04:00",
+      "fileType" : "EDI"
+    }
+  }
+}
+ ]

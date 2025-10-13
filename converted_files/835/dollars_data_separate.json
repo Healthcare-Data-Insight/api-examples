@@ -1,6 +1,6 @@
 [
  {
-  "id" : "685d6a78b5939c4ba8ce15a9",
+  "id" : "68ec56cace2f64368d177a2a",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "5554555444",
   "chargeAmount" : 800.00,
@@ -41,6 +41,7 @@
   "payer" : {
     "entityRole" : "PAYER",
     "entityType" : "BUSINESS",
+    "identificationType" : "PAYOR_ID",
     "identifier" : "1935665544",
     "lastNameOrOrgName" : "RUSHMORE LIFE",
     "address" : {
@@ -50,6 +51,7 @@
       "zipCode" : "55111"
     },
     "contacts" : [ {
+      "functionCode" : "BL",
       "name" : "JOHN WAYNE",
       "contactNumbers" : [ {
         "type" : "PHONE",
@@ -94,13 +96,19 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "685d6a78b5939c4ba8ce158b",
+    "id" : "68ec56cace2f64368d177a18",
     "controlNumber" : "112233",
     "transactionType" : "PAYMENT",
     "productionDate" : "2019-03-14",
+    "transactionHandlingType" : "INFORMATION_ONLY",
     "totalPaymentAmount" : 1100.00,
     "creditOrDebitFlagCode" : "C",
     "paymentMethodType" : "ACH",
+    "paymentFormatCode" : "CCP",
+    "senderBankRoutingNumber" : "888999777",
+    "senderAccountNumber" : "24681012",
+    "originatingCompanyId" : "1935665544",
+    "receiverBankRoutingNumber" : "111333555",
     "receiverAccountNumber" : "144444",
     "paymentDate" : "2019-03-16",
     "checkOrEftTraceNumber" : "71700666555",
@@ -108,44 +116,14 @@
     "transactionSetIdentifierCode" : "835",
     "fileInfo" : {
       "name" : "dollars_data_separate.dat",
-      "url" : "file:/edi-samples/edi_files/835/dollars_data_separate.dat",
+      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/835/dollars_data_separate.dat",
       "lastModifiedDateTime" : "2023-08-28T03:50:07.198-04:00",
       "fileType" : "EDI"
-    },
-    "sender" : {
-      "entityRole" : "PAYER",
-      "entityType" : "BUSINESS",
-      "identifier" : "1935665544",
-      "lastNameOrOrgName" : "RUSHMORE LIFE",
-      "address" : {
-        "line" : "10 SOUTH AVENUET",
-        "city" : "RAPID CITY",
-        "stateCode" : "SD",
-        "zipCode" : "55111"
-      },
-      "contacts" : [ {
-        "name" : "JOHN WAYNE",
-        "contactNumbers" : [ {
-          "type" : "PHONE",
-          "number" : "8005551212"
-        }, {
-          "type" : "EXTENSION",
-          "number" : "123"
-        } ]
-      } ]
-    },
-    "receiver" : {
-      "entityRole" : "PAYEE",
-      "entityType" : "BUSINESS",
-      "identificationType" : "NPI",
-      "identifier" : "5544667733",
-      "taxId" : "777667755",
-      "lastNameOrOrgName" : "ACME MEDICAL CENTER"
     }
   }
 }
 , {
-  "id" : "685d6a78b5939c4ba8ce15aa",
+  "id" : "68ec56cace2f64368d177a2b",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "8765432112",
   "chargeAmount" : 1200.00,
@@ -186,6 +164,7 @@
   "payer" : {
     "entityRole" : "PAYER",
     "entityType" : "BUSINESS",
+    "identificationType" : "PAYOR_ID",
     "identifier" : "1935665544",
     "lastNameOrOrgName" : "RUSHMORE LIFE",
     "address" : {
@@ -195,6 +174,7 @@
       "zipCode" : "55111"
     },
     "contacts" : [ {
+      "functionCode" : "BL",
       "name" : "JOHN WAYNE",
       "contactNumbers" : [ {
         "type" : "PHONE",
@@ -238,13 +218,19 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "685d6a78b5939c4ba8ce158b",
+    "id" : "68ec56cace2f64368d177a22",
     "controlNumber" : "112233",
     "transactionType" : "PAYMENT",
     "productionDate" : "2019-03-14",
+    "transactionHandlingType" : "INFORMATION_ONLY",
     "totalPaymentAmount" : 1100.00,
     "creditOrDebitFlagCode" : "C",
     "paymentMethodType" : "ACH",
+    "paymentFormatCode" : "CCP",
+    "senderBankRoutingNumber" : "888999777",
+    "senderAccountNumber" : "24681012",
+    "originatingCompanyId" : "1935665544",
+    "receiverBankRoutingNumber" : "111333555",
     "receiverAccountNumber" : "144444",
     "paymentDate" : "2019-03-16",
     "checkOrEftTraceNumber" : "71700666555",
@@ -252,39 +238,9 @@
     "transactionSetIdentifierCode" : "835",
     "fileInfo" : {
       "name" : "dollars_data_separate.dat",
-      "url" : "file:/edi-samples/edi_files/835/dollars_data_separate.dat",
+      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/835/dollars_data_separate.dat",
       "lastModifiedDateTime" : "2023-08-28T03:50:07.198-04:00",
       "fileType" : "EDI"
-    },
-    "sender" : {
-      "entityRole" : "PAYER",
-      "entityType" : "BUSINESS",
-      "identifier" : "1935665544",
-      "lastNameOrOrgName" : "RUSHMORE LIFE",
-      "address" : {
-        "line" : "10 SOUTH AVENUET",
-        "city" : "RAPID CITY",
-        "stateCode" : "SD",
-        "zipCode" : "55111"
-      },
-      "contacts" : [ {
-        "name" : "JOHN WAYNE",
-        "contactNumbers" : [ {
-          "type" : "PHONE",
-          "number" : "8005551212"
-        }, {
-          "type" : "EXTENSION",
-          "number" : "123"
-        } ]
-      } ]
-    },
-    "receiver" : {
-      "entityRole" : "PAYEE",
-      "entityType" : "BUSINESS",
-      "identificationType" : "NPI",
-      "identifier" : "5544667733",
-      "taxId" : "777667755",
-      "lastNameOrOrgName" : "ACME MEDICAL CENTER"
     }
   }
 }
