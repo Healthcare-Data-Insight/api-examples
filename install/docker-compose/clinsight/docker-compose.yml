@@ -9,7 +9,7 @@ services:
 #    ports:
 #      - "27017:27017"
   app:
-    image: repo.datainsight.health/claim-insight:2.13
+    image: repo.datainsight.health/claim-insight:2.14
     restart: always
     depends_on:
       - mongo
