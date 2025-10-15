@@ -3,7 +3,8 @@ import env
 
 """
 Parse EDI by posting the content of the file
-Note: the "parse" endpoint can only handle small files. Use Convert APIs to parse large files
+Note: the "parse" endpoint can only handle small files. Use Convert APIs to parse large files.
+This endpoint is deprecated
 """
 
 parse_api_url = env.api_url + '/edi/parse'

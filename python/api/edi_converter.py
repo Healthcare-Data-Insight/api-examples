@@ -6,10 +6,13 @@ from enum import Enum
 class ObjectType(Enum):
     # 837I/P/D
     CLAIM = "CLAIM"
-    # 835
+    # 835 paid claim
     PAYMENT = "PAYMENT"
+    # 835 provider-level adjustment
+    PROVIDER_ADJUSTMENT = "PROVIDER_ADJUSTMENT"
     # 834
     MEMBER_COVERAGE = "MEMBER_COVERAGE"
+    # parser's errors or warnings
     ERROR = "ERROR"
     WARNING = "WARNING"
 

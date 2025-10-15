@@ -6,6 +6,10 @@ Converts 834 X220 (benefit enrollment and maintenance) file.
 The response is an array of JSON objects or a line-delimited JSON (ndjson).
 Each object represents a member with nested sponsor, payer, subscriber and health coverage objects.
 This example use ndjson as it is more convenient for streaming.
+API documentation:
+https://datainsight.health/docs/ediconvert-api/reference/#tag/EDI-to-JSON
+Schemas:
+https://datainsight.health/docs/schemas/834/
 """
 
 edi_834_dir = '../../edi_files/834'
