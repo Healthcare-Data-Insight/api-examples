@@ -9,8 +9,8 @@ import org.junit.runners.Suite;
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
         ConverterExample.class,
-        ClaimParsingExample.class,
-        PaymentParsingExample.class,
+        Claim837ParsingExample.class,
+        Payment835ParsingExample.class,
         Member834ParsingExample.class,
         ClaimStatus277CAParsingExample.class,
         SegmentParsingExample.class,

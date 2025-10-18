@@ -18,7 +18,7 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SuppressWarnings("NewClassNamingConvention")
-public class ClaimParsingExample implements ParsingExampleHelper {
+public class Claim837ParsingExample implements ParsingExampleHelper {
 
     @Test
     public void parseClaim() {
