@@ -20,6 +20,7 @@ files_to_convert = [edi_835_dir + '/' + file_name for file_name in file_names_to
 print('** Converting files:')
 print(*files_to_convert)
 response = edi_converter.convert_files_with_multipart(files_to_convert, True)
+cur_transaction_id = None
 for response_line_str in response.iter_lines():
     # each line is an object
     # Object types: PAYMENT (paid claim), PROVIDER_ADJUSTMENT (provider-level adjustment), WARNING (parser's warning)
@@ -28,8 +29,23 @@ for response_line_str in response.iter_lines():
     if object_type in {ObjectType.ERROR, ObjectType.WARNING}:
         edi_converter.handle_warning_error(obj)
         continue
-    # Payment and Provider Adjustment objects both contain payer and transaction
-    file_name = obj['transaction']['fileInfo']['name']
+    # All objects contain transaction info
+    # Converter assigns unique id to each transaction
+    transaction = obj['transaction']
+    if transaction['id'] != cur_transaction_id:
+        # ACH, check or None
+        paymentMethodType = transaction['paymentMethodType']
+        checkOrEftTraceNumber = transaction['checkOrEftTraceNumber']
+        payment_date = transaction['paymentDate']
+        # Total payment for all claims in this transaction
+        total_payment_amount = transaction['totalPaymentAmount']
+        file_name = transaction['fileInfo']['name']
+        # Control number assigned by the payer
+        control_number = transaction['controlNumber']
+        print(
+            f'* File {file_name}: Transaction: {control_number} Payment date: {payment_date} Amount: {total_payment_amount}')
+
+    # Payer is also common for provider adjustment and payment objects
     payer_name = obj['payer']['lastNameOrOrgName']
     if object_type == ObjectType.PAYMENT:
         claim_payment = obj
@@ -37,7 +53,7 @@ for response_line_str in response.iter_lines():
         charge = claim_payment['chargeAmount']
         paid = claim_payment['paymentAmount']
 
-        print(f'File {file_name}: Payment from {payer_name} for claim {pcn} for the amount {paid}; Billed: {charge}')
+        print(f'Payment from {payer_name} for claim {pcn} for the amount {paid}; Billed: {charge}')
         if drg := claim_payment.get('drg'):
             print(f"DRG: {drg['code']} DRG weight: {claim_payment.get('drgWeight')}")
         # Remark codes from outpatient adjudication (inpatient is similar)
@@ -70,7 +86,7 @@ for response_line_str in response.iter_lines():
     elif object_type == ObjectType.PROVIDER_ADJUSTMENT:
         provider_adjustment = obj
         fiscal_period = provider_adjustment['fiscalPeriodDate']
-        print(f'File {file_name}: Provider adjustment from {payer_name} for fiscal period: {fiscal_period}')
+        print(f'Provider adjustment from {payer_name} for fiscal period: {fiscal_period}')
         for adj in provider_adjustment['adjustments']:
             reason_code = adj['reason']['code']
             amount = adj['amount']
