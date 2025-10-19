@@ -19,6 +19,12 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+/**
+ * 837 parsing examples
+ * See JSON schemas for X12 EDI mapping documentation:
+ * <a href="https://datainsight.health/docs/schemas/837p/">837P Schema</a>
+ * <a href="https://datainsight.health/docs/schemas/837i/">837I Schema</a>
+ */
 @SuppressWarnings("NewClassNamingConvention")
 @Slf4j
 public class Claim837ParsingExample implements ParsingExampleHelper {
@@ -122,7 +128,7 @@ public class Claim837ParsingExample implements ParsingExampleHelper {
         List<Claim> claims;
         try (var parser = new EdiParser(ediFile837p)) {
             // Parse all claims in the file
-            claims = parser.parse837(-1);
+            claims = parser.parse().claims();
         }
         Claim claim = claims.get(0);
         PlaceOfServiceType pos = claim.placeOfServiceType();
@@ -132,6 +138,9 @@ public class Claim837ParsingExample implements ParsingExampleHelper {
 
         EntityRole entityRole = patient.person().entityRole();
         assertThat(entityRole).isEqualTo(EntityRole.INSURED_SUBSCRIBER);
+        // Use ediCode to get the actual EDI qualifier
+        String ediQualifierCode = entityRole.ediValue();
+        log.info("Entity Role: {} EDI Qualifier Code: {}", entityRole, ediQualifierCode);
 
         EntityType entityType = patient.person().entityType();
         assertThat(entityType).isEqualTo(EntityType.INDIVIDUAL);
@@ -139,6 +148,4 @@ public class Claim837ParsingExample implements ParsingExampleHelper {
         GenderType genderType = patient.person().gender();
         assertThat(genderType).isEqualTo(GenderType.MALE);
     }
-
-
 }
