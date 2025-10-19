@@ -9,7 +9,7 @@
             <level>DEBUG</level>
         </filter>
         <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
-            <pattern>%date{MM-dd HH:mm:ss.SSS} %-1.-1level %-10.10thread %-23.23(%logger{16}) | %message%n</pattern>
+            <pattern>%date{MM-dd HH:mm:ss.SSS} %-1.-1level %-7.7thread %-30.30(%logger{16}) | %message%n</pattern>
         </encoder>
     </appender>
 

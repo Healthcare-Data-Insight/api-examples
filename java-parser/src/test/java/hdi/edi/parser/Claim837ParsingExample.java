@@ -8,6 +8,8 @@ import hdi.model.orgperson.EntityType;
 import hdi.model.orgperson.GenderType;
 import hdi.model.orgperson.OrgOrPerson;
 import hdi.model.patientsubscriber.PatientSubscriber;
+import hdi.model.patientsubscriber.RelationshipType;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 
 import java.io.File;
@@ -18,64 +20,96 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SuppressWarnings("NewClassNamingConvention")
+@Slf4j
 public class Claim837ParsingExample implements ParsingExampleHelper {
 
     @Test
-    public void parseClaim() {
-        var ediFile837p = new File(EDI_FILES_DIR + "/837/prof-encounter.dat");
-        List<Claim> claims;
-        try (var parser = new EdiParser(ediFile837p)) {
-            // Parse all claims in the file
-            claims = parser.parse837(-1);
-        }
-        assertThat(claims).isNotEmpty();
+    public void parseAllFields837p() {
+        parse837(new File(EDI_FILES_DIR, "/837/837p-all-fields.dat"));
+    }
 
-        Claim claim = claims.get(0);
+    @Test
+    public void parseAllFields837i() {
+        parse837(new File(EDI_FILES_DIR, "/837/837i-all-fields.dat"));
+    }
+
+    public void parse837(File edi837File) {
+        log.info("* Parsing EDI 837 file: {}", edi837File.getName());
+        try (var parser = new EdiParser(edi837File).isSplitMode(true)) {
+            boolean isDone = false;
+            while (!isDone) {
+                EdiParsingResults parsingResults = parser.parse(100);
+                List<Claim> claims = parsingResults.claims();
+                for (var claim : claims) {
+                    processClaim(claim);
+                }
+                var issues = parsingResults.parsingIssues();
+                for (var issue : issues) {
+                    log.warn("Parsing issue: {}", issue.message());
+                }
+                isDone = parsingResults.isDone();
+            }
+        }
+    }
+
+    private void processClaim(Claim claim) {
         // get some key attributes of the claim
-        BigDecimal billedAmount = claim.chargeAmount();
+        BigDecimal chargeAmount = claim.chargeAmount();
         String patientControlNumber = claim.patientControlNumber();
-        // Providers
         OrgOrPerson billingProvider = claim.billingProvider();
         String providerNpi = billingProvider.identifier();
-        assertNotNull(billedAmount, patientControlNumber, providerNpi);
+        assertNotNull(chargeAmount, patientControlNumber, providerNpi);
+        log.info("Claim: {} {} ", patientControlNumber, chargeAmount);
+        var subscriber = claim.subscriber();
+        String subscriberIdentifier = subscriber.person().identifier();
+        String payerIdenfifier = subscriber.payer().identifier();
+        RelationshipType patientRelationshipType = subscriber.relationshipType();
+        String patientName = subscriber.person().lastNameOrOrgName();
+        var patient = claim.patient();
+        if (patient != null) {
+            // the patient is not a subscriber
+            patientRelationshipType = patient.relationshipType();
+            patientName = patient.person().lastNameOrOrgName();
+        }
+        log.info("Payer ID: {} Subscriber ID: {} Patient: {} {}", payerIdenfifier, subscriberIdentifier, patientRelationshipType, patientName);
+        for (var dx : claim.diags()) {
+            String poa = "";
+            if (claim.isInstClaimOrPayment()) {
+                poa = "POA: " + dx.presentOnAdmissionIndicator();
+            }
+            log.info("Diagnosis: {} {} {}", dx.subType(), dx.code(), poa);
+        }
+        // Institutional codes
+        for (var px : claim.procs()) {
+            log.info("Claim-level procedure code: {} {}", px.subType(), px.code());
+        }
+        for (var occurrence : claim.occurrences()) {
+            log.info("Occurrence code: {} {}", occurrence.code(), occurrence.occurrenceDate());
+        }
+        for (var valueInfo : claim.valueInfos()) {
+            log.info("Value code: {} {}", valueInfo.code(), valueInfo.amount());
+        }
+        // Occurrence span codes, etc
         // Service lines
         for (var line : claim.lines()) {
-            String procedureCode = line.procedure().code();
-            LocalDate serviceDate = line.serviceDateFrom();
+            // control number or line index
+            String lineId = line.sourceLineId();
+            String procedureCode = "";
+            if (line.procedure() != null)
+                procedureCode = line.procedure().code();
+            // inst. claims can have revenue codes, procedure code is optional
+            String revenueCode = "";
+            if (line.revenueCode() != null)
+                revenueCode = line.revenueCode().code();
+            LocalDate serviceDateFrom = line.serviceDateFrom();
             BigDecimal unitCount = line.unitCount();
             UnitType unitType = line.unitType();
             BigDecimal lineChargeAmount = line.chargeAmount();
+            log.info("Line: {} Code: {} {} Dates: {}-{} Billed: {} Quantity: {}", lineId, revenueCode, procedureCode, serviceDateFrom, line.serviceDateTo(), lineChargeAmount, unitCount);
 
-            assertNotNull(procedureCode, serviceDate, unitCount, unitType, lineChargeAmount);
+            assertNotNull(procedureCode, serviceDateFrom, unitCount, unitType, lineChargeAmount);
         }
 
-    }
-
-    /**
-     * For large files, we can parse in batches of N claims
-     */
-    @Test
-    public void parseInBatches() {
-        var ediFile = new File(EDI_FILES_DIR + "/837/multi-tran.dat");
-        int claimCount = 0;
-        try (var parser = new EdiParser(ediFile).isSplitMode(true)) {
-            while (true) {
-                // parse two claims at a time. In real life, use 200-500 as the optimal batch size
-                var claims = parser.parse837(2);
-                if (claims.isEmpty()) {
-                    break;
-                }
-                // Do something with each claim
-                for (var claim : claims) {
-                    // your logic goes here
-                    System.err.println(claim.patientControlNumber());
-                }
-                // ...
-                claimCount += claims.size();
-            }
-
-            assertThat(claimCount).isEqualTo(3);
-        }
     }
 
 

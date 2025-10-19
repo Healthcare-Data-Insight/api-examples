@@ -41,12 +41,12 @@ public class Payment835ParsingExample implements ParsingExampleHelper {
                 // Each payment is an adjudicated claim (CLP segment)
                 List<Payment> payments = parsingResults.payments();
                 for (var payment : payments) {
-                    parsePayment(payment);
+                    processPayment(payment);
                 }
                 // Provider-level adjustment is unrelated to a specific claim, could be a forwarding balance, accelerated payments, cost report settlements for a fiscal year, etc.
                 List<ProviderAdjustment> providerAdjustments = parsingResults.providerAdjustments();
                 for (var providerAdjustment : providerAdjustments) {
-                    parseProviderAdjustment(providerAdjustment);
+                    processProviderAdjustment(providerAdjustment);
                 }
                 // Parsing issues
                 var issues = parsingResults.parsingIssues();
@@ -70,7 +70,7 @@ public class Payment835ParsingExample implements ParsingExampleHelper {
         log.info("Transaction: {} {} {} {} ", transaction.id(), paymentDate, paymentMethodType, totalPaymentAmount);
     }
 
-    private void parsePayment(Payment payment) {
+    private void processPayment(Payment payment) {
         String payerControlNumber = payment.payerControlNumber();
         String patientControlNumber = payment.patientControlNumber();
         BigDecimal chargeAmount = payment.chargeAmount();
@@ -136,7 +136,7 @@ public class Payment835ParsingExample implements ParsingExampleHelper {
         }
     }
 
-    private void parseProviderAdjustment(ProviderAdjustment providerAdjustment) {
+    private void processProviderAdjustment(ProviderAdjustment providerAdjustment) {
         String providerId = providerAdjustment.providerIdentifier();
         String payerId = providerAdjustment.payer().identifier();
         log.info("Transaction ID: {} Provider-level adjustments for fiscal year {}; Provider {}; payer {}:",
