@@ -27,7 +27,7 @@ def convert_files_with_multipart(files, is_ndjson):
         field_and_file_objects.append(('files', open(f, 'rb')))
     # Always use splitTran: True for 837/835 transactions
     # If ndjson: True, the server will return a new-line separated list of objects (claims) instead of an array
-    params = {'splitTran': True, 'ndjson': is_ndjson}
+    params = {'ndjson': is_ndjson}
     # Use stream=True to stream the response instead of loading it in memory
     api_response = requests.post(api_url, files=field_and_file_objects, params=params, stream=True)
     if api_response.status_code != 200:
@@ -44,7 +44,7 @@ def convert_file(file, is_ndjson):
     # ediFileName parameter will propagate the original file name to transaction.fileInfo.name field; if not provided,
     # the converter will generate a name
     # warningsInResponse tells the converter to return parsing warnings to the client as objects (objectType: WARNING)
-    params = {'splitTran': True, 'ndjson': is_ndjson, 'warningsInResponse': True, 'ediFileName': file}
+    params = {'ndjson': is_ndjson, 'warningsInResponse': True, 'ediFileName': file}
 
     with open(file) as f:
         # Use stream=True to stream the response instead of loading it in memory
