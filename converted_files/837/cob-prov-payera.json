@@ -1,6 +1,6 @@
 [
  {
-  "id" : "685d7ce9fc42e4481ffb503b",
+  "id" : "690148887e79911955eaf5a8",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26407789",
   "chargeAmount" : 79.04,
@@ -18,9 +18,8 @@
   "serviceDateTo" : "2005-10-03",
   "subscriber" : {
     "payerResponsibilitySequence" : "PRIMARY",
-    "relationshipType" : "SELF",
     "person" : {
-      "entityRole" : "SUBSCRIBER",
+      "entityRole" : "INSURED_SUBSCRIBER",
       "entityType" : "INDIVIDUAL",
       "identificationType" : "MEMBER_ID",
       "identifier" : "111223333",
@@ -71,7 +70,7 @@
     "claimFilingIndicatorCode" : "CI",
     "insurancePlanType" : "COMMERCIAL",
     "person" : {
-      "entityRole" : "SUBSCRIBER",
+      "entityRole" : "INSURED_SUBSCRIBER",
       "entityType" : "INDIVIDUAL",
       "identificationType" : "MEMBER_ID",
       "identifier" : "T55TY666",
@@ -111,6 +110,7 @@
       "zipCode" : "33111"
     },
     "contacts" : [ {
+      "functionCode" : "IC",
       "name" : "CONNIE",
       "contactNumbers" : [ {
         "type" : "PHONE",
@@ -237,9 +237,10 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "685d7ce9fc42e4481ffb5006",
+    "id" : "690148887e79911955eaf571",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
+    "hierarchicalStructureCode" : "0019",
     "purposeCode" : "00",
     "originatorApplicationTransactionId" : "0123",
     "creationDate" : "2005-10-15",
@@ -260,6 +261,7 @@
       "identifier" : "TGJ23",
       "lastNameOrOrgName" : "PREMIER BILLING SERVICE",
       "contacts" : [ {
+        "functionCode" : "IC",
         "name" : "JERRY",
         "contactNumbers" : [ {
           "type" : "PHONE",

@@ -1,6 +1,6 @@
 [
  {
-  "id" : "685d7ce9fc42e4481ffb4f85",
+  "id" : "690148887e79911955eaf4e6",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26463774",
   "chargeAmount" : 100.00,
@@ -18,12 +18,11 @@
   "serviceDateTo" : "2006-10-10",
   "subscriber" : {
     "payerResponsibilitySequence" : "PRIMARY",
-    "relationshipType" : "SELF",
     "groupOrPolicyNumber" : "2222-SJ",
     "claimFilingIndicatorCode" : "CI",
     "insurancePlanType" : "COMMERCIAL",
     "person" : {
-      "entityRole" : "SUBSCRIBER",
+      "entityRole" : "INSURED_SUBSCRIBER",
       "entityType" : "INDIVIDUAL",
       "identificationType" : "MEMBER_ID",
       "identifier" : "JS00111223333",
@@ -167,9 +166,10 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "685d7ce9fc42e4481ffb4f5a",
+    "id" : "690148887e79911955eaf4b7",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
+    "hierarchicalStructureCode" : "0019",
     "purposeCode" : "00",
     "originatorApplicationTransactionId" : "244579",
     "creationDate" : "2006-11-15",
@@ -190,6 +190,7 @@
       "identifier" : "TGJ23",
       "lastNameOrOrgName" : "PREMIER BILLING SERVICE",
       "contacts" : [ {
+        "functionCode" : "IC",
         "name" : "JERRY",
         "contactNumbers" : [ {
           "type" : "PHONE",

@@ -1,6 +1,6 @@
 [
  {
-  "id" : "685d7ce9fc42e4481ffb5003",
+  "id" : "690148887e79911955eaf56e",
   "objectType" : "CLAIM",
   "patientControlNumber" : "ABC123-RI",
   "chargeAmount" : 28.75,
@@ -23,7 +23,7 @@
     "claimFilingIndicatorCode" : "CI",
     "insurancePlanType" : "COMMERCIAL",
     "person" : {
-      "entityRole" : "SUBSCRIBER",
+      "entityRole" : "INSURED_SUBSCRIBER",
       "entityType" : "INDIVIDUAL",
       "identificationType" : "MEMBER_ID",
       "identifier" : "00124A089",
@@ -67,6 +67,7 @@
       "zipCode" : "462540000"
     },
     "contacts" : [ {
+      "functionCode" : "IC",
       "name" : "SUE BILLINGSWORTH",
       "contactNumbers" : [ {
         "type" : "PHONE",
@@ -171,9 +172,10 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "685d7ce9fc42e4481ffb4fdb",
+    "id" : "690148887e79911955eaf542",
     "controlNumber" : "1002",
     "transactionType" : "PROF",
+    "hierarchicalStructureCode" : "0019",
     "purposeCode" : "00",
     "originatorApplicationTransactionId" : "1002",
     "creationDate" : "2005-06-20",
@@ -194,6 +196,7 @@
       "identifier" : "123456789",
       "lastNameOrOrgName" : "REGIONAL PPO NETWORK",
       "contacts" : [ {
+        "functionCode" : "IC",
         "name" : "SUBMITTER CONTACT INFO",
         "contactNumbers" : [ {
           "type" : "PHONE",

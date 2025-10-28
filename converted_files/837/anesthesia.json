@@ -1,6 +1,6 @@
 [
  {
-  "id" : "685d7ce9fc42e4481ffb4fa9",
+  "id" : "690148887e79911955eaf50e",
   "objectType" : "CLAIM",
   "patientControlNumber" : "153829140",
   "chargeAmount" : 827.00,
@@ -22,7 +22,7 @@
     "claimFilingIndicatorCode" : "MB",
     "insurancePlanType" : "MEDICARE_B",
     "person" : {
-      "entityRole" : "SUBSCRIBER",
+      "entityRole" : "INSURED_SUBSCRIBER",
       "entityType" : "INDIVIDUAL",
       "identificationType" : "MEMBER_ID",
       "identifier" : "123456789A",
@@ -162,9 +162,10 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "685d7ce9fc42e4481ffb4f88",
+    "id" : "690148887e79911955eaf4e9",
     "controlNumber" : "0001",
     "transactionType" : "PROF",
+    "hierarchicalStructureCode" : "0019",
     "purposeCode" : "00",
     "originatorApplicationTransactionId" : "0123",
     "creationDate" : "2005-01-17",
@@ -185,6 +186,7 @@
       "identifier" : "N305",
       "lastNameOrOrgName" : "PROVIDER MEDICAL GROUP",
       "contacts" : [ {
+        "functionCode" : "IC",
         "name" : "NINA",
         "contactNumbers" : [ {
           "type" : "PHONE",

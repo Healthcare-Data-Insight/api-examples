@@ -1,6 +1,6 @@
 [
  {
-  "id" : "685d571fe29351212dc4683d",
+  "id" : "690141e87c0fb18b0499f8c9",
   "objectType" : "MEMBER_COVERAGE",
   "sponsor" : {
     "entityRole" : "PLAN_SPONSOR",
@@ -44,6 +44,7 @@
       "zipCode" : "17011"
     },
     "contacts" : [ {
+      "functionCode" : "IP",
       "contactNumbers" : [ {
         "type" : "HOME_PHONE",
         "number" : "7172343334"
@@ -82,7 +83,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "685d571fe29351212dc46838",
+    "id" : "690141e87c0fb18b0499f8c2",
     "controlNumber" : "12345",
     "transactionType" : "MEMBER_COVERAGE",
     "purposeCode" : "00",

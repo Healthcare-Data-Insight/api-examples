@@ -1,6 +1,6 @@
 [
  {
-  "id" : "685d571fe29351212dc4685e",
+  "id" : "690141e87c0fb18b0499f8f2",
   "objectType" : "MEMBER_COVERAGE",
   "masterPolicyNumber" : "MasterPolicyNumber",
   "sponsor" : {
@@ -67,6 +67,7 @@
       "zipCode" : "171110000"
     },
     "contacts" : [ {
+      "functionCode" : "IP",
       "contactNumbers" : [ {
         "type" : "HOME_PHONE",
         "number" : "7172343334"
@@ -126,6 +127,7 @@
       "zipCode" : "971110000"
     },
     "contacts" : [ {
+      "functionCode" : "EP",
       "name" : "Employer's contact",
       "contactNumbers" : [ {
         "type" : "HOME_PHONE",
@@ -147,6 +149,7 @@
       "zipCode" : "971110000"
     },
     "contacts" : [ {
+      "functionCode" : "SK",
       "name" : "School's contact",
       "contactNumbers" : [ {
         "type" : "HOME_PHONE",
@@ -172,6 +175,7 @@
       "zipCode" : "971110000"
     },
     "contacts" : [ {
+      "functionCode" : "PQ",
       "contactNumbers" : [ {
         "type" : "HOME_PHONE",
         "number" : "9172343334"
@@ -196,6 +200,7 @@
       "zipCode" : "971110000"
     },
     "contacts" : [ {
+      "functionCode" : "RP",
       "contactNumbers" : [ {
         "type" : "HOME_PHONE",
         "number" : "9172343334"
@@ -276,6 +281,7 @@
         "zipCode" : "271110000"
       },
       "contacts" : [ {
+        "functionCode" : "IC",
         "contactNumbers" : [ {
           "type" : "HOME_PHONE",
           "number" : "2172343334"
@@ -337,6 +343,7 @@
           "zipCode" : "971110000"
         },
         "contacts" : [ {
+          "functionCode" : "CN",
           "contactNumbers" : [ {
             "type" : "HOME_PHONE",
             "number" : "9172343334"
@@ -369,7 +376,7 @@
     "priorCoverageMonthCount" : "0"
   } ],
   "transaction" : {
-    "id" : "685d571fe29351212dc46851",
+    "id" : "690141e87c0fb18b0499f8e3",
     "controlNumber" : "1",
     "transactionType" : "MEMBER_COVERAGE",
     "purposeCode" : "00",
@@ -408,7 +415,7 @@
   }
 }
 , {
-  "id" : "685d571fe29351212dc468b3",
+  "id" : "690141e87c0fb18b0499f949",
   "objectType" : "MEMBER_COVERAGE",
   "masterPolicyNumber" : "MasterPolicyNumber",
   "sponsor" : {
@@ -468,6 +475,7 @@
       "zipCode" : "171110000"
     },
     "contacts" : [ {
+      "functionCode" : "IP",
       "contactNumbers" : [ {
         "type" : "HOME_PHONE",
         "number" : "7172343334"
@@ -499,7 +507,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "685d571fe29351212dc46851",
+    "id" : "690141e87c0fb18b0499f8e3",
     "controlNumber" : "1",
     "transactionType" : "MEMBER_COVERAGE",
     "purposeCode" : "00",
@@ -538,7 +546,7 @@
   }
 }
 , {
-  "id" : "685d571fe29351212dc468ca",
+  "id" : "690141e87c0fb18b0499f962",
   "objectType" : "MEMBER_COVERAGE",
   "masterPolicyNumber" : "MasterPolicyNumbe2",
   "sponsor" : {
@@ -590,6 +598,7 @@
       "zipCode" : "171110000"
     },
     "contacts" : [ {
+      "functionCode" : "IP",
       "contactNumbers" : [ {
         "type" : "HOME_PHONE",
         "number" : "7172343334"
@@ -604,7 +613,7 @@
     "amount" : 100.00
   } ],
   "transaction" : {
-    "id" : "685d571fe29351212dc468c4",
+    "id" : "690141e87c0fb18b0499f95a",
     "controlNumber" : "2",
     "transactionType" : "MEMBER_COVERAGE",
     "purposeCode" : "00",

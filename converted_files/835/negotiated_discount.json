@@ -1,6 +1,6 @@
 [
  {
-  "id" : "68ec56cace2f64368d177a07",
+  "id" : "69014026ca84f491f7f20fe7",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "7722337",
   "chargeAmount" : 226.00,
@@ -140,7 +140,7 @@
     "reason" : {
       "subType" : "CARC",
       "code" : "45",
-      "desc" : "Charge exceeds fee schedule/maximum allowable or contracted/legislated fee arrangement."
+      "desc" : "Charge exceeds fee schedule/maximum allowable or contracted/legislated fee arrangement. Usage: This adjustment amount cannot equal the total service or claim charge amount; and must not duplicate provider adjustment amounts (payments and contractual reductions) that have resulted from prior payer(s) adjudication. (Use only with Group Codes PR or CO depending upon liability)"
     },
     "amount" : 30000.00
   }, {
@@ -389,7 +389,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "68ec56cace2f64368d1779d2",
+    "id" : "69014026ca84f491f7f20f94",
     "controlNumber" : "35681",
     "transactionType" : "PAYMENT",
     "productionDate" : "2019-03-14",
@@ -405,7 +405,7 @@
     "transactionSetIdentifierCode" : "835",
     "fileInfo" : {
       "name" : "negotiated_discount.dat",
-      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/835/negotiated_discount.dat",
+      "url" : "file:/edi-samples/edi_files/835/negotiated_discount.dat",
       "lastModifiedDateTime" : "2025-07-03T18:09:16.075-04:00",
       "fileType" : "EDI"
     }

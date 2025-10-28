@@ -230,108 +230,19 @@
               "date_time_period_to" : "2005-09-06"
             }
           } ]
-        }, {
-          "segment_id" : "HL",
-          "loop_id" : "2000D",
-          "hierarchical_id_number" : "5",
-          "hierarchical_parent_id_number" : "3",
-          "hierarchical_level_code" : {
-            "code" : "22",
-            "desc" : "Subscriber"
-          },
-          "hierarchical_child_code" : {
-            "code" : "0",
-            "desc" : "No subordinate segments"
-          },
-          "subscriber_name" : {
-            "segment_id" : "NM1",
-            "loop_id" : "2100D",
-            "entity_identifier_code" : {
-              "code" : "IL",
-              "desc" : "Insured Subscriber"
-            },
-            "entity_type_qualifier" : {
-              "code" : "1",
-              "desc" : "Individual"
-            },
-            "response_contact_last_or_organization_name" : "JONES",
-            "response_contact_first_name" : "MARY",
-            "identification_code_qualifier" : {
-              "code" : "MI",
-              "desc" : "Member Identification Number"
-            },
-            "response_contact_identifier" : "234567890A"
-          },
-          "claim_status_tracking_number" : [ {
-            "segment_id" : "TRN",
-            "loop_id" : "2200D",
-            "trace_type_code" : "2",
-            "current_transaction_trace_number" : "ABCXYZ2",
-            "claim_level_status_information" : [ {
-              "segment_id" : "STC",
-              "loop_id" : "2200D",
-              "health_care_claim_status" : {
-                "health_care_claim_status_category_code" : "F0",
-                "status_code" : "3"
-              },
-              "date" : "2005-09-15",
-              "total_submitted_charges_for_unit_work" : 7599.0,
-              "monetary_amount" : 7599.0
-            } ],
-            "payer_claim_control_number" : {
-              "segment_id" : "REF",
-              "loop_id" : "2200D",
-              "reference_identification_qualifier" : {
-                "code" : "1K",
-                "desc" : "Payer Claim Number"
-              },
-              "member_group_or_policy_number" : "0529675341"
-            },
-            "institutional_bill_type_identification" : {
-              "segment_id" : "REF",
-              "loop_id" : "2200D",
-              "reference_identification_qualifier" : {
-                "code" : "BLT",
-                "desc" : "Bill Type"
-              },
-              "member_group_or_policy_number" : "111"
-            },
-            "patient_control_number" : {
-              "segment_id" : "REF",
-              "loop_id" : "2200D",
-              "reference_identification_qualifier" : {
-                "code" : "EJ"
-              },
-              "member_group_or_policy_number" : "JO234567"
-            },
-            "claim_service_date" : {
-              "segment_id" : "DTP",
-              "loop_id" : "2200D",
-              "date_time_qualifier" : {
-                "code" : "472",
-                "desc" : "Service Date"
-              },
-              "date_time_period_format" : {
-                "code" : "RD8",
-                "desc" : "Date Period"
-              },
-              "date_time_period" : "2005-07-31",
-              "date_time_period_to" : "2005-08-09"
-            }
-          } ]
         } ]
       }, {
         "segment_id" : "HL",
         "loop_id" : "2000C",
-        "hierarchical_id_number" : "6",
+        "hierarchical_id_number" : "5",
         "hierarchical_parent_id_number" : "2",
         "hierarchical_level_code" : {
           "code" : "19",
           "desc" : "Provider of Service"
         },
         "hierarchical_child_code" : {
-          "code" : "1",
-          "desc" : "Contains subordinate segments"
+          "code" : "0",
+          "desc" : "No subordinate segments"
         },
         "provider_name" : [ {
           "segment_id" : "NM1",
@@ -349,150 +260,34 @@
             "code" : "XX",
             "desc" : "National Provider Identifier (NPI)"
           },
-          "response_contact_identifier" : "1666666666"
+          "response_contact_identifier" : "6166666666"
         } ],
-        "subscriber_level" : [ {
-          "segment_id" : "HL",
-          "loop_id" : "2000D",
-          "hierarchical_id_number" : "7",
-          "hierarchical_parent_id_number" : "6",
-          "hierarchical_level_code" : {
-            "code" : "22",
-            "desc" : "Subscriber"
-          },
-          "hierarchical_child_code" : {
-            "code" : "1",
-            "desc" : "Contains subordinate segments"
-          },
-          "subscriber_name" : {
-            "segment_id" : "NM1",
-            "loop_id" : "2100D",
-            "entity_identifier_code" : {
-              "code" : "IL",
-              "desc" : "Insured Subscriber"
-            },
-            "entity_type_qualifier" : {
-              "code" : "1",
-              "desc" : "Individual"
-            },
-            "response_contact_last_or_organization_name" : "MANN",
-            "response_contact_first_name" : "JOHN",
-            "identification_code_qualifier" : {
-              "code" : "MI",
-              "desc" : "Member Identification Number"
-            },
-            "response_contact_identifier" : "345678901"
-          },
-          "dependent_level" : [ {
-            "segment_id" : "HL",
-            "loop_id" : "2000E",
-            "hierarchical_id_number" : "8",
-            "hierarchical_parent_id_number" : "7",
-            "hierarchical_level_code" : {
-              "code" : "23",
-              "desc" : "Dependent"
-            },
-            "dependent_name" : {
-              "segment_id" : "NM1",
-              "loop_id" : "2100E",
+        "provider_of_service_trace_identifier" : {
+          "segment_id" : "TRN",
+          "loop_id" : "2200C",
+          "trace_type_code" : "1",
+          "current_transaction_trace_number" : "0",
+          "provider_status_information" : [ {
+            "segment_id" : "STC",
+            "loop_id" : "2200C",
+            "health_care_claim_status" : {
+              "health_care_claim_status_category_code" : "E0",
+              "status_code" : "24",
               "entity_identifier_code" : {
-                "code" : "QC",
-                "desc" : "Patient"
-              },
-              "entity_type_qualifier" : {
-                "code" : "1",
-                "desc" : "Individual"
-              },
-              "response_contact_last_or_organization_name" : "MANN",
-              "response_contact_first_name" : "JOSEPH"
+                "code" : "1P",
+                "desc" : "Provider"
+              }
             },
-            "claim_status_tracking_number" : [ {
-              "segment_id" : "TRN",
-              "loop_id" : "2200E",
-              "trace_type_code" : "2",
-              "current_transaction_trace_number" : "ABCXYC3",
-              "claim_level_status_information" : [ {
-                "segment_id" : "STC",
-                "loop_id" : "2200E",
-                "health_care_claim_status" : {
-                  "health_care_claim_status_category_code" : "F2",
-                  "status_code" : "88",
-                  "entity_identifier_code" : {
-                    "code" : "QC",
-                    "desc" : "Patient"
-                  }
-                },
-                "date" : "2005-06-12",
-                "total_submitted_charges_for_unit_work" : 150.0,
-                "monetary_amount" : 0.0
-              } ],
-              "payer_claim_control_number" : {
-                "segment_id" : "REF",
-                "loop_id" : "2200E",
-                "reference_identification_qualifier" : {
-                  "code" : "1K",
-                  "desc" : "Payer Claim Number"
-                },
-                "member_group_or_policy_number" : "051681010827"
-              },
-              "patient_control_number" : {
-                "segment_id" : "REF",
-                "loop_id" : "2200E",
-                "reference_identification_qualifier" : {
-                  "code" : "EJ"
-                },
-                "member_group_or_policy_number" : "MA345678"
-              },
-              "service_line_information" : [ {
-                "segment_id" : "SVC",
-                "loop_id" : "2220E",
-                "composite_medical_procedure_identifier" : {
-                  "product_or_service_id_qualifier" : {
-                    "code" : "HC",
-                    "desc" : "HCPCS Procedure"
-                  },
-                  "procedure_code" : "99203"
-                },
-                "line_item_charge_amount" : 150.0,
-                "monetary_amount" : 0.0,
-                "units_of_service_count" : 1.0,
-                "service_line_status_information" : [ {
-                  "segment_id" : "STC",
-                  "loop_id" : "2220E",
-                  "health_care_claim_status" : {
-                    "health_care_claim_status_category_code" : "F2",
-                    "status_code" : "88",
-                    "entity_identifier_code" : {
-                      "code" : "QC",
-                      "desc" : "Patient"
-                    }
-                  },
-                  "date" : "2005-06-12"
-                } ],
-                "service_line_date" : {
-                  "segment_id" : "DTP",
-                  "loop_id" : "2220E",
-                  "date_time_qualifier" : {
-                    "code" : "472",
-                    "desc" : "Service Date"
-                  },
-                  "date_time_period_format" : {
-                    "code" : "D8",
-                    "desc" : "Date"
-                  },
-                  "date_time_period" : "2005-05-01"
-                }
-              } ]
-            } ]
+            "date" : "2005-09-16"
           } ]
-        } ]
+        }
       } ]
     } ]
   } ],
   "transaction_set_trailer" : {
     "segment_id" : "SE",
     "loop_id" : "0000",
-    "number_of_included_segments" : 38,
+    "number_of_included_segments" : 21,
     "transaction_set_control_number" : "0001"
   }
 }

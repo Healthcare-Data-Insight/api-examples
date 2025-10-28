@@ -1,6 +1,6 @@
 [
  {
-  "id" : "685d7ce9fc42e4481ffb4e48",
+  "id" : "690148887e79911955eaf398",
   "objectType" : "CLAIM",
   "patientControlNumber" : "125WILL",
   "chargeAmount" : 145.50,
@@ -22,7 +22,7 @@
     "claimFilingIndicatorCode" : "MB",
     "insurancePlanType" : "MEDICARE_B",
     "person" : {
-      "entityRole" : "SUBSCRIBER",
+      "entityRole" : "INSURED_SUBSCRIBER",
       "entityType" : "INDIVIDUAL",
       "identificationType" : "MEMBER_ID",
       "identifier" : "123456789A",
@@ -69,6 +69,7 @@
       "zipCode" : "21236"
     },
     "contacts" : [ {
+      "functionCode" : "IC",
       "name" : "DR",
       "contactNumbers" : [ {
         "type" : "PHONE",
@@ -102,9 +103,10 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "685d7ce9fc42e4481ffb4e2a",
+    "id" : "690148887e79911955eaf378",
     "controlNumber" : "3701",
     "transactionType" : "PROF",
+    "hierarchicalStructureCode" : "0019",
     "purposeCode" : "00",
     "originatorApplicationTransactionId" : "007227",
     "creationDate" : "2005-02-15",
@@ -125,6 +127,7 @@
       "identifier" : "S01057",
       "lastNameOrOrgName" : "DAVID GREEN",
       "contacts" : [ {
+        "functionCode" : "IC",
         "name" : "KATHY SMITH",
         "contactNumbers" : [ {
           "type" : "PHONE",

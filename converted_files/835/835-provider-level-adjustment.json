@@ -1,20 +1,22 @@
 [
  {
-  "id" : "68ec56cace2f64368d177932",
+  "id" : "69014026ca84f491f7f20ee6",
   "objectType" : "PROVIDER_ADJUSTMENT",
   "providerIdentifier" : "PAYEE_ID1",
   "fiscalPeriodDate" : "2024-12-31",
   "adjustments" : [ {
     "reason" : {
-      "subType" : "PARC",
-      "code" : "WO"
+      "subType" : "PROVIDER_ADJUSTMENT_REASON_CODE",
+      "code" : "WO",
+      "desc" : "Overpayment recovery amount"
     },
     "referenceIdentification" : "3243079284",
     "amount" : 298.18
   }, {
     "reason" : {
-      "subType" : "PARC",
-      "code" : "72"
+      "subType" : "PROVIDER_ADJUSTMENT_REASON_CODE",
+      "code" : "72",
+      "desc" : "Provider refund amount. This adjustment acknowledges a refund received from a provider for previous overpayment."
     },
     "referenceIdentification" : "3243079284",
     "amount" : -298.18
@@ -74,7 +76,7 @@
     } ]
   },
   "transaction" : {
-    "id" : "68ec56cace2f64368d177934",
+    "id" : "69014026ca84f491f7f20ed3",
     "controlNumber" : "0001",
     "transactionType" : "PAYMENT",
     "productionDate" : "2024-12-23",
@@ -90,28 +92,30 @@
     "transactionSetIdentifierCode" : "835",
     "fileInfo" : {
       "name" : "835-provider-level-adjustment.dat",
-      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/835/835-provider-level-adjustment.dat",
+      "url" : "file:/edi-samples/edi_files/835/835-provider-level-adjustment.dat",
       "lastModifiedDateTime" : "2025-10-12T13:27:35.454-04:00",
       "fileType" : "EDI"
     }
   }
 }
 , {
-  "id" : "68ec56cace2f64368d177936",
+  "id" : "69014026ca84f491f7f20eec",
   "objectType" : "PROVIDER_ADJUSTMENT",
   "providerIdentifier" : "PAYEE_ID99",
   "fiscalPeriodDate" : "2024-12-31",
   "adjustments" : [ {
     "reason" : {
-      "subType" : "PARC",
-      "code" : "WO"
+      "subType" : "PROVIDER_ADJUSTMENT_REASON_CODE",
+      "code" : "WO",
+      "desc" : "Overpayment recovery amount"
     },
     "referenceIdentification" : "3243079284",
     "amount" : 298.18
   }, {
     "reason" : {
-      "subType" : "PARC",
-      "code" : "72"
+      "subType" : "PROVIDER_ADJUSTMENT_REASON_CODE",
+      "code" : "72",
+      "desc" : "Provider refund amount. This adjustment acknowledges a refund received from a provider for previous overpayment."
     },
     "referenceIdentification" : "3243079284",
     "amount" : -298.18
@@ -171,7 +175,7 @@
     } ]
   },
   "transaction" : {
-    "id" : "68ec56cace2f64368d177938",
+    "id" : "69014026ca84f491f7f20ed3",
     "controlNumber" : "0001",
     "transactionType" : "PAYMENT",
     "productionDate" : "2024-12-23",
@@ -187,14 +191,14 @@
     "transactionSetIdentifierCode" : "835",
     "fileInfo" : {
       "name" : "835-provider-level-adjustment.dat",
-      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/835/835-provider-level-adjustment.dat",
+      "url" : "file:/edi-samples/edi_files/835/835-provider-level-adjustment.dat",
       "lastModifiedDateTime" : "2025-10-12T13:27:35.454-04:00",
       "fileType" : "EDI"
     }
   }
 }
 , {
-  "id" : "68ec56cace2f64368d177970",
+  "id" : "69014026ca84f491f7f20f32",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "5554555444",
   "chargeAmount" : 800.00,
@@ -307,7 +311,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "68ec56cace2f64368d17794f",
+    "id" : "69014026ca84f491f7f20ef1",
     "controlNumber" : "0002",
     "transactionType" : "PAYMENT",
     "productionDate" : "2024-12-23",
@@ -328,21 +332,22 @@
     "transactionSetIdentifierCode" : "835",
     "fileInfo" : {
       "name" : "835-provider-level-adjustment.dat",
-      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/835/835-provider-level-adjustment.dat",
+      "url" : "file:/edi-samples/edi_files/835/835-provider-level-adjustment.dat",
       "lastModifiedDateTime" : "2025-10-12T13:27:35.454-04:00",
       "fileType" : "EDI"
     }
   }
 }
 , {
-  "id" : "68ec56cace2f64368d177956",
+  "id" : "69014026ca84f491f7f20f12",
   "objectType" : "PROVIDER_ADJUSTMENT",
   "providerIdentifier" : "PAYEE_ID2",
   "fiscalPeriodDate" : "2023-12-31",
   "adjustments" : [ {
     "reason" : {
-      "subType" : "PARC",
-      "code" : "WO"
+      "subType" : "PROVIDER_ADJUSTMENT_REASON_CODE",
+      "code" : "WO",
+      "desc" : "Overpayment recovery amount"
     },
     "referenceIdentification" : "3243079284",
     "amount" : 298.18
@@ -402,7 +407,7 @@
     } ]
   },
   "transaction" : {
-    "id" : "68ec56cace2f64368d177958",
+    "id" : "69014026ca84f491f7f20ef1",
     "controlNumber" : "0002",
     "transactionType" : "PAYMENT",
     "productionDate" : "2024-12-23",
@@ -423,21 +428,22 @@
     "transactionSetIdentifierCode" : "835",
     "fileInfo" : {
       "name" : "835-provider-level-adjustment.dat",
-      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/835/835-provider-level-adjustment.dat",
+      "url" : "file:/edi-samples/edi_files/835/835-provider-level-adjustment.dat",
       "lastModifiedDateTime" : "2025-10-12T13:27:35.454-04:00",
       "fileType" : "EDI"
     }
   }
 }
 , {
-  "id" : "68ec56cace2f64368d17796c",
+  "id" : "69014026ca84f491f7f20f2a",
   "objectType" : "PROVIDER_ADJUSTMENT",
   "providerIdentifier" : "PAYEE_ID3",
   "fiscalPeriodDate" : "2022-12-31",
   "adjustments" : [ {
     "reason" : {
-      "subType" : "PARC",
-      "code" : "WO"
+      "subType" : "PROVIDER_ADJUSTMENT_REASON_CODE",
+      "code" : "WO",
+      "desc" : "Overpayment recovery amount"
     },
     "referenceIdentification" : "3243079284",
     "amount" : 298.18
@@ -497,7 +503,7 @@
     } ]
   },
   "transaction" : {
-    "id" : "68ec56cace2f64368d17796e",
+    "id" : "69014026ca84f491f7f20f17",
     "controlNumber" : "0003",
     "transactionType" : "PAYMENT",
     "productionDate" : "2024-12-23",
@@ -513,7 +519,7 @@
     "transactionSetIdentifierCode" : "835",
     "fileInfo" : {
       "name" : "835-provider-level-adjustment.dat",
-      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/835/835-provider-level-adjustment.dat",
+      "url" : "file:/edi-samples/edi_files/835/835-provider-level-adjustment.dat",
       "lastModifiedDateTime" : "2025-10-12T13:27:35.454-04:00",
       "fileType" : "EDI"
     }

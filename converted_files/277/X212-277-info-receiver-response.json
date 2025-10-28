@@ -1,0 +1,150 @@
+[
+ {
+  "segment_id" : "ISA",
+  "loop_id" : "0000",
+  "authorization_information_qualifier" : "00",
+  "security_information_qualifier" : "00",
+  "interchange_id_qualifier" : "ZZ",
+  "interchange_sender_id" : "123456789012345",
+  "interchange_id_qualifier_2" : "ZZ",
+  "interchange_receiver_id" : "123456789012346",
+  "interchange_date" : "2008-05-03",
+  "interchange_time" : "17:05",
+  "repetition_separator" : ">",
+  "interchange_control_version_number" : "00501",
+  "interchange_control_number" : 10216,
+  "acknowledgement_requested" : "0",
+  "usage_indicator" : "T",
+  "component_element_separator" : ":"
+}
+, {
+  "segment_id" : "GS",
+  "loop_id" : "0000",
+  "functional_identifier_code" : "HR",
+  "application_sender_code" : "1234567890",
+  "application_receiver_code" : "1234567890",
+  "date" : "2008-05-03",
+  "time" : "17:05",
+  "group_control_number" : 20213,
+  "responsible_agency_code" : "X",
+  "version_identifier_code" : "005010X212"
+}
+, {
+  "segment_id" : "ST",
+  "loop_id" : "0000",
+  "transaction_set_identifier_code" : {
+    "code" : "277",
+    "desc" : "Health Care Claim Status"
+  },
+  "transaction_set_control_number" : "0001",
+  "implementation_convention_reference" : "005010X212",
+  "beginning_of_hierarchical_transaction" : {
+    "segment_id" : "BHT",
+    "loop_id" : "0000",
+    "hierarchical_structure_code" : "0010",
+    "transaction_set_purpose_code" : "08",
+    "submitter_transaction_identifier" : "277X212",
+    "transaction_set_creation_date" : "2005-09-16",
+    "transaction_set_creation_time" : "08:10",
+    "transaction_type_code" : {
+      "code" : "DG"
+    }
+  },
+  "information_source_level" : [ {
+    "segment_id" : "HL",
+    "loop_id" : "2000A",
+    "hierarchical_id_number" : "1",
+    "hierarchical_level_code" : {
+      "code" : "20",
+      "desc" : "Information Source"
+    },
+    "hierarchical_child_code" : {
+      "code" : "1",
+      "desc" : "Contains subordinate segments"
+    },
+    "payer_name" : {
+      "segment_id" : "NM1",
+      "loop_id" : "2100A",
+      "entity_identifier_code" : {
+        "code" : "PR",
+        "desc" : "Payer"
+      },
+      "entity_type_qualifier" : {
+        "code" : "2",
+        "desc" : "Business"
+      },
+      "response_contact_last_or_organization_name" : "ABC INSURANCE",
+      "identification_code_qualifier" : {
+        "code" : "PI",
+        "desc" : "Payor Identification"
+      },
+      "response_contact_identifier" : "12345"
+    },
+    "information_receiver_level" : [ {
+      "segment_id" : "HL",
+      "loop_id" : "2000B",
+      "hierarchical_id_number" : "2",
+      "hierarchical_parent_id_number" : "1",
+      "hierarchical_level_code" : {
+        "code" : "21",
+        "desc" : "Information Receiver"
+      },
+      "hierarchical_child_code" : {
+        "code" : "0",
+        "desc" : "No subordinate segments"
+      },
+      "information_receiver_name" : {
+        "segment_id" : "NM1",
+        "loop_id" : "2100B",
+        "entity_identifier_code" : {
+          "code" : "41",
+          "desc" : "Submitter"
+        },
+        "entity_type_qualifier" : {
+          "code" : "2",
+          "desc" : "Business"
+        },
+        "response_contact_last_or_organization_name" : "XYZ SERVICE",
+        "identification_code_qualifier" : {
+          "code" : "46",
+          "desc" : "Electronic Transmitter Identification Number (ETIN)"
+        },
+        "response_contact_identifier" : "X67E"
+      },
+      "information_receiver_trace_identifier" : {
+        "segment_id" : "TRN",
+        "loop_id" : "2200B",
+        "trace_type_code" : "2",
+        "current_transaction_trace_number" : "ABC276XXX",
+        "information_receiver_status_information" : [ {
+          "segment_id" : "STC",
+          "loop_id" : "2200B",
+          "health_care_claim_status" : {
+            "health_care_claim_status_category_code" : "E0",
+            "status_code" : "0"
+          },
+          "date" : "2005-09-16"
+        } ]
+      }
+    } ]
+  } ],
+  "transaction_set_trailer" : {
+    "segment_id" : "SE",
+    "loop_id" : "0000",
+    "number_of_included_segments" : 9,
+    "transaction_set_control_number" : "0001"
+  }
+}
+, {
+  "segment_id" : "GE",
+  "loop_id" : "0000",
+  "number_of_transaction_sets_included" : 1,
+  "group_control_number" : 20213
+}
+, {
+  "segment_id" : "IEA",
+  "loop_id" : "0000",
+  "number_of_included_functional_groups" : 1,
+  "interchange_control_number" : 10216
+}
+ ]

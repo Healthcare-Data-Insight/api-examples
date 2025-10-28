@@ -1,6 +1,6 @@
 [
  {
-  "id" : "685d7e7ab20b946549f1afe5",
+  "id" : "6900e06c1db901318a16f71c",
   "objectType" : "CLAIM_STATUS",
   "patient" : {
     "entityRole" : "PATIENT",
@@ -62,9 +62,10 @@
     "middleName" : "B"
   },
   "transaction" : {
-    "id" : "685d7e7ab20b946549f1afcd",
+    "id" : "6900e06c1db901318a16f704",
     "controlNumber" : "0003",
     "transactionType" : "CLAIM_ACK",
+    "hierarchicalStructureCode" : "0085",
     "purposeCode" : "08",
     "creationDate" : "2023-02-21",
     "creationTime" : "10:25:00",
@@ -91,7 +92,7 @@
   }
 }
 , {
-  "id" : "685d7e7ab20b946549f1afed",
+  "id" : "6900e06c1db901318a16f724",
   "objectType" : "CLAIM_STATUS",
   "patient" : {
     "entityRole" : "PATIENT",
@@ -153,9 +154,10 @@
     "middleName" : "B"
   },
   "transaction" : {
-    "id" : "685d7e7ab20b946549f1afcd",
+    "id" : "6900e06c1db901318a16f704",
     "controlNumber" : "0003",
     "transactionType" : "CLAIM_ACK",
+    "hierarchicalStructureCode" : "0085",
     "purposeCode" : "08",
     "creationDate" : "2023-02-21",
     "creationTime" : "10:25:00",
@@ -182,7 +184,7 @@
   }
 }
 , {
-  "id" : "685d7e7ab20b946549f1aff4",
+  "id" : "6900e06c1db901318a16f72b",
   "objectType" : "CLAIM_STATUS",
   "patient" : {
     "entityRole" : "PATIENT",
@@ -246,9 +248,10 @@
     "middleName" : "B"
   },
   "transaction" : {
-    "id" : "685d7e7ab20b946549f1afcd",
+    "id" : "6900e06c1db901318a16f704",
     "controlNumber" : "0003",
     "transactionType" : "CLAIM_ACK",
+    "hierarchicalStructureCode" : "0085",
     "purposeCode" : "08",
     "creationDate" : "2023-02-21",
     "creationTime" : "10:25:00",
@@ -275,7 +278,7 @@
   }
 }
 , {
-  "id" : "685d7e7ab20b946549f1affb",
+  "id" : "6900e06c1db901318a16f732",
   "objectType" : "CLAIM_STATUS",
   "patient" : {
     "entityRole" : "PATIENT",
@@ -337,9 +340,10 @@
     "middleName" : "B"
   },
   "transaction" : {
-    "id" : "685d7e7ab20b946549f1afcd",
+    "id" : "6900e06c1db901318a16f704",
     "controlNumber" : "0003",
     "transactionType" : "CLAIM_ACK",
+    "hierarchicalStructureCode" : "0085",
     "purposeCode" : "08",
     "creationDate" : "2023-02-21",
     "creationTime" : "10:25:00",
@@ -366,7 +370,7 @@
   }
 }
 , {
-  "id" : "685d7e7ab20b946549f1b003",
+  "id" : "6900e06c1db901318a16f73a",
   "objectType" : "CLAIM_STATUS",
   "patient" : {
     "entityRole" : "PATIENT",
@@ -428,9 +432,10 @@
     "middleName" : "B"
   },
   "transaction" : {
-    "id" : "685d7e7ab20b946549f1afcd",
+    "id" : "6900e06c1db901318a16f704",
     "controlNumber" : "0003",
     "transactionType" : "CLAIM_ACK",
+    "hierarchicalStructureCode" : "0085",
     "purposeCode" : "08",
     "creationDate" : "2023-02-21",
     "creationTime" : "10:25:00",

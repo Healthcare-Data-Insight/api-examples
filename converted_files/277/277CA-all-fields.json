@@ -1,7 +1,7 @@
 [
  {
   "objectType" : "PROVIDER_STATUS",
-  "id" : "685d7e7ab20b946549f1af77",
+  "id" : "6900e06c1db901318a16f6a8",
   "provider" : {
     "entityRole" : "BILLING_PROVIDER",
     "entityType" : "INDIVIDUAL",
@@ -28,9 +28,10 @@
     "rejectedAmount" : 150.00
   },
   "transaction" : {
-    "id" : "685d7e7ab20b946549f1af65",
+    "id" : "6900e06c1db901318a16f696",
     "controlNumber" : "0004",
     "transactionType" : "CLAIM_ACK",
+    "hierarchicalStructureCode" : "0085",
     "purposeCode" : "08",
     "creationDate" : "2023-03-21",
     "creationTime" : "10:25:00",
@@ -85,7 +86,7 @@
   }
 }
 , {
-  "id" : "685d7e7ab20b946549f1af8b",
+  "id" : "6900e06c1db901318a16f6bc",
   "objectType" : "CLAIM_STATUS",
   "patient" : {
     "entityRole" : "PATIENT",
@@ -232,9 +233,10 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "685d7e7ab20b946549f1af65",
+    "id" : "6900e06c1db901318a16f696",
     "controlNumber" : "0004",
     "transactionType" : "CLAIM_ACK",
+    "hierarchicalStructureCode" : "0085",
     "purposeCode" : "08",
     "creationDate" : "2023-03-21",
     "creationTime" : "10:25:00",
@@ -261,7 +263,7 @@
   }
 }
 , {
-  "id" : "685d7e7ab20b946549f1af9d",
+  "id" : "6900e06c1db901318a16f6ce",
   "objectType" : "CLAIM_STATUS",
   "patient" : {
     "entityRole" : "PATIENT",
@@ -343,9 +345,10 @@
     "rejectedAmount" : 150.00
   },
   "transaction" : {
-    "id" : "685d7e7ab20b946549f1af65",
+    "id" : "6900e06c1db901318a16f696",
     "controlNumber" : "0004",
     "transactionType" : "CLAIM_ACK",
+    "hierarchicalStructureCode" : "0085",
     "purposeCode" : "08",
     "creationDate" : "2023-03-21",
     "creationTime" : "10:25:00",
@@ -372,7 +375,7 @@
   }
 }
 , {
-  "id" : "685d7e7ab20b946549f1afa4",
+  "id" : "6900e06c1db901318a16f6d5",
   "objectType" : "CLAIM_STATUS",
   "patient" : {
     "entityRole" : "PATIENT",
@@ -451,9 +454,10 @@
     "rejectedAmount" : 150.00
   },
   "transaction" : {
-    "id" : "685d7e7ab20b946549f1af65",
+    "id" : "6900e06c1db901318a16f696",
     "controlNumber" : "0004",
     "transactionType" : "CLAIM_ACK",
+    "hierarchicalStructureCode" : "0085",
     "purposeCode" : "08",
     "creationDate" : "2023-03-21",
     "creationTime" : "10:25:00",
@@ -480,7 +484,7 @@
   }
 }
 , {
-  "id" : "685d7e7ab20b946549f1afab",
+  "id" : "6900e06c1db901318a16f6dc",
   "objectType" : "CLAIM_STATUS",
   "patient" : {
     "entityRole" : "PATIENT",
@@ -560,9 +564,10 @@
     "rejectedAmount" : 150.00
   },
   "transaction" : {
-    "id" : "685d7e7ab20b946549f1af65",
+    "id" : "6900e06c1db901318a16f696",
     "controlNumber" : "0004",
     "transactionType" : "CLAIM_ACK",
+    "hierarchicalStructureCode" : "0085",
     "purposeCode" : "08",
     "creationDate" : "2023-03-21",
     "creationTime" : "10:25:00",
@@ -589,7 +594,7 @@
   }
 }
 , {
-  "id" : "685d7e7ab20b946549f1afb3",
+  "id" : "6900e06c1db901318a16f6e4",
   "objectType" : "CLAIM_STATUS",
   "patient" : {
     "entityRole" : "PATIENT",
@@ -669,9 +674,10 @@
     "rejectedAmount" : 150.00
   },
   "transaction" : {
-    "id" : "685d7e7ab20b946549f1af65",
+    "id" : "6900e06c1db901318a16f696",
     "controlNumber" : "0004",
     "transactionType" : "CLAIM_ACK",
+    "hierarchicalStructureCode" : "0085",
     "purposeCode" : "08",
     "creationDate" : "2023-03-21",
     "creationTime" : "10:25:00",
@@ -698,7 +704,7 @@
   }
 }
 , {
-  "id" : "685d7e7ab20b946549f1afc5",
+  "id" : "6900e06c1db901318a16f6f6",
   "objectType" : "CLAIM_STATUS",
   "patient" : {
     "entityRole" : "PATIENT",
@@ -783,9 +789,10 @@
     "rejectedAmount" : 150.00
   },
   "transaction" : {
-    "id" : "685d7e7ab20b946549f1af65",
+    "id" : "6900e06c1db901318a16f696",
     "controlNumber" : "0004",
     "transactionType" : "CLAIM_ACK",
+    "hierarchicalStructureCode" : "0085",
     "purposeCode" : "08",
     "creationDate" : "2023-03-21",
     "creationTime" : "10:25:00",

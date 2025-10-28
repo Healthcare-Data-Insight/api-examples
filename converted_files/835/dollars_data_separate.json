@@ -1,6 +1,6 @@
 [
  {
-  "id" : "68ec56cace2f64368d177a2a",
+  "id" : "69014026ca84f491f7f21017",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "5554555444",
   "chargeAmount" : 800.00,
@@ -96,7 +96,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "68ec56cace2f64368d177a18",
+    "id" : "69014026ca84f491f7f20fec",
     "controlNumber" : "112233",
     "transactionType" : "PAYMENT",
     "productionDate" : "2019-03-14",
@@ -116,14 +116,14 @@
     "transactionSetIdentifierCode" : "835",
     "fileInfo" : {
       "name" : "dollars_data_separate.dat",
-      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/835/dollars_data_separate.dat",
+      "url" : "file:/edi-samples/edi_files/835/dollars_data_separate.dat",
       "lastModifiedDateTime" : "2023-08-28T03:50:07.198-04:00",
       "fileType" : "EDI"
     }
   }
 }
 , {
-  "id" : "68ec56cace2f64368d177a2b",
+  "id" : "69014026ca84f491f7f21018",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "8765432112",
   "chargeAmount" : 1200.00,
@@ -218,7 +218,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "68ec56cace2f64368d177a22",
+    "id" : "69014026ca84f491f7f20fec",
     "controlNumber" : "112233",
     "transactionType" : "PAYMENT",
     "productionDate" : "2019-03-14",
@@ -238,7 +238,7 @@
     "transactionSetIdentifierCode" : "835",
     "fileInfo" : {
       "name" : "dollars_data_separate.dat",
-      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/835/dollars_data_separate.dat",
+      "url" : "file:/edi-samples/edi_files/835/dollars_data_separate.dat",
       "lastModifiedDateTime" : "2023-08-28T03:50:07.198-04:00",
       "fileType" : "EDI"
     }

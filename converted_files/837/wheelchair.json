@@ -1,6 +1,6 @@
 [
  {
-  "id" : "685d7ce9fc42e4481ffb4fd8",
+  "id" : "690148887e79911955eaf53f",
   "objectType" : "CLAIM",
   "patientControlNumber" : "SMI123",
   "chargeAmount" : 75.00,
@@ -22,7 +22,7 @@
     "claimFilingIndicatorCode" : "MB",
     "insurancePlanType" : "MEDICARE_B",
     "person" : {
-      "entityRole" : "SUBSCRIBER",
+      "entityRole" : "INSURED_SUBSCRIBER",
       "entityType" : "INDIVIDUAL",
       "identificationType" : "MEMBER_ID",
       "identifier" : "987654321A",
@@ -123,6 +123,7 @@
         "zipCode" : "47905"
       },
       "contacts" : [ {
+        "functionCode" : "IC",
         "name" : "LEE",
         "contactNumbers" : [ {
           "type" : "PHONE",
@@ -149,9 +150,10 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "685d7ce9fc42e4481ffb4fac",
+    "id" : "690148887e79911955eaf511",
     "controlNumber" : "112233",
     "transactionType" : "PROF",
+    "hierarchicalStructureCode" : "0019",
     "purposeCode" : "00",
     "originatorApplicationTransactionId" : "16",
     "creationDate" : "2005-03-26",
@@ -172,6 +174,7 @@
       "identifier" : "ABC55",
       "lastNameOrOrgName" : "XYZ WHEELCHAIRS INC",
       "contacts" : [ {
+        "functionCode" : "IC",
         "name" : "JANE",
         "contactNumbers" : [ {
           "type" : "PHONE",

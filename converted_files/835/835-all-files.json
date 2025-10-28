@@ -1,20 +1,22 @@
 [
  {
-  "id" : "68ec56c9ce2f64368d17713d",
+  "id" : "69014025ca84f491f7f20370",
   "objectType" : "PROVIDER_ADJUSTMENT",
   "providerIdentifier" : "PAYEE_ID1",
   "fiscalPeriodDate" : "2024-12-31",
   "adjustments" : [ {
     "reason" : {
-      "subType" : "PARC",
-      "code" : "WO"
+      "subType" : "PROVIDER_ADJUSTMENT_REASON_CODE",
+      "code" : "WO",
+      "desc" : "Overpayment recovery amount"
     },
     "referenceIdentification" : "3243079284",
     "amount" : 298.18
   }, {
     "reason" : {
-      "subType" : "PARC",
-      "code" : "72"
+      "subType" : "PROVIDER_ADJUSTMENT_REASON_CODE",
+      "code" : "72",
+      "desc" : "Provider refund amount. This adjustment acknowledges a refund received from a provider for previous overpayment."
     },
     "referenceIdentification" : "3243079284",
     "amount" : -298.18
@@ -74,7 +76,7 @@
     } ]
   },
   "transaction" : {
-    "id" : "68ec56c9ce2f64368d17713f",
+    "id" : "69014025ca84f491f7f2035d",
     "controlNumber" : "0001",
     "transactionType" : "PAYMENT",
     "productionDate" : "2024-12-23",
@@ -90,28 +92,30 @@
     "transactionSetIdentifierCode" : "835",
     "fileInfo" : {
       "name" : "835-provider-level-adjustment.dat",
-      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/835/835-provider-level-adjustment.dat",
+      "url" : "file:/edi-samples/edi_files/835/835-provider-level-adjustment.dat",
       "lastModifiedDateTime" : "2025-10-12T13:27:35.454-04:00",
       "fileType" : "EDI"
     }
   }
 }
 , {
-  "id" : "68ec56c9ce2f64368d177141",
+  "id" : "69014025ca84f491f7f20376",
   "objectType" : "PROVIDER_ADJUSTMENT",
   "providerIdentifier" : "PAYEE_ID99",
   "fiscalPeriodDate" : "2024-12-31",
   "adjustments" : [ {
     "reason" : {
-      "subType" : "PARC",
-      "code" : "WO"
+      "subType" : "PROVIDER_ADJUSTMENT_REASON_CODE",
+      "code" : "WO",
+      "desc" : "Overpayment recovery amount"
     },
     "referenceIdentification" : "3243079284",
     "amount" : 298.18
   }, {
     "reason" : {
-      "subType" : "PARC",
-      "code" : "72"
+      "subType" : "PROVIDER_ADJUSTMENT_REASON_CODE",
+      "code" : "72",
+      "desc" : "Provider refund amount. This adjustment acknowledges a refund received from a provider for previous overpayment."
     },
     "referenceIdentification" : "3243079284",
     "amount" : -298.18
@@ -171,7 +175,7 @@
     } ]
   },
   "transaction" : {
-    "id" : "68ec56c9ce2f64368d177143",
+    "id" : "69014025ca84f491f7f2035d",
     "controlNumber" : "0001",
     "transactionType" : "PAYMENT",
     "productionDate" : "2024-12-23",
@@ -187,14 +191,14 @@
     "transactionSetIdentifierCode" : "835",
     "fileInfo" : {
       "name" : "835-provider-level-adjustment.dat",
-      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/835/835-provider-level-adjustment.dat",
+      "url" : "file:/edi-samples/edi_files/835/835-provider-level-adjustment.dat",
       "lastModifiedDateTime" : "2025-10-12T13:27:35.454-04:00",
       "fileType" : "EDI"
     }
   }
 }
 , {
-  "id" : "68ec56c9ce2f64368d17717b",
+  "id" : "69014025ca84f491f7f203bc",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "5554555444",
   "chargeAmount" : 800.00,
@@ -307,7 +311,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "68ec56c9ce2f64368d17715a",
+    "id" : "69014025ca84f491f7f2037b",
     "controlNumber" : "0002",
     "transactionType" : "PAYMENT",
     "productionDate" : "2024-12-23",
@@ -328,21 +332,22 @@
     "transactionSetIdentifierCode" : "835",
     "fileInfo" : {
       "name" : "835-provider-level-adjustment.dat",
-      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/835/835-provider-level-adjustment.dat",
+      "url" : "file:/edi-samples/edi_files/835/835-provider-level-adjustment.dat",
       "lastModifiedDateTime" : "2025-10-12T13:27:35.454-04:00",
       "fileType" : "EDI"
     }
   }
 }
 , {
-  "id" : "68ec56c9ce2f64368d177161",
+  "id" : "69014025ca84f491f7f2039c",
   "objectType" : "PROVIDER_ADJUSTMENT",
   "providerIdentifier" : "PAYEE_ID2",
   "fiscalPeriodDate" : "2023-12-31",
   "adjustments" : [ {
     "reason" : {
-      "subType" : "PARC",
-      "code" : "WO"
+      "subType" : "PROVIDER_ADJUSTMENT_REASON_CODE",
+      "code" : "WO",
+      "desc" : "Overpayment recovery amount"
     },
     "referenceIdentification" : "3243079284",
     "amount" : 298.18
@@ -402,7 +407,7 @@
     } ]
   },
   "transaction" : {
-    "id" : "68ec56c9ce2f64368d177163",
+    "id" : "69014025ca84f491f7f2037b",
     "controlNumber" : "0002",
     "transactionType" : "PAYMENT",
     "productionDate" : "2024-12-23",
@@ -423,21 +428,22 @@
     "transactionSetIdentifierCode" : "835",
     "fileInfo" : {
       "name" : "835-provider-level-adjustment.dat",
-      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/835/835-provider-level-adjustment.dat",
+      "url" : "file:/edi-samples/edi_files/835/835-provider-level-adjustment.dat",
       "lastModifiedDateTime" : "2025-10-12T13:27:35.454-04:00",
       "fileType" : "EDI"
     }
   }
 }
 , {
-  "id" : "68ec56c9ce2f64368d177177",
+  "id" : "69014025ca84f491f7f203b4",
   "objectType" : "PROVIDER_ADJUSTMENT",
   "providerIdentifier" : "PAYEE_ID3",
   "fiscalPeriodDate" : "2022-12-31",
   "adjustments" : [ {
     "reason" : {
-      "subType" : "PARC",
-      "code" : "WO"
+      "subType" : "PROVIDER_ADJUSTMENT_REASON_CODE",
+      "code" : "WO",
+      "desc" : "Overpayment recovery amount"
     },
     "referenceIdentification" : "3243079284",
     "amount" : 298.18
@@ -497,7 +503,7 @@
     } ]
   },
   "transaction" : {
-    "id" : "68ec56c9ce2f64368d177179",
+    "id" : "69014025ca84f491f7f203a1",
     "controlNumber" : "0003",
     "transactionType" : "PAYMENT",
     "productionDate" : "2024-12-23",
@@ -513,14 +519,14 @@
     "transactionSetIdentifierCode" : "835",
     "fileInfo" : {
       "name" : "835-provider-level-adjustment.dat",
-      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/835/835-provider-level-adjustment.dat",
+      "url" : "file:/edi-samples/edi_files/835/835-provider-level-adjustment.dat",
       "lastModifiedDateTime" : "2025-10-12T13:27:35.454-04:00",
       "fileType" : "EDI"
     }
   }
 }
 , {
-  "id" : "68ec56c9ce2f64368d1771a2",
+  "id" : "69014025ca84f491f7f203ed",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "PATACCT",
   "chargeAmount" : 400.00,
@@ -643,7 +649,7 @@
       "reason" : {
         "subType" : "CARC",
         "code" : "45",
-        "desc" : "Charge exceeds fee schedule/maximum allowable or contracted/legislated fee arrangement."
+        "desc" : "Charge exceeds fee schedule/maximum allowable or contracted/legislated fee arrangement. Usage: This adjustment amount cannot equal the total service or claim charge amount; and must not duplicate provider adjustment amounts (payments and contractual reductions) that have resulted from prior payer(s) adjudication. (Use only with Group Codes PR or CO depending upon liability)"
       },
       "amount" : 70.00
     } ]
@@ -662,7 +668,7 @@
       "reason" : {
         "subType" : "CARC",
         "code" : "204",
-        "desc" : "This service/equipment/drug is not covered under the patients current benefit plan"
+        "desc" : "This service/equipment/drug is not covered under the patient's current benefit plan"
       },
       "amount" : 100.00
     } ]
@@ -682,13 +688,13 @@
       "reason" : {
         "subType" : "CARC",
         "code" : "97",
-        "desc" : "The benefit for this service is included in the payment/allowance for another service/procedure that has already been adjudicated."
+        "desc" : "The benefit for this service is included in the payment/allowance for another service/procedure that has already been adjudicated. Usage: Refer to the 835 Healthcare Policy Identification Segment (loop 2110 Service Payment Information REF), if present."
       },
       "amount" : 150.00
     } ]
   } ],
   "transaction" : {
-    "id" : "68ec56c9ce2f64368d177191",
+    "id" : "69014025ca84f491f7f203c1",
     "controlNumber" : "10060875",
     "transactionType" : "PAYMENT",
     "productionDate" : "2019-08-27",
@@ -703,14 +709,14 @@
     "transactionSetIdentifierCode" : "835",
     "fileInfo" : {
       "name" : "claim_adj_reason.dat",
-      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/835/claim_adj_reason.dat",
+      "url" : "file:/edi-samples/edi_files/835/claim_adj_reason.dat",
       "lastModifiedDateTime" : "2023-08-28T03:50:07.198-04:00",
       "fileType" : "EDI"
     }
   }
 }
 , {
-  "id" : "68ec56c9ce2f64368d1771c4",
+  "id" : "69014025ca84f491f7f20419",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "PATACCT",
   "chargeAmount" : 40000.00,
@@ -824,7 +830,7 @@
     "reason" : {
       "subType" : "CARC",
       "code" : "45",
-      "desc" : "Charge exceeds fee schedule/maximum allowable or contracted/legislated fee arrangement."
+      "desc" : "Charge exceeds fee schedule/maximum allowable or contracted/legislated fee arrangement. Usage: This adjustment amount cannot equal the total service or claim charge amount; and must not duplicate provider adjustment amounts (payments and contractual reductions) that have resulted from prior payer(s) adjudication. (Use only with Group Codes PR or CO depending upon liability)"
     },
     "amount" : 30000.00
   } ],
@@ -840,7 +846,7 @@
   } ],
   "serviceLines" : [ ],
   "transaction" : {
-    "id" : "68ec56c9ce2f64368d1771b8",
+    "id" : "69014025ca84f491f7f203f2",
     "controlNumber" : "10060875",
     "transactionType" : "PAYMENT",
     "productionDate" : "2019-08-27",
@@ -855,14 +861,14 @@
     "transactionSetIdentifierCode" : "835",
     "fileInfo" : {
       "name" : "not_covered_inpatient.dat",
-      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/835/not_covered_inpatient.dat",
+      "url" : "file:/edi-samples/edi_files/835/not_covered_inpatient.dat",
       "lastModifiedDateTime" : "2023-08-28T03:50:07.199-04:00",
       "fileType" : "EDI"
     }
   }
 }
 , {
-  "id" : "68ec56c9ce2f64368d177212",
+  "id" : "69014025ca84f491f7f20471",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "7722337",
   "chargeAmount" : 226.00,
@@ -1002,7 +1008,7 @@
     "reason" : {
       "subType" : "CARC",
       "code" : "45",
-      "desc" : "Charge exceeds fee schedule/maximum allowable or contracted/legislated fee arrangement."
+      "desc" : "Charge exceeds fee schedule/maximum allowable or contracted/legislated fee arrangement. Usage: This adjustment amount cannot equal the total service or claim charge amount; and must not duplicate provider adjustment amounts (payments and contractual reductions) that have resulted from prior payer(s) adjudication. (Use only with Group Codes PR or CO depending upon liability)"
     },
     "amount" : 30000.00
   }, {
@@ -1251,7 +1257,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "68ec56c9ce2f64368d1771dd",
+    "id" : "69014025ca84f491f7f2041e",
     "controlNumber" : "35681",
     "transactionType" : "PAYMENT",
     "productionDate" : "2019-03-14",
@@ -1267,14 +1273,14 @@
     "transactionSetIdentifierCode" : "835",
     "fileInfo" : {
       "name" : "negotiated_discount.dat",
-      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/835/negotiated_discount.dat",
+      "url" : "file:/edi-samples/edi_files/835/negotiated_discount.dat",
       "lastModifiedDateTime" : "2025-07-03T18:09:16.075-04:00",
       "fileType" : "EDI"
     }
   }
 }
 , {
-  "id" : "68ec56c9ce2f64368d177235",
+  "id" : "69014025ca84f491f7f204a1",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "5554555444",
   "chargeAmount" : 800.00,
@@ -1370,7 +1376,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "68ec56c9ce2f64368d177223",
+    "id" : "69014025ca84f491f7f20476",
     "controlNumber" : "112233",
     "transactionType" : "PAYMENT",
     "productionDate" : "2019-03-14",
@@ -1390,14 +1396,14 @@
     "transactionSetIdentifierCode" : "835",
     "fileInfo" : {
       "name" : "dollars_data_separate.dat",
-      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/835/dollars_data_separate.dat",
+      "url" : "file:/edi-samples/edi_files/835/dollars_data_separate.dat",
       "lastModifiedDateTime" : "2023-08-28T03:50:07.198-04:00",
       "fileType" : "EDI"
     }
   }
 }
 , {
-  "id" : "68ec56c9ce2f64368d177236",
+  "id" : "69014025ca84f491f7f204a2",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "8765432112",
   "chargeAmount" : 1200.00,
@@ -1492,7 +1498,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "68ec56c9ce2f64368d17722d",
+    "id" : "69014025ca84f491f7f20476",
     "controlNumber" : "112233",
     "transactionType" : "PAYMENT",
     "productionDate" : "2019-03-14",
@@ -1512,14 +1518,14 @@
     "transactionSetIdentifierCode" : "835",
     "fileInfo" : {
       "name" : "dollars_data_separate.dat",
-      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/835/dollars_data_separate.dat",
+      "url" : "file:/edi-samples/edi_files/835/dollars_data_separate.dat",
       "lastModifiedDateTime" : "2023-08-28T03:50:07.198-04:00",
       "fileType" : "EDI"
     }
   }
 }
 , {
-  "id" : "68ec56c9ce2f64368d177259",
+  "id" : "69014025ca84f491f7f204cf",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "PATACCT",
   "chargeAmount" : 150.00,
@@ -1638,7 +1644,7 @@
       "reason" : {
         "subType" : "CARC",
         "code" : "252",
-        "desc" : "An attachment/other documentation is required to adjudicate this claim/service."
+        "desc" : "An attachment/other documentation is required to adjudicate this claim/service. At least one Remark Code must be provided (may be comprised of either the NCPDP Reject Reason Code, or Remittance Advice Remark Code that is not an ALERT)."
       },
       "amount" : 150.00
     } ],
@@ -1655,7 +1661,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "68ec56c9ce2f64368d17724c",
+    "id" : "69014025ca84f491f7f204a7",
     "controlNumber" : "10060875",
     "transactionType" : "PAYMENT",
     "productionDate" : "2019-08-27",
@@ -1670,14 +1676,14 @@
     "transactionSetIdentifierCode" : "835",
     "fileInfo" : {
       "name" : "835-denial.dat",
-      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/835/835-denial.dat",
+      "url" : "file:/edi-samples/edi_files/835/835-denial.dat",
       "lastModifiedDateTime" : "2025-09-22T10:36:36.673-04:00",
       "fileType" : "EDI"
     }
   }
 }
 , {
-  "id" : "68ec56c9ce2f64368d1772bb",
+  "id" : "69014025ca84f491f7f2053b",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "7722337",
   "chargeAmount" : 226.00,
@@ -1891,7 +1897,7 @@
     "reason" : {
       "subType" : "CARC",
       "code" : "45",
-      "desc" : "Charge exceeds fee schedule/maximum allowable or contracted/legislated fee arrangement."
+      "desc" : "Charge exceeds fee schedule/maximum allowable or contracted/legislated fee arrangement. Usage: This adjustment amount cannot equal the total service or claim charge amount; and must not duplicate provider adjustment amounts (payments and contractual reductions) that have resulted from prior payer(s) adjudication. (Use only with Group Codes PR or CO depending upon liability)"
     },
     "amount" : 30000.00
   }, {
@@ -2192,7 +2198,7 @@
     }
   } ],
   "transaction" : {
-    "id" : "68ec56c9ce2f64368d177273",
+    "id" : "69014025ca84f491f7f204d4",
     "controlNumber" : "35681",
     "transactionType" : "PAYMENT",
     "productionDate" : "2019-03-14",
@@ -2213,8 +2219,8 @@
     "transactionSetIdentifierCode" : "835",
     "fileInfo" : {
       "name" : "835-all-fields.dat",
-      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/835/835-all-fields.dat",
-      "lastModifiedDateTime" : "2025-10-12T18:40:42.875-04:00",
+      "url" : "file:/edi-samples/edi_files/835/835-all-fields.dat",
+      "lastModifiedDateTime" : "2025-10-17T17:22:31.668-04:00",
       "fileType" : "EDI"
     }
   }

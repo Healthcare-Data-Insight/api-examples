@@ -1,6 +1,6 @@
 [
  {
-  "id" : "685d7ce9fc42e4481ffb4f27",
+  "id" : "690148887e79911955eaf482",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26462967",
   "chargeAmount" : 100.00,
@@ -23,7 +23,7 @@
     "claimFilingIndicatorCode" : "HM",
     "insurancePlanType" : "HMO",
     "person" : {
-      "entityRole" : "SUBSCRIBER",
+      "entityRole" : "INSURED_SUBSCRIBER",
       "entityType" : "INDIVIDUAL",
       "identificationType" : "MEMBER_ID",
       "identifier" : "00221111",
@@ -50,8 +50,8 @@
   "assignmentParticipationCode" : "A",
   "assignmentCertificationIndicator" : "Y",
   "releaseOfInformationCode" : "I",
-  "onsetOfCurrentIllnessOrInjuryDate" : "1998-10-03",
   "clearinghouseTraceNumber" : "17312345600006351",
+  "onsetOfCurrentIllnessOrInjuryDate" : "1998-10-03",
   "billingProvider" : {
     "entityRole" : "BILLING_PROVIDER",
     "entityType" : "BUSINESS",
@@ -165,9 +165,10 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "685d7ce9fc42e4481ffb4ebc",
+    "id" : "690148887e79911955eaf411",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
+    "hierarchicalStructureCode" : "0019",
     "purposeCode" : "00",
     "originatorApplicationTransactionId" : "0123",
     "creationDate" : "2006-10-15",
@@ -188,6 +189,7 @@
       "identifier" : "TGJ23",
       "lastNameOrOrgName" : "PREMIER BILLING SERVICE",
       "contacts" : [ {
+        "functionCode" : "IC",
         "name" : "JERRY",
         "contactNumbers" : [ {
           "type" : "PHONE",
@@ -209,7 +211,7 @@
   }
 }
 , {
-  "id" : "685d7ce9fc42e4481ffb4f28",
+  "id" : "690148887e79911955eaf483",
   "objectType" : "CLAIM",
   "patientControlNumber" : "125WILL",
   "chargeAmount" : 145.50,
@@ -231,7 +233,7 @@
     "claimFilingIndicatorCode" : "MB",
     "insurancePlanType" : "MEDICARE_B",
     "person" : {
-      "entityRole" : "SUBSCRIBER",
+      "entityRole" : "INSURED_SUBSCRIBER",
       "entityType" : "INDIVIDUAL",
       "identificationType" : "MEMBER_ID",
       "identifier" : "123456789A",
@@ -278,6 +280,7 @@
       "zipCode" : "21236"
     },
     "contacts" : [ {
+      "functionCode" : "IC",
       "name" : "DR",
       "contactNumbers" : [ {
         "type" : "PHONE",
@@ -311,9 +314,10 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "685d7ce9fc42e4481ffb4ee7",
+    "id" : "690148887e79911955eaf43e",
     "controlNumber" : "3701",
     "transactionType" : "PROF",
+    "hierarchicalStructureCode" : "0019",
     "purposeCode" : "00",
     "originatorApplicationTransactionId" : "007227",
     "creationDate" : "2005-02-15",
@@ -334,6 +338,7 @@
       "identifier" : "S01057",
       "lastNameOrOrgName" : "DAVID GREEN",
       "contacts" : [ {
+        "functionCode" : "IC",
         "name" : "KATHY SMITH",
         "contactNumbers" : [ {
           "type" : "PHONE",
@@ -352,7 +357,7 @@
   }
 }
 , {
-  "id" : "685d7ce9fc42e4481ffb4f29",
+  "id" : "690148887e79911955eaf484",
   "objectType" : "CLAIM",
   "patientControlNumber" : "153829140",
   "chargeAmount" : 827.00,
@@ -374,7 +379,7 @@
     "claimFilingIndicatorCode" : "MB",
     "insurancePlanType" : "MEDICARE_B",
     "person" : {
-      "entityRole" : "SUBSCRIBER",
+      "entityRole" : "INSURED_SUBSCRIBER",
       "entityType" : "INDIVIDUAL",
       "identificationType" : "MEMBER_ID",
       "identifier" : "123456789A",
@@ -514,9 +519,10 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "685d7ce9fc42e4481ffb4f06",
+    "id" : "690148887e79911955eaf45f",
     "controlNumber" : "0001",
     "transactionType" : "PROF",
+    "hierarchicalStructureCode" : "0019",
     "purposeCode" : "00",
     "originatorApplicationTransactionId" : "0123",
     "creationDate" : "2005-01-17",
@@ -537,6 +543,7 @@
       "identifier" : "N305",
       "lastNameOrOrgName" : "PROVIDER MEDICAL GROUP",
       "contacts" : [ {
+        "functionCode" : "IC",
         "name" : "NINA",
         "contactNumbers" : [ {
           "type" : "PHONE",

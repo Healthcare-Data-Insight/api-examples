@@ -1,6 +1,6 @@
 [
  {
-  "id" : "685d571fe29351212dc467f0",
+  "id" : "690141e87c0fb18b0499f86e",
   "objectType" : "MEMBER_COVERAGE",
   "sponsor" : {
     "entityRole" : "PLAN_SPONSOR",
@@ -42,6 +42,7 @@
       "zipCode" : "171110000"
     },
     "contacts" : [ {
+      "functionCode" : "IP",
       "contactNumbers" : [ {
         "type" : "HOME_PHONE",
         "number" : "7172343334"
@@ -73,7 +74,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "685d571fe29351212dc467eb",
+    "id" : "690141e87c0fb18b0499f867",
     "controlNumber" : "12345",
     "transactionType" : "MEMBER_COVERAGE",
     "purposeCode" : "00",
@@ -93,7 +94,7 @@
   }
 }
 , {
-  "id" : "685d571fe29351212dc46800",
+  "id" : "690141e87c0fb18b0499f880",
   "objectType" : "MEMBER_COVERAGE",
   "sponsor" : {
     "entityRole" : "PLAN_SPONSOR",
@@ -135,6 +136,7 @@
       "zipCode" : "171110000"
     },
     "contacts" : [ {
+      "functionCode" : "IP",
       "contactNumbers" : [ {
         "type" : "HOME_PHONE",
         "number" : "7172343334"
@@ -166,7 +168,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "685d571fe29351212dc467eb",
+    "id" : "690141e87c0fb18b0499f867",
     "controlNumber" : "12345",
     "transactionType" : "MEMBER_COVERAGE",
     "purposeCode" : "00",
@@ -186,7 +188,7 @@
   }
 }
 , {
-  "id" : "685d571fe29351212dc46816",
+  "id" : "690141e87c0fb18b0499f898",
   "objectType" : "MEMBER_COVERAGE",
   "sponsor" : {
     "entityRole" : "PLAN_SPONSOR",
@@ -228,6 +230,7 @@
       "zipCode" : "171110000"
     },
     "contacts" : [ {
+      "functionCode" : "IP",
       "contactNumbers" : [ {
         "type" : "HOME_PHONE",
         "number" : "7172343334"
@@ -259,7 +262,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "685d571fe29351212dc46811",
+    "id" : "690141e87c0fb18b0499f891",
     "controlNumber" : "12345",
     "transactionType" : "MEMBER_COVERAGE",
     "purposeCode" : "00",
@@ -279,7 +282,7 @@
   }
 }
 , {
-  "id" : "685d571fe29351212dc46826",
+  "id" : "690141e87c0fb18b0499f8aa",
   "objectType" : "MEMBER_COVERAGE",
   "sponsor" : {
     "entityRole" : "PLAN_SPONSOR",
@@ -321,6 +324,7 @@
       "zipCode" : "171110000"
     },
     "contacts" : [ {
+      "functionCode" : "IP",
       "contactNumbers" : [ {
         "type" : "HOME_PHONE",
         "number" : "7172343334"
@@ -352,7 +356,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "685d571fe29351212dc46811",
+    "id" : "690141e87c0fb18b0499f891",
     "controlNumber" : "12345",
     "transactionType" : "MEMBER_COVERAGE",
     "purposeCode" : "00",

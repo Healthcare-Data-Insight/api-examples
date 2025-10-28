@@ -1,6 +1,6 @@
 [
  {
-  "id" : "685d7ce9fc42e4481ffb4e27",
+  "id" : "690148887e79911955eaf375",
   "objectType" : "CLAIM",
   "patientControlNumber" : "ABC0002",
   "chargeAmount" : 89.93,
@@ -27,7 +27,7 @@
     "claimFilingIndicatorCode" : "13",
     "insurancePlanType" : "POS",
     "person" : {
-      "entityRole" : "SUBSCRIBER",
+      "entityRole" : "INSURED_SUBSCRIBER",
       "entityType" : "INDIVIDUAL",
       "identificationType" : "MEMBER_ID",
       "identifier" : "1008716534V004619",
@@ -82,7 +82,8 @@
         "stateCode" : "MO",
         "zipCode" : "64108"
       }
-    }
+    },
+    "propertyCasualtyClaimNumber" : "4445555"
   },
   "otherSubscribers" : [ {
     "payerResponsibilitySequence" : "PRIMARY",
@@ -92,7 +93,7 @@
     "claimFilingIndicatorCode" : "CI",
     "insurancePlanType" : "COMMERCIAL",
     "person" : {
-      "entityRole" : "SUBSCRIBER",
+      "entityRole" : "INSURED_SUBSCRIBER",
       "entityType" : "INDIVIDUAL",
       "identificationType" : "MEMBER_ID",
       "identifier" : "123456789",
@@ -163,7 +164,7 @@
       "reason" : {
         "subType" : "CARC",
         "code" : "4",
-        "desc" : "The procedure code is inconsistent with the modifier used"
+        "desc" : "The procedure code is inconsistent with the modifier used. Usage: Refer to the 835 Healthcare Policy Identification Segment (loop 2110 Service Payment Information REF), if present."
       },
       "amount" : 102.22,
       "quantity" : 1
@@ -231,6 +232,82 @@
     "payerPaidAmount" : 8852.72,
     "nonCoveredAmount" : 780.00,
     "remainingPatientLiabilityAmount" : 60.00,
+    "outpatientAdjudication" : {
+      "reimbursementRate" : 85,
+      "hcpcsPayableAmount" : 158.58,
+      "esrdPaymentAmount" : 82.23,
+      "nonPayableProfessionalComponentAmount" : 12.42,
+      "remarks" : [ {
+        "type" : "CARC_RARC",
+        "subType" : "RARC",
+        "code" : "M71",
+        "desc" : "Total payment reduced due to overlap of tests billed."
+      }, {
+        "type" : "CARC_RARC",
+        "subType" : "RARC",
+        "code" : "MA54",
+        "desc" : "Physician certification or election consent for hospice care not received timely."
+      }, {
+        "type" : "CARC_RARC",
+        "subType" : "RARC",
+        "code" : "N28",
+        "desc" : "Consent form requirements not fulfilled."
+      }, {
+        "type" : "CARC_RARC",
+        "subType" : "RARC",
+        "code" : "N118",
+        "desc" : "This service is not paid if billed more than once every 28 days."
+      }, {
+        "type" : "CARC_RARC",
+        "subType" : "RARC",
+        "code" : "MA127"
+      } ]
+    },
+    "inpatientAdjudication" : {
+      "coveredDaysOrVisitsCount" : 1,
+      "lifetimePsychiatricDaysCount" : 1,
+      "drgAmount" : 255.05,
+      "disproportionateShareAmount" : 288.08,
+      "mspPassThroughAmount" : 38.88,
+      "ppsCapitalAmount" : 83.03,
+      "ppsCapitalFspDrgAmount" : 15.65,
+      "ppsCapitalHspDrgAmount" : 25.00,
+      "ppsCapitalDshDrgAmount" : 22.99,
+      "oldCapitalAmount" : 46.36,
+      "ppsCapitalImeAmount" : 52.28,
+      "ppsOperatingHospitalSpecificDrgAmount" : 99.99,
+      "costReportDayCount" : 1,
+      "ppsOperatingFederalSpecificDrgAmount" : 71.12,
+      "ppsCapitalOutlierAmount" : 26.55,
+      "indirectTeachingAmount" : 18.08,
+      "nonPayableProfessionalComponentAmount" : 36.00,
+      "ppsCapitalExceptionAmount" : 240.00,
+      "remarks" : [ {
+        "type" : "CARC_RARC",
+        "subType" : "RARC",
+        "code" : "N118",
+        "desc" : "This service is not paid if billed more than once every 28 days."
+      }, {
+        "type" : "CARC_RARC",
+        "subType" : "RARC",
+        "code" : "M2",
+        "desc" : "Not paid separately when the patient is an inpatient."
+      }, {
+        "type" : "CARC_RARC",
+        "subType" : "RARC",
+        "code" : "MA54",
+        "desc" : "Physician certification or election consent for hospice care not received timely."
+      }, {
+        "type" : "CARC_RARC",
+        "subType" : "RARC",
+        "code" : "MA41",
+        "desc" : "Missing/incomplete/invalid admission type."
+      }, {
+        "type" : "CARC_RARC",
+        "subType" : "RARC",
+        "code" : "M30"
+      } ]
+    },
     "payerClaimControlNumber" : "CLAIM014",
     "payer" : {
       "entityRole" : "PAYER",
@@ -313,22 +390,18 @@
   "assignmentParticipationCode" : "A",
   "assignmentCertificationIndicator" : "Y",
   "releaseOfInformationCode" : "Y",
+  "serviceAuthorizationExceptionCode" : "1",
   "referralNumber" : "2410628868",
   "priorAuthorizationNumber" : "PA00000024",
+  "originalReferenceNumber" : "CLAIM04",
+  "clearinghouseTraceNumber" : "CLAIM0004",
   "accidentState" : "DD",
   "medicalRecordNumber" : "44444TH56",
   "admissionDateAndHour" : "2019-03-10T14:02:00",
   "dischargeTime" : "13:00:00",
-  "clearinghouseTraceNumber" : "CLAIM0004",
   "admissionTypeCode" : "3",
   "admissionSourceCode" : "7",
   "patientStatusCode" : "01",
-  "originalReferenceNumber" : "CLAIM04",
-  "serviceAuthorizationExceptionCode" : "1",
-  "drg" : {
-    "subType" : "DRG",
-    "code" : "025"
-  },
   "claimNote" : "PATIENT ALLERGIC TO PENICILLIN",
   "billingNote" : "Billing Note",
   "billingProvider" : {
@@ -352,6 +425,7 @@
       "desc" : "Anesthesiology Physician"
     },
     "contacts" : [ {
+      "functionCode" : "IC",
       "name" : "ATTN ALEX",
       "contactNumbers" : [ {
         "type" : "PHONE",
@@ -480,6 +554,10 @@
     "formattedCode" : "A01.03",
     "presentOnAdmissionIndicator" : "Y"
   } ],
+  "drg" : {
+    "subType" : "DRG",
+    "code" : "025"
+  },
   "procs" : [ {
     "subType" : "ICD_10_PCS_PRINCIPAL",
     "code" : "009G0ZZ",
@@ -546,67 +624,6 @@
     "desc" : "Plain Radiography of Right Lacrimal Duct using Low Osmolar Contrast",
     "occurrenceDate" : "2017-11-23"
   } ],
-  "occurrences" : [ {
-    "subType" : "OCCURRENCE",
-    "code" : "40",
-    "desc" : "SCHEDULED DATE OF ADMISSION",
-    "occurrenceDate" : "2016-01-03"
-  }, {
-    "subType" : "OCCURRENCE",
-    "code" : "10",
-    "desc" : "LAST MENSTRUAL PERIOD",
-    "occurrenceDate" : "2018-01-01"
-  }, {
-    "subType" : "OCCURRENCE",
-    "code" : "11",
-    "desc" : "ONSET OF SYMPTOMS/ILLNESS",
-    "occurrenceDate" : "2017-10-10"
-  }, {
-    "subType" : "OCCURRENCE",
-    "code" : "16",
-    "desc" : "DATE OF LAST THERAPY",
-    "occurrenceDate" : "2017-08-10"
-  }, {
-    "subType" : "OCCURRENCE",
-    "code" : "18",
-    "desc" : "DATE OF RETIREMENT OF PATIENT/BENEFICIARY",
-    "occurrenceDate" : "2015-12-12"
-  }, {
-    "subType" : "OCCURRENCE",
-    "code" : "17",
-    "desc" : "DATE OUTPATIENT OCCUPATIONAL THERAPY PLAN ESTABLISHED OR LAST REVIEWED",
-    "occurrenceDate" : "2017-12-24"
-  }, {
-    "subType" : "OCCURRENCE",
-    "code" : "36",
-    "desc" : "DATE OF INPATIENT HOSPITAL DISCHARGE FOR COVERED TRANSPLANT PATIENTS",
-    "occurrenceDate" : "2017-10-03"
-  }, {
-    "subType" : "OCCURRENCE",
-    "code" : "A3",
-    "desc" : "BENEFITS EXHAUSTED",
-    "occurrenceDate" : "2018-04-04"
-  }, {
-    "subType" : "OCCURRENCE",
-    "code" : "C3",
-    "desc" : "BENEFITS EXHAUSTED",
-    "occurrenceDate" : "2018-04-22"
-  }, {
-    "subType" : "OCCURRENCE",
-    "code" : "25",
-    "desc" : "DATE BENEFITS TERMINATED BY PRIMARY PAYER",
-    "occurrenceDate" : "2018-04-04"
-  }, {
-    "subType" : "OCCURRENCE",
-    "code" : "22",
-    "desc" : "DATE ACTIVE CARE ENDED",
-    "occurrenceDate" : "2018-04-30"
-  }, {
-    "subType" : "OCCURRENCE",
-    "code" : "24",
-    "desc" : "DATE INSURANCE DENIED",
-    "occurrenceDate" : "2018-05-06"
-  } ],
   "occurrenceSpans" : [ {
     "subType" : "OCCURRENCE_SPAN",
     "code" : "01",
@@ -668,65 +685,66 @@
     "occurrenceDate" : "2018-05-06",
     "occurrenceEndDate" : "2018-05-07"
   } ],
-  "conditions" : [ {
-    "subType" : "CONDITION",
-    "code" : "03",
-    "desc" : "PATIENT COVERED BY INSURANCE NOT REFLECTED HERE",
-    "instructionDesc" : "This code indicates that the patient or patients representative stated that insurance coverage may exist beyond what is reported on the claim."
+  "occurrences" : [ {
+    "subType" : "OCCURRENCE",
+    "code" : "40",
+    "desc" : "SCHEDULED DATE OF ADMISSION",
+    "occurrenceDate" : "2016-01-03"
   }, {
-    "subType" : "CONDITION",
-    "code" : "04",
-    "desc" : "INFORMATION ONLY BILL",
-    "instructionDesc" : "This code indicates that the bill is submitted for informational purposes only.  Examples include a bill submitted as a utilization report, or a bill for a beneficiary who is enrolled in a risk-based managed care plan (such as Medicare+Choice [M+C]), and the hospital expects to receive payment from the plan."
+    "subType" : "OCCURRENCE",
+    "code" : "10",
+    "desc" : "LAST MENSTRUAL PERIOD",
+    "occurrenceDate" : "2018-01-01"
   }, {
-    "subType" : "CONDITION",
-    "code" : "12",
-    "desc" : "CODE FOR PAYER USE ONLY"
+    "subType" : "OCCURRENCE",
+    "code" : "11",
+    "desc" : "ONSET OF SYMPTOMS/ILLNESS",
+    "occurrenceDate" : "2017-10-10"
   }, {
-    "subType" : "CONDITION",
-    "code" : "20",
-    "desc" : "BENEFICIARY REQUESTED BILLING",
-    "instructionDesc" : "This code indicates that the provider realizes that the services are noncovered or excluded from coverage, but the beneficiary requested a formal determination of coverage from Medicare or another payer."
+    "subType" : "OCCURRENCE",
+    "code" : "16",
+    "desc" : "DATE OF LAST THERAPY",
+    "occurrenceDate" : "2017-08-10"
   }, {
-    "subType" : "CONDITION",
+    "subType" : "OCCURRENCE",
+    "code" : "18",
+    "desc" : "DATE OF RETIREMENT OF PATIENT/BENEFICIARY",
+    "occurrenceDate" : "2015-12-12"
+  }, {
+    "subType" : "OCCURRENCE",
+    "code" : "17",
+    "desc" : "DATE OUTPATIENT OCCUPATIONAL THERAPY PLAN ESTABLISHED OR LAST REVIEWED",
+    "occurrenceDate" : "2017-12-24"
+  }, {
+    "subType" : "OCCURRENCE",
+    "code" : "36",
+    "desc" : "DATE OF INPATIENT HOSPITAL DISCHARGE FOR COVERED TRANSPLANT PATIENTS",
+    "occurrenceDate" : "2017-10-03"
+  }, {
+    "subType" : "OCCURRENCE",
+    "code" : "A3",
+    "desc" : "BENEFITS EXHAUSTED",
+    "occurrenceDate" : "2018-04-04"
+  }, {
+    "subType" : "OCCURRENCE",
+    "code" : "C3",
+    "desc" : "BENEFITS EXHAUSTED",
+    "occurrenceDate" : "2018-04-22"
+  }, {
+    "subType" : "OCCURRENCE",
+    "code" : "25",
+    "desc" : "DATE BENEFITS TERMINATED BY PRIMARY PAYER",
+    "occurrenceDate" : "2018-04-04"
+  }, {
+    "subType" : "OCCURRENCE",
     "code" : "22",
-    "desc" : "PATIENT ON MULTIPLE DRUG REGIMEN",
-    "instructionDesc" : "This code indicates that the patient is receiving multiple IV drugs while on home IV therapy."
+    "desc" : "DATE ACTIVE CARE ENDED",
+    "occurrenceDate" : "2018-04-30"
   }, {
-    "subType" : "CONDITION",
-    "code" : "26",
-    "desc" : "VETERANS AFFAIRS-ELIGIBLE PATIENT CHOOSES TO RECEIVE SERVICES IN MEDICARE-CERTIFIED FACILITY",
-    "instructionDesc" : "This code indicates that the patient is eligible for VA benefits but chooses to receive services in a Medicare-certified facility instead of a VA facility."
-  }, {
-    "subType" : "CONDITION",
-    "code" : "28",
-    "desc" : "PATIENT AND/OR SPOUSE'S EGHP IS SECONDARY TO MEDICARE",
-    "instructionDesc" : "This code indicates that, in response to MSP development questions, the patient and/or their spouse indicates that one or both are employed and there is group health insurance from an EGHP or other employer-sponsored or provided health insurance.  However, either the EGHP is a single employer plan and the employer has fewer than 20 full- and part-time employees, or the EGHP is a multi- or multiple-employer plan that elects to pay secondary to Medicare for employees and spouses aged 65 and older for the participating employers who have fewer than 20 employees."
-  }, {
-    "subType" : "CONDITION",
-    "code" : "39",
-    "desc" : "PRIVATE ROOM MEDICALLY NECESSARY",
-    "instructionDesc" : "This code indicates that the patient needed a private room for medical reasons."
-  }, {
-    "subType" : "CONDITION",
-    "code" : "41",
-    "desc" : "PARTIAL HOSPITALIZATION",
-    "instructionDesc" : "This code indicates that the claim is for partial hospitalization services.  For outpatients, this includes a variety of psychiatric (drug and alcohol) programs."
-  }, {
-    "subType" : "CONDITION",
-    "code" : "71",
-    "desc" : "FULL CARE IN UNIT",
-    "instructionDesc" : "This code indicates that the bill is for a patient who received staff-assisted dialysis services in a hospital or renal dialysis facility."
-  }, {
-    "subType" : "CONDITION",
-    "code" : "73",
-    "desc" : "ESRD SELF-CARE TRAINING",
-    "instructionDesc" : "This code indicates that the bill is for special dialysis services that involved teaching the patient and helper (if necessary) to perform dialysis."
-  }, {
-    "subType" : "CONDITION",
-    "code" : "A0",
-    "desc" : "TRICARE EXTERNAL PARTNERSHIP PROGRAM",
-    "instructionDesc" : "External partnership program"
+    "subType" : "OCCURRENCE",
+    "code" : "24",
+    "desc" : "DATE INSURANCE DENIED",
+    "occurrenceDate" : "2018-05-06"
   } ],
   "valueInfos" : [ {
     "subType" : "VALUE",
@@ -793,6 +811,66 @@
     "code" : "20",
     "desc" : "Payer Code;Total PPS Capital Payment Amount",
     "amount" : 76.54
+  } ],
+  "conditions" : [ {
+    "subType" : "CONDITION",
+    "code" : "03",
+    "desc" : "PATIENT COVERED BY INSURANCE NOT REFLECTED HERE",
+    "instructionDesc" : "This code indicates that the patient or patients representative stated that insurance coverage may exist beyond what is reported on the claim."
+  }, {
+    "subType" : "CONDITION",
+    "code" : "04",
+    "desc" : "INFORMATION ONLY BILL",
+    "instructionDesc" : "This code indicates that the bill is submitted for informational purposes only.  Examples include a bill submitted as a utilization report, or a bill for a beneficiary who is enrolled in a risk-based managed care plan (such as Medicare+Choice [M+C]), and the hospital expects to receive payment from the plan."
+  }, {
+    "subType" : "CONDITION",
+    "code" : "12",
+    "desc" : "CODE FOR PAYER USE ONLY"
+  }, {
+    "subType" : "CONDITION",
+    "code" : "20",
+    "desc" : "BENEFICIARY REQUESTED BILLING",
+    "instructionDesc" : "This code indicates that the provider realizes that the services are noncovered or excluded from coverage, but the beneficiary requested a formal determination of coverage from Medicare or another payer."
+  }, {
+    "subType" : "CONDITION",
+    "code" : "22",
+    "desc" : "PATIENT ON MULTIPLE DRUG REGIMEN",
+    "instructionDesc" : "This code indicates that the patient is receiving multiple IV drugs while on home IV therapy."
+  }, {
+    "subType" : "CONDITION",
+    "code" : "26",
+    "desc" : "VETERANS AFFAIRS-ELIGIBLE PATIENT CHOOSES TO RECEIVE SERVICES IN MEDICARE-CERTIFIED FACILITY",
+    "instructionDesc" : "This code indicates that the patient is eligible for VA benefits but chooses to receive services in a Medicare-certified facility instead of a VA facility."
+  }, {
+    "subType" : "CONDITION",
+    "code" : "28",
+    "desc" : "PATIENT AND/OR SPOUSE'S EGHP IS SECONDARY TO MEDICARE",
+    "instructionDesc" : "This code indicates that, in response to MSP development questions, the patient and/or their spouse indicates that one or both are employed and there is group health insurance from an EGHP or other employer-sponsored or provided health insurance.  However, either the EGHP is a single employer plan and the employer has fewer than 20 full- and part-time employees, or the EGHP is a multi- or multiple-employer plan that elects to pay secondary to Medicare for employees and spouses aged 65 and older for the participating employers who have fewer than 20 employees."
+  }, {
+    "subType" : "CONDITION",
+    "code" : "39",
+    "desc" : "PRIVATE ROOM MEDICALLY NECESSARY",
+    "instructionDesc" : "This code indicates that the patient needed a private room for medical reasons."
+  }, {
+    "subType" : "CONDITION",
+    "code" : "41",
+    "desc" : "PARTIAL HOSPITALIZATION",
+    "instructionDesc" : "This code indicates that the claim is for partial hospitalization services.  For outpatients, this includes a variety of psychiatric (drug and alcohol) programs."
+  }, {
+    "subType" : "CONDITION",
+    "code" : "71",
+    "desc" : "FULL CARE IN UNIT",
+    "instructionDesc" : "This code indicates that the bill is for a patient who received staff-assisted dialysis services in a hospital or renal dialysis facility."
+  }, {
+    "subType" : "CONDITION",
+    "code" : "73",
+    "desc" : "ESRD SELF-CARE TRAINING",
+    "instructionDesc" : "This code indicates that the bill is for special dialysis services that involved teaching the patient and helper (if necessary) to perform dialysis."
+  }, {
+    "subType" : "CONDITION",
+    "code" : "A0",
+    "desc" : "TRICARE EXTERNAL PARTNERSHIP PROGRAM",
+    "instructionDesc" : "External partnership program"
   } ],
   "attachments" : [ {
     "reportTypeCode" : "OZ",
@@ -912,7 +990,7 @@
         "reason" : {
           "subType" : "CARC",
           "code" : "12",
-          "desc" : "The diagnosis is inconsistent with the provider type."
+          "desc" : "The diagnosis is inconsistent with the provider type. Usage: Refer to the 835 Healthcare Policy Identification Segment (loop 2110 Service Payment Information REF), if present."
         },
         "amount" : 18.00,
         "quantity" : 1
@@ -1100,7 +1178,7 @@
         "reason" : {
           "subType" : "CARC",
           "code" : "136",
-          "desc" : "Failure to follow prior payers coverage rules. (Use only with Group Code OA)"
+          "desc" : "Failure to follow prior payer's coverage rules. (Use only with Group Code OA)"
         },
         "amount" : 15.00,
         "quantity" : 1
@@ -1140,7 +1218,7 @@
         "reason" : {
           "subType" : "CARC",
           "code" : "P29",
-          "desc" : "Liability Benefits jurisdictional fee schedule adjustment."
+          "desc" : "Liability Benefits jurisdictional fee schedule adjustment. Usage: If adjustment is at the Claim Level, the payer must send and the provider should refer to the 835 Class of Contract Code Identification Segment (Loop 2100 Other Claim Related Information REF). If adjustment is at the Line Level, the payer must send and the provider should refer to the 835 Healthcare Policy Identification Segment (loop 2110 Service Payment information REF) if the regulations apply. To be used for Property and Casualty Auto only."
         },
         "amount" : 39.99,
         "quantity" : 1
@@ -1180,9 +1258,10 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "685d7ce9fc42e4481ffb4d90",
+    "id" : "690148887e79911955eaf2d8",
     "controlNumber" : "00000024",
     "transactionType" : "INST",
+    "hierarchicalStructureCode" : "0019",
     "purposeCode" : "00",
     "originatorApplicationTransactionId" : "00000024",
     "creationDate" : "2019-03-11",
@@ -1203,6 +1282,7 @@
       "identifier" : "SUBMITID02",
       "lastNameOrOrgName" : "CHANGEHC",
       "contacts" : [ {
+        "functionCode" : "IC",
         "name" : "CHANGEHC",
         "contactNumbers" : [ {
           "type" : "PHONE",

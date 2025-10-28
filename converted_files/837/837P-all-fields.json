@@ -1,6 +1,6 @@
 [
  {
-  "id" : "685d7ce9fc42e4481ffb512d",
+  "id" : "690148887e79911955eaf6a5",
   "objectType" : "CLAIM",
   "patientControlNumber" : "36463774",
   "chargeAmount" : 100.00,
@@ -19,12 +19,11 @@
   "serviceDateTo" : "2006-10-10",
   "subscriber" : {
     "payerResponsibilitySequence" : "PRIMARY",
-    "relationshipType" : "SELF",
     "groupOrPolicyNumber" : "2222-SJ",
     "claimFilingIndicatorCode" : "CI",
     "insurancePlanType" : "COMMERCIAL",
     "person" : {
-      "entityRole" : "SUBSCRIBER",
+      "entityRole" : "INSURED_SUBSCRIBER",
       "entityType" : "INDIVIDUAL",
       "identificationType" : "MEMBER_ID",
       "identifier" : "JS00111223333",
@@ -91,7 +90,7 @@
     "claimFilingIndicatorCode" : "MB",
     "insurancePlanType" : "MEDICARE_B",
     "person" : {
-      "entityRole" : "SUBSCRIBER",
+      "entityRole" : "INSURED_SUBSCRIBER",
       "entityType" : "INDIVIDUAL",
       "identificationType" : "MEMBER_ID",
       "identifier" : "JS00111223999",
@@ -178,7 +177,7 @@
       "reason" : {
         "subType" : "CARC",
         "code" : "4",
-        "desc" : "The procedure code is inconsistent with the modifier used"
+        "desc" : "The procedure code is inconsistent with the modifier used. Usage: Refer to the 835 Healthcare Policy Identification Segment (loop 2110 Service Payment Information REF), if present."
       },
       "amount" : 102.22,
       "quantity" : 1
@@ -325,10 +324,13 @@
   "releaseOfInformationCode" : "Y",
   "specialProgramCode" : "05",
   "delayReasonCode" : "4",
+  "serviceAuthorizationExceptionCode" : "ServiceAuthorizationExceptionCode",
   "referralNumber" : "ReferralNum",
   "priorAuthorizationNumber" : "PriorAuth",
+  "originalReferenceNumber" : "PayerClaimControlNum",
   "repricedReferenceNumber" : "Repriced",
   "adjustedRepricedReferenceNumber" : "AdjRepriced",
+  "clearinghouseTraceNumber" : "ClaimIdForTransm",
   "medicalRecordNumber" : "MedicalRecordNum",
   "demonstrationProjectIdentifier" : "DemonstrProjectId",
   "onsetOfCurrentIllnessOrInjuryDate" : "2018-03-12",
@@ -338,16 +340,14 @@
   "accidentDate" : "2005-01-08",
   "lastMenstrualPeriodDate" : "2005-01-08",
   "lastXRayDate" : "2005-01-08",
-  "assumedCareDate" : "2005-06-08",
-  "relinquishedCareDate" : "2005-06-08",
   "disabilityDateFrom" : "2005-06-08",
   "disabilityDateTo" : "2005-06-09",
   "admissionDate" : "2005-05-08",
   "dischargeDate" : "2005-06-08",
+  "assumedCareDate" : "2005-06-08",
+  "relinquishedCareDate" : "2005-06-08",
+  "propertyCasualtyFirstContactDate" : "2004-10-13",
   "repricerReceivedDate" : "2005-10-30",
-  "clearinghouseTraceNumber" : "ClaimIdForTransm",
-  "originalReferenceNumber" : "PayerClaimControlNum",
-  "serviceAuthorizationExceptionCode" : "ServiceAuthorizationExceptionCode",
   "claimNote" : "SURGERY WAS UNUSUALLY LONG",
   "billingProvider" : {
     "entityRole" : "BILLING_PROVIDER",
@@ -367,6 +367,7 @@
       "code" : "203BF0100Y"
     },
     "contacts" : [ {
+      "functionCode" : "IC",
       "name" : "JOHN SMITH",
       "contactNumbers" : [ {
         "type" : "PHONE",
@@ -596,6 +597,7 @@
     } ]
   }, {
     "chargeAmount" : 35.00,
+    "serviceDateFrom" : "2006-10-10",
     "unitType" : "UNIT",
     "unitCount" : 1,
     "procedure" : {
@@ -658,9 +660,10 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "685d7ce9fc42e4481ffb5083",
+    "id" : "690148887e79911955eaf5f4",
     "controlNumber" : "0031",
     "transactionType" : "PROF",
+    "hierarchicalStructureCode" : "0019",
     "purposeCode" : "00",
     "originatorApplicationTransactionId" : "0031",
     "creationDate" : "2006-10-15",
@@ -671,7 +674,7 @@
     "fileInfo" : {
       "name" : "837P-all-fields.dat",
       "url" : "file:/edi-samples/edi_files/837/837P-all-fields.dat",
-      "lastModifiedDateTime" : "2025-04-07T12:22:02.272-04:00",
+      "lastModifiedDateTime" : "2025-10-18T17:33:56.407-04:00",
       "fileType" : "EDI"
     },
     "sender" : {
@@ -681,6 +684,7 @@
       "identifier" : "TGJ23",
       "lastNameOrOrgName" : "PREMIER BILLING SERVICE",
       "contacts" : [ {
+        "functionCode" : "IC",
         "name" : "JERRY",
         "contactNumbers" : [ {
           "type" : "PHONE",

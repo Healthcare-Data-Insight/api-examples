@@ -1,6 +1,6 @@
 [
  {
-  "id" : "685d7ce8fc42e4481ffb3ac5",
+  "id" : "690148877e79911955eadbec",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26403774",
   "chargeAmount" : 150.00,
@@ -19,11 +19,10 @@
   "serviceDateTo" : "2023-04-01",
   "subscriber" : {
     "payerResponsibilitySequence" : "PRIMARY",
-    "relationshipType" : "SELF",
     "claimFilingIndicatorCode" : "CI",
     "insurancePlanType" : "COMMERCIAL",
     "person" : {
-      "entityRole" : "SUBSCRIBER",
+      "entityRole" : "INSURED_SUBSCRIBER",
       "entityType" : "INDIVIDUAL",
       "identificationType" : "MEMBER_ID",
       "identifier" : "111223333",
@@ -88,7 +87,7 @@
     "claimFilingIndicatorCode" : "MB",
     "insurancePlanType" : "MEDICARE_B",
     "person" : {
-      "entityRole" : "SUBSCRIBER",
+      "entityRole" : "INSURED_SUBSCRIBER",
       "entityType" : "INDIVIDUAL",
       "identificationType" : "MEMBER_ID",
       "identifier" : "JS00111223999",
@@ -215,10 +214,13 @@
   "assignmentParticipationCode" : "A",
   "assignmentCertificationIndicator" : "Y",
   "releaseOfInformationCode" : "I",
+  "serviceAuthorizationExceptionCode" : "serviceAuthorizationException",
   "referralNumber" : "Referral",
   "priorAuthorizationNumber" : "priorAuth",
+  "originalReferenceNumber" : "payerClaimControlNumber",
   "repricedReferenceNumber" : "RepricedClaimNumber",
   "adjustedRepricedReferenceNumber" : "AdjustedRepricedClaimNumber",
+  "clearinghouseTraceNumber" : "ClearinghouseTraceNumber",
   "accidentDate" : "2023-03-01",
   "orthodonticBandingDate" : "2023-03-02",
   "repricerReceivedDate" : "2023-03-04",
@@ -237,9 +239,6 @@
     "toothNumber" : "12",
     "statusCode" : "M"
   } ],
-  "clearinghouseTraceNumber" : "ClearinghouseTraceNumber",
-  "originalReferenceNumber" : "payerClaimControlNumber",
-  "serviceAuthorizationExceptionCode" : "serviceAuthorizationException",
   "predeterminationOfBenefitsIdentifier" : "PredeterminationOfBenefitsId",
   "fixedFormatRecords" : [ "Record1", "Record2" ],
   "claimNote" : "Note1\nNote2",
@@ -583,9 +582,10 @@
     }
   } ],
   "transaction" : {
-    "id" : "685d7ce8fc42e4481ffb3a35",
+    "id" : "690148877e79911955eadb56",
     "controlNumber" : "3456",
     "transactionType" : "DENTAL",
+    "hierarchicalStructureCode" : "0019",
     "purposeCode" : "00",
     "originatorApplicationTransactionId" : "0123",
     "creationDate" : "2006-11-23",
@@ -606,6 +606,7 @@
       "identifier" : "TGJ23",
       "lastNameOrOrgName" : "PREMIER BILLING SERVICE",
       "contacts" : [ {
+        "functionCode" : "IC",
         "name" : "JERRY",
         "contactNumbers" : [ {
           "type" : "PHONE",
@@ -624,7 +625,7 @@
   }
 }
 , {
-  "id" : "685d7ce8fc42e4481ffb3b03",
+  "id" : "690148877e79911955eadc32",
   "objectType" : "CLAIM",
   "patientControlNumber" : "051068",
   "chargeAmount" : 766.50,
@@ -646,7 +647,7 @@
     "claimFilingIndicatorCode" : "MB",
     "insurancePlanType" : "MEDICARE_B",
     "person" : {
-      "entityRole" : "SUBSCRIBER",
+      "entityRole" : "INSURED_SUBSCRIBER",
       "entityType" : "INDIVIDUAL",
       "identificationType" : "MEMBER_ID",
       "identifier" : "012345678A",
@@ -889,9 +890,10 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "685d7ce8fc42e4481ffb3ac8",
+    "id" : "690148877e79911955eadbf1",
     "controlNumber" : "000017712",
     "transactionType" : "PROF",
+    "hierarchicalStructureCode" : "0019",
     "purposeCode" : "00",
     "originatorApplicationTransactionId" : "000017712",
     "creationDate" : "2005-02-08",
@@ -912,6 +914,7 @@
       "identifier" : "376985369",
       "lastNameOrOrgName" : "AAA AMBULANCE SERVICE",
       "contacts" : [ {
+        "functionCode" : "IC",
         "name" : "LISA SMITH",
         "contactNumbers" : [ {
           "type" : "PHONE",
@@ -930,7 +933,7 @@
   }
 }
 , {
-  "id" : "685d7ce8fc42e4481ffb3b30",
+  "id" : "690148877e79911955eadc62",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26462967",
   "chargeAmount" : 100.00,
@@ -953,7 +956,7 @@
     "claimFilingIndicatorCode" : "HM",
     "insurancePlanType" : "HMO",
     "person" : {
-      "entityRole" : "SUBSCRIBER",
+      "entityRole" : "INSURED_SUBSCRIBER",
       "entityType" : "INDIVIDUAL",
       "identificationType" : "MEMBER_ID",
       "identifier" : "00221111",
@@ -980,8 +983,8 @@
   "assignmentParticipationCode" : "A",
   "assignmentCertificationIndicator" : "Y",
   "releaseOfInformationCode" : "I",
-  "onsetOfCurrentIllnessOrInjuryDate" : "1998-10-03",
   "clearinghouseTraceNumber" : "17312345600006351",
+  "onsetOfCurrentIllnessOrInjuryDate" : "1998-10-03",
   "billingProvider" : {
     "entityRole" : "BILLING_PROVIDER",
     "entityType" : "BUSINESS",
@@ -1095,9 +1098,10 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "685d7ce8fc42e4481ffb3b06",
+    "id" : "690148877e79911955eadc36",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
+    "hierarchicalStructureCode" : "0019",
     "purposeCode" : "00",
     "originatorApplicationTransactionId" : "0123",
     "creationDate" : "2006-10-15",
@@ -1118,6 +1122,7 @@
       "identifier" : "TGJ23",
       "lastNameOrOrgName" : "PREMIER BILLING SERVICE",
       "contacts" : [ {
+        "functionCode" : "IC",
         "name" : "JERRY",
         "contactNumbers" : [ {
           "type" : "PHONE",
@@ -1139,7 +1144,7 @@
   }
 }
 , {
-  "id" : "685d7ce9fc42e4481ffb3bca",
+  "id" : "690148877e79911955eadd04",
   "objectType" : "CLAIM",
   "patientControlNumber" : "ABC0002",
   "chargeAmount" : 89.93,
@@ -1166,7 +1171,7 @@
     "claimFilingIndicatorCode" : "13",
     "insurancePlanType" : "POS",
     "person" : {
-      "entityRole" : "SUBSCRIBER",
+      "entityRole" : "INSURED_SUBSCRIBER",
       "entityType" : "INDIVIDUAL",
       "identificationType" : "MEMBER_ID",
       "identifier" : "1008716534V004619",
@@ -1221,7 +1226,8 @@
         "stateCode" : "MO",
         "zipCode" : "64108"
       }
-    }
+    },
+    "propertyCasualtyClaimNumber" : "4445555"
   },
   "otherSubscribers" : [ {
     "payerResponsibilitySequence" : "PRIMARY",
@@ -1231,7 +1237,7 @@
     "claimFilingIndicatorCode" : "CI",
     "insurancePlanType" : "COMMERCIAL",
     "person" : {
-      "entityRole" : "SUBSCRIBER",
+      "entityRole" : "INSURED_SUBSCRIBER",
       "entityType" : "INDIVIDUAL",
       "identificationType" : "MEMBER_ID",
       "identifier" : "123456789",
@@ -1302,7 +1308,7 @@
       "reason" : {
         "subType" : "CARC",
         "code" : "4",
-        "desc" : "The procedure code is inconsistent with the modifier used"
+        "desc" : "The procedure code is inconsistent with the modifier used. Usage: Refer to the 835 Healthcare Policy Identification Segment (loop 2110 Service Payment Information REF), if present."
       },
       "amount" : 102.22,
       "quantity" : 1
@@ -1370,6 +1376,82 @@
     "payerPaidAmount" : 8852.72,
     "nonCoveredAmount" : 780.00,
     "remainingPatientLiabilityAmount" : 60.00,
+    "outpatientAdjudication" : {
+      "reimbursementRate" : 85,
+      "hcpcsPayableAmount" : 158.58,
+      "esrdPaymentAmount" : 82.23,
+      "nonPayableProfessionalComponentAmount" : 12.42,
+      "remarks" : [ {
+        "type" : "CARC_RARC",
+        "subType" : "RARC",
+        "code" : "M71",
+        "desc" : "Total payment reduced due to overlap of tests billed."
+      }, {
+        "type" : "CARC_RARC",
+        "subType" : "RARC",
+        "code" : "MA54",
+        "desc" : "Physician certification or election consent for hospice care not received timely."
+      }, {
+        "type" : "CARC_RARC",
+        "subType" : "RARC",
+        "code" : "N28",
+        "desc" : "Consent form requirements not fulfilled."
+      }, {
+        "type" : "CARC_RARC",
+        "subType" : "RARC",
+        "code" : "N118",
+        "desc" : "This service is not paid if billed more than once every 28 days."
+      }, {
+        "type" : "CARC_RARC",
+        "subType" : "RARC",
+        "code" : "MA127"
+      } ]
+    },
+    "inpatientAdjudication" : {
+      "coveredDaysOrVisitsCount" : 1,
+      "lifetimePsychiatricDaysCount" : 1,
+      "drgAmount" : 255.05,
+      "disproportionateShareAmount" : 288.08,
+      "mspPassThroughAmount" : 38.88,
+      "ppsCapitalAmount" : 83.03,
+      "ppsCapitalFspDrgAmount" : 15.65,
+      "ppsCapitalHspDrgAmount" : 25.00,
+      "ppsCapitalDshDrgAmount" : 22.99,
+      "oldCapitalAmount" : 46.36,
+      "ppsCapitalImeAmount" : 52.28,
+      "ppsOperatingHospitalSpecificDrgAmount" : 99.99,
+      "costReportDayCount" : 1,
+      "ppsOperatingFederalSpecificDrgAmount" : 71.12,
+      "ppsCapitalOutlierAmount" : 26.55,
+      "indirectTeachingAmount" : 18.08,
+      "nonPayableProfessionalComponentAmount" : 36.00,
+      "ppsCapitalExceptionAmount" : 240.00,
+      "remarks" : [ {
+        "type" : "CARC_RARC",
+        "subType" : "RARC",
+        "code" : "N118",
+        "desc" : "This service is not paid if billed more than once every 28 days."
+      }, {
+        "type" : "CARC_RARC",
+        "subType" : "RARC",
+        "code" : "M2",
+        "desc" : "Not paid separately when the patient is an inpatient."
+      }, {
+        "type" : "CARC_RARC",
+        "subType" : "RARC",
+        "code" : "MA54",
+        "desc" : "Physician certification or election consent for hospice care not received timely."
+      }, {
+        "type" : "CARC_RARC",
+        "subType" : "RARC",
+        "code" : "MA41",
+        "desc" : "Missing/incomplete/invalid admission type."
+      }, {
+        "type" : "CARC_RARC",
+        "subType" : "RARC",
+        "code" : "M30"
+      } ]
+    },
     "payerClaimControlNumber" : "CLAIM014",
     "payer" : {
       "entityRole" : "PAYER",
@@ -1452,22 +1534,18 @@
   "assignmentParticipationCode" : "A",
   "assignmentCertificationIndicator" : "Y",
   "releaseOfInformationCode" : "Y",
+  "serviceAuthorizationExceptionCode" : "1",
   "referralNumber" : "2410628868",
   "priorAuthorizationNumber" : "PA00000024",
+  "originalReferenceNumber" : "CLAIM04",
+  "clearinghouseTraceNumber" : "CLAIM0004",
   "accidentState" : "DD",
   "medicalRecordNumber" : "44444TH56",
   "admissionDateAndHour" : "2019-03-10T14:02:00",
   "dischargeTime" : "13:00:00",
-  "clearinghouseTraceNumber" : "CLAIM0004",
   "admissionTypeCode" : "3",
   "admissionSourceCode" : "7",
   "patientStatusCode" : "01",
-  "originalReferenceNumber" : "CLAIM04",
-  "serviceAuthorizationExceptionCode" : "1",
-  "drg" : {
-    "subType" : "DRG",
-    "code" : "025"
-  },
   "claimNote" : "PATIENT ALLERGIC TO PENICILLIN",
   "billingNote" : "Billing Note",
   "billingProvider" : {
@@ -1491,6 +1569,7 @@
       "desc" : "Anesthesiology Physician"
     },
     "contacts" : [ {
+      "functionCode" : "IC",
       "name" : "ATTN ALEX",
       "contactNumbers" : [ {
         "type" : "PHONE",
@@ -1619,6 +1698,10 @@
     "formattedCode" : "A01.03",
     "presentOnAdmissionIndicator" : "Y"
   } ],
+  "drg" : {
+    "subType" : "DRG",
+    "code" : "025"
+  },
   "procs" : [ {
     "subType" : "ICD_10_PCS_PRINCIPAL",
     "code" : "009G0ZZ",
@@ -1685,67 +1768,6 @@
     "desc" : "Plain Radiography of Right Lacrimal Duct using Low Osmolar Contrast",
     "occurrenceDate" : "2017-11-23"
   } ],
-  "occurrences" : [ {
-    "subType" : "OCCURRENCE",
-    "code" : "40",
-    "desc" : "SCHEDULED DATE OF ADMISSION",
-    "occurrenceDate" : "2016-01-03"
-  }, {
-    "subType" : "OCCURRENCE",
-    "code" : "10",
-    "desc" : "LAST MENSTRUAL PERIOD",
-    "occurrenceDate" : "2018-01-01"
-  }, {
-    "subType" : "OCCURRENCE",
-    "code" : "11",
-    "desc" : "ONSET OF SYMPTOMS/ILLNESS",
-    "occurrenceDate" : "2017-10-10"
-  }, {
-    "subType" : "OCCURRENCE",
-    "code" : "16",
-    "desc" : "DATE OF LAST THERAPY",
-    "occurrenceDate" : "2017-08-10"
-  }, {
-    "subType" : "OCCURRENCE",
-    "code" : "18",
-    "desc" : "DATE OF RETIREMENT OF PATIENT/BENEFICIARY",
-    "occurrenceDate" : "2015-12-12"
-  }, {
-    "subType" : "OCCURRENCE",
-    "code" : "17",
-    "desc" : "DATE OUTPATIENT OCCUPATIONAL THERAPY PLAN ESTABLISHED OR LAST REVIEWED",
-    "occurrenceDate" : "2017-12-24"
-  }, {
-    "subType" : "OCCURRENCE",
-    "code" : "36",
-    "desc" : "DATE OF INPATIENT HOSPITAL DISCHARGE FOR COVERED TRANSPLANT PATIENTS",
-    "occurrenceDate" : "2017-10-03"
-  }, {
-    "subType" : "OCCURRENCE",
-    "code" : "A3",
-    "desc" : "BENEFITS EXHAUSTED",
-    "occurrenceDate" : "2018-04-04"
-  }, {
-    "subType" : "OCCURRENCE",
-    "code" : "C3",
-    "desc" : "BENEFITS EXHAUSTED",
-    "occurrenceDate" : "2018-04-22"
-  }, {
-    "subType" : "OCCURRENCE",
-    "code" : "25",
-    "desc" : "DATE BENEFITS TERMINATED BY PRIMARY PAYER",
-    "occurrenceDate" : "2018-04-04"
-  }, {
-    "subType" : "OCCURRENCE",
-    "code" : "22",
-    "desc" : "DATE ACTIVE CARE ENDED",
-    "occurrenceDate" : "2018-04-30"
-  }, {
-    "subType" : "OCCURRENCE",
-    "code" : "24",
-    "desc" : "DATE INSURANCE DENIED",
-    "occurrenceDate" : "2018-05-06"
-  } ],
   "occurrenceSpans" : [ {
     "subType" : "OCCURRENCE_SPAN",
     "code" : "01",
@@ -1807,65 +1829,66 @@
     "occurrenceDate" : "2018-05-06",
     "occurrenceEndDate" : "2018-05-07"
   } ],
-  "conditions" : [ {
-    "subType" : "CONDITION",
-    "code" : "03",
-    "desc" : "PATIENT COVERED BY INSURANCE NOT REFLECTED HERE",
-    "instructionDesc" : "This code indicates that the patient or patients representative stated that insurance coverage may exist beyond what is reported on the claim."
+  "occurrences" : [ {
+    "subType" : "OCCURRENCE",
+    "code" : "40",
+    "desc" : "SCHEDULED DATE OF ADMISSION",
+    "occurrenceDate" : "2016-01-03"
   }, {
-    "subType" : "CONDITION",
-    "code" : "04",
-    "desc" : "INFORMATION ONLY BILL",
-    "instructionDesc" : "This code indicates that the bill is submitted for informational purposes only.  Examples include a bill submitted as a utilization report, or a bill for a beneficiary who is enrolled in a risk-based managed care plan (such as Medicare+Choice [M+C]), and the hospital expects to receive payment from the plan."
+    "subType" : "OCCURRENCE",
+    "code" : "10",
+    "desc" : "LAST MENSTRUAL PERIOD",
+    "occurrenceDate" : "2018-01-01"
   }, {
-    "subType" : "CONDITION",
-    "code" : "12",
-    "desc" : "CODE FOR PAYER USE ONLY"
+    "subType" : "OCCURRENCE",
+    "code" : "11",
+    "desc" : "ONSET OF SYMPTOMS/ILLNESS",
+    "occurrenceDate" : "2017-10-10"
   }, {
-    "subType" : "CONDITION",
-    "code" : "20",
-    "desc" : "BENEFICIARY REQUESTED BILLING",
-    "instructionDesc" : "This code indicates that the provider realizes that the services are noncovered or excluded from coverage, but the beneficiary requested a formal determination of coverage from Medicare or another payer."
+    "subType" : "OCCURRENCE",
+    "code" : "16",
+    "desc" : "DATE OF LAST THERAPY",
+    "occurrenceDate" : "2017-08-10"
   }, {
-    "subType" : "CONDITION",
+    "subType" : "OCCURRENCE",
+    "code" : "18",
+    "desc" : "DATE OF RETIREMENT OF PATIENT/BENEFICIARY",
+    "occurrenceDate" : "2015-12-12"
+  }, {
+    "subType" : "OCCURRENCE",
+    "code" : "17",
+    "desc" : "DATE OUTPATIENT OCCUPATIONAL THERAPY PLAN ESTABLISHED OR LAST REVIEWED",
+    "occurrenceDate" : "2017-12-24"
+  }, {
+    "subType" : "OCCURRENCE",
+    "code" : "36",
+    "desc" : "DATE OF INPATIENT HOSPITAL DISCHARGE FOR COVERED TRANSPLANT PATIENTS",
+    "occurrenceDate" : "2017-10-03"
+  }, {
+    "subType" : "OCCURRENCE",
+    "code" : "A3",
+    "desc" : "BENEFITS EXHAUSTED",
+    "occurrenceDate" : "2018-04-04"
+  }, {
+    "subType" : "OCCURRENCE",
+    "code" : "C3",
+    "desc" : "BENEFITS EXHAUSTED",
+    "occurrenceDate" : "2018-04-22"
+  }, {
+    "subType" : "OCCURRENCE",
+    "code" : "25",
+    "desc" : "DATE BENEFITS TERMINATED BY PRIMARY PAYER",
+    "occurrenceDate" : "2018-04-04"
+  }, {
+    "subType" : "OCCURRENCE",
     "code" : "22",
-    "desc" : "PATIENT ON MULTIPLE DRUG REGIMEN",
-    "instructionDesc" : "This code indicates that the patient is receiving multiple IV drugs while on home IV therapy."
+    "desc" : "DATE ACTIVE CARE ENDED",
+    "occurrenceDate" : "2018-04-30"
   }, {
-    "subType" : "CONDITION",
-    "code" : "26",
-    "desc" : "VETERANS AFFAIRS-ELIGIBLE PATIENT CHOOSES TO RECEIVE SERVICES IN MEDICARE-CERTIFIED FACILITY",
-    "instructionDesc" : "This code indicates that the patient is eligible for VA benefits but chooses to receive services in a Medicare-certified facility instead of a VA facility."
-  }, {
-    "subType" : "CONDITION",
-    "code" : "28",
-    "desc" : "PATIENT AND/OR SPOUSE'S EGHP IS SECONDARY TO MEDICARE",
-    "instructionDesc" : "This code indicates that, in response to MSP development questions, the patient and/or their spouse indicates that one or both are employed and there is group health insurance from an EGHP or other employer-sponsored or provided health insurance.  However, either the EGHP is a single employer plan and the employer has fewer than 20 full- and part-time employees, or the EGHP is a multi- or multiple-employer plan that elects to pay secondary to Medicare for employees and spouses aged 65 and older for the participating employers who have fewer than 20 employees."
-  }, {
-    "subType" : "CONDITION",
-    "code" : "39",
-    "desc" : "PRIVATE ROOM MEDICALLY NECESSARY",
-    "instructionDesc" : "This code indicates that the patient needed a private room for medical reasons."
-  }, {
-    "subType" : "CONDITION",
-    "code" : "41",
-    "desc" : "PARTIAL HOSPITALIZATION",
-    "instructionDesc" : "This code indicates that the claim is for partial hospitalization services.  For outpatients, this includes a variety of psychiatric (drug and alcohol) programs."
-  }, {
-    "subType" : "CONDITION",
-    "code" : "71",
-    "desc" : "FULL CARE IN UNIT",
-    "instructionDesc" : "This code indicates that the bill is for a patient who received staff-assisted dialysis services in a hospital or renal dialysis facility."
-  }, {
-    "subType" : "CONDITION",
-    "code" : "73",
-    "desc" : "ESRD SELF-CARE TRAINING",
-    "instructionDesc" : "This code indicates that the bill is for special dialysis services that involved teaching the patient and helper (if necessary) to perform dialysis."
-  }, {
-    "subType" : "CONDITION",
-    "code" : "A0",
-    "desc" : "TRICARE EXTERNAL PARTNERSHIP PROGRAM",
-    "instructionDesc" : "External partnership program"
+    "subType" : "OCCURRENCE",
+    "code" : "24",
+    "desc" : "DATE INSURANCE DENIED",
+    "occurrenceDate" : "2018-05-06"
   } ],
   "valueInfos" : [ {
     "subType" : "VALUE",
@@ -1932,6 +1955,66 @@
     "code" : "20",
     "desc" : "Payer Code;Total PPS Capital Payment Amount",
     "amount" : 76.54
+  } ],
+  "conditions" : [ {
+    "subType" : "CONDITION",
+    "code" : "03",
+    "desc" : "PATIENT COVERED BY INSURANCE NOT REFLECTED HERE",
+    "instructionDesc" : "This code indicates that the patient or patients representative stated that insurance coverage may exist beyond what is reported on the claim."
+  }, {
+    "subType" : "CONDITION",
+    "code" : "04",
+    "desc" : "INFORMATION ONLY BILL",
+    "instructionDesc" : "This code indicates that the bill is submitted for informational purposes only.  Examples include a bill submitted as a utilization report, or a bill for a beneficiary who is enrolled in a risk-based managed care plan (such as Medicare+Choice [M+C]), and the hospital expects to receive payment from the plan."
+  }, {
+    "subType" : "CONDITION",
+    "code" : "12",
+    "desc" : "CODE FOR PAYER USE ONLY"
+  }, {
+    "subType" : "CONDITION",
+    "code" : "20",
+    "desc" : "BENEFICIARY REQUESTED BILLING",
+    "instructionDesc" : "This code indicates that the provider realizes that the services are noncovered or excluded from coverage, but the beneficiary requested a formal determination of coverage from Medicare or another payer."
+  }, {
+    "subType" : "CONDITION",
+    "code" : "22",
+    "desc" : "PATIENT ON MULTIPLE DRUG REGIMEN",
+    "instructionDesc" : "This code indicates that the patient is receiving multiple IV drugs while on home IV therapy."
+  }, {
+    "subType" : "CONDITION",
+    "code" : "26",
+    "desc" : "VETERANS AFFAIRS-ELIGIBLE PATIENT CHOOSES TO RECEIVE SERVICES IN MEDICARE-CERTIFIED FACILITY",
+    "instructionDesc" : "This code indicates that the patient is eligible for VA benefits but chooses to receive services in a Medicare-certified facility instead of a VA facility."
+  }, {
+    "subType" : "CONDITION",
+    "code" : "28",
+    "desc" : "PATIENT AND/OR SPOUSE'S EGHP IS SECONDARY TO MEDICARE",
+    "instructionDesc" : "This code indicates that, in response to MSP development questions, the patient and/or their spouse indicates that one or both are employed and there is group health insurance from an EGHP or other employer-sponsored or provided health insurance.  However, either the EGHP is a single employer plan and the employer has fewer than 20 full- and part-time employees, or the EGHP is a multi- or multiple-employer plan that elects to pay secondary to Medicare for employees and spouses aged 65 and older for the participating employers who have fewer than 20 employees."
+  }, {
+    "subType" : "CONDITION",
+    "code" : "39",
+    "desc" : "PRIVATE ROOM MEDICALLY NECESSARY",
+    "instructionDesc" : "This code indicates that the patient needed a private room for medical reasons."
+  }, {
+    "subType" : "CONDITION",
+    "code" : "41",
+    "desc" : "PARTIAL HOSPITALIZATION",
+    "instructionDesc" : "This code indicates that the claim is for partial hospitalization services.  For outpatients, this includes a variety of psychiatric (drug and alcohol) programs."
+  }, {
+    "subType" : "CONDITION",
+    "code" : "71",
+    "desc" : "FULL CARE IN UNIT",
+    "instructionDesc" : "This code indicates that the bill is for a patient who received staff-assisted dialysis services in a hospital or renal dialysis facility."
+  }, {
+    "subType" : "CONDITION",
+    "code" : "73",
+    "desc" : "ESRD SELF-CARE TRAINING",
+    "instructionDesc" : "This code indicates that the bill is for special dialysis services that involved teaching the patient and helper (if necessary) to perform dialysis."
+  }, {
+    "subType" : "CONDITION",
+    "code" : "A0",
+    "desc" : "TRICARE EXTERNAL PARTNERSHIP PROGRAM",
+    "instructionDesc" : "External partnership program"
   } ],
   "attachments" : [ {
     "reportTypeCode" : "OZ",
@@ -2051,7 +2134,7 @@
         "reason" : {
           "subType" : "CARC",
           "code" : "12",
-          "desc" : "The diagnosis is inconsistent with the provider type."
+          "desc" : "The diagnosis is inconsistent with the provider type. Usage: Refer to the 835 Healthcare Policy Identification Segment (loop 2110 Service Payment Information REF), if present."
         },
         "amount" : 18.00,
         "quantity" : 1
@@ -2239,7 +2322,7 @@
         "reason" : {
           "subType" : "CARC",
           "code" : "136",
-          "desc" : "Failure to follow prior payers coverage rules. (Use only with Group Code OA)"
+          "desc" : "Failure to follow prior payer's coverage rules. (Use only with Group Code OA)"
         },
         "amount" : 15.00,
         "quantity" : 1
@@ -2279,7 +2362,7 @@
         "reason" : {
           "subType" : "CARC",
           "code" : "P29",
-          "desc" : "Liability Benefits jurisdictional fee schedule adjustment."
+          "desc" : "Liability Benefits jurisdictional fee schedule adjustment. Usage: If adjustment is at the Claim Level, the payer must send and the provider should refer to the 835 Class of Contract Code Identification Segment (Loop 2100 Other Claim Related Information REF). If adjustment is at the Line Level, the payer must send and the provider should refer to the 835 Healthcare Policy Identification Segment (loop 2110 Service Payment information REF) if the regulations apply. To be used for Property and Casualty Auto only."
         },
         "amount" : 39.99,
         "quantity" : 1
@@ -2319,9 +2402,10 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "685d7ce8fc42e4481ffb3b33",
+    "id" : "690148877e79911955eadc67",
     "controlNumber" : "00000024",
     "transactionType" : "INST",
+    "hierarchicalStructureCode" : "0019",
     "purposeCode" : "00",
     "originatorApplicationTransactionId" : "00000024",
     "creationDate" : "2019-03-11",
@@ -2342,6 +2426,7 @@
       "identifier" : "SUBMITID02",
       "lastNameOrOrgName" : "CHANGEHC",
       "contacts" : [ {
+        "functionCode" : "IC",
         "name" : "CHANGEHC",
         "contactNumbers" : [ {
           "type" : "PHONE",
@@ -2360,7 +2445,7 @@
   }
 }
 , {
-  "id" : "685d7ce9fc42e4481ffb3beb",
+  "id" : "690148877e79911955eadd27",
   "objectType" : "CLAIM",
   "patientControlNumber" : "125WILL",
   "chargeAmount" : 145.50,
@@ -2382,7 +2467,7 @@
     "claimFilingIndicatorCode" : "MB",
     "insurancePlanType" : "MEDICARE_B",
     "person" : {
-      "entityRole" : "SUBSCRIBER",
+      "entityRole" : "INSURED_SUBSCRIBER",
       "entityType" : "INDIVIDUAL",
       "identificationType" : "MEMBER_ID",
       "identifier" : "123456789A",
@@ -2429,6 +2514,7 @@
       "zipCode" : "21236"
     },
     "contacts" : [ {
+      "functionCode" : "IC",
       "name" : "DR",
       "contactNumbers" : [ {
         "type" : "PHONE",
@@ -2462,9 +2548,10 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "685d7ce9fc42e4481ffb3bcd",
+    "id" : "690148877e79911955eadd07",
     "controlNumber" : "3701",
     "transactionType" : "PROF",
+    "hierarchicalStructureCode" : "0019",
     "purposeCode" : "00",
     "originatorApplicationTransactionId" : "007227",
     "creationDate" : "2005-02-15",
@@ -2485,6 +2572,7 @@
       "identifier" : "S01057",
       "lastNameOrOrgName" : "DAVID GREEN",
       "contacts" : [ {
+        "functionCode" : "IC",
         "name" : "KATHY SMITH",
         "contactNumbers" : [ {
           "type" : "PHONE",
@@ -2503,7 +2591,7 @@
   }
 }
 , {
-  "id" : "685d7ce9fc42e4481ffb3c31",
+  "id" : "690148877e79911955eadd6f",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26407789",
   "chargeAmount" : 79.04,
@@ -2521,9 +2609,8 @@
   "serviceDateTo" : "2005-10-03",
   "subscriber" : {
     "payerResponsibilitySequence" : "SECONDARY",
-    "relationshipType" : "SELF",
     "person" : {
-      "entityRole" : "SUBSCRIBER",
+      "entityRole" : "INSURED_SUBSCRIBER",
       "entityType" : "INDIVIDUAL",
       "identificationType" : "MEMBER_ID",
       "identifier" : "22233444",
@@ -2574,7 +2661,7 @@
     "claimFilingIndicatorCode" : "CI",
     "insurancePlanType" : "COMMERCIAL",
     "person" : {
-      "entityRole" : "SUBSCRIBER",
+      "entityRole" : "INSURED_SUBSCRIBER",
       "entityType" : "INDIVIDUAL",
       "identificationType" : "MEMBER_ID",
       "identifier" : "JS00111223333",
@@ -2646,6 +2733,7 @@
       "zipCode" : "33111"
     },
     "contacts" : [ {
+      "functionCode" : "IC",
       "name" : "CONNIE",
       "contactNumbers" : [ {
         "type" : "PHONE",
@@ -2743,7 +2831,8 @@
         "reasonCode" : "42",
         "reason" : {
           "subType" : "CARC",
-          "code" : "42"
+          "code" : "42",
+          "desc" : "Charges exceed our fee schedule or maximum allowable amount. (Use CARC 45)"
         },
         "amount" : 3.00
       } ],
@@ -2864,9 +2953,10 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "685d7ce9fc42e4481ffb3bee",
+    "id" : "690148877e79911955eadd2a",
     "controlNumber" : "0024",
     "transactionType" : "PROF",
+    "hierarchicalStructureCode" : "0019",
     "purposeCode" : "00",
     "originatorApplicationTransactionId" : "0123",
     "creationDate" : "2005-10-15",
@@ -2887,6 +2977,7 @@
       "identifier" : "999996666",
       "lastNameOrOrgName" : "KEY INSURANCE",
       "contacts" : [ {
+        "functionCode" : "IC",
         "name" : "JERRY",
         "contactNumbers" : [ {
           "type" : "PHONE",
@@ -2905,7 +2996,7 @@
   }
 }
 , {
-  "id" : "685d7ce9fc42e4481ffb3c5c",
+  "id" : "690148877e79911955eadd9d",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26463774",
   "chargeAmount" : 100.00,
@@ -2923,12 +3014,11 @@
   "serviceDateTo" : "2006-10-10",
   "subscriber" : {
     "payerResponsibilitySequence" : "PRIMARY",
-    "relationshipType" : "SELF",
     "groupOrPolicyNumber" : "2222-SJ",
     "claimFilingIndicatorCode" : "CI",
     "insurancePlanType" : "COMMERCIAL",
     "person" : {
-      "entityRole" : "SUBSCRIBER",
+      "entityRole" : "INSURED_SUBSCRIBER",
       "entityType" : "INDIVIDUAL",
       "identificationType" : "MEMBER_ID",
       "identifier" : "JS00111223333",
@@ -3055,9 +3145,10 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "685d7ce9fc42e4481ffb3c34",
+    "id" : "690148877e79911955eadd73",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
+    "hierarchicalStructureCode" : "0019",
     "purposeCode" : "00",
     "originatorApplicationTransactionId" : "244579",
     "creationDate" : "2006-10-15",
@@ -3078,6 +3169,7 @@
       "identifier" : "TGJ23",
       "lastNameOrOrgName" : "PREMIER BILLING SERVICE",
       "contacts" : [ {
+        "functionCode" : "IC",
         "name" : "JERRY",
         "contactNumbers" : [ {
           "type" : "PHONE",
@@ -3099,7 +3191,7 @@
   }
 }
 , {
-  "id" : "685d7ce9fc42e4481ffb3cca",
+  "id" : "690148877e79911955eade11",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26462967",
   "chargeAmount" : 100.00,
@@ -3122,7 +3214,7 @@
     "claimFilingIndicatorCode" : "HM",
     "insurancePlanType" : "HMO",
     "person" : {
-      "entityRole" : "SUBSCRIBER",
+      "entityRole" : "INSURED_SUBSCRIBER",
       "entityType" : "INDIVIDUAL",
       "identificationType" : "MEMBER_ID",
       "identifier" : "00221111",
@@ -3149,8 +3241,8 @@
   "assignmentParticipationCode" : "A",
   "assignmentCertificationIndicator" : "Y",
   "releaseOfInformationCode" : "I",
-  "onsetOfCurrentIllnessOrInjuryDate" : "1998-10-03",
   "clearinghouseTraceNumber" : "17312345600006351",
+  "onsetOfCurrentIllnessOrInjuryDate" : "1998-10-03",
   "billingProvider" : {
     "entityRole" : "BILLING_PROVIDER",
     "entityType" : "BUSINESS",
@@ -3264,9 +3356,10 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "685d7ce9fc42e4481ffb3c5f",
+    "id" : "690148877e79911955eadda0",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
+    "hierarchicalStructureCode" : "0019",
     "purposeCode" : "00",
     "originatorApplicationTransactionId" : "0123",
     "creationDate" : "2006-10-15",
@@ -3287,6 +3380,7 @@
       "identifier" : "TGJ23",
       "lastNameOrOrgName" : "PREMIER BILLING SERVICE",
       "contacts" : [ {
+        "functionCode" : "IC",
         "name" : "JERRY",
         "contactNumbers" : [ {
           "type" : "PHONE",
@@ -3308,7 +3402,7 @@
   }
 }
 , {
-  "id" : "685d7ce9fc42e4481ffb3ccb",
+  "id" : "690148877e79911955eade12",
   "objectType" : "CLAIM",
   "patientControlNumber" : "125WILL",
   "chargeAmount" : 145.50,
@@ -3330,7 +3424,7 @@
     "claimFilingIndicatorCode" : "MB",
     "insurancePlanType" : "MEDICARE_B",
     "person" : {
-      "entityRole" : "SUBSCRIBER",
+      "entityRole" : "INSURED_SUBSCRIBER",
       "entityType" : "INDIVIDUAL",
       "identificationType" : "MEMBER_ID",
       "identifier" : "123456789A",
@@ -3377,6 +3471,7 @@
       "zipCode" : "21236"
     },
     "contacts" : [ {
+      "functionCode" : "IC",
       "name" : "DR",
       "contactNumbers" : [ {
         "type" : "PHONE",
@@ -3410,9 +3505,10 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "685d7ce9fc42e4481ffb3c8a",
+    "id" : "690148877e79911955eaddcd",
     "controlNumber" : "3701",
     "transactionType" : "PROF",
+    "hierarchicalStructureCode" : "0019",
     "purposeCode" : "00",
     "originatorApplicationTransactionId" : "007227",
     "creationDate" : "2005-02-15",
@@ -3433,6 +3529,7 @@
       "identifier" : "S01057",
       "lastNameOrOrgName" : "DAVID GREEN",
       "contacts" : [ {
+        "functionCode" : "IC",
         "name" : "KATHY SMITH",
         "contactNumbers" : [ {
           "type" : "PHONE",
@@ -3451,7 +3548,7 @@
   }
 }
 , {
-  "id" : "685d7ce9fc42e4481ffb3ccc",
+  "id" : "690148877e79911955eade13",
   "objectType" : "CLAIM",
   "patientControlNumber" : "153829140",
   "chargeAmount" : 827.00,
@@ -3473,7 +3570,7 @@
     "claimFilingIndicatorCode" : "MB",
     "insurancePlanType" : "MEDICARE_B",
     "person" : {
-      "entityRole" : "SUBSCRIBER",
+      "entityRole" : "INSURED_SUBSCRIBER",
       "entityType" : "INDIVIDUAL",
       "identificationType" : "MEMBER_ID",
       "identifier" : "123456789A",
@@ -3613,9 +3710,10 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "685d7ce9fc42e4481ffb3ca9",
+    "id" : "690148877e79911955eaddee",
     "controlNumber" : "0001",
     "transactionType" : "PROF",
+    "hierarchicalStructureCode" : "0019",
     "purposeCode" : "00",
     "originatorApplicationTransactionId" : "0123",
     "creationDate" : "2005-01-17",
@@ -3636,6 +3734,7 @@
       "identifier" : "N305",
       "lastNameOrOrgName" : "PROVIDER MEDICAL GROUP",
       "contacts" : [ {
+        "functionCode" : "IC",
         "name" : "NINA",
         "contactNumbers" : [ {
           "type" : "PHONE",
@@ -3657,7 +3756,7 @@
   }
 }
 , {
-  "id" : "685d7ce9fc42e4481ffb3cfa",
+  "id" : "690148877e79911955eade43",
   "objectType" : "CLAIM",
   "patientControlNumber" : "756048Q",
   "chargeAmount" : 89.93,
@@ -3681,7 +3780,7 @@
     "claimFilingIndicatorCode" : "MB",
     "insurancePlanType" : "MEDICARE_B",
     "person" : {
-      "entityRole" : "SUBSCRIBER",
+      "entityRole" : "INSURED_SUBSCRIBER",
       "entityType" : "INDIVIDUAL",
       "identificationType" : "MEMBER_ID",
       "identifier" : "030005074A",
@@ -3718,7 +3817,7 @@
     "claimFilingIndicatorCode" : "CI",
     "insurancePlanType" : "COMMERCIAL",
     "person" : {
-      "entityRole" : "SUBSCRIBER",
+      "entityRole" : "INSURED_SUBSCRIBER",
       "entityType" : "INDIVIDUAL",
       "identificationType" : "MEMBER_ID",
       "identifier" : "222004433",
@@ -3815,17 +3914,17 @@
     "desc" : "EFFECTIVE DATE-INSURED B POLICY",
     "occurrenceDate" : "1987-01-01"
   } ],
-  "conditions" : [ {
-    "subType" : "CONDITION",
-    "code" : "09",
-    "desc" : "NEITHER PATIENT NOR SPOUSE IS EMPLOYED",
-    "instructionDesc" : "This code indicates that the patient and spouse have denied having any employment in response to MSP development questions."
-  } ],
   "valueInfos" : [ {
     "subType" : "VALUE",
     "code" : "A2",
     "desc" : "Coinsurance Payer A (reportable only on paper claims)",
     "amount" : 15.31
+  } ],
+  "conditions" : [ {
+    "subType" : "CONDITION",
+    "code" : "09",
+    "desc" : "NEITHER PATIENT NOR SPOUSE IS EMPLOYED",
+    "instructionDesc" : "This code indicates that the patient and spouse have denied having any employment in response to MSP development questions."
   } ],
   "serviceLines" : [ {
     "chargeAmount" : 13.39,
@@ -3859,9 +3958,10 @@
     }
   } ],
   "transaction" : {
-    "id" : "685d7ce9fc42e4481ffb3ccf",
+    "id" : "690148877e79911955eade16",
     "controlNumber" : "987654",
     "transactionType" : "INST",
+    "hierarchicalStructureCode" : "0019",
     "purposeCode" : "00",
     "originatorApplicationTransactionId" : "0123",
     "creationDate" : "2016-09-18",
@@ -3882,6 +3982,7 @@
       "identifier" : "12345",
       "lastNameOrOrgName" : "JONES HOSPITAL",
       "contacts" : [ {
+        "functionCode" : "IC",
         "name" : "JANE DOE",
         "contactNumbers" : [ {
           "type" : "PHONE",
@@ -3900,7 +4001,7 @@
   }
 }
 , {
-  "id" : "685d7ce9fc42e4481ffb3d28",
+  "id" : "690148877e79911955eade75",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26463774",
   "chargeAmount" : 100.00,
@@ -3918,12 +4019,11 @@
   "serviceDateTo" : "2006-10-10",
   "subscriber" : {
     "payerResponsibilitySequence" : "PRIMARY",
-    "relationshipType" : "SELF",
     "groupOrPolicyNumber" : "2222-SJ",
     "claimFilingIndicatorCode" : "CI",
     "insurancePlanType" : "COMMERCIAL",
     "person" : {
-      "entityRole" : "SUBSCRIBER",
+      "entityRole" : "INSURED_SUBSCRIBER",
       "entityType" : "INDIVIDUAL",
       "identificationType" : "MEMBER_ID",
       "identifier" : "JS00111223333",
@@ -4067,9 +4167,10 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "685d7ce9fc42e4481ffb3cfd",
+    "id" : "690148877e79911955eade46",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
+    "hierarchicalStructureCode" : "0019",
     "purposeCode" : "00",
     "originatorApplicationTransactionId" : "244579",
     "creationDate" : "2006-11-15",
@@ -4090,6 +4191,7 @@
       "identifier" : "TGJ23",
       "lastNameOrOrgName" : "PREMIER BILLING SERVICE",
       "contacts" : [ {
+        "functionCode" : "IC",
         "name" : "JERRY",
         "contactNumbers" : [ {
           "type" : "PHONE",
@@ -4111,7 +4213,7 @@
   }
 }
 , {
-  "id" : "685d7ce9fc42e4481ffb3d4c",
+  "id" : "690148877e79911955eade9d",
   "objectType" : "CLAIM",
   "patientControlNumber" : "153829140",
   "chargeAmount" : 827.00,
@@ -4133,7 +4235,7 @@
     "claimFilingIndicatorCode" : "MB",
     "insurancePlanType" : "MEDICARE_B",
     "person" : {
-      "entityRole" : "SUBSCRIBER",
+      "entityRole" : "INSURED_SUBSCRIBER",
       "entityType" : "INDIVIDUAL",
       "identificationType" : "MEMBER_ID",
       "identifier" : "123456789A",
@@ -4273,9 +4375,10 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "685d7ce9fc42e4481ffb3d2b",
+    "id" : "690148877e79911955eade78",
     "controlNumber" : "0001",
     "transactionType" : "PROF",
+    "hierarchicalStructureCode" : "0019",
     "purposeCode" : "00",
     "originatorApplicationTransactionId" : "0123",
     "creationDate" : "2005-01-17",
@@ -4296,6 +4399,7 @@
       "identifier" : "N305",
       "lastNameOrOrgName" : "PROVIDER MEDICAL GROUP",
       "contacts" : [ {
+        "functionCode" : "IC",
         "name" : "NINA",
         "contactNumbers" : [ {
           "type" : "PHONE",
@@ -4317,7 +4421,7 @@
   }
 }
 , {
-  "id" : "685d7ce9fc42e4481ffb3d7b",
+  "id" : "690148877e79911955eadece",
   "objectType" : "CLAIM",
   "patientControlNumber" : "SMI123",
   "chargeAmount" : 75.00,
@@ -4339,7 +4443,7 @@
     "claimFilingIndicatorCode" : "MB",
     "insurancePlanType" : "MEDICARE_B",
     "person" : {
-      "entityRole" : "SUBSCRIBER",
+      "entityRole" : "INSURED_SUBSCRIBER",
       "entityType" : "INDIVIDUAL",
       "identificationType" : "MEMBER_ID",
       "identifier" : "987654321A",
@@ -4440,6 +4544,7 @@
         "zipCode" : "47905"
       },
       "contacts" : [ {
+        "functionCode" : "IC",
         "name" : "LEE",
         "contactNumbers" : [ {
           "type" : "PHONE",
@@ -4466,9 +4571,10 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "685d7ce9fc42e4481ffb3d4f",
+    "id" : "690148877e79911955eadea0",
     "controlNumber" : "112233",
     "transactionType" : "PROF",
+    "hierarchicalStructureCode" : "0019",
     "purposeCode" : "00",
     "originatorApplicationTransactionId" : "16",
     "creationDate" : "2005-03-26",
@@ -4489,6 +4595,7 @@
       "identifier" : "ABC55",
       "lastNameOrOrgName" : "XYZ WHEELCHAIRS INC",
       "contacts" : [ {
+        "functionCode" : "IC",
         "name" : "JANE",
         "contactNumbers" : [ {
           "type" : "PHONE",
@@ -4507,7 +4614,7 @@
   }
 }
 , {
-  "id" : "685d7ce9fc42e4481ffb3da6",
+  "id" : "690148877e79911955eadefd",
   "objectType" : "CLAIM",
   "patientControlNumber" : "ABC123-RI",
   "chargeAmount" : 28.75,
@@ -4530,7 +4637,7 @@
     "claimFilingIndicatorCode" : "CI",
     "insurancePlanType" : "COMMERCIAL",
     "person" : {
-      "entityRole" : "SUBSCRIBER",
+      "entityRole" : "INSURED_SUBSCRIBER",
       "entityType" : "INDIVIDUAL",
       "identificationType" : "MEMBER_ID",
       "identifier" : "00124A089",
@@ -4574,6 +4681,7 @@
       "zipCode" : "462540000"
     },
     "contacts" : [ {
+      "functionCode" : "IC",
       "name" : "SUE BILLINGSWORTH",
       "contactNumbers" : [ {
         "type" : "PHONE",
@@ -4678,9 +4786,10 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "685d7ce9fc42e4481ffb3d7e",
+    "id" : "690148877e79911955eaded1",
     "controlNumber" : "1002",
     "transactionType" : "PROF",
+    "hierarchicalStructureCode" : "0019",
     "purposeCode" : "00",
     "originatorApplicationTransactionId" : "1002",
     "creationDate" : "2005-06-20",
@@ -4701,6 +4810,7 @@
       "identifier" : "123456789",
       "lastNameOrOrgName" : "REGIONAL PPO NETWORK",
       "contacts" : [ {
+        "functionCode" : "IC",
         "name" : "SUBMITTER CONTACT INFO",
         "contactNumbers" : [ {
           "type" : "PHONE",
@@ -4719,7 +4829,7 @@
   }
 }
 , {
-  "id" : "685d7ce9fc42e4481ffb3dde",
+  "id" : "690148877e79911955eadf37",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26407789",
   "chargeAmount" : 79.04,
@@ -4737,9 +4847,8 @@
   "serviceDateTo" : "2005-10-03",
   "subscriber" : {
     "payerResponsibilitySequence" : "PRIMARY",
-    "relationshipType" : "SELF",
     "person" : {
-      "entityRole" : "SUBSCRIBER",
+      "entityRole" : "INSURED_SUBSCRIBER",
       "entityType" : "INDIVIDUAL",
       "identificationType" : "MEMBER_ID",
       "identifier" : "111223333",
@@ -4790,7 +4899,7 @@
     "claimFilingIndicatorCode" : "CI",
     "insurancePlanType" : "COMMERCIAL",
     "person" : {
-      "entityRole" : "SUBSCRIBER",
+      "entityRole" : "INSURED_SUBSCRIBER",
       "entityType" : "INDIVIDUAL",
       "identificationType" : "MEMBER_ID",
       "identifier" : "T55TY666",
@@ -4830,6 +4939,7 @@
       "zipCode" : "33111"
     },
     "contacts" : [ {
+      "functionCode" : "IC",
       "name" : "CONNIE",
       "contactNumbers" : [ {
         "type" : "PHONE",
@@ -4956,9 +5066,10 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "685d7ce9fc42e4481ffb3da9",
+    "id" : "690148877e79911955eadf00",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
+    "hierarchicalStructureCode" : "0019",
     "purposeCode" : "00",
     "originatorApplicationTransactionId" : "0123",
     "creationDate" : "2005-10-15",
@@ -4979,6 +5090,7 @@
       "identifier" : "TGJ23",
       "lastNameOrOrgName" : "PREMIER BILLING SERVICE",
       "contacts" : [ {
+        "functionCode" : "IC",
         "name" : "JERRY",
         "contactNumbers" : [ {
           "type" : "PHONE",
@@ -4997,7 +5109,7 @@
   }
 }
 , {
-  "id" : "685d7ce9fc42e4481ffb3e23",
+  "id" : "690148877e79911955eadf7e",
   "objectType" : "CLAIM",
   "patientControlNumber" : "CLMNO12345",
   "chargeAmount" : 2232.93,
@@ -5020,7 +5132,7 @@
     "claimFilingIndicatorCode" : "CI",
     "insurancePlanType" : "COMMERCIAL",
     "person" : {
-      "entityRole" : "SUBSCRIBER",
+      "entityRole" : "INSURED_SUBSCRIBER",
       "entityType" : "INDIVIDUAL",
       "identificationType" : "MEMBER_ID",
       "identifier" : "MBRID01234",
@@ -5062,6 +5174,7 @@
       "zipCode" : "60048"
     },
     "contacts" : [ {
+      "functionCode" : "IC",
       "name" : "Brenda Holly",
       "contactNumbers" : [ {
         "type" : "PHONE",
@@ -5295,9 +5408,10 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "685d7ce9fc42e4481ffb3de1",
+    "id" : "690148877e79911955eadf3a",
     "controlNumber" : "0711",
     "transactionType" : "PROF",
+    "hierarchicalStructureCode" : "0019",
     "purposeCode" : "00",
     "originatorApplicationTransactionId" : "0013",
     "creationDate" : "2004-03-01",
@@ -5318,6 +5432,7 @@
       "identifier" : "587654321",
       "lastNameOrOrgName" : "Quality Billing Service Corporation",
       "contacts" : [ {
+        "functionCode" : "IC",
         "name" : "Bud Holly",
         "contactNumbers" : [ {
           "type" : "PHONE",
@@ -5336,7 +5451,7 @@
   }
 }
 , {
-  "id" : "685d7ce9fc42e4481ffb3ed0",
+  "id" : "690148877e79911955eae034",
   "objectType" : "CLAIM",
   "patientControlNumber" : "36463774",
   "chargeAmount" : 100.00,
@@ -5355,12 +5470,11 @@
   "serviceDateTo" : "2006-10-10",
   "subscriber" : {
     "payerResponsibilitySequence" : "PRIMARY",
-    "relationshipType" : "SELF",
     "groupOrPolicyNumber" : "2222-SJ",
     "claimFilingIndicatorCode" : "CI",
     "insurancePlanType" : "COMMERCIAL",
     "person" : {
-      "entityRole" : "SUBSCRIBER",
+      "entityRole" : "INSURED_SUBSCRIBER",
       "entityType" : "INDIVIDUAL",
       "identificationType" : "MEMBER_ID",
       "identifier" : "JS00111223333",
@@ -5427,7 +5541,7 @@
     "claimFilingIndicatorCode" : "MB",
     "insurancePlanType" : "MEDICARE_B",
     "person" : {
-      "entityRole" : "SUBSCRIBER",
+      "entityRole" : "INSURED_SUBSCRIBER",
       "entityType" : "INDIVIDUAL",
       "identificationType" : "MEMBER_ID",
       "identifier" : "JS00111223999",
@@ -5514,7 +5628,7 @@
       "reason" : {
         "subType" : "CARC",
         "code" : "4",
-        "desc" : "The procedure code is inconsistent with the modifier used"
+        "desc" : "The procedure code is inconsistent with the modifier used. Usage: Refer to the 835 Healthcare Policy Identification Segment (loop 2110 Service Payment Information REF), if present."
       },
       "amount" : 102.22,
       "quantity" : 1
@@ -5661,10 +5775,13 @@
   "releaseOfInformationCode" : "Y",
   "specialProgramCode" : "05",
   "delayReasonCode" : "4",
+  "serviceAuthorizationExceptionCode" : "ServiceAuthorizationExceptionCode",
   "referralNumber" : "ReferralNum",
   "priorAuthorizationNumber" : "PriorAuth",
+  "originalReferenceNumber" : "PayerClaimControlNum",
   "repricedReferenceNumber" : "Repriced",
   "adjustedRepricedReferenceNumber" : "AdjRepriced",
+  "clearinghouseTraceNumber" : "ClaimIdForTransm",
   "medicalRecordNumber" : "MedicalRecordNum",
   "demonstrationProjectIdentifier" : "DemonstrProjectId",
   "onsetOfCurrentIllnessOrInjuryDate" : "2018-03-12",
@@ -5674,16 +5791,14 @@
   "accidentDate" : "2005-01-08",
   "lastMenstrualPeriodDate" : "2005-01-08",
   "lastXRayDate" : "2005-01-08",
-  "assumedCareDate" : "2005-06-08",
-  "relinquishedCareDate" : "2005-06-08",
   "disabilityDateFrom" : "2005-06-08",
   "disabilityDateTo" : "2005-06-09",
   "admissionDate" : "2005-05-08",
   "dischargeDate" : "2005-06-08",
+  "assumedCareDate" : "2005-06-08",
+  "relinquishedCareDate" : "2005-06-08",
+  "propertyCasualtyFirstContactDate" : "2004-10-13",
   "repricerReceivedDate" : "2005-10-30",
-  "clearinghouseTraceNumber" : "ClaimIdForTransm",
-  "originalReferenceNumber" : "PayerClaimControlNum",
-  "serviceAuthorizationExceptionCode" : "ServiceAuthorizationExceptionCode",
   "claimNote" : "SURGERY WAS UNUSUALLY LONG",
   "billingProvider" : {
     "entityRole" : "BILLING_PROVIDER",
@@ -5703,6 +5818,7 @@
       "code" : "203BF0100Y"
     },
     "contacts" : [ {
+      "functionCode" : "IC",
       "name" : "JOHN SMITH",
       "contactNumbers" : [ {
         "type" : "PHONE",
@@ -5932,6 +6048,7 @@
     } ]
   }, {
     "chargeAmount" : 35.00,
+    "serviceDateFrom" : "2006-10-10",
     "unitType" : "UNIT",
     "unitCount" : 1,
     "procedure" : {
@@ -5994,9 +6111,10 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "685d7ce9fc42e4481ffb3e26",
+    "id" : "690148877e79911955eadf83",
     "controlNumber" : "0031",
     "transactionType" : "PROF",
+    "hierarchicalStructureCode" : "0019",
     "purposeCode" : "00",
     "originatorApplicationTransactionId" : "0031",
     "creationDate" : "2006-10-15",
@@ -6007,7 +6125,7 @@
     "fileInfo" : {
       "name" : "837P-all-fields.dat",
       "url" : "file:/edi-samples/edi_files/837/837P-all-fields.dat",
-      "lastModifiedDateTime" : "2025-04-07T12:22:02.272-04:00",
+      "lastModifiedDateTime" : "2025-10-18T17:33:56.407-04:00",
       "fileType" : "EDI"
     },
     "sender" : {
@@ -6017,6 +6135,7 @@
       "identifier" : "TGJ23",
       "lastNameOrOrgName" : "PREMIER BILLING SERVICE",
       "contacts" : [ {
+        "functionCode" : "IC",
         "name" : "JERRY",
         "contactNumbers" : [ {
           "type" : "PHONE",

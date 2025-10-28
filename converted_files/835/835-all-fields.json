@@ -1,6 +1,6 @@
 [
  {
-  "id" : "68ec56cace2f64368d177ab0",
+  "id" : "69014026ca84f491f7f210b1",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "7722337",
   "chargeAmount" : 226.00,
@@ -214,7 +214,7 @@
     "reason" : {
       "subType" : "CARC",
       "code" : "45",
-      "desc" : "Charge exceeds fee schedule/maximum allowable or contracted/legislated fee arrangement."
+      "desc" : "Charge exceeds fee schedule/maximum allowable or contracted/legislated fee arrangement. Usage: This adjustment amount cannot equal the total service or claim charge amount; and must not duplicate provider adjustment amounts (payments and contractual reductions) that have resulted from prior payer(s) adjudication. (Use only with Group Codes PR or CO depending upon liability)"
     },
     "amount" : 30000.00
   }, {
@@ -515,7 +515,7 @@
     }
   } ],
   "transaction" : {
-    "id" : "68ec56cace2f64368d177a68",
+    "id" : "69014026ca84f491f7f2104a",
     "controlNumber" : "35681",
     "transactionType" : "PAYMENT",
     "productionDate" : "2019-03-14",
@@ -536,8 +536,8 @@
     "transactionSetIdentifierCode" : "835",
     "fileInfo" : {
       "name" : "835-all-fields.dat",
-      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/835/835-all-fields.dat",
-      "lastModifiedDateTime" : "2025-10-12T18:40:42.875-04:00",
+      "url" : "file:/edi-samples/edi_files/835/835-all-fields.dat",
+      "lastModifiedDateTime" : "2025-10-17T17:22:31.668-04:00",
       "fileType" : "EDI"
     }
   }

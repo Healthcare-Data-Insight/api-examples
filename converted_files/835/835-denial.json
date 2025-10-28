@@ -1,6 +1,6 @@
 [
  {
-  "id" : "68ec56cace2f64368d177a4e",
+  "id" : "69014026ca84f491f7f21045",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "PATACCT",
   "chargeAmount" : 150.00,
@@ -119,7 +119,7 @@
       "reason" : {
         "subType" : "CARC",
         "code" : "252",
-        "desc" : "An attachment/other documentation is required to adjudicate this claim/service."
+        "desc" : "An attachment/other documentation is required to adjudicate this claim/service. At least one Remark Code must be provided (may be comprised of either the NCPDP Reject Reason Code, or Remittance Advice Remark Code that is not an ALERT)."
       },
       "amount" : 150.00
     } ],
@@ -136,7 +136,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "68ec56cace2f64368d177a41",
+    "id" : "69014026ca84f491f7f2101d",
     "controlNumber" : "10060875",
     "transactionType" : "PAYMENT",
     "productionDate" : "2019-08-27",
@@ -151,7 +151,7 @@
     "transactionSetIdentifierCode" : "835",
     "fileInfo" : {
       "name" : "835-denial.dat",
-      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/835/835-denial.dat",
+      "url" : "file:/edi-samples/edi_files/835/835-denial.dat",
       "lastModifiedDateTime" : "2025-09-22T10:36:36.673-04:00",
       "fileType" : "EDI"
     }

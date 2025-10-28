@@ -1,6 +1,6 @@
 [
  {
-  "id" : "685d7ce9fc42e4481ffb4d22",
+  "id" : "690147610768b7ba31c51082",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26403774",
   "chargeAmount" : 150.00,
@@ -19,11 +19,10 @@
   "serviceDateTo" : "2023-04-01",
   "subscriber" : {
     "payerResponsibilitySequence" : "PRIMARY",
-    "relationshipType" : "SELF",
     "claimFilingIndicatorCode" : "CI",
     "insurancePlanType" : "COMMERCIAL",
     "person" : {
-      "entityRole" : "SUBSCRIBER",
+      "entityRole" : "INSURED_SUBSCRIBER",
       "entityType" : "INDIVIDUAL",
       "identificationType" : "MEMBER_ID",
       "identifier" : "111223333",
@@ -88,7 +87,7 @@
     "claimFilingIndicatorCode" : "MB",
     "insurancePlanType" : "MEDICARE_B",
     "person" : {
-      "entityRole" : "SUBSCRIBER",
+      "entityRole" : "INSURED_SUBSCRIBER",
       "entityType" : "INDIVIDUAL",
       "identificationType" : "MEMBER_ID",
       "identifier" : "JS00111223999",
@@ -215,10 +214,13 @@
   "assignmentParticipationCode" : "A",
   "assignmentCertificationIndicator" : "Y",
   "releaseOfInformationCode" : "I",
+  "serviceAuthorizationExceptionCode" : "serviceAuthorizationException",
   "referralNumber" : "Referral",
   "priorAuthorizationNumber" : "priorAuth",
+  "originalReferenceNumber" : "payerClaimControlNumber",
   "repricedReferenceNumber" : "RepricedClaimNumber",
   "adjustedRepricedReferenceNumber" : "AdjustedRepricedClaimNumber",
+  "clearinghouseTraceNumber" : "ClearinghouseTraceNumber",
   "accidentDate" : "2023-03-01",
   "orthodonticBandingDate" : "2023-03-02",
   "repricerReceivedDate" : "2023-03-04",
@@ -237,9 +239,6 @@
     "toothNumber" : "12",
     "statusCode" : "M"
   } ],
-  "clearinghouseTraceNumber" : "ClearinghouseTraceNumber",
-  "originalReferenceNumber" : "payerClaimControlNumber",
-  "serviceAuthorizationExceptionCode" : "serviceAuthorizationException",
   "predeterminationOfBenefitsIdentifier" : "PredeterminationOfBenefitsId",
   "fixedFormatRecords" : [ "Record1", "Record2" ],
   "claimNote" : "Note1\nNote2",
@@ -583,9 +582,10 @@
     }
   } ],
   "transaction" : {
-    "id" : "685d7ce9fc42e4481ffb4c92",
+    "id" : "690147610768b7ba31c50fec",
     "controlNumber" : "3456",
     "transactionType" : "DENTAL",
+    "hierarchicalStructureCode" : "0019",
     "purposeCode" : "00",
     "originatorApplicationTransactionId" : "0123",
     "creationDate" : "2006-11-23",
@@ -606,6 +606,7 @@
       "identifier" : "TGJ23",
       "lastNameOrOrgName" : "PREMIER BILLING SERVICE",
       "contacts" : [ {
+        "functionCode" : "IC",
         "name" : "JERRY",
         "contactNumbers" : [ {
           "type" : "PHONE",

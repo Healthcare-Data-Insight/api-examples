@@ -1,6 +1,6 @@
 [
  {
-  "id" : "685d7ce9fc42e4481ffb4d8d",
+  "id" : "690148887e79911955eaf2d3",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26462967",
   "chargeAmount" : 100.00,
@@ -23,7 +23,7 @@
     "claimFilingIndicatorCode" : "HM",
     "insurancePlanType" : "HMO",
     "person" : {
-      "entityRole" : "SUBSCRIBER",
+      "entityRole" : "INSURED_SUBSCRIBER",
       "entityType" : "INDIVIDUAL",
       "identificationType" : "MEMBER_ID",
       "identifier" : "00221111",
@@ -50,8 +50,8 @@
   "assignmentParticipationCode" : "A",
   "assignmentCertificationIndicator" : "Y",
   "releaseOfInformationCode" : "I",
-  "onsetOfCurrentIllnessOrInjuryDate" : "1998-10-03",
   "clearinghouseTraceNumber" : "17312345600006351",
+  "onsetOfCurrentIllnessOrInjuryDate" : "1998-10-03",
   "billingProvider" : {
     "entityRole" : "BILLING_PROVIDER",
     "entityType" : "BUSINESS",
@@ -165,9 +165,10 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "685d7ce9fc42e4481ffb4d63",
+    "id" : "690148887e79911955eaf2a7",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
+    "hierarchicalStructureCode" : "0019",
     "purposeCode" : "00",
     "originatorApplicationTransactionId" : "0123",
     "creationDate" : "2006-10-15",
@@ -188,6 +189,7 @@
       "identifier" : "TGJ23",
       "lastNameOrOrgName" : "PREMIER BILLING SERVICE",
       "contacts" : [ {
+        "functionCode" : "IC",
         "name" : "JERRY",
         "contactNumbers" : [ {
           "type" : "PHONE",

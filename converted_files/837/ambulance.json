@@ -1,6 +1,6 @@
 [
  {
-  "id" : "685d7ce9fc42e4481ffb4d60",
+  "id" : "690148887e79911955eaf2a3",
   "objectType" : "CLAIM",
   "patientControlNumber" : "051068",
   "chargeAmount" : 766.50,
@@ -22,7 +22,7 @@
     "claimFilingIndicatorCode" : "MB",
     "insurancePlanType" : "MEDICARE_B",
     "person" : {
-      "entityRole" : "SUBSCRIBER",
+      "entityRole" : "INSURED_SUBSCRIBER",
       "entityType" : "INDIVIDUAL",
       "identificationType" : "MEMBER_ID",
       "identifier" : "012345678A",
@@ -265,9 +265,10 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "685d7ce9fc42e4481ffb4d25",
+    "id" : "690148887e79911955eaf262",
     "controlNumber" : "000017712",
     "transactionType" : "PROF",
+    "hierarchicalStructureCode" : "0019",
     "purposeCode" : "00",
     "originatorApplicationTransactionId" : "000017712",
     "creationDate" : "2005-02-08",
@@ -288,6 +289,7 @@
       "identifier" : "376985369",
       "lastNameOrOrgName" : "AAA AMBULANCE SERVICE",
       "contacts" : [ {
+        "functionCode" : "IC",
         "name" : "LISA SMITH",
         "contactNumbers" : [ {
           "type" : "PHONE",

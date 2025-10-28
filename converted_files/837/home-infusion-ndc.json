@@ -1,6 +1,6 @@
 [
  {
-  "id" : "685d7ce9fc42e4481ffb5080",
+  "id" : "690148887e79911955eaf5ef",
   "objectType" : "CLAIM",
   "patientControlNumber" : "CLMNO12345",
   "chargeAmount" : 2232.93,
@@ -23,7 +23,7 @@
     "claimFilingIndicatorCode" : "CI",
     "insurancePlanType" : "COMMERCIAL",
     "person" : {
-      "entityRole" : "SUBSCRIBER",
+      "entityRole" : "INSURED_SUBSCRIBER",
       "entityType" : "INDIVIDUAL",
       "identificationType" : "MEMBER_ID",
       "identifier" : "MBRID01234",
@@ -65,6 +65,7 @@
       "zipCode" : "60048"
     },
     "contacts" : [ {
+      "functionCode" : "IC",
       "name" : "Brenda Holly",
       "contactNumbers" : [ {
         "type" : "PHONE",
@@ -298,9 +299,10 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "685d7ce9fc42e4481ffb503e",
+    "id" : "690148887e79911955eaf5ab",
     "controlNumber" : "0711",
     "transactionType" : "PROF",
+    "hierarchicalStructureCode" : "0019",
     "purposeCode" : "00",
     "originatorApplicationTransactionId" : "0013",
     "creationDate" : "2004-03-01",
@@ -321,6 +323,7 @@
       "identifier" : "587654321",
       "lastNameOrOrgName" : "Quality Billing Service Corporation",
       "contacts" : [ {
+        "functionCode" : "IC",
         "name" : "Bud Holly",
         "contactNumbers" : [ {
           "type" : "PHONE",

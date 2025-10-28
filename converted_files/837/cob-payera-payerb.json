@@ -1,6 +1,6 @@
 [
  {
-  "id" : "685d7ce9fc42e4481ffb4e8e",
+  "id" : "690148887e79911955eaf3e0",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26407789",
   "chargeAmount" : 79.04,
@@ -18,9 +18,8 @@
   "serviceDateTo" : "2005-10-03",
   "subscriber" : {
     "payerResponsibilitySequence" : "SECONDARY",
-    "relationshipType" : "SELF",
     "person" : {
-      "entityRole" : "SUBSCRIBER",
+      "entityRole" : "INSURED_SUBSCRIBER",
       "entityType" : "INDIVIDUAL",
       "identificationType" : "MEMBER_ID",
       "identifier" : "22233444",
@@ -71,7 +70,7 @@
     "claimFilingIndicatorCode" : "CI",
     "insurancePlanType" : "COMMERCIAL",
     "person" : {
-      "entityRole" : "SUBSCRIBER",
+      "entityRole" : "INSURED_SUBSCRIBER",
       "entityType" : "INDIVIDUAL",
       "identificationType" : "MEMBER_ID",
       "identifier" : "JS00111223333",
@@ -143,6 +142,7 @@
       "zipCode" : "33111"
     },
     "contacts" : [ {
+      "functionCode" : "IC",
       "name" : "CONNIE",
       "contactNumbers" : [ {
         "type" : "PHONE",
@@ -240,7 +240,8 @@
         "reasonCode" : "42",
         "reason" : {
           "subType" : "CARC",
-          "code" : "42"
+          "code" : "42",
+          "desc" : "Charges exceed our fee schedule or maximum allowable amount. (Use CARC 45)"
         },
         "amount" : 3.00
       } ],
@@ -361,9 +362,10 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "685d7ce9fc42e4481ffb4e4b",
+    "id" : "690148887e79911955eaf39b",
     "controlNumber" : "0024",
     "transactionType" : "PROF",
+    "hierarchicalStructureCode" : "0019",
     "purposeCode" : "00",
     "originatorApplicationTransactionId" : "0123",
     "creationDate" : "2005-10-15",
@@ -384,6 +386,7 @@
       "identifier" : "999996666",
       "lastNameOrOrgName" : "KEY INSURANCE",
       "contacts" : [ {
+        "functionCode" : "IC",
         "name" : "JERRY",
         "contactNumbers" : [ {
           "type" : "PHONE",

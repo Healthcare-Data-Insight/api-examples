@@ -1,6 +1,6 @@
 [
  {
-  "id" : "685d7ce9fc42e4481ffb4f57",
+  "id" : "690148887e79911955eaf4b4",
   "objectType" : "CLAIM",
   "patientControlNumber" : "756048Q",
   "chargeAmount" : 89.93,
@@ -24,7 +24,7 @@
     "claimFilingIndicatorCode" : "MB",
     "insurancePlanType" : "MEDICARE_B",
     "person" : {
-      "entityRole" : "SUBSCRIBER",
+      "entityRole" : "INSURED_SUBSCRIBER",
       "entityType" : "INDIVIDUAL",
       "identificationType" : "MEMBER_ID",
       "identifier" : "030005074A",
@@ -61,7 +61,7 @@
     "claimFilingIndicatorCode" : "CI",
     "insurancePlanType" : "COMMERCIAL",
     "person" : {
-      "entityRole" : "SUBSCRIBER",
+      "entityRole" : "INSURED_SUBSCRIBER",
       "entityType" : "INDIVIDUAL",
       "identificationType" : "MEMBER_ID",
       "identifier" : "222004433",
@@ -158,17 +158,17 @@
     "desc" : "EFFECTIVE DATE-INSURED B POLICY",
     "occurrenceDate" : "1987-01-01"
   } ],
-  "conditions" : [ {
-    "subType" : "CONDITION",
-    "code" : "09",
-    "desc" : "NEITHER PATIENT NOR SPOUSE IS EMPLOYED",
-    "instructionDesc" : "This code indicates that the patient and spouse have denied having any employment in response to MSP development questions."
-  } ],
   "valueInfos" : [ {
     "subType" : "VALUE",
     "code" : "A2",
     "desc" : "Coinsurance Payer A (reportable only on paper claims)",
     "amount" : 15.31
+  } ],
+  "conditions" : [ {
+    "subType" : "CONDITION",
+    "code" : "09",
+    "desc" : "NEITHER PATIENT NOR SPOUSE IS EMPLOYED",
+    "instructionDesc" : "This code indicates that the patient and spouse have denied having any employment in response to MSP development questions."
   } ],
   "serviceLines" : [ {
     "chargeAmount" : 13.39,
@@ -202,9 +202,10 @@
     }
   } ],
   "transaction" : {
-    "id" : "685d7ce9fc42e4481ffb4f2c",
+    "id" : "690148887e79911955eaf487",
     "controlNumber" : "987654",
     "transactionType" : "INST",
+    "hierarchicalStructureCode" : "0019",
     "purposeCode" : "00",
     "originatorApplicationTransactionId" : "0123",
     "creationDate" : "2016-09-18",
@@ -225,6 +226,7 @@
       "identifier" : "12345",
       "lastNameOrOrgName" : "JONES HOSPITAL",
       "contacts" : [ {
+        "functionCode" : "IC",
         "name" : "JANE DOE",
         "contactNumbers" : [ {
           "type" : "PHONE",
