@@ -1,0 +1,197 @@
+[
+ {
+  "segment_id" : "ISA",
+  "loop_id" : "0000",
+  "authorization_information_qualifier" : "00",
+  "security_information_qualifier" : "00",
+  "interchange_id_qualifier" : "ZZ",
+  "interchange_sender_id" : "123456789012345",
+  "interchange_id_qualifier_2" : "ZZ",
+  "interchange_receiver_id" : "123456789012346",
+  "interchange_date" : "2008-05-03",
+  "interchange_time" : "17:05",
+  "repetition_separator" : ">",
+  "interchange_control_version_number" : "00501",
+  "interchange_control_number" : 10216,
+  "acknowledgement_requested" : "0",
+  "usage_indicator" : "T",
+  "component_element_separator" : ":"
+}
+, {
+  "segment_id" : "GS",
+  "loop_id" : "0000",
+  "functional_identifier_code" : "HS",
+  "application_sender_code" : "1234567890",
+  "application_receiver_code" : "1234567890",
+  "date" : "2008-05-03",
+  "time" : "17:05",
+  "group_control_number" : 20213,
+  "responsible_agency_code" : "X",
+  "version_identifier_code" : "005010X279A1"
+}
+, {
+  "segment_id" : "ST",
+  "loop_id" : "0000",
+  "transaction_set_identifier_code" : {
+    "code" : "270"
+  },
+  "transaction_set_control_number" : "1234",
+  "implementation_convention_preference" : "005010X279A1",
+  "beginning_of_hierarchical_transaction" : {
+    "segment_id" : "BHT",
+    "loop_id" : "0000",
+    "hierarchical_structure_code" : "0022",
+    "transaction_set_purpose_code" : "13",
+    "submitter_transaction_identifier" : "10001234",
+    "transaction_set_creation_date" : "2006-05-01",
+    "transaction_set_creation_time" : "13:19"
+  },
+  "information_source_level" : [ {
+    "segment_id" : "HL",
+    "loop_id" : "2000A",
+    "hierarchical_id_number" : "1",
+    "hierarchical_level_code" : {
+      "code" : "20",
+      "desc" : "Information Source"
+    },
+    "hierarchical_child_code" : {
+      "code" : "1",
+      "desc" : "Contains subordinate segments"
+    },
+    "information_source_name" : {
+      "segment_id" : "NM1",
+      "loop_id" : "2100A",
+      "entity_identifier_code" : {
+        "code" : "PR",
+        "desc" : "Payer"
+      },
+      "entity_type_qualifier" : {
+        "code" : "2",
+        "desc" : "Business"
+      },
+      "response_contact_last_or_organization_name" : "ABC COMPANY",
+      "identification_code_qualifier" : {
+        "code" : "PI",
+        "desc" : "Payor Identification"
+      },
+      "response_contact_identifier" : "842610001"
+    },
+    "information_receiver_level" : [ {
+      "segment_id" : "HL",
+      "loop_id" : "2000B",
+      "hierarchical_id_number" : "2",
+      "hierarchical_parent_id_number" : "1",
+      "hierarchical_level_code" : {
+        "code" : "21",
+        "desc" : "Information Receiver"
+      },
+      "hierarchical_child_code" : {
+        "code" : "1",
+        "desc" : "Contains subordinate segments"
+      },
+      "information_receiver_name" : {
+        "segment_id" : "NM1",
+        "loop_id" : "2100B",
+        "entity_identifier_code" : {
+          "code" : "1P",
+          "desc" : "Provider"
+        },
+        "entity_type_qualifier" : {
+          "code" : "2",
+          "desc" : "Business"
+        },
+        "response_contact_last_or_organization_name" : "BONE AND JOINT CLINIC",
+        "identification_code_qualifier" : {
+          "code" : "SV",
+          "desc" : "Service Provider Number"
+        },
+        "response_contact_identifier" : "2000035"
+      },
+      "subscriber_level" : [ {
+        "segment_id" : "HL",
+        "loop_id" : "2000C",
+        "hierarchical_id_number" : "3",
+        "hierarchical_parent_id_number" : "2",
+        "hierarchical_level_code" : {
+          "code" : "22",
+          "desc" : "Subscriber"
+        },
+        "hierarchical_child_code" : {
+          "code" : "0",
+          "desc" : "No subordinate segments"
+        },
+        "subscriber_trace_number" : [ {
+          "segment_id" : "TRN",
+          "loop_id" : "2000C",
+          "trace_type_code" : "1",
+          "current_transaction_trace_number" : "93175-012547",
+          "originating_company_identifier" : "9877281234"
+        } ],
+        "subscriber_name" : {
+          "segment_id" : "NM1",
+          "loop_id" : "2100C",
+          "entity_identifier_code" : {
+            "code" : "IL",
+            "desc" : "Insured Subscriber"
+          },
+          "entity_type_qualifier" : {
+            "code" : "1",
+            "desc" : "Individual"
+          },
+          "response_contact_last_or_organization_name" : "SMITH",
+          "response_contact_first_name" : "ROBERT",
+          "identification_code_qualifier" : {
+            "code" : "MI",
+            "desc" : "Member Identification Number"
+          },
+          "response_contact_identifier" : "11122333301",
+          "subscriber_demographic_information" : {
+            "segment_id" : "DMG",
+            "loop_id" : "2100C",
+            "date_time_period_format" : {
+              "code" : "D8",
+              "desc" : "Date"
+            },
+            "dependent_birth_date" : "1943-05-19"
+          },
+          "subscriber_date" : [ {
+            "segment_id" : "DTP",
+            "loop_id" : "2100C",
+            "date_time_qualifier" : {
+              "code" : "291"
+            },
+            "date_time_period_format" : {
+              "code" : "D8",
+              "desc" : "Date"
+            },
+            "date_time_period" : "2006-05-01"
+          } ],
+          "subscriber_eligibility_or_benefit_inquiry" : [ {
+            "segment_id" : "EQ",
+            "loop_id" : "2110C",
+            "service_type_code" : [ "30" ]
+          } ]
+        }
+      } ]
+    } ]
+  } ],
+  "transaction_set_trailer" : {
+    "segment_id" : "SE",
+    "loop_id" : "0000",
+    "number_of_included_segments" : 13,
+    "transaction_set_control_number" : "1234"
+  }
+}
+, {
+  "segment_id" : "GE",
+  "loop_id" : "0000",
+  "number_of_transaction_sets_included" : 1,
+  "group_control_number" : 20213
+}
+, {
+  "segment_id" : "IEA",
+  "loop_id" : "0000",
+  "number_of_included_functional_groups" : 1,
+  "interchange_control_number" : 10216
+}
+ ]

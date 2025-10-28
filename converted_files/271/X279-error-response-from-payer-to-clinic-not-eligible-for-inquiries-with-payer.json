@@ -1,0 +1,138 @@
+[
+ {
+  "segment_id" : "ISA",
+  "loop_id" : "0000",
+  "authorization_information_qualifier" : "00",
+  "security_information_qualifier" : "00",
+  "interchange_id_qualifier" : "ZZ",
+  "interchange_sender_id" : "123456789012345",
+  "interchange_id_qualifier_2" : "ZZ",
+  "interchange_receiver_id" : "123456789012346",
+  "interchange_date" : "2008-05-03",
+  "interchange_time" : "17:05",
+  "repetition_separator" : ">",
+  "interchange_control_version_number" : "00501",
+  "interchange_control_number" : 10216,
+  "acknowledgement_requested" : "0",
+  "usage_indicator" : "T",
+  "component_element_separator" : ":"
+}
+, {
+  "segment_id" : "GS",
+  "loop_id" : "0000",
+  "functional_identifier_code" : "HB",
+  "application_sender_code" : "1234567890",
+  "application_receiver_code" : "1234567890",
+  "date" : "2008-05-03",
+  "time" : "17:05",
+  "group_control_number" : 20213,
+  "responsible_agency_code" : "X",
+  "version_identifier_code" : "005010X279A1"
+}
+, {
+  "segment_id" : "ST",
+  "loop_id" : "0000",
+  "transaction_set_identifier_code" : {
+    "code" : "271"
+  },
+  "transaction_set_control_number" : "4323",
+  "implementation_convention_preference" : "005010X279A1",
+  "beginning_of_hierarchical_transaction" : {
+    "segment_id" : "BHT",
+    "loop_id" : "0000",
+    "hierarchical_structure_code" : "0022",
+    "transaction_set_purpose_code" : "11",
+    "submitter_transaction_identifier" : "10001234",
+    "transaction_set_creation_date" : "2006-05-01",
+    "transaction_set_creation_time" : "13:19"
+  },
+  "information_source_level" : [ {
+    "segment_id" : "HL",
+    "loop_id" : "2000A",
+    "hierarchical_id_number" : "1",
+    "hierarchical_level_code" : {
+      "code" : "20",
+      "desc" : "Information Source"
+    },
+    "hierarchical_child_code" : {
+      "code" : "1",
+      "desc" : "Contains subordinate segments"
+    },
+    "information_source_name" : {
+      "segment_id" : "NM1",
+      "loop_id" : "2100A",
+      "entity_identifier_code" : {
+        "code" : "PR",
+        "desc" : "Payer"
+      },
+      "entity_type_qualifier" : {
+        "code" : "2",
+        "desc" : "Business"
+      },
+      "response_contact_last_or_organization_name" : "ABC COMPANY",
+      "identification_code_qualifier" : {
+        "code" : "PI",
+        "desc" : "Payor Identification"
+      },
+      "response_contact_identifier" : "842610001"
+    },
+    "information_receiver_level" : [ {
+      "segment_id" : "HL",
+      "loop_id" : "2000B",
+      "hierarchical_id_number" : "2",
+      "hierarchical_parent_id_number" : "1",
+      "hierarchical_level_code" : {
+        "code" : "21",
+        "desc" : "Information Receiver"
+      },
+      "hierarchical_child_code" : {
+        "code" : "1",
+        "desc" : "Contains subordinate segments"
+      },
+      "information_receiver_name" : {
+        "segment_id" : "NM1",
+        "loop_id" : "2100B",
+        "entity_identifier_code" : {
+          "code" : "1P",
+          "desc" : "Provider"
+        },
+        "entity_type_qualifier" : {
+          "code" : "2",
+          "desc" : "Business"
+        },
+        "response_contact_last_or_organization_name" : "BONE AND JOINT CLINIC",
+        "identification_code_qualifier" : {
+          "code" : "SV",
+          "desc" : "Service Provider Number"
+        },
+        "response_contact_identifier" : "2000035",
+        "information_receiver_request_validation" : [ {
+          "segment_id" : "AAA",
+          "loop_id" : "2100B",
+          "valid_request_indicator" : "Y",
+          "reject_reason_code" : "50",
+          "followup_action_code" : "N"
+        } ]
+      }
+    } ]
+  } ],
+  "transaction_set_trailer" : {
+    "segment_id" : "SE",
+    "loop_id" : "0000",
+    "number_of_included_segments" : 8,
+    "transaction_set_control_number" : "4323"
+  }
+}
+, {
+  "segment_id" : "GE",
+  "loop_id" : "0000",
+  "number_of_transaction_sets_included" : 1,
+  "group_control_number" : 20213
+}
+, {
+  "segment_id" : "IEA",
+  "loop_id" : "0000",
+  "number_of_included_functional_groups" : 1,
+  "interchange_control_number" : 10216
+}
+ ]
