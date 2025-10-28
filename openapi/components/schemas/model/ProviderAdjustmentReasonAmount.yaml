@@ -4,7 +4,8 @@ description: "<div class='obj-desc'>Provider-level payment adjustment containing
   \ reason code and the amount</div>\n"
 properties:
   reason:
-    description: "Provider adjustment reason code. EDI: PLB03-1"
+    description: "Provider adjustment reason code<br/><a href='https://datainsight.health/code-lookup/?type=PROVIDER_ADJUSTMENT_REASON_CODE'\
+      \ target='_blank'>View codes and descriptions</a>. EDI: PLB03-1"
     $ref: "./Code.yaml"
   referenceIdentification:
     description: "Reference identification. EDI: PLB03-2"

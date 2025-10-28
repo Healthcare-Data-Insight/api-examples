@@ -23,7 +23,8 @@ properties:
     description: "Credit or debit flag code. EDI: BPR03"
     type: "string"
   paymentMethodType:
-    description: "Payment method type. EDI: BPR04"
+    description: "Payment method type: ACH, CHECK, WIRE_TRANSFER, NON_PAYMENT. EDI:\
+      \ BPR04"
     type: "string"
   paymentFormatCode:
     description: "Payment format code. EDI: BPR05"

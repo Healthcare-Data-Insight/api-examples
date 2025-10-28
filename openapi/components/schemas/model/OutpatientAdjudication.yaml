@@ -21,7 +21,7 @@ properties:
     type: "number"
     format: "float"
   remarks:
-    description: "Remark codes<br/><a href='https://datainsight.health/code-lookup/?type=carc_rarc&search=cat:rarc'\
+    description: "Remark codes<br/><a href='https://datainsight.health/code-lookup/?type=REMITTANCE_ADVICE_REMARK_CODE'\
       \ target='_blank'>View codes and descriptions</a>"
     type: "array"
     items:

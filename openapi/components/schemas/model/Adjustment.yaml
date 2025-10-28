@@ -6,7 +6,7 @@ properties:
     description: "Claim adjustment group code as a string constant (enum). EDI: CAS01"
     type: "string"
   reason:
-    description: "Claim adjustment reason code<br/><a href='https://datainsight.health/code-lookup/?type=carc_rarc&search=cat:carc'\
+    description: "Claim adjustment reason code<br/><a href='https://datainsight.health/code-lookup/?type=CLAIM_ADJUSTMENT_REASON_CODE'\
       \ target='_blank'>View codes and descriptions</a>. EDI: CAS02"
     $ref: "./Code.yaml"
   amount:
