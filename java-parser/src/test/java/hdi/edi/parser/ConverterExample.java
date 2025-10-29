@@ -30,8 +30,6 @@ public class ConverterExample implements ParsingExampleHelper {
     @Test
     public void convertMultipleFilesToJsonLines() {
         var converter = new EdiFileConverter(OutputFormat.JSONL)
-                // We need to set the split mode for large transactions
-                .isSplitMode(true)
                 // Write parsing warnings to the output, see https://datainsight.health/docs/ediconvert-api/user-guide/#error-handling for more details
                 .isSerializeParsingIssues(true);
 
@@ -62,7 +60,6 @@ public class ConverterExample implements ParsingExampleHelper {
     @Test
     public void convertMultipleFilesToWriter() {
         var converter = new EdiFileConverter(OutputFormat.JSON)
-                .isSplitMode(true)
                 .isSerializeParsingIssues(true);
 
         StringWriter stringWriter = new StringWriter();
@@ -72,6 +69,4 @@ public class ConverterExample implements ParsingExampleHelper {
         converter.convertFiles(new File(EDI_FILES_DIR + "/837"), "*.dat", false, writer);
         System.out.println(stringWriter);
     }
-
-
 }

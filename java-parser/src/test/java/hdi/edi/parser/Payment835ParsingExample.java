@@ -28,7 +28,7 @@ public class Payment835ParsingExample implements ParsingExampleHelper {
     public void parse835(File edi835File) {
         log.info("* Parsing EDI 835 file: {}", edi835File.getName());
         // set "split mode" to parse by chunks of N payments
-        try (var parser = new EdiParser(edi835File).isSplitMode(true)) {
+        try (var parser = new EdiParser(edi835File)) {
             boolean isDone = false;
             while (!isDone) {
                 // parse 100 payments or adjustments at a time

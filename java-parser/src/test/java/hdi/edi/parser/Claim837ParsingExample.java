@@ -41,7 +41,7 @@ public class Claim837ParsingExample implements ParsingExampleHelper {
 
     public void parse837(File edi837File) {
         log.info("* Parsing EDI 837 file: {}", edi837File.getName());
-        try (var parser = new EdiParser(edi837File).isSplitMode(true)) {
+        try (var parser = new EdiParser(edi837File)) {
             boolean isDone = false;
             while (!isDone) {
                 EdiParsingResults parsingResults = parser.parse(100);

@@ -81,7 +81,7 @@ public class ClaimStatus277CAParsingExample implements ParsingExampleHelper {
     @Test
     public void parseReceiverStatus() {
         var edi277File = new File(EDI_FILES_DIR, "/277/277CA-receiver-rejected.edi");
-        ;
+
         EdiParsingResults parsingResults;
         try (var parser = new EdiParser(edi277File)) {
             // parse all

@@ -119,7 +119,8 @@ public class SegmentParsingExample implements ParsingExampleHelper {
     @Before
     public void setup() {
         var ediFile837p = new File(EDI_FILES_DIR + "/837/prof-encounter.dat");
-        parser = new EdiParser(ediFile837p);
+        // Disable split mode: we want all segments for the transaction
+        parser = new EdiParser(ediFile837p).isSplitMode(false);
     }
 
 }
