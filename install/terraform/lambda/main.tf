@@ -21,13 +21,13 @@ resource "aws_lambda_function" "edi_converter_function" {
   environment {
     variables = {
       # Replace with your key, the key below has expired
-      EDI_LICENSE_KEY = "Ic5OXgAAABoAAAACAAAACwAAAANlbnRpdGxlbWVudEVESQAAABoAAAALAAAACmV4cGlyYXRpb24AAAGXQ2VGAAAAAJwAAAABAAAAEAAAAIBsaWNlbnNlU2lnbmF0dXJlZmeZW+jR7limZHPUBucEnWrS/OP3PCAPrgEhgrNnb4JUwhPICkHkZ3A58WB76XCh/o8fvl5tgTBDALujTcyArxmV58gw3gjdQY+ZF+FOOneF16x71tsEr6CFAYwIW9UZJjL/sNnujME30/HUZCoyUeuu+nx0Y9B1k6/qNxuHpy8AAAAiAAAAAgAAAA8AAAAHc2lnbmF0dXJlRGlnZXN0U0hBLTUxMg=="
+      EDI_LICENSE_KEY = "Ic5OXgAAABoAAAACAAAACwAAAANlbnRpdGxlbWVudEVESQAAABoAAAALAAAACmV4cGlyYXRpb24AAAGadm9YgAAAAJwAAAABAAAAEAAAAIBsaWNlbnNlU2lnbmF0dXJlRsqEQItRpwCXDXeor0dJOtbLApxQmJ7A2hzUY2jdzTncOO0K5Gy/U0DIdqXhYwRcVzo4KipXAF70sObluAjTQSvBc17DMRqh2NjER0JJV5+/KjROS/JHzyhRIGvlUB0WH11scrEDLhuGndI5dEk/v6sVgA8G7hqfINkW9BMt4V0AAAAiAAAAAgAAAA8AAAAHc2lnbmF0dXJlRGlnZXN0U0hBLTUxMg=="
       # Include parser's warnings in the output
       OUTPUT_WARNINGS = "True"
       # name of the output bucket
       OUT_BUCKET      = "ediout"
-      # JSON, JSONL, CSV
-      OUT_FORMAT      = "JSONL"
+      # JSON, JSONL, CSV, EXCEL
+      OUT_FORMAT      = "JSON"
     }
   }
 
