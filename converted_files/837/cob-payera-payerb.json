@@ -1,6 +1,6 @@
 [
  {
-  "id" : "690148887e79911955eaf3e0",
+  "id" : "6918d0567f059d7aab1b4566",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26407789",
   "chargeAmount" : 79.04,
@@ -126,6 +126,7 @@
   "assignmentParticipationCode" : "A",
   "assignmentCertificationIndicator" : "Y",
   "releaseOfInformationCode" : "I",
+  "patientSignatureSourceCode" : "P",
   "billingProvider" : {
     "entityRole" : "BILLING_PROVIDER",
     "entityType" : "INDIVIDUAL",
@@ -149,6 +150,17 @@
         "number" : "3055551234"
       } ]
     } ]
+  },
+  "payToAddress" : {
+    "entityRole" : "PAY_TO_PROVIDER",
+    "entityType" : "BUSINESS",
+    "address" : {
+      "line" : "2345",
+      "line2" : "OCEAN BLVD",
+      "city" : "MAIMI",
+      "stateCode" : "FL",
+      "zipCode" : "33111"
+    }
   },
   "providers" : [ {
     "entityRole" : "RENDERING",
@@ -362,7 +374,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "690148887e79911955eaf39b",
+    "id" : "6918d0567f059d7aab1b4521",
     "controlNumber" : "0024",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",

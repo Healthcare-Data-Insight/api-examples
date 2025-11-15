@@ -1,6 +1,6 @@
 [
  {
-  "id" : "690148887e79911955eaf56e",
+  "id" : "6918d0567f059d7aab1b46f4",
   "objectType" : "CLAIM",
   "patientControlNumber" : "ABC123-RI",
   "chargeAmount" : 28.75,
@@ -51,6 +51,7 @@
   "assignmentParticipationCode" : "A",
   "assignmentCertificationIndicator" : "Y",
   "releaseOfInformationCode" : "Y",
+  "patientSignatureSourceCode" : "P",
   "repricedReferenceNumber" : "0902352342",
   "clearinghouseTraceNumber" : "061505501749388",
   "billingProvider" : {
@@ -172,7 +173,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "690148887e79911955eaf542",
+    "id" : "6918d0567f059d7aab1b46c8",
     "controlNumber" : "1002",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",

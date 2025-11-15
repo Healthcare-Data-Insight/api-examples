@@ -1,0 +1,29 @@
+---
+type: "object"
+description: "<div class='obj-desc'>Required when the submitter is contractually obligated\
+  \ to supply this information on post-adjudicated claims</div>\n<div class='obj-edi-examples'>Segment:\
+  \ CN1</div>\n"
+properties:
+  contractTypeCode:
+    description: "Contract type code. EDI: CN101"
+    type: "string"
+  amount:
+    description: "Amount. EDI: CN102"
+    type: "number"
+    format: "float"
+  percentage:
+    description: "Percentage. EDI: CN103"
+    type: "number"
+    format: "float"
+  contractCode:
+    description: "Contract code. EDI: CN104"
+    type: "string"
+  termDiscountPercentage:
+    description: "Term discount percentage. EDI: CN105"
+    type: "number"
+    format: "float"
+  versionIdentifier:
+    description: "Version identifier. EDI: CN106"
+    type: "string"
+required:
+- "contractTypeCode"

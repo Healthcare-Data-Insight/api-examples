@@ -1,6 +1,6 @@
 [
  {
-  "id" : "690148877e79911955eadbec",
+  "id" : "6918d0557f059d7aab1b2d72",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26403774",
   "chargeAmount" : 150.00,
@@ -582,7 +582,7 @@
     }
   } ],
   "transaction" : {
-    "id" : "690148877e79911955eadb56",
+    "id" : "6918d0557f059d7aab1b2cdc",
     "controlNumber" : "3456",
     "transactionType" : "DENTAL",
     "hierarchicalStructureCode" : "0019",
@@ -625,7 +625,7 @@
   }
 }
 , {
-  "id" : "690148877e79911955eadc32",
+  "id" : "6918d0557f059d7aab1b2db8",
   "objectType" : "CLAIM",
   "patientControlNumber" : "051068",
   "chargeAmount" : 766.50,
@@ -681,6 +681,12 @@
   "assignmentParticipationCode" : "A",
   "assignmentCertificationIndicator" : "Y",
   "releaseOfInformationCode" : "Y",
+  "patientSignatureSourceCode" : "P",
+  "relatedCause" : {
+    "relatedCauseCode" : "AA",
+    "relatedCauseCode2" : "OA",
+    "stateCode" : "FL"
+  },
   "accidentDate" : "2005-02-08",
   "billingProvider" : {
     "entityRole" : "BILLING_PROVIDER",
@@ -743,6 +749,7 @@
     "serviceDateFrom" : "2005-02-08",
     "unitType" : "UNIT",
     "unitCount" : 1,
+    "ambulancePatientCount" : 2,
     "lineNote" : "CARDIAC EMERGENCY",
     "procedure" : {
       "subType" : "HCPCS",
@@ -796,6 +803,7 @@
     "serviceDateFrom" : "2005-02-08",
     "unitType" : "UNIT",
     "unitCount" : 21,
+    "ambulancePatientCount" : 2,
     "procedure" : {
       "subType" : "HCPCS",
       "code" : "A0425",
@@ -890,7 +898,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "690148877e79911955eadbf1",
+    "id" : "6918d0557f059d7aab1b2d77",
     "controlNumber" : "000017712",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -904,7 +912,7 @@
     "fileInfo" : {
       "name" : "ambulance.dat",
       "url" : "file:/edi-samples/edi_files/837/ambulance.dat",
-      "lastModifiedDateTime" : "2025-04-07T22:10:01.716-04:00",
+      "lastModifiedDateTime" : "2025-11-15T14:10:29.605-05:00",
       "fileType" : "EDI"
     },
     "sender" : {
@@ -933,7 +941,7 @@
   }
 }
 , {
-  "id" : "690148877e79911955eadc62",
+  "id" : "6918d0557f059d7aab1b2de8",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26462967",
   "chargeAmount" : 100.00,
@@ -1002,6 +1010,16 @@
       "subType" : "PROVIDER_TAXONOMY",
       "code" : "103GC0700X",
       "desc" : "Clinical Neuropsychologist"
+    }
+  },
+  "payToAddress" : {
+    "entityRole" : "PAY_TO_PROVIDER",
+    "entityType" : "BUSINESS",
+    "address" : {
+      "line" : "2345 OCEAN BLVD",
+      "city" : "MIAMI",
+      "stateCode" : "FL",
+      "zipCode" : "33111"
     }
   },
   "providers" : [ {
@@ -1098,7 +1116,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "690148877e79911955eadc36",
+    "id" : "6918d0557f059d7aab1b2dbc",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -1144,7 +1162,7 @@
   }
 }
 , {
-  "id" : "690148877e79911955eadd04",
+  "id" : "6918d0557f059d7aab1b2e8a",
   "objectType" : "CLAIM",
   "patientControlNumber" : "ABC0002",
   "chargeAmount" : 89.93,
@@ -1581,6 +1599,34 @@
         "type" : "EMAIL",
         "number" : "ALEX@BESTMED.NET"
       } ]
+    } ]
+  },
+  "payToAddress" : {
+    "entityRole" : "PAY_TO_PROVIDER",
+    "entityType" : "BUSINESS",
+    "address" : {
+      "line" : "P O BOX 22310",
+      "city" : "OKLAHOMA CITY",
+      "stateCode" : "OK",
+      "zipCode" : "799998961"
+    }
+  },
+  "payToPlan" : {
+    "entityRole" : "PAYEE",
+    "entityType" : "BUSINESS",
+    "identificationType" : "NPI",
+    "identifier" : "PTP123",
+    "lastNameOrOrgName" : "PLAN TO PAY TO",
+    "address" : {
+      "line" : "236 SEAWAY ST",
+      "city" : "MIAMI",
+      "stateCode" : "FL",
+      "zipCode" : "33111"
+    },
+    "additionalIds" : [ {
+      "qualifierCode" : "FY",
+      "type" : "CLAIM_OFFICE_NUMBER",
+      "identification" : "587654321"
     } ]
   },
   "providers" : [ {
@@ -2402,7 +2448,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "690148877e79911955eadc67",
+    "id" : "6918d0557f059d7aab1b2ded",
     "controlNumber" : "00000024",
     "transactionType" : "INST",
     "hierarchicalStructureCode" : "0019",
@@ -2445,7 +2491,7 @@
   }
 }
 , {
-  "id" : "690148877e79911955eadd27",
+  "id" : "6918d0557f059d7aab1b2ead",
   "objectType" : "CLAIM",
   "patientControlNumber" : "125WILL",
   "chargeAmount" : 145.50,
@@ -2548,7 +2594,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "690148877e79911955eadd07",
+    "id" : "6918d0557f059d7aab1b2e8d",
     "controlNumber" : "3701",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -2591,7 +2637,7 @@
   }
 }
 , {
-  "id" : "690148877e79911955eadd6f",
+  "id" : "6918d0557f059d7aab1b2ef5",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26407789",
   "chargeAmount" : 79.04,
@@ -2717,6 +2763,7 @@
   "assignmentParticipationCode" : "A",
   "assignmentCertificationIndicator" : "Y",
   "releaseOfInformationCode" : "I",
+  "patientSignatureSourceCode" : "P",
   "billingProvider" : {
     "entityRole" : "BILLING_PROVIDER",
     "entityType" : "INDIVIDUAL",
@@ -2740,6 +2787,17 @@
         "number" : "3055551234"
       } ]
     } ]
+  },
+  "payToAddress" : {
+    "entityRole" : "PAY_TO_PROVIDER",
+    "entityType" : "BUSINESS",
+    "address" : {
+      "line" : "2345",
+      "line2" : "OCEAN BLVD",
+      "city" : "MAIMI",
+      "stateCode" : "FL",
+      "zipCode" : "33111"
+    }
   },
   "providers" : [ {
     "entityRole" : "RENDERING",
@@ -2953,7 +3011,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "690148877e79911955eadd2a",
+    "id" : "6918d0557f059d7aab1b2eb0",
     "controlNumber" : "0024",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -2996,7 +3054,7 @@
   }
 }
 , {
-  "id" : "690148877e79911955eadd9d",
+  "id" : "6918d0557f059d7aab1b2f23",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26463774",
   "chargeAmount" : 100.00,
@@ -3081,6 +3139,16 @@
       "desc" : "Clinical Neuropsychologist"
     }
   },
+  "payToAddress" : {
+    "entityRole" : "PAY_TO_PROVIDER",
+    "entityType" : "BUSINESS",
+    "address" : {
+      "line" : "2345 OCEAN BLVD",
+      "city" : "MAIMI",
+      "stateCode" : "FL",
+      "zipCode" : "33111"
+    }
+  },
   "diags" : [ {
     "subType" : "ICD_10_PRINCIPAL",
     "code" : "J020",
@@ -3145,7 +3213,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "690148877e79911955eadd73",
+    "id" : "6918d0557f059d7aab1b2ef9",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -3191,7 +3259,7 @@
   }
 }
 , {
-  "id" : "690148877e79911955eade11",
+  "id" : "6918d0557f059d7aab1b2f97",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26462967",
   "chargeAmount" : 100.00,
@@ -3260,6 +3328,16 @@
       "subType" : "PROVIDER_TAXONOMY",
       "code" : "103GC0700X",
       "desc" : "Clinical Neuropsychologist"
+    }
+  },
+  "payToAddress" : {
+    "entityRole" : "PAY_TO_PROVIDER",
+    "entityType" : "BUSINESS",
+    "address" : {
+      "line" : "2345 OCEAN BLVD",
+      "city" : "MIAMI",
+      "stateCode" : "FL",
+      "zipCode" : "33111"
     }
   },
   "providers" : [ {
@@ -3356,7 +3434,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "690148877e79911955eadda0",
+    "id" : "6918d0557f059d7aab1b2f26",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -3402,7 +3480,7 @@
   }
 }
 , {
-  "id" : "690148877e79911955eade12",
+  "id" : "6918d0557f059d7aab1b2f98",
   "objectType" : "CLAIM",
   "patientControlNumber" : "125WILL",
   "chargeAmount" : 145.50,
@@ -3505,7 +3583,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "690148877e79911955eaddcd",
+    "id" : "6918d0557f059d7aab1b2f53",
     "controlNumber" : "3701",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -3548,7 +3626,7 @@
   }
 }
 , {
-  "id" : "690148877e79911955eade13",
+  "id" : "6918d0557f059d7aab1b2f99",
   "objectType" : "CLAIM",
   "patientControlNumber" : "153829140",
   "chargeAmount" : 827.00,
@@ -3710,7 +3788,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "690148877e79911955eaddee",
+    "id" : "6918d0557f059d7aab1b2f74",
     "controlNumber" : "0001",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -3756,7 +3834,7 @@
   }
 }
 , {
-  "id" : "690148877e79911955eade43",
+  "id" : "6918d0557f059d7aab1b2fc9",
   "objectType" : "CLAIM",
   "patientControlNumber" : "756048Q",
   "chargeAmount" : 89.93,
@@ -3958,7 +4036,7 @@
     }
   } ],
   "transaction" : {
-    "id" : "690148877e79911955eade16",
+    "id" : "6918d0557f059d7aab1b2f9c",
     "controlNumber" : "987654",
     "transactionType" : "INST",
     "hierarchicalStructureCode" : "0019",
@@ -4001,7 +4079,7 @@
   }
 }
 , {
-  "id" : "690148877e79911955eade75",
+  "id" : "6918d0557f059d7aab1b2ffb",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26463774",
   "chargeAmount" : 100.00,
@@ -4086,6 +4164,16 @@
       "desc" : "Clinical Neuropsychologist"
     }
   },
+  "payToAddress" : {
+    "entityRole" : "PAY_TO_PROVIDER",
+    "entityType" : "BUSINESS",
+    "address" : {
+      "line" : "2345 OCEAN BLVD",
+      "city" : "MAIMI",
+      "stateCode" : "FL",
+      "zipCode" : "33111"
+    }
+  },
   "diags" : [ {
     "subType" : "ICD_10_PRINCIPAL",
     "code" : "J020",
@@ -4167,7 +4255,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "690148877e79911955eade46",
+    "id" : "6918d0557f059d7aab1b2fcc",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -4213,7 +4301,7 @@
   }
 }
 , {
-  "id" : "690148877e79911955eade9d",
+  "id" : "6918d0557f059d7aab1b3023",
   "objectType" : "CLAIM",
   "patientControlNumber" : "153829140",
   "chargeAmount" : 827.00,
@@ -4375,7 +4463,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "690148877e79911955eade78",
+    "id" : "6918d0557f059d7aab1b2ffe",
     "controlNumber" : "0001",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -4421,7 +4509,7 @@
   }
 }
 , {
-  "id" : "690148877e79911955eadece",
+  "id" : "6918d0557f059d7aab1b3054",
   "objectType" : "CLAIM",
   "patientControlNumber" : "SMI123",
   "chargeAmount" : 75.00,
@@ -4571,7 +4659,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "690148877e79911955eadea0",
+    "id" : "6918d0557f059d7aab1b3026",
     "controlNumber" : "112233",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -4614,7 +4702,7 @@
   }
 }
 , {
-  "id" : "690148877e79911955eadefd",
+  "id" : "6918d0557f059d7aab1b3083",
   "objectType" : "CLAIM",
   "patientControlNumber" : "ABC123-RI",
   "chargeAmount" : 28.75,
@@ -4665,6 +4753,7 @@
   "assignmentParticipationCode" : "A",
   "assignmentCertificationIndicator" : "Y",
   "releaseOfInformationCode" : "Y",
+  "patientSignatureSourceCode" : "P",
   "repricedReferenceNumber" : "0902352342",
   "clearinghouseTraceNumber" : "061505501749388",
   "billingProvider" : {
@@ -4786,7 +4875,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "690148877e79911955eaded1",
+    "id" : "6918d0557f059d7aab1b3057",
     "controlNumber" : "1002",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -4829,7 +4918,7 @@
   }
 }
 , {
-  "id" : "690148877e79911955eadf37",
+  "id" : "6918d0557f059d7aab1b30bd",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26407789",
   "chargeAmount" : 79.04,
@@ -4924,6 +5013,7 @@
   "assignmentParticipationCode" : "A",
   "assignmentCertificationIndicator" : "Y",
   "releaseOfInformationCode" : "I",
+  "patientSignatureSourceCode" : "P",
   "billingProvider" : {
     "entityRole" : "BILLING_PROVIDER",
     "entityType" : "INDIVIDUAL",
@@ -4946,6 +5036,16 @@
         "number" : "3055551234"
       } ]
     } ]
+  },
+  "payToAddress" : {
+    "entityRole" : "PAY_TO_PROVIDER",
+    "entityType" : "BUSINESS",
+    "address" : {
+      "line" : "2345 OCEAN BLVD",
+      "city" : "MIAMI",
+      "stateCode" : "FL",
+      "zipCode" : "33111"
+    }
   },
   "providers" : [ {
     "entityRole" : "RENDERING",
@@ -5066,7 +5166,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "690148877e79911955eadf00",
+    "id" : "6918d0557f059d7aab1b3086",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -5109,7 +5209,7 @@
   }
 }
 , {
-  "id" : "690148877e79911955eadf7e",
+  "id" : "6918d0557f059d7aab1b3104",
   "objectType" : "CLAIM",
   "patientControlNumber" : "CLMNO12345",
   "chargeAmount" : 2232.93,
@@ -5408,7 +5508,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "690148877e79911955eadf3a",
+    "id" : "6918d0557f059d7aab1b30c0",
     "controlNumber" : "0711",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -5451,7 +5551,7 @@
   }
 }
 , {
-  "id" : "690148877e79911955eae034",
+  "id" : "6918d0557f059d7aab1b31ba",
   "objectType" : "CLAIM",
   "patientControlNumber" : "36463774",
   "chargeAmount" : 100.00,
@@ -5773,6 +5873,12 @@
   "assignmentParticipationCode" : "A",
   "assignmentCertificationIndicator" : "Y",
   "releaseOfInformationCode" : "Y",
+  "relatedCause" : {
+    "relatedCauseCode" : "OA",
+    "relatedCauseCode2" : "AA",
+    "stateCode" : "FL",
+    "countryCode" : "US"
+  },
   "specialProgramCode" : "05",
   "delayReasonCode" : "4",
   "serviceAuthorizationExceptionCode" : "ServiceAuthorizationExceptionCode",
@@ -5832,6 +5938,34 @@
       "qualifierCode" : "0B",
       "type" : "STATE_LICENSE_NUMBER",
       "identification" : "654321"
+    } ]
+  },
+  "payToAddress" : {
+    "entityRole" : "PAY_TO_PROVIDER",
+    "entityType" : "BUSINESS",
+    "address" : {
+      "line" : "235 SEAWAY ST",
+      "city" : "MAIMI",
+      "stateCode" : "FL",
+      "zipCode" : "33111"
+    }
+  },
+  "payToPlan" : {
+    "entityRole" : "PAYEE",
+    "entityType" : "BUSINESS",
+    "identificationType" : "NPI",
+    "identifier" : "PTP123",
+    "lastNameOrOrgName" : "PLAN TO PAY TO",
+    "address" : {
+      "line" : "236 SEAWAY ST",
+      "city" : "MIAMI",
+      "stateCode" : "FL",
+      "zipCode" : "33111"
+    },
+    "additionalIds" : [ {
+      "qualifierCode" : "FY",
+      "type" : "CLAIM_OFFICE_NUMBER",
+      "identification" : "587654321"
     } ]
   },
   "providers" : [ {
@@ -5950,6 +6084,7 @@
     "initialTreatmentDate" : "2005-01-08",
     "unitType" : "UNIT",
     "unitCount" : 1,
+    "ambulancePatientCount" : 2,
     "drug" : {
       "subType" : "NDC",
       "code" : "00002143481",
@@ -6111,7 +6246,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "690148877e79911955eadf83",
+    "id" : "6918d0557f059d7aab1b3109",
     "controlNumber" : "0031",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",

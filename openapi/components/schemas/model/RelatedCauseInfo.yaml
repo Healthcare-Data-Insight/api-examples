@@ -1,0 +1,15 @@
+---
+type: "object"
+properties:
+  relatedCauseCode:
+    description: "Related cause code. EDI: CLM11-1"
+    type: "string"
+  relatedCauseCode2:
+    description: "Related cause code2. EDI: CLM11-2"
+    type: "string"
+  stateCode:
+    description: "State code. EDI: CLM11-4"
+    type: "string"
+  countryCode:
+    description: "Country code. EDI: CLM11-5"
+    type: "string"

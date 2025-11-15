@@ -1,6 +1,6 @@
 [
  {
-  "id" : "690148887e79911955eaf375",
+  "id" : "6918d0567f059d7aab1b44fb",
   "objectType" : "CLAIM",
   "patientControlNumber" : "ABC0002",
   "chargeAmount" : 89.93,
@@ -437,6 +437,34 @@
         "type" : "EMAIL",
         "number" : "ALEX@BESTMED.NET"
       } ]
+    } ]
+  },
+  "payToAddress" : {
+    "entityRole" : "PAY_TO_PROVIDER",
+    "entityType" : "BUSINESS",
+    "address" : {
+      "line" : "P O BOX 22310",
+      "city" : "OKLAHOMA CITY",
+      "stateCode" : "OK",
+      "zipCode" : "799998961"
+    }
+  },
+  "payToPlan" : {
+    "entityRole" : "PAYEE",
+    "entityType" : "BUSINESS",
+    "identificationType" : "NPI",
+    "identifier" : "PTP123",
+    "lastNameOrOrgName" : "PLAN TO PAY TO",
+    "address" : {
+      "line" : "236 SEAWAY ST",
+      "city" : "MIAMI",
+      "stateCode" : "FL",
+      "zipCode" : "33111"
+    },
+    "additionalIds" : [ {
+      "qualifierCode" : "FY",
+      "type" : "CLAIM_OFFICE_NUMBER",
+      "identification" : "587654321"
     } ]
   },
   "providers" : [ {
@@ -1258,7 +1286,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "690148887e79911955eaf2d8",
+    "id" : "6918d0567f059d7aab1b445e",
     "controlNumber" : "00000024",
     "transactionType" : "INST",
     "hierarchicalStructureCode" : "0019",

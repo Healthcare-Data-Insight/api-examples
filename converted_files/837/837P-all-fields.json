@@ -1,6 +1,6 @@
 [
  {
-  "id" : "690148887e79911955eaf6a5",
+  "id" : "6918d0567f059d7aab1b482b",
   "objectType" : "CLAIM",
   "patientControlNumber" : "36463774",
   "chargeAmount" : 100.00,
@@ -322,6 +322,12 @@
   "assignmentParticipationCode" : "A",
   "assignmentCertificationIndicator" : "Y",
   "releaseOfInformationCode" : "Y",
+  "relatedCause" : {
+    "relatedCauseCode" : "OA",
+    "relatedCauseCode2" : "AA",
+    "stateCode" : "FL",
+    "countryCode" : "US"
+  },
   "specialProgramCode" : "05",
   "delayReasonCode" : "4",
   "serviceAuthorizationExceptionCode" : "ServiceAuthorizationExceptionCode",
@@ -381,6 +387,34 @@
       "qualifierCode" : "0B",
       "type" : "STATE_LICENSE_NUMBER",
       "identification" : "654321"
+    } ]
+  },
+  "payToAddress" : {
+    "entityRole" : "PAY_TO_PROVIDER",
+    "entityType" : "BUSINESS",
+    "address" : {
+      "line" : "235 SEAWAY ST",
+      "city" : "MAIMI",
+      "stateCode" : "FL",
+      "zipCode" : "33111"
+    }
+  },
+  "payToPlan" : {
+    "entityRole" : "PAYEE",
+    "entityType" : "BUSINESS",
+    "identificationType" : "NPI",
+    "identifier" : "PTP123",
+    "lastNameOrOrgName" : "PLAN TO PAY TO",
+    "address" : {
+      "line" : "236 SEAWAY ST",
+      "city" : "MIAMI",
+      "stateCode" : "FL",
+      "zipCode" : "33111"
+    },
+    "additionalIds" : [ {
+      "qualifierCode" : "FY",
+      "type" : "CLAIM_OFFICE_NUMBER",
+      "identification" : "587654321"
     } ]
   },
   "providers" : [ {
@@ -499,6 +533,7 @@
     "initialTreatmentDate" : "2005-01-08",
     "unitType" : "UNIT",
     "unitCount" : 1,
+    "ambulancePatientCount" : 2,
     "drug" : {
       "subType" : "NDC",
       "code" : "00002143481",
@@ -660,7 +695,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "690148887e79911955eaf5f4",
+    "id" : "6918d0567f059d7aab1b477a",
     "controlNumber" : "0031",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",

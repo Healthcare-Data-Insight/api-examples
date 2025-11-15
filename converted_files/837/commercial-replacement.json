@@ -1,6 +1,6 @@
 [
  {
-  "id" : "690148887e79911955eaf4e6",
+  "id" : "6918d0567f059d7aab1b466c",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26463774",
   "chargeAmount" : 100.00,
@@ -85,6 +85,16 @@
       "desc" : "Clinical Neuropsychologist"
     }
   },
+  "payToAddress" : {
+    "entityRole" : "PAY_TO_PROVIDER",
+    "entityType" : "BUSINESS",
+    "address" : {
+      "line" : "2345 OCEAN BLVD",
+      "city" : "MAIMI",
+      "stateCode" : "FL",
+      "zipCode" : "33111"
+    }
+  },
   "diags" : [ {
     "subType" : "ICD_10_PRINCIPAL",
     "code" : "J020",
@@ -166,7 +176,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "690148887e79911955eaf4b7",
+    "id" : "6918d0567f059d7aab1b463d",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",

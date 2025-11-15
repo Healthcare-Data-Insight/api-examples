@@ -1,6 +1,6 @@
 [
  {
-  "id" : "690148887e79911955eaf482",
+  "id" : "6918d0567f059d7aab1b4608",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26462967",
   "chargeAmount" : 100.00,
@@ -69,6 +69,16 @@
       "subType" : "PROVIDER_TAXONOMY",
       "code" : "103GC0700X",
       "desc" : "Clinical Neuropsychologist"
+    }
+  },
+  "payToAddress" : {
+    "entityRole" : "PAY_TO_PROVIDER",
+    "entityType" : "BUSINESS",
+    "address" : {
+      "line" : "2345 OCEAN BLVD",
+      "city" : "MIAMI",
+      "stateCode" : "FL",
+      "zipCode" : "33111"
     }
   },
   "providers" : [ {
@@ -165,7 +175,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "690148887e79911955eaf411",
+    "id" : "6918d0567f059d7aab1b4597",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -211,7 +221,7 @@
   }
 }
 , {
-  "id" : "690148887e79911955eaf483",
+  "id" : "6918d0567f059d7aab1b4609",
   "objectType" : "CLAIM",
   "patientControlNumber" : "125WILL",
   "chargeAmount" : 145.50,
@@ -314,7 +324,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "690148887e79911955eaf43e",
+    "id" : "6918d0567f059d7aab1b45c4",
     "controlNumber" : "3701",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -357,7 +367,7 @@
   }
 }
 , {
-  "id" : "690148887e79911955eaf484",
+  "id" : "6918d0567f059d7aab1b460a",
   "objectType" : "CLAIM",
   "patientControlNumber" : "153829140",
   "chargeAmount" : 827.00,
@@ -519,7 +529,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "690148887e79911955eaf45f",
+    "id" : "6918d0567f059d7aab1b45e5",
     "controlNumber" : "0001",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",

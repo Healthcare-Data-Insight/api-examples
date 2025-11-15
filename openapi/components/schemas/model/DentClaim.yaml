@@ -72,6 +72,9 @@ properties:
   releaseOfInformationCode:
     description: "Release of information code. EDI: CLM09"
     type: "string"
+  relatedCause:
+    description: "Related cause. EDI: CLM11"
+    $ref: "./RelatedCauseInfo.yaml"
   specialProgramCode:
     description: "Special program code. EDI: CLM12"
     type: "string"
@@ -140,6 +143,12 @@ properties:
   billingProvider:
     description: "Billing provider. EDI: NM1 *85"
     $ref: "./Provider.yaml"
+  payToAddress:
+    description: "Pay to address. EDI: NM1 *87"
+    $ref: "./Party.yaml"
+  payToPlan:
+    description: "Pay-to plan for subrogation claims. EDI: NM1 *PE"
+    $ref: "./Party.yaml"
   providers:
     description: "Providers for this claim, except for the billing provider"
     type: "array"
@@ -150,6 +159,9 @@ properties:
     type: "array"
     items:
       $ref: "./Attachment.yaml"
+  contractInfo:
+    description: "Contract info. EDI: CN1"
+    $ref: "./ContractInfo.yaml"
 required:
 - "patientControlNumber"
 - "chargeAmount"

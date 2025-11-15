@@ -80,6 +80,9 @@ properties:
     description: "Unit count. EDI: SV104"
     type: "number"
     format: "float"
+  ambulancePatientCount:
+    description: "Ambulance patient count. EDI: QTY02 *PT"
+    type: "integer"
   drug:
     description: "Drug code (NDC)<br/><a href='https://datainsight.health/code-lookup/?type=drug'\
       \ target='_blank'>View codes and descriptions</a>. EDI: LIN03"
@@ -110,6 +113,9 @@ properties:
     type: "array"
     items:
       $ref: "./Attachment.yaml"
+  contractInfo:
+    description: "Contract info. EDI: CN1"
+    $ref: "./ContractInfo.yaml"
   providers:
     description: "Providers for this service line"
     type: "array"

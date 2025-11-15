@@ -82,6 +82,9 @@ properties:
     type: "array"
     items:
       $ref: "./Attachment.yaml"
+  contractInfo:
+    description: "Contract info. EDI: CN1"
+    $ref: "./ContractInfo.yaml"
   providers:
     description: "Providers for this service line"
     type: "array"

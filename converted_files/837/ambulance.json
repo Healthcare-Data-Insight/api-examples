@@ -1,6 +1,6 @@
 [
  {
-  "id" : "690148887e79911955eaf2a3",
+  "id" : "6918d0567f059d7aab1b4429",
   "objectType" : "CLAIM",
   "patientControlNumber" : "051068",
   "chargeAmount" : 766.50,
@@ -56,6 +56,12 @@
   "assignmentParticipationCode" : "A",
   "assignmentCertificationIndicator" : "Y",
   "releaseOfInformationCode" : "Y",
+  "patientSignatureSourceCode" : "P",
+  "relatedCause" : {
+    "relatedCauseCode" : "AA",
+    "relatedCauseCode2" : "OA",
+    "stateCode" : "FL"
+  },
   "accidentDate" : "2005-02-08",
   "billingProvider" : {
     "entityRole" : "BILLING_PROVIDER",
@@ -118,6 +124,7 @@
     "serviceDateFrom" : "2005-02-08",
     "unitType" : "UNIT",
     "unitCount" : 1,
+    "ambulancePatientCount" : 2,
     "lineNote" : "CARDIAC EMERGENCY",
     "procedure" : {
       "subType" : "HCPCS",
@@ -171,6 +178,7 @@
     "serviceDateFrom" : "2005-02-08",
     "unitType" : "UNIT",
     "unitCount" : 21,
+    "ambulancePatientCount" : 2,
     "procedure" : {
       "subType" : "HCPCS",
       "code" : "A0425",
@@ -265,7 +273,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "690148887e79911955eaf262",
+    "id" : "6918d0567f059d7aab1b43e8",
     "controlNumber" : "000017712",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -279,7 +287,7 @@
     "fileInfo" : {
       "name" : "ambulance.dat",
       "url" : "file:/edi-samples/edi_files/837/ambulance.dat",
-      "lastModifiedDateTime" : "2025-04-07T22:10:01.716-04:00",
+      "lastModifiedDateTime" : "2025-11-15T14:10:29.605-05:00",
       "fileType" : "EDI"
     },
     "sender" : {
