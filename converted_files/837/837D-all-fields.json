@@ -1,6 +1,6 @@
 [
  {
-  "id" : "690147610768b7ba31c51082",
+  "id" : "69373692908378844c0ec758",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26403774",
   "chargeAmount" : 150.00,
@@ -357,8 +357,8 @@
   } ],
   "serviceLines" : [ {
     "sourceLineId" : "ControlNumber",
-    "placeOfServiceType" : "URGENT_CARE",
-    "placeOfServiceCode" : "20",
+    "placeOfServiceType" : "TELE",
+    "placeOfServiceCode" : "02",
     "oralCavityDesignationCodes" : [ "C1", "C2" ],
     "prosthesisCrownOrInlayCode" : "R",
     "predeterminationOfBenefitsIdentifier" : "LinePredeterminationOfBenefitsId",
@@ -582,7 +582,7 @@
     }
   } ],
   "transaction" : {
-    "id" : "690147610768b7ba31c50fec",
+    "id" : "69373692908378844c0ec6c2",
     "controlNumber" : "3456",
     "transactionType" : "DENTAL",
     "hierarchicalStructureCode" : "0019",
