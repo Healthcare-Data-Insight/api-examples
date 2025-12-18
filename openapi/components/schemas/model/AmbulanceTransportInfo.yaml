@@ -1,0 +1,36 @@
+---
+type: "object"
+description: "<div class='obj-desc'>Information related to the ambulance service rendered\
+  \ to a patient. Required on all claims involving ambulance transport services.</div>\n\
+  <div class='obj-edi-examples'>Segment: CR1</div>\n"
+properties:
+  patientWeight:
+    description: "Patient weight. EDI: CR102"
+    type: "number"
+    format: "float"
+  reasonCode:
+    description: "Reason code. EDI: CR104"
+    type: "string"
+  reason:
+    description: "Ambulance transport reason code as constant (enum). EDI: CR104"
+    type: "string"
+    enum:
+    - "NEAREST_FACILITY"
+    - "RESIDENTIAL_FACILITY"
+    - "PHYSICIAN"
+    - "FAMILY_MEMBER"
+    - "SPECIALIST"
+    - "REHAB"
+  transportDistance:
+    description: "Transport distance. EDI: CR106"
+    type: "number"
+    format: "float"
+  roundTripPurposeDescription:
+    description: "Round trip purpose description. EDI: CR109"
+    type: "string"
+  stretcherPurposeDescription:
+    description: "Stretcher purpose description. EDI: CR110"
+    type: "string"
+required:
+- "reasonCode"
+- "transportDistance"

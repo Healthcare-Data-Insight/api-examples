@@ -202,6 +202,11 @@ properties:
   contractInfo:
     description: "Contract info. EDI: CN1"
     $ref: "./ContractInfo.yaml"
+  conditionsIndicators:
+    description: "Conditions indicators. EDI: CRC"
+    type: "array"
+    items:
+      $ref: "./ConditionsIndicator.yaml"
 required:
 - "patientControlNumber"
 - "chargeAmount"

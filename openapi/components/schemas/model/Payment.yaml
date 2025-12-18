@@ -74,9 +74,19 @@ properties:
     description: "Claim status code. EDI: CLP02"
     type: "string"
   claimStatus:
-    description: "Claim status code translated to a string constant (enum), such as\
-      \ PRIMARY,SECONDARY. EDI: CLP02"
+    description: "Claim status code translated to a string constant (enum). EDI: CLP02"
     type: "string"
+    enum:
+    - "PRIMARY"
+    - "SECONDARY"
+    - "TERTIARY"
+    - "DENIED"
+    - "PRIMARY_FORWARDED"
+    - "SECONDARY_FORWARDED"
+    - "TERTIARY_FORWARDED"
+    - "REVERSAL"
+    - "NOT_OUR_CLAIM"
+    - "PREDETERMINATION_NO_PAYMENT"
   patientResponsibilityAmount:
     description: "Patient responsibility amount. EDI: CLP05"
     type: "number"
@@ -85,9 +95,29 @@ properties:
     description: "Claim filing indicator code. EDI: CLP06"
     type: "string"
   insurancePlanType:
-    description: "Claim filing indicator code translated to a string constant (enum),\
-      \ such as PPO, HMO. EDI: CLP06"
+    description: "Claim filing indicator code translated to a string constant (enum).\
+      \ EDI: CLP06"
     type: "string"
+    enum:
+    - "OTHER_NON_FEDERAL"
+    - "BCBS"
+    - "COMMERCIAL"
+    - "PPO"
+    - "POS"
+    - "EPO"
+    - "INDEMNITY_INSURANCE"
+    - "HMO_MEDICARE"
+    - "HMO"
+    - "MEDICARE_A"
+    - "MEDICARE_B"
+    - "MEDICAID"
+    - "MUTUALLY_DEFINED"
+    - "AUTOMOBILE_MEDICAL"
+    - "CHAMPUS"
+    - "VETERAN_AFFAIRS"
+    - "FEDERAL_EMPLOYEE_PROGRAM"
+    - "WORKERS_COMPENSATION"
+    - "OTHER_FEDERAL"
   payerControlNumber:
     description: "Payer control number. EDI: CLP07"
     type: "string"

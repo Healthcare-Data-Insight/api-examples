@@ -1,0 +1,28 @@
+---
+type: "object"
+description: "<div class='obj-desc'>Conditions Indicator: ambulance, patient, homebound,\
+  \ EPSDT</div>\n<div class='obj-edi-examples'>Segment: CRC</div>\n"
+properties:
+  categoryCode:
+    description: "Category code. EDI: CRC01"
+    type: "string"
+  category:
+    description: "Category code as constant (enum). EDI: CRC01"
+    type: "string"
+    enum:
+    - "AMBULANCE_CERTIFICATION"
+    - "VISION_SPECTACLE_LENSES"
+    - "VISION_CONTACT_LENSES"
+    - "VISION_SPECTACLE_FRAMES"
+    - "EPSDT_MUTUALLY_DEFINED"
+  yesOrNoCondition:
+    description: "Yes or no condition. EDI: CRC02"
+    type: "string"
+  conditionCodes:
+    description: "Condition codes. EDI: CRC03-CRC07"
+    type: "array"
+    items:
+      type: "string"
+required:
+- "categoryCode"
+- "yesOrNoCondition"

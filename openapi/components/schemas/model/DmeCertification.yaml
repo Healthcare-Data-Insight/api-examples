@@ -1,0 +1,17 @@
+---
+type: "object"
+description: "<div class='obj-desc'>DME Certification. Required when a Durable Medical\
+  \ Equipment Regional Carrier Certificate of Medical Necessity (DMERC CMN) or a DMERC\
+  \ Information Form (DIF) or Oxygen Therapy Certification is included on this service\
+  \ line</div>\n<div class='obj-edi-examples'>Segment: CR3</div>\n"
+properties:
+  certificationTypeCode:
+    description: "Certification type code. EDI: CR301"
+    type: "string"
+  duration:
+    description: "Length of time DME equipment is needed, in months. EDI: CR303"
+    type: "number"
+    format: "float"
+required:
+- "certificationTypeCode"
+- "duration"
