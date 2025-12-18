@@ -1,0 +1,18 @@
+---
+type: "object"
+description: "<div class='obj-desc'>Spinal manipulation service info. Required on\
+  \ chiropractic claims involving spinal manipulation when the information is known\
+  \ to impact the payer’s adjudication process</div>\n<div class='obj-edi-examples'>Segment:\
+  \ CR2</div>\n"
+properties:
+  conditionCode:
+    description: "Condition code. EDI: CR208"
+    type: "string"
+  description:
+    description: "Description of the patient’s condition. EDI: CR210"
+    type: "string"
+  additionalDescription:
+    description: "Additional description of the patient’s condition. EDI: CR211"
+    type: "string"
+required:
+- "conditionCode"
