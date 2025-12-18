@@ -1,12 +1,13 @@
 [
  {
-  "id" : "6918d0567f059d7aab1b4775",
+  "id" : "694461d5260639adee2d105c",
   "objectType" : "CLAIM",
   "patientControlNumber" : "CLMNO12345",
   "chargeAmount" : 2232.93,
   "facilityCode" : {
     "subType" : "PLACE_OF_SERVICE",
-    "code" : "12"
+    "code" : "12",
+    "desc" : "Home Health"
   },
   "placeOfServiceType" : "HOME",
   "frequencyCode" : {
@@ -299,7 +300,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6918d0567f059d7aab1b4731",
+    "id" : "694461d5260639adee2d1018",
     "controlNumber" : "0711",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",

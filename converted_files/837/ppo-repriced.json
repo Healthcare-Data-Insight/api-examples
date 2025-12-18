@@ -1,12 +1,13 @@
 [
  {
-  "id" : "6918d0567f059d7aab1b46f4",
+  "id" : "694461d5260639adee2d0fdb",
   "objectType" : "CLAIM",
   "patientControlNumber" : "ABC123-RI",
   "chargeAmount" : 28.75,
   "facilityCode" : {
     "subType" : "PLACE_OF_SERVICE",
-    "code" : "11"
+    "code" : "11",
+    "desc" : "Office"
   },
   "placeOfServiceType" : "OFFICE",
   "frequencyCode" : {
@@ -173,7 +174,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6918d0567f059d7aab1b46c8",
+    "id" : "694461d5260639adee2d0faf",
     "controlNumber" : "1002",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",

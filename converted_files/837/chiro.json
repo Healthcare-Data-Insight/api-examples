@@ -1,12 +1,13 @@
 [
  {
-  "id" : "6918d0567f059d7aab1b451e",
+  "id" : "694461d5260639adee2d0e05",
   "objectType" : "CLAIM",
   "patientControlNumber" : "125WILL",
   "chargeAmount" : 145.50,
   "facilityCode" : {
     "subType" : "PLACE_OF_SERVICE",
-    "code" : "11"
+    "code" : "11",
+    "desc" : "Office"
   },
   "placeOfServiceType" : "OFFICE",
   "frequencyCode" : {
@@ -83,6 +84,10 @@
     "desc" : "Kissing spine, site unspecified",
     "formattedCode" : "M48.20"
   } ],
+  "spinalManipulationInfo" : {
+    "conditionCode" : "A",
+    "description" : "CHRONIC PAIN AND DISCOMFORT"
+  },
   "serviceLines" : [ {
     "sourceLineId" : "01",
     "chargeAmount" : 145.50,
@@ -103,7 +108,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6918d0567f059d7aab1b44fe",
+    "id" : "694461d5260639adee2d0de5",
     "controlNumber" : "3701",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",

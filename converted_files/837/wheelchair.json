@@ -1,12 +1,13 @@
 [
  {
-  "id" : "6918d0567f059d7aab1b46c5",
+  "id" : "694461d5260639adee2d0fac",
   "objectType" : "CLAIM",
   "patientControlNumber" : "SMI123",
   "chargeAmount" : 75.00,
   "facilityCode" : {
     "subType" : "PLACE_OF_SERVICE",
-    "code" : "12"
+    "code" : "12",
+    "desc" : "Home Health"
   },
   "placeOfServiceType" : "HOME",
   "frequencyCode" : {
@@ -84,6 +85,7 @@
     "chargeAmount" : 75.00,
     "serviceDateFrom" : "2005-03-21",
     "serviceDateTo" : "2005-03-21",
+    "lastCertificationDate" : "2005-03-21",
     "beginTherapyDate" : "2004-03-21",
     "unitType" : "UNIT",
     "unitCount" : 1,
@@ -109,6 +111,10 @@
       "reportTypeCode" : "CT",
       "reportTransmissionCode" : "AD"
     } ],
+    "dmeCertification" : {
+      "certificationTypeCode" : "I",
+      "duration" : 99
+    },
     "providers" : [ {
       "entityRole" : "ORDERING",
       "entityType" : "INDIVIDUAL",
@@ -150,7 +156,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6918d0567f059d7aab1b4697",
+    "id" : "694461d5260639adee2d0f7e",
     "controlNumber" : "112233",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",

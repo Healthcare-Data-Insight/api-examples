@@ -1,12 +1,13 @@
 [
  {
-  "id" : "6918d0567f059d7aab1b4459",
+  "id" : "694461d5260639adee2d0d40",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26462967",
   "chargeAmount" : 100.00,
   "facilityCode" : {
     "subType" : "PLACE_OF_SERVICE",
-    "code" : "11"
+    "code" : "11",
+    "desc" : "Office"
   },
   "placeOfServiceType" : "OFFICE",
   "frequencyCode" : {
@@ -175,7 +176,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6918d0567f059d7aab1b442d",
+    "id" : "694461d5260639adee2d0d14",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",

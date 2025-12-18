@@ -1,13 +1,14 @@
 [
  {
-  "id" : "69014026ca84f491f7f20f63",
+  "id" : "69446374c1a6b3ab024f4a09",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "PATACCT",
   "chargeAmount" : 400.00,
   "paymentAmount" : 80.00,
   "facilityCode" : {
     "subType" : "PLACE_OF_SERVICE",
-    "code" : "11"
+    "code" : "11",
+    "desc" : "Office"
   },
   "placeOfServiceType" : "OFFICE",
   "frequencyCode" : {
@@ -168,7 +169,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "69014026ca84f491f7f20f37",
+    "id" : "69446374c1a6b3ab024f49dd",
     "controlNumber" : "10060875",
     "transactionType" : "PAYMENT",
     "productionDate" : "2019-08-27",

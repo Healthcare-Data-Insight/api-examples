@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6918d0567f059d7aab1b4429",
+  "id" : "694461d5260639adee2d0d10",
   "objectType" : "CLAIM",
   "patientControlNumber" : "051068",
   "chargeAmount" : 766.50,
@@ -116,6 +116,24 @@
     "code" : "S4980XA",
     "desc" : "Other specified injuries of shoulder and upper arm, unspecified arm, initial encounter",
     "formattedCode" : "S49.80XA"
+  } ],
+  "ambulanceTransportInfo" : {
+    "patientWeight" : 275,
+    "reasonCode" : "A",
+    "reason" : "NEAREST_FACILITY",
+    "transportDistance" : 21,
+    "stretcherPurposeDescription" : "PATIENT IMMOBILIZED"
+  },
+  "conditionsIndicators" : [ {
+    "categoryCode" : "07",
+    "category" : "AMBULANCE_CERTIFICATION",
+    "yesOrNoCondition" : "Y",
+    "conditionCodes" : [ "04", "06", "09" ]
+  }, {
+    "categoryCode" : "07",
+    "category" : "AMBULANCE_CERTIFICATION",
+    "yesOrNoCondition" : "N",
+    "conditionCodes" : [ "05", "07", "08" ]
   } ],
   "serviceLines" : [ {
     "sourceLineId" : "1001",
@@ -273,7 +291,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6918d0567f059d7aab1b43e8",
+    "id" : "694461d5260639adee2d0ccf",
     "controlNumber" : "000017712",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -287,7 +305,7 @@
     "fileInfo" : {
       "name" : "ambulance.dat",
       "url" : "file:/edi-samples/edi_files/837/ambulance.dat",
-      "lastModifiedDateTime" : "2025-11-15T14:10:29.605-05:00",
+      "lastModifiedDateTime" : "2025-11-15T20:37:53.929-05:00",
       "fileType" : "EDI"
     },
     "sender" : {

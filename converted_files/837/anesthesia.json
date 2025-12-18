@@ -1,12 +1,13 @@
 [
  {
-  "id" : "6918d0567f059d7aab1b4694",
+  "id" : "694461d5260639adee2d0f7b",
   "objectType" : "CLAIM",
   "patientControlNumber" : "153829140",
   "chargeAmount" : 827.00,
   "facilityCode" : {
     "subType" : "PLACE_OF_SERVICE",
-    "code" : "22"
+    "code" : "22",
+    "desc" : "Hospital Outpatient"
   },
   "placeOfServiceType" : "OUTPATIENT",
   "frequencyCode" : {
@@ -162,7 +163,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6918d0567f059d7aab1b466f",
+    "id" : "694461d5260639adee2d0f56",
     "controlNumber" : "0001",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",

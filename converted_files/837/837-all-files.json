@@ -1,13 +1,14 @@
 [
  {
-  "id" : "6918d0557f059d7aab1b2d72",
+  "id" : "694461d5260639adee2d0247",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26403774",
   "chargeAmount" : 150.00,
   "patientPaidAmount" : 152.45,
   "facilityCode" : {
     "subType" : "PLACE_OF_SERVICE",
-    "code" : "11"
+    "code" : "11",
+    "desc" : "Office"
   },
   "placeOfServiceType" : "OFFICE",
   "frequencyCode" : {
@@ -357,8 +358,8 @@
   } ],
   "serviceLines" : [ {
     "sourceLineId" : "ControlNumber",
-    "placeOfServiceType" : "URGENT_CARE",
-    "placeOfServiceCode" : "20",
+    "placeOfServiceType" : "TELE",
+    "placeOfServiceCode" : "02",
     "oralCavityDesignationCodes" : [ "C1", "C2" ],
     "prosthesisCrownOrInlayCode" : "R",
     "predeterminationOfBenefitsIdentifier" : "LinePredeterminationOfBenefitsId",
@@ -582,7 +583,7 @@
     }
   } ],
   "transaction" : {
-    "id" : "6918d0557f059d7aab1b2cdc",
+    "id" : "694461d5260639adee2d01b1",
     "controlNumber" : "3456",
     "transactionType" : "DENTAL",
     "hierarchicalStructureCode" : "0019",
@@ -625,7 +626,7 @@
   }
 }
 , {
-  "id" : "6918d0557f059d7aab1b2db8",
+  "id" : "694461d5260639adee2d028d",
   "objectType" : "CLAIM",
   "patientControlNumber" : "051068",
   "chargeAmount" : 766.50,
@@ -741,6 +742,24 @@
     "code" : "S4980XA",
     "desc" : "Other specified injuries of shoulder and upper arm, unspecified arm, initial encounter",
     "formattedCode" : "S49.80XA"
+  } ],
+  "ambulanceTransportInfo" : {
+    "patientWeight" : 275,
+    "reasonCode" : "A",
+    "reason" : "NEAREST_FACILITY",
+    "transportDistance" : 21,
+    "stretcherPurposeDescription" : "PATIENT IMMOBILIZED"
+  },
+  "conditionsIndicators" : [ {
+    "categoryCode" : "07",
+    "category" : "AMBULANCE_CERTIFICATION",
+    "yesOrNoCondition" : "Y",
+    "conditionCodes" : [ "04", "06", "09" ]
+  }, {
+    "categoryCode" : "07",
+    "category" : "AMBULANCE_CERTIFICATION",
+    "yesOrNoCondition" : "N",
+    "conditionCodes" : [ "05", "07", "08" ]
   } ],
   "serviceLines" : [ {
     "sourceLineId" : "1001",
@@ -898,7 +917,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6918d0557f059d7aab1b2d77",
+    "id" : "694461d5260639adee2d024c",
     "controlNumber" : "000017712",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -912,7 +931,7 @@
     "fileInfo" : {
       "name" : "ambulance.dat",
       "url" : "file:/edi-samples/edi_files/837/ambulance.dat",
-      "lastModifiedDateTime" : "2025-11-15T14:10:29.605-05:00",
+      "lastModifiedDateTime" : "2025-11-15T20:37:53.929-05:00",
       "fileType" : "EDI"
     },
     "sender" : {
@@ -941,13 +960,14 @@
   }
 }
 , {
-  "id" : "6918d0557f059d7aab1b2de8",
+  "id" : "694461d5260639adee2d02bd",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26462967",
   "chargeAmount" : 100.00,
   "facilityCode" : {
     "subType" : "PLACE_OF_SERVICE",
-    "code" : "11"
+    "code" : "11",
+    "desc" : "Office"
   },
   "placeOfServiceType" : "OFFICE",
   "frequencyCode" : {
@@ -1116,7 +1136,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6918d0557f059d7aab1b2dbc",
+    "id" : "694461d5260639adee2d0291",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -1162,7 +1182,7 @@
   }
 }
 , {
-  "id" : "6918d0557f059d7aab1b2e8a",
+  "id" : "694461d5260639adee2d035f",
   "objectType" : "CLAIM",
   "patientControlNumber" : "ABC0002",
   "chargeAmount" : 89.93,
@@ -2448,7 +2468,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6918d0557f059d7aab1b2ded",
+    "id" : "694461d5260639adee2d02c2",
     "controlNumber" : "00000024",
     "transactionType" : "INST",
     "hierarchicalStructureCode" : "0019",
@@ -2462,7 +2482,7 @@
     "fileInfo" : {
       "name" : "837I-all-fields.dat",
       "url" : "file:/edi-samples/edi_files/837/837I-all-fields.dat",
-      "lastModifiedDateTime" : "2025-01-15T17:23:46.651-05:00",
+      "lastModifiedDateTime" : "2025-12-08T15:19:29.99-05:00",
       "fileType" : "EDI"
     },
     "sender" : {
@@ -2491,13 +2511,14 @@
   }
 }
 , {
-  "id" : "6918d0557f059d7aab1b2ead",
+  "id" : "694461d5260639adee2d0382",
   "objectType" : "CLAIM",
   "patientControlNumber" : "125WILL",
   "chargeAmount" : 145.50,
   "facilityCode" : {
     "subType" : "PLACE_OF_SERVICE",
-    "code" : "11"
+    "code" : "11",
+    "desc" : "Office"
   },
   "placeOfServiceType" : "OFFICE",
   "frequencyCode" : {
@@ -2574,6 +2595,10 @@
     "desc" : "Kissing spine, site unspecified",
     "formattedCode" : "M48.20"
   } ],
+  "spinalManipulationInfo" : {
+    "conditionCode" : "A",
+    "description" : "CHRONIC PAIN AND DISCOMFORT"
+  },
   "serviceLines" : [ {
     "sourceLineId" : "01",
     "chargeAmount" : 145.50,
@@ -2594,7 +2619,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6918d0557f059d7aab1b2e8d",
+    "id" : "694461d5260639adee2d0362",
     "controlNumber" : "3701",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -2637,13 +2662,14 @@
   }
 }
 , {
-  "id" : "6918d0557f059d7aab1b2ef5",
+  "id" : "694461d5260639adee2d03ca",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26407789",
   "chargeAmount" : 79.04,
   "facilityCode" : {
     "subType" : "PLACE_OF_SERVICE",
-    "code" : "11"
+    "code" : "11",
+    "desc" : "Office"
   },
   "placeOfServiceType" : "OFFICE",
   "frequencyCode" : {
@@ -3011,7 +3037,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6918d0557f059d7aab1b2eb0",
+    "id" : "694461d5260639adee2d0385",
     "controlNumber" : "0024",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -3054,13 +3080,14 @@
   }
 }
 , {
-  "id" : "6918d0557f059d7aab1b2f23",
+  "id" : "694461d5260639adee2d03f8",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26463774",
   "chargeAmount" : 100.00,
   "facilityCode" : {
     "subType" : "PLACE_OF_SERVICE",
-    "code" : "11"
+    "code" : "11",
+    "desc" : "Office"
   },
   "placeOfServiceType" : "OFFICE",
   "frequencyCode" : {
@@ -3213,7 +3240,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6918d0557f059d7aab1b2ef9",
+    "id" : "694461d5260639adee2d03ce",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -3259,13 +3286,14 @@
   }
 }
 , {
-  "id" : "6918d0557f059d7aab1b2f97",
+  "id" : "694461d5260639adee2d046c",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26462967",
   "chargeAmount" : 100.00,
   "facilityCode" : {
     "subType" : "PLACE_OF_SERVICE",
-    "code" : "11"
+    "code" : "11",
+    "desc" : "Office"
   },
   "placeOfServiceType" : "OFFICE",
   "frequencyCode" : {
@@ -3434,7 +3462,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6918d0557f059d7aab1b2f26",
+    "id" : "694461d5260639adee2d03fb",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -3480,13 +3508,14 @@
   }
 }
 , {
-  "id" : "6918d0557f059d7aab1b2f98",
+  "id" : "694461d5260639adee2d046d",
   "objectType" : "CLAIM",
   "patientControlNumber" : "125WILL",
   "chargeAmount" : 145.50,
   "facilityCode" : {
     "subType" : "PLACE_OF_SERVICE",
-    "code" : "11"
+    "code" : "11",
+    "desc" : "Office"
   },
   "placeOfServiceType" : "OFFICE",
   "frequencyCode" : {
@@ -3563,6 +3592,10 @@
     "desc" : "Kissing spine, site unspecified",
     "formattedCode" : "M48.20"
   } ],
+  "spinalManipulationInfo" : {
+    "conditionCode" : "A",
+    "description" : "CHRONIC PAIN AND DISCOMFORT"
+  },
   "serviceLines" : [ {
     "sourceLineId" : "01",
     "chargeAmount" : 145.50,
@@ -3583,7 +3616,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6918d0557f059d7aab1b2f53",
+    "id" : "694461d5260639adee2d0428",
     "controlNumber" : "3701",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -3626,13 +3659,14 @@
   }
 }
 , {
-  "id" : "6918d0557f059d7aab1b2f99",
+  "id" : "694461d5260639adee2d046e",
   "objectType" : "CLAIM",
   "patientControlNumber" : "153829140",
   "chargeAmount" : 827.00,
   "facilityCode" : {
     "subType" : "PLACE_OF_SERVICE",
-    "code" : "22"
+    "code" : "22",
+    "desc" : "Hospital Outpatient"
   },
   "placeOfServiceType" : "OUTPATIENT",
   "frequencyCode" : {
@@ -3788,7 +3822,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6918d0557f059d7aab1b2f74",
+    "id" : "694461d5260639adee2d0449",
     "controlNumber" : "0001",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -3834,7 +3868,7 @@
   }
 }
 , {
-  "id" : "6918d0557f059d7aab1b2fc9",
+  "id" : "694461d5260639adee2d049e",
   "objectType" : "CLAIM",
   "patientControlNumber" : "756048Q",
   "chargeAmount" : 89.93,
@@ -4036,7 +4070,7 @@
     }
   } ],
   "transaction" : {
-    "id" : "6918d0557f059d7aab1b2f9c",
+    "id" : "694461d5260639adee2d0471",
     "controlNumber" : "987654",
     "transactionType" : "INST",
     "hierarchicalStructureCode" : "0019",
@@ -4079,13 +4113,14 @@
   }
 }
 , {
-  "id" : "6918d0557f059d7aab1b2ffb",
+  "id" : "694461d5260639adee2d04d0",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26463774",
   "chargeAmount" : 100.00,
   "facilityCode" : {
     "subType" : "PLACE_OF_SERVICE",
-    "code" : "11"
+    "code" : "11",
+    "desc" : "Office"
   },
   "placeOfServiceType" : "OFFICE",
   "frequencyCode" : {
@@ -4255,7 +4290,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6918d0557f059d7aab1b2fcc",
+    "id" : "694461d5260639adee2d04a1",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -4301,13 +4336,14 @@
   }
 }
 , {
-  "id" : "6918d0557f059d7aab1b3023",
+  "id" : "694461d5260639adee2d04f8",
   "objectType" : "CLAIM",
   "patientControlNumber" : "153829140",
   "chargeAmount" : 827.00,
   "facilityCode" : {
     "subType" : "PLACE_OF_SERVICE",
-    "code" : "22"
+    "code" : "22",
+    "desc" : "Hospital Outpatient"
   },
   "placeOfServiceType" : "OUTPATIENT",
   "frequencyCode" : {
@@ -4463,7 +4499,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6918d0557f059d7aab1b2ffe",
+    "id" : "694461d5260639adee2d04d3",
     "controlNumber" : "0001",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -4509,13 +4545,14 @@
   }
 }
 , {
-  "id" : "6918d0557f059d7aab1b3054",
+  "id" : "694461d5260639adee2d0529",
   "objectType" : "CLAIM",
   "patientControlNumber" : "SMI123",
   "chargeAmount" : 75.00,
   "facilityCode" : {
     "subType" : "PLACE_OF_SERVICE",
-    "code" : "12"
+    "code" : "12",
+    "desc" : "Home Health"
   },
   "placeOfServiceType" : "HOME",
   "frequencyCode" : {
@@ -4593,6 +4630,7 @@
     "chargeAmount" : 75.00,
     "serviceDateFrom" : "2005-03-21",
     "serviceDateTo" : "2005-03-21",
+    "lastCertificationDate" : "2005-03-21",
     "beginTherapyDate" : "2004-03-21",
     "unitType" : "UNIT",
     "unitCount" : 1,
@@ -4618,6 +4656,10 @@
       "reportTypeCode" : "CT",
       "reportTransmissionCode" : "AD"
     } ],
+    "dmeCertification" : {
+      "certificationTypeCode" : "I",
+      "duration" : 99
+    },
     "providers" : [ {
       "entityRole" : "ORDERING",
       "entityType" : "INDIVIDUAL",
@@ -4659,7 +4701,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6918d0557f059d7aab1b3026",
+    "id" : "694461d5260639adee2d04fb",
     "controlNumber" : "112233",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -4702,13 +4744,14 @@
   }
 }
 , {
-  "id" : "6918d0557f059d7aab1b3083",
+  "id" : "694461d5260639adee2d0558",
   "objectType" : "CLAIM",
   "patientControlNumber" : "ABC123-RI",
   "chargeAmount" : 28.75,
   "facilityCode" : {
     "subType" : "PLACE_OF_SERVICE",
-    "code" : "11"
+    "code" : "11",
+    "desc" : "Office"
   },
   "placeOfServiceType" : "OFFICE",
   "frequencyCode" : {
@@ -4875,7 +4918,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6918d0557f059d7aab1b3057",
+    "id" : "694461d5260639adee2d052c",
     "controlNumber" : "1002",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -4918,13 +4961,14 @@
   }
 }
 , {
-  "id" : "6918d0557f059d7aab1b30bd",
+  "id" : "694461d5260639adee2d0592",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26407789",
   "chargeAmount" : 79.04,
   "facilityCode" : {
     "subType" : "PLACE_OF_SERVICE",
-    "code" : "11"
+    "code" : "11",
+    "desc" : "Office"
   },
   "placeOfServiceType" : "OFFICE",
   "frequencyCode" : {
@@ -5166,7 +5210,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6918d0557f059d7aab1b3086",
+    "id" : "694461d5260639adee2d055b",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -5209,13 +5253,14 @@
   }
 }
 , {
-  "id" : "6918d0557f059d7aab1b3104",
+  "id" : "694461d5260639adee2d05d9",
   "objectType" : "CLAIM",
   "patientControlNumber" : "CLMNO12345",
   "chargeAmount" : 2232.93,
   "facilityCode" : {
     "subType" : "PLACE_OF_SERVICE",
-    "code" : "12"
+    "code" : "12",
+    "desc" : "Home Health"
   },
   "placeOfServiceType" : "HOME",
   "frequencyCode" : {
@@ -5508,7 +5553,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6918d0557f059d7aab1b30c0",
+    "id" : "694461d5260639adee2d0595",
     "controlNumber" : "0711",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -5551,14 +5596,15 @@
   }
 }
 , {
-  "id" : "6918d0557f059d7aab1b31ba",
+  "id" : "694461d5260639adee2d068f",
   "objectType" : "CLAIM",
   "patientControlNumber" : "36463774",
   "chargeAmount" : 100.00,
   "patientPaidAmount" : 152.45,
   "facilityCode" : {
     "subType" : "PLACE_OF_SERVICE",
-    "code" : "11"
+    "code" : "11",
+    "desc" : "Office"
   },
   "placeOfServiceType" : "OFFICE",
   "frequencyCode" : {
@@ -6246,7 +6292,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6918d0557f059d7aab1b3109",
+    "id" : "694461d5260639adee2d05de",
     "controlNumber" : "0031",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",

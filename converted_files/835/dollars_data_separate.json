@@ -1,13 +1,14 @@
 [
  {
-  "id" : "69014026ca84f491f7f21017",
+  "id" : "69446374c1a6b3ab024f4abd",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "5554555444",
   "chargeAmount" : 800.00,
   "paymentAmount" : 500.00,
   "facilityCode" : {
     "subType" : "PLACE_OF_SERVICE",
-    "code" : "11"
+    "code" : "11",
+    "desc" : "Office"
   },
   "placeOfServiceType" : "OFFICE",
   "frequencyCode" : {
@@ -96,7 +97,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "69014026ca84f491f7f20fec",
+    "id" : "69446374c1a6b3ab024f4a92",
     "controlNumber" : "112233",
     "transactionType" : "PAYMENT",
     "productionDate" : "2019-03-14",
@@ -123,14 +124,15 @@
   }
 }
 , {
-  "id" : "69014026ca84f491f7f21018",
+  "id" : "69446374c1a6b3ab024f4abe",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "8765432112",
   "chargeAmount" : 1200.00,
   "paymentAmount" : 600.00,
   "facilityCode" : {
     "subType" : "PLACE_OF_SERVICE",
-    "code" : "11"
+    "code" : "11",
+    "desc" : "Office"
   },
   "placeOfServiceType" : "OFFICE",
   "frequencyCode" : {
@@ -218,7 +220,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "69014026ca84f491f7f20fec",
+    "id" : "69446374c1a6b3ab024f4a92",
     "controlNumber" : "112233",
     "transactionType" : "PAYMENT",
     "productionDate" : "2019-03-14",

@@ -1,6 +1,6 @@
 [
  {
-  "id" : "69014026ca84f491f7f20ee6",
+  "id" : "69446374c1a6b3ab024f498c",
   "objectType" : "PROVIDER_ADJUSTMENT",
   "providerIdentifier" : "PAYEE_ID1",
   "fiscalPeriodDate" : "2024-12-31",
@@ -76,7 +76,7 @@
     } ]
   },
   "transaction" : {
-    "id" : "69014026ca84f491f7f20ed3",
+    "id" : "69446374c1a6b3ab024f4979",
     "controlNumber" : "0001",
     "transactionType" : "PAYMENT",
     "productionDate" : "2024-12-23",
@@ -99,7 +99,7 @@
   }
 }
 , {
-  "id" : "69014026ca84f491f7f20eec",
+  "id" : "69446374c1a6b3ab024f4992",
   "objectType" : "PROVIDER_ADJUSTMENT",
   "providerIdentifier" : "PAYEE_ID99",
   "fiscalPeriodDate" : "2024-12-31",
@@ -175,7 +175,7 @@
     } ]
   },
   "transaction" : {
-    "id" : "69014026ca84f491f7f20ed3",
+    "id" : "69446374c1a6b3ab024f4979",
     "controlNumber" : "0001",
     "transactionType" : "PAYMENT",
     "productionDate" : "2024-12-23",
@@ -198,14 +198,15 @@
   }
 }
 , {
-  "id" : "69014026ca84f491f7f20f32",
+  "id" : "69446374c1a6b3ab024f49d8",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "5554555444",
   "chargeAmount" : 800.00,
   "paymentAmount" : 500.00,
   "facilityCode" : {
     "subType" : "PLACE_OF_SERVICE",
-    "code" : "11"
+    "code" : "11",
+    "desc" : "Office"
   },
   "placeOfServiceType" : "OFFICE",
   "frequencyCode" : {
@@ -311,7 +312,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "69014026ca84f491f7f20ef1",
+    "id" : "69446374c1a6b3ab024f4997",
     "controlNumber" : "0002",
     "transactionType" : "PAYMENT",
     "productionDate" : "2024-12-23",
@@ -339,7 +340,7 @@
   }
 }
 , {
-  "id" : "69014026ca84f491f7f20f12",
+  "id" : "69446374c1a6b3ab024f49b8",
   "objectType" : "PROVIDER_ADJUSTMENT",
   "providerIdentifier" : "PAYEE_ID2",
   "fiscalPeriodDate" : "2023-12-31",
@@ -407,7 +408,7 @@
     } ]
   },
   "transaction" : {
-    "id" : "69014026ca84f491f7f20ef1",
+    "id" : "69446374c1a6b3ab024f4997",
     "controlNumber" : "0002",
     "transactionType" : "PAYMENT",
     "productionDate" : "2024-12-23",
@@ -435,7 +436,7 @@
   }
 }
 , {
-  "id" : "69014026ca84f491f7f20f2a",
+  "id" : "69446374c1a6b3ab024f49d0",
   "objectType" : "PROVIDER_ADJUSTMENT",
   "providerIdentifier" : "PAYEE_ID3",
   "fiscalPeriodDate" : "2022-12-31",
@@ -503,7 +504,7 @@
     } ]
   },
   "transaction" : {
-    "id" : "69014026ca84f491f7f20f17",
+    "id" : "69446374c1a6b3ab024f49bd",
     "controlNumber" : "0003",
     "transactionType" : "PAYMENT",
     "productionDate" : "2024-12-23",

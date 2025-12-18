@@ -1,12 +1,13 @@
 [
  {
-  "id" : "6918d0567f059d7aab1b4608",
+  "id" : "694461d5260639adee2d0eef",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26462967",
   "chargeAmount" : 100.00,
   "facilityCode" : {
     "subType" : "PLACE_OF_SERVICE",
-    "code" : "11"
+    "code" : "11",
+    "desc" : "Office"
   },
   "placeOfServiceType" : "OFFICE",
   "frequencyCode" : {
@@ -175,7 +176,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6918d0567f059d7aab1b4597",
+    "id" : "694461d5260639adee2d0e7e",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -221,13 +222,14 @@
   }
 }
 , {
-  "id" : "6918d0567f059d7aab1b4609",
+  "id" : "694461d5260639adee2d0ef0",
   "objectType" : "CLAIM",
   "patientControlNumber" : "125WILL",
   "chargeAmount" : 145.50,
   "facilityCode" : {
     "subType" : "PLACE_OF_SERVICE",
-    "code" : "11"
+    "code" : "11",
+    "desc" : "Office"
   },
   "placeOfServiceType" : "OFFICE",
   "frequencyCode" : {
@@ -304,6 +306,10 @@
     "desc" : "Kissing spine, site unspecified",
     "formattedCode" : "M48.20"
   } ],
+  "spinalManipulationInfo" : {
+    "conditionCode" : "A",
+    "description" : "CHRONIC PAIN AND DISCOMFORT"
+  },
   "serviceLines" : [ {
     "sourceLineId" : "01",
     "chargeAmount" : 145.50,
@@ -324,7 +330,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6918d0567f059d7aab1b45c4",
+    "id" : "694461d5260639adee2d0eab",
     "controlNumber" : "3701",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -367,13 +373,14 @@
   }
 }
 , {
-  "id" : "6918d0567f059d7aab1b460a",
+  "id" : "694461d5260639adee2d0ef1",
   "objectType" : "CLAIM",
   "patientControlNumber" : "153829140",
   "chargeAmount" : 827.00,
   "facilityCode" : {
     "subType" : "PLACE_OF_SERVICE",
-    "code" : "22"
+    "code" : "22",
+    "desc" : "Hospital Outpatient"
   },
   "placeOfServiceType" : "OUTPATIENT",
   "frequencyCode" : {
@@ -529,7 +536,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6918d0567f059d7aab1b45e5",
+    "id" : "694461d5260639adee2d0ecc",
     "controlNumber" : "0001",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
