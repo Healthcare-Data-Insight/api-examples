@@ -11,10 +11,10 @@ properties:
     type: "string"
     enum:
     - "AMBULANCE_CERTIFICATION"
-    - "VISION_SPECTACLE_LENSES"
+    - "EPSDT_MUTUALLY_DEFINED"
     - "VISION_CONTACT_LENSES"
     - "VISION_SPECTACLE_FRAMES"
-    - "EPSDT_MUTUALLY_DEFINED"
+    - "VISION_SPECTACLE_LENSES"
   yesOrNoCondition:
     description: "Yes or no condition. EDI: CRC02"
     type: "string"

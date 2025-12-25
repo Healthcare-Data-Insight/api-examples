@@ -15,12 +15,12 @@ properties:
     description: "Ambulance transport reason code as constant (enum). EDI: CR104"
     type: "string"
     enum:
-    - "NEAREST_FACILITY"
-    - "RESIDENTIAL_FACILITY"
-    - "PHYSICIAN"
     - "FAMILY_MEMBER"
-    - "SPECIALIST"
+    - "NEAREST_FACILITY"
+    - "PHYSICIAN"
     - "REHAB"
+    - "RESIDENTIAL_FACILITY"
+    - "SPECIALIST"
   transportDistance:
     description: "Transport distance. EDI: CR106"
     type: "number"
