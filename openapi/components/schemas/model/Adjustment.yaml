@@ -9,8 +9,8 @@ properties:
     - "CONTRACTUAL"
     - "CORRECTION"
     - "OTHER"
-    - "PAYOR_INITIATED"
     - "PATIENT_RESPONSIBILITY"
+    - "PAYOR_INITIATED"
   reason:
     description: "Claim adjustment reason code<br/><a href='https://datainsight.health/code-lookup/?type=CLAIM_ADJUSTMENT_REASON_CODE'\
       \ target='_blank'>View codes and descriptions</a>. EDI: CAS02"

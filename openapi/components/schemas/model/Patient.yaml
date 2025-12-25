@@ -4,6 +4,16 @@ properties:
   relationshipType:
     description: "Relationship type. EDI: SBR02, PAT01"
     type: "string"
+    enum:
+    - "CADAVER_DONOR"
+    - "CHILD"
+    - "EMPLOYEE"
+    - "LIFE_PARTNER"
+    - "ORGAN_DONOR"
+    - "OTHER"
+    - "SELF"
+    - "SPOUSE"
+    - "UNKNOWN"
   person:
     description: "Person. EDI: NM1"
     $ref: "./PersonWithDemographic.yaml"

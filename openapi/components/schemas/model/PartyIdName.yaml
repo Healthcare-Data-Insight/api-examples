@@ -10,7 +10,8 @@ properties:
     type: "string"
   identificationType:
     description: "Identification type, e.g., NPI or EIN. This is a qualifier code\
-      \ translated to a string constant (enum). EDI: NM108, N103"
+      \ translated to a string constant (enum)<br/><a href='https://datainsight.health/code-lookup/?type=X12_IDENTIFICATION_CODE'\
+      \ target='_blank'>View codes and descriptions</a>. EDI: NM108, N103"
     type: "string"
   identifier:
     description: "Identifier. EDI: NM109, N104"
