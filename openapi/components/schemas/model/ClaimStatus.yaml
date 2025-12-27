@@ -63,5 +63,5 @@ properties:
     items:
       $ref: "./ServiceLineStatus.yaml"
   transaction:
-    description: "Parent EDI transaction for this object"
+    description: "Parent EDI transaction for this object. EDI: ST"
     $ref: "./Transaction277.yaml"

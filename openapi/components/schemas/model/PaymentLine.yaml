@@ -16,7 +16,7 @@ properties:
     description: "Healthcare policy id. EDI: REF02 *0K"
     type: "string"
   chargeAmount:
-    description: "Charge amount"
+    description: "Charge amount. EDI: SVC02"
     type: "number"
     format: "float"
   paidAmount:
@@ -42,9 +42,6 @@ properties:
     description: "Service date to. EDI: DTP03 *472"
     type: "string"
     format: "date"
-  unitType:
-    description: "Unit type"
-    type: "string"
   unitCount:
     description: "Unit count. EDI: SVC05"
     type: "number"

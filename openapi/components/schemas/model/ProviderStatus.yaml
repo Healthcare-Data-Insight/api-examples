@@ -14,7 +14,7 @@ properties:
     description: "Batch status"
     $ref: "./BatchStatus.yaml"
   transaction:
-    description: "Parent EDI transaction for this object"
+    description: "Parent EDI transaction for this object. EDI: ST"
     $ref: "./Transaction277.yaml"
   receiver:
     description: "The Receiver is the entity that expects the response from the Source.\

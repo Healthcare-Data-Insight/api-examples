@@ -58,7 +58,7 @@ properties:
     items:
       $ref: "./DentLine.yaml"
   transaction:
-    description: "Parent EDI transaction for this object"
+    description: "Parent EDI transaction for this object. EDI: ST"
     $ref: "./Transaction837.yaml"
   providerSignatureIndicator:
     description: "Provider signature indicator. EDI: CLM06"

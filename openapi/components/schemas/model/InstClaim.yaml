@@ -62,7 +62,7 @@ properties:
     items:
       $ref: "./InstLine.yaml"
   transaction:
-    description: "Parent EDI transaction for this object"
+    description: "Parent EDI transaction for this object. EDI: ST"
     $ref: "./Transaction837.yaml"
   assignmentParticipationCode:
     description: "Assignment participation code. EDI: CLM07"

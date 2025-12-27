@@ -131,5 +131,5 @@ properties:
     items:
       $ref: "./HealthCoverage.yaml"
   transaction:
-    description: "Parent EDI transaction for this object"
+    description: "Parent EDI transaction for this object. EDI: ST"
     $ref: "./Transaction834.yaml"

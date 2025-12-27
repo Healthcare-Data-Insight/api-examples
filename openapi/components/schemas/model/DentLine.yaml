@@ -65,11 +65,8 @@ properties:
     description: "Treatment completion date. EDI: DTP03 *198"
     type: "string"
     format: "date"
-  unitType:
-    description: "Unit type. EDI: SV304"
-    type: "string"
   unitCount:
-    description: "Unit count. EDI: SV305"
+    description: "Unit count. EDI: SV306"
     type: "number"
     format: "float"
   procedure:
@@ -127,6 +124,4 @@ properties:
       $ref: "./Code.yaml"
 required:
 - "chargeAmount"
-- "unitType"
-- "unitCount"
 - "diagPointers"

@@ -68,7 +68,7 @@ properties:
     items:
       $ref: "./PaymentLine.yaml"
   transaction:
-    description: "Parent EDI transaction for this object"
+    description: "Parent EDI transaction for this object. EDI: ST"
     $ref: "./Transaction835.yaml"
   claimStatusCode:
     description: "Claim status code. EDI: CLP02"
@@ -188,7 +188,7 @@ properties:
     description: "Corrected insured. EDI: NM1 *74"
     $ref: "./PartyIdName.yaml"
   claimContacts:
-    description: "Claim contacts"
+    description: "Claim contacts. EDI: PER"
     type: "array"
     items:
       $ref: "./ContactInfo.yaml"
