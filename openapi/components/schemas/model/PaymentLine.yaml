@@ -1,7 +1,6 @@
 ---
 type: "object"
-description: "<div class='obj-edi-examples'>Loop: 835:2110<br/>837:2400, Segment:\
-  \ 835:SVC<br/>837P:SV1<br/>837I:SV2<br/>837D:SV3</div>\n"
+description: "<div class='obj-edi-examples'>Loop: 2110, Segment: SVC</div>\n"
 properties:
   sourceLineId:
     description: "Line item control number. EDI: REF02 *6R"

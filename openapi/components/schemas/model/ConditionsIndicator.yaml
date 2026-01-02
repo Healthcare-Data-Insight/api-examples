@@ -1,7 +1,6 @@
 ---
 type: "object"
-description: "<div class='obj-desc'>Conditions Indicator: ambulance, patient, homebound,\
-  \ EPSDT</div>\n<div class='obj-edi-examples'>Segment: CRC</div>\n"
+description: "<div class='obj-edi-examples'>Segment: CRC</div>\n"
 properties:
   categoryCode:
     description: "Category code. EDI: CRC01"

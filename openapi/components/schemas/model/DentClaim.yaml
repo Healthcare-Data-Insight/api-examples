@@ -1,9 +1,8 @@
 ---
 type: "object"
 description: "<div class='obj-edi-examples'>Loop: 2300, Segment: CLM <a class='file-example-link'\
-  \ href='https://github.com/Healthcare-Data-Insight/api-examples/tree/main/converted_files/837P:837/837P-all-fields<br/>837I:837/837I-all-fields<br/>837D:837/837D-all-fields.json'\
-  \ target='_blank'>JSON Example</a> <a class='file-example-link' href='https://datainsight.health/edi/837P:claims/comprehensive/<br/>837I:claims/institutional-837i/all-fields/'\
-  \ target='_blank'>Interactive Example</a></div>\n"
+  \ href='https://github.com/Healthcare-Data-Insight/api-examples/tree/main/converted_files/837/837D-all-fields.json'\
+  \ target='_blank'>JSON Example</a></div>\n"
 properties:
   id:
     description: "Unique payment identifier assigned by the converter"
