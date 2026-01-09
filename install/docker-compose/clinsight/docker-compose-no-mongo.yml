@@ -1,19 +1,8 @@
-# Used for the demo
+# Docker compose file to run claimn insight image against local Mongo version
 services:
-#  mongo:
-#    image: mongo:7.0.7
-#    restart: always
-#    volumes:
-#      - /opt/mongo_data:/data/db
-#    ports:
-#      - "127.0.0.1:27017:27017"
   app:
     image: repo.datainsight.health/claim-insight:2.14
     restart: unless-stopped
-#    environment:
-#      - mongodb_host=mongo
-#    depends_on:
-#      - mongo
     volumes:
       - ./uploads:/app/uploads
       - ./load:/app/load

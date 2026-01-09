@@ -1,7 +1,7 @@
 # ClaimInsight app with MongoDB
 services:
   mongo:
-    image: mongo:7
+    image: mongo:8
     restart: unless-stopped
     volumes:
       - ./mongo_data:/data/db
@@ -10,7 +10,7 @@ services:
 #      - "27017:27017"
   app:
     image: repo.datainsight.health/claim-insight:2.14
-    restart: always
+    restart: unless-stopped
     depends_on:
       - mongo
     volumes:
