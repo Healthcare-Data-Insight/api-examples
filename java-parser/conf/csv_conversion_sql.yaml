@@ -1,0 +1,343 @@
+---
+- transactionTypes: [ "837P", "837D" ]
+  name: claim-line-separate-files
+  aliases:
+    - default
+    - two-files
+  excludedFields:
+    # We excluded X12 EDI qualifiers since we translate them to enumeration types
+    - "*QualifierCode"
+    - "*AddressCountryCode"
+  listSchemas:
+    # Schema for the "main" header-level list, e.g., claims or payments
+    - names: [ Main ]
+      # Repeat these fields on the first line for child lists
+      repeatFields: [ Id, PatientControlNumber ]
+      # Repeat these fields from the repeatFields on every row for child lists
+      repeatEachRow: [ "*" ]
+      # By default, the claim-level list doesn't have a suffix, but you can override it here
+      fileSuffix: "claims"
+
+
+    # Schema for the service line list
+    - names: [ Lines ]
+      # Create a list of lines in a separate file
+      strategy: ROWS
+      fileSuffix: "lines"
+
+    - names: [ Diags ]
+      # How many times to repeat the column (3 is the default)
+      numberOfColumnRepeats: 5
+
+    - names: [ LineProcedureModifiers ]
+      numberOfColumnRepeats: 4
+
+    - names: [ OtherSubscribers ]
+      numberOfColumnRepeats: 1
+
+    - names:
+        - "*additionalIds"
+        - "*ServiceIds"
+        - "*Contacts"
+        - "*ContactNumbers"
+      # Repeat columns 2 times (the default is 3)
+      numberOfColumnRepeats: 2
+    - names:
+        - "*ServiceFacilityContacts"
+        - "*OrderingProviderContacts"
+      numberOfColumnRepeats: 1
+  includedFields:
+    - Id
+    - FileName
+    - PatientControlNumber
+    - ChargeAmount
+
+    - LineControlNumber
+    - LineProcedureCode
+    - LineChargeAmount
+    - LineServiceDateFrom
+    - LineServiceDateTo
+
+- transactionTypes: [ "834" ]
+  name: member-coverages-single-file
+  aliases: [ single-file, default, lines-with-header-repeat-first-row, lines-with-header-repeat-each-row ]
+  excludedFields:
+    - "*AddressCountryCode"
+    - "*AdditionalIdentifier*Type"
+
+  listSchemas:
+    - names: [ Main ]
+      repeatFields: [ "*" ]
+      repeatEachRow: [ "*" ]
+      output: False
+
+    - names: [ healthCoverages ]
+      strategy: ROWS
+
+    # How many times to repeat these lists (the default is 3)
+    - names:
+        - supplementalIdentifiers
+        - statusInfoEffectiveDates
+        - contractAmounts
+        - "*coverageDates"
+        - "*groupOrPolicyNumbers"
+        - MemberEmploymentClassCodes
+      numberOfColumnRepeats: 5
+    - names:
+        - "*Contacts"
+        - HealthCoverageIdCards
+      numberOfColumnRepeats: 1
+    - names:
+        - "*ContactNumbers"
+        - "*Cob*AdditionalIdentifiers"
+        - "*Cobs"
+        - "HealthCoverageCob*Insurers"
+        - tpas
+        - employers
+        - schools
+      numberOfColumnRepeats: 2
+
+- transactionTypes: [ "837I" ]
+  name: claim-line-separate-files
+  aliases:
+    - default
+    - two-files
+  excludedFields:
+    - "*QualifierCode"
+    - "*AddressCountryCode"
+  listSchemas:
+    # Schema for the "main" header-level list, i.e., claims
+    - names: [ Main ]
+      # Repeat these fields on the first line for child lists
+      repeatFields: [ Id, PatientControlNumber ]
+      # Repeat these fields from the repeatFields on every row for child lists
+      repeatEachRow: [ "*" ]
+      fileSuffix: "-Claims"
+
+    # Schema for the service line list
+    - names: [ Lines ]
+      # Create a list of lines in a separate file
+      strategy: ROWS
+
+    - names: [ OtherDiags ]
+      numberOfColumnRepeats: 5
+
+      # Institutional codes at the claim level
+    - names: [ OtherProcedures, Occurrences, OccurrenceSpans, Conditions, ValueInfos ]
+      numberOfColumnRepeats: 6
+
+    - names: [ LineProcedureModifiers ]
+      numberOfColumnRepeats: 4
+
+    - names: [ OtherSubscribers ]
+      numberOfColumnRepeats: 1
+
+    - names:
+        - "*additionalIds"
+        - "*ServiceIds"
+        - "*Contacts"
+        - "*ContactNumbers"
+      # Repeat columns 2 times (the default is 3)
+      numberOfColumnRepeats: 2
+    - names:
+        - "*ServiceFacilityContacts"
+        - "*OrderingProviderContacts"
+      numberOfColumnRepeats: 1
+
+- transactionTypes: [ 835 ]
+  name: claim-line-separate-files
+  aliases:
+    - default
+    - two-files
+  excludedFields:
+    - "*Id*QualifierCode"
+    - "*AddressCountryCode"
+  listSchemas:
+    - names: [ Main ]
+      # Repeat these fields on the first line for child lists
+      repeatFields: [ Id, PatientControlNumber, PayerControlNumber ]
+      # Repeat these fields from the repeatFields on every row for child lists
+      repeatEachRow: [ "*" ]
+      fileSuffix: "-Payments"
+
+    # Schema for the line list
+    - names: [ Lines ]
+      # Create a list of lines in a separate file
+      strategy: ROWS
+
+    - names: [ LineAdjs, Adjs, LineRemarkCodes ]
+      numberOfColumnRepeats: 5
+
+    - names:
+        - "*additionalIds"
+        - "*OtherClaimRelatedIds"
+        - "*RenderingProviderIds"
+        - "*SupplementalQties"
+        - "*SupplementalAmts"
+        - "*Contacts"
+        - "*ContactNumbers"
+      # Repeat columns 2 times (the default is 3)
+      numberOfColumnRepeats: 2
+
+# Single file; repeat all header's fields for the first row; only ID and PCN on subsequent rows
+- transactionTypes: [ "837P", "837I", "837D", "835" ]
+  name: lines-with-header-repeat-first-row
+  aliases:
+    - single-file
+  baseName: default
+
+  listSchemas:
+    - names: [ Main ]
+      # Suppress writing header to the output as a separate file
+      output: False
+      # Repeat these fields on the first line for child lists
+      repeatFields: [ "*" ]
+      # Repeat these fields from the repeatFields on every row for child lists
+      repeatEachRow: [ Id, PatientControlNumber, PayerControlNumber ]
+
+# Single file; all fields from lines; only IDs from the header
+- transactionTypes: [ "837P", "837I", "837D", "835" ]
+  name: lines-only
+  baseName: default
+
+  listSchemas:
+    - names: [ Main ]
+      # Suppress writing header to the output as a separate file
+      output: False
+      # Repeat these fields on the first line for child lists
+      repeatFields: [ Id, PatientControlNumber, PayerControlNumber ]
+      # Repeat these fields from the repeatFields on every row for child lists
+      repeatEachRow: [ "*" ]
+
+# Repeat all header's fields on all rows for child lists, e.g., for all lines
+- transactionTypes: [ "837P", "837I", "837D", "835" ]
+  name: lines-with-header-repeat-each-row
+  baseName: default
+
+  listSchemas:
+    - names: [ Main ]
+      # Suppress writing header to the output as a separate file
+      output: False
+      # Repeat these fields on the first line for child lists
+      repeatFields: [ "*" ]
+      # Repeat these fields from the repeatFields on every row for child lists
+      repeatEachRow: [ "*" ]
+
+
+# Only header fields, no lines
+- transactionTypes: [ "837P", "837I", "837D", "835" ]
+  name: header-only
+  baseName: default
+  excludedFields: [ Line* ]
+  listSchemas:
+    - names: [ Main ]
+
+# Only key fields
+- transactionTypes: [ "835" ]
+  name: key-fields
+  baseName: default
+  includedFields:
+    - Id
+    - FileName
+    - PaymentAmount
+
+  listSchemas:
+    - names: [ Main ]
+      # Suppress writing header to the output as a separate file
+      output: False
+      # Repeat these fields on the first line for child lists
+      repeatFields: [ "*" ]
+      # Repeat these fields from the repeatFields on every row for child lists
+      repeatEachRow: [ Id, FileName, PatientControlNumber ]
+
+    - names: [ LineRemarkCodes ]
+      numberOfColumnRepeats: 3
+
+- transactionTypes: [ "837P" ]
+  name: key-fields
+  baseName: default
+  includedFields:
+    - Id
+    - FileName
+    - PatientControlNumber
+    - ChargeAmount
+    - FacilityCode
+    - FrequencyTypeCode
+    - TransactionCreationDateTime
+    - ServiceDateFrom
+    - ServiceDateTo
+    - SubscriberIdentifier
+    - SubscriberLastName
+    - SubscriberFirstName
+    - SubscriberPayerIdentifier
+    - SubscriberPayerName
+    - PatientPaidAmount
+    - OtherSubscriberPayerPaidAmount
+    - Diag*
+
+    - LineControlNumber
+    - LineProcedureCode
+    - LineProcedureModifier*
+    - LineChargeAmount
+    - LineUnitCount
+    - LineServiceDateFrom
+    - LineServiceDateTo
+
+  listSchemas:
+    - names: [ Main ]
+      # Suppress writing header to the output as a separate file
+      output: False
+      # Repeat these fields on the first line for child lists
+      repeatFields: [ "*" ]
+      # Repeat these fields from the repeatFields on every row for child lists
+      repeatEachRow: [ Id, FileName, PatientControlNumber ]
+    # Schema for the service line list
+    - names: [ Lines ]
+      # Create a list of lines in a separate file
+      strategy: ROWS
+      fileSuffix: "lines"
+
+- transactionTypes: [ "837I" ]
+  name: key-fields
+  baseName: default
+  includedFields:
+    - Id
+    - FileName
+    - PatientControlNumber
+    - ChargeAmount
+    - FacilityCode
+    - FrequencyTypeCode
+    - TransactionCreationDateTime
+    - StatementDateFrom
+    - StatementDateTo
+    - AdmissionDateAndHour
+    - SubscriberIdentifier
+    - SubscriberLastName
+    - SubscriberFirstName
+    - SubscriberPayerIdentifier
+    - SubscriberPayerName
+    - PriorAuthorizationNumber
+    - PayerClaimControlNum
+    - DrgCode
+    - PrincipalDiag
+    - AdmittingDiag
+    - OtherDiag*
+    - PrincipalProcedure
+    - OtherProcedure*
+
+    - LineControlNumber
+    - LineRevenueCode
+    - LineProcedureCode
+    - LineChargeAmount
+    - LineUnitCount
+    - LineServiceDateFrom
+    - LineServiceDateTo
+
+  listSchemas:
+    - names: [ Main ]
+      # Suppress writing header to the output as a separate file
+      output: False
+      # Repeat these fields on the first line for child lists
+      repeatFields: [ "*" ]
+      # Repeat these fields from the repeatFields on every row for child lists
+      repeatEachRow: [ Id, FileName, PatientControlNumber ]
