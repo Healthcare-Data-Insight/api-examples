@@ -14,7 +14,7 @@ repositories {
 java.sourceCompatibility = JavaVersion.VERSION_17
 
 dependencies {
-    implementation 'hdi:edi:2.14.7'
+    implementation 'hdi:edi:2.14.8'
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.19.+'
 
     // The dependencies below are only for test classes
@@ -24,7 +24,7 @@ dependencies {
     def lombok = 'org.projectlombok:lombok:1.18.42'
     testCompileOnly lombok
     testAnnotationProcessor lombok
-    testImplementation 'org.slf4j:slf4j-api:2.0.+'
+    testImplementation 'org.slf4j:slf4j-api:2.0.17'
 }
 
 test {
