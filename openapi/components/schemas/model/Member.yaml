@@ -2,47 +2,82 @@
 allOf:
 - $ref: "./PersonWithDemographic.yaml"
 - type: "object"
-  description: "<div class='obj-edi-examples'>Loop: 2100A, Segment: NM1</div>\n"
+  description: "Loop: 2100A; Segment: NM1."
   properties:
     maritalStatusCode:
-      description: "Marital status code. EDI: DMG04"
+      description: "Marital status code. EDI: DMG04."
       type: "string"
+      x-edi-elt-designators:
+      - "DMG04"
     ethnicityCode:
-      description: "Ethnicity code. EDI: DMG05"
+      description: "Ethnicity code. EDI: DMG05."
       type: "string"
+      x-edi-elt-designators:
+      - "DMG05"
     citizenshipCode:
-      description: "Citizenship code. EDI: DMG06"
+      description: "Citizenship code. EDI: DMG06."
       type: "string"
+      x-edi-elt-designators:
+      - "DMG06"
     employmentClassCodes:
-      description: "Employment class codes. EDI: EC01,EC02,EC03"
+      description: "Employment class codes. EDI: EC01, EC02, EC03."
       type: "array"
       items:
         type: "string"
+      x-edi-elt-designators:
+      - "EC01"
+      - "EC02"
+      - "EC03"
     wageFrequencyCode:
-      description: "Wage frequency code. EDI: ICM01"
+      description: "Wage frequency code. EDI: ICM01."
       type: "string"
+      x-edi-elt-designators:
+      - "ICM01"
     wageAmount:
-      description: "Wage amount. EDI: ICM02"
+      description: "Wage amount. EDI: ICM02."
       type: "number"
       format: "float"
+      x-edi-elt-designators:
+      - "ICM02"
     workHoursCount:
-      description: "Work hours count. EDI: ICM03"
+      description: "Work hours count. EDI: ICM03."
       type: "number"
       format: "float"
+      x-edi-elt-designators:
+      - "ICM03"
     employerLocationIdentificationCode:
-      description: "Employer location identification code. EDI: ICM04"
+      description: "Employer location identification code. EDI: ICM04."
       type: "string"
+      x-edi-elt-designators:
+      - "ICM04"
     salaryGradeCode:
-      description: "Salary grade code. EDI: ICM05"
+      description: "Salary grade code. EDI: ICM05."
       type: "string"
+      x-edi-elt-designators:
+      - "ICM05"
     healthRelatedCode:
-      description: "Health related code. EDI: HLH01"
+      description: "Health related code. EDI: HLH01."
       type: "string"
+      x-edi-elt-designators:
+      - "HLH01"
     height:
-      description: "Height. EDI: HLH02"
+      description: "Height. EDI: HLH02."
       type: "number"
       format: "float"
+      x-edi-elt-designators:
+      - "HLH02"
     weight:
-      description: "Weight. EDI: HLH03"
+      description: "Weight. EDI: HLH03."
       type: "number"
       format: "float"
+      x-edi-elt-designators:
+      - "HLH03"
+    languageInfo:
+      description: "Language info. EDI: LUI."
+      $ref: "./LanguageInfo.yaml"
+      x-edi-seg-ids:
+      - "LUI"
+  x-edi-loop-ids:
+  - "2100A"
+  x-edi-seg-ids:
+  - "NM1"

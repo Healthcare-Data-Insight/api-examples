@@ -1,126 +1,211 @@
 ---
 type: "object"
-description: "<div class='obj-edi-examples'>Loop: 2400, Segment: SV3</div>\n"
+description: "Loop: 2400; Segment: SV3."
 properties:
   sourceLineId:
-    description: "Line item control number. EDI: REF02 *6R"
+    description: "Line item control number. EDI: REF02 *6R."
     type: "string"
+    x-edi-elt-designators:
+    - "REF02"
+    x-edi-qualifiers:
+    - "6R"
   oralCavityDesignationCodes:
-    description: "Oral cavity designation codes. EDI: SV304"
+    description: "Oral cavity designation codes. EDI: SV304."
     type: "array"
     items:
       type: "string"
+    x-edi-elt-designators:
+    - "SV304"
   prosthesisCrownOrInlayCode:
-    description: "Prosthesis crown or inlay code. EDI: SV305"
+    description: "Prosthesis crown or inlay code. EDI: SV305."
     type: "string"
+    x-edi-elt-designators:
+    - "SV305"
   predeterminationOfBenefitsIdentifier:
-    description: "Predetermination of benefits identifier. EDI: REF02 *G3"
+    description: "Predetermination of benefits identifier. EDI: REF02 *G3."
     type: "string"
+    x-edi-elt-designators:
+    - "REF02"
+    x-edi-qualifiers:
+    - "G3"
   repricedReferenceNumber:
-    description: "Repriced reference number. EDI: REF02 *9B"
+    description: "Repriced reference number. EDI: REF02 *9B."
     type: "string"
+    x-edi-elt-designators:
+    - "REF02"
+    x-edi-qualifiers:
+    - "9B"
   adjustedRepricedReferenceNumber:
-    description: "Adjusted repriced reference number. EDI: REF02 *9D"
+    description: "Adjusted repriced reference number. EDI: REF02 *9D."
     type: "string"
+    x-edi-elt-designators:
+    - "REF02"
+    x-edi-qualifiers:
+    - "9D"
   priorAuthorization:
-    description: "Prior authorization. EDI: REF02 *G1"
+    description: "Prior authorization. EDI: REF02 *G1."
     type: "string"
+    x-edi-elt-designators:
+    - "REF02"
+    x-edi-qualifiers:
+    - "G1"
   referralNumber:
-    description: "Referral number. EDI: REF02 *9F"
+    description: "Referral number. EDI: REF02 *9F."
     type: "string"
+    x-edi-elt-designators:
+    - "REF02"
+    x-edi-qualifiers:
+    - "9F"
   chargeAmount:
-    description: "Charge amount. EDI: SV302"
+    description: "Charge amount. EDI: SV302."
     type: "number"
     format: "float"
+    x-edi-elt-designators:
+    - "SV302"
   salesTaxAmount:
-    description: "Sales tax amount. EDI: AMT02 *T"
+    description: "Sales tax amount. EDI: AMT02 *T."
     type: "number"
     format: "float"
+    x-edi-elt-designators:
+    - "AMT02"
+    x-edi-qualifiers:
+    - "T"
   serviceDateFrom:
-    description: "Service date from. EDI: DTP03 *472"
+    description: "Service date from. EDI: DTP03 *472."
     type: "string"
     format: "date"
+    x-edi-elt-designators:
+    - "DTP03"
+    x-edi-qualifiers:
+    - "472"
   serviceDateTo:
-    description: "Service date to. EDI: DTP03 *472"
+    description: "Service date to. EDI: DTP03 *472."
     type: "string"
     format: "date"
+    x-edi-elt-designators:
+    - "DTP03"
+    x-edi-qualifiers:
+    - "472"
   priorPlacementDate:
-    description: "Prior placement date. EDI: DTP03 *441, DTP03 *139"
+    description: "Prior placement date. EDI: DTP03 *441, DTP03 *139."
     type: "string"
     format: "date"
+    x-edi-elt-designators:
+    - "DTP03"
+    x-edi-qualifiers:
+    - "441"
+    - "139"
   orthodonticBandingDate:
-    description: "Orthodontic banding date. EDI: DTP03 *452"
+    description: "Orthodontic banding date. EDI: DTP03 *452."
     type: "string"
     format: "date"
+    x-edi-elt-designators:
+    - "DTP03"
+    x-edi-qualifiers:
+    - "452"
   replacementDate:
-    description: "Replacement date. EDI: DTP03 *446"
+    description: "Replacement date. EDI: DTP03 *446."
     type: "string"
     format: "date"
+    x-edi-elt-designators:
+    - "DTP03"
+    x-edi-qualifiers:
+    - "446"
   treatmentStartDate:
-    description: "Treatment start date. EDI: DTP03 *196"
+    description: "Treatment start date. EDI: DTP03 *196."
     type: "string"
     format: "date"
+    x-edi-elt-designators:
+    - "DTP03"
+    x-edi-qualifiers:
+    - "196"
   treatmentCompletionDate:
-    description: "Treatment completion date. EDI: DTP03 *198"
+    description: "Treatment completion date. EDI: DTP03 *198."
     type: "string"
     format: "date"
+    x-edi-elt-designators:
+    - "DTP03"
+    x-edi-qualifiers:
+    - "198"
   unitCount:
-    description: "Unit count. EDI: SV306"
+    description: "Unit count. EDI: SV306."
     type: "number"
     format: "float"
+    x-edi-elt-designators:
+    - "SV306"
   procedure:
-    description: "Procedure<br/><a href='https://datainsight.health/code-lookup/?type=PROCEDURE'\
-      \ target='_blank'>View codes and descriptions</a>. EDI: SV302 *HC, SV302 *AD,\
-      \ SV302 *WK, SV302 *IV"
+    description: "Procedure. EDI: SV302 *HC, SV302 *AD, SV302 *WK, SV302 *IV."
     $ref: "./Procedure.yaml"
+    x-edi-elt-designators:
+    - "SV302"
+    x-edi-qualifiers:
+    - "HC"
+    - "AD"
+    - "WK"
+    - "IV"
   attachments:
-    description: "Attachments. EDI: PWK"
+    description: "Attachments. EDI: PWK."
     type: "array"
     items:
       $ref: "./Attachment.yaml"
+    x-edi-seg-ids:
+    - "PWK"
   contractInfo:
-    description: "Contract info. EDI: CN1"
+    description: "Contract info. EDI: CN1."
     $ref: "./ContractInfo.yaml"
+    x-edi-seg-ids:
+    - "CN1"
   providers:
-    description: "Providers for this service line"
+    description: "Providers for this service line."
     type: "array"
     items:
       $ref: "./Provider.yaml"
   adjudications:
-    description: "Adjudications. EDI: SVD<br/>Loop: 2430"
+    description: "Adjudications. EDI: SVD; Loop: 2430."
     type: "array"
     items:
       $ref: "./Adjudication.yaml"
+    x-edi-loop-id: "2430"
+    x-edi-seg-ids:
+    - "SVD"
   adjustments:
-    description: "Copy of line adjustments from the adjudication list for backward\
-      \ compatibility. EDI: CAS"
+    description: "Copy of line adjustments from the adjudication list for backward compatibility. EDI: CAS."
     type: "array"
     items:
       $ref: "./Adjustment.yaml"
+    x-edi-seg-ids:
+    - "CAS"
   fixedFormatRecords:
-    description: "Fixed format records. EDI: K301"
+    description: "Fixed format records. EDI: K301."
     type: "array"
     items:
       type: "string"
+    x-edi-elt-designators:
+    - "K301"
   toothInfos:
-    description: "Tooth infos"
+    description: "Tooth infos."
     type: "array"
     items:
       $ref: "./ToothInfo.yaml"
   diagPointers:
-    description: "Diagnosis pointers. Each pointer is an index of the diagnosis in\
-      \ the 'diags' array at the claim level.. EDI: SV302"
+    description: "Diagnosis pointers. Each pointer is an index of the diagnosis in the 'diags' array at the claim level. EDI: SV302."
     type: "array"
     items:
       format: "int32"
       type: "integer"
+    x-edi-elt-designators:
+    - "SV302"
   diags:
-    description: "Copy of diagnosis codes from the claim based on diagnosis pointers<br/><a\
-      \ href='https://datainsight.health/code-lookup/?type=DIAGNOSIS' target='_blank'>View\
-      \ codes and descriptions</a>. EDI: SV302"
+    description: "Copy of diagnosis codes from the claim based on diagnosis pointers. EDI: SV302."
     type: "array"
     items:
       $ref: "./Code.yaml"
+    x-edi-elt-designators:
+    - "SV302"
 required:
 - "chargeAmount"
 - "diagPointers"
+x-edi-loop-ids:
+- "2400"
+x-edi-seg-ids:
+- "SV3"

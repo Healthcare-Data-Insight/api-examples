@@ -1,31 +1,49 @@
 ---
 type: "object"
-description: "<div class='obj-edi-examples'>Loop: 2320, Segment: COB</div>\n"
+description: "Loop: 2320; Segment: COB."
 properties:
   payerResponsibilitySequenceCode:
-    description: "Payer responsibility sequence code. EDI: COB01"
+    description: "Payer responsibility sequence code. EDI: COB01."
     type: "string"
+    x-edi-elt-designators:
+    - "COB01"
   groupOrPolicyNumber:
-    description: "Group or policy number. EDI: COB02"
+    description: "Group or policy number. EDI: COB02."
     type: "string"
+    x-edi-elt-designators:
+    - "COB02"
   coordinationOfBenefitsCode:
-    description: "Coordination of benefits code. EDI: COB03"
+    description: "Coordination of benefits code. EDI: COB03."
     type: "string"
+    x-edi-elt-designators:
+    - "COB03"
   additionalIdentifiers:
-    description: "Additional identifiers. EDI: REF"
+    description: "Additional identifiers. EDI: REF."
     type: "array"
     items:
       $ref: "./Reference.yaml"
   dateFrom:
-    description: "Date from. EDI: DTP03 *344"
+    description: "Date from. EDI: DTP03 *344."
     type: "string"
     format: "date"
+    x-edi-elt-designators:
+    - "DTP03"
+    x-edi-qualifiers:
+    - "344"
   dateTo:
-    description: "Date to. EDI: DTP03 *345"
+    description: "Date to. EDI: DTP03 *345."
     type: "string"
     format: "date"
+    x-edi-elt-designators:
+    - "DTP03"
+    x-edi-qualifiers:
+    - "345"
   insurers:
-    description: "Insurers"
+    description: "Insurers."
     type: "array"
     items:
       $ref: "./Party.yaml"
+x-edi-loop-ids:
+- "2320"
+x-edi-seg-ids:
+- "COB"

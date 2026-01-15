@@ -2,48 +2,68 @@
 type: "object"
 properties:
   controlNumber:
-    description: "Control number. EDI: ST02"
+    description: "Control number. EDI: ST02."
     type: "string"
+    x-edi-elt-designators:
+    - "ST02"
   transactionType:
-    description: "Transaction type translated to string constant, PROF for 837P, INST\
-      \ for 837I, etc.. EDI: ST01, ST03"
+    description: "Transaction type translated to string constant, PROF for 837P, INST for 837I, etc. EDI: ST01, ST03."
     type: "string"
+    x-edi-elt-designators:
+    - "ST01"
+    - "ST03"
   purposeCode:
-    description: "Purpose code. EDI: BGN01"
+    description: "Purpose code. EDI: BGN01."
     type: "string"
+    x-edi-elt-designators:
+    - "BGN01"
   originatorApplicationTransactionId:
-    description: "Originator application transaction id. EDI: BGN02"
+    description: "Originator application transaction id. EDI: BGN02."
     type: "string"
+    x-edi-elt-designators:
+    - "BGN02"
   creationDate:
-    description: "Creation date. EDI: BGN03"
+    description: "Creation date. EDI: BGN03."
     type: "string"
     format: "date"
+    x-edi-elt-designators:
+    - "BGN03"
   creationTime:
-    description: "Creation time. EDI: BGN04"
+    description: "Creation time. EDI: BGN04."
     type: "string"
     format: "date-time"
+    x-edi-elt-designators:
+    - "BGN04"
   originalTransactionSetReferenceNumber:
-    description: "Original transaction set reference number. EDI: BGN06"
+    description: "Original transaction set reference number. EDI: BGN06."
     type: "string"
+    x-edi-elt-designators:
+    - "BGN06"
   actionCode:
-    description: "Action code. EDI: BGN08"
+    description: "Action code. EDI: BGN08."
     type: "string"
+    x-edi-elt-designators:
+    - "BGN08"
   transactionSetIdentifierCode:
-    description: "Transaction set identifier code. EDI: ST01"
+    description: "Transaction set identifier code. EDI: ST01."
     type: "string"
+    x-edi-elt-designators:
+    - "ST01"
   implementationConventionReference:
-    description: "Implementation convention reference. EDI: ST03"
+    description: "Implementation convention reference. EDI: ST03."
     type: "string"
+    x-edi-elt-designators:
+    - "ST03"
   fileEffectiveDates:
-    description: "File effective dates. EDI: DTP"
+    description: "File effective dates. EDI: DTP."
     type: "array"
     items:
       $ref: "./Date.yaml"
   controlTotals:
-    description: "Control totals. EDI: QTY"
+    description: "Control totals. EDI: QTY."
     type: "array"
     items:
       $ref: "./Quantity.yaml"
   fileInfo:
-    description: "File info"
+    description: "File info."
     $ref: "./FileInfo.yaml"

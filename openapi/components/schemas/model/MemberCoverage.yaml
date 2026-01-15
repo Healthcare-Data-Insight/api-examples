@@ -1,135 +1,222 @@
 ---
 type: "object"
-description: "<div class='obj-desc'>Main object for 834, contains the member and their\
-  \ health coverage information.</div>\n<div class='obj-edi-examples'>Loop: 2000,\
-  \ Segment: INS <a class='file-example-link' href='https://github.com/Healthcare-Data-Insight/api-examples/tree/main/converted_files/834/834-all-fields.json'\
-  \ target='_blank'>JSON Example</a> <a class='file-example-link' href='https://github.com/Healthcare-Data-Insight/api-examples/tree/main/converted_files/834/834-all-fields.csv'\
-  \ target='_blank'>CSV Example</a> <a class='file-example-link' href='https://datainsight.health/edi/834/834-all-fields/'\
-  \ target='_blank'>Interactive Example</a></div>\n"
+description: "Main object for 834, contains the member and their health coverage information. Loop: 2000; Segment: INS."
 properties:
+  id:
+    description: "Unique identifier assigned by the converter."
+    type: "string"
+  objectType:
+    description: "Type of this object, always set to 'MEMBER_COVERAGE'."
+    type: "string"
+  fileName:
+    description: "Converted X12 EDI file name."
+    type: "string"
   transactionControlNumber:
-    description: "Transaction control number. EDI: ST02"
+    description: "Transaction control number. EDI: ST02."
     type: "string"
+    x-edi-elt-designators:
+    - "ST02"
   transactionSetPurposeCode:
-    description: "Transaction set purpose code. EDI: BGN01"
+    description: "Transaction set purpose code. EDI: BGN01."
     type: "string"
+    x-edi-elt-designators:
+    - "BGN01"
   originatorApplicationTransactionId:
-    description: "Originator application transaction id. EDI: BGN02"
+    description: "Originator application transaction id. EDI: BGN02."
     type: "string"
+    x-edi-elt-designators:
+    - "BGN02"
   transactionCreationDateTime:
-    description: "Transaction creation date time. EDI: BGN03,BGN04"
+    description: "Transaction creation date time. EDI: BGN03, BGN04."
     type: "string"
     format: "date-time"
+    x-edi-elt-designators:
+    - "BGN03"
+    - "BGN04"
   transactionActionCode:
-    description: "Transaction action code. EDI: BGN08"
+    description: "Transaction action code. EDI: BGN08."
     type: "string"
+    x-edi-elt-designators:
+    - "BGN08"
   fileEffectiveDates:
-    description: "File effective dates. EDI: DTP"
+    description: "File effective dates. EDI: DTP."
     type: "array"
     items:
       $ref: "./Date.yaml"
   masterPolicyNumber:
-    description: "Master policy number. EDI: REF02 *34"
+    description: "Master policy number. EDI: REF02 *34."
     type: "string"
+    x-edi-elt-designators:
+    - "REF02"
+    x-edi-qualifiers:
+    - "34"
   sponsor:
-    description: "Sponsor. EDI: Loop: 1000A"
+    description: "Sponsor. EDI Loop: 1000A."
     $ref: "./PartyIdName.yaml"
+    x-edi-loop-id: "1000A"
   insurer:
-    description: "Insurer. EDI: Loop: 1000B"
+    description: "Insurer. EDI Loop: 1000B."
     $ref: "./PartyIdName.yaml"
+    x-edi-loop-id: "1000B"
   tpas:
-    description: "Tpas. EDI: Loop: 1000C"
+    description: "Tpas. EDI Loop: 1000C."
     type: "array"
     items:
       $ref: "./Tpa.yaml"
+    x-edi-loop-id: "1000C"
   memberIndicator:
-    description: "Member indicator. EDI: INS01"
+    description: "Member indicator. EDI: INS01."
     type: "string"
+    x-edi-elt-designators:
+    - "INS01"
   relationshipCode:
-    description: "Relationship code. EDI: INS02"
+    description: "Relationship code. EDI: INS02."
     type: "string"
+    x-edi-elt-designators:
+    - "INS02"
   maintenanceTypeCode:
-    description: "Maintenance type code. EDI: INS03"
+    description: "Maintenance type code. EDI: INS03."
     type: "string"
+    x-edi-elt-designators:
+    - "INS03"
   maintenanceReasonCode:
-    description: "Maintenance reason code. EDI: INS04"
+    description: "Maintenance reason code. EDI: INS04."
     type: "string"
+    x-edi-elt-designators:
+    - "INS04"
   benefitStatusCode:
-    description: "Benefit status code. EDI: INS05"
+    description: "Benefit status code. EDI: INS05."
     type: "string"
+    x-edi-elt-designators:
+    - "INS05"
   cobraEventCode:
-    description: "Cobra event code. EDI: INS07"
+    description: "Cobra event code. EDI: INS07."
     type: "string"
+    x-edi-elt-designators:
+    - "INS07"
   employmentStatusCode:
-    description: "Employment status code. EDI: INS08"
+    description: "Employment status code. EDI: INS08."
     type: "string"
+    x-edi-elt-designators:
+    - "INS08"
   studentStatusCode:
-    description: "Student status code. EDI: INS09"
+    description: "Student status code. EDI: INS09."
     type: "string"
+    x-edi-elt-designators:
+    - "INS09"
   handicapIndicator:
-    description: "Handicap indicator. EDI: INS10"
+    description: "Handicap indicator. EDI: INS10."
     type: "string"
+    x-edi-elt-designators:
+    - "INS10"
   confidentialityCode:
-    description: "Confidentiality code. EDI: INS13"
+    description: "Confidentiality code. EDI: INS13."
     type: "string"
+    x-edi-elt-designators:
+    - "INS13"
   birthSequenceNumber:
-    description: "Birth sequence number. EDI: INS17"
+    description: "Birth sequence number. EDI: INS17."
     type: "integer"
+    x-edi-elt-designators:
+    - "INS17"
   identifier:
-    description: "Member identifier. EDI: REF02 *0F"
+    description: "Member identifier. EDI: REF02 *0F."
     type: "string"
+    x-edi-elt-designators:
+    - "REF02"
+    x-edi-qualifiers:
+    - "0F"
   groupOrPolicyNumber:
-    description: "Group or policy number. EDI: REF02 *1L"
+    description: "Group or policy number. EDI: REF02 *1L."
     type: "string"
+    x-edi-elt-designators:
+    - "REF02"
+    x-edi-qualifiers:
+    - "1L"
   supplementalIdentifiers:
-    description: "Supplemental identifiers. EDI: REF"
+    description: "Supplemental identifiers. EDI: REF."
     type: "array"
     items:
       $ref: "./Reference.yaml"
   statusInfoEffectiveDates:
-    description: "Status info effective dates. EDI: DTP"
+    description: "Status info effective dates. EDI: DTP."
     type: "array"
     items:
       $ref: "./Date.yaml"
   member:
-    description: "Member. EDI: NM1 *IL<br/>Loop: 2100A"
+    description: "Member. EDI: NM1 *IL; Loop: 2100A."
     $ref: "./Member.yaml"
+    x-edi-loop-id: "2100A"
+    x-edi-seg-ids:
+    - "NM1"
+    x-edi-qualifiers:
+    - "IL"
+  incorrectMember:
+    description: "Incorrect member. EDI: NM1 *70; Loop: 2100B."
+    $ref: "./Member.yaml"
+    x-edi-loop-id: "2100B"
+    x-edi-seg-ids:
+    - "NM1"
+    x-edi-qualifiers:
+    - "70"
   contractAmounts:
-    description: "Member policy amounts from the member loop 2100A. EDI: AMT"
+    description: "Member policy amounts from the member loop 2100A. EDI: AMT."
     type: "array"
     items:
       $ref: "./Amount.yaml"
   mailingAddress:
-    description: "Member mailing address"
+    description: "Member mailing address."
     $ref: "./Address.yaml"
   employers:
-    description: "Employers. EDI: Loop: 2100D"
+    description: "Employers. EDI Loop: 2100D."
     type: "array"
     items:
       $ref: "./Party.yaml"
+    x-edi-loop-id: "2100D"
   schools:
-    description: "Schools. EDI: Loop: 2100E"
+    description: "Schools. EDI Loop: 2100E."
     type: "array"
     items:
       $ref: "./Party.yaml"
+    x-edi-loop-id: "2100E"
   custodialParent:
-    description: "Custodial parent. EDI: Loop: 2100F"
+    description: "Custodial parent. EDI Loop: 2100F."
     $ref: "./Party.yaml"
+    x-edi-loop-id: "2100F"
   responsiblePersons:
-    description: "Responsible persons. EDI: Loop: 2100G"
+    description: "Responsible persons. EDI Loop: 2100G."
     type: "array"
     items:
       $ref: "./Party.yaml"
+    x-edi-loop-id: "2100G"
+  dropOffLocation:
+    description: "Drop off location. EDI Loop: 2100H."
+    $ref: "./Party.yaml"
+    x-edi-loop-id: "2100H"
+  disabilities:
+    description: "Disabilities. EDI Loop: 2200."
+    type: "array"
+    items:
+      $ref: "./Disability.yaml"
+    x-edi-loop-id: "2200"
   reportingCategories:
-    description: "Reporting categories. EDI: Loop: 2750"
+    description: "Reporting categories. EDI Loop: 2750."
     type: "array"
     items:
       $ref: "./ReportingCategory.yaml"
+    x-edi-loop-id: "2750"
   healthCoverages:
-    description: "Health coverages. EDI: Loop: 2300"
+    description: "Health coverages. EDI Loop: 2300."
     type: "array"
     items:
       $ref: "./HealthCoverage.yaml"
+    x-edi-loop-id: "2300"
   transaction:
-    description: "Parent EDI transaction for this object. EDI: ST"
+    description: "Parent EDI transaction for this object. EDI: ST."
     $ref: "./Transaction834.yaml"
+    x-edi-seg-ids:
+    - "ST"
+x-edi-loop-ids:
+- "2000"
+x-edi-seg-ids:
+- "INS"

@@ -1,18 +1,20 @@
 ---
 type: "object"
-description: "<div class='obj-desc'>Information related to the ambulance service rendered\
-  \ to a patient. Required on all claims involving ambulance transport services.</div>\n\
-  <div class='obj-edi-examples'>Segment: CR1</div>\n"
+description: "Information related to the ambulance service rendered to a patient. Required on all claims involving ambulance transport services. Segment: CR1."
 properties:
   patientWeight:
-    description: "Patient weight. EDI: CR102"
+    description: "Patient weight. EDI: CR102."
     type: "number"
     format: "float"
+    x-edi-elt-designators:
+    - "CR102"
   reasonCode:
-    description: "Reason code. EDI: CR104"
+    description: "Reason code. EDI: CR104."
     type: "string"
+    x-edi-elt-designators:
+    - "CR104"
   reason:
-    description: "Ambulance transport reason code as constant (enum). EDI: CR104"
+    description: "Ambulance transport reason code as constant (enum). EDI: CR104."
     type: "string"
     enum:
     - "FAMILY_MEMBER"
@@ -21,16 +23,26 @@ properties:
     - "REHAB"
     - "RESIDENTIAL_FACILITY"
     - "SPECIALIST"
+    x-edi-elt-designators:
+    - "CR104"
   transportDistance:
-    description: "Transport distance. EDI: CR106"
+    description: "Transport distance. EDI: CR106."
     type: "number"
     format: "float"
+    x-edi-elt-designators:
+    - "CR106"
   roundTripPurposeDescription:
-    description: "Round trip purpose description. EDI: CR109"
+    description: "Round trip purpose description. EDI: CR109."
     type: "string"
+    x-edi-elt-designators:
+    - "CR109"
   stretcherPurposeDescription:
-    description: "Stretcher purpose description. EDI: CR110"
+    description: "Stretcher purpose description. EDI: CR110."
     type: "string"
+    x-edi-elt-designators:
+    - "CR110"
 required:
 - "reasonCode"
 - "transportDistance"
+x-edi-seg-ids:
+- "CR1"

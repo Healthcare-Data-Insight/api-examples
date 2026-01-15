@@ -2,7 +2,7 @@
 type: "object"
 properties:
   payerResponsibilitySequence:
-    description: "Payer responsibility sequence. EDI: SBR01"
+    description: "Payer responsibility sequence. EDI: SBR01."
     type: "string"
     enum:
     - "EIGHT"
@@ -17,8 +17,10 @@ properties:
     - "TEN"
     - "TERTIARY"
     - "UNKNOWN"
+    x-edi-elt-designators:
+    - "SBR01"
   relationshipType:
-    description: "Relationship type. EDI: SBR02, PAT01"
+    description: "Relationship type. EDI: SBR02, PAT01."
     type: "string"
     enum:
     - "CADAVER_DONOR"
@@ -30,17 +32,26 @@ properties:
     - "SELF"
     - "SPOUSE"
     - "UNKNOWN"
+    x-edi-elt-designators:
+    - "SBR02"
+    - "PAT01"
   groupOrPolicyNumber:
-    description: "Group or policy number. EDI: SBR03"
+    description: "Group or policy number. EDI: SBR03."
     type: "string"
+    x-edi-elt-designators:
+    - "SBR03"
   groupName:
-    description: "Group name. EDI: SBR04"
+    description: "Group name. EDI: SBR04."
     type: "string"
+    x-edi-elt-designators:
+    - "SBR04"
   claimFilingIndicatorCode:
-    description: "Claim filing indicator code. EDI: SBR09"
+    description: "Claim filing indicator code. EDI: SBR09."
     type: "string"
+    x-edi-elt-designators:
+    - "SBR09"
   insurancePlanType:
-    description: "Insurance plan type. EDI: SBR09"
+    description: "Insurance plan type. EDI: SBR09."
     type: "string"
     enum:
     - "AUTOMOBILE_MEDICAL"
@@ -62,45 +73,84 @@ properties:
     - "PPO"
     - "VETERAN_AFFAIRS"
     - "WORKERS_COMPENSATION"
+    x-edi-elt-designators:
+    - "SBR09"
   person:
-    description: "Person. EDI: NM1"
+    description: "Person. EDI: NM1."
     $ref: "./PersonWithDemographic.yaml"
+    x-edi-seg-ids:
+    - "NM1"
   adjustments:
-    description: "Claim-level adjustments from this payer. EDI: CAS"
+    description: "Claim-level adjustments from this payer. EDI: CAS."
     type: "array"
     items:
       $ref: "./Adjustment.yaml"
+    x-edi-seg-ids:
+    - "CAS"
   payerPaidAmount:
-    description: "Payer paid amount. EDI: AMT02 *D"
+    description: "Payer paid amount. EDI: AMT02 *D."
     type: "number"
     format: "float"
+    x-edi-elt-designators:
+    - "AMT02"
+    x-edi-qualifiers:
+    - "D"
   nonCoveredAmount:
-    description: "Non covered amount. EDI: AMT02 *A8"
+    description: "Non covered amount. EDI: AMT02 *A8."
     type: "number"
     format: "float"
+    x-edi-elt-designators:
+    - "AMT02"
+    x-edi-qualifiers:
+    - "A8"
   remainingPatientLiabilityAmount:
-    description: "Remaining patient liability amount. EDI: AMT02 *EAF"
+    description: "Remaining patient liability amount. EDI: AMT02 *EAF."
     type: "number"
     format: "float"
+    x-edi-elt-designators:
+    - "AMT02"
+    x-edi-qualifiers:
+    - "EAF"
   outpatientAdjudication:
-    description: "Outpatient adjudication. EDI: MOA"
+    description: "Outpatient adjudication. EDI: MOA."
     $ref: "./OutpatientAdjudication.yaml"
+    x-edi-seg-ids:
+    - "MOA"
   payerPriorAuthorizationNumber:
-    description: "Payer prior authorization number. EDI: REF02 *G1"
+    description: "Payer prior authorization number. EDI: REF02 *G1."
     type: "string"
+    x-edi-elt-designators:
+    - "REF02"
+    x-edi-qualifiers:
+    - "G1"
   payerReferralNumber:
-    description: "Payer referral number. EDI: REF02 *9F"
+    description: "Payer referral number. EDI: REF02 *9F."
     type: "string"
+    x-edi-elt-designators:
+    - "REF02"
+    x-edi-qualifiers:
+    - "9F"
   payerClaimControlNumber:
-    description: "Payer claim control number. EDI: REF02 *F8"
+    description: "Payer claim control number. EDI: REF02 *F8."
     type: "string"
+    x-edi-elt-designators:
+    - "REF02"
+    x-edi-qualifiers:
+    - "F8"
   payer:
-    description: "Payer. EDI: NM1 *PR<br/>Loop: 2330B"
+    description: "Payer. EDI: NM1 *PR; Loop: 2330B."
     $ref: "./Party.yaml"
+    x-edi-loop-id: "2330B"
+    x-edi-seg-ids:
+    - "NM1"
+    x-edi-qualifiers:
+    - "PR"
   providers:
-    description: "Other payer's providers. EDI: NM1"
+    description: "Other payer's providers. EDI: NM1."
     type: "array"
     items:
       $ref: "./Party.yaml"
+    x-edi-seg-ids:
+    - "NM1"
 required:
 - "payerResponsibilitySequence"

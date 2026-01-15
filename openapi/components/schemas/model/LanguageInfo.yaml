@@ -1,0 +1,6 @@
+---
+type: "object"
+description: "Segment: LUI."
+properties: {}
+x-edi-seg-ids:
+- "LUI"

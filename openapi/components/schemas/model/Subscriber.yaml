@@ -2,7 +2,7 @@
 type: "object"
 properties:
   payerResponsibilitySequence:
-    description: "Payer responsibility sequence. EDI: SBR01"
+    description: "Payer responsibility sequence. EDI: SBR01."
     type: "string"
     enum:
     - "EIGHT"
@@ -17,8 +17,10 @@ properties:
     - "TEN"
     - "TERTIARY"
     - "UNKNOWN"
+    x-edi-elt-designators:
+    - "SBR01"
   relationshipType:
-    description: "Relationship type. EDI: SBR02, PAT01"
+    description: "Relationship type. EDI: SBR02, PAT01."
     type: "string"
     enum:
     - "CADAVER_DONOR"
@@ -30,17 +32,26 @@ properties:
     - "SELF"
     - "SPOUSE"
     - "UNKNOWN"
+    x-edi-elt-designators:
+    - "SBR02"
+    - "PAT01"
   groupOrPolicyNumber:
-    description: "Group or policy number. EDI: SBR03"
+    description: "Group or policy number. EDI: SBR03."
     type: "string"
+    x-edi-elt-designators:
+    - "SBR03"
   groupName:
-    description: "Group name. EDI: SBR04"
+    description: "Group name. EDI: SBR04."
     type: "string"
+    x-edi-elt-designators:
+    - "SBR04"
   claimFilingIndicatorCode:
-    description: "Claim filing indicator code. EDI: SBR09"
+    description: "Claim filing indicator code. EDI: SBR09."
     type: "string"
+    x-edi-elt-designators:
+    - "SBR09"
   insurancePlanType:
-    description: "Insurance plan type. EDI: SBR09"
+    description: "Insurance plan type. EDI: SBR09."
     type: "string"
     enum:
     - "AUTOMOBILE_MEDICAL"
@@ -62,25 +73,44 @@ properties:
     - "PPO"
     - "VETERAN_AFFAIRS"
     - "WORKERS_COMPENSATION"
+    x-edi-elt-designators:
+    - "SBR09"
   person:
-    description: "Person. EDI: NM1"
+    description: "Person. EDI: NM1."
     $ref: "./PersonWithDemographic.yaml"
+    x-edi-seg-ids:
+    - "NM1"
   deathDate:
-    description: "Death date. EDI: PAT06"
+    description: "Death date. EDI: PAT06."
     type: "string"
     format: "date"
+    x-edi-elt-designators:
+    - "PAT06"
   weight:
-    description: "Patient weight in pounds. EDI: PAT08"
+    description: "Patient weight in pounds. EDI: PAT08."
     type: "number"
     format: "float"
+    x-edi-elt-designators:
+    - "PAT08"
   pregnancyIndicator:
-    description: "Pregnancy indicator. EDI: PAT09"
+    description: "Pregnancy indicator. EDI: PAT09."
     type: "string"
+    x-edi-elt-designators:
+    - "PAT09"
   propertyCasualtyClaimNumber:
-    description: "Property casualty claim number. EDI: REF02 *Y4"
+    description: "Property casualty claim number. EDI: REF02 *Y4."
     type: "string"
+    x-edi-elt-designators:
+    - "REF02"
+    x-edi-qualifiers:
+    - "Y4"
   payer:
-    description: "Payer. EDI: NM1 *PR<br/>Loop: 2330B"
+    description: "Payer. EDI: NM1 *PR; Loop: 2330B."
     $ref: "./Party.yaml"
+    x-edi-loop-id: "2330B"
+    x-edi-seg-ids:
+    - "NM1"
+    x-edi-qualifiers:
+    - "PR"
 required:
 - "payerResponsibilitySequence"

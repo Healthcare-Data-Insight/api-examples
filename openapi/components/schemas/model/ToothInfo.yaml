@@ -1,12 +1,18 @@
 ---
 type: "object"
-description: "<div class='obj-edi-examples'>Segment: TOO</div>\n"
+description: "Segment: TOO."
 properties:
   code:
-    description: "Code. EDI: TOO02"
+    description: "Code. EDI: TOO02."
     type: "string"
+    x-edi-elt-designators:
+    - "TOO02"
   surfaceCodes:
-    description: "Surface codes. EDI: TOO03"
+    description: "Surface codes. EDI: TOO03."
     type: "array"
     items:
       type: "string"
+    x-edi-elt-designators:
+    - "TOO03"
+x-edi-seg-ids:
+- "TOO"

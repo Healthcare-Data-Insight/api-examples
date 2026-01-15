@@ -2,44 +2,64 @@
 type: "object"
 properties:
   controlNumber:
-    description: "Control number. EDI: ST02"
+    description: "Control number. EDI: ST02."
     type: "string"
+    x-edi-elt-designators:
+    - "ST02"
   transactionType:
-    description: "Transaction type translated to string constant, PROF for 837P, INST\
-      \ for 837I, etc.. EDI: ST01, ST03"
+    description: "Transaction type translated to string constant, PROF for 837P, INST for 837I, etc. EDI: ST01, ST03."
     type: "string"
+    x-edi-elt-designators:
+    - "ST01"
+    - "ST03"
   hierarchicalStructureCode:
-    description: "Hierarchical structure code. EDI: BHT01"
+    description: "Hierarchical structure code. EDI: BHT01."
     type: "string"
+    x-edi-elt-designators:
+    - "BHT01"
   purposeCode:
-    description: "Purpose code. EDI: BHT02"
+    description: "Purpose code. EDI: BHT02."
     type: "string"
+    x-edi-elt-designators:
+    - "BHT02"
   originatorApplicationTransactionId:
-    description: "Originator application transaction id. EDI: BHT03"
+    description: "Originator application transaction id. EDI: BHT03."
     type: "string"
+    x-edi-elt-designators:
+    - "BHT03"
   creationDate:
-    description: "Creation date. EDI: BHT04"
+    description: "Creation date. EDI: BHT04."
     type: "string"
     format: "date"
+    x-edi-elt-designators:
+    - "BHT04"
   creationTime:
-    description: "Creation time. EDI: BHT05"
+    description: "Creation time. EDI: BHT05."
     type: "string"
     format: "date-time"
+    x-edi-elt-designators:
+    - "BHT05"
   claimOrEncounterIdentifierType:
-    description: "Claim or encounter identifier type. EDI: BHT06"
+    description: "Claim or encounter identifier type. EDI: BHT06."
     type: "string"
+    x-edi-elt-designators:
+    - "BHT06"
   transactionSetIdentifierCode:
-    description: "Transaction set identifier code. EDI: ST01"
+    description: "Transaction set identifier code. EDI: ST01."
     type: "string"
+    x-edi-elt-designators:
+    - "ST01"
   implementationConventionReference:
-    description: "Implementation convention reference. EDI: ST03"
+    description: "Implementation convention reference. EDI: ST03."
     type: "string"
+    x-edi-elt-designators:
+    - "ST03"
   fileInfo:
-    description: "File info"
+    description: "File info."
     $ref: "./FileInfo.yaml"
   sender:
-    description: "Submitter or sender of this transaction"
+    description: "Submitter or sender of this transaction."
     $ref: "./PartyIdName.yaml"
   receiver:
-    description: "Receiver of this transaction"
+    description: "Receiver of this transaction."
     $ref: "./PartyIdName.yaml"

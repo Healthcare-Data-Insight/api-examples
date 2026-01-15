@@ -1,9 +1,9 @@
 ---
 type: "object"
-description: "<div class='obj-edi-examples'>Segment: CAS</div>\n"
+description: "Segment: CAS."
 properties:
   group:
-    description: "Claim adjustment group code as a string constant (enum). EDI: CAS01"
+    description: "Claim adjustment group code as a string constant (enum). EDI: CAS01."
     type: "string"
     enum:
     - "CONTRACTUAL"
@@ -11,19 +11,28 @@ properties:
     - "OTHER"
     - "PATIENT_RESPONSIBILITY"
     - "PAYOR_INITIATED"
+    x-edi-elt-designators:
+    - "CAS01"
   reason:
-    description: "Claim adjustment reason code<br/><a href='https://datainsight.health/code-lookup/?type=CLAIM_ADJUSTMENT_REASON_CODE'\
-      \ target='_blank'>View codes and descriptions</a>. EDI: CAS02"
+    description: "Claim adjustment reason code. EDI: CAS02."
     $ref: "./Code.yaml"
+    x-edi-elt-designators:
+    - "CAS02"
   amount:
-    description: "Adjustment amount. EDI: CAS03"
+    description: "Adjustment amount. EDI: CAS03."
     type: "number"
     format: "float"
+    x-edi-elt-designators:
+    - "CAS03"
   quantity:
-    description: "Adjustment quantity. EDI: CAS04"
+    description: "Adjustment quantity. EDI: CAS04."
     type: "number"
     format: "float"
+    x-edi-elt-designators:
+    - "CAS04"
 required:
 - "group"
 - "reason"
 - "amount"
+x-edi-seg-ids:
+- "CAS"

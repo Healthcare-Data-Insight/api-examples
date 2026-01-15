@@ -1,32 +1,46 @@
 ---
 type: "object"
-description: "<div class='obj-desc'>Status of multiple claims provided at a provider\
-  \ or a receiver level. At the receiver level, this is a status of all claims in\
-  \ the transaction.</div>\n"
+description: "Status of multiple claims provided at a provider or a receiver level. At the receiver level, this is a status of all claims in the transaction."
 properties:
   traceIdentifier:
-    description: "Transaction control number from 837 for the status at the receiver\
-      \ level. It is a dummy number for the provider-level status; should be ignored..\
-      \ EDI: TRN02"
+    description: "Transaction control number from 837 for the status at the receiver level. It is a dummy number for the provider-level status; should be ignored. EDI: TRN02."
     type: "string"
+    x-edi-elt-designators:
+    - "TRN02"
   statusInfos:
-    description: "Status infos"
+    description: "Status infos."
     type: "array"
     items:
       $ref: "./StatusInfo.yaml"
   acceptedQuantity:
-    description: "Accepted quantity. EDI: QTY02 *QA"
+    description: "Accepted quantity. EDI: QTY02 *QA."
     type: "number"
     format: "float"
+    x-edi-elt-designators:
+    - "QTY02"
+    x-edi-qualifiers:
+    - "QA"
   acceptedAmount:
-    description: "Accepted amount. EDI: AMT02 *YU"
+    description: "Accepted amount. EDI: AMT02 *YU."
     type: "number"
     format: "float"
+    x-edi-elt-designators:
+    - "AMT02"
+    x-edi-qualifiers:
+    - "YU"
   rejectedQuantity:
-    description: "Rejected quantity. EDI: QTY02 *QC"
+    description: "Rejected quantity. EDI: QTY02 *QC."
     type: "number"
     format: "float"
+    x-edi-elt-designators:
+    - "QTY02"
+    x-edi-qualifiers:
+    - "QC"
   rejectedAmount:
-    description: "Rejected amount. EDI: AMT02 *YY"
+    description: "Rejected amount. EDI: AMT02 *YY."
     type: "number"
     format: "float"
+    x-edi-elt-designators:
+    - "AMT02"
+    x-edi-qualifiers:
+    - "YY"

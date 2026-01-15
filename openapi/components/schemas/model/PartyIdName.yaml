@@ -2,32 +2,53 @@
 type: "object"
 properties:
   entityRole:
-    description: "Entity role<br/><a href='https://datainsight.health/code-lookup/?type=X12_ENTITY_IDENTIFIER_CODE'\
-      \ target='_blank'>View codes and descriptions</a>. EDI: NM101, N101"
+    description: "Entity role. EDI: NM101, N101."
     type: "string"
+    x-edi-elt-designators:
+    - "NM101"
+    - "N101"
   entityType:
-    description: "Entity type. EDI: NM102"
+    description: "Entity type. EDI: NM102."
     type: "string"
+    x-edi-elt-designators:
+    - "NM102"
   identificationType:
-    description: "Identification type, e.g., NPI or EIN. This is a qualifier code\
-      \ translated to a string constant (enum)<br/><a href='https://datainsight.health/code-lookup/?type=X12_IDENTIFICATION_CODE'\
-      \ target='_blank'>View codes and descriptions</a>. EDI: NM108, N103"
+    description: "Identification type, e.g., NPI or EIN. This is a qualifier code translated to a string constant (enum). EDI: NM108, N103."
     type: "string"
+    x-edi-elt-designators:
+    - "NM108"
+    - "N103"
   identifier:
-    description: "Identifier. EDI: NM109, N104"
+    description: "Identifier. EDI: NM109, N104."
     type: "string"
+    x-edi-elt-designators:
+    - "NM109"
+    - "N104"
   taxId:
-    description: "Tax id. EDI: REF02 *TJ, REF02 *SY, REF02 *EI"
+    description: "Tax id. EDI: REF02 *TJ, REF02 *SY, REF02 *EI."
     type: "string"
+    x-edi-elt-designators:
+    - "REF02"
+    x-edi-qualifiers:
+    - "TJ"
+    - "SY"
+    - "EI"
   lastNameOrOrgName:
-    description: "Organization name or person last name. EDI: NM103, N102"
+    description: "Organization name or person last name. EDI: NM103, N102."
     type: "string"
+    x-edi-elt-designators:
+    - "NM103"
+    - "N102"
   firstName:
-    description: "First name. EDI: NM104"
+    description: "First name. EDI: NM104."
     type: "string"
+    x-edi-elt-designators:
+    - "NM104"
   middleName:
-    description: "Middle name. EDI: NM105"
+    description: "Middle name. EDI: NM105."
     type: "string"
+    x-edi-elt-designators:
+    - "NM105"
 required:
 - "entityRole"
 - "entityType"

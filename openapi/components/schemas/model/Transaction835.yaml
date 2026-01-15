@@ -2,75 +2,116 @@
 type: "object"
 properties:
   controlNumber:
-    description: "Control number. EDI: ST02"
+    description: "Control number. EDI: ST02."
     type: "string"
+    x-edi-elt-designators:
+    - "ST02"
   transactionType:
-    description: "Transaction type translated to string constant, PROF for 837P, INST\
-      \ for 837I, etc.. EDI: ST01, ST03"
+    description: "Transaction type translated to string constant, PROF for 837P, INST for 837I, etc. EDI: ST01, ST03."
     type: "string"
+    x-edi-elt-designators:
+    - "ST01"
+    - "ST03"
   productionDate:
-    description: "Production date. EDI: DTP03 *405"
+    description: "Production date. EDI: DTP03 *405."
     type: "string"
     format: "date"
+    x-edi-elt-designators:
+    - "DTP03"
+    x-edi-qualifiers:
+    - "405"
   transactionHandlingType:
-    description: "Transaction handling type. EDI: BPR01"
+    description: "Transaction handling type. EDI: BPR01."
     type: "string"
+    x-edi-elt-designators:
+    - "BPR01"
   totalPaymentAmount:
-    description: "Total payment amount. EDI: BPR02"
+    description: "Total payment amount. EDI: BPR02."
     type: "number"
     format: "float"
+    x-edi-elt-designators:
+    - "BPR02"
   creditOrDebitFlagCode:
-    description: "Credit or debit flag code. EDI: BPR03"
+    description: "Credit or debit flag code. EDI: BPR03."
     type: "string"
+    x-edi-elt-designators:
+    - "BPR03"
   paymentMethodType:
-    description: "Payment method type: ACH, CHECK, WIRE_TRANSFER, NON_PAYMENT. EDI:\
-      \ BPR04"
+    description: "Payment method type: ACH, CHECK, WIRE_TRANSFER, NON_PAYMENT. EDI: BPR04."
     type: "string"
+    x-edi-elt-designators:
+    - "BPR04"
   paymentFormatCode:
-    description: "Payment format code. EDI: BPR05"
+    description: "Payment format code. EDI: BPR05."
     type: "string"
+    x-edi-elt-designators:
+    - "BPR05"
   senderBankRoutingNumber:
-    description: "Sender bank routing number. EDI: BPR07"
+    description: "Sender bank routing number. EDI: BPR07."
     type: "string"
+    x-edi-elt-designators:
+    - "BPR07"
   senderAccountNumber:
-    description: "Sender account number. EDI: BPR09"
+    description: "Sender account number. EDI: BPR09."
     type: "string"
+    x-edi-elt-designators:
+    - "BPR09"
   originatingCompanyId:
-    description: "If provided, should be identical to payerIdentifier. EDI: BPR10"
+    description: "If provided, should be identical to payerIdentifier. EDI: BPR10."
     type: "string"
+    x-edi-elt-designators:
+    - "BPR10"
   originatingCompanySupplementalCode:
-    description: "Originating company supplemental code. EDI: BPR11,TRN04"
+    description: "Originating company supplemental code. EDI: BPR11, TRN04."
     type: "string"
+    x-edi-elt-designators:
+    - "BPR11"
+    - "TRN04"
   receiverBankRoutingNumber:
-    description: "Receiver bank routing number. EDI: BPR13"
+    description: "Receiver bank routing number. EDI: BPR13."
     type: "string"
+    x-edi-elt-designators:
+    - "BPR13"
   receiverAccountNumber:
-    description: "Receiver account number. EDI: BPR15"
+    description: "Receiver account number. EDI: BPR15."
     type: "string"
+    x-edi-elt-designators:
+    - "BPR15"
   paymentDate:
-    description: "Payment date. EDI: BPR16"
+    description: "Payment date. EDI: BPR16."
     type: "string"
     format: "date"
+    x-edi-elt-designators:
+    - "BPR16"
   checkOrEftTraceNumber:
-    description: "Check or eft trace number. EDI: TRN02"
+    description: "Check or eft trace number. EDI: TRN02."
     type: "string"
+    x-edi-elt-designators:
+    - "TRN02"
   payerIdentifier:
-    description: "This must be a 1 followed by the payer's EIN or TIN. This ID will\
-      \ be used as the identifier in the payer object if no other identifier was provided.\
-      \ EDI: TRN03"
+    description: "This must be a 1 followed by the payer's EIN or TIN. This ID will be used as the identifier in the payer object if no other identifier was provided. EDI: TRN03."
     type: "string"
+    x-edi-elt-designators:
+    - "TRN03"
   receiverIdentifier:
-    description: "Receiver's identifier when different from payee (e.g., a clearinghouse).\
-      \ EDI: REF02 *EV"
+    description: "Receiver's identifier when different from payee (e.g., a clearinghouse). EDI: REF02 *EV."
     type: "string"
+    x-edi-elt-designators:
+    - "REF02"
+    x-edi-qualifiers:
+    - "EV"
   transactionSetIdentifierCode:
-    description: "Transaction set identifier code. EDI: ST01"
+    description: "Transaction set identifier code. EDI: ST01."
     type: "string"
+    x-edi-elt-designators:
+    - "ST01"
   implementationConventionReference:
-    description: "Implementation convention reference. EDI: ST03"
+    description: "Implementation convention reference. EDI: ST03."
     type: "string"
+    x-edi-elt-designators:
+    - "ST03"
   fileInfo:
-    description: "File info"
+    description: "File info."
     $ref: "./FileInfo.yaml"
 required:
 - "transactionHandlingType"

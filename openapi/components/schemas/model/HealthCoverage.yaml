@@ -1,47 +1,65 @@
 ---
 type: "object"
-description: "<div class='obj-edi-examples'>Loop: 2300, Segment: HD</div>\n"
+description: "Loop: 2300; Segment: HD."
 properties:
   maintenanceTypeCode:
-    description: "Maintenance type code. EDI: HD01"
+    description: "Maintenance type code. EDI: HD01."
     type: "string"
+    x-edi-elt-designators:
+    - "HD01"
   insuranceLineCode:
-    description: "Insurance line code. EDI: HD03"
+    description: "Insurance line code. EDI: HD03."
     type: "string"
+    x-edi-elt-designators:
+    - "HD03"
   planDescription:
-    description: "Plan description. EDI: HD04"
+    description: "Plan description. EDI: HD04."
     type: "string"
+    x-edi-elt-designators:
+    - "HD04"
   coverageLevelCode:
-    description: "Coverage level code. EDI: HD05"
+    description: "Coverage level code. EDI: HD05."
     type: "string"
+    x-edi-elt-designators:
+    - "HD05"
   lateEnrollmentIndicator:
-    description: "Late enrollment indicator. EDI: HD09"
+    description: "Late enrollment indicator. EDI: HD09."
     type: "string"
+    x-edi-elt-designators:
+    - "HD09"
   coverageDates:
-    description: "Coverage dates. EDI: DTP"
+    description: "Coverage dates. EDI: DTP."
     type: "array"
     items:
       $ref: "./Date.yaml"
   contractAmounts:
-    description: "Contract amounts. EDI: AMT"
+    description: "Contract amounts. EDI: AMT."
     type: "array"
     items:
       $ref: "./Amount.yaml"
   groupOrPolicyNumbers:
-    description: "Group or policy numbers. EDI: REF"
+    description: "Group or policy numbers. EDI: REF."
     type: "array"
     items:
       $ref: "./Reference.yaml"
   priorCoverageMonthCount:
-    description: "Prior coverage month count. EDI: REF02 *QQ"
+    description: "Prior coverage month count. EDI: REF02 *QQ."
     type: "string"
+    x-edi-elt-designators:
+    - "REF02"
+    x-edi-qualifiers:
+    - "QQ"
   providers:
-    description: "Providers"
+    description: "Providers."
     type: "array"
     items:
       $ref: "./Party.yaml"
   cobs:
-    description: "Coordination of Benefits"
+    description: "Coordination of Benefits."
     type: "array"
     items:
       $ref: "./CoordinationOfBenefits.yaml"
+x-edi-loop-ids:
+- "2300"
+x-edi-seg-ids:
+- "HD"

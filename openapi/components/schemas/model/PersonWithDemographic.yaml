@@ -1,57 +1,20 @@
 ---
-type: "object"
-properties:
-  entityRole:
-    description: "Entity role<br/><a href='https://datainsight.health/code-lookup/?type=X12_ENTITY_IDENTIFIER_CODE'\
-      \ target='_blank'>View codes and descriptions</a>. EDI: NM101, N101"
-    type: "string"
-  entityType:
-    description: "Entity type. EDI: NM102"
-    type: "string"
-  identificationType:
-    description: "Identification type, e.g., NPI or EIN. This is a qualifier code\
-      \ translated to a string constant (enum)<br/><a href='https://datainsight.health/code-lookup/?type=X12_IDENTIFICATION_CODE'\
-      \ target='_blank'>View codes and descriptions</a>. EDI: NM108, N103"
-    type: "string"
-  identifier:
-    description: "Identifier. EDI: NM109, N104"
-    type: "string"
-  taxId:
-    description: "Tax id. EDI: REF02 *TJ, REF02 *SY, REF02 *EI"
-    type: "string"
-  lastNameOrOrgName:
-    description: "Organization name or person last name. EDI: NM103, N102"
-    type: "string"
-  firstName:
-    description: "First name. EDI: NM104"
-    type: "string"
-  middleName:
-    description: "Middle name. EDI: NM105"
-    type: "string"
-  birthDate:
-    description: "Birth date. EDI: DMG02"
-    type: "string"
-    format: "date"
-  gender:
-    description: "Gender. EDI: DMG03"
-    type: "string"
-    enum:
-    - "FEMALE"
-    - "MALE"
-    - "UNKNOWN"
-  address:
-    description: "Address"
-    $ref: "./Address.yaml"
-  contacts:
-    description: "Contacts"
-    type: "array"
-    items:
-      $ref: "./ContactInfo.yaml"
-  additionalIds:
-    description: "Other identifications. EDI: REF"
-    type: "array"
-    items:
-      $ref: "./Reference.yaml"
-required:
-- "entityRole"
-- "entityType"
+allOf:
+- $ref: "./Party.yaml"
+- type: "object"
+  properties:
+    birthDate:
+      description: "Birth date. EDI: DMG02."
+      type: "string"
+      format: "date"
+      x-edi-elt-designators:
+      - "DMG02"
+    gender:
+      description: "Gender. EDI: DMG03."
+      type: "string"
+      enum:
+      - "FEMALE"
+      - "MALE"
+      - "UNKNOWN"
+      x-edi-elt-designators:
+      - "DMG03"

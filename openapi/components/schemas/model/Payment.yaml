@@ -1,80 +1,96 @@
 ---
 type: "object"
-description: "<div class='obj-edi-examples'>Loop: 2100, Segment: CLP <a class='file-example-link'\
-  \ href='https://github.com/Healthcare-Data-Insight/api-examples/tree/main/converted_files/835/835-all-fields.json'\
-  \ target='_blank'>JSON Example</a> <a class='file-example-link' href='https://datainsight.health/edi/payments/comprehensive/'\
-  \ target='_blank'>Interactive Example</a></div>\n"
+description: "Loop: 2100; Segment: CLP."
 properties:
   id:
-    description: "Unique payment identifier assigned by the converter"
+    description: "Unique payment identifier assigned by the converter."
     type: "string"
   objectType:
-    description: "Type of this object, set to 'PAYMENT'"
+    description: "Type of this object, set to 'PAYMENT'."
     type: "string"
   patientControlNumber:
-    description: "Identifier used to track a claim from creation by the health care\
-      \ provider through payment. EDI: CLP01"
+    description: "Identifier used to track a claim from creation by the health care provider through payment. EDI: CLP01."
     type: "string"
+    x-edi-elt-designators:
+    - "CLP01"
   chargeAmount:
-    description: "Charge amount. EDI: CLP02"
+    description: "Charge amount. EDI: CLP02."
     type: "number"
     format: "float"
+    x-edi-elt-designators:
+    - "CLP02"
   paymentAmount:
-    description: "Payment amount. EDI: CLP04"
+    description: "Payment amount. EDI: CLP04."
     type: "number"
     format: "float"
+    x-edi-elt-designators:
+    - "CLP04"
   facilityCode:
-    description: "Place of service code (professional/dental) or UB facility code\
-      \ (institutional) from the original claim<br/><a href='https://datainsight.health/code-lookup/?type=FACILITY_TYPE'\
-      \ target='_blank'>View codes and descriptions</a>. EDI: CLP08"
+    description: "Place of service code (professional/dental) or UB facility code (institutional) from the original claim. EDI: CLP08."
     $ref: "./Code.yaml"
+    x-edi-elt-designators:
+    - "CLP08"
   frequencyCode:
-    description: "Frequency code<br/><a href='https://datainsight.health/code-lookup/?type=frequency_code'\
-      \ target='_blank'>View codes and descriptions</a>. EDI: CLP09"
+    description: "Frequency code. EDI: CLP09."
     $ref: "./Code.yaml"
+    x-edi-elt-designators:
+    - "CLP09"
   statementDateFrom:
-    description: "Statement date from. EDI: DTP03 *232"
+    description: "Statement date from. EDI: DTP03 *232."
     type: "string"
     format: "date"
+    x-edi-elt-designators:
+    - "DTP03"
+    x-edi-qualifiers:
+    - "232"
   statementDateTo:
-    description: "Statement date to. EDI: DTP03 *233"
+    description: "Statement date to. EDI: DTP03 *233."
     type: "string"
     format: "date"
+    x-edi-elt-designators:
+    - "DTP03"
+    x-edi-qualifiers:
+    - "233"
   serviceDateFrom:
-    description: "The earliest service date from service lines"
+    description: "The earliest service date from service lines."
     type: "string"
     format: "date"
   serviceDateTo:
-    description: "The latest service date from service lines"
+    description: "The latest service date from service lines."
     type: "string"
     format: "date"
   subscriber:
-    description: "The insured (subscriber) from the original claim if the insured\
-      \ is different from the patient. EDI: Loop: 2100"
+    description: "The insured (subscriber) from the original claim if the insured is different from the patient. EDI Loop: 2100."
     $ref: "./PatientSubscriber835.yaml"
+    x-edi-loop-id: "2100"
   patient:
-    description: "The insured (subscriber) or patient from the original claim. EDI:\
-      \ Loop: 2100"
+    description: "The insured (subscriber) or patient from the original claim. EDI Loop: 2100."
     $ref: "./PatientSubscriber835.yaml"
+    x-edi-loop-id: "2100"
   otherSubscribers:
-    description: "Other subscriber; only one other subscriber is allowed on 835. EDI:\
-      \ Loop: 2100"
+    description: "Other subscriber; only one other subscriber is allowed on 835. EDI Loop: 2100."
     type: "array"
     items:
       $ref: "./PatientSubscriber835.yaml"
+    x-edi-loop-id: "2100"
   serviceLines:
-    description: "Service lines. EDI: Loop: 2110"
+    description: "Service lines. EDI Loop: 2110."
     type: "array"
     items:
       $ref: "./PaymentLine.yaml"
+    x-edi-loop-id: "2110"
   transaction:
-    description: "Parent EDI transaction for this object. EDI: ST"
+    description: "Parent EDI transaction for this object. EDI: ST."
     $ref: "./Transaction835.yaml"
+    x-edi-seg-ids:
+    - "ST"
   claimStatusCode:
-    description: "Claim status code. EDI: CLP02"
+    description: "Claim status code. EDI: CLP02."
     type: "string"
+    x-edi-elt-designators:
+    - "CLP02"
   claimStatus:
-    description: "Claim status code translated to a string constant (enum). EDI: CLP02"
+    description: "Claim status code translated to a string constant (enum). EDI: CLP02."
     type: "string"
     enum:
     - "DENIED"
@@ -87,16 +103,21 @@ properties:
     - "SECONDARY_FORWARDED"
     - "TERTIARY"
     - "TERTIARY_FORWARDED"
+    x-edi-elt-designators:
+    - "CLP02"
   patientResponsibilityAmount:
-    description: "Patient responsibility amount. EDI: CLP05"
+    description: "Patient responsibility amount. EDI: CLP05."
     type: "number"
     format: "float"
+    x-edi-elt-designators:
+    - "CLP05"
   claimFilingIndicatorCode:
-    description: "Claim filing indicator code. EDI: CLP06"
+    description: "Claim filing indicator code. EDI: CLP06."
     type: "string"
+    x-edi-elt-designators:
+    - "CLP06"
   insurancePlanType:
-    description: "Claim filing indicator code translated to a string constant (enum).\
-      \ EDI: CLP06"
+    description: "Claim filing indicator code translated to a string constant (enum). EDI: CLP06."
     type: "string"
     enum:
     - "AUTOMOBILE_MEDICAL"
@@ -118,81 +139,138 @@ properties:
     - "PPO"
     - "VETERAN_AFFAIRS"
     - "WORKERS_COMPENSATION"
+    x-edi-elt-designators:
+    - "CLP06"
   payerControlNumber:
-    description: "Payer control number. EDI: CLP07"
+    description: "Payer control number. EDI: CLP07."
     type: "string"
+    x-edi-elt-designators:
+    - "CLP07"
   drg:
-    description: "Diagnosis-related group code. Institutional claims only.. EDI: CLP11"
+    description: "Diagnosis-related group code. Institutional claims only. EDI: CLP11."
     $ref: "./Code.yaml"
+    x-edi-elt-designators:
+    - "CLP11"
   drgWeight:
-    description: "Adjudicated DRG weight. Institutional claims only.. EDI: CLP12"
+    description: "Adjudicated DRG weight. Institutional claims only. EDI: CLP12."
     type: "number"
     format: "float"
+    x-edi-elt-designators:
+    - "CLP12"
   dischargeFraction:
-    description: "Adjudicated discharge fraction. Institutional claims only. This\
-      \ is a percentage expressed as decimal.. EDI: CLP13"
+    description: "Adjudicated discharge fraction. Institutional claims only. This is a percentage expressed as decimal. EDI: CLP13."
     type: "number"
     format: "float"
+    x-edi-elt-designators:
+    - "CLP13"
   otherClaimRelatedIds:
-    description: "Other claim-related identifications. EDI: REF"
+    description: "Other claim-related identifications. EDI: REF."
     type: "array"
     items:
       $ref: "./Reference.yaml"
+    x-edi-seg-ids:
+    - "REF"
   supplementalAmounts:
-    description: "Supplemental claim/payment amounts, such as coverage amount, discount\
-      \ amount, etc.. EDI: AMT"
+    description: "Supplemental claim/payment amounts, such as coverage amount, discount amount, etc. EDI: AMT."
     type: "array"
     items:
       $ref: "./Amount.yaml"
+    x-edi-seg-ids:
+    - "AMT"
   supplementalQuantities:
-    description: "Supplemental claim/payment quantities. EDI: QTY"
+    description: "Supplemental claim/payment quantities. EDI: QTY."
     type: "array"
     items:
       $ref: "./Quantity.yaml"
+    x-edi-seg-ids:
+    - "QTY"
   payer:
-    description: "Payer. EDI: N1 *PR"
+    description: "Payer. EDI: N1 *PR."
     $ref: "./Party.yaml"
+    x-edi-seg-ids:
+    - "N1"
+    x-edi-qualifiers:
+    - "PR"
   payee:
-    description: "Payee. EDI: N1 *PE"
+    description: "Payee. EDI: N1 *PE."
     $ref: "./Party.yaml"
+    x-edi-seg-ids:
+    - "N1"
+    x-edi-qualifiers:
+    - "PE"
   outpatientAdjudication:
-    description: "Outpatient adjudication. EDI: MOA"
+    description: "Outpatient adjudication. EDI: MOA."
     $ref: "./OutpatientAdjudication.yaml"
+    x-edi-seg-ids:
+    - "MOA"
   inpatientAdjudication:
-    description: "Inpatient adjudication. EDI: MIA"
+    description: "Inpatient adjudication. EDI: MIA."
     $ref: "./InpatientAdjudication.yaml"
+    x-edi-seg-ids:
+    - "MIA"
   adjustments:
-    description: "Claim adjustments. EDI: CAS"
+    description: "Claim adjustments. EDI: CAS."
     type: "array"
     items:
       $ref: "./Adjustment.yaml"
+    x-edi-seg-ids:
+    - "CAS"
   coverageExpirationDate:
-    description: "Coverage expiration date. EDI: DTP03 *036"
+    description: "Coverage expiration date. EDI: DTP03 *036."
     type: "string"
     format: "date"
+    x-edi-elt-designators:
+    - "DTP03"
+    x-edi-qualifiers:
+    - "036"
   claimReceivedDate:
-    description: "Claim received date. EDI: DTP03 *050"
+    description: "Claim received date. EDI: DTP03 *050."
     type: "string"
     format: "date"
+    x-edi-elt-designators:
+    - "DTP03"
+    x-edi-qualifiers:
+    - "050"
   serviceProvider:
-    description: "Service provider. EDI: NM1 *SJ"
+    description: "Service provider. EDI: NM1 *SJ."
     $ref: "./PartyIdName.yaml"
+    x-edi-seg-ids:
+    - "NM1"
+    x-edi-qualifiers:
+    - "SJ"
   crossoverCarrier:
-    description: "Crossover carrier. EDI: NM1 *TT"
+    description: "Crossover carrier. EDI: NM1 *TT."
     $ref: "./PartyIdName.yaml"
+    x-edi-seg-ids:
+    - "NM1"
+    x-edi-qualifiers:
+    - "TT"
   correctedPayer:
-    description: "Corrected priority payer, meaning that current payer believes that\
-      \ another payer has priority for making a payment. EDI: NM1 *PR"
+    description: "Corrected priority payer, meaning that current payer believes that another payer has priority for making a payment. EDI: NM1 *PR."
     $ref: "./PartyIdName.yaml"
+    x-edi-seg-ids:
+    - "NM1"
+    x-edi-qualifiers:
+    - "PR"
   correctedInsured:
-    description: "Corrected insured. EDI: NM1 *74"
+    description: "Corrected insured. EDI: NM1 *74."
     $ref: "./PartyIdName.yaml"
+    x-edi-seg-ids:
+    - "NM1"
+    x-edi-qualifiers:
+    - "74"
   claimContacts:
-    description: "Claim contacts. EDI: PER"
+    description: "Claim contacts. EDI: PER."
     type: "array"
     items:
       $ref: "./ContactInfo.yaml"
+    x-edi-seg-ids:
+    - "PER"
 required:
 - "patientControlNumber"
 - "chargeAmount"
 - "paymentAmount"
+x-edi-loop-ids:
+- "2100"
+x-edi-seg-ids:
+- "CLP"

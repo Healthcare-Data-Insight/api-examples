@@ -4,7 +4,7 @@ allOf:
 - type: "object"
   properties:
     providerTaxonomy:
-      description: "Provider's specialty information (taxonomy). Populated only for\
-        \ billing, rendering, operating providers.<br/><a href='https://datainsight.health/code-lookup/?type=PROVIDER_TAXONOMY'\
-        \ target='_blank'>View codes and descriptions</a>. EDI: PRV"
+      description: "Provider's specialty information (taxonomy). Populated only for billing, rendering, operating providers. EDI: PRV."
       $ref: "./Code.yaml"
+      x-edi-seg-ids:
+      - "PRV"

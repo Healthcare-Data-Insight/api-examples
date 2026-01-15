@@ -1,12 +1,14 @@
 ---
 type: "object"
-description: "<div class='obj-edi-examples'>Segment: CRC</div>\n"
+description: "Segment: CRC."
 properties:
   categoryCode:
-    description: "Category code. EDI: CRC01"
+    description: "Category code. EDI: CRC01."
     type: "string"
+    x-edi-elt-designators:
+    - "CRC01"
   category:
-    description: "Category code as constant (enum). EDI: CRC01"
+    description: "Category code as constant (enum). EDI: CRC01."
     type: "string"
     enum:
     - "AMBULANCE_CERTIFICATION"
@@ -14,14 +16,26 @@ properties:
     - "VISION_CONTACT_LENSES"
     - "VISION_SPECTACLE_FRAMES"
     - "VISION_SPECTACLE_LENSES"
+    x-edi-elt-designators:
+    - "CRC01"
   yesOrNoCondition:
-    description: "Yes or no condition. EDI: CRC02"
+    description: "Yes or no condition. EDI: CRC02."
     type: "string"
+    x-edi-elt-designators:
+    - "CRC02"
   conditionCodes:
-    description: "Condition codes. EDI: CRC03-CRC07"
+    description: "Condition codes. EDI: CRC03, CRC04, CRC05, CRC06, CRC07."
     type: "array"
     items:
       type: "string"
+    x-edi-elt-designators:
+    - "CRC03"
+    - "CRC04"
+    - "CRC05"
+    - "CRC06"
+    - "CRC07"
 required:
 - "categoryCode"
 - "yesOrNoCondition"
+x-edi-seg-ids:
+- "CRC"

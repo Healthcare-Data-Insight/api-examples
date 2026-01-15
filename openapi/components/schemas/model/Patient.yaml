@@ -2,7 +2,7 @@
 type: "object"
 properties:
   relationshipType:
-    description: "Relationship type. EDI: SBR02, PAT01"
+    description: "Relationship type. EDI: SBR02, PAT01."
     type: "string"
     enum:
     - "CADAVER_DONOR"
@@ -14,17 +14,28 @@ properties:
     - "SELF"
     - "SPOUSE"
     - "UNKNOWN"
+    x-edi-elt-designators:
+    - "SBR02"
+    - "PAT01"
   person:
-    description: "Person. EDI: NM1"
+    description: "Person. EDI: NM1."
     $ref: "./PersonWithDemographic.yaml"
+    x-edi-seg-ids:
+    - "NM1"
   deathDate:
-    description: "Death date. EDI: PAT06"
+    description: "Death date. EDI: PAT06."
     type: "string"
     format: "date"
+    x-edi-elt-designators:
+    - "PAT06"
   weight:
-    description: "Patient weight in pounds. EDI: PAT08"
+    description: "Patient weight in pounds. EDI: PAT08."
     type: "number"
     format: "float"
+    x-edi-elt-designators:
+    - "PAT08"
   pregnancyIndicator:
-    description: "Pregnancy indicator. EDI: PAT09"
+    description: "Pregnancy indicator. EDI: PAT09."
     type: "string"
+    x-edi-elt-designators:
+    - "PAT09"

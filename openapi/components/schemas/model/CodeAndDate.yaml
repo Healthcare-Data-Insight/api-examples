@@ -4,8 +4,10 @@ allOf:
 - type: "object"
   properties:
     occurrenceDate:
-      description: "Occurrence date. EDI: HI01-4"
+      description: "Occurrence date. EDI: HI01-4."
       type: "string"
       format: "date"
+      x-edi-elt-designators:
+      - "HI01-4"
   required:
   - "occurrenceDate"

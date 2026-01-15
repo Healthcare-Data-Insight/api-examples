@@ -2,22 +2,36 @@
 type: "object"
 properties:
   name:
-    description: "Name. EDI: N102"
+    description: "Name. EDI: N102."
     type: "string"
+    x-edi-elt-designators:
+    - "N102"
   identifierQualifierCode:
-    description: "Identifier qualifier code. EDI: REF01"
+    description: "Identifier qualifier code. EDI: REF01."
     type: "string"
+    x-edi-elt-designators:
+    - "REF01"
   identifierType:
-    description: "Identifier type. EDI: REF01"
+    description: "Identifier type. EDI: REF01."
     type: "string"
+    x-edi-elt-designators:
+    - "REF01"
   identifier:
-    description: "Identifier. EDI: REF02"
+    description: "Identifier. EDI: REF02."
     type: "string"
+    x-edi-elt-designators:
+    - "REF02"
   date:
-    description: "Effective date. EDI: DTP03 *007"
+    description: "Effective date. EDI: DTP03 *007."
     type: "string"
     format: "date"
+    x-edi-elt-designators:
+    - "DTP03"
+    x-edi-qualifiers:
+    - "007"
   dateTo:
-    description: "End date. EDI: DTP03"
+    description: "End date. EDI: DTP03."
     type: "string"
     format: "date"
+    x-edi-elt-designators:
+    - "DTP03"

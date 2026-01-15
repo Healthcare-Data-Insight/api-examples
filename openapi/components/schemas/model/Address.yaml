@@ -2,20 +2,32 @@
 type: "object"
 properties:
   line:
-    description: "Line. EDI: N301"
+    description: "Line. EDI: N301."
     type: "string"
+    x-edi-elt-designators:
+    - "N301"
   line2:
-    description: "Line2. EDI: N302"
+    description: "Line2. EDI: N302."
     type: "string"
+    x-edi-elt-designators:
+    - "N302"
   city:
-    description: "City. EDI: N401"
+    description: "City. EDI: N401."
     type: "string"
+    x-edi-elt-designators:
+    - "N401"
   stateCode:
-    description: "State code. EDI: N402"
+    description: "State code. EDI: N402."
     type: "string"
+    x-edi-elt-designators:
+    - "N402"
   zipCode:
-    description: "Zip code. EDI: N403"
+    description: "Zip code. EDI: N403."
     type: "string"
+    x-edi-elt-designators:
+    - "N403"
   countryCode:
-    description: "Country code. EDI: N404"
+    description: "Country code. EDI: N404."
     type: "string"
+    x-edi-elt-designators:
+    - "N404"

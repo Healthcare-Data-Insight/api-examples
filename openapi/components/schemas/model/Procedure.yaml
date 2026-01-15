@@ -2,11 +2,16 @@
 allOf:
 - $ref: "./Code.yaml"
 - type: "object"
-  description: "<div class='obj-desc'>Procedure code with description and optional\
-    \ modifiers</div>\n<div class='obj-edi-examples'>Segment: HI,SV1,SV2,SV3,SVC</div>\n"
+  description: "Procedure code with description and optional modifiers. Segment: HI, SV3, SVC, SV2, SV1."
   properties:
     modifiers:
-      description: "Modifiers"
+      description: "Modifiers."
       type: "array"
       items:
         $ref: "./Code.yaml"
+  x-edi-seg-ids:
+  - "HI"
+  - "SV3"
+  - "SVC"
+  - "SV2"
+  - "SV1"

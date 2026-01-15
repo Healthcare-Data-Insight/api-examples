@@ -1,166 +1,262 @@
 ---
 type: "object"
-description: "<div class='obj-edi-examples'>Loop: 2300, Segment: CLM <a class='file-example-link'\
-  \ href='https://github.com/Healthcare-Data-Insight/api-examples/tree/main/converted_files/837/837D-all-fields.json'\
-  \ target='_blank'>JSON Example</a></div>\n"
+description: "Loop: 2300; Segment: CLM."
 properties:
   id:
-    description: "Unique payment identifier assigned by the converter"
+    description: "Unique payment identifier assigned by the converter."
     type: "string"
   objectType:
-    description: "Type of this object, set to 'CLAIM'"
+    description: "Type of this object, set to 'CLAIM'."
     type: "string"
   patientControlNumber:
-    description: "Identifier used to track a claim from creation by the health care\
-      \ provider through payment. EDI: CLM01"
+    description: "Identifier used to track a claim from creation by the health care provider through payment. EDI: CLM01."
     type: "string"
+    x-edi-elt-designators:
+    - "CLM01"
   chargeAmount:
-    description: "Charge amount. EDI: CLM02"
+    description: "Charge amount. EDI: CLM02."
     type: "number"
     format: "float"
+    x-edi-elt-designators:
+    - "CLM02"
   patientPaidAmount:
-    description: "Patient paid amount. EDI: AMT02 *F5"
+    description: "Patient paid amount. EDI: AMT02 *F5."
     type: "number"
     format: "float"
+    x-edi-elt-designators:
+    - "AMT02"
+    x-edi-qualifiers:
+    - "F5"
   facilityCode:
-    description: "Place of service code (professional/dental) or UB facility code\
-      \ (institutional) from the original claim<br/><a href='https://datainsight.health/code-lookup/?type=FACILITY_TYPE'\
-      \ target='_blank'>View codes and descriptions</a>. EDI: CLM05-1"
+    description: "Place of service code (professional/dental) or UB facility code (institutional) from the original claim. EDI: CLM05-1."
     $ref: "./Code.yaml"
+    x-edi-elt-designators:
+    - "CLM05-1"
   frequencyCode:
-    description: "Frequency code<br/><a href='https://datainsight.health/code-lookup/?type=frequency_code'\
-      \ target='_blank'>View codes and descriptions</a>. EDI: CLM05-3"
+    description: "Frequency code. EDI: CLM05-3."
     $ref: "./Code.yaml"
+    x-edi-elt-designators:
+    - "CLM05-3"
   serviceDateFrom:
-    description: "The earliest service date from service lines"
+    description: "The earliest service date from service lines."
     type: "string"
     format: "date"
   serviceDateTo:
-    description: "The latest service date from service lines"
+    description: "The latest service date from service lines."
     type: "string"
     format: "date"
   subscriber:
-    description: "The insured (subscriber). EDI: Loop: 2000B"
+    description: "The insured (subscriber). EDI Loop: 2000B."
     $ref: "./Subscriber.yaml"
+    x-edi-loop-id: "2000B"
   patient:
-    description: "Patient if different from the the insured (subscriber). EDI: Loop:\
-      \ 2110CA"
+    description: "Patient if different from the the insured (subscriber). EDI Loop: 2110CA."
     $ref: "./Patient.yaml"
+    x-edi-loop-id: "2110CA"
   otherSubscribers:
-    description: "Other subscribers and their payer's information. EDI: Loop: 2320"
+    description: "Other subscribers and their payer's information. EDI Loop: 2320."
     type: "array"
     items:
       $ref: "./OtherSubscriber.yaml"
+    x-edi-loop-id: "2320"
   serviceLines:
-    description: "Service lines. EDI: Loop: 2400"
+    description: "Service lines. EDI Loop: 2400."
     type: "array"
     items:
       $ref: "./DentLine.yaml"
+    x-edi-loop-id: "2400"
   transaction:
-    description: "Parent EDI transaction for this object. EDI: ST"
+    description: "Parent EDI transaction for this object. EDI: ST."
     $ref: "./Transaction837.yaml"
+    x-edi-seg-ids:
+    - "ST"
   providerSignatureIndicator:
-    description: "Provider signature indicator. EDI: CLM06"
+    description: "Provider signature indicator. EDI: CLM06."
     type: "string"
+    x-edi-elt-designators:
+    - "CLM06"
   assignmentParticipationCode:
-    description: "Assignment participation code. EDI: CLM07"
+    description: "Assignment participation code. EDI: CLM07."
     type: "string"
+    x-edi-elt-designators:
+    - "CLM07"
   assignmentCertificationIndicator:
-    description: "Assignment certification indicator. EDI: CLM08"
+    description: "Assignment certification indicator. EDI: CLM08."
     type: "string"
+    x-edi-elt-designators:
+    - "CLM08"
   releaseOfInformationCode:
-    description: "Release of information code. EDI: CLM09"
+    description: "Release of information code. EDI: CLM09."
     type: "string"
+    x-edi-elt-designators:
+    - "CLM09"
   relatedCause:
-    description: "Related cause. EDI: CLM11"
+    description: "Related cause. EDI: CLM11."
     $ref: "./RelatedCauseInfo.yaml"
+    x-edi-elt-designators:
+    - "CLM11"
   specialProgramCode:
-    description: "Special program code. EDI: CLM12"
+    description: "Special program code. EDI: CLM12."
     type: "string"
+    x-edi-elt-designators:
+    - "CLM12"
   delayReasonCode:
-    description: "Delay reason code. EDI: CLM20"
+    description: "Delay reason code. EDI: CLM20."
     type: "string"
+    x-edi-elt-designators:
+    - "CLM20"
   serviceAuthorizationExceptionCode:
-    description: "Service authorization exception code. EDI: REF02 *4N"
+    description: "Service authorization exception code. EDI: REF02 *4N."
     type: "string"
+    x-edi-elt-designators:
+    - "REF02"
+    x-edi-qualifiers:
+    - "4N"
   referralNumber:
-    description: "Referral number. EDI: REF02 *9F"
+    description: "Referral number. EDI: REF02 *9F."
     type: "string"
+    x-edi-elt-designators:
+    - "REF02"
+    x-edi-qualifiers:
+    - "9F"
   priorAuthorizationNumber:
-    description: "Prior authorization number. EDI: REF02 *G1"
+    description: "Prior authorization number. EDI: REF02 *G1."
     type: "string"
+    x-edi-elt-designators:
+    - "REF02"
+    x-edi-qualifiers:
+    - "G1"
   originalReferenceNumber:
-    description: "Original reference number. EDI: REF02 *F8"
+    description: "Original reference number. EDI: REF02 *F8."
     type: "string"
+    x-edi-elt-designators:
+    - "REF02"
+    x-edi-qualifiers:
+    - "F8"
   repricedReferenceNumber:
-    description: "Repriced reference number. EDI: REF02 *9A"
+    description: "Repriced reference number. EDI: REF02 *9A."
     type: "string"
+    x-edi-elt-designators:
+    - "REF02"
+    x-edi-qualifiers:
+    - "9A"
   adjustedRepricedReferenceNumber:
-    description: "Adjusted repriced reference number. EDI: REF02 *9C"
+    description: "Adjusted repriced reference number. EDI: REF02 *9C."
     type: "string"
+    x-edi-elt-designators:
+    - "REF02"
+    x-edi-qualifiers:
+    - "9C"
   clearinghouseTraceNumber:
-    description: "Clearinghouse trace number. EDI: REF02 *D9"
+    description: "Clearinghouse trace number. EDI: REF02 *D9."
     type: "string"
+    x-edi-elt-designators:
+    - "REF02"
+    x-edi-qualifiers:
+    - "D9"
   medicalRecordNumber:
-    description: "Medical record number. EDI: REF02 *EA"
+    description: "Medical record number. EDI: REF02 *EA."
     type: "string"
+    x-edi-elt-designators:
+    - "REF02"
+    x-edi-qualifiers:
+    - "EA"
   demonstrationProjectIdentifier:
-    description: "Demonstration project identifier. EDI: REF02 *P4"
+    description: "Demonstration project identifier. EDI: REF02 *P4."
     type: "string"
+    x-edi-elt-designators:
+    - "REF02"
+    x-edi-qualifiers:
+    - "P4"
   accidentDate:
-    description: "Accident date. EDI: DTP03 *439"
+    description: "Accident date. EDI: DTP03 *439."
     type: "string"
     format: "date"
+    x-edi-elt-designators:
+    - "DTP03"
+    x-edi-qualifiers:
+    - "439"
   orthodonticBandingDate:
-    description: "Orthodontic banding date. EDI: DTP03 *452"
+    description: "Orthodontic banding date. EDI: DTP03 *452."
     type: "string"
     format: "date"
+    x-edi-elt-designators:
+    - "DTP03"
+    x-edi-qualifiers:
+    - "452"
   repricerReceivedDate:
-    description: "Repricer received date. EDI: DTP03 *050"
+    description: "Repricer received date. EDI: DTP03 *050."
     type: "string"
     format: "date"
+    x-edi-elt-designators:
+    - "DTP03"
+    x-edi-qualifiers:
+    - "050"
   orthodonticInfo:
-    description: "Orthodontic info"
+    description: "Orthodontic info."
     $ref: "./OrthodonticInfo.yaml"
   toothStatuses:
-    description: "Tooth statuses"
+    description: "Tooth statuses."
     type: "array"
     items:
       $ref: "./ToothStatus.yaml"
   predeterminationOfBenefitsIdentifier:
-    description: "Predetermination of benefits identifier. EDI: REF02 *G3"
+    description: "Predetermination of benefits identifier. EDI: REF02 *G3."
     type: "string"
+    x-edi-elt-designators:
+    - "REF02"
+    x-edi-qualifiers:
+    - "G3"
   fixedFormatRecords:
-    description: "Fixed format records. EDI: K301"
+    description: "Fixed format records. EDI: K301."
     type: "array"
     items:
       type: "string"
+    x-edi-elt-designators:
+    - "K301"
   claimNote:
-    description: "Free-form comments or instructions. All note segments are concatenated\
-      \ together into this field.. EDI: NTE02"
+    description: "Free-form comments or instructions. All note segments are concatenated together into this field. EDI: NTE02."
     type: "string"
+    x-edi-elt-designators:
+    - "NTE02"
   billingProvider:
-    description: "Billing provider. EDI: NM1 *85"
+    description: "Billing provider. EDI: NM1 *85."
     $ref: "./Provider.yaml"
+    x-edi-seg-ids:
+    - "NM1"
+    x-edi-qualifiers:
+    - "85"
   payToAddress:
-    description: "Pay to address. EDI: NM1 *87"
+    description: "Pay to address. EDI: NM1 *87."
     $ref: "./Party.yaml"
+    x-edi-seg-ids:
+    - "NM1"
+    x-edi-qualifiers:
+    - "87"
   payToPlan:
-    description: "Pay-to plan for subrogation claims. EDI: NM1 *PE"
+    description: "Pay-to plan for subrogation claims. EDI: NM1 *PE."
     $ref: "./Party.yaml"
+    x-edi-seg-ids:
+    - "NM1"
+    x-edi-qualifiers:
+    - "PE"
   providers:
-    description: "Providers for this claim, except for the billing provider"
+    description: "Providers for this claim, except for the billing provider."
     type: "array"
     items:
       $ref: "./Provider.yaml"
   attachments:
-    description: "Attachments. EDI: PWK"
+    description: "Attachments. EDI: PWK."
     type: "array"
     items:
       $ref: "./Attachment.yaml"
+    x-edi-seg-ids:
+    - "PWK"
   contractInfo:
-    description: "Contract info. EDI: CN1"
+    description: "Contract info. EDI: CN1."
     $ref: "./ContractInfo.yaml"
+    x-edi-seg-ids:
+    - "CN1"
 required:
 - "patientControlNumber"
 - "chargeAmount"
@@ -170,3 +266,7 @@ required:
 - "assignmentParticipationCode"
 - "assignmentCertificationIndicator"
 - "releaseOfInformationCode"
+x-edi-loop-ids:
+- "2300"
+x-edi-seg-ids:
+- "CLM"

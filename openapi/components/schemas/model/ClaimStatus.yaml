@@ -1,67 +1,102 @@
 ---
 type: "object"
-description: "<div class='obj-desc'>Status of a single claim. Also contains patient,\
-  \ provider and receiver information.</div>\n<div class='obj-edi-examples'>Loop:\
-  \ 2200D <a class='file-example-link' href='https://github.com/Healthcare-Data-Insight/api-examples/tree/main/converted_files/277/277CA-all-fields.json'\
-  \ target='_blank'>JSON Example</a> <a class='file-example-link' href='https://datainsight.health/edi/277/277ca-all-fields/'\
-  \ target='_blank'>Interactive Example</a></div>\n"
+description: "Status of a single claim. Also contains patient, provider and receiver information. Loop: 2200D."
 properties:
   id:
-    description: "Unique payment identifier assigned by the converter"
+    description: "Unique payment identifier assigned by the converter."
     type: "string"
   objectType:
-    description: "Type of this object, always set to 'CLAIM_STATUS'"
+    description: "Type of this object, always set to 'CLAIM_STATUS'."
     type: "string"
   patient:
-    description: "The insured (subscriber) or patient as stated on 837 claim. EDI:\
-      \ NM1 *QC<br/>Loop: 2100D"
+    description: "The insured (subscriber) or patient as stated on 837 claim. EDI: NM1 *QC; Loop: 2100D."
     $ref: "./PartyIdName.yaml"
+    x-edi-loop-id: "2100D"
+    x-edi-seg-ids:
+    - "NM1"
+    x-edi-qualifiers:
+    - "QC"
   patientControlNumber:
-    description: "Patient control number. EDI: TRN02"
+    description: "Patient control number. EDI: TRN02."
     type: "string"
+    x-edi-elt-designators:
+    - "TRN02"
   statusInfos:
-    description: "Status infos"
+    description: "Status infos."
     type: "array"
     items:
       $ref: "./StatusInfo.yaml"
   payerClaimControlNumber:
-    description: "Payer claim control number. EDI: REF02 *1K"
+    description: "Payer claim control number. EDI: REF02 *1K."
     type: "string"
+    x-edi-elt-designators:
+    - "REF02"
+    x-edi-qualifiers:
+    - "1K"
   clearinghouseTraceNumber:
-    description: "Clearinghouse trace number. EDI: REF02 *D9"
+    description: "Clearinghouse trace number. EDI: REF02 *D9."
     type: "string"
+    x-edi-elt-designators:
+    - "REF02"
+    x-edi-qualifiers:
+    - "D9"
   billTypeCode:
-    description: "Bill type code. EDI: REF02 *BLT"
+    description: "Bill type code. EDI: REF02 *BLT."
     type: "string"
+    x-edi-elt-designators:
+    - "REF02"
+    x-edi-qualifiers:
+    - "BLT"
   serviceDateFrom:
-    description: "Service date for professional or statement date for institutional.\
-      \ EDI: DTP03 *472"
+    description: "Service date for professional or statement date for institutional. EDI: DTP03 *472."
     type: "string"
     format: "date"
+    x-edi-elt-designators:
+    - "DTP03"
+    x-edi-qualifiers:
+    - "472"
   serviceDateTo:
-    description: "The end date of the service or statement date period. Set to 'serviceDateFrom'\
-      \ if the period is a single date. EDI: DTP03 *472"
+    description: "The end date of the service or statement date period. Set to 'serviceDateFrom' if the period is a single date. EDI: DTP03 *472."
     type: "string"
     format: "date"
+    x-edi-elt-designators:
+    - "DTP03"
+    x-edi-qualifiers:
+    - "472"
   receiver:
-    description: "The Receiver is the entity that expects the response from the Source.\
-      \ Can be a provider, a provider group, a claims clearinghouse, etc.. EDI: NM1\
-      \ *40<br/>Loop: 2000B"
+    description: "The Receiver is the entity that expects the response from the Source. Can be a provider, a provider group, a claims clearinghouse, etc. EDI: NM1 *40; Loop: 2000B."
     $ref: "./PartyIdName.yaml"
+    x-edi-loop-id: "2000B"
+    x-edi-seg-ids:
+    - "NM1"
+    x-edi-qualifiers:
+    - "40"
   receiverBatchStatus:
-    description: "Receiver batch status. EDI: Loop: 2200B"
+    description: "Receiver batch status. EDI Loop: 2200B."
     $ref: "./BatchStatus.yaml"
+    x-edi-loop-id: "2200B"
   provider:
-    description: "Billing provider for 277CA. EDI: NM1 *85<br/>Loop: 2100C"
+    description: "Billing provider for 277CA. EDI: NM1 *85; Loop: 2100C."
     $ref: "./PartyIdName.yaml"
+    x-edi-loop-id: "2100C"
+    x-edi-seg-ids:
+    - "NM1"
+    x-edi-qualifiers:
+    - "85"
   providerBatchStatus:
-    description: "Provider batch status. EDI: Loop: 2200C"
+    description: "Provider batch status. EDI Loop: 2200C."
     $ref: "./BatchStatus.yaml"
+    x-edi-loop-id: "2200C"
   lineStatuses:
-    description: "Rejected service lines. EDI: Loop: 2220D"
+    description: "Rejected service lines. EDI Loop: 2220D."
     type: "array"
     items:
       $ref: "./ServiceLineStatus.yaml"
+    x-edi-loop-id: "2220D"
   transaction:
-    description: "Parent EDI transaction for this object. EDI: ST"
+    description: "Parent EDI transaction for this object. EDI: ST."
     $ref: "./Transaction277.yaml"
+    x-edi-seg-ids:
+    - "ST"
+x-edi-loop-ids:
+- "2200D"

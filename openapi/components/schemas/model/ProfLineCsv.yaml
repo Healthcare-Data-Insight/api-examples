@@ -1,146 +1,273 @@
 ---
 type: "object"
-description: "<div class='obj-edi-examples'>Loop: 2400</div>\n"
+description: "Loop: 2400."
 properties:
   controlNumber:
-    description: "Control number. EDI: REF02 *6R"
+    description: "Control number. EDI: REF02 *6R."
     type: "string"
+    x-edi-elt-designators:
+    - "REF02"
+    x-edi-qualifiers:
+    - "6R"
   procedure:
-    description: "Procedure<br/><a href='https://datainsight.health/code-lookup/?type=PROCEDURE'\
-      \ target='_blank'>View codes and descriptions</a>. EDI: SV101 *HC, SV101 *AD,\
-      \ SV101 *WK, SV101 *IV"
+    description: "Procedure. EDI: SV101 *HC, SV101 *AD, SV101 *WK, SV101 *IV."
     $ref: "./Procedure.yaml"
+    x-edi-elt-designators:
+    - "SV101"
+    x-edi-qualifiers:
+    - "HC"
+    - "AD"
+    - "WK"
+    - "IV"
   chargeAmount:
-    description: "Charge amount. EDI: SV102"
+    description: "Charge amount. EDI: SV102."
     type: "number"
     format: "float"
+    x-edi-elt-designators:
+    - "SV102"
   unitType:
-    description: "Unit type. EDI: SV103"
+    description: "Unit type. EDI: SV103."
     type: "string"
+    x-edi-elt-designators:
+    - "SV103"
   unitCount:
-    description: "Unit count. EDI: SV104"
+    description: "Unit count. EDI: SV104."
     type: "number"
     format: "float"
+    x-edi-elt-designators:
+    - "SV104"
   placeOfService:
-    description: "Place of service. EDI: SV105"
+    description: "Place of service. EDI: SV105."
     type: "string"
+    x-edi-elt-designators:
+    - "SV105"
   placeOfServiceCode:
-    description: "Place of service code. EDI: SV105"
+    description: "Place of service code. EDI: SV105."
     type: "string"
+    x-edi-elt-designators:
+    - "SV105"
   diagPointers:
-    description: "Diag pointers. EDI: SV107"
+    description: "Diag pointers. EDI: SV107."
     type: "array"
     items:
       format: "int32"
       type: "integer"
+    x-edi-elt-designators:
+    - "SV107"
   emergencyIndicator:
-    description: "Emergency indicator. EDI: SV109"
+    description: "Emergency indicator. EDI: SV109."
     type: "string"
+    x-edi-elt-designators:
+    - "SV109"
   epsdtIndicator:
-    description: "Epsdt indicator. EDI: SV111"
+    description: "Epsdt indicator. EDI: SV111."
     type: "string"
+    x-edi-elt-designators:
+    - "SV111"
   familyPlanningIndicator:
-    description: "Family planning indicator. EDI: SV112"
+    description: "Family planning indicator. EDI: SV112."
     type: "string"
+    x-edi-elt-designators:
+    - "SV112"
   copayStatusCode:
-    description: "Copay status code. EDI: SV115"
+    description: "Copay status code. EDI: SV115."
     type: "string"
+    x-edi-elt-designators:
+    - "SV115"
   serviceDateFrom:
-    description: "Service period start date. EDI: DTP03 *472, DTP03 *150"
+    description: "Service period start date. EDI: DTP03 *472, DTP03 *150."
     type: "string"
     format: "date"
+    x-edi-elt-designators:
+    - "DTP03"
+    x-edi-qualifiers:
+    - "472"
+    - "150"
   serviceDateTo:
-    description: "Service period end date. If not provided in EDI (single day), it\
-      \ is set to 'serviceDateFrom'. EDI: DTP03 *151"
+    description: "Service period end date. If not provided in EDI (single day), it is set to 'serviceDateFrom'. EDI: DTP03 *151."
     type: "string"
     format: "date"
+    x-edi-elt-designators:
+    - "DTP03"
+    x-edi-qualifiers:
+    - "151"
   prescriptionDate:
-    description: "Prescription date. EDI: DTP03 *471"
+    description: "Prescription date. EDI: DTP03 *471."
     type: "string"
     format: "date"
+    x-edi-elt-designators:
+    - "DTP03"
+    x-edi-qualifiers:
+    - "471"
   beginTherapyDate:
-    description: "Begin therapy date. EDI: DTP03 *463"
+    description: "Begin therapy date. EDI: DTP03 *463."
     type: "string"
     format: "date"
+    x-edi-elt-designators:
+    - "DTP03"
+    x-edi-qualifiers:
+    - "463"
   lastSeenDate:
-    description: "Last seen date. EDI: DTP03 *304"
+    description: "Last seen date. EDI: DTP03 *304."
     type: "string"
     format: "date"
+    x-edi-elt-designators:
+    - "DTP03"
+    x-edi-qualifiers:
+    - "304"
   testPerformedDate:
-    description: "Test performed date. EDI: DTP03 *738, DTP03 *739"
+    description: "Test performed date. EDI: DTP03 *738, DTP03 *739."
     type: "string"
     format: "date"
+    x-edi-elt-designators:
+    - "DTP03"
+    x-edi-qualifiers:
+    - "738"
+    - "739"
   lastXRayDate:
-    description: "Last xray date. EDI: DTP03 *455"
+    description: "Last xray date. EDI: DTP03 *455."
     type: "string"
     format: "date"
+    x-edi-elt-designators:
+    - "DTP03"
+    x-edi-qualifiers:
+    - "455"
   initialTreatmentDate:
-    description: "Initial treatment date. EDI: DTP03 *454"
+    description: "Initial treatment date. EDI: DTP03 *454."
     type: "string"
     format: "date"
+    x-edi-elt-designators:
+    - "DTP03"
+    x-edi-qualifiers:
+    - "454"
   priorAuthorization:
-    description: "Prior authorization. EDI: REF02 *G1"
+    description: "Prior authorization. EDI: REF02 *G1."
     type: "string"
+    x-edi-elt-designators:
+    - "REF02"
+    x-edi-qualifiers:
+    - "G1"
   referralNumber:
-    description: "Referral number. EDI: REF02 *9F"
+    description: "Referral number. EDI: REF02 *9F."
     type: "string"
+    x-edi-elt-designators:
+    - "REF02"
+    x-edi-qualifiers:
+    - "9F"
   repricedReferenceNumber:
-    description: "Repriced reference number. EDI: REF02 *9B"
+    description: "Repriced reference number. EDI: REF02 *9B."
     type: "string"
+    x-edi-elt-designators:
+    - "REF02"
+    x-edi-qualifiers:
+    - "9B"
   adjustedRepricedReferenceNumber:
-    description: "Adjusted repriced reference number. EDI: REF02 *9D"
+    description: "Adjusted repriced reference number. EDI: REF02 *9D."
     type: "string"
+    x-edi-elt-designators:
+    - "REF02"
+    x-edi-qualifiers:
+    - "9D"
   note:
-    description: "Note. EDI: NTE02 *ADD, NTE02 *DCP"
+    description: "Note. EDI: NTE02 *ADD, NTE02 *DCP."
     type: "string"
+    x-edi-elt-designators:
+    - "NTE02"
   thirdPartyNote:
-    description: "Third party note. EDI: NTE02"
+    description: "Third party note. EDI: NTE02."
     type: "string"
+    x-edi-elt-designators:
+    - "NTE02"
   drug:
-    description: "Drug<br/><a href='https://datainsight.health/code-lookup/?type=DRUG'\
-      \ target='_blank'>View codes and descriptions</a>. EDI: LIN03"
+    description: "Drug. EDI: LIN03."
     $ref: "./Code.yaml"
+    x-edi-elt-designators:
+    - "LIN03"
   drugQuantity:
-    description: "Drug quantity. EDI: CTP04"
+    description: "Drug quantity. EDI: CTP04."
     type: "number"
     format: "float"
+    x-edi-elt-designators:
+    - "CTP04"
   drugUnitType:
-    description: "Drug unit type. EDI: CTP05-1"
+    description: "Drug unit type. EDI: CTP05-1."
     type: "string"
+    x-edi-elt-designators:
+    - "CTP05-1"
   prescriptionNumber:
-    description: "Prescription number. EDI: REF02 *XZ"
+    description: "Prescription number. EDI: REF02 *XZ."
     type: "string"
+    x-edi-elt-designators:
+    - "REF02"
+    x-edi-qualifiers:
+    - "XZ"
   attachments:
-    description: "Attachments. EDI: PWK"
+    description: "Attachments. EDI: PWK."
     type: "array"
     items:
       $ref: "./Attachment.yaml"
+    x-edi-seg-ids:
+    - "PWK"
   renderingProvider:
-    description: "Rendering provider. EDI: NM1 *82"
+    description: "Rendering provider. EDI: NM1 *82."
     $ref: "./Provider.yaml"
+    x-edi-seg-ids:
+    - "NM1"
+    x-edi-qualifiers:
+    - "82"
   purchasedServiceProvider:
-    description: "Purchased service provider. EDI: NM1 *QB"
+    description: "Purchased service provider. EDI: NM1 *QB."
     $ref: "./Party.yaml"
+    x-edi-seg-ids:
+    - "NM1"
+    x-edi-qualifiers:
+    - "QB"
   serviceFacility:
-    description: "Service facility. EDI: NM1 *77"
+    description: "Service facility. EDI: NM1 *77."
     $ref: "./Party.yaml"
+    x-edi-seg-ids:
+    - "NM1"
+    x-edi-qualifiers:
+    - "77"
   supervisingProvider:
-    description: "Supervising provider. EDI: NM1 *DQ"
+    description: "Supervising provider. EDI: NM1 *DQ."
     $ref: "./Party.yaml"
+    x-edi-seg-ids:
+    - "NM1"
+    x-edi-qualifiers:
+    - "DQ"
   referringProvider:
-    description: "Referring provider. EDI: NM1 *DN"
+    description: "Referring provider. EDI: NM1 *DN."
     $ref: "./Party.yaml"
+    x-edi-seg-ids:
+    - "NM1"
+    x-edi-qualifiers:
+    - "DN"
   orderingProvider:
-    description: "Ordering provider. EDI: NM1 *DK"
+    description: "Ordering provider. EDI: NM1 *DK."
     $ref: "./Party.yaml"
+    x-edi-seg-ids:
+    - "NM1"
+    x-edi-qualifiers:
+    - "DK"
   ambulancePickUp:
-    description: "Ambulance pick up. EDI: NM1 *PW"
+    description: "Ambulance pick up. EDI: NM1 *PW."
     $ref: "./Party.yaml"
+    x-edi-seg-ids:
+    - "NM1"
+    x-edi-qualifiers:
+    - "PW"
   ambulanceDropOff:
-    description: "Ambulance drop off. EDI: NM1 *45"
+    description: "Ambulance drop off. EDI: NM1 *45."
     $ref: "./Party.yaml"
+    x-edi-seg-ids:
+    - "NM1"
+    x-edi-qualifiers:
+    - "45"
 required:
 - "chargeAmount"
 - "unitType"
 - "unitCount"
 - "diagPointers"
+x-edi-loop-ids:
+- "2400"

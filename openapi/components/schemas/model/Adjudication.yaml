@@ -1,35 +1,58 @@
 ---
 type: "object"
-description: "<div class='obj-edi-examples'>Loop: 2430, Segment: SVD</div>\n"
+description: "Loop: 2430; Segment: SVD."
 properties:
   payerIdentifier:
-    description: "Payer identifier. EDI: SVD01"
+    description: "Payer identifier. EDI: SVD01."
     type: "string"
+    x-edi-elt-designators:
+    - "SVD01"
   paidAmount:
-    description: "Paid amount. EDI: SVD02"
+    description: "Paid amount. EDI: SVD02."
     type: "number"
     format: "float"
+    x-edi-elt-designators:
+    - "SVD02"
   unitCount:
-    description: "Unit count. EDI: SVD05"
+    description: "Unit count. EDI: SVD05."
     type: "number"
     format: "float"
+    x-edi-elt-designators:
+    - "SVD05"
   bundledOrUnbundledLineNumber:
-    description: "Bundled or unbundled line number. EDI: SVD06"
+    description: "Bundled or unbundled line number. EDI: SVD06."
     type: "integer"
+    x-edi-elt-designators:
+    - "SVD06"
   procedure:
-    description: "Procedure<br/><a href='https://datainsight.health/code-lookup/?type=PROCEDURE'\
-      \ target='_blank'>View codes and descriptions</a>. EDI: SVD03"
+    description: "Procedure. EDI: SVD03."
     $ref: "./Procedure.yaml"
+    x-edi-elt-designators:
+    - "SVD03"
   adjustments:
-    description: "Line adjustments. EDI: CAS"
+    description: "Line adjustments. EDI: CAS."
     type: "array"
     items:
       $ref: "./Adjustment.yaml"
+    x-edi-seg-ids:
+    - "CAS"
   adjudicationOrPaymentDate:
-    description: "Adjudication or payment date. EDI: DTP03 *573"
+    description: "Adjudication or payment date. EDI: DTP03 *573."
     type: "string"
     format: "date"
+    x-edi-elt-designators:
+    - "DTP03"
+    x-edi-qualifiers:
+    - "573"
   remainingPatientLiabilityAmount:
-    description: "Remaining patient liability amount. EDI: AMT02 *EAF"
+    description: "Remaining patient liability amount. EDI: AMT02 *EAF."
     type: "number"
     format: "float"
+    x-edi-elt-designators:
+    - "AMT02"
+    x-edi-qualifiers:
+    - "EAF"
+x-edi-loop-ids:
+- "2430"
+x-edi-seg-ids:
+- "SVD"

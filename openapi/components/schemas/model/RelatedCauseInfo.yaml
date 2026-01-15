@@ -2,14 +2,22 @@
 type: "object"
 properties:
   relatedCauseCode:
-    description: "Related cause code. EDI: CLM11-1"
+    description: "Related cause code. EDI: CLM11-1."
     type: "string"
+    x-edi-elt-designators:
+    - "CLM11-1"
   relatedCauseCode2:
-    description: "Related cause code2. EDI: CLM11-2"
+    description: "Related cause code2. EDI: CLM11-2."
     type: "string"
+    x-edi-elt-designators:
+    - "CLM11-2"
   stateCode:
-    description: "State code. EDI: CLM11-4"
+    description: "State code. EDI: CLM11-4."
     type: "string"
+    x-edi-elt-designators:
+    - "CLM11-4"
   countryCode:
-    description: "Country code. EDI: CLM11-5"
+    description: "Country code. EDI: CLM11-5."
     type: "string"
+    x-edi-elt-designators:
+    - "CLM11-5"

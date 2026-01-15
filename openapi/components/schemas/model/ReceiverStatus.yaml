@@ -1,23 +1,26 @@
 ---
 type: "object"
-description: "<div class='obj-desc'>Status of claims at a transaction level. This\
-  \ object is returned only if all claims have been rejected and no individual claim\
-  \ statuses have been provided.</div>\n"
+description: "Status of claims at a transaction level. This object is returned only if all claims have been rejected and no individual claim statuses have been provided."
 properties:
   id:
-    description: "Unique payment identifier assigned by the converter"
+    description: "Unique payment identifier assigned by the converter."
     type: "string"
   objectType:
-    description: "Type of this object, set to 'PROVIDER_STATUS' or 'RECEIVER_STATUS'"
+    description: "Type of this object, set to 'PROVIDER_STATUS' or 'RECEIVER_STATUS'."
     type: "string"
   batchStatus:
-    description: "Batch status"
+    description: "Batch status."
     $ref: "./BatchStatus.yaml"
   transaction:
-    description: "Parent EDI transaction for this object. EDI: ST"
+    description: "Parent EDI transaction for this object. EDI: ST."
     $ref: "./Transaction277.yaml"
+    x-edi-seg-ids:
+    - "ST"
   receiver:
-    description: "The Receiver is the entity that expects the response from the Source.\
-      \ Can be a provider, a provider group, a claims clearinghouse, etc.. EDI: NM1\
-      \ *40<br/>Loop: 2000B"
+    description: "The Receiver is the entity that expects the response from the Source. Can be a provider, a provider group, a claims clearinghouse, etc. EDI: NM1 *40; Loop: 2000B."
     $ref: "./PartyIdName.yaml"
+    x-edi-loop-id: "2000B"
+    x-edi-seg-ids:
+    - "NM1"
+    x-edi-qualifiers:
+    - "40"

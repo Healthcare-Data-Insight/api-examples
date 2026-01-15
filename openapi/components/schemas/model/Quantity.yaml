@@ -1,20 +1,25 @@
 ---
 type: "object"
-description: "<div class='obj-edi-examples'>Segment: QTY</div>\n"
+description: "Segment: QTY."
 properties:
   qualifierCode:
-    description: "Code specifying the type of quantity (quantity qualifier code).\
-      \ EDI: QTY01"
+    description: "Code specifying the type of quantity (quantity qualifier code). EDI: QTY01."
     type: "string"
+    x-edi-elt-designators:
+    - "QTY01"
   type:
-    description: "Type of quantity; qualifier code translated to a mnemonic string\
-      \ constant (enum)<br/><a href='https://datainsight.health/code-lookup/?type=X12_QUANTITY_QUALIFIER_CODE'\
-      \ target='_blank'>View codes and descriptions</a>. EDI: QTY01"
+    description: "Type of quantity; qualifier code translated to a mnemonic string constant (enum). EDI: QTY01."
     type: "string"
+    x-edi-elt-designators:
+    - "QTY01"
   quantity:
-    description: "Quantity. EDI: QTY02"
+    description: "Quantity. EDI: QTY02."
     type: "number"
     format: "float"
+    x-edi-elt-designators:
+    - "QTY02"
 required:
 - "qualifierCode"
 - "quantity"
+x-edi-seg-ids:
+- "QTY"

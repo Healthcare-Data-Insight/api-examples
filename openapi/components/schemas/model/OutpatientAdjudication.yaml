@@ -1,28 +1,35 @@
 ---
 type: "object"
-description: "<div class='obj-desc'>Contains Remittance Advice Remark Codes at the\
-  \ claim level and/or Medicare or Medicaid-specific amounts for outpatient claims</div>\n\
-  <div class='obj-edi-examples'>Segment: MOA</div>\n"
+description: "Contains Remittance Advice Remark Codes at the claim level and/or Medicare or Medicaid-specific amounts for outpatient claims. Segment: MOA."
 properties:
   reimbursementRate:
-    description: "Reimbursement rate. EDI: MOA01"
+    description: "Reimbursement rate. EDI: MOA01."
     type: "number"
     format: "float"
+    x-edi-elt-designators:
+    - "MOA01"
   hcpcsPayableAmount:
-    description: "Claim HCPCS Payable Amount. EDI: MOA02"
+    description: "Claim HCPCS Payable Amount. EDI: MOA02."
     type: "number"
     format: "float"
+    x-edi-elt-designators:
+    - "MOA02"
   esrdPaymentAmount:
-    description: "Esrd payment amount. EDI: MOA08"
+    description: "Esrd payment amount. EDI: MOA08."
     type: "number"
     format: "float"
+    x-edi-elt-designators:
+    - "MOA08"
   nonPayableProfessionalComponentAmount:
-    description: "Nonpayable Professional Component Amount. EDI: MOA09"
+    description: "Nonpayable Professional Component Amount. EDI: MOA09."
     type: "number"
     format: "float"
+    x-edi-elt-designators:
+    - "MOA09"
   remarks:
-    description: "Remark codes<br/><a href='https://datainsight.health/code-lookup/?type=REMITTANCE_ADVICE_REMARK_CODE'\
-      \ target='_blank'>View codes and descriptions</a>"
+    description: "Remark codes."
     type: "array"
     items:
       $ref: "./Code.yaml"
+x-edi-seg-ids:
+- "MOA"

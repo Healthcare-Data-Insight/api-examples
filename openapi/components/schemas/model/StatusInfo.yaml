@@ -1,28 +1,42 @@
 ---
 type: "object"
-description: "<div class='obj-desc'>Status Information</div>\n<div class='obj-edi-examples'>Segment:\
-  \ STC</div>\n"
+description: "Status Information. Segment: STC."
 properties:
   effectiveDate:
-    description: "Effective date. EDI: STC02"
+    description: "Effective date. EDI: STC02."
     type: "string"
     format: "date"
+    x-edi-elt-designators:
+    - "STC02"
   actionCode:
-    description: "Action code. EDI: STC03"
+    description: "Action code. EDI: STC03."
     type: "string"
+    x-edi-elt-designators:
+    - "STC03"
   actionType:
-    description: "Status action type (action code translated to constant/enum), ACCEPT\
-      \ or REJECT. EDI: STC03"
+    description: "Status action type (action code translated to constant/enum), ACCEPT or REJECT. EDI: STC03."
     type: "string"
+    x-edi-elt-designators:
+    - "STC03"
   chargeAmount:
-    description: "Charge amount. EDI: STC04"
+    description: "Charge amount. EDI: STC04."
     type: "number"
     format: "float"
+    x-edi-elt-designators:
+    - "STC04"
   statusCodeInfos:
-    description: "Status code infos. EDI: STC01,STC10,STC11"
+    description: "Status code infos. EDI: STC01, STC10, STC11."
     type: "array"
     items:
       $ref: "./StatusCodeInfo.yaml"
+    x-edi-elt-designators:
+    - "STC01"
+    - "STC10"
+    - "STC11"
   message:
-    description: "Message. EDI: STC12"
+    description: "Message. EDI: STC12."
     type: "string"
+    x-edi-elt-designators:
+    - "STC12"
+x-edi-seg-ids:
+- "STC"

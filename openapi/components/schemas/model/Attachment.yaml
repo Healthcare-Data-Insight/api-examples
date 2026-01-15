@@ -1,16 +1,24 @@
 ---
 type: "object"
-description: "<div class='obj-edi-examples'>Segment: PWK</div>\n"
+description: "Segment: PWK."
 properties:
   reportTypeCode:
-    description: "Report type code. EDI: PWK01"
+    description: "Report type code. EDI: PWK01."
     type: "string"
+    x-edi-elt-designators:
+    - "PWK01"
   reportTransmissionCode:
-    description: "Report transmission code. EDI: PWK02"
+    description: "Report transmission code. EDI: PWK02."
     type: "string"
+    x-edi-elt-designators:
+    - "PWK02"
   controlNumber:
-    description: "Control number. EDI: PWK06"
+    description: "Control number. EDI: PWK06."
     type: "string"
+    x-edi-elt-designators:
+    - "PWK06"
 required:
 - "reportTypeCode"
 - "reportTransmissionCode"
+x-edi-seg-ids:
+- "PWK"

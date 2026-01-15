@@ -1,0 +1,32 @@
+---
+type: "object"
+description: "Loop: 2200."
+properties:
+  typeCode:
+    description: "Type code. EDI: DSB01."
+    type: "string"
+    x-edi-elt-designators:
+    - "DSB01"
+  diagnosisCode:
+    description: "Diagnosis code. EDI: DSB08."
+    type: "string"
+    x-edi-elt-designators:
+    - "DSB08"
+  dateFrom:
+    description: "Date from. EDI: DTP03 *360."
+    type: "string"
+    format: "date"
+    x-edi-elt-designators:
+    - "DTP03"
+    x-edi-qualifiers:
+    - "360"
+  dateTo:
+    description: "Date to. EDI: DTP03 *361."
+    type: "string"
+    format: "date"
+    x-edi-elt-designators:
+    - "DTP03"
+    x-edi-qualifiers:
+    - "361"
+x-edi-loop-ids:
+- "2200"

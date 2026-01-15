@@ -1,22 +1,28 @@
 ---
 type: "object"
-description: "<div class='obj-edi-examples'>Segment: DTP</div>\n"
+description: "Segment: DTP."
 properties:
   qualifierCode:
-    description: "Code specifying type of date or time. EDI: DTP01"
+    description: "Code specifying type of date or time. EDI: DTP01."
     type: "string"
+    x-edi-elt-designators:
+    - "DTP01"
   type:
-    description: "Type of date; qualifier code translated to a mnemonic string constant\
-      \ (enum)<br/><a href='https://datainsight.health/code-lookup/?type=X12_DATE_TIME_QUALIFIER_CODE'\
-      \ target='_blank'>View codes and descriptions</a>. EDI: DTP01"
+    description: "Type of date; qualifier code translated to a mnemonic string constant (enum). EDI: DTP01."
     type: "string"
+    x-edi-elt-designators:
+    - "DTP01"
   date:
-    description: "The date value or the first date of the date range ('RD8' qualifier).\
-      \ EDI: DTP03"
+    description: "The date value or the first date of the date range ('RD8' qualifier). EDI: DTP03."
     type: "string"
     format: "date"
+    x-edi-elt-designators:
+    - "DTP03"
   dateTo:
-    description: "The second date if the value is the date range ('RD8' qualifier),\
-      \ otherwise null. EDI: DTP03"
+    description: "The second date if the value is the date range ('RD8' qualifier), otherwise null. EDI: DTP03."
     type: "string"
     format: "date"
+    x-edi-elt-designators:
+    - "DTP03"
+x-edi-seg-ids:
+- "DTP"

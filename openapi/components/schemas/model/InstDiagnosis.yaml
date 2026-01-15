@@ -4,5 +4,7 @@ allOf:
 - type: "object"
   properties:
     presentOnAdmissionIndicator:
-      description: "Present on admission indicator. EDI: HI01-9"
+      description: "Present on admission indicator. EDI: HI01-9."
       type: "string"
+      x-edi-elt-designators:
+      - "HI01-9"
