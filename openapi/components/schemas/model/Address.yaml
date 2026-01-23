@@ -31,3 +31,24 @@ properties:
     type: "string"
     x-edi-elt-designators:
     - "N404"
+  locationQualifier:
+    description: "Location qualifier; only used for 834 transaction. Since: v2.14.8. EDI: N405."
+    type: "string"
+    x-edi-elt-designators:
+    - "N405"
+    x-since: "2.14.8"
+  locationIdentifier:
+    description: "Location identifier; only used for 834 transaction. Since: v2.14.8. EDI: N406."
+    type: "string"
+    x-edi-elt-designators:
+    - "N406"
+    x-since: "2.14.8"
+  countrySubdivisionCode:
+    description: "Country subdivision code; only used for 834 transaction. Since: v2.14.8. EDI: N407."
+    type: "string"
+    x-edi-elt-designators:
+    - "N407"
+    x-since: "2.14.8"
+required:
+- "line"
+- "city"

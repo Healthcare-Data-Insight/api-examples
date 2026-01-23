@@ -10,10 +10,19 @@ allOf:
       x-edi-elt-designators:
       - "DMG04"
     ethnicityCode:
-      description: "Ethnicity code. EDI: DMG05."
+      description: "Ethnicity code. Deprecated: Use 'ethnicityCodes' instead. EDI: DMG05."
+      deprecated: true
       type: "string"
       x-edi-elt-designators:
       - "DMG05"
+    ethnicityCodes:
+      description: "Ethnicity codes. Since: v2.14.8. EDI: DMG05."
+      type: "array"
+      items:
+        type: "string"
+      x-edi-elt-designators:
+      - "DMG05"
+      x-since: "2.14.8"
     citizenshipCode:
       description: "Citizenship code. EDI: DMG06."
       type: "string"
@@ -73,10 +82,19 @@ allOf:
       x-edi-elt-designators:
       - "HLH03"
     languageInfo:
-      description: "Language info. EDI: LUI."
+      description: "Language info. Deprecated: Use 'languages' instead. EDI: LUI."
+      deprecated: true
       $ref: "./LanguageInfo.yaml"
       x-edi-seg-ids:
       - "LUI"
+    languages:
+      description: "Languages. Since: v2.14.8. EDI: LUI."
+      type: "array"
+      items:
+        $ref: "./LanguageInfo.yaml"
+      x-edi-seg-ids:
+      - "LUI"
+      x-since: "2.14.8"
   x-edi-loop-ids:
   - "2100A"
   x-edi-seg-ids:

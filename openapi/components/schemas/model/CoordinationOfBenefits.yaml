@@ -17,6 +17,14 @@ properties:
     type: "string"
     x-edi-elt-designators:
     - "COB03"
+  serviceTypeCodes:
+    description: "Service type codes. Since: v2.14.8. EDI: COB04."
+    type: "array"
+    items:
+      type: "string"
+    x-edi-elt-designators:
+    - "COB04"
+    x-since: "2.14.8"
   additionalIdentifiers:
     description: "Additional identifiers. EDI: REF."
     type: "array"

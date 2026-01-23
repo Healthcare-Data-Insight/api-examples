@@ -86,6 +86,18 @@ properties:
     type: "string"
     x-edi-elt-designators:
     - "INS05"
+  medicarePlanCode:
+    description: "Medicare plan code. Since: v2.14.8. EDI: INS06-1."
+    type: "string"
+    x-edi-elt-designators:
+    - "INS06-1"
+    x-since: "2.14.8"
+  medicareEligibilityReasonCode:
+    description: "Medicare eligibility reason code. Since: v2.14.8. EDI: INS06-2."
+    type: "string"
+    x-edi-elt-designators:
+    - "INS06-2"
+    x-since: "2.14.8"
   cobraEventCode:
     description: "Cobra event code. EDI: INS07."
     type: "string"
@@ -106,6 +118,13 @@ properties:
     type: "string"
     x-edi-elt-designators:
     - "INS10"
+  deathDate:
+    description: "Death date. Since: v2.14.8. EDI: INS12."
+    type: "string"
+    format: "date"
+    x-edi-elt-designators:
+    - "INS12"
+    x-since: "2.14.8"
   confidentialityCode:
     description: "Confidentiality code. EDI: INS13."
     type: "string"

@@ -11,33 +11,6 @@ properties:
   fileName:
     description: "Converted X12 EDI file name."
     type: "string"
-  transactionControlNumber:
-    description: "Transaction control number. EDI: ST02."
-    type: "string"
-    x-edi-elt-designators:
-    - "ST02"
-  transactionSetPurposeCode:
-    description: "Transaction set purpose code. EDI: BGN01."
-    type: "string"
-    x-edi-elt-designators:
-    - "BGN01"
-  originatorApplicationTransactionId:
-    description: "Originator application transaction id. EDI: BGN02."
-    type: "string"
-    x-edi-elt-designators:
-    - "BGN02"
-  transactionCreationDateTime:
-    description: "Transaction creation date time. EDI: BGN03, BGN04."
-    type: "string"
-    format: "date-time"
-    x-edi-elt-designators:
-    - "BGN03"
-    - "BGN04"
-  transactionActionCode:
-    description: "Transaction action code. EDI: BGN08."
-    type: "string"
-    x-edi-elt-designators:
-    - "BGN08"
   fileEffectiveDates:
     description: "File effective dates. EDI: DTP."
     type: "array"
@@ -89,6 +62,18 @@ properties:
     type: "string"
     x-edi-elt-designators:
     - "INS05"
+  medicarePlanCode:
+    description: "Medicare plan code. Since: v2.14.8. EDI: INS06-1."
+    type: "string"
+    x-edi-elt-designators:
+    - "INS06-1"
+    x-since: "2.14.8"
+  medicareEligibilityReasonCode:
+    description: "Medicare eligibility reason code. Since: v2.14.8. EDI: INS06-2."
+    type: "string"
+    x-edi-elt-designators:
+    - "INS06-2"
+    x-since: "2.14.8"
   cobraEventCode:
     description: "Cobra event code. EDI: INS07."
     type: "string"
@@ -109,6 +94,13 @@ properties:
     type: "string"
     x-edi-elt-designators:
     - "INS10"
+  deathDate:
+    description: "Death date. Since: v2.14.8. EDI: INS12."
+    type: "string"
+    format: "date"
+    x-edi-elt-designators:
+    - "INS12"
+    x-since: "2.14.8"
   confidentialityCode:
     description: "Confidentiality code. EDI: INS13."
     type: "string"
