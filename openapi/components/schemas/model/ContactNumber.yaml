@@ -3,8 +3,20 @@ type: "object"
 description: "Segment: PER."
 properties:
   type:
-    description: "Type of contact number, such as PHONE, EMAIL, URL. EDI: PER03, PER05, PER07."
+    description: "Type of contact number. EDI: PER03, PER05, PER07."
     type: "string"
+    enum:
+    - "ALTERNATE_PHONE"
+    - "BEEPER"
+    - "CELL_PHONE"
+    - "EMAIL"
+    - "EXTENSION"
+    - "FAX"
+    - "HOME_PHONE"
+    - "PHONE"
+    - "UNKNOWN"
+    - "URL"
+    - "WORK_PHONE"
     x-edi-elt-designators:
     - "PER03"
     - "PER05"
