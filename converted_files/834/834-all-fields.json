@@ -1,6 +1,6 @@
 [
  {
-  "id" : "690141e87c0fb18b0499f8f2",
+  "id" : "6976904de9a75feb64854c04",
   "objectType" : "MEMBER_COVERAGE",
   "masterPolicyNumber" : "MasterPolicyNumber",
   "sponsor" : {
@@ -37,10 +37,15 @@
   "maintenanceTypeCode" : "021",
   "maintenanceReasonCode" : "20",
   "benefitStatusCode" : "A",
+  "medicarePlanCode" : "A",
+  "medicareEligibilityReasonCode" : "0",
   "cobraEventCode" : "CE",
   "employmentStatusCode" : "FT",
-  "studentStatusCode" : "ST",
+  "studentStatusCode" : "N",
   "handicapIndicator" : "Y",
+  "deathDate" : "2025-01-02",
+  "confidentialityCode" : "U",
+  "birthSequenceNumber" : 2,
   "identifier" : "member1",
   "groupOrPolicyNumber" : "group1",
   "supplementalIdentifiers" : [ {
@@ -64,7 +69,10 @@
       "line" : "1715 SOUTHWIND AVENUE",
       "city" : "ANYTOWN",
       "stateCode" : "PA",
-      "zipCode" : "171110000"
+      "zipCode" : "171110000",
+      "countryCode" : "US",
+      "locationQualifier" : "CY",
+      "locationIdentifier" : "ADAMS"
     },
     "contacts" : [ {
       "functionCode" : "IP",
@@ -77,7 +85,8 @@
       } ]
     } ],
     "maritalStatusCode" : "M",
-    "ethnicityCode" : "B",
+    "ethnicityCode" : "R5",
+    "ethnicityCodes" : [ "R5", "A" ],
     "citizenshipCode" : "1",
     "employmentClassCodes" : [ "04", "06", "07", "09", "10", "11" ],
     "wageFrequencyCode" : "1",
@@ -87,7 +96,21 @@
     "salaryGradeCode" : "SalaryGrade",
     "healthRelatedCode" : "X",
     "height" : 74,
-    "weight" : 210
+    "weight" : 210,
+    "languageInfo" : {
+      "codeQualifier" : "LE",
+      "code" : "SPA",
+      "languageUseIndicator" : "6"
+    },
+    "languages" : [ {
+      "codeQualifier" : "LE",
+      "code" : "SPA",
+      "languageUseIndicator" : "6"
+    }, {
+      "codeQualifier" : "LE",
+      "code" : "SPA",
+      "languageUseIndicator" : "7"
+    } ]
   },
   "incorrectMember" : {
     "entityRole" : "PRIOR_INCORRECT_INSURED",
@@ -100,6 +123,7 @@
     "gender" : "MALE",
     "maritalStatusCode" : "M",
     "ethnicityCode" : "B",
+    "ethnicityCodes" : [ "B" ],
     "citizenshipCode" : "1"
   },
   "contractAmounts" : [ {
@@ -319,6 +343,7 @@
       "payerResponsibilitySequence" : "PRIMARY",
       "groupOrPolicyNumber" : "XYZ123",
       "coordinationOfBenefitsCode" : "1",
+      "serviceTypeCodes" : [ "1", "35" ],
       "additionalIdentifiers" : [ {
         "qualifierCode" : "6P",
         "type" : "GROUP_NUMBER",
@@ -376,7 +401,7 @@
     "priorCoverageMonthCount" : "0"
   } ],
   "transaction" : {
-    "id" : "690141e87c0fb18b0499f8e3",
+    "id" : "6976904de9a75feb64854bf5",
     "controlNumber" : "1",
     "transactionType" : "MEMBER_COVERAGE",
     "purposeCode" : "00",
@@ -408,14 +433,14 @@
     "fileInfo" : {
       "name" : "834-all-fields.edi",
       "url" : "file:/edi-samples/edi_files/834/834-all-fields.edi",
-      "lastModifiedDateTime" : "2025-06-06T13:56:04.446-04:00",
+      "lastModifiedDateTime" : "2026-01-15T21:26:06.556-05:00",
       "fileType" : "EDI"
     },
     "creationDateTime" : "1998-05-20T12:00:00"
   }
 }
 , {
-  "id" : "690141e87c0fb18b0499f949",
+  "id" : "6976904de9a75feb64854c5d",
   "objectType" : "MEMBER_COVERAGE",
   "masterPolicyNumber" : "MasterPolicyNumber",
   "sponsor" : {
@@ -507,7 +532,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "690141e87c0fb18b0499f8e3",
+    "id" : "6976904de9a75feb64854bf5",
     "controlNumber" : "1",
     "transactionType" : "MEMBER_COVERAGE",
     "purposeCode" : "00",
@@ -539,14 +564,14 @@
     "fileInfo" : {
       "name" : "834-all-fields.edi",
       "url" : "file:/edi-samples/edi_files/834/834-all-fields.edi",
-      "lastModifiedDateTime" : "2025-06-06T13:56:04.446-04:00",
+      "lastModifiedDateTime" : "2026-01-15T21:26:06.556-05:00",
       "fileType" : "EDI"
     },
     "creationDateTime" : "1998-05-20T12:00:00"
   }
 }
 , {
-  "id" : "690141e87c0fb18b0499f962",
+  "id" : "6976904de9a75feb64854c76",
   "objectType" : "MEMBER_COVERAGE",
   "masterPolicyNumber" : "MasterPolicyNumbe2",
   "sponsor" : {
@@ -613,7 +638,7 @@
     "amount" : 100.00
   } ],
   "transaction" : {
-    "id" : "690141e87c0fb18b0499f95a",
+    "id" : "6976904de9a75feb64854c6e",
     "controlNumber" : "2",
     "transactionType" : "MEMBER_COVERAGE",
     "purposeCode" : "00",
@@ -626,7 +651,7 @@
     "fileInfo" : {
       "name" : "834-all-fields.edi",
       "url" : "file:/edi-samples/edi_files/834/834-all-fields.edi",
-      "lastModifiedDateTime" : "2025-06-06T13:56:04.446-04:00",
+      "lastModifiedDateTime" : "2026-01-15T21:26:06.556-05:00",
       "fileType" : "EDI"
     },
     "creationDateTime" : "1998-05-20T12:00:00"

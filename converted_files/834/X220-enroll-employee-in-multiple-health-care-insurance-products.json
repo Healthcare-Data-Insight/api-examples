@@ -1,6 +1,6 @@
 [
  {
-  "id" : "690141e87c0fb18b0499f8c9",
+  "id" : "6976904de9a75feb64854bdb",
   "objectType" : "MEMBER_COVERAGE",
   "sponsor" : {
     "entityRole" : "PLAN_SPONSOR",
@@ -41,7 +41,9 @@
       "line2" : "APT 3G",
       "city" : "CAMP HILL",
       "stateCode" : "PA",
-      "zipCode" : "17011"
+      "zipCode" : "17011",
+      "locationQualifier" : "CY",
+      "locationIdentifier" : "CUMBERLAND"
     },
     "contacts" : [ {
       "functionCode" : "IP",
@@ -83,7 +85,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "690141e87c0fb18b0499f8c2",
+    "id" : "6976904de9a75feb64854bd4",
     "controlNumber" : "12345",
     "transactionType" : "MEMBER_COVERAGE",
     "purposeCode" : "00",
