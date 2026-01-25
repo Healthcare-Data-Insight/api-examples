@@ -6,7 +6,7 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 5.0"
+      version = "~> 6.21.0"
     }
   }
 }
@@ -49,7 +49,7 @@ resource "aws_lambda_function" "edi_converter_function" {
   memory_size                    = "512"
   package_type                   = "Zip"
   role                           = aws_iam_role.lambda_exec_role.arn
-  runtime                        = "java21"
+  runtime                        = "java25"
 
   # Increase timeout if processing large files
   timeout = "180"
