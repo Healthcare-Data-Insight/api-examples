@@ -1,6 +1,26 @@
 ---
 type: "object"
 description: "Segment: LUI."
-properties: {}
+properties:
+  codeQualifier:
+    description: "Code qualifier. EDI: LUI01."
+    type: "string"
+    x-edi-elt-designators:
+    - "LUI01"
+  code:
+    description: "Code. EDI: LUI02."
+    type: "string"
+    x-edi-elt-designators:
+    - "LUI02"
+  languageDescription:
+    description: "Language description. EDI: LUI03."
+    type: "string"
+    x-edi-elt-designators:
+    - "LUI03"
+  languageUseIndicator:
+    description: "Language use indicator. EDI: LUI04."
+    type: "string"
+    x-edi-elt-designators:
+    - "LUI04"
 x-edi-seg-ids:
 - "LUI"
