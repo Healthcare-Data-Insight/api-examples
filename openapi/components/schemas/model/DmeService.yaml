@@ -1,0 +1,53 @@
+---
+type: "object"
+description: "Durable medical equipment rental and purchase price information. Segment: SV5."
+properties:
+  durationUnitType:
+    description: "Unit of measurement for the length of medical treatment. EDI: SV502."
+    type: "string"
+    x-edi-elt-designators:
+    - "SV502"
+  lengthOfMedicalNecessity:
+    description: "Length of medical treatment required. EDI: SV503."
+    type: "number"
+    format: "float"
+    x-edi-elt-designators:
+    - "SV503"
+  rentalPrice:
+    description: "Rental price. EDI: SV504."
+    type: "number"
+    format: "float"
+    x-edi-elt-designators:
+    - "SV504"
+  purchasePrice:
+    description: "Purchase price. EDI: SV505."
+    type: "number"
+    format: "float"
+    x-edi-elt-designators:
+    - "SV505"
+  billingFrequencyCode:
+    description: "Frequency at which the rental equipment is billed. EDI: SV506."
+    type: "string"
+    enum:
+    - "1"
+    - "4"
+    - "6"
+    x-edi-elt-designators:
+    - "SV506"
+  billingFrequency:
+    description: "Frequency at which the rental equipment is billed, expressed as enum (string constant). EDI: SV506."
+    type: "string"
+    enum:
+    - "DAILY"
+    - "MONTHLY"
+    - "WEEKLY"
+    x-edi-elt-designators:
+    - "SV506"
+required:
+- "durationUnitType"
+- "lengthOfMedicalNecessity"
+- "rentalPrice"
+- "purchasePrice"
+- "billingFrequencyCode"
+x-edi-seg-ids:
+- "SV5"

@@ -10,6 +10,9 @@ properties:
   entityType:
     description: "Entity type. EDI: NM102."
     type: "string"
+    enum:
+    - "BUSINESS"
+    - "INDIVIDUAL"
     x-edi-elt-designators:
     - "NM102"
   identificationType:

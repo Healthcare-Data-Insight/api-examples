@@ -12,7 +12,10 @@ properties:
     type: "string"
     enum:
     - "AMBULANCE_CERTIFICATION"
+    - "DME_CERTIFICATION"
     - "EPSDT_MUTUALLY_DEFINED"
+    - "FUNCTIONAL_LIMITATIONS"
+    - "HOSPICE"
     - "VISION_CONTACT_LENSES"
     - "VISION_SPECTACLE_FRAMES"
     - "VISION_SPECTACLE_LENSES"
@@ -21,6 +24,9 @@ properties:
   yesOrNoCondition:
     description: "Yes or no condition. EDI: CRC02."
     type: "string"
+    enum:
+    - "Y"
+    - "N"
     x-edi-elt-designators:
     - "CRC02"
   conditionCodes:

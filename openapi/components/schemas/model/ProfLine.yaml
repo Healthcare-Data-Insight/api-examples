@@ -76,6 +76,17 @@ properties:
     - "AMT02"
     x-edi-qualifiers:
     - "T"
+  purchasedServiceProviderIdentifier:
+    description: "Purchased service provider identifier. EDI: PS101."
+    type: "string"
+    x-edi-elt-designators:
+    - "PS101"
+  purchasedServiceChargeAmount:
+    description: "Purchased service charge amount. EDI: PS102."
+    type: "number"
+    format: "float"
+    x-edi-elt-designators:
+    - "PS102"
   serviceDateFrom:
     description: "Service date from. EDI: DTP03 *472."
     type: "string"
@@ -218,6 +229,11 @@ properties:
     - "AD"
     - "WK"
     - "IV"
+  dmeService:
+    description: "Dme service. EDI: SV5."
+    $ref: "./DmeService.yaml"
+    x-edi-seg-ids:
+    - "SV5"
   attachments:
     description: "Attachments. EDI: PWK."
     type: "array"
@@ -247,6 +263,13 @@ properties:
       $ref: "./ConditionsIndicator.yaml"
     x-edi-seg-ids:
     - "CRC"
+  measurements:
+    description: "Measurements. EDI: MEA."
+    type: "array"
+    items:
+      $ref: "./Measurement.yaml"
+    x-edi-seg-ids:
+    - "MEA"
   providers:
     description: "Providers for this service line."
     type: "array"
@@ -274,6 +297,13 @@ properties:
       type: "string"
     x-edi-elt-designators:
     - "K301"
+  forms:
+    description: "Forms. EDI: LQ."
+    type: "array"
+    items:
+      $ref: "./FormResponse.yaml"
+    x-edi-seg-ids:
+    - "LQ"
   diagPointers:
     description: "Diagnosis pointers. Each pointer is an index of the diagnosis in the 'diags' array at the claim level. EDI: SV107."
     type: "array"

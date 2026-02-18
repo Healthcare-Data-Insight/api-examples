@@ -16,6 +16,7 @@ properties:
     - "SIX"
     - "TEN"
     - "TERTIARY"
+    - "UNCONFIRMED"
     - "UNKNOWN"
     x-edi-elt-designators:
     - "SBR01"
@@ -45,6 +46,11 @@ properties:
     type: "string"
     x-edi-elt-designators:
     - "SBR04"
+  coordinationOfBenefitsCode:
+    description: "Coordination of benefits code, post-adjudicated claims only. EDI: SBR06."
+    type: "string"
+    x-edi-elt-designators:
+    - "SBR06"
   claimFilingIndicatorCode:
     description: "Claim filing indicator code. EDI: SBR09."
     type: "string"
@@ -145,6 +151,14 @@ properties:
     - "NM1"
     x-edi-qualifiers:
     - "PR"
+  patient:
+    description: "Patient's information; post-adjudicated claims only. EDI: NM1 *QC; Loop: 2330C."
+    $ref: "./Party.yaml"
+    x-edi-loop-id: "2330C"
+    x-edi-seg-ids:
+    - "NM1"
+    x-edi-qualifiers:
+    - "QC"
   providers:
     description: "Other payer's providers. EDI: NM1."
     type: "array"

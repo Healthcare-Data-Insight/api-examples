@@ -7,14 +7,20 @@ properties:
     type: "string"
     x-edi-elt-designators:
     - "CR301"
+  durationUnitType:
+    description: "Unit of measurement for the length of time for DME equipment. EDI: CR302."
+    type: "string"
+    x-edi-elt-designators:
+    - "CR302"
   duration:
-    description: "Length of time DME equipment is needed, in months. EDI: CR303."
+    description: "Length of time DME equipment is needed. EDI: CR303."
     type: "number"
     format: "float"
     x-edi-elt-designators:
     - "CR303"
 required:
 - "certificationTypeCode"
+- "durationUnitType"
 - "duration"
 x-edi-seg-ids:
 - "CR3"

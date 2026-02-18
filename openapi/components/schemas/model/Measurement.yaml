@@ -1,0 +1,40 @@
+---
+type: "object"
+description: "Measurement, such as a test result for dialysis service lines or a patient's height for DMERC. Segment: MEA."
+properties:
+  categoryCode:
+    description: "Code identifying the broad category to which a measurement applies. EDI: MEA01."
+    type: "string"
+    enum:
+    - "OG"
+    - "TR"
+    x-edi-elt-designators:
+    - "MEA01"
+  qualifierCode:
+    description: "Code identifying a specific product or process characteristic to which a measurement applies. EDI: MEA02."
+    type: "string"
+    x-edi-elt-designators:
+    - "MEA02"
+  type:
+    description: "Code identifying a specific product or process characteristic to which a measurement applies, expressed as enum (string constant). EDI: MEA02."
+    type: "string"
+    enum:
+    - "CREATININE"
+    - "EPOETIN"
+    - "HEIGHT"
+    - "HEMATOCRIT"
+    - "HEMOGLOBIN"
+    x-edi-elt-designators:
+    - "MEA02"
+  value:
+    description: "The value of the measurement. EDI: MEA03."
+    type: "number"
+    format: "float"
+    x-edi-elt-designators:
+    - "MEA03"
+required:
+- "categoryCode"
+- "qualifierCode"
+- "value"
+x-edi-seg-ids:
+- "MEA"
