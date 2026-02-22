@@ -1,6 +1,6 @@
 [
  {
-  "id" : "694461d5260639adee2d0e4d",
+  "id" : "699a7d145a2a2d0dd2567b24",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26407789",
   "chargeAmount" : 79.04,
@@ -375,7 +375,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "694461d5260639adee2d0e08",
+    "id" : "699a7d145a2a2d0dd2567adf",
     "controlNumber" : "0024",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -388,7 +388,7 @@
     "implementationConventionReference" : "005010X222",
     "fileInfo" : {
       "name" : "cob-payera-payerb.dat",
-      "url" : "file:/edi-samples/edi_files/837/cob-payera-payerb.dat",
+      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/837/cob-payera-payerb.dat",
       "lastModifiedDateTime" : "2024-01-31T20:06:16.189-05:00",
       "fileType" : "EDI"
     },

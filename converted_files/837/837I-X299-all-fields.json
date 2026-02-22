@@ -1,0 +1,264 @@
+[
+ {
+  "id" : "699a7d145a2a2d0dd2567e6c",
+  "objectType" : "CLAIM",
+  "patientControlNumber" : "26463774",
+  "chargeAmount" : 100.00,
+  "facilityCode" : {
+    "subType" : "FACILITY_TYPE",
+    "code" : "13",
+    "desc" : "Hospital; outpatient"
+  },
+  "placeOfServiceType" : "OUTPATIENT",
+  "frequencyCode" : {
+    "subType" : "FREQUENCY_CODE",
+    "code" : "1",
+    "desc" : "Original claim"
+  },
+  "statementDateFrom" : "2012-02-04",
+  "statementDateTo" : "2012-02-04",
+  "subscriber" : {
+    "payerResponsibilitySequence" : "UNCONFIRMED",
+    "person" : {
+      "entityRole" : "INSURED_SUBSCRIBER",
+      "entityType" : "INDIVIDUAL",
+      "identificationType" : "MEMBER_ID",
+      "identifier" : "JS00111223333",
+      "lastNameOrOrgName" : "SMITH",
+      "firstName" : "JANE",
+      "birthDate" : "1943-05-01",
+      "gender" : "FEMALE",
+      "address" : {
+        "line" : "891 GREENWAY ST",
+        "city" : "MIAMI",
+        "stateCode" : "FL",
+        "zipCode" : "33111"
+      }
+    }
+  },
+  "patient" : {
+    "relationshipType" : "CHILD",
+    "person" : {
+      "entityRole" : "PATIENT",
+      "entityType" : "INDIVIDUAL",
+      "lastNameOrOrgName" : "SMITH",
+      "firstName" : "TED",
+      "birthDate" : "1973-05-01",
+      "gender" : "MALE",
+      "address" : {
+        "line" : "236 N MAIN ST",
+        "city" : "MIAMI",
+        "stateCode" : "FL",
+        "zipCode" : "33413"
+      }
+    }
+  },
+  "otherSubscribers" : [ {
+    "payerResponsibilitySequence" : "PRIMARY",
+    "relationshipType" : "SPOUSE",
+    "groupOrPolicyNumber" : "2222-SJ",
+    "coordinationOfBenefitsCode" : "6",
+    "claimFilingIndicatorCode" : "CI",
+    "insurancePlanType" : "COMMERCIAL",
+    "person" : {
+      "entityRole" : "INSURED_SUBSCRIBER",
+      "entityType" : "INDIVIDUAL",
+      "identificationType" : "MEMBER_ID",
+      "identifier" : "JS00111223333",
+      "lastNameOrOrgName" : "SMITH",
+      "firstName" : "JANE",
+      "address" : {
+        "line" : "236 N MAIN ST",
+        "city" : "MIAMI",
+        "stateCode" : "FL",
+        "zipCode" : "33413"
+      }
+    },
+    "payerPaidAmount" : 75.00,
+    "payerClaimControlNumber" : "20121092600001",
+    "payerAdjudicatedDrg" : "774",
+    "payer" : {
+      "entityRole" : "PAYER",
+      "entityType" : "BUSINESS",
+      "identificationType" : "PAYOR_ID",
+      "identifier" : "59999",
+      "lastNameOrOrgName" : "ABC PLAN"
+    },
+    "patient" : {
+      "entityRole" : "PATIENT",
+      "entityType" : "INDIVIDUAL",
+      "identificationType" : "MEMBER_ID",
+      "identifier" : "JS00111224444",
+      "lastNameOrOrgName" : "SMITH",
+      "firstName" : "TED",
+      "address" : {
+        "line" : "236 N MAIN ST",
+        "city" : "MIAMI",
+        "stateCode" : "PL",
+        "zipCode" : "33413"
+      }
+    }
+  } ],
+  "admissionTypeCode" : "1",
+  "admissionSourceCode" : "9",
+  "patientStatusCode" : "03",
+  "billingProvider" : {
+    "entityRole" : "BILLING_PROVIDER",
+    "entityType" : "BUSINESS",
+    "identificationType" : "NPI",
+    "identifier" : "9876543210",
+    "taxId" : "587654321",
+    "lastNameOrOrgName" : "ABC HOSPITAL",
+    "address" : {
+      "line" : "234 SEAWAY ST",
+      "city" : "MIAMI",
+      "stateCode" : "FL",
+      "zipCode" : "331119998"
+    },
+    "providerTaxonomy" : {
+      "subType" : "PROVIDER_TAXONOMY",
+      "code" : "203B170100Y"
+    }
+  },
+  "providers" : [ {
+    "entityRole" : "ATTENDING",
+    "entityType" : "INDIVIDUAL",
+    "identificationType" : "NPI",
+    "identifier" : "1234567890",
+    "lastNameOrOrgName" : "JONES",
+    "firstName" : "BARNABY"
+  }, {
+    "entityRole" : "SERVICE_FACILITY",
+    "entityType" : "BUSINESS",
+    "identificationType" : "NPI",
+    "identifier" : "9876543210",
+    "lastNameOrOrgName" : "ABC HOSPITAL",
+    "address" : {
+      "line" : "234 SEAWAY ST",
+      "city" : "MIAMI",
+      "stateCode" : "FL",
+      "zipCode" : "331119998"
+    }
+  } ],
+  "diags" : [ {
+    "subType" : "ICD_10_PRINCIPAL",
+    "code" : "F840",
+    "desc" : "Autistic disorder",
+    "formattedCode" : "F84.0",
+    "presentOnAdmissionIndicator" : "U"
+  }, {
+    "subType" : "ICD_10_REASON_FOR_VISIT",
+    "code" : "R110",
+    "desc" : "Nausea",
+    "formattedCode" : "R11.0"
+  }, {
+    "subType" : "ICD_10",
+    "code" : "J151",
+    "desc" : "Pneumonia due to Pseudomonas",
+    "formattedCode" : "J15.1",
+    "presentOnAdmissionIndicator" : "N"
+  }, {
+    "subType" : "ICD_10",
+    "code" : "E119",
+    "desc" : "Type 2 diabetes mellitus without complications",
+    "formattedCode" : "E11.9",
+    "presentOnAdmissionIndicator" : "Y"
+  } ],
+  "serviceLines" : [ {
+    "chargeAmount" : 100.00,
+    "unitType" : "UNIT",
+    "unitCount" : 1,
+    "procedure" : {
+      "subType" : "CPT",
+      "code" : "99213",
+      "desc" : "Office or other outpatient visit for the evaluation and management of an established patient, which requires a medically appropriate history and/or examination and low level of medical decision making. When using total time on the date of the encounter for code selection, 20 minutes must be met or exceeded."
+    },
+    "revenueCode" : {
+      "subType" : "REVENUE_CODE",
+      "code" : "0510",
+      "desc" : "Clinic-General classification"
+    },
+    "adjudications" : [ {
+      "payerIdentifier" : "59999",
+      "paidAmount" : 75.00,
+      "unitCount" : 1.00,
+      "procedure" : {
+        "type" : "PROCEDURE",
+        "subType" : "CPT",
+        "code" : "99213",
+        "desc" : "Office or other outpatient visit for the evaluation and management of an established patient, which requires a medically appropriate history and/or examination and low level of medical decision making. When using total time on the date of the encounter for code selection, 20 minutes must be met or exceeded.",
+        "fullDesc" : "Office or other outpatient visit for the evaluation and management of an established patient, which requires a medically appropriate history and/or examination and low level of medical decision making. When using total time on the date of the encounter for code selection, 20 minutes must be met or exceeded.",
+        "shortDesc" : "OFFICE O/P EST LOW 20 MIN",
+        "startDate" : "1993-01-01",
+        "categories" : [ {
+          "type" : "RBCS_TAXONOMY",
+          "subType" : "RBCS_CATEGORY",
+          "code" : "E",
+          "desc" : "E&M"
+        }, {
+          "type" : "RBCS_TAXONOMY",
+          "subType" : "RBCS_SUB_CATEGORY",
+          "code" : "EV",
+          "desc" : "Office/Outpatient Services"
+        } ]
+      },
+      "adjustments" : [ {
+        "group" : "CONTRACTUAL",
+        "reasonCode" : "45",
+        "reason" : {
+          "subType" : "CARC",
+          "code" : "45",
+          "desc" : "Charge exceeds fee schedule/maximum allowable or contracted/legislated fee arrangement. Usage: This adjustment amount cannot equal the total service or claim charge amount; and must not duplicate provider adjustment amounts (payments and contractual reductions) that have resulted from prior payer(s) adjudication. (Use only with Group Codes PR or CO depending upon liability)"
+        },
+        "amount" : 25.00
+      } ],
+      "adjudicationOrPaymentDate" : "2012-03-14"
+    } ]
+  } ],
+  "transaction" : {
+    "id" : "699a7d145a2a2d0dd2567e34",
+    "controlNumber" : "0021",
+    "transactionType" : "INST",
+    "hierarchicalStructureCode" : "0019",
+    "purposeCode" : "00",
+    "originatorApplicationTransactionId" : "244579",
+    "creationDate" : "2012-03-15",
+    "creationTime" : "10:23:00",
+    "claimOrEncounterIdentifierType" : "REPORTING",
+    "transactionSetIdentifierCode" : "837",
+    "implementationConventionReference" : "005010X299",
+    "fileInfo" : {
+      "name" : "837I-X299-all-fields.dat",
+      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/837/837I-X299-all-fields.dat",
+      "lastModifiedDateTime" : "2026-02-11T13:54:57.176-05:00",
+      "fileType" : "EDI"
+    },
+    "sender" : {
+      "entityRole" : "SUBMITTER",
+      "entityType" : "BUSINESS",
+      "identificationType" : "ETIN",
+      "identifier" : "T0J23",
+      "lastNameOrOrgName" : "AHC PLAN",
+      "contacts" : [ {
+        "functionCode" : "IC",
+        "name" : "IT GROUP",
+        "contactNumbers" : [ {
+          "type" : "PHONE",
+          "number" : "3055552222"
+        }, {
+          "type" : "EXTENSION",
+          "number" : "231"
+        } ]
+      } ]
+    },
+    "receiver" : {
+      "entityRole" : "RECEIVER",
+      "entityType" : "BUSINESS",
+      "identificationType" : "ETIN",
+      "identifier" : "66783JJT",
+      "lastNameOrOrgName" : "REPORTING ENTITY"
+    },
+    "creationDateTime" : "2012-03-15T10:23:00"
+  }
+}
+ ]

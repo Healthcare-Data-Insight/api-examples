@@ -1,6 +1,6 @@
 [
  {
-  "id" : "694461d5260639adee2d0fac",
+  "id" : "699a7d145a2a2d0dd2567cc7",
   "objectType" : "CLAIM",
   "patientControlNumber" : "SMI123",
   "chargeAmount" : 75.00,
@@ -85,7 +85,8 @@
     "chargeAmount" : 75.00,
     "serviceDateFrom" : "2005-03-21",
     "serviceDateTo" : "2005-03-21",
-    "lastCertificationDate" : "2005-03-21",
+    "lastCertificationDate" : "2005-03-25",
+    "certificationRevisionDate" : "2005-03-26",
     "beginTherapyDate" : "2004-03-21",
     "unitType" : "UNIT",
     "unitCount" : 1,
@@ -107,14 +108,39 @@
         "desc" : "The beneficiary has been informed of the purchase and rental options and has elected to rent the item"
       } ]
     },
+    "dmeService" : {
+      "procedure" : {
+        "subType" : "HCPCS",
+        "code" : "A4631"
+      },
+      "durationUnitType" : "DAYS",
+      "lengthOfMedicalNecessity" : 30,
+      "rentalPrice" : 50.00,
+      "purchasePrice" : 5000.00,
+      "billingFrequencyCode" : "4",
+      "billingFrequency" : "MONTHLY"
+    },
     "attachments" : [ {
       "reportTypeCode" : "CT",
       "reportTransmissionCode" : "AD"
     } ],
     "dmeCertification" : {
       "certificationTypeCode" : "I",
+      "durationUnitType" : "MONTH",
       "duration" : 99
     },
+    "conditionsIndicators" : [ {
+      "categoryCode" : "09",
+      "category" : "DME_CERTIFICATION",
+      "yesOrNoCondition" : "N",
+      "conditionCodes" : [ "ZV" ]
+    } ],
+    "measurements" : [ {
+      "categoryCode" : "TR",
+      "qualifierCode" : "HT",
+      "type" : "HEIGHT",
+      "value" : 70
+    } ],
     "providers" : [ {
       "entityRole" : "ORDERING",
       "entityType" : "INDIVIDUAL",
@@ -142,6 +168,32 @@
         "identification" : "M12345"
       } ]
     } ],
+    "forms" : [ {
+      "formTypeCode" : "UT",
+      "formIdentifier" : "02.03B",
+      "responses" : [ {
+        "questionIdentifier" : "1",
+        "yesOrNoResponse" : "Y"
+      }, {
+        "questionIdentifier" : "2",
+        "yesOrNoResponse" : "N"
+      }, {
+        "questionIdentifier" : "3",
+        "yesOrNoResponse" : "N"
+      }, {
+        "questionIdentifier" : "4",
+        "yesOrNoResponse" : "N"
+      }, {
+        "questionIdentifier" : "5",
+        "textResponse" : "8"
+      }, {
+        "questionIdentifier" : "8",
+        "yesOrNoResponse" : "N"
+      }, {
+        "questionIdentifier" : "9",
+        "yesOrNoResponse" : "Y"
+      } ]
+    } ],
     "diagPointers" : [ 1, 2 ],
     "diags" : [ {
       "subType" : "ICD_10_PRINCIPAL",
@@ -156,7 +208,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "694461d5260639adee2d0f7e",
+    "id" : "699a7d145a2a2d0dd2567c92",
     "controlNumber" : "112233",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -169,8 +221,8 @@
     "implementationConventionReference" : "005010X222",
     "fileInfo" : {
       "name" : "wheelchair.dat",
-      "url" : "file:/edi-samples/edi_files/837/wheelchair.dat",
-      "lastModifiedDateTime" : "2024-01-31T20:06:16.19-05:00",
+      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/837/wheelchair.dat",
+      "lastModifiedDateTime" : "2026-02-21T14:40:29.884-05:00",
       "fileType" : "EDI"
     },
     "sender" : {

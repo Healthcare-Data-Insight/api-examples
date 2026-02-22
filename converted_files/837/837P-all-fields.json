@@ -1,6 +1,6 @@
 [
  {
-  "id" : "694461d5260639adee2d1112",
+  "id" : "699a7d145a2a2d0dd2567e31",
   "objectType" : "CLAIM",
   "patientControlNumber" : "36463774",
   "chargeAmount" : 100.00,
@@ -42,7 +42,7 @@
     },
     "deathDate" : "1990-02-01",
     "weight" : 176.00,
-    "pregnancyIndicator" : "N",
+    "pregnancyIndicator" : "Y",
     "payer" : {
       "entityRole" : "PAYER",
       "entityType" : "BUSINESS",
@@ -81,7 +81,7 @@
     },
     "deathDate" : "1997-03-14",
     "weight" : 156.00,
-    "pregnancyIndicator" : "N"
+    "pregnancyIndicator" : "Y"
   },
   "otherSubscribers" : [ {
     "payerResponsibilitySequence" : "PRIMARY",
@@ -323,15 +323,9 @@
   "assignmentParticipationCode" : "A",
   "assignmentCertificationIndicator" : "Y",
   "releaseOfInformationCode" : "Y",
-  "relatedCause" : {
-    "relatedCauseCode" : "OA",
-    "relatedCauseCode2" : "AA",
-    "stateCode" : "FL",
-    "countryCode" : "US"
-  },
   "specialProgramCode" : "05",
   "delayReasonCode" : "4",
-  "serviceAuthorizationExceptionCode" : "ServiceAuthorizationExceptionCode",
+  "serviceAuthorizationExceptionCode" : "7",
   "referralNumber" : "ReferralNum",
   "priorAuthorizationNumber" : "PriorAuth",
   "originalReferenceNumber" : "PayerClaimControlNum",
@@ -347,13 +341,13 @@
   "accidentDate" : "2005-01-08",
   "lastMenstrualPeriodDate" : "2005-01-08",
   "lastXRayDate" : "2005-01-08",
+  "prescriptionDate" : "2005-05-01",
   "disabilityDateFrom" : "2005-06-08",
   "disabilityDateTo" : "2005-06-09",
   "admissionDate" : "2005-05-08",
   "dischargeDate" : "2005-06-08",
   "assumedCareDate" : "2005-06-08",
   "relinquishedCareDate" : "2005-06-08",
-  "propertyCasualtyFirstContactDate" : "2004-10-13",
   "repricerReceivedDate" : "2005-10-30",
   "claimNote" : "SURGERY WAS UNUSUALLY LONG",
   "billingProvider" : {
@@ -515,15 +509,17 @@
     "sourceLineId" : "54321",
     "placeOfServiceType" : "OFFICE",
     "placeOfServiceCode" : "11",
-    "emergencyIndicator" : "N",
-    "epsdtIndicator" : "N",
+    "emergencyIndicator" : "Y",
+    "epsdtIndicator" : "Y",
     "familyPlanningIndicator" : "Y",
-    "copayStatusCode" : "C",
+    "copayStatusCode" : "0",
     "repricedReferenceNumber" : "Repriced",
     "adjustedRepricedReferenceNumber" : "AdjRepriced",
     "priorAuthorization" : "PriorAuthorization",
     "referralNumber" : "ReferralNumber",
     "chargeAmount" : 40.00,
+    "purchasedServiceProviderIdentifier" : "PN222222",
+    "purchasedServiceChargeAmount" : 110.00,
     "serviceDateFrom" : "2005-03-14",
     "serviceDateTo" : "2005-03-25",
     "prescriptionDate" : "2005-01-08",
@@ -534,7 +530,6 @@
     "initialTreatmentDate" : "2005-01-08",
     "unitType" : "UNIT",
     "unitCount" : 1,
-    "ambulancePatientCount" : 2,
     "drug" : {
       "subType" : "NDC",
       "code" : "00002143481",
@@ -571,6 +566,12 @@
       "reportTypeCode" : "CT",
       "reportTransmissionCode" : "AB"
     } ],
+    "measurements" : [ {
+      "categoryCode" : "TR",
+      "qualifierCode" : "R1",
+      "type" : "HEMOGLOBIN",
+      "value" : 113.4
+    } ],
     "providers" : [ {
       "entityRole" : "RENDERING",
       "entityType" : "INDIVIDUAL",
@@ -603,6 +604,30 @@
         "identification" : "12345"
       } ]
     } ],
+    "forms" : [ {
+      "formTypeCode" : "UT",
+      "formIdentifier" : "02.03B",
+      "responses" : [ {
+        "questionIdentifier" : "1",
+        "yesOrNoResponse" : "Y"
+      }, {
+        "questionIdentifier" : "2",
+        "textResponse" : "Our Response"
+      }, {
+        "questionIdentifier" : "3",
+        "dateResponse" : "2025-02-01"
+      }, {
+        "questionIdentifier" : "4",
+        "numberResponse" : 12.5
+      } ]
+    }, {
+      "formTypeCode" : "UT",
+      "formIdentifier" : "FormID",
+      "responses" : [ {
+        "questionIdentifier" : "1",
+        "yesOrNoResponse" : "N"
+      } ]
+    } ],
     "diagPointers" : [ 1, 2 ],
     "diags" : [ {
       "subType" : "ICD_10_PRINCIPAL",
@@ -633,7 +658,7 @@
     } ]
   }, {
     "chargeAmount" : 35.00,
-    "serviceDateFrom" : "2006-10-10",
+    "serviceDateFrom" : "2006-10-03",
     "unitType" : "UNIT",
     "unitCount" : 1,
     "procedure" : {
@@ -685,7 +710,47 @@
           "code" : "TL",
           "desc" : "General Laboratory"
         } ]
-      }
+      },
+      "adjustments" : [ {
+        "group" : "PATIENT_RESPONSIBILITY",
+        "reasonCode" : "1",
+        "reason" : {
+          "subType" : "CARC",
+          "code" : "1",
+          "desc" : "Deductible Amount"
+        },
+        "amount" : 21.89
+      }, {
+        "group" : "PATIENT_RESPONSIBILITY",
+        "reasonCode" : "2",
+        "reason" : {
+          "subType" : "CARC",
+          "code" : "2",
+          "desc" : "Coinsurance Amount"
+        },
+        "amount" : 15.00
+      }, {
+        "group" : "CORRECTION",
+        "reasonCode" : "26",
+        "reason" : {
+          "subType" : "CARC",
+          "code" : "26",
+          "desc" : "Expenses incurred prior to coverage."
+        },
+        "amount" : 55.00,
+        "quantity" : 1
+      }, {
+        "group" : "CORRECTION",
+        "reasonCode" : "90",
+        "reason" : {
+          "subType" : "CARC",
+          "code" : "90",
+          "desc" : "Ingredient cost adjustment. Usage: To be used for pharmaceuticals only."
+        },
+        "amount" : 65.55
+      } ],
+      "adjudicationOrPaymentDate" : "2023-06-03",
+      "remainingPatientLiabilityAmount" : 75.00
     } ],
     "diagPointers" : [ 2 ],
     "diags" : [ {
@@ -696,7 +761,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "694461d5260639adee2d1061",
+    "id" : "699a7d145a2a2d0dd2567d7c",
     "controlNumber" : "0031",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -706,11 +771,11 @@
     "creationTime" : "10:23:00",
     "claimOrEncounterIdentifierType" : "CHARGEABLE",
     "transactionSetIdentifierCode" : "837",
-    "implementationConventionReference" : "005010X222",
+    "implementationConventionReference" : "005010X222A2",
     "fileInfo" : {
       "name" : "837P-all-fields.dat",
-      "url" : "file:/edi-samples/edi_files/837/837P-all-fields.dat",
-      "lastModifiedDateTime" : "2025-10-18T17:33:56.407-04:00",
+      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/837/837P-all-fields.dat",
+      "lastModifiedDateTime" : "2026-02-21T14:46:02.318-05:00",
       "fileType" : "EDI"
     },
     "sender" : {

@@ -1,6 +1,6 @@
 [
  {
-  "id" : "694461d5260639adee2d0fdb",
+  "id" : "699a7d145a2a2d0dd2567cf6",
   "objectType" : "CLAIM",
   "patientControlNumber" : "ABC123-RI",
   "chargeAmount" : 28.75,
@@ -174,7 +174,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "694461d5260639adee2d0faf",
+    "id" : "699a7d145a2a2d0dd2567cca",
     "controlNumber" : "1002",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -187,7 +187,7 @@
     "implementationConventionReference" : "005010X222",
     "fileInfo" : {
       "name" : "ppo-repriced.dat",
-      "url" : "file:/edi-samples/edi_files/837/ppo-repriced.dat",
+      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/837/ppo-repriced.dat",
       "lastModifiedDateTime" : "2024-01-31T20:06:16.189-05:00",
       "fileType" : "EDI"
     },

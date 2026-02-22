@@ -1,6 +1,6 @@
 [
  {
-  "id" : "694461d5260639adee2d0f7b",
+  "id" : "699a7d145a2a2d0dd2567c8d",
   "objectType" : "CLAIM",
   "patientControlNumber" : "153829140",
   "chargeAmount" : 827.00,
@@ -163,7 +163,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "694461d5260639adee2d0f56",
+    "id" : "699a7d145a2a2d0dd2567c66",
     "controlNumber" : "0001",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -176,8 +176,8 @@
     "implementationConventionReference" : "005010X222",
     "fileInfo" : {
       "name" : "anesthesia.dat",
-      "url" : "file:/edi-samples/edi_files/837/anesthesia.dat",
-      "lastModifiedDateTime" : "2024-01-31T20:06:16.188-05:00",
+      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/837/anesthesia.dat",
+      "lastModifiedDateTime" : "2026-02-21T14:42:59.643-05:00",
       "fileType" : "EDI"
     },
     "sender" : {
