@@ -1,6 +1,6 @@
 [
  {
-  "id" : "699a7d145a2a2d0dd25679e1",
+  "id" : "699b6efe8f62cf744b56a2b0",
   "objectType" : "CLAIM",
   "patientControlNumber" : "051068",
   "chargeAmount" : 766.50,
@@ -304,7 +304,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "699a7d145a2a2d0dd256799e",
+    "id" : "699b6efe8f62cf744b56a26d",
     "controlNumber" : "000017712",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -317,7 +317,7 @@
     "implementationConventionReference" : "005010X222",
     "fileInfo" : {
       "name" : "ambulance.dat",
-      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/837/ambulance.dat",
+      "url" : "file:/edi-samples/edi_files/837/ambulance.dat",
       "lastModifiedDateTime" : "2026-02-21T14:36:15.045-05:00",
       "fileType" : "EDI"
     },

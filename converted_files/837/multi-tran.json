@@ -1,6 +1,6 @@
 [
  {
-  "id" : "699a7d145a2a2d0dd2567bfd",
+  "id" : "699b6efe8f62cf744b56a4cc",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26462967",
   "chargeAmount" : 100.00,
@@ -176,7 +176,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "699a7d145a2a2d0dd2567b8c",
+    "id" : "699b6efe8f62cf744b56a45b",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -189,7 +189,7 @@
     "implementationConventionReference" : "005010X222",
     "fileInfo" : {
       "name" : "multi-tran.dat",
-      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/837/multi-tran.dat",
+      "url" : "file:/edi-samples/edi_files/837/multi-tran.dat",
       "lastModifiedDateTime" : "2023-12-03T17:43:58.366-05:00",
       "fileType" : "EDI"
     },
@@ -222,7 +222,7 @@
   }
 }
 , {
-  "id" : "699a7d145a2a2d0dd2567bfe",
+  "id" : "699b6efe8f62cf744b56a4cd",
   "objectType" : "CLAIM",
   "patientControlNumber" : "125WILL",
   "chargeAmount" : 145.50,
@@ -330,7 +330,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "699a7d145a2a2d0dd2567bb9",
+    "id" : "699b6efe8f62cf744b56a488",
     "controlNumber" : "3701",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -343,7 +343,7 @@
     "implementationConventionReference" : "005010X222",
     "fileInfo" : {
       "name" : "multi-tran.dat",
-      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/837/multi-tran.dat",
+      "url" : "file:/edi-samples/edi_files/837/multi-tran.dat",
       "lastModifiedDateTime" : "2023-12-03T17:43:58.366-05:00",
       "fileType" : "EDI"
     },
@@ -373,7 +373,7 @@
   }
 }
 , {
-  "id" : "699a7d145a2a2d0dd2567bff",
+  "id" : "699b6efe8f62cf744b56a4ce",
   "objectType" : "CLAIM",
   "patientControlNumber" : "153829140",
   "chargeAmount" : 827.00,
@@ -536,7 +536,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "699a7d145a2a2d0dd2567bda",
+    "id" : "699b6efe8f62cf744b56a4a9",
     "controlNumber" : "0001",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -549,7 +549,7 @@
     "implementationConventionReference" : "005010X222",
     "fileInfo" : {
       "name" : "multi-tran.dat",
-      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/837/multi-tran.dat",
+      "url" : "file:/edi-samples/edi_files/837/multi-tran.dat",
       "lastModifiedDateTime" : "2023-12-03T17:43:58.366-05:00",
       "fileType" : "EDI"
     },

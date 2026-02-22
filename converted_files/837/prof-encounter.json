@@ -1,6 +1,6 @@
 [
  {
-  "id" : "699a7d145a2a2d0dd2567a11",
+  "id" : "699b6efe8f62cf744b56a2e0",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26462967",
   "chargeAmount" : 100.00,
@@ -176,7 +176,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "699a7d145a2a2d0dd25679e5",
+    "id" : "699b6efe8f62cf744b56a2b4",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -189,7 +189,7 @@
     "implementationConventionReference" : "005010X222",
     "fileInfo" : {
       "name" : "prof-encounter.dat",
-      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/837/prof-encounter.dat",
+      "url" : "file:/edi-samples/edi_files/837/prof-encounter.dat",
       "lastModifiedDateTime" : "2025-02-28T12:24:52.176-05:00",
       "fileType" : "EDI"
     },

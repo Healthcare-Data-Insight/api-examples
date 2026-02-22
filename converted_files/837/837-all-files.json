@@ -1,6 +1,6 @@
 [
  {
-  "id" : "699a7d135a2a2d0dd2566dfc",
+  "id" : "699b6efe8f62cf744b5696cb",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26403774",
   "chargeAmount" : 150.00,
@@ -583,7 +583,7 @@
     }
   } ],
   "transaction" : {
-    "id" : "699a7d135a2a2d0dd2566d66",
+    "id" : "699b6efe8f62cf744b569635",
     "controlNumber" : "3456",
     "transactionType" : "DENTAL",
     "hierarchicalStructureCode" : "0019",
@@ -596,7 +596,7 @@
     "implementationConventionReference" : "005010X224",
     "fileInfo" : {
       "name" : "837D-all-fields.dat",
-      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/837/837D-all-fields.dat",
+      "url" : "file:/edi-samples/edi_files/837/837D-all-fields.dat",
       "lastModifiedDateTime" : "2025-05-06T18:45:51.852-04:00",
       "fileType" : "EDI"
     },
@@ -626,7 +626,7 @@
   }
 }
 , {
-  "id" : "699a7d145a2a2d0dd2566e44",
+  "id" : "699b6efe8f62cf744b569713",
   "objectType" : "CLAIM",
   "patientControlNumber" : "051068",
   "chargeAmount" : 766.50,
@@ -930,7 +930,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "699a7d145a2a2d0dd2566e01",
+    "id" : "699b6efe8f62cf744b5696d0",
     "controlNumber" : "000017712",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -943,7 +943,7 @@
     "implementationConventionReference" : "005010X222",
     "fileInfo" : {
       "name" : "ambulance.dat",
-      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/837/ambulance.dat",
+      "url" : "file:/edi-samples/edi_files/837/ambulance.dat",
       "lastModifiedDateTime" : "2026-02-21T14:36:15.045-05:00",
       "fileType" : "EDI"
     },
@@ -973,7 +973,7 @@
   }
 }
 , {
-  "id" : "699a7d145a2a2d0dd2566e74",
+  "id" : "699b6efe8f62cf744b569743",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26462967",
   "chargeAmount" : 100.00,
@@ -1149,7 +1149,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "699a7d145a2a2d0dd2566e48",
+    "id" : "699b6efe8f62cf744b569717",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -1162,7 +1162,7 @@
     "implementationConventionReference" : "005010X222",
     "fileInfo" : {
       "name" : "prof-encounter.dat",
-      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/837/prof-encounter.dat",
+      "url" : "file:/edi-samples/edi_files/837/prof-encounter.dat",
       "lastModifiedDateTime" : "2025-02-28T12:24:52.176-05:00",
       "fileType" : "EDI"
     },
@@ -1195,7 +1195,7 @@
   }
 }
 , {
-  "id" : "699a7d145a2a2d0dd2566f16",
+  "id" : "699b6efe8f62cf744b5697e5",
   "objectType" : "CLAIM",
   "patientControlNumber" : "ABC0002",
   "chargeAmount" : 89.93,
@@ -2481,7 +2481,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "699a7d145a2a2d0dd2566e79",
+    "id" : "699b6efe8f62cf744b569748",
     "controlNumber" : "00000024",
     "transactionType" : "INST",
     "hierarchicalStructureCode" : "0019",
@@ -2494,7 +2494,7 @@
     "implementationConventionReference" : "005010X223A2",
     "fileInfo" : {
       "name" : "837I-all-fields.dat",
-      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/837/837I-all-fields.dat",
+      "url" : "file:/edi-samples/edi_files/837/837I-all-fields.dat",
       "lastModifiedDateTime" : "2025-12-08T15:19:29.99-05:00",
       "fileType" : "EDI"
     },
@@ -2524,7 +2524,7 @@
   }
 }
 , {
-  "id" : "699a7d145a2a2d0dd2566f3f",
+  "id" : "699b6efe8f62cf744b56980e",
   "objectType" : "CLAIM",
   "patientControlNumber" : "125WILL",
   "chargeAmount" : 145.50,
@@ -2632,7 +2632,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "699a7d145a2a2d0dd2566f1b",
+    "id" : "699b6efe8f62cf744b5697ea",
     "controlNumber" : "3701",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -2645,7 +2645,7 @@
     "implementationConventionReference" : "005010X222",
     "fileInfo" : {
       "name" : "chiro.dat",
-      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/837/chiro.dat",
+      "url" : "file:/edi-samples/edi_files/837/chiro.dat",
       "lastModifiedDateTime" : "2026-02-21T14:38:13.895-05:00",
       "fileType" : "EDI"
     },
@@ -2675,7 +2675,7 @@
   }
 }
 , {
-  "id" : "699a7d145a2a2d0dd2566f87",
+  "id" : "699b6efe8f62cf744b569856",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26407789",
   "chargeAmount" : 79.04,
@@ -3050,7 +3050,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "699a7d145a2a2d0dd2566f42",
+    "id" : "699b6efe8f62cf744b569811",
     "controlNumber" : "0024",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -3063,7 +3063,7 @@
     "implementationConventionReference" : "005010X222",
     "fileInfo" : {
       "name" : "cob-payera-payerb.dat",
-      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/837/cob-payera-payerb.dat",
+      "url" : "file:/edi-samples/edi_files/837/cob-payera-payerb.dat",
       "lastModifiedDateTime" : "2024-01-31T20:06:16.189-05:00",
       "fileType" : "EDI"
     },
@@ -3093,7 +3093,7 @@
   }
 }
 , {
-  "id" : "699a7d145a2a2d0dd2566fbe",
+  "id" : "699b6efe8f62cf744b56988d",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26463774",
   "chargeAmount" : 100.00,
@@ -3302,7 +3302,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "699a7d145a2a2d0dd2566f8a",
+    "id" : "699b6efe8f62cf744b569859",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -3315,7 +3315,7 @@
     "implementationConventionReference" : "005010X298",
     "fileInfo" : {
       "name" : "837P-X298-all-fields.dat",
-      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/837/837P-X298-all-fields.dat",
+      "url" : "file:/edi-samples/edi_files/837/837P-X298-all-fields.dat",
       "lastModifiedDateTime" : "2026-02-11T13:54:57.176-05:00",
       "fileType" : "EDI"
     },
@@ -3348,7 +3348,7 @@
   }
 }
 , {
-  "id" : "699a7d145a2a2d0dd2566fec",
+  "id" : "699b6efe8f62cf744b5698bb",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26463774",
   "chargeAmount" : 100.00,
@@ -3508,7 +3508,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "699a7d145a2a2d0dd2566fc2",
+    "id" : "699b6efe8f62cf744b569891",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -3521,7 +3521,7 @@
     "implementationConventionReference" : "005010X222",
     "fileInfo" : {
       "name" : "commercial.dat",
-      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/837/commercial.dat",
+      "url" : "file:/edi-samples/edi_files/837/commercial.dat",
       "lastModifiedDateTime" : "2024-01-31T20:06:16.189-05:00",
       "fileType" : "EDI"
     },
@@ -3554,7 +3554,7 @@
   }
 }
 , {
-  "id" : "699a7d145a2a2d0dd2567060",
+  "id" : "699b6efe8f62cf744b56992f",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26462967",
   "chargeAmount" : 100.00,
@@ -3730,7 +3730,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "699a7d145a2a2d0dd2566fef",
+    "id" : "699b6efe8f62cf744b5698be",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -3743,7 +3743,7 @@
     "implementationConventionReference" : "005010X222",
     "fileInfo" : {
       "name" : "multi-tran.dat",
-      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/837/multi-tran.dat",
+      "url" : "file:/edi-samples/edi_files/837/multi-tran.dat",
       "lastModifiedDateTime" : "2023-12-03T17:43:58.366-05:00",
       "fileType" : "EDI"
     },
@@ -3776,7 +3776,7 @@
   }
 }
 , {
-  "id" : "699a7d145a2a2d0dd2567061",
+  "id" : "699b6efe8f62cf744b569930",
   "objectType" : "CLAIM",
   "patientControlNumber" : "125WILL",
   "chargeAmount" : 145.50,
@@ -3884,7 +3884,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "699a7d145a2a2d0dd256701c",
+    "id" : "699b6efe8f62cf744b5698eb",
     "controlNumber" : "3701",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -3897,7 +3897,7 @@
     "implementationConventionReference" : "005010X222",
     "fileInfo" : {
       "name" : "multi-tran.dat",
-      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/837/multi-tran.dat",
+      "url" : "file:/edi-samples/edi_files/837/multi-tran.dat",
       "lastModifiedDateTime" : "2023-12-03T17:43:58.366-05:00",
       "fileType" : "EDI"
     },
@@ -3927,7 +3927,7 @@
   }
 }
 , {
-  "id" : "699a7d145a2a2d0dd2567062",
+  "id" : "699b6efe8f62cf744b569931",
   "objectType" : "CLAIM",
   "patientControlNumber" : "153829140",
   "chargeAmount" : 827.00,
@@ -4090,7 +4090,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "699a7d145a2a2d0dd256703d",
+    "id" : "699b6efe8f62cf744b56990c",
     "controlNumber" : "0001",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -4103,7 +4103,7 @@
     "implementationConventionReference" : "005010X222",
     "fileInfo" : {
       "name" : "multi-tran.dat",
-      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/837/multi-tran.dat",
+      "url" : "file:/edi-samples/edi_files/837/multi-tran.dat",
       "lastModifiedDateTime" : "2023-12-03T17:43:58.366-05:00",
       "fileType" : "EDI"
     },
@@ -4136,7 +4136,7 @@
   }
 }
 , {
-  "id" : "699a7d145a2a2d0dd2567092",
+  "id" : "699b6efe8f62cf744b569961",
   "objectType" : "CLAIM",
   "patientControlNumber" : "756048Q",
   "chargeAmount" : 89.93,
@@ -4338,7 +4338,7 @@
     }
   } ],
   "transaction" : {
-    "id" : "699a7d145a2a2d0dd2567065",
+    "id" : "699b6efe8f62cf744b569934",
     "controlNumber" : "987654",
     "transactionType" : "INST",
     "hierarchicalStructureCode" : "0019",
@@ -4351,7 +4351,7 @@
     "implementationConventionReference" : "005010X223",
     "fileInfo" : {
       "name" : "837I-inst-claim.dat",
-      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/837/837I-inst-claim.dat",
+      "url" : "file:/edi-samples/edi_files/837/837I-inst-claim.dat",
       "lastModifiedDateTime" : "2023-08-28T03:50:07.198-04:00",
       "fileType" : "EDI"
     },
@@ -4381,7 +4381,7 @@
   }
 }
 , {
-  "id" : "699a7d145a2a2d0dd25670c4",
+  "id" : "699b6efe8f62cf744b569993",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26463774",
   "chargeAmount" : 100.00,
@@ -4558,7 +4558,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "699a7d145a2a2d0dd2567095",
+    "id" : "699b6efe8f62cf744b569964",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -4571,7 +4571,7 @@
     "implementationConventionReference" : "005010X222",
     "fileInfo" : {
       "name" : "commercial-replacement.dat",
-      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/837/commercial-replacement.dat",
+      "url" : "file:/edi-samples/edi_files/837/commercial-replacement.dat",
       "lastModifiedDateTime" : "2024-01-31T20:06:16.189-05:00",
       "fileType" : "EDI"
     },
@@ -4604,7 +4604,7 @@
   }
 }
 , {
-  "id" : "699a7d145a2a2d0dd25670f0",
+  "id" : "699b6efe8f62cf744b5699bf",
   "objectType" : "CLAIM",
   "patientControlNumber" : "153829140",
   "chargeAmount" : 827.00,
@@ -4767,7 +4767,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "699a7d145a2a2d0dd25670c9",
+    "id" : "699b6efe8f62cf744b569998",
     "controlNumber" : "0001",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -4780,7 +4780,7 @@
     "implementationConventionReference" : "005010X222",
     "fileInfo" : {
       "name" : "anesthesia.dat",
-      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/837/anesthesia.dat",
+      "url" : "file:/edi-samples/edi_files/837/anesthesia.dat",
       "lastModifiedDateTime" : "2026-02-21T14:42:59.643-05:00",
       "fileType" : "EDI"
     },
@@ -4813,7 +4813,7 @@
   }
 }
 , {
-  "id" : "699a7d145a2a2d0dd256712a",
+  "id" : "699b6efe8f62cf744b5699f9",
   "objectType" : "CLAIM",
   "patientControlNumber" : "SMI123",
   "chargeAmount" : 75.00,
@@ -5021,7 +5021,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "699a7d145a2a2d0dd25670f5",
+    "id" : "699b6efe8f62cf744b5699c4",
     "controlNumber" : "112233",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -5034,7 +5034,7 @@
     "implementationConventionReference" : "005010X222",
     "fileInfo" : {
       "name" : "wheelchair.dat",
-      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/837/wheelchair.dat",
+      "url" : "file:/edi-samples/edi_files/837/wheelchair.dat",
       "lastModifiedDateTime" : "2026-02-21T14:40:29.884-05:00",
       "fileType" : "EDI"
     },
@@ -5064,7 +5064,7 @@
   }
 }
 , {
-  "id" : "699a7d145a2a2d0dd2567159",
+  "id" : "699b6efe8f62cf744b569a28",
   "objectType" : "CLAIM",
   "patientControlNumber" : "ABC123-RI",
   "chargeAmount" : 28.75,
@@ -5238,7 +5238,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "699a7d145a2a2d0dd256712d",
+    "id" : "699b6efe8f62cf744b5699fc",
     "controlNumber" : "1002",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -5251,7 +5251,7 @@
     "implementationConventionReference" : "005010X222",
     "fileInfo" : {
       "name" : "ppo-repriced.dat",
-      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/837/ppo-repriced.dat",
+      "url" : "file:/edi-samples/edi_files/837/ppo-repriced.dat",
       "lastModifiedDateTime" : "2024-01-31T20:06:16.189-05:00",
       "fileType" : "EDI"
     },
@@ -5281,7 +5281,7 @@
   }
 }
 , {
-  "id" : "699a7d145a2a2d0dd2567193",
+  "id" : "699b6efe8f62cf744b569a62",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26407789",
   "chargeAmount" : 79.04,
@@ -5530,7 +5530,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "699a7d145a2a2d0dd256715c",
+    "id" : "699b6efe8f62cf744b569a2b",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -5543,7 +5543,7 @@
     "implementationConventionReference" : "005010X222",
     "fileInfo" : {
       "name" : "cob-prov-payera.dat",
-      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/837/cob-prov-payera.dat",
+      "url" : "file:/edi-samples/edi_files/837/cob-prov-payera.dat",
       "lastModifiedDateTime" : "2024-01-31T20:06:16.189-05:00",
       "fileType" : "EDI"
     },
@@ -5573,7 +5573,7 @@
   }
 }
 , {
-  "id" : "699a7d145a2a2d0dd25671da",
+  "id" : "699b6efe8f62cf744b569aa9",
   "objectType" : "CLAIM",
   "patientControlNumber" : "CLMNO12345",
   "chargeAmount" : 2232.93,
@@ -5873,7 +5873,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "699a7d145a2a2d0dd2567196",
+    "id" : "699b6efe8f62cf744b569a65",
     "controlNumber" : "0711",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -5886,7 +5886,7 @@
     "implementationConventionReference" : "005010X222",
     "fileInfo" : {
       "name" : "home-infusion-ndc.dat",
-      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/837/home-infusion-ndc.dat",
+      "url" : "file:/edi-samples/edi_files/837/home-infusion-ndc.dat",
       "lastModifiedDateTime" : "2024-01-31T20:06:16.189-05:00",
       "fileType" : "EDI"
     },
@@ -5916,7 +5916,7 @@
   }
 }
 , {
-  "id" : "699a7d145a2a2d0dd2567294",
+  "id" : "699b6efe8f62cf744b569b63",
   "objectType" : "CLAIM",
   "patientControlNumber" : "36463774",
   "chargeAmount" : 100.00,
@@ -6677,7 +6677,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "699a7d145a2a2d0dd25671df",
+    "id" : "699b6efe8f62cf744b569aae",
     "controlNumber" : "0031",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -6690,7 +6690,7 @@
     "implementationConventionReference" : "005010X222A2",
     "fileInfo" : {
       "name" : "837P-all-fields.dat",
-      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/837/837P-all-fields.dat",
+      "url" : "file:/edi-samples/edi_files/837/837P-all-fields.dat",
       "lastModifiedDateTime" : "2026-02-21T14:46:02.318-05:00",
       "fileType" : "EDI"
     },
@@ -6723,7 +6723,7 @@
   }
 }
 , {
-  "id" : "699a7d145a2a2d0dd25672cf",
+  "id" : "699b6efe8f62cf744b569b9e",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26463774",
   "chargeAmount" : 100.00,
@@ -6939,7 +6939,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "699a7d145a2a2d0dd2567297",
+    "id" : "699b6efe8f62cf744b569b66",
     "controlNumber" : "0021",
     "transactionType" : "INST",
     "hierarchicalStructureCode" : "0019",
@@ -6952,7 +6952,7 @@
     "implementationConventionReference" : "005010X299",
     "fileInfo" : {
       "name" : "837I-X299-all-fields.dat",
-      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/837/837I-X299-all-fields.dat",
+      "url" : "file:/edi-samples/edi_files/837/837I-X299-all-fields.dat",
       "lastModifiedDateTime" : "2026-02-11T13:54:57.176-05:00",
       "fileType" : "EDI"
     },
