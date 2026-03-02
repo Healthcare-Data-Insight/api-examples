@@ -1,0 +1,10 @@
+---
+type: "object"
+description: "Input/output key pair."
+properties:
+  inKey:
+    description: "Name of the EDI file in the input bucket."
+    type: "string"
+  outKey:
+    description: "Name of the converted file in the output bucket. If not provided, the converter will create the key based on the input file name with the appropriate extension."
+    type: "string"

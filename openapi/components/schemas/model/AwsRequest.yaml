@@ -1,0 +1,40 @@
+---
+type: "object"
+properties:
+  inBucket:
+    description: "Name of the bucket containing EDI files. If not defined, the converter will use the value from the 'IN_BUCKET' environment variable."
+    type: "string"
+  inKey:
+    description: "Name of the EDI file in the input bucket. You must provide one of 'inKey' or 'inOutKeys'."
+    type: "string"
+  outKey:
+    description: "Name of the converted file in the output bucket. If not provided, the converter will create the key based on the input file name with the appropriate extension."
+    type: "string"
+  inOutKeys:
+    description: "In out keys."
+    type: "array"
+    items:
+      $ref: "./AwsInOutKey.yaml"
+  outBucket:
+    description: "Name of the bucket for converted files. If not defined, the converter will use the value from the 'OUT_BUCKET' environment variable."
+    type: "string"
+  outFormat:
+    description: "The format to convert EDI files to. The function defaults to JSON. You can also define the 'OUT_FORMAT' environment variable to override the default."
+    type: "string"
+    enum:
+    - "CSV"
+    - "EXCEL"
+    - "JSON"
+    - "JSONL"
+  csvSchemaName:
+    description: "Name of the <a href='docs/csv/schemas/#built-in-conversion-schemas'>CSV conversion schema</a>. Defaults to 'lines-with-header-repeat-first-row' (single file schema). You can also define the 'CSV_SCHEMA_NAME' environment variable to override the default."
+    type: "string"
+  warningsInOutput:
+    description: "Include EDI parser warnings in the output files, see <a href='/docs/ediconvert-api/user-guide/#error-handling'>documentation on error handling</a> for more details. You can also define the 'OUTPUT_WARNINGS' environment variable and set its value to 'True'."
+    type: "boolean"
+  maxWarnings:
+    description: "The maximum number of parsing warnings per file before stopping and raising an error. Defaults to 3000. Set to -1 to suppress raising the 'too many warnings' error; the converter will process the entire file."
+    type: "integer"
+  isAboutOnly:
+    description: "Print the converter's version and license information and exit. All other fields are ignored."
+    type: "boolean"
