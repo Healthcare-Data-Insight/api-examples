@@ -1,0 +1,5 @@
+{
+  "inBucket": "edi-in",
+  "inKey": "837p.dat",
+  "outBucket": "edi-out"
+}
