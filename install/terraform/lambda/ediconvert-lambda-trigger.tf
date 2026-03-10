@@ -3,16 +3,7 @@ EDI Converter Lambda function with a trigger on an input S3 bucket.
 */
 resource "aws_lambda_function" "edi_converter_function_trigger" {
   environment {
-    variables = {
-      # Replace with your key, the key below has expired
-      EDI_LICENSE_KEY = "Ic5OXgAAABoAAAACAAAACwAAAANlbnRpdGxlbWVudEVESQAAABoAAAALAAAACmV4cGlyYXRpb24AAAGdIyY2AAAAAJwAAAABAAAAEAAAAIBsaWNlbnNlU2lnbmF0dXJlNNiFGndeVeM9X4kxO9SFf7U0Gq7K9LLKEKPEhW5TTqZvFEB2QyKb1A7/8BjddgIZUAnNxRSykCMj6u34YlBeibVwkHqyg2p31qHRwYGtVO4O6YTEsveZ15gH5yOS1vZI6ztxI7MWsOXn7bupiezerY4/0MLMHuWqC6V1+kQVVLQAAAAiAAAAAgAAAA8AAAAHc2lnbmF0dXJlRGlnZXN0U0hBLTUxMg=="
-      # Include parser's warnings in the output
-      OUTPUT_WARNINGS = "True"
-      # name of the output bucket
-      OUT_BUCKET      = "edi-out"
-      # JSON, JSONL, CSV, EXCEL
-      OUT_FORMAT      = "JSON"
-    }
+    variables = local.edi_converter_lambda_environment
   }
 
   ephemeral_storage {
@@ -31,9 +22,10 @@ resource "aws_lambda_function" "edi_converter_function_trigger" {
   package_type = "Zip"
   role         = aws_iam_role.lambda_exec_role.arn
   runtime      = "java25"
+  publish      = true
 
   # Increase timeout if processing large files
-  timeout = "180"
+  timeout = "300"
 }
 
 resource "aws_s3_bucket" "edi_in_bucket" {
@@ -60,4 +52,3 @@ resource "aws_lambda_permission" "allow_s3_invoke" {
   principal     = "s3.amazonaws.com"
   source_arn    = aws_s3_bucket.edi_in_bucket.arn
 }
-
