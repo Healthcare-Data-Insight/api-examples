@@ -1,0 +1,14 @@
+{
+  "inBucket": "edi-in",
+  "inOutKeys": [
+    {
+      "inKey": "837p.dat",
+      "outKey": "837p-converted"
+    },
+    {
+      "inKey": "837i.dat",
+      "outKey": "837i-converted"
+    }
+  ],
+  "outBucket": "edi-out"
+}
