@@ -1,5 +1,6 @@
 package hdi.edi.parser;
 
+import hdi.license.CliLicenseReader;
 import hdi.model.PlaceOfServiceType;
 import hdi.model.claim.Claim;
 import hdi.model.enumtype.UnitType;
@@ -33,6 +34,8 @@ public class Claim837ParsingExample implements ParsingExampleHelper {
     public void parseAllFields837p() {
         parse837(new File(EDI_FILES_DIR, "/837/837p-all-fields.dat"));
     }
+
+
 
     @Test
     public void parseAllFields837i() {
@@ -147,5 +150,12 @@ public class Claim837ParsingExample implements ParsingExampleHelper {
 
         GenderType genderType = patient.person().gender();
         assertThat(genderType).isEqualTo(GenderType.MALE);
+    }
+
+    @Test
+    public void printParserVersionAndLicenseInfo() {
+        System.out.println(EdiParser.getVersion());
+        var licenseInfo=EdiParser.getLicenseInfo();
+        System.out.println(licenseInfo);
     }
 }
