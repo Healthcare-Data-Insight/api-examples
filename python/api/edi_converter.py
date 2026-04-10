@@ -51,8 +51,7 @@ def convert_file(file, is_ndjson):
         # Note that we're posting the file-like object instead of reading the file into memory
         # This allows for streaming content to the server
         api_response = requests.post(api_url, data=f, params=params, stream=True)
-        if api_response.status_code != 200:
-            raise Exception(f'Error parsing EDI; Error: {api_response.text}')
+        api_response.raise_for_status()
     return api_response
 
 
@@ -67,3 +66,4 @@ def handle_warning_error(obj):
         message = obj['message']
         print(f'Encountered parsing issue with file {file_name}. Warning: {message}')
         return True
+    return None
