@@ -3,7 +3,7 @@ type: "object"
 description: "Loop: 2400; Segment: SV3."
 properties:
   sourceLineId:
-    description: "Line item control number. EDI: REF02 *6R."
+    description: "Line item control number. EDI: REF02*6R."
     type: "string"
     x-edi-elt-designators:
     - "REF02"
@@ -22,35 +22,35 @@ properties:
     x-edi-elt-designators:
     - "SV305"
   predeterminationOfBenefitsIdentifier:
-    description: "Predetermination of benefits identifier. EDI: REF02 *G3."
+    description: "Predetermination of benefits identifier. EDI: REF02*G3."
     type: "string"
     x-edi-elt-designators:
     - "REF02"
     x-edi-qualifiers:
     - "G3"
   repricedReferenceNumber:
-    description: "Repriced reference number. EDI: REF02 *9B."
+    description: "Repriced reference number. EDI: REF02*9B."
     type: "string"
     x-edi-elt-designators:
     - "REF02"
     x-edi-qualifiers:
     - "9B"
   adjustedRepricedReferenceNumber:
-    description: "Adjusted repriced reference number. EDI: REF02 *9D."
+    description: "Adjusted repriced reference number. EDI: REF02*9D."
     type: "string"
     x-edi-elt-designators:
     - "REF02"
     x-edi-qualifiers:
     - "9D"
   priorAuthorization:
-    description: "Prior authorization. EDI: REF02 *G1."
+    description: "Prior authorization. EDI: REF02*G1."
     type: "string"
     x-edi-elt-designators:
     - "REF02"
     x-edi-qualifiers:
     - "G1"
   referralNumber:
-    description: "Referral number. EDI: REF02 *9F."
+    description: "Referral number. EDI: REF02*9F."
     type: "string"
     x-edi-elt-designators:
     - "REF02"
@@ -63,7 +63,7 @@ properties:
     x-edi-elt-designators:
     - "SV302"
   salesTaxAmount:
-    description: "Sales tax amount. EDI: AMT02 *T."
+    description: "Sales tax amount. EDI: AMT02*T."
     type: "number"
     format: "float"
     x-edi-elt-designators:
@@ -71,7 +71,7 @@ properties:
     x-edi-qualifiers:
     - "T"
   serviceDateFrom:
-    description: "Service date from. EDI: DTP03 *472."
+    description: "Service date from. EDI: DTP03*472."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -79,7 +79,7 @@ properties:
     x-edi-qualifiers:
     - "472"
   serviceDateTo:
-    description: "Service date to. EDI: DTP03 *472."
+    description: "Service date to. EDI: DTP03*472."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -87,7 +87,7 @@ properties:
     x-edi-qualifiers:
     - "472"
   priorPlacementDate:
-    description: "Prior placement date. EDI: DTP03 *441, DTP03 *139."
+    description: "Prior placement date. EDI: DTP03*441, DTP03*139."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -96,7 +96,7 @@ properties:
     - "441"
     - "139"
   orthodonticBandingDate:
-    description: "Orthodontic banding date. EDI: DTP03 *452."
+    description: "Orthodontic banding date. EDI: DTP03*452."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -104,7 +104,7 @@ properties:
     x-edi-qualifiers:
     - "452"
   replacementDate:
-    description: "Replacement date. EDI: DTP03 *446."
+    description: "Replacement date. EDI: DTP03*446."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -112,7 +112,7 @@ properties:
     x-edi-qualifiers:
     - "446"
   treatmentStartDate:
-    description: "Treatment start date. EDI: DTP03 *196."
+    description: "Treatment start date. EDI: DTP03*196."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -120,7 +120,7 @@ properties:
     x-edi-qualifiers:
     - "196"
   treatmentCompletionDate:
-    description: "Treatment completion date. EDI: DTP03 *198."
+    description: "Treatment completion date. EDI: DTP03*198."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -134,7 +134,7 @@ properties:
     x-edi-elt-designators:
     - "SV306"
   procedure:
-    description: "Procedure. EDI: SV302 *HC, SV302 *AD, SV302 *WK, SV302 *IV."
+    description: "Procedure. EDI: SV302*HC, SV302*AD, SV302*WK, SV302*IV."
     $ref: "./Procedure.yaml"
     x-edi-elt-designators:
     - "SV302"
@@ -157,11 +157,9 @@ properties:
     - "CN1"
   providers:
     description: "Providers for this service line."
-    type: "array"
-    items:
-      $ref: "./Provider.yaml"
+    $ref: "./Provider.yaml"
   adjudications:
-    description: "Adjudications. EDI: SVD; Loop: 2430."
+    description: "Adjudications. EDI: Loop: 2430, SVD."
     type: "array"
     items:
       $ref: "./Adjudication.yaml"

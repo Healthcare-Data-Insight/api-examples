@@ -1,0 +1,13 @@
+---
+type: "object"
+description: "Location of the validation issue."
+properties:
+  fileName:
+    description: "File name."
+    type: "string"
+  lineNumber:
+    description: "Line number in the file."
+    type: "integer"
+  segmentNumber:
+    description: "Segment number in the file."
+    type: "integer"

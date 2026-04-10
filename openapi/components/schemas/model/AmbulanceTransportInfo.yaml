@@ -14,7 +14,7 @@ properties:
     x-edi-elt-designators:
     - "CR104"
   reason:
-    description: "Ambulance transport reason code as constant (enum). EDI: CR104."
+    description: "Ambulance transport reason code as a string constant. EDI: CR104."
     type: "string"
     enum:
     - "FAMILY_MEMBER"

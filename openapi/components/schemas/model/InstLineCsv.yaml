@@ -3,7 +3,7 @@ type: "object"
 description: "Loop: 2400."
 properties:
   controlNumber:
-    description: "Control number. EDI: REF02 *6R."
+    description: "Control number. EDI: REF02*6R."
     type: "string"
     x-edi-elt-designators:
     - "REF02"
@@ -15,7 +15,7 @@ properties:
     x-edi-elt-designators:
     - "SV201"
   procedure:
-    description: "Procedure. EDI: SV202 *HC, SV202 *AD, SV202 *WK, SV202 *IV."
+    description: "Procedure. EDI: SV202*HC, SV202*AD, SV202*WK, SV202*IV."
     $ref: "./Procedure.yaml"
     x-edi-elt-designators:
     - "SV202"
@@ -48,7 +48,7 @@ properties:
     x-edi-elt-designators:
     - "SV207"
   serviceDateFrom:
-    description: "Service period start date. EDI: DTP03 *472, DTP03 *150."
+    description: "Service period start date. EDI: DTP03*472, DTP03*150."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -57,7 +57,7 @@ properties:
     - "472"
     - "150"
   serviceDateTo:
-    description: "Service period end date. If not provided in EDI (single day), it is set to 'serviceDateFrom'. EDI: DTP03 *151."
+    description: "Service period end date. If not provided in EDI (single day), it is set to 'serviceDateFrom'. EDI: DTP03*151."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -65,21 +65,21 @@ properties:
     x-edi-qualifiers:
     - "151"
   repricedReferenceNumber:
-    description: "Repriced reference number. EDI: REF02 *9B."
+    description: "Repriced reference number. EDI: REF02*9B."
     type: "string"
     x-edi-elt-designators:
     - "REF02"
     x-edi-qualifiers:
     - "9B"
   adjustedRepricedReferenceNumber:
-    description: "Adjusted repriced reference number. EDI: REF02 *9D."
+    description: "Adjusted repriced reference number. EDI: REF02*9D."
     type: "string"
     x-edi-elt-designators:
     - "REF02"
     x-edi-qualifiers:
     - "9D"
   serviceTaxAmount:
-    description: "Service tax amount. EDI: AMT02 *GT."
+    description: "Service tax amount. EDI: AMT02*GT."
     type: "number"
     format: "float"
     x-edi-elt-designators:
@@ -87,7 +87,7 @@ properties:
     x-edi-qualifiers:
     - "GT"
   facilityTaxAmount:
-    description: "Facility tax amount. EDI: AMT02 *N8."
+    description: "Facility tax amount. EDI: AMT02*N8."
     type: "number"
     format: "float"
     x-edi-elt-designators:
@@ -116,7 +116,7 @@ properties:
     x-edi-elt-designators:
     - "CTP05-1"
   prescriptionNumber:
-    description: "Prescription number. EDI: REF02 *XZ."
+    description: "Prescription number. EDI: REF02*XZ."
     type: "string"
     x-edi-elt-designators:
     - "REF02"
@@ -130,28 +130,28 @@ properties:
     x-edi-seg-ids:
     - "PWK"
   operatingPhysician:
-    description: "Operating physician. EDI: NM1 *72."
+    description: "Operating physician. EDI: NM1*72."
     $ref: "./Provider.yaml"
     x-edi-seg-ids:
     - "NM1"
     x-edi-qualifiers:
     - "72"
   otherOperatingPhysician:
-    description: "Other operating physician. EDI: NM1 *ZZ."
+    description: "Other operating physician. EDI: NM1*ZZ."
     $ref: "./Party.yaml"
     x-edi-seg-ids:
     - "NM1"
     x-edi-qualifiers:
     - "ZZ"
   renderingProvider:
-    description: "Rendering provider. EDI: NM1 *82."
+    description: "Rendering provider. EDI: NM1*82."
     $ref: "./Provider.yaml"
     x-edi-seg-ids:
     - "NM1"
     x-edi-qualifiers:
     - "82"
   referringProvider:
-    description: "Referring provider. EDI: NM1 *DN."
+    description: "Referring provider. EDI: NM1*DN."
     $ref: "./Party.yaml"
     x-edi-seg-ids:
     - "NM1"

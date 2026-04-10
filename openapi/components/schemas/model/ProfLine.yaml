@@ -3,7 +3,7 @@ type: "object"
 description: "Loop: 2400; Segment: SV1."
 properties:
   sourceLineId:
-    description: "Line item control number. EDI: REF02 *6R."
+    description: "Line item control number. EDI: REF02*6R."
     type: "string"
     x-edi-elt-designators:
     - "REF02"
@@ -35,28 +35,28 @@ properties:
     x-edi-elt-designators:
     - "SV115"
   repricedReferenceNumber:
-    description: "Repriced reference number. EDI: REF02 *9B."
+    description: "Repriced reference number. EDI: REF02*9B."
     type: "string"
     x-edi-elt-designators:
     - "REF02"
     x-edi-qualifiers:
     - "9B"
   adjustedRepricedReferenceNumber:
-    description: "Adjusted repriced reference number. EDI: REF02 *9D."
+    description: "Adjusted repriced reference number. EDI: REF02*9D."
     type: "string"
     x-edi-elt-designators:
     - "REF02"
     x-edi-qualifiers:
     - "9D"
   priorAuthorization:
-    description: "Prior authorization. EDI: REF02 *G1."
+    description: "Prior authorization. EDI: REF02*G1."
     type: "string"
     x-edi-elt-designators:
     - "REF02"
     x-edi-qualifiers:
     - "G1"
   referralNumber:
-    description: "Referral number. EDI: REF02 *9F."
+    description: "Referral number. EDI: REF02*9F."
     type: "string"
     x-edi-elt-designators:
     - "REF02"
@@ -69,7 +69,7 @@ properties:
     x-edi-elt-designators:
     - "SV102"
   salesTaxAmount:
-    description: "Sales tax amount. EDI: AMT02 *T."
+    description: "Sales tax amount. EDI: AMT02*T."
     type: "number"
     format: "float"
     x-edi-elt-designators:
@@ -77,18 +77,20 @@ properties:
     x-edi-qualifiers:
     - "T"
   purchasedServiceProviderIdentifier:
-    description: "Purchased service provider identifier. EDI: PS101."
+    description: "Purchased service provider identifier. Since: v2.14.9. EDI: PS101."
     type: "string"
     x-edi-elt-designators:
     - "PS101"
+    x-since: "2.14.9"
   purchasedServiceChargeAmount:
-    description: "Purchased service charge amount. EDI: PS102."
+    description: "Purchased service charge amount. Since: v2.14.9. EDI: PS102."
     type: "number"
     format: "float"
     x-edi-elt-designators:
     - "PS102"
+    x-since: "2.14.9"
   serviceDateFrom:
-    description: "Service date from. EDI: DTP03 *472."
+    description: "Service date from. EDI: DTP03*472."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -96,7 +98,7 @@ properties:
     x-edi-qualifiers:
     - "472"
   serviceDateTo:
-    description: "Service date to. EDI: DTP03 *472."
+    description: "Service date to. EDI: DTP03*472."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -104,7 +106,7 @@ properties:
     x-edi-qualifiers:
     - "472"
   prescriptionDate:
-    description: "Prescription date. EDI: DTP03 *471."
+    description: "Prescription date. EDI: DTP03*471."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -112,7 +114,7 @@ properties:
     x-edi-qualifiers:
     - "471"
   lastCertificationDate:
-    description: "Last certification date. EDI: DTP03 *461."
+    description: "Last certification date. EDI: DTP03*461."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -120,7 +122,7 @@ properties:
     x-edi-qualifiers:
     - "461"
   certificationRevisionDate:
-    description: "Certification revision date. EDI: DTP03 *607."
+    description: "Certification revision date. EDI: DTP03*607."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -128,7 +130,7 @@ properties:
     x-edi-qualifiers:
     - "607"
   beginTherapyDate:
-    description: "Begin therapy date. EDI: DTP03 *463."
+    description: "Begin therapy date. EDI: DTP03*463."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -136,7 +138,7 @@ properties:
     x-edi-qualifiers:
     - "463"
   lastSeenDate:
-    description: "Last seen date. EDI: DTP03 *304."
+    description: "Last seen date. EDI: DTP03*304."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -144,7 +146,7 @@ properties:
     x-edi-qualifiers:
     - "304"
   testPerformedDate:
-    description: "Test performed date. EDI: DTP03 *738, DTP03 *739."
+    description: "Test performed date. EDI: DTP03*738, DTP03*739."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -153,7 +155,7 @@ properties:
     - "738"
     - "739"
   lastXRayDate:
-    description: "Last xray date. EDI: DTP03 *455."
+    description: "Last xray date. EDI: DTP03*455."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -161,7 +163,7 @@ properties:
     x-edi-qualifiers:
     - "455"
   initialTreatmentDate:
-    description: "Initial treatment date. EDI: DTP03 *454."
+    description: "Initial treatment date. EDI: DTP03*454."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -180,7 +182,7 @@ properties:
     x-edi-elt-designators:
     - "SV104"
   ambulancePatientCount:
-    description: "Ambulance patient count. EDI: QTY02 *PT."
+    description: "Ambulance patient count. EDI: QTY02*PT."
     type: "integer"
     x-edi-elt-designators:
     - "QTY02"
@@ -203,24 +205,29 @@ properties:
     x-edi-elt-designators:
     - "CTP05-1"
   prescriptionNumber:
-    description: "Prescription number. EDI: REF02 *XZ."
+    description: "Prescription number. EDI: REF02*XZ."
     type: "string"
     x-edi-elt-designators:
     - "REF02"
     x-edi-qualifiers:
     - "XZ"
   lineNote:
-    description: "Line note. EDI: NTE02 *ADD, NTE02 *DCP."
+    description: "Line note. EDI: NTE02*ADD, NTE02*DCP."
     type: "string"
     x-edi-elt-designators:
     - "NTE02"
+    x-edi-qualifiers:
+    - "ADD"
+    - "DCP"
   thirdPartyNote:
-    description: "Third party note. EDI: NTE02 *TPO."
+    description: "Third party note. EDI: NTE02*TPO."
     type: "string"
     x-edi-elt-designators:
     - "NTE02"
+    x-edi-qualifiers:
+    - "TPO"
   procedure:
-    description: "Procedure. EDI: SV101 *HC, SV101 *AD, SV101 *WK, SV101 *IV."
+    description: "Procedure. EDI: SV101*HC, SV101*AD, SV101*WK, SV101*IV."
     $ref: "./Procedure.yaml"
     x-edi-elt-designators:
     - "SV101"
@@ -230,10 +237,11 @@ properties:
     - "WK"
     - "IV"
   dmeService:
-    description: "Dme service. EDI: SV5."
+    description: "Dme service. Since: v2.14.9. EDI: SV5."
     $ref: "./DmeService.yaml"
     x-edi-seg-ids:
     - "SV5"
+    x-since: "2.14.9"
   attachments:
     description: "Attachments. EDI: PWK."
     type: "array"
@@ -264,19 +272,18 @@ properties:
     x-edi-seg-ids:
     - "CRC"
   measurements:
-    description: "Measurements. EDI: MEA."
+    description: "Measurements. Since: v2.14.9. EDI: MEA."
     type: "array"
     items:
       $ref: "./Measurement.yaml"
     x-edi-seg-ids:
     - "MEA"
+    x-since: "2.14.9"
   providers:
     description: "Providers for this service line."
-    type: "array"
-    items:
-      $ref: "./Provider.yaml"
+    $ref: "./Provider.yaml"
   adjudications:
-    description: "Adjudications. EDI: SVD; Loop: 2430."
+    description: "Adjudications. EDI: Loop: 2430, SVD."
     type: "array"
     items:
       $ref: "./Adjudication.yaml"
@@ -298,12 +305,13 @@ properties:
     x-edi-elt-designators:
     - "K301"
   forms:
-    description: "Forms. EDI: LQ."
+    description: "Forms. Since: v2.14.9. EDI: LQ."
     type: "array"
     items:
       $ref: "./FormResponse.yaml"
     x-edi-seg-ids:
     - "LQ"
+    x-since: "2.14.9"
   diagPointers:
     description: "Diagnosis pointers. Each pointer is an index of the diagnosis in the 'diags' array at the claim level. EDI: SV107."
     type: "array"

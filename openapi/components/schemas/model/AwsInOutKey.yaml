@@ -1,6 +1,5 @@
 ---
 type: "object"
-description: "Input/output key pair."
 properties:
   inKey:
     description: "Name of the EDI file in the input bucket."

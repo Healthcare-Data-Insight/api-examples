@@ -30,7 +30,7 @@ properties:
     x-edi-elt-designators:
     - "CLM05-3"
   statementDateFrom:
-    description: "Statement date from. EDI: DTP03 *434."
+    description: "Statement date from. EDI: DTP03*434."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -38,7 +38,7 @@ properties:
     x-edi-qualifiers:
     - "434"
   statementDateTo:
-    description: "Statement date to. EDI: DTP03 *434."
+    description: "Statement date to. EDI: DTP03*434."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -54,21 +54,21 @@ properties:
     type: "string"
     format: "date"
   subscriber:
-    description: "The insured (subscriber). EDI Loop: 2000B."
+    description: "The insured (subscriber). EDI: Loop: 2000B."
     $ref: "./Subscriber.yaml"
     x-edi-loop-id: "2000B"
   patient:
-    description: "Patient if different from the the insured (subscriber). EDI Loop: 2110CA."
+    description: "Patient if different from the the insured (subscriber). EDI: Loop: 2110CA."
     $ref: "./Patient.yaml"
     x-edi-loop-id: "2110CA"
   otherSubscribers:
-    description: "Other subscribers and their payer's information. EDI Loop: 2320."
+    description: "Other subscribers and their payer's information. EDI: Loop: 2320."
     type: "array"
     items:
       $ref: "./OtherSubscriber.yaml"
     x-edi-loop-id: "2320"
   serviceLines:
-    description: "Service lines. EDI Loop: 2400."
+    description: "Service lines. EDI: Loop: 2400."
     type: "array"
     items:
       $ref: "./InstLine.yaml"
@@ -99,84 +99,84 @@ properties:
     x-edi-elt-designators:
     - "CLM20"
   serviceAuthorizationExceptionCode:
-    description: "Service authorization exception code. EDI: REF02 *4N."
+    description: "Service authorization exception code. EDI: REF02*4N."
     type: "string"
     x-edi-elt-designators:
     - "REF02"
     x-edi-qualifiers:
     - "4N"
   referralNumber:
-    description: "Referral number. EDI: REF02 *9F."
+    description: "Referral number. EDI: REF02*9F."
     type: "string"
     x-edi-elt-designators:
     - "REF02"
     x-edi-qualifiers:
     - "9F"
   priorAuthorizationNumber:
-    description: "Prior authorization number. EDI: REF02 *G1."
+    description: "Prior authorization number. EDI: REF02*G1."
     type: "string"
     x-edi-elt-designators:
     - "REF02"
     x-edi-qualifiers:
     - "G1"
   originalReferenceNumber:
-    description: "Original reference number. EDI: REF02 *F8."
+    description: "Original reference number. EDI: REF02*F8."
     type: "string"
     x-edi-elt-designators:
     - "REF02"
     x-edi-qualifiers:
     - "F8"
   repricedReferenceNumber:
-    description: "Repriced reference number. EDI: REF02 *9A."
+    description: "Repriced reference number. EDI: REF02*9A."
     type: "string"
     x-edi-elt-designators:
     - "REF02"
     x-edi-qualifiers:
     - "9A"
   adjustedRepricedReferenceNumber:
-    description: "Adjusted repriced reference number. EDI: REF02 *9C."
+    description: "Adjusted repriced reference number. EDI: REF02*9C."
     type: "string"
     x-edi-elt-designators:
     - "REF02"
     x-edi-qualifiers:
     - "9C"
   clearinghouseTraceNumber:
-    description: "Clearinghouse trace number. EDI: REF02 *D9."
+    description: "Clearinghouse trace number. EDI: REF02*D9."
     type: "string"
     x-edi-elt-designators:
     - "REF02"
     x-edi-qualifiers:
     - "D9"
   accidentState:
-    description: "Accident state. EDI: REF02 *LU."
+    description: "Accident state. EDI: REF02*LU."
     type: "string"
     x-edi-elt-designators:
     - "REF02"
     x-edi-qualifiers:
     - "LU"
   medicalRecordNumber:
-    description: "Medical record number. EDI: REF02 *EA."
+    description: "Medical record number. EDI: REF02*EA."
     type: "string"
     x-edi-elt-designators:
     - "REF02"
     x-edi-qualifiers:
     - "EA"
   peerReviewAuthorizationNumber:
-    description: "Peer review authorization number. EDI: REF02 *G4."
+    description: "Peer review authorization number. EDI: REF02*G4."
     type: "string"
     x-edi-elt-designators:
     - "REF02"
     x-edi-qualifiers:
     - "G4"
   demonstrationProjectIdentifier:
-    description: "Demonstration project identifier. EDI: REF02 *P4."
+    description: "Demonstration project identifier. EDI: REF02*P4."
     type: "string"
     x-edi-elt-designators:
     - "REF02"
     x-edi-qualifiers:
     - "P4"
   admissionDateAndHour:
-    description: "Admission date and hour. EDI: DTP03 *435."
+    description: "Admission date and hour. EDI: DTP03*435."
     type: "string"
     format: "date-time"
     x-edi-elt-designators:
@@ -184,7 +184,7 @@ properties:
     x-edi-qualifiers:
     - "435"
   dischargeTime:
-    description: "Discharge time. EDI: DTP03 *096."
+    description: "Discharge time. EDI: DTP03*096."
     type: "string"
     format: "date-time"
     x-edi-elt-designators:
@@ -207,7 +207,7 @@ properties:
     x-edi-elt-designators:
     - "CL103"
   patientResponsibilityAmount:
-    description: "Patient responsibility amount. EDI: AMT02 *F3."
+    description: "Patient responsibility amount. EDI: AMT02*F3."
     type: "number"
     format: "float"
     x-edi-elt-designators:
@@ -227,26 +227,28 @@ properties:
     x-edi-elt-designators:
     - "NTE02"
   billingNote:
-    description: "Billing note. EDI: NTE02 *ADD."
+    description: "Billing note. EDI: NTE02*ADD."
     type: "string"
     x-edi-elt-designators:
     - "NTE02"
+    x-edi-qualifiers:
+    - "ADD"
   billingProvider:
-    description: "Billing provider. EDI: NM1 *85."
+    description: "Billing provider. EDI: NM1*85."
     $ref: "./Provider.yaml"
     x-edi-seg-ids:
     - "NM1"
     x-edi-qualifiers:
     - "85"
   payToAddress:
-    description: "Pay to address. EDI: NM1 *87."
+    description: "Pay to address. EDI: NM1*87."
     $ref: "./Party.yaml"
     x-edi-seg-ids:
     - "NM1"
     x-edi-qualifiers:
     - "87"
   payToPlan:
-    description: "Pay-to plan for subrogation claims. EDI: NM1 *PE."
+    description: "Pay-to plan for subrogation claims. EDI: NM1*PE."
     $ref: "./Party.yaml"
     x-edi-seg-ids:
     - "NM1"
@@ -254,9 +256,7 @@ properties:
     - "PE"
   providers:
     description: "Providers for this claim, except for the billing provider."
-    type: "array"
-    items:
-      $ref: "./Provider.yaml"
+    $ref: "./Provider.yaml"
   diags:
     description: "Diagnosis codes. EDI: HI."
     type: "array"
@@ -265,7 +265,7 @@ properties:
     x-edi-seg-ids:
     - "HI"
   drg:
-    description: "Drg. EDI: HI *DR."
+    description: "Drg. EDI: HI*DR."
     $ref: "./Code.yaml"
     x-edi-seg-ids:
     - "HI"
@@ -279,7 +279,7 @@ properties:
     x-edi-seg-ids:
     - "HI"
   occurrenceSpans:
-    description: "Occurrence spans. EDI: HI *BI."
+    description: "Occurrence spans. EDI: HI*BI."
     type: "array"
     items:
       $ref: "./CodeAndDate.yaml"
@@ -288,7 +288,7 @@ properties:
     x-edi-qualifiers:
     - "BI"
   occurrences:
-    description: "Occurrences. EDI: HI *BH."
+    description: "Occurrences. EDI: HI*BH."
     type: "array"
     items:
       $ref: "./CodeAndDate.yaml"
@@ -297,7 +297,7 @@ properties:
     x-edi-qualifiers:
     - "BH"
   valueInfos:
-    description: "Value infos. EDI: HI *BE."
+    description: "Value infos. EDI: HI*BE."
     type: "array"
     items:
       $ref: "./CodeAndAmount.yaml"
@@ -306,7 +306,7 @@ properties:
     x-edi-qualifiers:
     - "BE"
   conditions:
-    description: "Conditions. EDI: HI *BG."
+    description: "Conditions. EDI: HI*BG."
     type: "array"
     items:
       $ref: "./Code.yaml"

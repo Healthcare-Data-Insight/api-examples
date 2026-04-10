@@ -11,7 +11,7 @@ properties:
     description: "Name of the converted file in the output bucket. If not provided, the converter will create the key based on the input file name with the appropriate extension."
     type: "string"
   inOutKeys:
-    description: "In out keys."
+    description: "List of input/output key pairs to convert multiple files."
     type: "array"
     items:
       $ref: "./AwsInOutKey.yaml"
@@ -27,7 +27,7 @@ properties:
     - "JSON"
     - "JSONL"
   csvSchemaName:
-    description: "Name of the <a href='docs/csv/schemas/#built-in-conversion-schemas'>CSV conversion schema</a>. Defaults to 'lines-with-header-repeat-first-row' (single file schema). You can also define the 'CSV_SCHEMA_NAME' environment variable to override the default."
+    description: "Name of the <a href='/docs/csv/schemas/#built-in-conversion-schemas'>CSV conversion schema</a>. Defaults to 'lines-with-header-repeat-first-row' (single file schema). You can also define the 'CSV_SCHEMA_NAME' environment variable to override the default."
     type: "string"
   warningsInOutput:
     description: "Include EDI parser warnings in the output files, see <a href='/docs/ediconvert-api/user-guide/#error-handling'>documentation on error handling</a> for more details. You can also define the 'OUTPUT_WARNINGS' environment variable and set its value to 'True'."

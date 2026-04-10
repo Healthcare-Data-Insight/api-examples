@@ -28,7 +28,7 @@ properties:
     - "NM109"
     - "N104"
   taxId:
-    description: "Tax id. EDI: REF02 *TJ, REF02 *SY, REF02 *EI."
+    description: "Tax id. EDI: REF02*TJ, REF02*SY, REF02*EI."
     type: "string"
     x-edi-elt-designators:
     - "REF02"

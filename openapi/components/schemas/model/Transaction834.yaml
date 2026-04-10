@@ -7,7 +7,7 @@ properties:
     x-edi-elt-designators:
     - "ST02"
   transactionType:
-    description: "Transaction type translated to string constant, PROF for 837P, INST for 837I, etc. EDI: ST01, ST03."
+    description: "Transaction type translated to string constant, PROF for 837P, INST for 837I, etc. Required in order for EDI generator to populate defaults. EDI: ST01, ST03."
     type: "string"
     x-edi-elt-designators:
     - "ST01"

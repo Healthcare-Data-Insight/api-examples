@@ -1,0 +1,94 @@
+---
+type: "object"
+description: "EDI validation issue details."
+properties:
+  issueType:
+    description: "Issue type."
+    type: "string"
+    enum:
+    - "FORMAT"
+    - "INVALID"
+    - "LENGTH_EXCEEDED"
+    - "LENGTH_TOO_SHORT"
+    - "MISMATCH"
+    - "NOT_ALLOWED"
+    - "NUMBER_OF_ITEMS"
+    - "REQUIRED"
+    - "REQUIRED_CODE"
+    - "VALUE_NOT_IN_ENUM_LIST"
+    - "WRONG_TYPE"
+  jsonPath:
+    description: "JSON path for the object where the issue was detected."
+    type: "string"
+  fieldName:
+    description: "Field name or element name."
+    type: "string"
+  sourceLocation:
+    description: "Location of the issue in the EDI file."
+    $ref: "./SourceLocation.yaml"
+  loop:
+    description: "EDI loop where the issue was found."
+    type: "string"
+  segment:
+    description: "EDI segment ID."
+    type: "string"
+  element:
+    description: "EDI element designator."
+    type: "string"
+  ediCode:
+    description: "EDI qualifier or code for the segment if the segment is uniquely identified by the code."
+    type: "string"
+  maxNumberOfItems:
+    description: "Maximum number of items allowed for the segment or list."
+    type: "integer"
+  actualNumberOfItems:
+    description: "Actual number of items."
+    type: "integer"
+  length:
+    description: "Expected length of the element's value."
+    type: "integer"
+  actualLength:
+    description: "Actual length."
+    type: "integer"
+  dataType:
+    description: "Expected data type."
+    type: "string"
+    enum:
+    - "BINARY"
+    - "COMPOSITE"
+    - "DATE"
+    - "DECIMAL"
+    - "ENUM"
+    - "IDENTIFIER"
+    - "NUMERIC"
+    - "STRING"
+    - "TIME"
+  actualDataType:
+    description: "Actual data type."
+    type: "string"
+    enum:
+    - "BINARY"
+    - "COMPOSITE"
+    - "DATE"
+    - "DECIMAL"
+    - "ENUM"
+    - "IDENTIFIER"
+    - "NUMERIC"
+    - "STRING"
+    - "TIME"
+  value:
+    description: "Value with the issue."
+    type: "string"
+  ediString:
+    description: "Value that caused the issue."
+    type: "string"
+  message:
+    description: "Additional message describing the issue."
+    type: "string"
+  allowedValues:
+    description: "Allowed values."
+    type: "array"
+    items:
+      type: "string"
+required:
+- "issueType"

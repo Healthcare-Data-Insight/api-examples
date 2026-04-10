@@ -3,7 +3,7 @@ type: "object"
 description: "Segment: CAS."
 properties:
   group:
-    description: "Claim adjustment group code as a string constant (enum). EDI: CAS01."
+    description: "Claim adjustment group code as a string constant. EDI: CAS01."
     type: "string"
     enum:
     - "CONTRACTUAL"

@@ -3,7 +3,7 @@ type: "object"
 description: "Service line information and its status. Loop: 2220D."
 properties:
   controlNumber:
-    description: "Line item control number from 837. EDI: REF02 *6R."
+    description: "Line item control number from 837. EDI: REF02*6R."
     type: "string"
     x-edi-elt-designators:
     - "REF02"
@@ -33,14 +33,14 @@ properties:
     - "SVC01"
     - "SVC04"
   prescriptionNumber:
-    description: "Prescription number. EDI: REF02 *XZ."
+    description: "Prescription number. EDI: REF02*XZ."
     type: "string"
     x-edi-elt-designators:
     - "REF02"
     x-edi-qualifiers:
     - "XZ"
   serviceDateFrom:
-    description: "Service period start date. EDI: DTP03 *472, DTP03 *150."
+    description: "Service period start date. EDI: DTP03*472, DTP03*150."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -49,7 +49,7 @@ properties:
     - "472"
     - "150"
   serviceDateTo:
-    description: "Service period end date. If not provided in EDI (single day), it is set to 'serviceDateFrom'. EDI: DTP03 *151."
+    description: "Service period end date. If not provided in EDI (single day), it is set to 'serviceDateFrom'. EDI: DTP03*151."
     type: "string"
     format: "date"
     x-edi-elt-designators:

@@ -99,14 +99,14 @@ properties:
     x-edi-elt-designators:
     - "PAT09"
   propertyCasualtyClaimNumber:
-    description: "Property casualty claim number. EDI: REF02 *Y4."
+    description: "Property casualty claim number. EDI: REF02*Y4."
     type: "string"
     x-edi-elt-designators:
     - "REF02"
     x-edi-qualifiers:
     - "Y4"
   payer:
-    description: "Payer. EDI: NM1 *PR; Loop: 2330B."
+    description: "Payer. EDI: Loop: 2330B, NM1*PR."
     $ref: "./Party.yaml"
     x-edi-loop-id: "2330B"
     x-edi-seg-ids:

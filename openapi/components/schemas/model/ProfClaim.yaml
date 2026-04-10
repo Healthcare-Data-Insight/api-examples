@@ -20,7 +20,7 @@ properties:
     x-edi-elt-designators:
     - "CLM02"
   patientPaidAmount:
-    description: "Patient paid amount. EDI: AMT02 *F5."
+    description: "Patient paid amount. EDI: AMT02*F5."
     type: "number"
     format: "float"
     x-edi-elt-designators:
@@ -46,21 +46,21 @@ properties:
     type: "string"
     format: "date"
   subscriber:
-    description: "The insured (subscriber). EDI Loop: 2000B."
+    description: "The insured (subscriber). EDI: Loop: 2000B."
     $ref: "./Subscriber.yaml"
     x-edi-loop-id: "2000B"
   patient:
-    description: "Patient if different from the the insured (subscriber). EDI Loop: 2110CA."
+    description: "Patient if different from the the insured (subscriber). EDI: Loop: 2110CA."
     $ref: "./Patient.yaml"
     x-edi-loop-id: "2110CA"
   otherSubscribers:
-    description: "Other subscribers and their payer's information. EDI Loop: 2320."
+    description: "Other subscribers and their payer's information. EDI: Loop: 2320."
     type: "array"
     items:
       $ref: "./OtherSubscriber.yaml"
     x-edi-loop-id: "2320"
   serviceLines:
-    description: "Service lines. EDI Loop: 2400."
+    description: "Service lines. EDI: Loop: 2400."
     type: "array"
     items:
       $ref: "./ProfLine.yaml"
@@ -111,70 +111,70 @@ properties:
     x-edi-elt-designators:
     - "CLM20"
   serviceAuthorizationExceptionCode:
-    description: "Service authorization exception code. EDI: REF02 *4N."
+    description: "Service authorization exception code. EDI: REF02*4N."
     type: "string"
     x-edi-elt-designators:
     - "REF02"
     x-edi-qualifiers:
     - "4N"
   referralNumber:
-    description: "Referral number. EDI: REF02 *9F."
+    description: "Referral number. EDI: REF02*9F."
     type: "string"
     x-edi-elt-designators:
     - "REF02"
     x-edi-qualifiers:
     - "9F"
   priorAuthorizationNumber:
-    description: "Prior authorization number. EDI: REF02 *G1."
+    description: "Prior authorization number. EDI: REF02*G1."
     type: "string"
     x-edi-elt-designators:
     - "REF02"
     x-edi-qualifiers:
     - "G1"
   originalReferenceNumber:
-    description: "Original reference number. EDI: REF02 *F8."
+    description: "Original reference number. EDI: REF02*F8."
     type: "string"
     x-edi-elt-designators:
     - "REF02"
     x-edi-qualifiers:
     - "F8"
   repricedReferenceNumber:
-    description: "Repriced reference number. EDI: REF02 *9A."
+    description: "Repriced reference number. EDI: REF02*9A."
     type: "string"
     x-edi-elt-designators:
     - "REF02"
     x-edi-qualifiers:
     - "9A"
   adjustedRepricedReferenceNumber:
-    description: "Adjusted repriced reference number. EDI: REF02 *9C."
+    description: "Adjusted repriced reference number. EDI: REF02*9C."
     type: "string"
     x-edi-elt-designators:
     - "REF02"
     x-edi-qualifiers:
     - "9C"
   clearinghouseTraceNumber:
-    description: "Clearinghouse trace number. EDI: REF02 *D9."
+    description: "Clearinghouse trace number. EDI: REF02*D9."
     type: "string"
     x-edi-elt-designators:
     - "REF02"
     x-edi-qualifiers:
     - "D9"
   medicalRecordNumber:
-    description: "Medical record number. EDI: REF02 *EA."
+    description: "Medical record number. EDI: REF02*EA."
     type: "string"
     x-edi-elt-designators:
     - "REF02"
     x-edi-qualifiers:
     - "EA"
   demonstrationProjectIdentifier:
-    description: "Demonstration project identifier. EDI: REF02 *P4."
+    description: "Demonstration project identifier. EDI: REF02*P4."
     type: "string"
     x-edi-elt-designators:
     - "REF02"
     x-edi-qualifiers:
     - "P4"
   onsetOfCurrentIllnessOrInjuryDate:
-    description: "Onset of current illness or injury date. EDI: DTP03 *431."
+    description: "Onset of current illness or injury date. EDI: DTP03*431."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -182,7 +182,7 @@ properties:
     x-edi-qualifiers:
     - "431"
   initialTreatmentDate:
-    description: "Initial treatment date. EDI: DTP03 *454."
+    description: "Initial treatment date. EDI: DTP03*454."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -190,7 +190,7 @@ properties:
     x-edi-qualifiers:
     - "454"
   lastSeenDate:
-    description: "Last seen date. EDI: DTP03 *304."
+    description: "Last seen date. EDI: DTP03*304."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -198,7 +198,7 @@ properties:
     x-edi-qualifiers:
     - "304"
   acuteManifestationDate:
-    description: "Acute manifestation date. EDI: DTP03 *453."
+    description: "Acute manifestation date. EDI: DTP03*453."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -206,7 +206,7 @@ properties:
     x-edi-qualifiers:
     - "453"
   accidentDate:
-    description: "Accident date. EDI: DTP03 *439."
+    description: "Accident date. EDI: DTP03*439."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -214,7 +214,7 @@ properties:
     x-edi-qualifiers:
     - "439"
   lastMenstrualPeriodDate:
-    description: "Last menstrual period date. EDI: DTP03 *484."
+    description: "Last menstrual period date. EDI: DTP03*484."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -222,7 +222,7 @@ properties:
     x-edi-qualifiers:
     - "484"
   lastXRayDate:
-    description: "Last xray date. EDI: DTP03 *455."
+    description: "Last xray date. EDI: DTP03*455."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -230,7 +230,7 @@ properties:
     x-edi-qualifiers:
     - "455"
   prescriptionDate:
-    description: "Hearing and vision prescription date. EDI: DTP03 *471."
+    description: "Hearing and vision prescription date. EDI: DTP03*471."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -238,7 +238,7 @@ properties:
     x-edi-qualifiers:
     - "471"
   disabilityDateFrom:
-    description: "Disability date from. EDI: DTP03 *314."
+    description: "Disability date from. EDI: DTP03*314."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -246,7 +246,7 @@ properties:
     x-edi-qualifiers:
     - "314"
   disabilityDateTo:
-    description: "Disability date to. EDI: DTP03 *361."
+    description: "Disability date to. EDI: DTP03*361."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -254,7 +254,7 @@ properties:
     x-edi-qualifiers:
     - "361"
   lastWorkedDate:
-    description: "Last worked date. EDI: DTP03 *297."
+    description: "Last worked date. EDI: DTP03*297."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -262,7 +262,7 @@ properties:
     x-edi-qualifiers:
     - "297"
   authorizedReturnToWorkDate:
-    description: "Authorized return to work date. EDI: DTP03 *296."
+    description: "Authorized return to work date. EDI: DTP03*296."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -270,7 +270,7 @@ properties:
     x-edi-qualifiers:
     - "296"
   admissionDate:
-    description: "Admission date for ambulance claims. EDI: DTP03 *435."
+    description: "Admission date for ambulance claims. EDI: DTP03*435."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -278,7 +278,7 @@ properties:
     x-edi-qualifiers:
     - "435"
   dischargeDate:
-    description: "Discharge date. EDI: DTP03 *096."
+    description: "Discharge date. EDI: DTP03*096."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -286,7 +286,7 @@ properties:
     x-edi-qualifiers:
     - "096"
   assumedCareDate:
-    description: "Assumed care date. EDI: DTP03 *090."
+    description: "Assumed care date. EDI: DTP03*090."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -294,7 +294,7 @@ properties:
     x-edi-qualifiers:
     - "090"
   relinquishedCareDate:
-    description: "Relinquished care date. EDI: DTP03 *091."
+    description: "Relinquished care date. EDI: DTP03*091."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -302,7 +302,7 @@ properties:
     x-edi-qualifiers:
     - "091"
   propertyCasualtyFirstContactDate:
-    description: "Property casualty first contact date. EDI: DTP03 *444."
+    description: "Property casualty first contact date. EDI: DTP03*444."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -310,7 +310,7 @@ properties:
     x-edi-qualifiers:
     - "444"
   repricerReceivedDate:
-    description: "Repricer received date. EDI: DTP03 *050."
+    description: "Repricer received date. EDI: DTP03*050."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -330,21 +330,21 @@ properties:
     x-edi-elt-designators:
     - "NTE02"
   billingProvider:
-    description: "Billing provider. EDI: NM1 *85."
+    description: "Billing provider. EDI: NM1*85."
     $ref: "./Provider.yaml"
     x-edi-seg-ids:
     - "NM1"
     x-edi-qualifiers:
     - "85"
   payToAddress:
-    description: "Pay to address. EDI: NM1 *87."
+    description: "Pay to address. EDI: NM1*87."
     $ref: "./Party.yaml"
     x-edi-seg-ids:
     - "NM1"
     x-edi-qualifiers:
     - "87"
   payToPlan:
-    description: "Pay-to plan for subrogation claims. EDI: NM1 *PE."
+    description: "Pay-to plan for subrogation claims. EDI: NM1*PE."
     $ref: "./Party.yaml"
     x-edi-seg-ids:
     - "NM1"
@@ -352,9 +352,7 @@ properties:
     - "PE"
   providers:
     description: "Providers for this claim, except for the billing provider."
-    type: "array"
-    items:
-      $ref: "./Provider.yaml"
+    $ref: "./Provider.yaml"
   diags:
     description: "Diagnosis codes. EDI: HI."
     type: "array"
@@ -370,7 +368,7 @@ properties:
     x-edi-seg-ids:
     - "HI"
   conditions:
-    description: "Conditions. EDI: HI *BG."
+    description: "Conditions. EDI: HI*BG."
     type: "array"
     items:
       $ref: "./Code.yaml"

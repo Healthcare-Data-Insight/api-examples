@@ -94,7 +94,7 @@ properties:
     x-edi-seg-ids:
     - "CAS"
   payerPaidAmount:
-    description: "Payer paid amount. EDI: AMT02 *D."
+    description: "Payer paid amount. EDI: AMT02*D."
     type: "number"
     format: "float"
     x-edi-elt-designators:
@@ -102,7 +102,7 @@ properties:
     x-edi-qualifiers:
     - "D"
   nonCoveredAmount:
-    description: "Non covered amount. EDI: AMT02 *A8."
+    description: "Non covered amount. EDI: AMT02*A8."
     type: "number"
     format: "float"
     x-edi-elt-designators:
@@ -110,7 +110,7 @@ properties:
     x-edi-qualifiers:
     - "A8"
   remainingPatientLiabilityAmount:
-    description: "Remaining patient liability amount. EDI: AMT02 *EAF."
+    description: "Remaining patient liability amount. EDI: AMT02*EAF."
     type: "number"
     format: "float"
     x-edi-elt-designators:
@@ -123,28 +123,28 @@ properties:
     x-edi-seg-ids:
     - "MOA"
   payerPriorAuthorizationNumber:
-    description: "Payer prior authorization number. EDI: REF02 *G1."
+    description: "Payer prior authorization number. EDI: REF02*G1."
     type: "string"
     x-edi-elt-designators:
     - "REF02"
     x-edi-qualifiers:
     - "G1"
   payerReferralNumber:
-    description: "Payer referral number. EDI: REF02 *9F."
+    description: "Payer referral number. EDI: REF02*9F."
     type: "string"
     x-edi-elt-designators:
     - "REF02"
     x-edi-qualifiers:
     - "9F"
   payerClaimControlNumber:
-    description: "Payer claim control number. EDI: REF02 *F8."
+    description: "Payer claim control number. EDI: REF02*F8."
     type: "string"
     x-edi-elt-designators:
     - "REF02"
     x-edi-qualifiers:
     - "F8"
   payer:
-    description: "Payer. EDI: NM1 *PR; Loop: 2330B."
+    description: "Payer. EDI: Loop: 2330B, NM1*PR."
     $ref: "./Party.yaml"
     x-edi-loop-id: "2330B"
     x-edi-seg-ids:
@@ -152,7 +152,7 @@ properties:
     x-edi-qualifiers:
     - "PR"
   patient:
-    description: "Patient's information; post-adjudicated claims only. EDI: NM1 *QC; Loop: 2330C."
+    description: "Patient's information; post-adjudicated claims only. EDI: Loop: 2330C, NM1*QC."
     $ref: "./Party.yaml"
     x-edi-loop-id: "2330C"
     x-edi-seg-ids:

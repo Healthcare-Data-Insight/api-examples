@@ -7,13 +7,13 @@ properties:
     x-edi-elt-designators:
     - "ST02"
   transactionType:
-    description: "Transaction type translated to string constant, PROF for 837P, INST for 837I, etc. EDI: ST01, ST03."
+    description: "Transaction type translated to string constant, PROF for 837P, INST for 837I, etc. Required in order for EDI generator to populate defaults. EDI: ST01, ST03."
     type: "string"
     x-edi-elt-designators:
     - "ST01"
     - "ST03"
   productionDate:
-    description: "Production date. EDI: DTP03 *405."
+    description: "Production date. EDI: DTP03*405."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -94,7 +94,7 @@ properties:
     x-edi-elt-designators:
     - "TRN03"
   receiverIdentifier:
-    description: "Receiver's identifier when different from payee (e.g., a clearinghouse). EDI: REF02 *EV."
+    description: "Receiver's identifier when different from payee (e.g., a clearinghouse). EDI: REF02*EV."
     type: "string"
     x-edi-elt-designators:
     - "REF02"

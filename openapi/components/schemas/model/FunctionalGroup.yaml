@@ -1,0 +1,63 @@
+---
+type: "object"
+description: "Segment: GS."
+properties:
+  transactionType:
+    description: "Transaction type as enum for EDI generator; if not provided, GS01, GS08 must be populated."
+    type: "string"
+    enum:
+    - "PROF"
+    - "INST"
+  functionalIdentifierCode:
+    description: "Functional identifier code. EDI: GS01."
+    type: "string"
+    x-edi-elt-designators:
+    - "GS01"
+  senderCode:
+    description: "Sender code. EDI: GS02."
+    type: "string"
+    x-edi-elt-designators:
+    - "GS02"
+  receiverCode:
+    description: "Receiver code. EDI: GS03."
+    type: "string"
+    x-edi-elt-designators:
+    - "GS03"
+  date:
+    description: "Date. EDI: GS04."
+    type: "string"
+    format: "date"
+    x-edi-elt-designators:
+    - "GS04"
+    default: "Today's date"
+  time:
+    description: "Time. EDI: GS05."
+    type: "string"
+    format: "date-time"
+    x-edi-elt-designators:
+    - "GS05"
+    default: "Current time"
+  controlNumber:
+    description: "Control number. EDI: GS06."
+    type: "integer"
+    x-edi-elt-designators:
+    - "GS06"
+    default: "Unique random number"
+  responsibleAgencyCode:
+    description: "Responsible agency code. EDI: GS07."
+    type: "string"
+    x-edi-elt-designators:
+    - "GS07"
+    default: "X"
+  version:
+    description: "Version. EDI: GS08."
+    type: "string"
+    x-edi-elt-designators:
+    - "GS08"
+required:
+- "functionalIdentifierCode"
+- "senderCode"
+- "receiverCode"
+- "version"
+x-edi-seg-ids:
+- "GS"

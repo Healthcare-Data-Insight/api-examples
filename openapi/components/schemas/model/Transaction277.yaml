@@ -7,7 +7,7 @@ properties:
     x-edi-elt-designators:
     - "ST02"
   transactionType:
-    description: "Transaction type translated to string constant, PROF for 837P, INST for 837I, etc. EDI: ST01, ST03."
+    description: "Transaction type translated to string constant, PROF for 837P, INST for 837I, etc. Required in order for EDI generator to populate defaults. EDI: ST01, ST03."
     type: "string"
     x-edi-elt-designators:
     - "ST01"
@@ -55,7 +55,7 @@ properties:
     x-edi-elt-designators:
     - "ST03"
   receiptDate:
-    description: "Receipt date. EDI: DTP03 *050."
+    description: "Receipt date. EDI: DTP03*050."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -63,7 +63,7 @@ properties:
     x-edi-qualifiers:
     - "050"
   processDate:
-    description: "Process date. EDI: DTP03 *009."
+    description: "Process date. EDI: DTP03*009."
     type: "string"
     format: "date"
     x-edi-elt-designators:
