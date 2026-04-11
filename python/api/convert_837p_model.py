@@ -1,7 +1,7 @@
 import json
 import edi_converter
 from edi_converter import ObjectType
-from model.prof_claim import ProfClaim
+from edi_model.all_classes import ProfClaim
 """
 Converts an 837 file by posting the file's content.
 The response is an array of JSON objects.

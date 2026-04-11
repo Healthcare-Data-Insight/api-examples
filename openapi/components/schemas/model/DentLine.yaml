@@ -157,7 +157,9 @@ properties:
     - "CN1"
   providers:
     description: "Providers for this service line."
-    $ref: "./Provider.yaml"
+    type: "array"
+    items:
+      $ref: "./Provider.yaml"
   adjudications:
     description: "Adjudications. EDI: Loop: 2430, SVD."
     type: "array"

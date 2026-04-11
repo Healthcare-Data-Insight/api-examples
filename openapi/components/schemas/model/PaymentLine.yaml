@@ -131,7 +131,9 @@ properties:
     - "SVC06"
   providers:
     description: "Providers for this service line."
-    $ref: "./Provider.yaml"
+    type: "array"
+    items:
+      $ref: "./Provider.yaml"
   adjustments:
     description: "Line adjustments. EDI: CAS."
     type: "array"

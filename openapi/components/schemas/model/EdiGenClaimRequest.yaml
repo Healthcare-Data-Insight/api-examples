@@ -1,0 +1,20 @@
+---
+type: "object"
+description: "Request for EDI writer with interchange and functional group control segments and claims."
+properties:
+  interchangeControl:
+    description: "Interchange control."
+    $ref: "./InterchangeControl.yaml"
+  functionalGroup:
+    description: "Functional group."
+    $ref: "./FunctionalGroup.yaml"
+  transaction:
+    description: "Transaction."
+    $ref: "./Transaction837.yaml"
+  claims:
+    description: "Claims."
+    type: "array"
+    items:
+      oneOf:
+        - $ref: ./ProfClaim.yaml
+        - $ref: ./InstClaim.yaml

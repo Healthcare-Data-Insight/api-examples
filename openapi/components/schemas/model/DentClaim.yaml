@@ -242,7 +242,9 @@ properties:
     - "PE"
   providers:
     description: "Providers for this claim, except for the billing provider."
-    $ref: "./Provider.yaml"
+    type: "array"
+    items:
+      $ref: "./Provider.yaml"
   attachments:
     description: "Attachments. EDI: PWK."
     type: "array"
