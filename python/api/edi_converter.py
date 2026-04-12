@@ -1,6 +1,8 @@
-import requests
-import env
 from enum import Enum
+
+import requests
+
+import env
 
 
 class ObjectType(Enum):
@@ -36,7 +38,7 @@ def convert_files_with_multipart(files, is_ndjson):
 
 
 def convert_file(file, is_ndjson):
-    """Open file and post the content in streaming mode"""
+    """Open a file and post the content in streaming mode"""
     print('Converting ' + file)
     api_url = env.api_url + '/edi/json'
     # Always use splitTran: True for 837/835 transactions
@@ -52,6 +54,18 @@ def convert_file(file, is_ndjson):
         # This allows for streaming content to the server
         api_response = requests.post(api_url, data=f, params=params, stream=True)
         api_response.raise_for_status()
+    return api_response
+
+
+def generate_claim_edi(request):
+    """Post an EDI generation request object to /edi/gen/claim and return the response."""
+    api_url = env.api_url + '/edi/gen/claim'
+    api_response = requests.post(
+        api_url,
+        json=request.model_dump(by_alias=True, exclude_none=True),
+        timeout=30,
+    )
+    api_response.raise_for_status()
     return api_response
 
 

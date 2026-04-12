@@ -1,7 +1,6 @@
 from pathlib import Path
 
-import requests
-
+import edi_converter
 import env
 from edi_model.all_classes import (
     Address,
@@ -25,9 +24,6 @@ from edi_model.all_classes import (
 SCRIPT_DIR = Path(__file__).resolve().parent
 OUTPUT_DIR = SCRIPT_DIR / "out"
 OUTPUT_EDI_PATH = OUTPUT_DIR / "837p-minimal-generated.edi"
-GEN_ENDPOINT = f"{env.api_url}/edi/gen/claim"
-
-
 def build_request() -> EdiGenClaimRequest:
     interchange_control = InterchangeControl(
         sender_id_qualifier="ZZ",
@@ -139,25 +135,6 @@ def build_request() -> EdiGenClaimRequest:
     )
 
 
-def generate_edi(request: EdiGenClaimRequest) -> str:
-    response = requests.post(
-        GEN_ENDPOINT,
-        json=request.model_dump(by_alias=True, exclude_none=True),
-        timeout=30,
-    )
-
-    print(f"POST {GEN_ENDPOINT}")
-    print(f"Status: {response.status_code}")
-    response.raise_for_status()
-
-    edi_text = response.text
-    if not edi_text.startswith("ISA*00*"):
-        raise RuntimeError(
-            'Unexpected response body: generated EDI did not start with "ISA*00*".'
-        )
-    return edi_text
-
-
 def save_edi(edi_text: str) -> None:
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     OUTPUT_EDI_PATH.write_text(edi_text)
@@ -165,7 +142,17 @@ def save_edi(edi_text: str) -> None:
 
 def main() -> None:
     request = build_request()
-    edi_text = generate_edi(request)
+    response = edi_converter.generate_claim_edi(request)
+
+    print(f"POST {env.api_url}/edi/gen/claim")
+    print(f"Status: {response.status_code}")
+
+    edi_text = response.text
+    if not edi_text.startswith("ISA*00*"):
+        raise RuntimeError(
+            'Unexpected response body: generated EDI did not start with "ISA*00*".'
+        )
+
     save_edi(edi_text)
 
     print("Generated EDI:")
