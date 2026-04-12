@@ -1,0 +1,118 @@
+{
+  "interchangeControl": {
+    "senderIdQualifier": "ZZ",
+    "senderId": "123",
+    "receiverIdQualifier": "ZZ",
+    "receiverId": "456",
+    "interchangeDate": "2026-03-22",
+    "interchangeTime": "10:06",
+    "controlNumber": 1
+  },
+  "functionalGroup": {
+    "transactionType": "PROF",
+    "senderCode": "1",
+    "receiverCode": "2",
+    "date": "2026-03-22",
+    "time": "10:06",
+    "controlNumber": "1"
+  },
+  "transaction": {
+    "transactionType": "PROF",
+    "creationDate": "2026-03-22",
+    "creationTime": "10:06",
+    "originatorApplicationTransactionId": "1",
+    "sender": {
+      "identifier": "TGJ23",
+      "lastNameOrOrgName": "PREMIER BILLING SERVICE",
+      "contacts": [
+        {
+          "contactNumbers": [
+            {
+              "type": "EMAIL",
+              "number": "test@test.com"
+            }
+          ]
+        }
+      ]
+    },
+    "receiver": {
+      "identifier": "66783JJT",
+      "lastNameOrOrgName": "KEY INSURANCE COMPANY"
+    }
+  },
+  "claims": [
+    {
+      "patientControlNumber": "26463774",
+      "chargeAmount": 100.00,
+      "facilityCode": {
+        "code": "11"
+      },
+      "frequencyCode": {
+        "code": "1"
+      },
+      "subscriber": {
+        "payerResponsibilitySequence": "PRIMARY",
+        "relationshipType": "SELF",
+        "groupOrPolicyNumber": "2222",
+        "claimFilingIndicatorCode": "CI",
+        "insurancePlanType": "COMMERCIAL",
+        "person": {
+          "identifier": "JS00111223333",
+          "lastNameOrOrgName": "Smith",
+          "firstName": "Jane",
+          "address": {
+            "city": "MAIMI",
+            "stateCode": "FL",
+            "zipCode": "33111"
+          }
+        },
+        "payer": {
+          "identifier": "999996666",
+          "lastNameOrOrgName": "KEY INSURANCE COMPANY",
+          "address": {
+            "city": "MAIMI",
+            "stateCode": "FL",
+            "zipCode": "33111"
+          }
+        }
+      },
+      "providerSignatureIndicator": "Y",
+      "assignmentParticipationCode": "A",
+      "assignmentCertificationIndicator": "Y",
+      "releaseOfInformationCode": "I",
+      "clearinghouseTraceNumber": "17312345600006351",
+      "billingProvider": {
+        "identifier": "9876543210",
+        "taxId": "587654321",
+        "lastNameOrOrgName": "Ben Kildare Service",
+        "address": {
+          "line": "234 SEAWAY ST",
+          "city": "MIAMI",
+          "stateCode": "FL",
+          "zipCode": "33111"
+        }
+      },
+      "diags": [
+        {
+          "code": "J020"
+        },
+        {
+          "code": "Z1159"
+        }
+      ],
+      "serviceLines": [
+        {
+          "chargeAmount": 40.00,
+          "serviceDateFrom": "2006-10-03",
+          "unitCount": 1,
+          "procedure": {
+            "code": "99213"
+          },
+          "diagPointers": [
+            1
+          ]
+        }
+      ]
+    }
+  ]
+}
