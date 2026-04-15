@@ -25,6 +25,7 @@ properties:
     type: "string"
     x-edi-elt-designators:
     - "BPR01"
+    x-enum-name: "TransactionHandlingType"
   totalPaymentAmount:
     description: "Total payment amount. EDI: BPR02."
     type: "number"
@@ -41,6 +42,7 @@ properties:
     type: "string"
     x-edi-elt-designators:
     - "BPR04"
+    x-enum-name: "PaymentMethodType"
   paymentFormatCode:
     description: "Payment format code. EDI: BPR05."
     type: "string"

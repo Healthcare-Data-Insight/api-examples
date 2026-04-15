@@ -72,6 +72,7 @@ properties:
     type: "string"
     x-edi-elt-designators:
     - "SV204"
+    x-enum-name: "UnitType"
   unitCount:
     description: "Unit count. EDI: SV205."
     type: "number"

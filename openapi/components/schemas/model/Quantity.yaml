@@ -12,6 +12,7 @@ properties:
     type: "string"
     x-edi-elt-designators:
     - "QTY01"
+    x-enum-name: "QuantityType"
   quantity:
     description: "Quantity. EDI: QTY02."
     type: "number"

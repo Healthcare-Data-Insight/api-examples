@@ -105,6 +105,7 @@ properties:
     - "TERTIARY_FORWARDED"
     x-edi-elt-designators:
     - "CLP02"
+    x-enum-name: "ClaimStatus"
   patientResponsibilityAmount:
     description: "Patient responsibility amount. EDI: CLP05."
     type: "number"
@@ -141,6 +142,7 @@ properties:
     - "WORKERS_COMPENSATION"
     x-edi-elt-designators:
     - "CLP06"
+    x-enum-name: "InsurancePlanType"
   payerControlNumber:
     description: "Payer control number. EDI: CLP07."
     type: "string"

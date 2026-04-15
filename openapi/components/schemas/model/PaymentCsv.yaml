@@ -26,6 +26,7 @@ properties:
   claimStatus:
     description: "Claim status."
     type: "string"
+    x-enum-name: "ClaimStatus"
   chargeAmount:
     description: "Charge amount. EDI: CLP03."
     type: "number"
@@ -97,6 +98,7 @@ properties:
     type: "string"
     x-edi-elt-designators:
     - "BPR04"
+    x-enum-name: "PaymentMethodType"
   receiverAccountNumber:
     description: "Receiver account number. EDI: BPR15."
     type: "string"

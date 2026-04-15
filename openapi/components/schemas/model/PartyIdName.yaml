@@ -7,6 +7,7 @@ properties:
     x-edi-elt-designators:
     - "NM101"
     - "N101"
+    x-enum-name: "EntityRole"
   entityType:
     description: "Entity type. EDI: NM102."
     type: "string"
@@ -15,12 +16,14 @@ properties:
     - "INDIVIDUAL"
     x-edi-elt-designators:
     - "NM102"
+    x-enum-name: "EntityType"
   identificationType:
     description: "Identification type, e.g., NPI or EIN. This is a qualifier code translated to a string constant (enum). EDI: NM108, N103."
     type: "string"
     x-edi-elt-designators:
     - "NM108"
     - "N103"
+    x-enum-name: "IdentificationType"
   identifier:
     description: "Identifier. EDI: NM109, N104."
     type: "string"

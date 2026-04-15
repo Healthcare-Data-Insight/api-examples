@@ -17,6 +17,7 @@ properties:
     x-edi-elt-designators:
     - "SBR02"
     - "PAT01"
+    x-enum-name: "RelationshipType"
   person:
     description: "Person. EDI: NM1."
     $ref: "./PersonWithDemographic.yaml"

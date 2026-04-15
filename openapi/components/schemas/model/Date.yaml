@@ -12,6 +12,7 @@ properties:
     type: "string"
     x-edi-elt-designators:
     - "DTP01"
+    x-enum-name: "DateType"
   date:
     description: "The date value or the first date of the date range ('RD8' qualifier). EDI: DTP03."
     type: "string"

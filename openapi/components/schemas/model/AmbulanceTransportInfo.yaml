@@ -25,6 +25,7 @@ properties:
     - "SPECIALIST"
     x-edi-elt-designators:
     - "CR104"
+    x-enum-name: "AmbulanceTransportReason"
   transportDistance:
     description: "Transport distance. EDI: CR106."
     type: "number"

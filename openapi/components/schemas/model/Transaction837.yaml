@@ -44,6 +44,7 @@ properties:
     type: "string"
     x-edi-elt-designators:
     - "BHT06"
+    x-enum-name: "ClaimOrEncounterIdentifierType"
   transactionSetIdentifierCode:
     description: "Transaction set identifier code. EDI: ST01."
     type: "string"
@@ -59,7 +60,7 @@ properties:
     $ref: "./FileInfo.yaml"
   sender:
     description: "Submitter or sender of this transaction."
-    $ref: "./PartyIdName.yaml"
+    $ref: "./Party.yaml"
   receiver:
     description: "Receiver of this transaction."
     $ref: "./PartyIdName.yaml"

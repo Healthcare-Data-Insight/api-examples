@@ -18,6 +18,7 @@ properties:
     type: "string"
     x-edi-elt-designators:
     - "STC03"
+    x-enum-name: "StatusActionType"
   chargeAmount:
     description: "Charge amount. EDI: STC04."
     type: "number"

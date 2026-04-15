@@ -13,6 +13,7 @@ properties:
     - "PAYOR_INITIATED"
     x-edi-elt-designators:
     - "CAS01"
+    x-enum-name: "AdjustmentGroup"
   reason:
     description: "Claim adjustment reason code. EDI: CAS02."
     $ref: "./Code.yaml"
