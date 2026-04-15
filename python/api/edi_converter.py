@@ -62,11 +62,14 @@ def generate_claim_edi(request):
     api_url = env.api_url + '/edi/gen/claim'
     api_response = requests.post(
         api_url,
-        json=request.model_dump(by_alias=True, exclude_none=True),
+        json=request.model_dump(
+            by_alias=True,
+            exclude_none=True,
+            mode='json',
+            serialize_as_any=True,
+        ),
         timeout=30,
     )
-    if api_response.status_code not in {200, 417}:
-        api_response.raise_for_status()
     return api_response
 
 

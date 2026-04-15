@@ -1,3 +1,4 @@
+from datetime import date
 from pathlib import Path
 
 import edi_converter
@@ -6,6 +7,7 @@ from edi_model.all_classes import *
 SCRIPT_DIR = Path(__file__).resolve().parent
 OUTPUT_DIR = SCRIPT_DIR / "out"
 OUTPUT_EDI_PATH = OUTPUT_DIR / "837p-minimal-generated.edi"
+
 
 def build_request() -> EdiGenClaimRequest:
     """
@@ -19,25 +21,39 @@ def build_request() -> EdiGenClaimRequest:
         sender_id="123",
         receiver_id_qualifier="ZZ",
         receiver_id="456",
+        interchange_date=date(2026, 3, 22),
+        interchange_time="10:06",
+        control_number=1,
     )
 
     functional_group = FunctionalGroup(
-        transaction_type="PROF",
+        transaction_type=FunctionalGroupTransaction_typeEnum.PROF,
+        functional_identifier_code="HC",
         sender_code="1",
         receiver_code="2",
+        date=date(2026, 3, 22),
+        time="10:06",
+        control_number=1,
+        version="005010X222A2",
     )
 
     transaction = Transaction837(
         transaction_type="PROF",
         originator_application_transaction_id="1",
+        creation_date=date(2026, 3, 22),
+        creation_time="10:06",
         sender=Party(
             identifier="TGJ23",
             last_name_or_org_name="PREMIER BILLING SERVICE",
             contacts=[
                 ContactInfo(
+                    function_code="IC",
                     contact_numbers=[
-                        ContactNumber(type="EMAIL", number="test@test.com")
-                    ]
+                        ContactNumber(
+                            type=ContactNumberTypeEnum.EMAIL,
+                            number="test@test.com",
+                        )
+                    ],
                 )
             ],
         ),
@@ -48,11 +64,11 @@ def build_request() -> EdiGenClaimRequest:
     )
 
     subscriber = Subscriber(
-        payer_responsibility_sequence="PRIMARY",
-        relationship_type="SELF",
+        payer_responsibility_sequence=SubscriberPayer_responsibility_sequenceEnum.PRIMARY,
+        relationship_type=SubscriberRelationship_typeEnum.SELF,
         group_or_policy_number="2222",
         claim_filing_indicator_code="CI",
-        insurance_plan_type="COMMERCIAL",
+        insurance_plan_type=SubscriberInsurance_plan_typeEnum.COMMERCIAL,
         person=PersonWithDemographic(
             identifier="JS00111223333",
             last_name_or_org_name="Smith",
@@ -100,7 +116,8 @@ def build_request() -> EdiGenClaimRequest:
         service_lines=[
             ProfLine(
                 charge_amount=40.00,
-                service_date_from="2006-10-03",
+                service_date_from=date(2006, 10, 3),
+                unit_type="UNIT",
                 unit_count=1,
                 procedure=Procedure(code="99213"),
                 diag_pointers=[1],
@@ -140,16 +157,16 @@ def main() -> None:
             'Unexpected response body: generated EDI did not start with "ISA*00*".'
         )
 
-    save_edi(edi_text)
-
     print("Generated EDI:")
     print(edi_text)
+    save_edi(edi_text)
     print(f"Saved generated EDI to {OUTPUT_EDI_PATH}")
 
 
 def save_edi(edi_text: str) -> None:
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     OUTPUT_EDI_PATH.write_text(edi_text)
+
 
 if __name__ == "__main__":
     main()

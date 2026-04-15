@@ -1,4 +1,3 @@
-import json
 import edi_converter
 from edi_converter import ObjectType
 from edi_model.all_classes import ProfClaim
@@ -32,4 +31,5 @@ for claim_json in claims:
 
     print(f'Claim {pcn} from {billing_npi} for the amount {charge}')
     claim = ProfClaim.model_validate(claim_json)
-    print(json.dumps(claim.model_dump(by_alias=True), indent=2))
+    print(claim.model_dump_json(by_alias=True, indent=2, exclude_none=True, serialize_as_any=True))
+    # print(json.dumps(claim.model_dump(by_alias=True, exclude_none=True, serialize_as_any=True), indent=2))
