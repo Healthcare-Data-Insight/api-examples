@@ -27,7 +27,7 @@ def build_request() -> EdiGenClaimRequest:
     )
 
     functional_group = FunctionalGroup(
-        transaction_type=FunctionalGroupTransaction_typeEnum.PROF,
+        transaction_type="PROF",
         functional_identifier_code="HC",
         sender_code="1",
         receiver_code="2",
@@ -50,7 +50,7 @@ def build_request() -> EdiGenClaimRequest:
                     function_code="IC",
                     contact_numbers=[
                         ContactNumber(
-                            type=ContactNumberTypeEnum.EMAIL,
+                            type="EMAIL",
                             number="test@test.com",
                         )
                     ],
@@ -64,11 +64,11 @@ def build_request() -> EdiGenClaimRequest:
     )
 
     subscriber = Subscriber(
-        payer_responsibility_sequence=SubscriberPayer_responsibility_sequenceEnum.PRIMARY,
-        relationship_type=SubscriberRelationship_typeEnum.SELF,
+        payer_responsibility_sequence=PayerRespSequenceType.PRIMARY,
+        relationship_type=RelationshipType.SELF,
         group_or_policy_number="2222",
         claim_filing_indicator_code="CI",
-        insurance_plan_type=SubscriberInsurance_plan_typeEnum.COMMERCIAL,
+        insurance_plan_type=InsurancePlanType.COMMERCIAL,
         person=PersonWithDemographic(
             identifier="JS00111223333",
             last_name_or_org_name="Smith",
@@ -117,7 +117,7 @@ def build_request() -> EdiGenClaimRequest:
             ProfLine(
                 charge_amount=40.00,
                 service_date_from=date(2006, 10, 3),
-                unit_type="UNIT",
+                unit_type=UnitType.UNIT,
                 unit_count=1,
                 procedure=Procedure(code="99213"),
                 diag_pointers=[1],
@@ -146,11 +146,6 @@ def main() -> None:
             print(issue)
         return
 
-    if response.status_code != 200:
-        raise RuntimeError(
-            f"Unexpected response status {response.status_code}: {response.text}"
-        )
-
     edi_text = response.text
     if not edi_text.startswith("ISA*00*"):
         raise RuntimeError(
@@ -159,14 +154,6 @@ def main() -> None:
 
     print("Generated EDI:")
     print(edi_text)
-    save_edi(edi_text)
-    print(f"Saved generated EDI to {OUTPUT_EDI_PATH}")
-
-
-def save_edi(edi_text: str) -> None:
-    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    OUTPUT_EDI_PATH.write_text(edi_text)
-
 
 if __name__ == "__main__":
     main()

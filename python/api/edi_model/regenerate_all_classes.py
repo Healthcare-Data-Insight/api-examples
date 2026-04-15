@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import ast
 import keyword
 from pathlib import Path
 
@@ -7,6 +8,7 @@ import yaml
 
 ROOT = Path(__file__).resolve().parents[3] / "openapi" / "components" / "schemas" / "model"
 OUT = Path(__file__).resolve().parent / "all_classes.py"
+ENUMS_PY = Path(__file__).resolve().parent / "enums.py"
 
 PYTHON_KEYWORDS = set(keyword.kwlist) | {"match", "case", "True", "False", "None"}
 
@@ -74,27 +76,44 @@ def merge_schema(schema: dict) -> dict:
     return merged
 
 
-def build_type(schema: dict, class_name: str, prop_name: str, enum_defs: dict[str, list[str]]) -> str:
+def load_existing_enums() -> set[str]:
+    module = ast.parse(ENUMS_PY.read_text())
+    return {
+        node.name
+        for node in module.body
+        if isinstance(node, ast.ClassDef)
+    }
+
+
+def build_type(
+        schema: dict,
+        existing_enums: set[str],
+        used_enums: set[str],
+        missing_enums: set[str],
+) -> str:
     if "$ref" in schema:
         return schema_name_from_ref(schema["$ref"])
     if "oneOf" in schema:
         return " | ".join(
             sorted(
                 {
-                    build_type(option, class_name, f"{prop_name}Option{idx + 1}", enum_defs)
+                    build_type(option, existing_enums, used_enums, missing_enums)
                     for idx, option in enumerate(schema["oneOf"])
                 }
             )
         )
-    if "enum" in schema:
-        enum_name = f"{class_name}{prop_name.capitalize()}Enum"
-        enum_defs.setdefault(enum_name, list(schema["enum"]))
-        return enum_name
+    enum_name = schema.get("x-enum-name")
+    if enum_name:
+        if enum_name in existing_enums:
+            used_enums.add(enum_name)
+            return enum_name
+        missing_enums.add(enum_name)
+        return "str"
 
     schema_type = schema.get("type")
     if schema_type == "array":
         item_schema = schema.get("items", {})
-        return f"list[{build_type(item_schema, class_name, f'{prop_name}Item', enum_defs)}]"
+        return f"list[{build_type(item_schema, existing_enums, used_enums, missing_enums)}]"
     if schema_type == "string":
         return "dt.date" if schema.get("format") == "date" else "str"
     if schema_type == "integer":
@@ -130,10 +149,12 @@ def main() -> None:
         path.stem: yaml.safe_load(path.read_text())
         for path in sorted(ROOT.glob("*.yaml"))
     }
+    existing_enums = load_existing_enums()
     merged_schemas = {name: merge_schema(schema) for name, schema in schemas.items()}
     ordered = resolve_order(merged_schemas)
 
-    enum_defs: dict[str, list[str]] = {}
+    used_enums: set[str] = set()
+    missing_enums: set[str] = set()
     class_blocks: list[str] = []
 
     for name in ordered:
@@ -149,7 +170,7 @@ def main() -> None:
         else:
             for prop_name, prop_schema in properties.items():
                 attr_name = snake_case(prop_name)
-                attr_type = build_type(prop_schema, name, attr_name, enum_defs)
+                attr_type = build_type(prop_schema, existing_enums, used_enums, missing_enums)
                 attr_description = prop_schema.get("description") or f"{prop_name}."
                 is_array = prop_schema.get("type") == "array"
 
@@ -164,29 +185,22 @@ def main() -> None:
 
         class_blocks.append("\n".join(lines))
 
-    enum_blocks: list[str] = []
-    for enum_name, values in sorted(enum_defs.items()):
-        used_names: set[str] = set()
-        lines = [f"class {enum_name}(str, Enum):", f"    {py_string(f'Allowed values for {enum_name}.')}"]
-        for value in values:
-            lines.append(f"    {enum_member_name(value, used_names)} = {py_string(value)}")
-        enum_blocks.append("\n".join(lines))
-
-    all_names = ["EdiConverterModel", "to_camel", *sorted(enum_defs), *ordered]
+    all_names = ["EdiConverterModel", "to_camel", *sorted(used_enums), *ordered]
 
     content: list[str] = [
         "from __future__ import annotations",
         "",
         "import datetime as dt",
-        "from enum import Enum",
         "",
         "from pydantic import Field",
         "",
         "from .base import EdiConverterModel, to_camel",
         "",
     ]
-    content.extend(enum_blocks)
-    if enum_blocks:
+    if used_enums:
+        content.append(f"from .enums import {', '.join(sorted(used_enums))}")
+        content.append("")
+    if used_enums:
         content.append("")
     content.extend(class_blocks)
     content.append("")
@@ -199,6 +213,10 @@ def main() -> None:
 
     OUT.write_text("\n".join(content))
     print(f"Wrote {OUT}")
+    if missing_enums:
+        print("Missing enums in edi_model.enums:")
+        for enum_name in sorted(missing_enums):
+            print(enum_name)
 
 
 if __name__ == "__main__":

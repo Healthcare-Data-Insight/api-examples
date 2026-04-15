@@ -37,7 +37,7 @@ Take each Java enum and create a corresponding Python enum in the edi_model.enum
 Ignore descriptions in the Java enum, transfer only the ediValue.
 Do not create a Python enum for the NONE enum.
 
-Java code base: /Users/aananiev/myarchdev/healthcaredata/claiminsight/clinsight/src
+Java code base: ~/myarchdev/healthcaredata/claiminsight/clinsight/src
 
 ## List of enums to generate
 
@@ -45,13 +45,16 @@ Each section is a package in the Java code base.
 
 ### hdi.model.enumtype package
 
+AmountType
 DateType
+ReferenceType
 DrugIdentificationType
 IdentificationType
 MeasurementType
 NoteType
 QuantityType
 UnitType
+ClaimOrEncounterIdentifierType
 
 ### hdi.model.claim package
 
@@ -62,6 +65,7 @@ DelayReasonType.java
 RelatedCauseType.java
 ReleaseOfInformationType.java
 SpecialProgramType.java
+ConditionsIndicatorCategory
 
 ### hdi.model.claim.dme
 
@@ -92,6 +96,11 @@ ClaimStatus.java
 DfiQualifier.java
 PaymentMethodType.java
 TransactionHandlingType.java
+InsurancePlanType
+
+### hdi.model.status
+
+StatusActionType
 
 ## Acceptance Criteria
 

@@ -1,8 +1,10 @@
+from datetime import date, datetime
 from enum import Enum
 
 import requests
 
 import env
+from edi_model.base import EdiEnum
 
 
 class ObjectType(Enum):
@@ -62,15 +64,24 @@ def generate_claim_edi(request):
     api_url = env.api_url + '/edi/gen/claim'
     api_response = requests.post(
         api_url,
-        json=request.model_dump(
-            by_alias=True,
-            exclude_none=True,
-            mode='json',
-            serialize_as_any=True,
-        ),
+        json=request.model_dump(by_alias=True, exclude_none=True, mode='json'),
         timeout=30,
     )
+    if api_response.status_code not in {200, 417}:
+        api_response.raise_for_status()
     return api_response
+
+
+def _serialize_edi_enums(value):
+    if isinstance(value, EdiEnum):
+        return value.name
+    if isinstance(value, (date, datetime)):
+        return value.isoformat()
+    if isinstance(value, dict):
+        return {k: _serialize_edi_enums(v) for k, v in value.items()}
+    if isinstance(value, list):
+        return [_serialize_edi_enums(v) for v in value]
+    return value
 
 
 def handle_warning_error(obj):
