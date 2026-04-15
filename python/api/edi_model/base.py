@@ -1,3 +1,5 @@
+from enum import Enum
+
 from pydantic import BaseModel, ConfigDict
 
 
@@ -19,3 +21,21 @@ class EdiConverterModel(BaseModel):
 
     def __repr__(self) -> str:
         return self.__str__()
+
+
+class EdiEnum(Enum):
+    def __new__(cls, code):
+        obj = object.__new__(cls)
+        obj._value_ = code
+        return obj
+
+    @property
+    def code(self):
+        return self.value
+
+    @classmethod
+    def from_code(cls, code):
+        return cls(code)
+
+    def __str__(self):
+        return self.code

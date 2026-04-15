@@ -16,8 +16,14 @@ from .base import EdiConverterModel, to_camel
 Map all types accordingly.
 Pay attention to the "format" attribute. E.g., use Python date class when the format is "date".
 Ignore the "required" attribute and the "default" attributes.
-Create enums if the OpenAPI spec defines them.
+
 Create comments (docstrings) for each class and field based on descriptions in the OpenAPI spec. Also, create descriptions for each field using Pydantic's Field class.
+
+Enums:
+
+- Ignore the "enum" attribute in OpenAPI spec.
+- Instead, use the value of the "x-enum-name" extension attribute. This is the name of the enum class in the edi_model.enums module. If this enum exists, use it as the data type. Otherwise, use string
+- Report the names of missing enums in the edi_model.enums module.
 
 ## Acceptance Criteria
 
