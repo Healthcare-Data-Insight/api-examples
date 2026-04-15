@@ -65,7 +65,8 @@ def generate_claim_edi(request):
         json=request.model_dump(by_alias=True, exclude_none=True),
         timeout=30,
     )
-    api_response.raise_for_status()
+    if api_response.status_code not in {200, 417}:
+        api_response.raise_for_status()
     return api_response
 
 

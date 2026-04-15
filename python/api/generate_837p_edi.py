@@ -1,53 +1,34 @@
 from pathlib import Path
 
 import edi_converter
-import env
-from edi_model.all_classes import (
-    Address,
-    Code,
-    ContactInfo,
-    ContactNumber,
-    EdiGenClaimRequest,
-    FunctionalGroup,
-    InterchangeControl,
-    Party,
-    PartyIdName,
-    PersonWithDemographic,
-    Procedure,
-    ProfLine,
-    ProfClaim,
-    Provider,
-    Subscriber,
-    Transaction837,
-)
+from edi_model.all_classes import *
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 OUTPUT_DIR = SCRIPT_DIR / "out"
 OUTPUT_EDI_PATH = OUTPUT_DIR / "837p-minimal-generated.edi"
+
 def build_request() -> EdiGenClaimRequest:
+    """
+    Builds a minimal 837P EDI claim request
+
+    Returns:
+        EdiGenClaimRequest: The generated claim request.
+    """
     interchange_control = InterchangeControl(
         sender_id_qualifier="ZZ",
         sender_id="123",
         receiver_id_qualifier="ZZ",
         receiver_id="456",
-        interchange_date="2026-03-22",
-        interchange_time="10:06",
-        control_number=1,
     )
 
     functional_group = FunctionalGroup(
         transaction_type="PROF",
         sender_code="1",
         receiver_code="2",
-        date="2026-03-22",
-        time="10:06",
-        control_number=1,
     )
 
     transaction = Transaction837(
         transaction_type="PROF",
-        creation_date="2026-03-22",
-        creation_time="10:06",
         originator_application_transaction_id="1",
         sender=Party(
             identifier="TGJ23",
@@ -135,17 +116,23 @@ def build_request() -> EdiGenClaimRequest:
     )
 
 
-def save_edi(edi_text: str) -> None:
-    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    OUTPUT_EDI_PATH.write_text(edi_text)
-
-
 def main() -> None:
     request = build_request()
     response = edi_converter.generate_claim_edi(request)
 
-    print(f"POST {env.api_url}/edi/gen/claim")
-    print(f"Status: {response.status_code}")
+    if response.status_code == 417:
+        validation_issues = [
+            ValidationIssue.model_validate(issue_json) for issue_json in response.json()
+        ]
+        print("Validation issues:")
+        for issue in validation_issues:
+            print(issue)
+        return
+
+    if response.status_code != 200:
+        raise RuntimeError(
+            f"Unexpected response status {response.status_code}: {response.text}"
+        )
 
     edi_text = response.text
     if not edi_text.startswith("ISA*00*"):
@@ -159,6 +146,10 @@ def main() -> None:
     print(edi_text)
     print(f"Saved generated EDI to {OUTPUT_EDI_PATH}")
 
+
+def save_edi(edi_text: str) -> None:
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    OUTPUT_EDI_PATH.write_text(edi_text)
 
 if __name__ == "__main__":
     main()

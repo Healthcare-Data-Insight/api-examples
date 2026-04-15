@@ -1,18 +1,8 @@
 from __future__ import annotations
 
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import Field
 
-
-def to_camel(s: str) -> str:
-    parts = s.split("_")
-    return parts[0] + "".join(word.capitalize() for word in parts[1:])
-
-
-class EdiConverterModel(BaseModel):
-    model_config = ConfigDict(
-        alias_generator=to_camel,
-        populate_by_name=True,
-    )
+from .base import EdiConverterModel, to_camel
 
 
 class Address(EdiConverterModel):
@@ -932,6 +922,8 @@ class ProfClaim(EdiConverterModel):
     id: str | None = None
     object_type: str | None = None
     patient_control_number: str | None = None
+    ''' Patient Control Number '''
+    # Patient charge amount
     charge_amount: float | None = None
     patient_paid_amount: float | None = None
     facility_code: Code | None = None
