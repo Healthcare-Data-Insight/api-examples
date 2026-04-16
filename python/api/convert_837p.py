@@ -2,8 +2,7 @@ import edi_converter
 from edi_converter import ObjectType
 from edi_model.all_classes import ProfClaim
 """
-Converts an 837 file by posting the file's content
-The response is an array of JSON objects.
+Converts an 837 file by posting the file's content and deserializing the response into a ProfClaim object.
 API documentation:
 https://datainsight.health/docs/ediconvert-api/reference/#tag/EDI-to-JSON
 Schemas:

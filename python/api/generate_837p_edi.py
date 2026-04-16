@@ -48,9 +48,6 @@ def build_request() -> EdiGenClaimRequest:
 
     subscriber = Subscriber(
         payer_responsibility_sequence=PayerRespSequenceType.PRIMARY,
-        relationship_type=RelationshipType.SELF,
-        group_or_policy_number="2222",
-        insurance_plan_type=InsurancePlanType.COMMERCIAL,
         person=PersonWithDemographic(
             identifier="JS00111223333",
             last_name_or_org_name="Smith",
