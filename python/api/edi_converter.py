@@ -1,10 +1,8 @@
-from datetime import date, datetime
 from enum import Enum
 
 import requests
 
 import env
-from edi_model.base import EdiEnum
 
 
 class ObjectType(Enum):
@@ -34,8 +32,8 @@ def convert_files_with_multipart(files, is_ndjson):
     params = {'ndjson': is_ndjson}
     # Use stream=True to stream the response instead of loading it in memory
     api_response = requests.post(api_url, files=field_and_file_objects, params=params, stream=True)
-    if api_response.status_code != 200:
-        raise Exception(f'Error parsing EDI; Error: {api_response.text}')
+    api_response.raise_for_status()
+
     return api_response
 
 
@@ -70,18 +68,6 @@ def generate_claim_edi(request):
     if api_response.status_code not in {200, 417}:
         api_response.raise_for_status()
     return api_response
-
-
-def _serialize_edi_enums(value):
-    if isinstance(value, EdiEnum):
-        return value.name
-    if isinstance(value, (date, datetime)):
-        return value.isoformat()
-    if isinstance(value, dict):
-        return {k: _serialize_edi_enums(v) for k, v in value.items()}
-    if isinstance(value, list):
-        return [_serialize_edi_enums(v) for v in value]
-    return value
 
 
 def handle_warning_error(obj):

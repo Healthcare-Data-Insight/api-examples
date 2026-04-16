@@ -18,42 +18,12 @@ class EdiConverterModel(BaseModel):
     def __str__(self) -> str:
         data = self.model_dump(exclude_none=True)
         return data.__str__()
-        # return json.dumps(data, indent=2)
 
     def __repr__(self) -> str:
         return self.__str__()
 
 
-class EdiEnumOld(Enum):
-    def __new__(cls, code):
-        obj = object.__new__(cls)
-        obj._value_ = code
-        return obj
-
-    @property
-    def code(self):
-        return self.value
-
-    @classmethod
-    def from_code(cls, code):
-        return cls(code)
-
-    def __str__(self):
-        return self.code
-
-
 class EdiEnum(Enum):
-    """
-    Base enum for cases like:
-      HEIGHT = ("HT", None)
-
-    Behavior:
-    - enum.value -> "HT"         (EDI code)
-    - enum.name  -> "HEIGHT"     (symbolic name)
-    - enum.desc  -> optional description
-    - Pydantic input accepts enum names, e.g. "HEIGHT"
-    - Pydantic output emits enum names, e.g. "HEIGHT"
-    """
 
     def __new__(cls, code: str):
         obj = object.__new__(cls)

@@ -5,7 +5,8 @@ import datetime as dt
 from pydantic import Field
 
 from .base import EdiConverterModel, to_camel
-from .enums import AdjustmentGroup, AmbulanceTransportReason, AmountType, ClaimOrEncounterIdentifierType, ClaimStatus, \
+from .enums import AdjustmentGroup, AmbulanceTransportReason, AmountType, ClaimOrEncounterIdentifierType, \
+    AdjudicatedClaimStatus, \
     ConditionsIndicatorCategory, DateType, DmeBillingFrequency, EntityRole, EntityType, GenderType, IdentificationType, \
     InsurancePlanType, MeasurementType, PayerRespSequenceType, PaymentMethodType, QuantityType, ReferenceType, \
     RelationshipType, StatusActionType, TransactionHandlingType, UnitType
@@ -1428,8 +1429,8 @@ class Payment(EdiConverterModel):
     'Parent EDI transaction for this object. EDI: ST.'
     claim_status_code: str | None = Field(default=None, description='Claim status code. EDI: CLP02.')
     'Claim status code. EDI: CLP02.'
-    claim_status: ClaimStatus | None = Field(default=None,
-                                             description='Claim status code translated to a string constant (enum). EDI: CLP02.')
+    claim_status: AdjudicatedClaimStatus | None = Field(default=None,
+                                                        description='Claim status code translated to a string constant (enum). EDI: CLP02.')
     'Claim status code translated to a string constant (enum). EDI: CLP02.'
     patient_responsibility_amount: float | None = Field(default=None,
                                                         description='Patient responsibility amount. EDI: CLP05.')
@@ -1502,7 +1503,7 @@ class PaymentCsv(EdiConverterModel):
     patient_control_number: str | None = Field(default=None,
                                                description='Identifier used to track a claim from creation by the health care provider through payment. EDI: CLP01.')
     'Identifier used to track a claim from creation by the health care provider through payment. EDI: CLP01.'
-    claim_status: ClaimStatus | None = Field(default=None, description='Claim status.')
+    claim_status: AdjudicatedClaimStatus | None = Field(default=None, description='Claim status.')
     'Claim status.'
     charge_amount: float | None = Field(default=None, description='Charge amount. EDI: CLP03.')
     'Charge amount. EDI: CLP03.'
@@ -2774,7 +2775,7 @@ __all__ = [
     'AmbulanceTransportReason',
     'AmountType',
     'ClaimOrEncounterIdentifierType',
-    'ClaimStatus',
+    'AdjudicatedClaimStatus',
     'ConditionsIndicatorCategory',
     'DateType',
     'DmeBillingFrequency',
@@ -2801,7 +2802,7 @@ __all__ = [
     'AwsInOutKey',
     'AwsRequest',
     'BatchStatus',
-    'ClaimStatus',
+    'AdjudicatedClaimStatus',
     'Code',
     'CodeAndAmount',
     'CodeAndDate',

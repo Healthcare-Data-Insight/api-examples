@@ -508,7 +508,7 @@ class AdjustmentGroup(EdiEnum):
     PATIENT_RESPONSIBILITY = "PR"
 
 
-class ClaimStatus(EdiEnum):
+class AdjudicatedClaimStatus(EdiEnum):
     PRIMARY = "1"
     SECONDARY = "2"
     TERTIARY = "3"

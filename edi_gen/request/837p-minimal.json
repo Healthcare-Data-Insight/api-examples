@@ -3,24 +3,15 @@
     "senderIdQualifier": "ZZ",
     "senderId": "123",
     "receiverIdQualifier": "ZZ",
-    "receiverId": "456",
-    "interchangeDate": "2026-03-22",
-    "interchangeTime": "10:06",
-    "controlNumber": 1
+    "receiverId": "456"
   },
   "functionalGroup": {
     "transactionType": "PROF",
     "senderCode": "1",
-    "receiverCode": "2",
-    "date": "2026-03-22",
-    "time": "10:06",
-    "controlNumber": "1"
+    "receiverCode": "2"
   },
   "transaction": {
     "transactionType": "PROF",
-    "creationDate": "2026-03-22",
-    "creationTime": "10:06",
-    "originatorApplicationTransactionId": "1",
     "sender": {
       "identifier": "TGJ23",
       "lastNameOrOrgName": "PREMIER BILLING SERVICE",
@@ -54,8 +45,6 @@
         "payerResponsibilitySequence": "PRIMARY",
         "relationshipType": "SELF",
         "groupOrPolicyNumber": "2222",
-        "claimFilingIndicatorCode": "CI",
-        "insurancePlanType": "COMMERCIAL",
         "person": {
           "identifier": "JS00111223333",
           "lastNameOrOrgName": "Smith",
