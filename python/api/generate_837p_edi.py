@@ -11,6 +11,9 @@ def build_request() -> EdiGenClaimRequest:
     Returns:
         EdiGenClaimRequest: The generated claim request.
     """
+
+    # The API will default all other fields, e.g., date/time
+    # It will generate uni control numbers and IDs
     interchange_control = InterchangeControl(
         sender_id_qualifier="ZZ",
         sender_id="123",
@@ -26,6 +29,7 @@ def build_request() -> EdiGenClaimRequest:
 
     transaction = Transaction837(
         transaction_type="PROF",
+        # Sender and receiver are required for 837 claims
         sender=Party(
             identifier="TGJ23",
             last_name_or_org_name="PREMIER BILLING SERVICE",
@@ -115,7 +119,7 @@ def build_request() -> EdiGenClaimRequest:
 def main() -> None:
     request = build_request()
     response = edi_converter.generate_claim_edi(request)
-
+    # If the API returns a 417, it means there were validation issues
     if response.status_code == 417:
         validation_issues = [
             ValidationIssue.model_validate(issue_json) for issue_json in response.json()
