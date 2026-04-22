@@ -100,13 +100,13 @@ properties:
     - "WK"
     - "IV"
   revenueCode:
-    description: "Revenue code. EDI: SVC01*RC,NU, SVC04*RC,NU."
+    description: "Revenue code. EDI: SVC01*NU, SVC04*NU."
     $ref: "./Code.yaml"
     x-edi-elt-designators:
     - "SVC01"
     - "SVC04"
     x-edi-qualifiers:
-    - "RC,NU"
+    - "NU"
   originalProcedure:
     description: "Submitted procedure code from the claim if it is different from the adjudicated procedure. EDI: SVC06*HC, SVC06*AD, SVC06*WK, SVC06*IV."
     $ref: "./Procedure.yaml"
@@ -118,12 +118,12 @@ properties:
     - "WK"
     - "IV"
   originalRevenueCode:
-    description: "Submitted revenue code from the claim if it is different from the adjudicated revenue code. EDI: SVC06*RC,NU."
+    description: "Submitted revenue code from the claim if it is different from the adjudicated revenue code. EDI: SVC06*NU."
     $ref: "./Code.yaml"
     x-edi-elt-designators:
     - "SVC06"
     x-edi-qualifiers:
-    - "RC,NU"
+    - "NU"
   originalDrug:
     description: "Submitted drug (NDC) code from the claim if it is different from the adjudicated drug code. EDI: SVC06."
     $ref: "./Code.yaml"

@@ -20,13 +20,13 @@ properties:
     - "WK"
     - "IV"
   revenueCode:
-    description: "Adjudicated revenue code. EDI: SVC01*RC,NU, SVC04*RC,NU."
+    description: "Adjudicated revenue code. EDI: SVC01*NU, SVC04*NU."
     type: "string"
     x-edi-elt-designators:
     - "SVC01"
     - "SVC04"
     x-edi-qualifiers:
-    - "RC,NU"
+    - "NU"
   drugCode:
     description: "Adjudicated drug code (NDC). EDI: SVC01."
     type: "string"
@@ -61,12 +61,12 @@ properties:
     - "WK"
     - "IV"
   originalRevenueCode:
-    description: "Submitted revenue code from the claim if it is different from the adjudicated revenue code. EDI: SVC06*RC,NU."
+    description: "Submitted revenue code from the claim if it is different from the adjudicated revenue code. EDI: SVC06*NU."
     type: "string"
     x-edi-elt-designators:
     - "SVC06"
     x-edi-qualifiers:
-    - "RC,NU"
+    - "NU"
   originalDrugCode:
     description: "Submitted drug (NDC) code from the claim if it is different from the adjudicated drug code. EDI: SVC06."
     type: "string"

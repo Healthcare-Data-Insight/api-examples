@@ -97,12 +97,12 @@ properties:
     - "WK"
     - "IV"
   revenueCode:
-    description: "Revenue code. EDI: SV201*RC,NU."
+    description: "Revenue code. EDI: SV201*NU."
     $ref: "./Code.yaml"
     x-edi-elt-designators:
     - "SV201"
     x-edi-qualifiers:
-    - "RC,NU"
+    - "NU"
   attachments:
     description: "Attachments. EDI: PWK."
     type: "array"

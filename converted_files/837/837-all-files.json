@@ -1,6 +1,6 @@
 [
  {
-  "id" : "699b6efe8f62cf744b5696cb",
+  "id" : "69e82c67836d7d05c9a02bda",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26403774",
   "chargeAmount" : 150.00,
@@ -583,7 +583,7 @@
     }
   } ],
   "transaction" : {
-    "id" : "699b6efe8f62cf744b569635",
+    "id" : "69e82c67836d7d05c9a02b44",
     "controlNumber" : "3456",
     "transactionType" : "DENTAL",
     "hierarchicalStructureCode" : "0019",
@@ -626,7 +626,7 @@
   }
 }
 , {
-  "id" : "699b6efe8f62cf744b569713",
+  "id" : "69e82c67836d7d05c9a02c22",
   "objectType" : "CLAIM",
   "patientControlNumber" : "051068",
   "chargeAmount" : 766.50,
@@ -930,7 +930,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "699b6efe8f62cf744b5696d0",
+    "id" : "69e82c67836d7d05c9a02bdf",
     "controlNumber" : "000017712",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -944,7 +944,7 @@
     "fileInfo" : {
       "name" : "ambulance.dat",
       "url" : "file:/edi-samples/edi_files/837/ambulance.dat",
-      "lastModifiedDateTime" : "2026-02-21T14:36:15.045-05:00",
+      "lastModifiedDateTime" : "2026-02-22T16:05:15.378-05:00",
       "fileType" : "EDI"
     },
     "sender" : {
@@ -973,7 +973,7 @@
   }
 }
 , {
-  "id" : "699b6efe8f62cf744b569743",
+  "id" : "69e82c67836d7d05c9a02c52",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26462967",
   "chargeAmount" : 100.00,
@@ -1149,7 +1149,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "699b6efe8f62cf744b569717",
+    "id" : "69e82c67836d7d05c9a02c26",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -1195,7 +1195,7 @@
   }
 }
 , {
-  "id" : "699b6efe8f62cf744b5697e5",
+  "id" : "69e82c67836d7d05c9a02cf4",
   "objectType" : "CLAIM",
   "patientControlNumber" : "ABC0002",
   "chargeAmount" : 89.93,
@@ -2481,7 +2481,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "699b6efe8f62cf744b569748",
+    "id" : "69e82c67836d7d05c9a02c57",
     "controlNumber" : "00000024",
     "transactionType" : "INST",
     "hierarchicalStructureCode" : "0019",
@@ -2524,7 +2524,7 @@
   }
 }
 , {
-  "id" : "699b6efe8f62cf744b56980e",
+  "id" : "69e82c67836d7d05c9a02d1d",
   "objectType" : "CLAIM",
   "patientControlNumber" : "125WILL",
   "chargeAmount" : 145.50,
@@ -2632,7 +2632,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "699b6efe8f62cf744b5697ea",
+    "id" : "69e82c67836d7d05c9a02cf9",
     "controlNumber" : "3701",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -2646,7 +2646,7 @@
     "fileInfo" : {
       "name" : "chiro.dat",
       "url" : "file:/edi-samples/edi_files/837/chiro.dat",
-      "lastModifiedDateTime" : "2026-02-21T14:38:13.895-05:00",
+      "lastModifiedDateTime" : "2026-02-22T16:05:15.379-05:00",
       "fileType" : "EDI"
     },
     "sender" : {
@@ -2675,7 +2675,7 @@
   }
 }
 , {
-  "id" : "699b6efe8f62cf744b569856",
+  "id" : "69e82c67836d7d05c9a02d65",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26407789",
   "chargeAmount" : 79.04,
@@ -3050,7 +3050,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "699b6efe8f62cf744b569811",
+    "id" : "69e82c67836d7d05c9a02d20",
     "controlNumber" : "0024",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -3093,7 +3093,7 @@
   }
 }
 , {
-  "id" : "699b6efe8f62cf744b56988d",
+  "id" : "69e82c67836d7d05c9a02d9c",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26463774",
   "chargeAmount" : 100.00,
@@ -3302,7 +3302,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "699b6efe8f62cf744b569859",
+    "id" : "69e82c67836d7d05c9a02d68",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -3316,7 +3316,7 @@
     "fileInfo" : {
       "name" : "837P-X298-all-fields.dat",
       "url" : "file:/edi-samples/edi_files/837/837P-X298-all-fields.dat",
-      "lastModifiedDateTime" : "2026-02-11T13:54:57.176-05:00",
+      "lastModifiedDateTime" : "2026-02-22T16:05:15.378-05:00",
       "fileType" : "EDI"
     },
     "sender" : {
@@ -3348,7 +3348,253 @@
   }
 }
 , {
-  "id" : "699b6efe8f62cf744b5698bb",
+  "id" : "69e82c67836d7d05c9a02dd2",
+  "objectType" : "CLAIM",
+  "patientControlNumber" : "756048Q",
+  "chargeAmount" : 89.93,
+  "facilityCode" : {
+    "subType" : "FACILITY_TYPE",
+    "code" : "14",
+    "desc" : "Hospital; laboratory services provided to nonpatients"
+  },
+  "placeOfServiceType" : "OUTPATIENT",
+  "frequencyCode" : {
+    "subType" : "FREQUENCY_CODE",
+    "code" : "1",
+    "desc" : "Original claim"
+  },
+  "statementDateFrom" : "2016-09-11",
+  "statementDateTo" : "2016-09-13",
+  "serviceDateFrom" : "2016-09-11",
+  "serviceDateTo" : "2016-09-11",
+  "subscriber" : {
+    "payerResponsibilitySequence" : "PRIMARY",
+    "relationshipType" : "SELF",
+    "claimFilingIndicatorCode" : "MB",
+    "insurancePlanType" : "MEDICARE_B",
+    "person" : {
+      "entityRole" : "INSURED_SUBSCRIBER",
+      "entityType" : "INDIVIDUAL",
+      "identificationType" : "MEMBER_ID",
+      "identifier" : "030005074A",
+      "lastNameOrOrgName" : "DOE",
+      "firstName" : "JOHN",
+      "middleName" : "T",
+      "birthDate" : "1926-11-11",
+      "gender" : "MALE",
+      "address" : {
+        "line" : "125 CITY AVENUE",
+        "city" : "CENTERVILLE",
+        "stateCode" : "PA",
+        "zipCode" : "17111"
+      }
+    },
+    "payer" : {
+      "entityRole" : "PAYER",
+      "entityType" : "BUSINESS",
+      "identificationType" : "PAYOR_ID",
+      "identifier" : "00435",
+      "lastNameOrOrgName" : "MEDICARE B",
+      "additionalIds" : [ {
+        "qualifierCode" : "G2",
+        "type" : "PROVIDER_COMMERCIAL_NUMBER",
+        "identification" : "330127"
+      } ]
+    }
+  },
+  "otherSubscribers" : [ {
+    "payerResponsibilitySequence" : "SECONDARY",
+    "relationshipType" : "SPOUSE",
+    "groupOrPolicyNumber" : "351630",
+    "groupName" : "STATE TEACHERS",
+    "claimFilingIndicatorCode" : "CI",
+    "insurancePlanType" : "COMMERCIAL",
+    "person" : {
+      "entityRole" : "INSURED_SUBSCRIBER",
+      "entityType" : "INDIVIDUAL",
+      "identificationType" : "MEMBER_ID",
+      "identifier" : "222004433",
+      "lastNameOrOrgName" : "DOE",
+      "firstName" : "JANE",
+      "middleName" : "S",
+      "address" : {
+        "line" : "125 CITY AVENUE",
+        "city" : "CENTERVILLE",
+        "stateCode" : "PA",
+        "zipCode" : "17111"
+      }
+    },
+    "payer" : {
+      "entityRole" : "PAYER",
+      "entityType" : "BUSINESS",
+      "identificationType" : "PAYOR_ID",
+      "identifier" : "1135",
+      "lastNameOrOrgName" : "STATE TEACHERS"
+    }
+  } ],
+  "assignmentParticipationCode" : "A",
+  "assignmentCertificationIndicator" : "Y",
+  "releaseOfInformationCode" : "Y",
+  "admissionTypeCode" : "3",
+  "patientStatusCode" : "01",
+  "billingProvider" : {
+    "entityRole" : "BILLING_PROVIDER",
+    "entityType" : "BUSINESS",
+    "identificationType" : "NPI",
+    "identifier" : "9876540809",
+    "taxId" : "567891234",
+    "lastNameOrOrgName" : "JONES HOSPITAL",
+    "address" : {
+      "line" : "225 MAIN STREET BARKLEY BUILDING",
+      "city" : "CENTERVILLE",
+      "stateCode" : "PA",
+      "zipCode" : "17111"
+    },
+    "providerTaxonomy" : {
+      "subType" : "PROVIDER_TAXONOMY",
+      "code" : "282N00000X",
+      "desc" : "General Acute Care Hospital"
+    }
+  },
+  "providers" : [ {
+    "entityRole" : "ATTENDING",
+    "entityType" : "INDIVIDUAL",
+    "identificationType" : "NPI",
+    "identifier" : "1122334455",
+    "lastNameOrOrgName" : "JONES",
+    "firstName" : "JOHN",
+    "middleName" : "J",
+    "additionalIds" : [ {
+      "qualifierCode" : "1G",
+      "type" : "PROVIDER_UPIN_NUMBER",
+      "identification" : "B99937"
+    } ]
+  } ],
+  "diags" : [ {
+    "subType" : "ICD_10_PRINCIPAL",
+    "code" : "H269",
+    "desc" : "Unspecified cataract",
+    "formattedCode" : "H26.9"
+  }, {
+    "subType" : "ICD_10",
+    "code" : "I10",
+    "desc" : "Essential (primary) hypertension",
+    "formattedCode" : "I10"
+  }, {
+    "subType" : "ICD_10",
+    "code" : "R9431",
+    "desc" : "Abnormal electrocardiogram [ECG] [EKG]",
+    "formattedCode" : "R94.31"
+  } ],
+  "occurrences" : [ {
+    "subType" : "OCCURRENCE",
+    "code" : "A1",
+    "desc" : "BIRTH DATE-INSURED A",
+    "occurrenceDate" : "1926-11-11"
+  }, {
+    "subType" : "OCCURRENCE",
+    "code" : "A2",
+    "desc" : "EFFECTIVE DATE-INSURED A POLICY",
+    "occurrenceDate" : "1991-11-01"
+  }, {
+    "subType" : "OCCURRENCE",
+    "code" : "B1",
+    "desc" : "BIRTH DATE-INSURED B",
+    "occurrenceDate" : "1926-11-11"
+  }, {
+    "subType" : "OCCURRENCE",
+    "code" : "B2",
+    "desc" : "EFFECTIVE DATE-INSURED B POLICY",
+    "occurrenceDate" : "1987-01-01"
+  } ],
+  "valueInfos" : [ {
+    "subType" : "VALUE",
+    "code" : "A2",
+    "desc" : "Coinsurance Payer A (reportable only on paper claims)",
+    "amount" : 15.31
+  } ],
+  "conditions" : [ {
+    "subType" : "CONDITION",
+    "code" : "09",
+    "desc" : "NEITHER PATIENT NOR SPOUSE IS EMPLOYED",
+    "instructionDesc" : "This code indicates that the patient and spouse have denied having any employment in response to MSP development questions."
+  } ],
+  "serviceLines" : [ {
+    "chargeAmount" : 13.39,
+    "serviceDateFrom" : "2016-09-11",
+    "unitType" : "UNIT",
+    "unitCount" : 1,
+    "procedure" : {
+      "subType" : "CPT",
+      "code" : "85025",
+      "desc" : "Blood count; complete (CBC), automated (Hgb, Hct, RBC, WBC and platelet count) and automated differential WBC count"
+    },
+    "revenueCode" : {
+      "subType" : "REVENUE_CODE",
+      "code" : "0305",
+      "desc" : "Laboratory-Hematology"
+    }
+  }, {
+    "chargeAmount" : 76.54,
+    "serviceDateFrom" : "2016-09-11",
+    "unitType" : "UNIT",
+    "unitCount" : 3,
+    "procedure" : {
+      "subType" : "CPT",
+      "code" : "93005",
+      "desc" : "Electrocardiogram, routine ECG with at least 12 leads; tracing only, without interpretation and report"
+    },
+    "revenueCode" : {
+      "subType" : "REVENUE_CODE",
+      "code" : "0730",
+      "desc" : "EKG/ECG (Electrocardiogram)-General"
+    }
+  } ],
+  "transaction" : {
+    "id" : "69e82c67836d7d05c9a02da1",
+    "controlNumber" : "0021",
+    "transactionType" : "INST",
+    "hierarchicalStructureCode" : "0019",
+    "purposeCode" : "00",
+    "originatorApplicationTransactionId" : "0123",
+    "creationDate" : "2016-09-18",
+    "creationTime" : "09:32:00",
+    "claimOrEncounterIdentifierType" : "CHARGEABLE",
+    "transactionSetIdentifierCode" : "837",
+    "implementationConventionReference" : "005010X223A3",
+    "fileInfo" : {
+      "name" : "837I-minimal.dat",
+      "url" : "file:/edi-samples/edi_files/837/837I-minimal.dat",
+      "lastModifiedDateTime" : "2026-04-21T10:40:50.236-04:00",
+      "fileType" : "EDI"
+    },
+    "sender" : {
+      "entityRole" : "SUBMITTER",
+      "entityType" : "BUSINESS",
+      "identificationType" : "ETIN",
+      "identifier" : "12345",
+      "lastNameOrOrgName" : "JONES HOSPITAL",
+      "contacts" : [ {
+        "functionCode" : "IC",
+        "name" : "JANE DOE",
+        "contactNumbers" : [ {
+          "type" : "PHONE",
+          "number" : "9005555555"
+        } ]
+      } ]
+    },
+    "receiver" : {
+      "entityRole" : "RECEIVER",
+      "entityType" : "BUSINESS",
+      "identificationType" : "ETIN",
+      "identifier" : "00120",
+      "lastNameOrOrgName" : "MEDICARE"
+    },
+    "creationDateTime" : "2016-09-18T09:32:00"
+  }
+}
+, {
+  "id" : "69e82c67836d7d05c9a02e00",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26463774",
   "chargeAmount" : 100.00,
@@ -3508,7 +3754,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "699b6efe8f62cf744b569891",
+    "id" : "69e82c67836d7d05c9a02dd6",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -3554,7 +3800,7 @@
   }
 }
 , {
-  "id" : "699b6efe8f62cf744b56992f",
+  "id" : "69e82c67836d7d05c9a02e74",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26462967",
   "chargeAmount" : 100.00,
@@ -3730,7 +3976,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "699b6efe8f62cf744b5698be",
+    "id" : "69e82c67836d7d05c9a02e03",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -3776,7 +4022,7 @@
   }
 }
 , {
-  "id" : "699b6efe8f62cf744b569930",
+  "id" : "69e82c67836d7d05c9a02e75",
   "objectType" : "CLAIM",
   "patientControlNumber" : "125WILL",
   "chargeAmount" : 145.50,
@@ -3884,7 +4130,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "699b6efe8f62cf744b5698eb",
+    "id" : "69e82c67836d7d05c9a02e30",
     "controlNumber" : "3701",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -3927,7 +4173,7 @@
   }
 }
 , {
-  "id" : "699b6efe8f62cf744b569931",
+  "id" : "69e82c67836d7d05c9a02e76",
   "objectType" : "CLAIM",
   "patientControlNumber" : "153829140",
   "chargeAmount" : 827.00,
@@ -4090,7 +4336,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "699b6efe8f62cf744b56990c",
+    "id" : "69e82c67836d7d05c9a02e51",
     "controlNumber" : "0001",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -4136,7 +4382,7 @@
   }
 }
 , {
-  "id" : "699b6efe8f62cf744b569961",
+  "id" : "69e82c67836d7d05c9a02ea6",
   "objectType" : "CLAIM",
   "patientControlNumber" : "756048Q",
   "chargeAmount" : 89.93,
@@ -4338,7 +4584,7 @@
     }
   } ],
   "transaction" : {
-    "id" : "699b6efe8f62cf744b569934",
+    "id" : "69e82c67836d7d05c9a02e79",
     "controlNumber" : "987654",
     "transactionType" : "INST",
     "hierarchicalStructureCode" : "0019",
@@ -4381,7 +4627,7 @@
   }
 }
 , {
-  "id" : "699b6efe8f62cf744b569993",
+  "id" : "69e82c67836d7d05c9a02ed8",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26463774",
   "chargeAmount" : 100.00,
@@ -4558,7 +4804,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "699b6efe8f62cf744b569964",
+    "id" : "69e82c67836d7d05c9a02ea9",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -4604,7 +4850,7 @@
   }
 }
 , {
-  "id" : "699b6efe8f62cf744b5699bf",
+  "id" : "69e82c67836d7d05c9a02f04",
   "objectType" : "CLAIM",
   "patientControlNumber" : "153829140",
   "chargeAmount" : 827.00,
@@ -4767,7 +5013,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "699b6efe8f62cf744b569998",
+    "id" : "69e82c67836d7d05c9a02edd",
     "controlNumber" : "0001",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -4781,7 +5027,7 @@
     "fileInfo" : {
       "name" : "anesthesia.dat",
       "url" : "file:/edi-samples/edi_files/837/anesthesia.dat",
-      "lastModifiedDateTime" : "2026-02-21T14:42:59.643-05:00",
+      "lastModifiedDateTime" : "2026-02-22T16:05:15.379-05:00",
       "fileType" : "EDI"
     },
     "sender" : {
@@ -4813,7 +5059,7 @@
   }
 }
 , {
-  "id" : "699b6efe8f62cf744b5699f9",
+  "id" : "69e82c67836d7d05c9a02f3e",
   "objectType" : "CLAIM",
   "patientControlNumber" : "SMI123",
   "chargeAmount" : 75.00,
@@ -5021,7 +5267,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "699b6efe8f62cf744b5699c4",
+    "id" : "69e82c67836d7d05c9a02f09",
     "controlNumber" : "112233",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -5035,7 +5281,7 @@
     "fileInfo" : {
       "name" : "wheelchair.dat",
       "url" : "file:/edi-samples/edi_files/837/wheelchair.dat",
-      "lastModifiedDateTime" : "2026-02-21T14:40:29.884-05:00",
+      "lastModifiedDateTime" : "2026-02-22T16:05:15.379-05:00",
       "fileType" : "EDI"
     },
     "sender" : {
@@ -5064,7 +5310,7 @@
   }
 }
 , {
-  "id" : "699b6efe8f62cf744b569a28",
+  "id" : "69e82c67836d7d05c9a02f6d",
   "objectType" : "CLAIM",
   "patientControlNumber" : "ABC123-RI",
   "chargeAmount" : 28.75,
@@ -5238,7 +5484,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "699b6efe8f62cf744b5699fc",
+    "id" : "69e82c67836d7d05c9a02f41",
     "controlNumber" : "1002",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -5281,7 +5527,7 @@
   }
 }
 , {
-  "id" : "699b6efe8f62cf744b569a62",
+  "id" : "69e82c67836d7d05c9a02fa7",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26407789",
   "chargeAmount" : 79.04,
@@ -5530,7 +5776,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "699b6efe8f62cf744b569a2b",
+    "id" : "69e82c67836d7d05c9a02f70",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -5573,7 +5819,151 @@
   }
 }
 , {
-  "id" : "699b6efe8f62cf744b569aa9",
+  "id" : "69e82c67836d7d05c9a02fca",
+  "objectType" : "CLAIM",
+  "patientControlNumber" : "26463774",
+  "chargeAmount" : 100.00,
+  "facilityCode" : {
+    "subType" : "PLACE_OF_SERVICE",
+    "code" : "11",
+    "desc" : "Office"
+  },
+  "placeOfServiceType" : "OFFICE",
+  "frequencyCode" : {
+    "subType" : "FREQUENCY_CODE",
+    "code" : "1",
+    "desc" : "Original claim"
+  },
+  "serviceDateFrom" : "2006-10-03",
+  "serviceDateTo" : "2006-10-03",
+  "subscriber" : {
+    "payerResponsibilitySequence" : "PRIMARY",
+    "relationshipType" : "SELF",
+    "groupOrPolicyNumber" : "2222",
+    "claimFilingIndicatorCode" : "CI",
+    "insurancePlanType" : "COMMERCIAL",
+    "person" : {
+      "entityRole" : "INSURED_SUBSCRIBER",
+      "entityType" : "INDIVIDUAL",
+      "identificationType" : "MEMBER_ID",
+      "identifier" : "JS00111223333",
+      "lastNameOrOrgName" : "Smith",
+      "firstName" : "Jane",
+      "address" : {
+        "city" : "MAIMI",
+        "stateCode" : "FL",
+        "zipCode" : "33111"
+      }
+    },
+    "payer" : {
+      "entityRole" : "PAYER",
+      "entityType" : "BUSINESS",
+      "identificationType" : "PAYOR_ID",
+      "identifier" : "999996666",
+      "lastNameOrOrgName" : "KEY INSURANCE COMPANY",
+      "address" : {
+        "city" : "MAIMI",
+        "stateCode" : "FL",
+        "zipCode" : "33111"
+      }
+    }
+  },
+  "providerSignatureIndicator" : "Y",
+  "assignmentParticipationCode" : "A",
+  "assignmentCertificationIndicator" : "Y",
+  "releaseOfInformationCode" : "I",
+  "clearinghouseTraceNumber" : "17312345600006351",
+  "billingProvider" : {
+    "entityRole" : "BILLING_PROVIDER",
+    "entityType" : "BUSINESS",
+    "identificationType" : "NPI",
+    "identifier" : "9876543210",
+    "taxId" : "587654321",
+    "lastNameOrOrgName" : "Ben Kildare Service",
+    "address" : {
+      "line" : "234 SEAWAY ST",
+      "city" : "MIAMI",
+      "stateCode" : "FL",
+      "zipCode" : "33111"
+    }
+  },
+  "diags" : [ {
+    "subType" : "ICD_10_PRINCIPAL",
+    "code" : "J020",
+    "desc" : "Streptococcal pharyngitis",
+    "formattedCode" : "J02.0"
+  }, {
+    "subType" : "ICD_10",
+    "code" : "Z1159",
+    "desc" : "Encounter for screening for other viral diseases",
+    "formattedCode" : "Z11.59"
+  } ],
+  "serviceLines" : [ {
+    "chargeAmount" : 40.00,
+    "serviceDateFrom" : "2006-10-03",
+    "unitType" : "UNIT",
+    "unitCount" : 1,
+    "procedure" : {
+      "subType" : "CPT",
+      "code" : "99213",
+      "desc" : "Office or other outpatient visit for the evaluation and management of an established patient, which requires a medically appropriate history and/or examination and low level of medical decision making. When using total time on the date of the encounter for code selection, 20 minutes must be met or exceeded."
+    },
+    "diagPointers" : [ 1 ],
+    "diags" : [ {
+      "subType" : "ICD_10_PRINCIPAL",
+      "code" : "J020",
+      "desc" : "Streptococcal pharyngitis",
+      "formattedCode" : "J02.0"
+    } ]
+  } ],
+  "transaction" : {
+    "id" : "69e82c67836d7d05c9a02fac",
+    "controlNumber" : "0021",
+    "transactionType" : "PROF",
+    "hierarchicalStructureCode" : "0019",
+    "purposeCode" : "00",
+    "originatorApplicationTransactionId" : "244579",
+    "creationDate" : "2006-10-15",
+    "creationTime" : "10:23:00",
+    "claimOrEncounterIdentifierType" : "CHARGEABLE",
+    "transactionSetIdentifierCode" : "837",
+    "implementationConventionReference" : "005010X222A2",
+    "fileInfo" : {
+      "name" : "837P-minimal.dat",
+      "url" : "file:/edi-samples/edi_files/837/837P-minimal.dat",
+      "lastModifiedDateTime" : "2026-04-21T10:40:50.236-04:00",
+      "fileType" : "EDI"
+    },
+    "sender" : {
+      "entityRole" : "SUBMITTER",
+      "entityType" : "BUSINESS",
+      "identificationType" : "ETIN",
+      "identifier" : "TGJ23",
+      "lastNameOrOrgName" : "PREMIER BILLING SERVICE",
+      "contacts" : [ {
+        "functionCode" : "IC",
+        "name" : "JERRY",
+        "contactNumbers" : [ {
+          "type" : "PHONE",
+          "number" : "3055552222"
+        }, {
+          "type" : "EXTENSION",
+          "number" : "231"
+        } ]
+      } ]
+    },
+    "receiver" : {
+      "entityRole" : "RECEIVER",
+      "entityType" : "BUSINESS",
+      "identificationType" : "ETIN",
+      "identifier" : "66783JJT",
+      "lastNameOrOrgName" : "KEY INSURANCE COMPANY"
+    },
+    "creationDateTime" : "2006-10-15T10:23:00"
+  }
+}
+, {
+  "id" : "69e82c67836d7d05c9a03011",
   "objectType" : "CLAIM",
   "patientControlNumber" : "CLMNO12345",
   "chargeAmount" : 2232.93,
@@ -5873,7 +6263,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "699b6efe8f62cf744b569a65",
+    "id" : "69e82c67836d7d05c9a02fcd",
     "controlNumber" : "0711",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -5916,7 +6306,7 @@
   }
 }
 , {
-  "id" : "699b6efe8f62cf744b569b63",
+  "id" : "69e82c67836d7d05c9a030ce",
   "objectType" : "CLAIM",
   "patientControlNumber" : "36463774",
   "chargeAmount" : 100.00,
@@ -6211,7 +6601,7 @@
       } ]
     }, {
       "entityRole" : "SERVICE_FACILITY",
-      "entityType" : "INDIVIDUAL",
+      "entityType" : "BUSINESS",
       "additionalIds" : [ {
         "qualifierCode" : "G2",
         "type" : "PROVIDER_COMMERCIAL_NUMBER",
@@ -6313,8 +6703,9 @@
   "payToPlan" : {
     "entityRole" : "PAYEE",
     "entityType" : "BUSINESS",
-    "identificationType" : "NPI",
+    "identificationType" : "CMS_PLAN_ID",
     "identifier" : "PTP123",
+    "taxId" : "587654321",
     "lastNameOrOrgName" : "PLAN TO PAY TO",
     "address" : {
       "line" : "236 SEAWAY ST",
@@ -6598,6 +6989,8 @@
       "subType" : "NDC",
       "code" : "01234567891"
     },
+    "drugQuantity" : 1.01,
+    "drugUnitType" : "UNIT",
     "procedure" : {
       "subType" : "CPT",
       "code" : "86663",
@@ -6677,7 +7070,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "699b6efe8f62cf744b569aae",
+    "id" : "69e82c67836d7d05c9a03016",
     "controlNumber" : "0031",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -6691,7 +7084,7 @@
     "fileInfo" : {
       "name" : "837P-all-fields.dat",
       "url" : "file:/edi-samples/edi_files/837/837P-all-fields.dat",
-      "lastModifiedDateTime" : "2026-02-21T14:46:02.318-05:00",
+      "lastModifiedDateTime" : "2026-04-21T10:52:26.193-04:00",
       "fileType" : "EDI"
     },
     "sender" : {
@@ -6723,7 +7116,7 @@
   }
 }
 , {
-  "id" : "699b6efe8f62cf744b569b9e",
+  "id" : "69e82c67836d7d05c9a03109",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26463774",
   "chargeAmount" : 100.00,
@@ -6939,7 +7332,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "699b6efe8f62cf744b569b66",
+    "id" : "69e82c67836d7d05c9a030d1",
     "controlNumber" : "0021",
     "transactionType" : "INST",
     "hierarchicalStructureCode" : "0019",
@@ -6953,7 +7346,7 @@
     "fileInfo" : {
       "name" : "837I-X299-all-fields.dat",
       "url" : "file:/edi-samples/edi_files/837/837I-X299-all-fields.dat",
-      "lastModifiedDateTime" : "2026-02-11T13:54:57.176-05:00",
+      "lastModifiedDateTime" : "2026-02-22T16:05:15.377-05:00",
       "fileType" : "EDI"
     },
     "sender" : {

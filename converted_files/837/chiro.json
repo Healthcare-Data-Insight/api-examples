@@ -1,6 +1,6 @@
 [
  {
-  "id" : "699b6efe8f62cf744b56a3ab",
+  "id" : "69e82c68836d7d05c9a04ad0",
   "objectType" : "CLAIM",
   "patientControlNumber" : "125WILL",
   "chargeAmount" : 145.50,
@@ -108,7 +108,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "699b6efe8f62cf744b56a387",
+    "id" : "69e82c68836d7d05c9a04aac",
     "controlNumber" : "3701",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -122,7 +122,7 @@
     "fileInfo" : {
       "name" : "chiro.dat",
       "url" : "file:/edi-samples/edi_files/837/chiro.dat",
-      "lastModifiedDateTime" : "2026-02-21T14:38:13.895-05:00",
+      "lastModifiedDateTime" : "2026-02-22T16:05:15.379-05:00",
       "fileType" : "EDI"
     },
     "sender" : {

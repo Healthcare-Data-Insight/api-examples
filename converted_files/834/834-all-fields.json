@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6976904de9a75feb64854c04",
+  "id" : "69e82c65836d7d05c9a00f86",
   "objectType" : "MEMBER_COVERAGE",
   "masterPolicyNumber" : "MasterPolicyNumber",
   "sponsor" : {
@@ -39,7 +39,7 @@
   "benefitStatusCode" : "A",
   "medicarePlanCode" : "A",
   "medicareEligibilityReasonCode" : "0",
-  "cobraEventCode" : "CE",
+  "cobraEventCode" : "1",
   "employmentStatusCode" : "FT",
   "studentStatusCode" : "N",
   "handicapIndicator" : "Y",
@@ -93,7 +93,7 @@
     "wageAmount" : 425.25,
     "workHoursCount" : 40,
     "employerLocationIdentificationCode" : "LocCode",
-    "salaryGradeCode" : "SalaryGrade",
+    "salaryGradeCode" : "Grade",
     "healthRelatedCode" : "X",
     "height" : 74,
     "weight" : 210,
@@ -154,10 +154,10 @@
       "functionCode" : "EP",
       "name" : "Employer's contact",
       "contactNumbers" : [ {
-        "type" : "HOME_PHONE",
+        "type" : "PHONE",
         "number" : "9172343334"
       }, {
-        "type" : "WORK_PHONE",
+        "type" : "PHONE",
         "number" : "9172341240"
       } ]
     } ]
@@ -176,10 +176,10 @@
       "functionCode" : "SK",
       "name" : "School's contact",
       "contactNumbers" : [ {
-        "type" : "HOME_PHONE",
+        "type" : "PHONE",
         "number" : "9172343334"
       }, {
-        "type" : "WORK_PHONE",
+        "type" : "PHONE",
         "number" : "9172341240"
       } ]
     } ]
@@ -370,7 +370,7 @@
         "contacts" : [ {
           "functionCode" : "CN",
           "contactNumbers" : [ {
-            "type" : "HOME_PHONE",
+            "type" : "PHONE",
             "number" : "9172343334"
           }, {
             "type" : "WORK_PHONE",
@@ -401,8 +401,8 @@
     "priorCoverageMonthCount" : "0"
   } ],
   "transaction" : {
-    "id" : "6976904de9a75feb64854bf5",
-    "controlNumber" : "1",
+    "id" : "69e82c65836d7d05c9a00f77",
+    "controlNumber" : "0001",
     "transactionType" : "MEMBER_COVERAGE",
     "purposeCode" : "00",
     "originatorApplicationTransactionId" : "1",
@@ -433,14 +433,14 @@
     "fileInfo" : {
       "name" : "834-all-fields.edi",
       "url" : "file:/edi-samples/edi_files/834/834-all-fields.edi",
-      "lastModifiedDateTime" : "2026-01-15T21:26:06.556-05:00",
+      "lastModifiedDateTime" : "2026-04-21T10:40:50.234-04:00",
       "fileType" : "EDI"
     },
     "creationDateTime" : "1998-05-20T12:00:00"
   }
 }
 , {
-  "id" : "6976904de9a75feb64854c5d",
+  "id" : "69e82c65836d7d05c9a00fdf",
   "objectType" : "MEMBER_COVERAGE",
   "masterPolicyNumber" : "MasterPolicyNumber",
   "sponsor" : {
@@ -532,8 +532,8 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6976904de9a75feb64854bf5",
-    "controlNumber" : "1",
+    "id" : "69e82c65836d7d05c9a00f77",
+    "controlNumber" : "0001",
     "transactionType" : "MEMBER_COVERAGE",
     "purposeCode" : "00",
     "originatorApplicationTransactionId" : "1",
@@ -564,16 +564,16 @@
     "fileInfo" : {
       "name" : "834-all-fields.edi",
       "url" : "file:/edi-samples/edi_files/834/834-all-fields.edi",
-      "lastModifiedDateTime" : "2026-01-15T21:26:06.556-05:00",
+      "lastModifiedDateTime" : "2026-04-21T10:40:50.234-04:00",
       "fileType" : "EDI"
     },
     "creationDateTime" : "1998-05-20T12:00:00"
   }
 }
 , {
-  "id" : "6976904de9a75feb64854c76",
+  "id" : "69e82c65836d7d05c9a00ff8",
   "objectType" : "MEMBER_COVERAGE",
-  "masterPolicyNumber" : "MasterPolicyNumbe2",
+  "masterPolicyNumber" : "MasterPolicyNumber2",
   "sponsor" : {
     "entityRole" : "PLAN_SPONSOR",
     "entityType" : "BUSINESS",
@@ -593,9 +593,9 @@
   "maintenanceTypeCode" : "021",
   "maintenanceReasonCode" : "20",
   "benefitStatusCode" : "A",
-  "cobraEventCode" : "CE",
+  "cobraEventCode" : "9",
   "employmentStatusCode" : "FT",
-  "studentStatusCode" : "ST",
+  "studentStatusCode" : "N",
   "handicapIndicator" : "Y",
   "identifier" : "member3",
   "groupOrPolicyNumber" : "group3",
@@ -638,8 +638,8 @@
     "amount" : 100.00
   } ],
   "transaction" : {
-    "id" : "6976904de9a75feb64854c6e",
-    "controlNumber" : "2",
+    "id" : "69e82c65836d7d05c9a00ff0",
+    "controlNumber" : "0002",
     "transactionType" : "MEMBER_COVERAGE",
     "purposeCode" : "00",
     "originatorApplicationTransactionId" : "1",
@@ -651,7 +651,7 @@
     "fileInfo" : {
       "name" : "834-all-fields.edi",
       "url" : "file:/edi-samples/edi_files/834/834-all-fields.edi",
-      "lastModifiedDateTime" : "2026-01-15T21:26:06.556-05:00",
+      "lastModifiedDateTime" : "2026-04-21T10:40:50.234-04:00",
       "fileType" : "EDI"
     },
     "creationDateTime" : "1998-05-20T12:00:00"

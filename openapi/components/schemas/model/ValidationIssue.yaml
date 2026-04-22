@@ -6,6 +6,7 @@ properties:
     description: "Issue type."
     type: "string"
     enum:
+    - "CONTROL"
     - "FORMAT"
     - "INVALID"
     - "LENGTH_EXCEEDED"
@@ -39,7 +40,7 @@ properties:
     description: "EDI qualifier or code for the segment if the segment is uniquely identified by the code."
     type: "string"
   maxNumberOfItems:
-    description: "Maximum number of items allowed for the segment or list."
+    description: "Maximum number of items allowed for the segment, list, or loop."
     type: "integer"
   actualNumberOfItems:
     description: "Actual number of items."

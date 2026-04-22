@@ -1,6 +1,6 @@
 [
  {
-  "id" : "69e82c68836d7d05c9a04c59",
+  "id" : "69e82c68836d7d05c9a04b85",
   "objectType" : "CLAIM",
   "patientControlNumber" : "756048Q",
   "chargeAmount" : 89.93,
@@ -16,6 +16,7 @@
     "desc" : "Original claim"
   },
   "statementDateFrom" : "2016-09-11",
+  "statementDateTo" : "2016-09-13",
   "serviceDateFrom" : "2016-09-11",
   "serviceDateTo" : "2016-09-11",
   "subscriber" : {
@@ -202,8 +203,8 @@
     }
   } ],
   "transaction" : {
-    "id" : "69e82c68836d7d05c9a04c2c",
-    "controlNumber" : "987654",
+    "id" : "69e82c68836d7d05c9a04b54",
+    "controlNumber" : "0021",
     "transactionType" : "INST",
     "hierarchicalStructureCode" : "0019",
     "purposeCode" : "00",
@@ -212,11 +213,11 @@
     "creationTime" : "09:32:00",
     "claimOrEncounterIdentifierType" : "CHARGEABLE",
     "transactionSetIdentifierCode" : "837",
-    "implementationConventionReference" : "005010X223",
+    "implementationConventionReference" : "005010X223A3",
     "fileInfo" : {
-      "name" : "837I-inst-claim.dat",
-      "url" : "file:/edi-samples/edi_files/837/837I-inst-claim.dat",
-      "lastModifiedDateTime" : "2023-08-28T03:50:07.198-04:00",
+      "name" : "837I-minimal.dat",
+      "url" : "file:/edi-samples/edi_files/837/837I-minimal.dat",
+      "lastModifiedDateTime" : "2026-04-21T10:40:50.236-04:00",
       "fileType" : "EDI"
     },
     "sender" : {

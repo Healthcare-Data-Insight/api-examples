@@ -1,6 +1,6 @@
 [
  {
-  "id" : "69e82c68836d7d05c9a04bb3",
+  "id" : "69e82c68836d7d05c9a04d7d",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26463774",
   "chargeAmount" : 100.00,
@@ -16,10 +16,11 @@
     "desc" : "Original claim"
   },
   "serviceDateFrom" : "2006-10-03",
-  "serviceDateTo" : "2006-10-10",
+  "serviceDateTo" : "2006-10-03",
   "subscriber" : {
     "payerResponsibilitySequence" : "PRIMARY",
-    "groupOrPolicyNumber" : "2222-SJ",
+    "relationshipType" : "SELF",
+    "groupOrPolicyNumber" : "2222",
     "claimFilingIndicatorCode" : "CI",
     "insurancePlanType" : "COMMERCIAL",
     "person" : {
@@ -29,8 +30,11 @@
       "identifier" : "JS00111223333",
       "lastNameOrOrgName" : "Smith",
       "firstName" : "Jane",
-      "birthDate" : "1943-05-01",
-      "gender" : "FEMALE"
+      "address" : {
+        "city" : "MAIMI",
+        "stateCode" : "FL",
+        "zipCode" : "33111"
+      }
     },
     "payer" : {
       "entityRole" : "PAYER",
@@ -38,27 +42,10 @@
       "identificationType" : "PAYOR_ID",
       "identifier" : "999996666",
       "lastNameOrOrgName" : "KEY INSURANCE COMPANY",
-      "additionalIds" : [ {
-        "qualifierCode" : "G2",
-        "type" : "PROVIDER_COMMERCIAL_NUMBER",
-        "identification" : "KA6663"
-      } ]
-    }
-  },
-  "patient" : {
-    "relationshipType" : "CHILD",
-    "person" : {
-      "entityRole" : "PATIENT",
-      "entityType" : "INDIVIDUAL",
-      "lastNameOrOrgName" : "Smith",
-      "firstName" : "Ted",
-      "birthDate" : "1973-05-01",
-      "gender" : "MALE",
       "address" : {
-        "line" : "236 N MAIN ST",
-        "city" : "MIAMI",
+        "city" : "MAIMI",
         "stateCode" : "FL",
-        "zipCode" : "33413"
+        "zipCode" : "33111"
       }
     }
   },
@@ -77,21 +64,6 @@
     "address" : {
       "line" : "234 SEAWAY ST",
       "city" : "MIAMI",
-      "stateCode" : "FL",
-      "zipCode" : "33111"
-    },
-    "providerTaxonomy" : {
-      "subType" : "PROVIDER_TAXONOMY",
-      "code" : "103G00000X",
-      "desc" : "Clinical Neuropsychologist"
-    }
-  },
-  "payToAddress" : {
-    "entityRole" : "PAY_TO_PROVIDER",
-    "entityType" : "BUSINESS",
-    "address" : {
-      "line" : "2345 OCEAN BLVD",
-      "city" : "MAIMI",
       "stateCode" : "FL",
       "zipCode" : "33111"
     }
@@ -124,43 +96,9 @@
       "desc" : "Streptococcal pharyngitis",
       "formattedCode" : "J02.0"
     } ]
-  }, {
-    "chargeAmount" : 15.00,
-    "serviceDateFrom" : "2006-10-03",
-    "unitType" : "UNIT",
-    "unitCount" : 1,
-    "procedure" : {
-      "subType" : "CPT",
-      "code" : "87070",
-      "desc" : "Culture, bacterial; any other source except urine, blood or stool, aerobic, with isolation and presumptive identification of isolates"
-    },
-    "diagPointers" : [ 1 ],
-    "diags" : [ {
-      "subType" : "ICD_10_PRINCIPAL",
-      "code" : "J020",
-      "desc" : "Streptococcal pharyngitis",
-      "formattedCode" : "J02.0"
-    } ]
-  }, {
-    "chargeAmount" : 35.00,
-    "serviceDateFrom" : "2006-10-10",
-    "unitType" : "UNIT",
-    "unitCount" : 1,
-    "procedure" : {
-      "subType" : "CPT",
-      "code" : "99214",
-      "desc" : "Office or other outpatient visit for the evaluation and management of an established patient, which requires a medically appropriate history and/or examination and moderate level of medical decision making. When using total time on the date of the encounter for code selection, 30 minutes must be met or exceeded."
-    },
-    "diagPointers" : [ 2 ],
-    "diags" : [ {
-      "subType" : "ICD_10",
-      "code" : "Z1159",
-      "desc" : "Encounter for screening for other viral diseases",
-      "formattedCode" : "Z11.59"
-    } ]
   } ],
   "transaction" : {
-    "id" : "69e82c68836d7d05c9a04b89",
+    "id" : "69e82c68836d7d05c9a04d5f",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -170,11 +108,11 @@
     "creationTime" : "10:23:00",
     "claimOrEncounterIdentifierType" : "CHARGEABLE",
     "transactionSetIdentifierCode" : "837",
-    "implementationConventionReference" : "005010X222",
+    "implementationConventionReference" : "005010X222A2",
     "fileInfo" : {
-      "name" : "commercial.dat",
-      "url" : "file:/edi-samples/edi_files/837/commercial.dat",
-      "lastModifiedDateTime" : "2024-01-31T20:06:16.189-05:00",
+      "name" : "837P-minimal.dat",
+      "url" : "file:/edi-samples/edi_files/837/837P-minimal.dat",
+      "lastModifiedDateTime" : "2026-04-21T10:40:50.236-04:00",
       "fileType" : "EDI"
     },
     "sender" : {

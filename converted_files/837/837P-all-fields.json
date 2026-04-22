@@ -1,6 +1,6 @@
 [
  {
-  "id" : "699b6efe8f62cf744b56a700",
+  "id" : "69e82c68836d7d05c9a04e81",
   "objectType" : "CLAIM",
   "patientControlNumber" : "36463774",
   "chargeAmount" : 100.00,
@@ -295,7 +295,7 @@
       } ]
     }, {
       "entityRole" : "SERVICE_FACILITY",
-      "entityType" : "INDIVIDUAL",
+      "entityType" : "BUSINESS",
       "additionalIds" : [ {
         "qualifierCode" : "G2",
         "type" : "PROVIDER_COMMERCIAL_NUMBER",
@@ -397,8 +397,9 @@
   "payToPlan" : {
     "entityRole" : "PAYEE",
     "entityType" : "BUSINESS",
-    "identificationType" : "NPI",
+    "identificationType" : "CMS_PLAN_ID",
     "identifier" : "PTP123",
+    "taxId" : "587654321",
     "lastNameOrOrgName" : "PLAN TO PAY TO",
     "address" : {
       "line" : "236 SEAWAY ST",
@@ -682,6 +683,8 @@
       "subType" : "NDC",
       "code" : "01234567891"
     },
+    "drugQuantity" : 1.01,
+    "drugUnitType" : "UNIT",
     "procedure" : {
       "subType" : "CPT",
       "code" : "86663",
@@ -761,7 +764,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "699b6efe8f62cf744b56a64b",
+    "id" : "69e82c68836d7d05c9a04dc9",
     "controlNumber" : "0031",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -775,7 +778,7 @@
     "fileInfo" : {
       "name" : "837P-all-fields.dat",
       "url" : "file:/edi-samples/edi_files/837/837P-all-fields.dat",
-      "lastModifiedDateTime" : "2026-02-21T14:46:02.318-05:00",
+      "lastModifiedDateTime" : "2026-04-21T10:52:26.193-04:00",
       "fileType" : "EDI"
     },
     "sender" : {

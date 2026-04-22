@@ -1,13 +1,14 @@
 [
  {
-  "id" : "69373692908378844c0ec758",
+  "id" : "69e82c65836d7d05c9a00b6c",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26403774",
   "chargeAmount" : 150.00,
   "patientPaidAmount" : 152.45,
   "facilityCode" : {
     "subType" : "PLACE_OF_SERVICE",
-    "code" : "11"
+    "code" : "11",
+    "desc" : "Office"
   },
   "placeOfServiceType" : "OFFICE",
   "frequencyCode" : {
@@ -582,7 +583,7 @@
     }
   } ],
   "transaction" : {
-    "id" : "69373692908378844c0ec6c2",
+    "id" : "69e82c65836d7d05c9a00ad6",
     "controlNumber" : "3456",
     "transactionType" : "DENTAL",
     "hierarchicalStructureCode" : "0019",
