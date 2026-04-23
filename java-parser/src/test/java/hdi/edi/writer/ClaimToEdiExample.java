@@ -8,7 +8,7 @@ import hdi.edi.parser.TransactionType;
 import hdi.model.ServiceLine;
 import hdi.model.claim.Claim;
 import hdi.model.control.FunctionalGroup;
-import hdi.model.control.Isa;
+import hdi.model.control.InterchangeControl;
 import hdi.model.enumtype.IdentificationType;
 import hdi.model.enumtype.UbCodeType;
 import hdi.model.enumtype.UnitType;
@@ -65,7 +65,7 @@ public class ClaimToEdiExample implements ParsingExampleHelper {
 
     private void writeIsaAndGs(EdiWriter ediWriter, TransactionType transactionType) {
         // EDI writer will assign a unique interchange control number
-        var isa = new Isa("ZZ", "123", "ZZ", "456");
+        var isa = new InterchangeControl("ZZ", "123", "ZZ", "456");
         // EDI writer will assign a unique group control number
         var gs = new FunctionalGroup(transactionType, "1", "2");
         ediWriter.writeIsa(isa);
