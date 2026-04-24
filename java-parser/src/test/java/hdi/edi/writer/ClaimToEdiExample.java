@@ -39,11 +39,13 @@ public class ClaimToEdiExample implements ParsingExampleHelper {
             var claim = createSimpleProfClaim();
             claim.billingProvider(createBillingProv());
             claim.subscriber(createSubscriber());
-            ediWriter.writeClaim(claim);
+            // The writer will perform full validation of the claim
+            var validationIssues = ediWriter.writeClaim(claim);
+            printValidationIssues(validationIssues);
             // Closing segments will be written automatically when the writer is closed
         }
         var s = FileUtils.readFileToString(ediFile, Charset.defaultCharset());
-        System.err.println(s);
+        System.out.println(s);
     }
 
     @Test
@@ -57,10 +59,11 @@ public class ClaimToEdiExample implements ParsingExampleHelper {
             var claim = createSimpleInstClaim();
             claim.billingProvider(createBillingProv());
             claim.subscriber(createSubscriber());
-            ediWriter.writeClaim(claim);
+            var validationIssues = ediWriter.writeClaim(claim);
+            printValidationIssues(validationIssues);
         }
         var s = FileUtils.readFileToString(ediFile, Charset.defaultCharset());
-        System.err.println(s);
+        System.out.println(s);
     }
 
     private void writeIsaAndGs(EdiWriter ediWriter, TransactionType transactionType) {
@@ -73,7 +76,7 @@ public class ClaimToEdiExample implements ParsingExampleHelper {
     }
 
     private Claim createSimpleProfClaim() {
-        var claim = Claim.createProfClaim("1234567890", new BigDecimal("100"), "11");
+        var claim = Claim.createProfClaim("1234567890", "11");
         claim.addDiagCodes(List.of("J0300", "Z1159"));
         var renderingProv = new OrgOrPerson(EntityRole.RENDERING, EntityType.INDIVIDUAL, IdentificationType.NPI, "1234567890", "Rendering", "Provider");
         claim.addProvider(renderingProv);
@@ -88,7 +91,7 @@ public class ClaimToEdiExample implements ParsingExampleHelper {
     }
 
     private Claim createSimpleInstClaim() {
-        var claim = Claim.createInstClaim("1234567890", new BigDecimal("100"), "11", "01", LocalDate.of(2025, 1, 1), LocalDate.of(2025, 1, 31));
+        var claim = Claim.createInstClaim("1234567890", "11", "1", "01", LocalDate.of(2025, 1, 1), LocalDate.of(2025, 1, 31));
         // The first diagnosis code is the principal code
         claim.addDiagCodes(List.of("M24562", "E8359", "Z1159"));
         // The first diagnosis was present on admission
