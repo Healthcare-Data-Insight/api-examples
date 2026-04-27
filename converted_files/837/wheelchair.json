@@ -1,6 +1,6 @@
 [
  {
-  "id" : "699b6efe8f62cf744b56a596",
+  "id" : "69efef05ad4799caa7f5da16",
   "objectType" : "CLAIM",
   "patientControlNumber" : "SMI123",
   "chargeAmount" : 75.00,
@@ -44,7 +44,12 @@
       "entityType" : "BUSINESS",
       "identificationType" : "PAYOR_ID",
       "identifier" : "99999",
-      "lastNameOrOrgName" : "DMERC CARRIER"
+      "lastNameOrOrgName" : "DMERC CARRIER",
+      "address" : {
+        "city" : "LAFAYETTE",
+        "stateCode" : "IN",
+        "zipCode" : "47904"
+      }
     }
   },
   "providerSignatureIndicator" : "Y",
@@ -57,6 +62,7 @@
     "identificationType" : "NPI",
     "identifier" : "7778889999",
     "taxId" : "123567989",
+    "taxIdType" : "EIN",
     "lastNameOrOrgName" : "XYZ WHEELCHAIR INC",
     "address" : {
       "line" : "1440 NORTH STREET",
@@ -208,7 +214,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "699b6efe8f62cf744b56a561",
+    "id" : "69efef05ad4799caa7f5d9e0",
     "controlNumber" : "112233",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -218,11 +224,11 @@
     "creationTime" : "10:36:00",
     "claimOrEncounterIdentifierType" : "CHARGEABLE",
     "transactionSetIdentifierCode" : "837",
-    "implementationConventionReference" : "005010X222",
+    "implementationConventionReference" : "005010X222A2",
     "fileInfo" : {
       "name" : "wheelchair.dat",
       "url" : "file:/edi-samples/edi_files/837/wheelchair.dat",
-      "lastModifiedDateTime" : "2026-02-21T14:40:29.884-05:00",
+      "lastModifiedDateTime" : "2026-04-27T19:13:28.798-04:00",
       "fileType" : "EDI"
     },
     "sender" : {

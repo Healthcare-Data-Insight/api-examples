@@ -1,6 +1,6 @@
 [
  {
-  "id" : "699b6efe8f62cf744b56a4fe",
+  "id" : "69efef05ad4799caa7f5d97d",
   "objectType" : "CLAIM",
   "patientControlNumber" : "756048Q",
   "chargeAmount" : 89.93,
@@ -75,6 +75,8 @@
         "zipCode" : "17111"
       }
     },
+    "assignmentCertificationIndicator" : "Y",
+    "releaseOfInformationCode" : "Y",
     "payer" : {
       "entityRole" : "PAYER",
       "entityType" : "BUSINESS",
@@ -94,6 +96,7 @@
     "identificationType" : "NPI",
     "identifier" : "9876540809",
     "taxId" : "567891234",
+    "taxIdType" : "EIN",
     "lastNameOrOrgName" : "JONES HOSPITAL",
     "address" : {
       "line" : "225 MAIN STREET BARKLEY BUILDING",
@@ -202,7 +205,7 @@
     }
   } ],
   "transaction" : {
-    "id" : "699b6efe8f62cf744b56a4d1",
+    "id" : "69efef05ad4799caa7f5d950",
     "controlNumber" : "987654",
     "transactionType" : "INST",
     "hierarchicalStructureCode" : "0019",

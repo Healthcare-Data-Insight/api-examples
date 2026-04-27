@@ -1,6 +1,6 @@
 [
  {
-  "id" : "69446372c1a6b3ab024f3e16",
+  "id" : "69efef04ad4799caa7f5a867",
   "objectType" : "PROVIDER_ADJUSTMENT",
   "providerIdentifier" : "PAYEE_ID1",
   "fiscalPeriodDate" : "2024-12-31",
@@ -62,6 +62,7 @@
     "identificationType" : "NPI",
     "identifier" : "PROVIDER1_NPI",
     "taxId" : "123456789",
+    "taxIdType" : "TAX_ID",
     "lastNameOrOrgName" : "PROVIDER",
     "address" : {
       "line" : "2255 ANY ROAD",
@@ -76,7 +77,7 @@
     } ]
   },
   "transaction" : {
-    "id" : "69446372c1a6b3ab024f3e03",
+    "id" : "69efef04ad4799caa7f5a854",
     "controlNumber" : "0001",
     "transactionType" : "PAYMENT",
     "productionDate" : "2024-12-23",
@@ -99,7 +100,7 @@
   }
 }
 , {
-  "id" : "69446372c1a6b3ab024f3e1c",
+  "id" : "69efef04ad4799caa7f5a86d",
   "objectType" : "PROVIDER_ADJUSTMENT",
   "providerIdentifier" : "PAYEE_ID99",
   "fiscalPeriodDate" : "2024-12-31",
@@ -161,6 +162,7 @@
     "identificationType" : "NPI",
     "identifier" : "PROVIDER1_NPI",
     "taxId" : "123456789",
+    "taxIdType" : "TAX_ID",
     "lastNameOrOrgName" : "PROVIDER",
     "address" : {
       "line" : "2255 ANY ROAD",
@@ -175,7 +177,7 @@
     } ]
   },
   "transaction" : {
-    "id" : "69446372c1a6b3ab024f3e03",
+    "id" : "69efef04ad4799caa7f5a854",
     "controlNumber" : "0001",
     "transactionType" : "PAYMENT",
     "productionDate" : "2024-12-23",
@@ -198,7 +200,7 @@
   }
 }
 , {
-  "id" : "69446372c1a6b3ab024f3e62",
+  "id" : "69efef04ad4799caa7f5a8b3",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "5554555444",
   "chargeAmount" : 800.00,
@@ -273,6 +275,7 @@
     "identificationType" : "NPI",
     "identifier" : "PROVIDER2_NPI",
     "taxId" : "123456789",
+    "taxIdType" : "TAX_ID",
     "lastNameOrOrgName" : "PROVIDER",
     "address" : {
       "line" : "2255 ANY ROAD",
@@ -312,7 +315,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "69446372c1a6b3ab024f3e21",
+    "id" : "69efef04ad4799caa7f5a872",
     "controlNumber" : "0002",
     "transactionType" : "PAYMENT",
     "productionDate" : "2024-12-23",
@@ -340,7 +343,7 @@
   }
 }
 , {
-  "id" : "69446372c1a6b3ab024f3e42",
+  "id" : "69efef04ad4799caa7f5a893",
   "objectType" : "PROVIDER_ADJUSTMENT",
   "providerIdentifier" : "PAYEE_ID2",
   "fiscalPeriodDate" : "2023-12-31",
@@ -394,6 +397,7 @@
     "identificationType" : "NPI",
     "identifier" : "PROVIDER2_NPI",
     "taxId" : "123456789",
+    "taxIdType" : "TAX_ID",
     "lastNameOrOrgName" : "PROVIDER",
     "address" : {
       "line" : "2255 ANY ROAD",
@@ -408,7 +412,7 @@
     } ]
   },
   "transaction" : {
-    "id" : "69446372c1a6b3ab024f3e21",
+    "id" : "69efef04ad4799caa7f5a872",
     "controlNumber" : "0002",
     "transactionType" : "PAYMENT",
     "productionDate" : "2024-12-23",
@@ -436,7 +440,7 @@
   }
 }
 , {
-  "id" : "69446372c1a6b3ab024f3e5a",
+  "id" : "69efef04ad4799caa7f5a8ab",
   "objectType" : "PROVIDER_ADJUSTMENT",
   "providerIdentifier" : "PAYEE_ID3",
   "fiscalPeriodDate" : "2022-12-31",
@@ -490,6 +494,7 @@
     "identificationType" : "NPI",
     "identifier" : "PROVIDER3_NPI",
     "taxId" : "123456789",
+    "taxIdType" : "TAX_ID",
     "lastNameOrOrgName" : "PROVIDER",
     "address" : {
       "line" : "2255 ANY ROAD",
@@ -504,7 +509,7 @@
     } ]
   },
   "transaction" : {
-    "id" : "69446372c1a6b3ab024f3e47",
+    "id" : "69efef04ad4799caa7f5a898",
     "controlNumber" : "0003",
     "transactionType" : "PAYMENT",
     "productionDate" : "2024-12-23",
@@ -527,7 +532,7 @@
   }
 }
 , {
-  "id" : "69446372c1a6b3ab024f3e93",
+  "id" : "69efef04ad4799caa7f5a8e4",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "PATACCT",
   "chargeAmount" : 400.00,
@@ -613,6 +618,7 @@
     "identificationType" : "NPI",
     "identifier" : "1123454567",
     "taxId" : "123456789",
+    "taxIdType" : "TAX_ID",
     "lastNameOrOrgName" : "PROVIDER",
     "address" : {
       "line" : "2255 ANY ROAD",
@@ -696,7 +702,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "69446372c1a6b3ab024f3e67",
+    "id" : "69efef04ad4799caa7f5a8b8",
     "controlNumber" : "10060875",
     "transactionType" : "PAYMENT",
     "productionDate" : "2019-08-27",
@@ -718,7 +724,7 @@
   }
 }
 , {
-  "id" : "69446372c1a6b3ab024f3ebf",
+  "id" : "69efef04ad4799caa7f5a910",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "PATACCT",
   "chargeAmount" : 40000.00,
@@ -809,6 +815,7 @@
     "identificationType" : "NPI",
     "identifier" : "1123454567",
     "taxId" : "123456789",
+    "taxIdType" : "TAX_ID",
     "lastNameOrOrgName" : "PROVIDER",
     "address" : {
       "line" : "2255 ANY ROAD",
@@ -849,7 +856,7 @@
   } ],
   "serviceLines" : [ ],
   "transaction" : {
-    "id" : "69446372c1a6b3ab024f3e98",
+    "id" : "69efef04ad4799caa7f5a8e9",
     "controlNumber" : "10060875",
     "transactionType" : "PAYMENT",
     "productionDate" : "2019-08-27",
@@ -871,7 +878,7 @@
   }
 }
 , {
-  "id" : "69446372c1a6b3ab024f3f17",
+  "id" : "69efef04ad4799caa7f5a968",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "7722337",
   "chargeAmount" : 226.00,
@@ -982,6 +989,7 @@
     "identificationType" : "EIN",
     "identifier" : "999994703",
     "taxId" : "050595",
+    "taxIdType" : "TAX_ID",
     "lastNameOrOrgName" : "BAN DDS LLC",
     "address" : {
       "line" : "225 MAIN STREET",
@@ -1260,7 +1268,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "69446372c1a6b3ab024f3ec4",
+    "id" : "69efef04ad4799caa7f5a915",
     "controlNumber" : "35681",
     "transactionType" : "PAYMENT",
     "productionDate" : "2019-03-14",
@@ -1283,7 +1291,7 @@
   }
 }
 , {
-  "id" : "69446372c1a6b3ab024f3f47",
+  "id" : "69efef04ad4799caa7f5a998",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "5554555444",
   "chargeAmount" : 800.00,
@@ -1352,6 +1360,7 @@
     "identificationType" : "NPI",
     "identifier" : "5544667733",
     "taxId" : "777667755",
+    "taxIdType" : "TAX_ID",
     "lastNameOrOrgName" : "ACME MEDICAL CENTER"
   },
   "serviceLines" : [ {
@@ -1380,7 +1389,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "69446372c1a6b3ab024f3f1c",
+    "id" : "69efef04ad4799caa7f5a96d",
     "controlNumber" : "112233",
     "transactionType" : "PAYMENT",
     "productionDate" : "2019-03-14",
@@ -1407,7 +1416,7 @@
   }
 }
 , {
-  "id" : "69446372c1a6b3ab024f3f48",
+  "id" : "69efef04ad4799caa7f5a999",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "8765432112",
   "chargeAmount" : 1200.00,
@@ -1476,6 +1485,7 @@
     "identificationType" : "NPI",
     "identifier" : "5544667733",
     "taxId" : "777667755",
+    "taxIdType" : "TAX_ID",
     "lastNameOrOrgName" : "ACME MEDICAL CENTER"
   },
   "serviceLines" : [ {
@@ -1503,7 +1513,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "69446372c1a6b3ab024f3f1c",
+    "id" : "69efef04ad4799caa7f5a96d",
     "controlNumber" : "112233",
     "transactionType" : "PAYMENT",
     "productionDate" : "2019-03-14",
@@ -1530,7 +1540,7 @@
   }
 }
 , {
-  "id" : "69446372c1a6b3ab024f3f75",
+  "id" : "69efef04ad4799caa7f5a9c6",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "PATACCT",
   "chargeAmount" : 150.00,
@@ -1616,6 +1626,7 @@
     "identificationType" : "NPI",
     "identifier" : "1123454567",
     "taxId" : "123456789",
+    "taxIdType" : "TAX_ID",
     "lastNameOrOrgName" : "PROVIDER",
     "address" : {
       "line" : "2255 ANY ROAD",
@@ -1667,7 +1678,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "69446372c1a6b3ab024f3f4d",
+    "id" : "69efef04ad4799caa7f5a99e",
     "controlNumber" : "10060875",
     "transactionType" : "PAYMENT",
     "productionDate" : "2019-08-27",
@@ -1689,7 +1700,7 @@
   }
 }
 , {
-  "id" : "69446372c1a6b3ab024f3fe1",
+  "id" : "69efef04ad4799caa7f5aa32",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "7722337",
   "chargeAmount" : 226.00,
@@ -1859,6 +1870,7 @@
     "identificationType" : "EIN",
     "identifier" : "999994703",
     "taxId" : "050595",
+    "taxIdType" : "TAX_ID",
     "lastNameOrOrgName" : "BAN DDS LLC",
     "address" : {
       "line" : "225 MAIN STREET",
@@ -2204,7 +2216,7 @@
     }
   } ],
   "transaction" : {
-    "id" : "69446372c1a6b3ab024f3f7a",
+    "id" : "69efef04ad4799caa7f5a9cb",
     "controlNumber" : "35681",
     "transactionType" : "PAYMENT",
     "productionDate" : "2019-03-14",

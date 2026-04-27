@@ -1,6 +1,6 @@
 [
  {
-  "id" : "699b6efe8f62cf744b56a382",
+  "id" : "69efef05ad4799caa7f5d7fa",
   "objectType" : "CLAIM",
   "patientControlNumber" : "ABC0002",
   "chargeAmount" : 89.93,
@@ -51,6 +51,7 @@
       "identificationType" : "PAYOR_ID",
       "identifier" : "PAYERID1234",
       "taxId" : "123456789",
+      "taxIdType" : "EIN",
       "lastNameOrOrgName" : "BEST PLAN SERVICE",
       "address" : {
         "line" : "3394 JACKSON DR",
@@ -232,6 +233,8 @@
     "payerPaidAmount" : 8852.72,
     "nonCoveredAmount" : 780.00,
     "remainingPatientLiabilityAmount" : 60.00,
+    "assignmentCertificationIndicator" : "Y",
+    "releaseOfInformationCode" : "Y",
     "outpatientAdjudication" : {
       "reimbursementRate" : 85,
       "hcpcsPayableAmount" : 158.58,
@@ -315,6 +318,7 @@
       "identificationType" : "PAYOR_ID",
       "identifier" : "12345",
       "taxId" : "987654321",
+      "taxIdType" : "EIN",
       "lastNameOrOrgName" : "OTHER PAYER",
       "address" : {
         "line" : "PO BOX 7901",
@@ -404,12 +408,22 @@
   "patientStatusCode" : "01",
   "claimNote" : "PATIENT ALLERGIC TO PENICILLIN",
   "billingNote" : "Billing Note",
+  "notes" : [ {
+    "qualifierCode" : "ALG",
+    "type" : "ALLERGIES",
+    "text" : "PATIENT ALLERGIC TO PENICILLIN"
+  }, {
+    "qualifierCode" : "ADD",
+    "type" : "ADDITIONAL_INFORMATION",
+    "text" : "Billing Note"
+  } ],
   "billingProvider" : {
     "entityRole" : "BILLING_PROVIDER",
     "entityType" : "BUSINESS",
     "identificationType" : "NPI",
     "identifier" : "0123456789",
     "taxId" : "123401234",
+    "taxIdType" : "EIN",
     "lastNameOrOrgName" : "BEST MEDICAL ASSOCIATES LLC",
     "address" : {
       "line" : "222 HEALTHY STREET",
@@ -922,7 +936,13 @@
     "drugQuantity" : 1.01,
     "drugUnitType" : "UNIT",
     "prescriptionNumber" : "123456",
+    "prescriptionNumberType" : "PHARMACY_PRESCRIPTION_NUMBER",
     "thirdPartyNote" : "state regulation 123 was applied during the pricing of this claim",
+    "notes" : [ {
+      "qualifierCode" : "TPO",
+      "type" : "THIRD_PARTY_ORGANIZATION_NOTES",
+      "text" : "state regulation 123 was applied during the pricing of this claim"
+    } ],
     "procedure" : {
       "subType" : "CPT",
       "code" : "81099",
@@ -1112,6 +1132,7 @@
     "drugQuantity" : 5,
     "drugUnitType" : "UNIT",
     "prescriptionNumber" : "945632",
+    "prescriptionNumberType" : "PHARMACY_PRESCRIPTION_NUMBER",
     "procedure" : {
       "subType" : "CPT",
       "code" : "00842",
@@ -1286,7 +1307,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "699b6efe8f62cf744b56a2e5",
+    "id" : "69efef05ad4799caa7f5d75d",
     "controlNumber" : "00000024",
     "transactionType" : "INST",
     "hierarchicalStructureCode" : "0019",

@@ -1,6 +1,6 @@
 [
  {
-  "id" : "699b6efe8f62cf744b56a2e0",
+  "id" : "69efef05ad4799caa7f5d758",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26462967",
   "chargeAmount" : 100.00,
@@ -59,6 +59,7 @@
     "identificationType" : "NPI",
     "identifier" : "9876543210",
     "taxId" : "587654321",
+    "taxIdType" : "EIN",
     "lastNameOrOrgName" : "BEN KILDARE SERVICE",
     "address" : {
       "line" : "234 SEAWAY ST",
@@ -176,7 +177,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "699b6efe8f62cf744b56a2b4",
+    "id" : "69efef05ad4799caa7f5d72c",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",

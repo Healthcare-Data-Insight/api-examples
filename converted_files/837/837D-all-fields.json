@@ -1,13 +1,14 @@
 [
  {
-  "id" : "69373692908378844c0ec758",
+  "id" : "69efef02ad4799caa7f599b9",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26403774",
   "chargeAmount" : 150.00,
   "patientPaidAmount" : 152.45,
   "facilityCode" : {
     "subType" : "PLACE_OF_SERVICE",
-    "code" : "11"
+    "code" : "11",
+    "desc" : "Office"
   },
   "placeOfServiceType" : "OFFICE",
   "frequencyCode" : {
@@ -27,6 +28,7 @@
       "identificationType" : "MEMBER_ID",
       "identifier" : "111223333",
       "taxId" : "123450000",
+      "taxIdType" : "SSN",
       "lastNameOrOrgName" : "SMITH",
       "firstName" : "JANE",
       "birthDate" : "1943-05-01",
@@ -44,6 +46,7 @@
       "identificationType" : "PAYOR_ID",
       "identifier" : "66783JJT",
       "taxId" : "435261708",
+      "taxIdType" : "EIN",
       "lastNameOrOrgName" : "INSURANCE COMPANY XYZ",
       "address" : {
         "line" : "P.O. BOX 569008",
@@ -142,6 +145,7 @@
       "identificationType" : "PAYOR_ID",
       "identifier" : "OtherPayerPredeterminationOfBenefitsID",
       "taxId" : "OtherPayerTin",
+      "taxIdType" : "EIN",
       "lastNameOrOrgName" : "OTHER PAYER",
       "address" : {
         "line" : "PO BOX 7901",
@@ -242,12 +246,22 @@
   "predeterminationOfBenefitsIdentifier" : "PredeterminationOfBenefitsId",
   "fixedFormatRecords" : [ "Record1", "Record2" ],
   "claimNote" : "Note1\nNote2",
+  "notes" : [ {
+    "qualifierCode" : "ADD",
+    "type" : "ADDITIONAL_INFORMATION",
+    "text" : "Note1"
+  }, {
+    "qualifierCode" : "ADD",
+    "type" : "ADDITIONAL_INFORMATION",
+    "text" : "Note2"
+  } ],
   "billingProvider" : {
     "entityRole" : "BILLING_PROVIDER",
     "entityType" : "BUSINESS",
     "identificationType" : "NPI",
     "identifier" : "1234567890",
     "taxId" : "587654321",
+    "taxIdType" : "EIN",
     "lastNameOrOrgName" : "DENTAL ASSOCIATES",
     "address" : {
       "line" : "234 SEAWAY ST",
@@ -582,7 +596,7 @@
     }
   } ],
   "transaction" : {
-    "id" : "69373692908378844c0ec6c2",
+    "id" : "69efef02ad4799caa7f59923",
     "controlNumber" : "3456",
     "transactionType" : "DENTAL",
     "hierarchicalStructureCode" : "0019",

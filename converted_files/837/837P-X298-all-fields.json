@@ -1,6 +1,6 @@
 [
  {
-  "id" : "699b6efe8f62cf744b56a42a",
+  "id" : "69efef05ad4799caa7f5d8a2",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26463774",
   "chargeAmount" : 100.00,
@@ -105,6 +105,7 @@
     "identificationType" : "NPI",
     "identifier" : "9876543210",
     "taxId" : "587654321",
+    "taxIdType" : "EIN",
     "lastNameOrOrgName" : "PHYSICIAN CLINIC",
     "address" : {
       "line" : "234 SEAWAY ST",
@@ -209,7 +210,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "699b6efe8f62cf744b56a3f6",
+    "id" : "69efef05ad4799caa7f5d86e",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -223,7 +224,7 @@
     "fileInfo" : {
       "name" : "837P-X298-all-fields.dat",
       "url" : "file:/edi-samples/edi_files/837/837P-X298-all-fields.dat",
-      "lastModifiedDateTime" : "2026-02-11T13:54:57.176-05:00",
+      "lastModifiedDateTime" : "2026-02-22T16:05:15.378-05:00",
       "fileType" : "EDI"
     },
     "sender" : {

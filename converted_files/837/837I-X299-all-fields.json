@@ -1,6 +1,6 @@
 [
  {
-  "id" : "699b6efe8f62cf744b56a73b",
+  "id" : "69efef05ad4799caa7f5dbc1",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26463774",
   "chargeAmount" : 100.00,
@@ -108,6 +108,7 @@
     "identificationType" : "NPI",
     "identifier" : "9876543210",
     "taxId" : "587654321",
+    "taxIdType" : "EIN",
     "lastNameOrOrgName" : "ABC HOSPITAL",
     "address" : {
       "line" : "234 SEAWAY ST",
@@ -216,7 +217,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "699b6efe8f62cf744b56a703",
+    "id" : "69efef05ad4799caa7f5db89",
     "controlNumber" : "0021",
     "transactionType" : "INST",
     "hierarchicalStructureCode" : "0019",
@@ -230,7 +231,7 @@
     "fileInfo" : {
       "name" : "837I-X299-all-fields.dat",
       "url" : "file:/edi-samples/edi_files/837/837I-X299-all-fields.dat",
-      "lastModifiedDateTime" : "2026-02-11T13:54:57.176-05:00",
+      "lastModifiedDateTime" : "2026-02-22T16:05:15.377-05:00",
       "fileType" : "EDI"
     },
     "sender" : {

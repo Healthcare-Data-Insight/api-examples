@@ -1,6 +1,6 @@
 [
  {
-  "id" : "699b6efe8f62cf744b56a2b0",
+  "id" : "69efef05ad4799caa7f5d728",
   "objectType" : "CLAIM",
   "patientControlNumber" : "051068",
   "chargeAmount" : 766.50,
@@ -69,6 +69,7 @@
     "identificationType" : "NPI",
     "identifier" : "2366554859",
     "taxId" : "376985369",
+    "taxIdType" : "EIN",
     "lastNameOrOrgName" : "AAA AMBULANCE SERVICE",
     "address" : {
       "line" : "12202 AIRPORT WAY",
@@ -144,6 +145,11 @@
     "unitCount" : 1,
     "ambulancePatientCount" : 2,
     "lineNote" : "CARDIAC EMERGENCY",
+    "notes" : [ {
+      "qualifierCode" : "ADD",
+      "type" : "ADDITIONAL_INFORMATION",
+      "text" : "CARDIAC EMERGENCY"
+    } ],
     "procedure" : {
       "subType" : "HCPCS",
       "code" : "A0427",
@@ -304,7 +310,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "699b6efe8f62cf744b56a26d",
+    "id" : "69efef05ad4799caa7f5d6e5",
     "controlNumber" : "000017712",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -314,11 +320,11 @@
     "creationTime" : "11:12:00",
     "claimOrEncounterIdentifierType" : "CHARGEABLE",
     "transactionSetIdentifierCode" : "837",
-    "implementationConventionReference" : "005010X222",
+    "implementationConventionReference" : "005010X222A2",
     "fileInfo" : {
       "name" : "ambulance.dat",
       "url" : "file:/edi-samples/edi_files/837/ambulance.dat",
-      "lastModifiedDateTime" : "2026-02-21T14:36:15.045-05:00",
+      "lastModifiedDateTime" : "2026-04-27T19:13:28.798-04:00",
       "fileType" : "EDI"
     },
     "sender" : {

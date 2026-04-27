@@ -1,6 +1,6 @@
 [
  {
-  "id" : "69446374c1a6b3ab024f4a8d",
+  "id" : "69efef04ad4799caa7f5b4de",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "7722337",
   "chargeAmount" : 226.00,
@@ -111,6 +111,7 @@
     "identificationType" : "EIN",
     "identifier" : "999994703",
     "taxId" : "050595",
+    "taxIdType" : "TAX_ID",
     "lastNameOrOrgName" : "BAN DDS LLC",
     "address" : {
       "line" : "225 MAIN STREET",
@@ -389,7 +390,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "69446374c1a6b3ab024f4a3a",
+    "id" : "69efef04ad4799caa7f5b48b",
     "controlNumber" : "35681",
     "transactionType" : "PAYMENT",
     "productionDate" : "2019-03-14",

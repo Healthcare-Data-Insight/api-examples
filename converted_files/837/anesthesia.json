@@ -1,6 +1,6 @@
 [
  {
-  "id" : "699b6efe8f62cf744b56a55c",
+  "id" : "69efef05ad4799caa7f5d9db",
   "objectType" : "CLAIM",
   "patientControlNumber" : "153829140",
   "chargeAmount" : 827.00,
@@ -56,6 +56,7 @@
     "identificationType" : "NPI",
     "identifier" : "2366554859",
     "taxId" : "756473826",
+    "taxIdType" : "EIN",
     "lastNameOrOrgName" : "PROVIDER MEDICAL GROUP",
     "address" : {
       "line" : "1234 WESTEND AVE",
@@ -163,7 +164,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "699b6efe8f62cf744b56a535",
+    "id" : "69efef05ad4799caa7f5d9b4",
     "controlNumber" : "0001",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -177,7 +178,7 @@
     "fileInfo" : {
       "name" : "anesthesia.dat",
       "url" : "file:/edi-samples/edi_files/837/anesthesia.dat",
-      "lastModifiedDateTime" : "2026-02-21T14:42:59.643-05:00",
+      "lastModifiedDateTime" : "2026-02-22T16:05:15.379-05:00",
       "fileType" : "EDI"
     },
     "sender" : {

@@ -1,6 +1,6 @@
 [
  {
-  "id" : "699b6efe8f62cf744b56a458",
+  "id" : "69efef05ad4799caa7f5d8d7",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26463774",
   "chargeAmount" : 100.00,
@@ -30,7 +30,12 @@
       "lastNameOrOrgName" : "Smith",
       "firstName" : "Jane",
       "birthDate" : "1943-05-01",
-      "gender" : "FEMALE"
+      "gender" : "FEMALE",
+      "address" : {
+        "city" : "MAIMI",
+        "stateCode" : "FL",
+        "zipCode" : "33111"
+      }
     },
     "payer" : {
       "entityRole" : "PAYER",
@@ -38,6 +43,11 @@
       "identificationType" : "PAYOR_ID",
       "identifier" : "999996666",
       "lastNameOrOrgName" : "KEY INSURANCE COMPANY",
+      "address" : {
+        "city" : "MAIMI",
+        "stateCode" : "FL",
+        "zipCode" : "33111"
+      },
       "additionalIds" : [ {
         "qualifierCode" : "G2",
         "type" : "PROVIDER_COMMERCIAL_NUMBER",
@@ -73,6 +83,7 @@
     "identificationType" : "NPI",
     "identifier" : "9876543210",
     "taxId" : "587654321",
+    "taxIdType" : "EIN",
     "lastNameOrOrgName" : "Ben Kildare Service",
     "address" : {
       "line" : "234 SEAWAY ST",
@@ -160,7 +171,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "699b6efe8f62cf744b56a42e",
+    "id" : "69efef05ad4799caa7f5d8a7",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -174,7 +185,7 @@
     "fileInfo" : {
       "name" : "commercial.dat",
       "url" : "file:/edi-samples/edi_files/837/commercial.dat",
-      "lastModifiedDateTime" : "2024-01-31T20:06:16.189-05:00",
+      "lastModifiedDateTime" : "2026-04-27T19:13:28.798-04:00",
       "fileType" : "EDI"
     },
     "sender" : {

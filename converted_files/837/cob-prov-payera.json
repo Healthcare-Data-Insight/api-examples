@@ -1,6 +1,6 @@
 [
  {
-  "id" : "699b6efe8f62cf744b56a5ff",
+  "id" : "69efef05ad4799caa7f5da7f",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26407789",
   "chargeAmount" : 79.04,
@@ -84,6 +84,9 @@
         "zipCode" : "33111"
       }
     },
+    "assignmentCertificationIndicator" : "Y",
+    "patientSignatureSourceCode" : "P",
+    "releaseOfInformationCode" : "Y",
     "payer" : {
       "entityRole" : "PAYER",
       "entityType" : "BUSINESS",
@@ -103,6 +106,7 @@
     "identificationType" : "NPI",
     "identifier" : "1999996666",
     "taxId" : "123456789",
+    "taxIdType" : "EIN",
     "lastNameOrOrgName" : "KILDARE",
     "firstName" : "BEN",
     "address" : {
@@ -249,7 +253,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "699b6efe8f62cf744b56a5c8",
+    "id" : "69efef05ad4799caa7f5da48",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",

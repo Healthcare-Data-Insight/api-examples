@@ -1,6 +1,6 @@
 [
  {
-  "id" : "69446374c1a6b3ab024f498c",
+  "id" : "69efef04ad4799caa7f5b3dd",
   "objectType" : "PROVIDER_ADJUSTMENT",
   "providerIdentifier" : "PAYEE_ID1",
   "fiscalPeriodDate" : "2024-12-31",
@@ -62,6 +62,7 @@
     "identificationType" : "NPI",
     "identifier" : "PROVIDER1_NPI",
     "taxId" : "123456789",
+    "taxIdType" : "TAX_ID",
     "lastNameOrOrgName" : "PROVIDER",
     "address" : {
       "line" : "2255 ANY ROAD",
@@ -76,7 +77,7 @@
     } ]
   },
   "transaction" : {
-    "id" : "69446374c1a6b3ab024f4979",
+    "id" : "69efef04ad4799caa7f5b3ca",
     "controlNumber" : "0001",
     "transactionType" : "PAYMENT",
     "productionDate" : "2024-12-23",
@@ -99,7 +100,7 @@
   }
 }
 , {
-  "id" : "69446374c1a6b3ab024f4992",
+  "id" : "69efef04ad4799caa7f5b3e3",
   "objectType" : "PROVIDER_ADJUSTMENT",
   "providerIdentifier" : "PAYEE_ID99",
   "fiscalPeriodDate" : "2024-12-31",
@@ -161,6 +162,7 @@
     "identificationType" : "NPI",
     "identifier" : "PROVIDER1_NPI",
     "taxId" : "123456789",
+    "taxIdType" : "TAX_ID",
     "lastNameOrOrgName" : "PROVIDER",
     "address" : {
       "line" : "2255 ANY ROAD",
@@ -175,7 +177,7 @@
     } ]
   },
   "transaction" : {
-    "id" : "69446374c1a6b3ab024f4979",
+    "id" : "69efef04ad4799caa7f5b3ca",
     "controlNumber" : "0001",
     "transactionType" : "PAYMENT",
     "productionDate" : "2024-12-23",
@@ -198,7 +200,7 @@
   }
 }
 , {
-  "id" : "69446374c1a6b3ab024f49d8",
+  "id" : "69efef04ad4799caa7f5b429",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "5554555444",
   "chargeAmount" : 800.00,
@@ -273,6 +275,7 @@
     "identificationType" : "NPI",
     "identifier" : "PROVIDER2_NPI",
     "taxId" : "123456789",
+    "taxIdType" : "TAX_ID",
     "lastNameOrOrgName" : "PROVIDER",
     "address" : {
       "line" : "2255 ANY ROAD",
@@ -312,7 +315,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "69446374c1a6b3ab024f4997",
+    "id" : "69efef04ad4799caa7f5b3e8",
     "controlNumber" : "0002",
     "transactionType" : "PAYMENT",
     "productionDate" : "2024-12-23",
@@ -340,7 +343,7 @@
   }
 }
 , {
-  "id" : "69446374c1a6b3ab024f49b8",
+  "id" : "69efef04ad4799caa7f5b409",
   "objectType" : "PROVIDER_ADJUSTMENT",
   "providerIdentifier" : "PAYEE_ID2",
   "fiscalPeriodDate" : "2023-12-31",
@@ -394,6 +397,7 @@
     "identificationType" : "NPI",
     "identifier" : "PROVIDER2_NPI",
     "taxId" : "123456789",
+    "taxIdType" : "TAX_ID",
     "lastNameOrOrgName" : "PROVIDER",
     "address" : {
       "line" : "2255 ANY ROAD",
@@ -408,7 +412,7 @@
     } ]
   },
   "transaction" : {
-    "id" : "69446374c1a6b3ab024f4997",
+    "id" : "69efef04ad4799caa7f5b3e8",
     "controlNumber" : "0002",
     "transactionType" : "PAYMENT",
     "productionDate" : "2024-12-23",
@@ -436,7 +440,7 @@
   }
 }
 , {
-  "id" : "69446374c1a6b3ab024f49d0",
+  "id" : "69efef04ad4799caa7f5b421",
   "objectType" : "PROVIDER_ADJUSTMENT",
   "providerIdentifier" : "PAYEE_ID3",
   "fiscalPeriodDate" : "2022-12-31",
@@ -490,6 +494,7 @@
     "identificationType" : "NPI",
     "identifier" : "PROVIDER3_NPI",
     "taxId" : "123456789",
+    "taxIdType" : "TAX_ID",
     "lastNameOrOrgName" : "PROVIDER",
     "address" : {
       "line" : "2255 ANY ROAD",
@@ -504,7 +509,7 @@
     } ]
   },
   "transaction" : {
-    "id" : "69446374c1a6b3ab024f49bd",
+    "id" : "69efef04ad4799caa7f5b40e",
     "controlNumber" : "0003",
     "transactionType" : "PAYMENT",
     "productionDate" : "2024-12-23",
