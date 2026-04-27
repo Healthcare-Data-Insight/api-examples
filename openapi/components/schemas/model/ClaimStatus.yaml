@@ -9,7 +9,7 @@ properties:
     description: "Type of this object, always set to 'CLAIM_STATUS'."
     type: "string"
   patient:
-    description: "The insured (subscriber) or patient as stated on 837 claim. EDI: NM1 *QC; Loop: 2100D."
+    description: "The insured (subscriber) or patient as stated on 837 claim. EDI: Loop: 2100D, NM1*QC."
     $ref: "./PartyIdName.yaml"
     x-edi-loop-id: "2100D"
     x-edi-seg-ids:
@@ -27,28 +27,28 @@ properties:
     items:
       $ref: "./StatusInfo.yaml"
   payerClaimControlNumber:
-    description: "Payer claim control number. EDI: REF02 *1K."
+    description: "Payer claim control number. EDI: REF02*1K."
     type: "string"
     x-edi-elt-designators:
     - "REF02"
     x-edi-qualifiers:
     - "1K"
   clearinghouseTraceNumber:
-    description: "Clearinghouse trace number. EDI: REF02 *D9."
+    description: "Clearinghouse trace number. EDI: REF02*D9."
     type: "string"
     x-edi-elt-designators:
     - "REF02"
     x-edi-qualifiers:
     - "D9"
   billTypeCode:
-    description: "Bill type code. EDI: REF02 *BLT."
+    description: "Bill type code. EDI: REF02*BLT."
     type: "string"
     x-edi-elt-designators:
     - "REF02"
     x-edi-qualifiers:
     - "BLT"
   serviceDateFrom:
-    description: "Service date for professional or statement date for institutional. EDI: DTP03 *472."
+    description: "Service date for professional or statement date for institutional. EDI: DTP03*472."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -56,7 +56,7 @@ properties:
     x-edi-qualifiers:
     - "472"
   serviceDateTo:
-    description: "The end date of the service or statement date period. Set to 'serviceDateFrom' if the period is a single date. EDI: DTP03 *472."
+    description: "The end date of the service or statement date period. Set to 'serviceDateFrom' if the period is a single date. EDI: DTP03*472."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -64,7 +64,7 @@ properties:
     x-edi-qualifiers:
     - "472"
   receiver:
-    description: "The Receiver is the entity that expects the response from the Source. Can be a provider, a provider group, a claims clearinghouse, etc. EDI: NM1 *40; Loop: 2000B."
+    description: "The Receiver is the entity that expects the response from the Source. Can be a provider, a provider group, a claims clearinghouse, etc. EDI: Loop: 2000B, NM1*40."
     $ref: "./PartyIdName.yaml"
     x-edi-loop-id: "2000B"
     x-edi-seg-ids:
@@ -72,11 +72,11 @@ properties:
     x-edi-qualifiers:
     - "40"
   receiverBatchStatus:
-    description: "Receiver batch status. EDI Loop: 2200B."
+    description: "Receiver batch status. EDI: Loop: 2200B."
     $ref: "./BatchStatus.yaml"
     x-edi-loop-id: "2200B"
   provider:
-    description: "Billing provider for 277CA. EDI: NM1 *85; Loop: 2100C."
+    description: "Billing provider for 277CA. EDI: Loop: 2100C, NM1*85."
     $ref: "./PartyIdName.yaml"
     x-edi-loop-id: "2100C"
     x-edi-seg-ids:
@@ -84,11 +84,11 @@ properties:
     x-edi-qualifiers:
     - "85"
   providerBatchStatus:
-    description: "Provider batch status. EDI Loop: 2200C."
+    description: "Provider batch status. EDI: Loop: 2200C."
     $ref: "./BatchStatus.yaml"
     x-edi-loop-id: "2200C"
   lineStatuses:
-    description: "Rejected service lines. EDI Loop: 2220D."
+    description: "Rejected service lines. EDI: Loop: 2220D."
     type: "array"
     items:
       $ref: "./ServiceLineStatus.yaml"

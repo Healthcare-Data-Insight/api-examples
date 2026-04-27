@@ -3,14 +3,14 @@ type: "object"
 description: "Loop: 2110; Segment: SVC."
 properties:
   controlNumber:
-    description: "Line item control number from 837. EDI: REF02 *6R."
+    description: "Line item control number from 837. EDI: REF02*6R."
     type: "string"
     x-edi-elt-designators:
     - "REF02"
     x-edi-qualifiers:
     - "6R"
   procedure:
-    description: "Adjudicated procedure code. EDI: SVC01 *HC, SVC01 *AD, SVC01 *WK, SVC01 *IV."
+    description: "Adjudicated procedure code. EDI: SVC01*HC, SVC01*AD, SVC01*WK, SVC01*IV."
     $ref: "./Procedure.yaml"
     x-edi-elt-designators:
     - "SVC01"
@@ -20,13 +20,13 @@ properties:
     - "WK"
     - "IV"
   revenueCode:
-    description: "Adjudicated revenue code. EDI: SVC01 *RC,NU, SVC04 *RC,NU."
+    description: "Adjudicated revenue code. EDI: SVC01*NU, SVC04*NU."
     type: "string"
     x-edi-elt-designators:
     - "SVC01"
     - "SVC04"
     x-edi-qualifiers:
-    - "RC,NU"
+    - "NU"
   drugCode:
     description: "Adjudicated drug code (NDC). EDI: SVC01."
     type: "string"
@@ -51,7 +51,7 @@ properties:
     x-edi-elt-designators:
     - "SVC05"
   originalProcedure:
-    description: "Submitted procedure code from the claim if it is different from the adjudicated procedure. EDI: SVC06 *HC, SVC06 *AD, SVC06 *WK, SVC06 *IV."
+    description: "Submitted procedure code from the claim if it is different from the adjudicated procedure. EDI: SVC06*HC, SVC06*AD, SVC06*WK, SVC06*IV."
     $ref: "./Procedure.yaml"
     x-edi-elt-designators:
     - "SVC06"
@@ -61,12 +61,12 @@ properties:
     - "WK"
     - "IV"
   originalRevenueCode:
-    description: "Submitted revenue code from the claim if it is different from the adjudicated revenue code. EDI: SVC06 *RC,NU."
+    description: "Submitted revenue code from the claim if it is different from the adjudicated revenue code. EDI: SVC06*NU."
     type: "string"
     x-edi-elt-designators:
     - "SVC06"
     x-edi-qualifiers:
-    - "RC,NU"
+    - "NU"
   originalDrugCode:
     description: "Submitted drug (NDC) code from the claim if it is different from the adjudicated drug code. EDI: SVC06."
     type: "string"
@@ -79,7 +79,7 @@ properties:
     x-edi-elt-designators:
     - "SVC07"
   serviceDateFrom:
-    description: "Service period start date. EDI: DTP03 *472, DTP03 *150."
+    description: "Service period start date. EDI: DTP03*472, DTP03*150."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -88,7 +88,7 @@ properties:
     - "472"
     - "150"
   serviceDateTo:
-    description: "Service period end date. If not provided in EDI (single day), it is set to 'serviceDateFrom'. EDI: DTP03 *151."
+    description: "Service period end date. If not provided in EDI (single day), it is set to 'serviceDateFrom'. EDI: DTP03*151."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -114,7 +114,7 @@ properties:
     x-edi-seg-ids:
     - "REF"
   healthcarePolicyId:
-    description: "Healthcare policy id. EDI: REF02 *0K."
+    description: "Healthcare policy id. EDI: REF02*0K."
     type: "string"
     x-edi-elt-designators:
     - "REF02"

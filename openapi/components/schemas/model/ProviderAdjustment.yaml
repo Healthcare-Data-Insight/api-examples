@@ -25,14 +25,14 @@ properties:
     items:
       $ref: "./ProviderAdjustmentReasonAmount.yaml"
   payer:
-    description: "Payer. EDI: N1 *PR."
+    description: "Payer. EDI: N1*PR."
     $ref: "./Party.yaml"
     x-edi-seg-ids:
     - "N1"
     x-edi-qualifiers:
     - "PR"
   payee:
-    description: "Payee. EDI: N1 *PE."
+    description: "Payee. EDI: N1*PE."
     $ref: "./Party.yaml"
     x-edi-seg-ids:
     - "N1"

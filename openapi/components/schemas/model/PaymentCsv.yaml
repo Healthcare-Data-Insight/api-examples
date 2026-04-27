@@ -119,7 +119,7 @@ properties:
     x-edi-elt-designators:
     - "TRN03"
   productionDate:
-    description: "Production date. EDI: DTP03 *405."
+    description: "Production date. EDI: DTP03*405."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -138,63 +138,63 @@ properties:
     x-edi-seg-ids:
     - "CAS"
   payer:
-    description: "Payer. EDI: N1 *PR."
+    description: "Payer. EDI: N1*PR."
     $ref: "./Party.yaml"
     x-edi-seg-ids:
     - "N1"
     x-edi-qualifiers:
     - "PR"
   payee:
-    description: "Payee. EDI: N1 *PE."
+    description: "Payee. EDI: N1*PE."
     $ref: "./Party.yaml"
     x-edi-seg-ids:
     - "N1"
     x-edi-qualifiers:
     - "PE"
   patient:
-    description: "The insured (subscriber) or patient from the original claim. EDI: NM1 *QC."
+    description: "The insured (subscriber) or patient from the original claim. EDI: NM1*QC."
     $ref: "./PartyIdName.yaml"
     x-edi-seg-ids:
     - "NM1"
     x-edi-qualifiers:
     - "QC"
   subscriber:
-    description: "The insured (subscriber) from the original claim if the insured is different from the patient. EDI: NM1 *44."
+    description: "The insured (subscriber) from the original claim if the insured is different from the patient. EDI: NM1*44."
     $ref: "./PartyIdName.yaml"
     x-edi-seg-ids:
     - "NM1"
     x-edi-qualifiers:
     - "44"
   correctedPatient:
-    description: "Corrected patient. EDI: NM1 *74."
+    description: "Corrected patient. EDI: NM1*74."
     $ref: "./PartyIdName.yaml"
     x-edi-seg-ids:
     - "NM1"
     x-edi-qualifiers:
     - "74"
   serviceProvider:
-    description: "Service provider. EDI: NM1 *SJ."
+    description: "Service provider. EDI: NM1*SJ."
     $ref: "./PartyIdName.yaml"
     x-edi-seg-ids:
     - "NM1"
     x-edi-qualifiers:
     - "SJ"
   crossoverCarrier:
-    description: "Crossover carrier. EDI: NM1 *TT."
+    description: "Crossover carrier. EDI: NM1*TT."
     $ref: "./PartyIdName.yaml"
     x-edi-seg-ids:
     - "NM1"
     x-edi-qualifiers:
     - "TT"
   correctedPayer:
-    description: "Corrected priority payer, meaning that current payer believes that another payer has priority for making a payment. EDI: NM1 *PR."
+    description: "Corrected priority payer, meaning that current payer believes that another payer has priority for making a payment. EDI: NM1*PR."
     $ref: "./PartyIdName.yaml"
     x-edi-seg-ids:
     - "NM1"
     x-edi-qualifiers:
     - "PR"
   otherSubscriber:
-    description: "Other subscriber. EDI: NM1 *GB."
+    description: "Other subscriber. EDI: NM1*GB."
     $ref: "./PartyIdName.yaml"
     x-edi-seg-ids:
     - "NM1"
@@ -216,7 +216,7 @@ properties:
     type: "string"
     format: "date"
   statementDateFrom:
-    description: "Statement date from. EDI: DTP03 *232."
+    description: "Statement date from. EDI: DTP03*232."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -224,7 +224,7 @@ properties:
     x-edi-qualifiers:
     - "232"
   statementDateTo:
-    description: "Statement date to. EDI: DTP03 *233."
+    description: "Statement date to. EDI: DTP03*233."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -232,7 +232,7 @@ properties:
     x-edi-qualifiers:
     - "233"
   coverageExpirationDate:
-    description: "Coverage expiration date. EDI: DTP03 *036."
+    description: "Coverage expiration date. EDI: DTP03*036."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -240,7 +240,7 @@ properties:
     x-edi-qualifiers:
     - "036"
   claimReceivedDate:
-    description: "Claim received date. EDI: DTP03 *050."
+    description: "Claim received date. EDI: DTP03*050."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -248,7 +248,7 @@ properties:
     x-edi-qualifiers:
     - "050"
   coverageAmount:
-    description: "Coverage amount from the list of supplemental amounts. EDI: AMT02 *AU."
+    description: "Coverage amount from the list of supplemental amounts. EDI: AMT02*AU."
     type: "number"
     format: "float"
     x-edi-elt-designators:
@@ -270,7 +270,7 @@ properties:
     x-edi-seg-ids:
     - "QTY"
   lines:
-    description: "Service payment information. EDI Loop: 2110."
+    description: "Service payment information. EDI: Loop: 2110."
     type: "array"
     items:
       $ref: "./PaymentLineCsv.yaml"

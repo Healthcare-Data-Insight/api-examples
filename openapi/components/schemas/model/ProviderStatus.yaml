@@ -17,7 +17,7 @@ properties:
     x-edi-seg-ids:
     - "ST"
   receiver:
-    description: "The Receiver is the entity that expects the response from the Source. Can be a provider, a provider group, a claims clearinghouse, etc. EDI: NM1 *40; Loop: 2000B."
+    description: "The Receiver is the entity that expects the response from the Source. Can be a provider, a provider group, a claims clearinghouse, etc. EDI: Loop: 2000B, NM1*40."
     $ref: "./PartyIdName.yaml"
     x-edi-loop-id: "2000B"
     x-edi-seg-ids:
@@ -25,6 +25,6 @@ properties:
     x-edi-qualifiers:
     - "40"
   receiverBatchStatus:
-    description: "Receiver batch status. EDI Loop: 2200B."
+    description: "Receiver batch status. EDI: Loop: 2200B."
     $ref: "./BatchStatus.yaml"
     x-edi-loop-id: "2200B"

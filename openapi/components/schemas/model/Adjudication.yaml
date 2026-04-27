@@ -37,7 +37,7 @@ properties:
     x-edi-seg-ids:
     - "CAS"
   adjudicationOrPaymentDate:
-    description: "Adjudication or payment date. EDI: DTP03 *573."
+    description: "Adjudication or payment date. EDI: DTP03*573."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -45,7 +45,7 @@ properties:
     x-edi-qualifiers:
     - "573"
   remainingPatientLiabilityAmount:
-    description: "Remaining patient liability amount. EDI: AMT02 *EAF."
+    description: "Remaining patient liability amount. EDI: AMT02*EAF."
     type: "number"
     format: "float"
     x-edi-elt-designators:

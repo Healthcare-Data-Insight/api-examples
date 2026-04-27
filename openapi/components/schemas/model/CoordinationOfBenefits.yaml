@@ -31,7 +31,7 @@ properties:
     items:
       $ref: "./Reference.yaml"
   dateFrom:
-    description: "Date from. EDI: DTP03 *344."
+    description: "Date from. EDI: DTP03*344."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -39,7 +39,7 @@ properties:
     x-edi-qualifiers:
     - "344"
   dateTo:
-    description: "Date to. EDI: DTP03 *345."
+    description: "Date to. EDI: DTP03*345."
     type: "string"
     format: "date"
     x-edi-elt-designators:

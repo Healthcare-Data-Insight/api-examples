@@ -3,14 +3,14 @@ type: "object"
 description: "Loop: 2400."
 properties:
   controlNumber:
-    description: "Control number. EDI: REF02 *6R."
+    description: "Control number. EDI: REF02*6R."
     type: "string"
     x-edi-elt-designators:
     - "REF02"
     x-edi-qualifiers:
     - "6R"
   procedure:
-    description: "Procedure. EDI: SV101 *HC, SV101 *AD, SV101 *WK, SV101 *IV."
+    description: "Procedure. EDI: SV101*HC, SV101*AD, SV101*WK, SV101*IV."
     $ref: "./Procedure.yaml"
     x-edi-elt-designators:
     - "SV101"
@@ -75,7 +75,7 @@ properties:
     x-edi-elt-designators:
     - "SV115"
   serviceDateFrom:
-    description: "Service period start date. EDI: DTP03 *472, DTP03 *150."
+    description: "Service period start date. EDI: DTP03*472, DTP03*150."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -84,7 +84,7 @@ properties:
     - "472"
     - "150"
   serviceDateTo:
-    description: "Service period end date. If not provided in EDI (single day), it is set to 'serviceDateFrom'. EDI: DTP03 *151."
+    description: "Service period end date. If not provided in EDI (single day), it is set to 'serviceDateFrom'. EDI: DTP03*151."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -92,7 +92,7 @@ properties:
     x-edi-qualifiers:
     - "151"
   prescriptionDate:
-    description: "Prescription date. EDI: DTP03 *471."
+    description: "Prescription date. EDI: DTP03*471."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -100,7 +100,7 @@ properties:
     x-edi-qualifiers:
     - "471"
   beginTherapyDate:
-    description: "Begin therapy date. EDI: DTP03 *463."
+    description: "Begin therapy date. EDI: DTP03*463."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -108,7 +108,7 @@ properties:
     x-edi-qualifiers:
     - "463"
   lastSeenDate:
-    description: "Last seen date. EDI: DTP03 *304."
+    description: "Last seen date. EDI: DTP03*304."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -116,7 +116,7 @@ properties:
     x-edi-qualifiers:
     - "304"
   testPerformedDate:
-    description: "Test performed date. EDI: DTP03 *738, DTP03 *739."
+    description: "Test performed date. EDI: DTP03*738, DTP03*739."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -125,7 +125,7 @@ properties:
     - "738"
     - "739"
   lastXRayDate:
-    description: "Last xray date. EDI: DTP03 *455."
+    description: "Last xray date. EDI: DTP03*455."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -133,7 +133,7 @@ properties:
     x-edi-qualifiers:
     - "455"
   initialTreatmentDate:
-    description: "Initial treatment date. EDI: DTP03 *454."
+    description: "Initial treatment date. EDI: DTP03*454."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -141,38 +141,42 @@ properties:
     x-edi-qualifiers:
     - "454"
   priorAuthorization:
-    description: "Prior authorization. EDI: REF02 *G1."
+    description: "Prior authorization. EDI: REF02*G1."
     type: "string"
     x-edi-elt-designators:
     - "REF02"
     x-edi-qualifiers:
     - "G1"
   referralNumber:
-    description: "Referral number. EDI: REF02 *9F."
+    description: "Referral number. EDI: REF02*9F."
     type: "string"
     x-edi-elt-designators:
     - "REF02"
     x-edi-qualifiers:
     - "9F"
   repricedReferenceNumber:
-    description: "Repriced reference number. EDI: REF02 *9B."
+    description: "Repriced reference number. EDI: REF02*9B."
     type: "string"
     x-edi-elt-designators:
     - "REF02"
     x-edi-qualifiers:
     - "9B"
   adjustedRepricedReferenceNumber:
-    description: "Adjusted repriced reference number. EDI: REF02 *9D."
+    description: "Adjusted repriced reference number. EDI: REF02*9D."
     type: "string"
     x-edi-elt-designators:
     - "REF02"
     x-edi-qualifiers:
     - "9D"
   note:
-    description: "Note. EDI: NTE02 *ADD, NTE02 *DCP."
+    description: "Note. Deprecated: Use list of note objects instead. EDI: NTE02*ADD, NTE02*DCP."
+    deprecated: true
     type: "string"
     x-edi-elt-designators:
     - "NTE02"
+    x-edi-qualifiers:
+    - "ADD"
+    - "DCP"
   thirdPartyNote:
     description: "Third party note. EDI: NTE02."
     type: "string"
@@ -195,7 +199,7 @@ properties:
     x-edi-elt-designators:
     - "CTP05-1"
   prescriptionNumber:
-    description: "Prescription number. EDI: REF02 *XZ."
+    description: "Prescription number. EDI: REF02*XZ."
     type: "string"
     x-edi-elt-designators:
     - "REF02"
@@ -209,56 +213,56 @@ properties:
     x-edi-seg-ids:
     - "PWK"
   renderingProvider:
-    description: "Rendering provider. EDI: NM1 *82."
+    description: "Rendering provider. EDI: NM1*82."
     $ref: "./Provider.yaml"
     x-edi-seg-ids:
     - "NM1"
     x-edi-qualifiers:
     - "82"
   purchasedServiceProvider:
-    description: "Purchased service provider. EDI: NM1 *QB."
+    description: "Purchased service provider. EDI: NM1*QB."
     $ref: "./Party.yaml"
     x-edi-seg-ids:
     - "NM1"
     x-edi-qualifiers:
     - "QB"
   serviceFacility:
-    description: "Service facility. EDI: NM1 *77."
+    description: "Service facility. EDI: NM1*77."
     $ref: "./Party.yaml"
     x-edi-seg-ids:
     - "NM1"
     x-edi-qualifiers:
     - "77"
   supervisingProvider:
-    description: "Supervising provider. EDI: NM1 *DQ."
+    description: "Supervising provider. EDI: NM1*DQ."
     $ref: "./Party.yaml"
     x-edi-seg-ids:
     - "NM1"
     x-edi-qualifiers:
     - "DQ"
   referringProvider:
-    description: "Referring provider. EDI: NM1 *DN."
+    description: "Referring provider. EDI: NM1*DN."
     $ref: "./Party.yaml"
     x-edi-seg-ids:
     - "NM1"
     x-edi-qualifiers:
     - "DN"
   orderingProvider:
-    description: "Ordering provider. EDI: NM1 *DK."
+    description: "Ordering provider. EDI: NM1*DK."
     $ref: "./Party.yaml"
     x-edi-seg-ids:
     - "NM1"
     x-edi-qualifiers:
     - "DK"
   ambulancePickUp:
-    description: "Ambulance pick up. EDI: NM1 *PW."
+    description: "Ambulance pick up. EDI: NM1*PW."
     $ref: "./Party.yaml"
     x-edi-seg-ids:
     - "NM1"
     x-edi-qualifiers:
     - "PW"
   ambulanceDropOff:
-    description: "Ambulance drop off. EDI: NM1 *45."
+    description: "Ambulance drop off. EDI: NM1*45."
     $ref: "./Party.yaml"
     x-edi-seg-ids:
     - "NM1"

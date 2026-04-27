@@ -3,28 +3,28 @@ type: "object"
 description: "Loop: 2110; Segment: SVC."
 properties:
   sourceLineId:
-    description: "Line item control number. EDI: REF02 *6R."
+    description: "Line item control number. EDI: REF02*6R."
     type: "string"
     x-edi-elt-designators:
     - "REF02"
     x-edi-qualifiers:
     - "6R"
   repricedReferenceNumber:
-    description: "Repriced reference number. EDI: REF02 *9B."
+    description: "Repriced reference number. EDI: REF02*9B."
     type: "string"
     x-edi-elt-designators:
     - "REF02"
     x-edi-qualifiers:
     - "9B"
   adjustedRepricedReferenceNumber:
-    description: "Adjusted repriced reference number. EDI: REF02 *9D."
+    description: "Adjusted repriced reference number. EDI: REF02*9D."
     type: "string"
     x-edi-elt-designators:
     - "REF02"
     x-edi-qualifiers:
     - "9D"
   healthcarePolicyId:
-    description: "Healthcare policy id. EDI: REF02 *0K."
+    description: "Healthcare policy id. EDI: REF02*0K."
     type: "string"
     x-edi-elt-designators:
     - "REF02"
@@ -57,7 +57,7 @@ properties:
     x-edi-seg-ids:
     - "QTY"
   serviceDateFrom:
-    description: "Service date from. EDI: DTP03 *472."
+    description: "Service date from. EDI: DTP03*472."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -65,7 +65,7 @@ properties:
     x-edi-qualifiers:
     - "472"
   serviceDateTo:
-    description: "Service date to. EDI: DTP03 *472."
+    description: "Service date to. EDI: DTP03*472."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -89,8 +89,15 @@ properties:
     $ref: "./Code.yaml"
     x-edi-elt-designators:
     - "SVC01"
+  prescriptionNumberType:
+    description: "Prescription number type. Since: v2.14.10."
+    type: "string"
+    enum:
+    - "PHARMACY_PRESCRIPTION_NUMBER"
+    - "LINK_SEQUENCE_NUMBER"
+    x-since: "2.14.10"
   procedure:
-    description: "Procedure. EDI: SVC01 *HC, SVC01 *AD, SVC01 *WK, SVC01 *IV."
+    description: "Procedure. EDI: SVC01*HC, SVC01*AD, SVC01*WK, SVC01*IV."
     $ref: "./Procedure.yaml"
     x-edi-elt-designators:
     - "SVC01"
@@ -100,15 +107,15 @@ properties:
     - "WK"
     - "IV"
   revenueCode:
-    description: "Revenue code. EDI: SVC01 *RC,NU, SVC04 *RC,NU."
+    description: "Revenue code. EDI: SVC01*NU, SVC04*NU."
     $ref: "./Code.yaml"
     x-edi-elt-designators:
     - "SVC01"
     - "SVC04"
     x-edi-qualifiers:
-    - "RC,NU"
+    - "NU"
   originalProcedure:
-    description: "Submitted procedure code from the claim if it is different from the adjudicated procedure. EDI: SVC06 *HC, SVC06 *AD, SVC06 *WK, SVC06 *IV."
+    description: "Submitted procedure code from the claim if it is different from the adjudicated procedure. EDI: SVC06*HC, SVC06*AD, SVC06*WK, SVC06*IV."
     $ref: "./Procedure.yaml"
     x-edi-elt-designators:
     - "SVC06"
@@ -118,12 +125,12 @@ properties:
     - "WK"
     - "IV"
   originalRevenueCode:
-    description: "Submitted revenue code from the claim if it is different from the adjudicated revenue code. EDI: SVC06 *RC,NU."
+    description: "Submitted revenue code from the claim if it is different from the adjudicated revenue code. EDI: SVC06*NU."
     $ref: "./Code.yaml"
     x-edi-elt-designators:
     - "SVC06"
     x-edi-qualifiers:
-    - "RC,NU"
+    - "NU"
   originalDrug:
     description: "Submitted drug (NDC) code from the claim if it is different from the adjudicated drug code. EDI: SVC06."
     $ref: "./Code.yaml"

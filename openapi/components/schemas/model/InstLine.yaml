@@ -3,21 +3,21 @@ type: "object"
 description: "Loop: 2400; Segment: SV2."
 properties:
   sourceLineId:
-    description: "Line item control number. EDI: REF02 *6R."
+    description: "Line item control number. EDI: REF02*6R."
     type: "string"
     x-edi-elt-designators:
     - "REF02"
     x-edi-qualifiers:
     - "6R"
   repricedReferenceNumber:
-    description: "Repriced reference number. EDI: REF02 *9B."
+    description: "Repriced reference number. EDI: REF02*9B."
     type: "string"
     x-edi-elt-designators:
     - "REF02"
     x-edi-qualifiers:
     - "9B"
   adjustedRepricedReferenceNumber:
-    description: "Adjusted repriced reference number. EDI: REF02 *9D."
+    description: "Adjusted repriced reference number. EDI: REF02*9D."
     type: "string"
     x-edi-elt-designators:
     - "REF02"
@@ -36,7 +36,7 @@ properties:
     x-edi-elt-designators:
     - "SV207"
   serviceTaxAmount:
-    description: "Service tax amount. EDI: AMT02 *GT."
+    description: "Service tax amount. EDI: AMT02*GT."
     type: "number"
     format: "float"
     x-edi-elt-designators:
@@ -44,7 +44,7 @@ properties:
     x-edi-qualifiers:
     - "GT"
   facilityTaxAmount:
-    description: "Facility tax amount. EDI: AMT02 *N8."
+    description: "Facility tax amount. EDI: AMT02*N8."
     type: "number"
     format: "float"
     x-edi-elt-designators:
@@ -52,7 +52,7 @@ properties:
     x-edi-qualifiers:
     - "N8"
   serviceDateFrom:
-    description: "Service date from. EDI: DTP03 *472."
+    description: "Service date from. EDI: DTP03*472."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -60,7 +60,7 @@ properties:
     x-edi-qualifiers:
     - "472"
   serviceDateTo:
-    description: "Service date to. EDI: DTP03 *472."
+    description: "Service date to. EDI: DTP03*472."
     type: "string"
     format: "date"
     x-edi-elt-designators:
@@ -78,13 +78,31 @@ properties:
     format: "float"
     x-edi-elt-designators:
     - "SV205"
+  prescriptionNumberType:
+    description: "Prescription number type. Since: v2.14.10."
+    type: "string"
+    enum:
+    - "PHARMACY_PRESCRIPTION_NUMBER"
+    - "LINK_SEQUENCE_NUMBER"
+    x-since: "2.14.10"
   thirdPartyNote:
-    description: "Third party note. EDI: NTE02 *TPO."
+    description: "Third party note. Deprecated: Use list of note objects instead. EDI: NTE02*TPO."
+    deprecated: true
     type: "string"
     x-edi-elt-designators:
     - "NTE02"
+    x-edi-qualifiers:
+    - "TPO"
+  notes:
+    description: "Notes. Since: v2.14.10. EDI: NTE."
+    type: "array"
+    items:
+      $ref: "./Note.yaml"
+    x-edi-seg-ids:
+    - "NTE"
+    x-since: "2.14.10"
   procedure:
-    description: "Procedure. EDI: SV202 *HC, SV202 *AD, SV202 *WK, SV202 *IV."
+    description: "Procedure. EDI: SV202*HC, SV202*AD, SV202*WK, SV202*IV."
     $ref: "./Procedure.yaml"
     x-edi-elt-designators:
     - "SV202"
@@ -94,12 +112,12 @@ properties:
     - "WK"
     - "IV"
   revenueCode:
-    description: "Revenue code. EDI: SV201 *RC,NU."
+    description: "Revenue code. EDI: SV201*NU."
     $ref: "./Code.yaml"
     x-edi-elt-designators:
     - "SV201"
     x-edi-qualifiers:
-    - "RC,NU"
+    - "NU"
   attachments:
     description: "Attachments. EDI: PWK."
     type: "array"
@@ -118,7 +136,7 @@ properties:
     items:
       $ref: "./Provider.yaml"
   adjudications:
-    description: "Adjudications. EDI: SVD; Loop: 2430."
+    description: "Adjudications. EDI: Loop: 2430, SVD."
     type: "array"
     items:
       $ref: "./Adjudication.yaml"

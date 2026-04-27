@@ -43,7 +43,7 @@ properties:
     items:
       $ref: "./Reference.yaml"
   priorCoverageMonthCount:
-    description: "Prior coverage month count. EDI: REF02 *QQ."
+    description: "Prior coverage month count. EDI: REF02*QQ."
     type: "string"
     x-edi-elt-designators:
     - "REF02"

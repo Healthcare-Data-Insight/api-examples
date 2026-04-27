@@ -22,7 +22,7 @@ properties:
     x-edi-elt-designators:
     - "REF02"
   date:
-    description: "Effective date. EDI: DTP03 *007."
+    description: "Effective date. EDI: DTP03*007."
     type: "string"
     format: "date"
     x-edi-elt-designators:

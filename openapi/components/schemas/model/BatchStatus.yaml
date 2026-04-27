@@ -13,7 +13,7 @@ properties:
     items:
       $ref: "./StatusInfo.yaml"
   acceptedQuantity:
-    description: "Accepted quantity. EDI: QTY02 *QA."
+    description: "Accepted quantity. EDI: QTY02*QA."
     type: "number"
     format: "float"
     x-edi-elt-designators:
@@ -21,7 +21,7 @@ properties:
     x-edi-qualifiers:
     - "QA"
   acceptedAmount:
-    description: "Accepted amount. EDI: AMT02 *YU."
+    description: "Accepted amount. EDI: AMT02*YU."
     type: "number"
     format: "float"
     x-edi-elt-designators:
@@ -29,7 +29,7 @@ properties:
     x-edi-qualifiers:
     - "YU"
   rejectedQuantity:
-    description: "Rejected quantity. EDI: QTY02 *QC."
+    description: "Rejected quantity. EDI: QTY02*QC."
     type: "number"
     format: "float"
     x-edi-elt-designators:
@@ -37,7 +37,7 @@ properties:
     x-edi-qualifiers:
     - "QC"
   rejectedAmount:
-    description: "Rejected amount. EDI: AMT02 *YY."
+    description: "Rejected amount. EDI: AMT02*YY."
     type: "number"
     format: "float"
     x-edi-elt-designators:

@@ -1,0 +1,42 @@
+---
+type: "object"
+description: "Segment: NTE."
+properties:
+  qualifierCode:
+    description: "Code identifying the functional area or purpose for which the note applies. EDI: NTE01."
+    type: "string"
+    x-edi-elt-designators:
+    - "NTE01"
+  type:
+    description: "Type of this note; qualifier code translated to a mnemonic string constant (enum). EDI: NTE01."
+    type: "string"
+    enum:
+    - "ADDITIONAL_INFORMATION"
+    - "ALLERGIES"
+    - "CERTIFICATION_NARRATIVE"
+    - "DIAGNOSIS_DESCRIPTION"
+    - "DURABLE_MEDICAL_EQUIPMENT_AND_SUPPLIES"
+    - "FUNCTIONAL_LIMITATIONS_REASON_HOMEBOUND_OR_BOTH"
+    - "GOALS_REHABILITATION_POTENTIAL_OR_DISCHARGE_PLANS"
+    - "MEDICATIONS"
+    - "NUTRITIONAL_REQUIREMENTS"
+    - "ORDERS_FOR_DISCIPLINES_AND_TREATMENTS"
+    - "REASONS_PATIENT_LEAVES_HOME"
+    - "SAFETY_MEASURES"
+    - "SUPPLEMENTARY_PLAN_OF_TREATMENT"
+    - "THIRD_PARTY_ORGANIZATION_NOTES"
+    - "TIMES_AND_REASONS_PATIENT_NOT_AT_HOME"
+    - "UNUSUAL_HOME_SOCIAL_ENVIRONMENT_OR_BOTH"
+    - "UPDATED_INFORMATION"
+    x-edi-elt-designators:
+    - "NTE01"
+  text:
+    description: "Text. EDI: NTE02."
+    type: "string"
+    x-edi-elt-designators:
+    - "NTE02"
+required:
+- "qualifierCode"
+- "text"
+x-edi-seg-ids:
+- "NTE"
