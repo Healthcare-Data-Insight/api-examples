@@ -18,10 +18,10 @@ public class Member834ParsingExample implements ParsingExampleHelper {
         var ediFile834 = new File(EDI_FILES_DIR + "/834/834-all-fields.edi");
         List<MemberCoverage> memberCoverages;
         try (var parser = new EdiParser(ediFile834)) {
-            boolean isDone = false;
-            while (!isDone) {
+            EdiParsingResults parsingResults;
+            do {
                 // parse 100 members at a time
-                EdiParsingResults parsingResults = parser.parse(100);
+                parsingResults = parser.parse(100);
                 memberCoverages = parsingResults.memberCoverages();
                 for (var memberCoverage : memberCoverages) {
                     processMemberCoverage(memberCoverage);
@@ -31,8 +31,7 @@ public class Member834ParsingExample implements ParsingExampleHelper {
                 for (var issue : issues) {
                     log.warn("Parsing issue: {}", issue.message());
                 }
-                isDone = parsingResults.isDone();
-            }
+            } while (!parsingResults.isDone());
         }
     }
 

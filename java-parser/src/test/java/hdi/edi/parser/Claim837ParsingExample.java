@@ -43,9 +43,10 @@ public class Claim837ParsingExample implements ParsingExampleHelper {
     public void parse837(File edi837File) {
         log.info("* Parsing EDI 837 file: {}", edi837File.getName());
         try (var parser = new EdiParser(edi837File)) {
-            boolean isDone = false;
-            while (!isDone) {
-                EdiParsingResults parsingResults = parser.parse(100);
+            EdiParsingResults parsingResults;
+            do {
+                // parse up to 100 claims at a time
+                parsingResults = parser.parse(100);
                 List<Claim> claims = parsingResults.claims();
                 for (var claim : claims) {
                     processClaim(claim);
@@ -54,8 +55,7 @@ public class Claim837ParsingExample implements ParsingExampleHelper {
                 for (var issue : issues) {
                     log.warn("Parsing issue: {}", issue.message());
                 }
-                isDone = parsingResults.isDone();
-            }
+            } while (!parsingResults.isDone());
         }
     }
 

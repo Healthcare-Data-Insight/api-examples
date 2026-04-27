@@ -104,10 +104,10 @@ public class SegmentParsingExample implements ParsingExampleHelper {
                 // find claim
                 for (var tranChildNode : tranOrIsa) {
                     if ("CLM".equals(tranChildNode.path("segment_id").asText())) {
-                        System.err.println("CLM elements:");
+                        System.out.println("CLM elements:");
                         for (Iterator<Map.Entry<String, JsonNode>> it = tranChildNode.properties().iterator(); it.hasNext(); ) {
                             var clmNodeAndName = it.next();
-                            System.err.println(clmNodeAndName.getKey() + ": " + clmNodeAndName.getValue());
+                            System.out.println(clmNodeAndName.getKey() + ": " + clmNodeAndName.getValue());
                         }
                     }
                 }
