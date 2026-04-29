@@ -1,12 +1,14 @@
-from typing import TextIO
-import os
-import requests
-import env
 import csv
+import os
 from collections import defaultdict
-import pandas as pd
-from requests_toolbelt.downloadutils import stream
 from io import StringIO
+from typing import TextIO
+
+import pandas as pd
+import requests
+from requests_toolbelt.downloadutils import stream
+
+import env
 
 """
 Converts 835 files. 
@@ -162,6 +164,9 @@ with open(csv_file, 'wb') as f:
     stream.stream_response_to_file(response, path=f)
 df = pd.read_csv(csv_file, sep=',')
 print(df.shape)
+# Pandas 3.x no longer allows filling numeric columns with empty strings in-place.
+# Cast to a string-friendly dtype first so the example can print every field consistently.
+df = df.astype('string').fillna('')
 df.fillna('', inplace=True)
 current_claim_id = ''
 for _, csv_row in df.iterrows():
