@@ -44,7 +44,10 @@ public class ConverterExample implements ParsingExampleHelper {
     @Test
     public void convertMultipleFilesToCsv() {
         var converter = new EdiFileConverter(OutputFormat.CSV)
-                .csvConversionSchemaName("default");
+                // name of the schema for a given transaction type
+                .csvConversionSchemaName("default")
+                // path to the schema file if you want to use a custom schema
+                .csvConversionSchemaFileName("../install/docker-compose/ediconvert/etc/csv/csv_conversion.yaml");
 
         // Convert all files into a single CSV file. By default, the converter creates two files, one for claims and one for lines (*-Lines.csv)
         var outFile = new File(OUT_DIR, "all-837.csv");
