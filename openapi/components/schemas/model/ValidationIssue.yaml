@@ -2,12 +2,15 @@
 type: "object"
 description: "EDI validation issue details."
 properties:
+  objectType:
+    description: "Type of this object, always 'VALIDATION'."
+    type: "string"
   issueType:
     description: "Issue type."
     type: "string"
     enum:
+    - "BALANCE"
     - "CONTROL"
-    - "FORMAT"
     - "INVALID"
     - "LENGTH_EXCEEDED"
     - "LENGTH_TOO_SHORT"
@@ -18,6 +21,9 @@ properties:
     - "REQUIRED_CODE"
     - "VALUE_NOT_IN_ENUM_LIST"
     - "WRONG_TYPE"
+  issueObjectClass:
+    description: "Class (type) of the object where the issue was detected, such as Claim, ServiceLine, etc."
+    type: "string"
   jsonPath:
     description: "JSON path for the object where the issue was detected."
     type: "string"

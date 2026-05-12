@@ -120,6 +120,24 @@ properties:
     - "AMT02"
     x-edi-qualifiers:
     - "EAF"
+  assignmentCertificationIndicator:
+    description: "Assignment certification indicator. Since: v2.14.10. EDI: OI03."
+    type: "string"
+    x-edi-elt-designators:
+    - "OI03"
+    x-since: "2.14.10"
+  patientSignatureSourceCode:
+    description: "Patient signature source code. Since: v2.14.10. EDI: OI04."
+    type: "string"
+    x-edi-elt-designators:
+    - "OI04"
+    x-since: "2.14.10"
+  releaseOfInformationCode:
+    description: "Release of information code. Since: v2.14.10. EDI: OI06."
+    type: "string"
+    x-edi-elt-designators:
+    - "OI06"
+    x-since: "2.14.10"
   outpatientAdjudication:
     description: "Outpatient adjudication. EDI: MOA."
     $ref: "./OutpatientAdjudication.yaml"

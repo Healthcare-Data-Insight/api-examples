@@ -289,7 +289,8 @@ properties:
     x-edi-qualifiers:
     - "P4"
   note:
-    description: "Free-form comments or instructions. All note segments are concatenated together into this field. EDI: NTE02."
+    description: "Free-form comments or instructions. All note segments are concatenated together into this field. Deprecated: Use the 'notes' list instead. EDI: NTE02."
+    deprecated: true
     type: "string"
     x-edi-elt-designators:
     - "NTE02"

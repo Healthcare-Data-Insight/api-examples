@@ -170,7 +170,8 @@ properties:
     x-edi-qualifiers:
     - "9D"
   note:
-    description: "Note. EDI: NTE02*ADD, NTE02*DCP."
+    description: "Note. Deprecated: Use list of note objects instead. EDI: NTE02*ADD, NTE02*DCP."
+    deprecated: true
     type: "string"
     x-edi-elt-designators:
     - "NTE02"

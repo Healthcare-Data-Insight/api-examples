@@ -8,14 +8,16 @@ import env
 class ObjectType(Enum):
     # 837I/P/D
     CLAIM = "CLAIM"
-    # 835 paid claim
+    # 835 paid claims
     PAYMENT = "PAYMENT"
     # 835 provider-level adjustment
     PROVIDER_ADJUSTMENT = "PROVIDER_ADJUSTMENT"
     # 834
     MEMBER_COVERAGE = "MEMBER_COVERAGE"
-    # parser's errors or warnings
+    # parser's errors
     ERROR = "ERROR"
+    VALIDATION = "VALIDATION"
+    # parser's warnings -- this is deprecated, use validations instead
     WARNING = "WARNING"
 
 
@@ -27,9 +29,8 @@ def convert_files_with_multipart(files, is_ndjson):
     field_and_file_objects = []
     for f in files:
         field_and_file_objects.append(('files', open(f, 'rb')))
-    # Always use splitTran: True for 837/835 transactions
     # If ndjson: True, the server will return a new-line separated list of objects (claims) instead of an array
-    params = {'ndjson': is_ndjson}
+    params = {'ndjson': is_ndjson, 'validate': True}
     # Use stream=True to stream the response instead of loading it in memory
     api_response = requests.post(api_url, files=field_and_file_objects, params=params, stream=True)
     api_response.raise_for_status()
@@ -45,8 +46,8 @@ def convert_file(file, is_ndjson):
     # If ndjson: True, the server will return a new-line separated list of objects (claims) instead of an array
     # ediFileName parameter will propagate the original file name to transaction.fileInfo.name field; if not provided,
     # the converter will generate a name
-    # warningsInResponse tells the converter to return parsing warnings to the client as objects (objectType: WARNING)
-    params = {'ndjson': is_ndjson, 'warningsInResponse': True, 'ediFileName': file}
+    # 'validate' tells the converter to validate EDI and serialize validation issues (objectType: VALIDATION)
+    params = {'ndjson': is_ndjson, 'validate': True, 'ediFileName': file}
 
     with open(file) as f:
         # Use stream=True to stream the response instead of loading it in memory
@@ -80,5 +81,8 @@ def handle_warning_error(obj):
         file_name = obj['fileName']
         message = obj['message']
         print(f'Encountered parsing issue with file {file_name}. Warning: {message}')
+        return True
+    elif object_type == ObjectType.VALIDATION:
+        print(obj)
         return True
     return None

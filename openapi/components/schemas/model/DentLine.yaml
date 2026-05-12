@@ -133,6 +133,14 @@ properties:
     format: "float"
     x-edi-elt-designators:
     - "SV306"
+  prescriptionNumberType:
+    description: "Prescription number type. Since: v2.14.10."
+    type: "string"
+    enum:
+    - "PHARMACY_PRESCRIPTION_NUMBER"
+    - "LINK_SEQUENCE_NUMBER"
+    x-since: "2.14.10"
+    x-enum-name: "ReferenceType"
   procedure:
     description: "Procedure. EDI: SV302*HC, SV302*AD, SV302*WK, SV302*IV."
     $ref: "./Procedure.yaml"

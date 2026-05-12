@@ -215,10 +215,19 @@ properties:
     x-edi-elt-designators:
     - "K301"
   claimNote:
-    description: "Free-form comments or instructions. All note segments are concatenated together into this field. EDI: NTE02."
+    description: "Free-form comments or instructions. All note segments are concatenated together into this field. Deprecated: Use the 'notes' list instead. EDI: NTE02."
+    deprecated: true
     type: "string"
     x-edi-elt-designators:
     - "NTE02"
+  notes:
+    description: "Notes. Since: v2.14.10. EDI: NTE."
+    type: "array"
+    items:
+      $ref: "./Note.yaml"
+    x-edi-seg-ids:
+    - "NTE"
+    x-since: "2.14.10"
   billingProvider:
     description: "Billing provider. EDI: NM1*85."
     $ref: "./Provider.yaml"

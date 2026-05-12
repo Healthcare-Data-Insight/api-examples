@@ -55,6 +55,38 @@ properties:
     - "REF02"
     x-edi-qualifiers:
     - "G1"
+  mammographyCertificationNumber:
+    description: "Mammography certification number. Since: v2.14.10. EDI: REF02*EW."
+    type: "string"
+    x-edi-elt-designators:
+    - "REF02"
+    x-edi-qualifiers:
+    - "EW"
+    x-since: "2.14.10"
+  cliaNumber:
+    description: "Clia number. Since: v2.14.10. EDI: REF02*X4."
+    type: "string"
+    x-edi-elt-designators:
+    - "REF02"
+    x-edi-qualifiers:
+    - "X4"
+    x-since: "2.14.10"
+  referringCliaNumber:
+    description: "Referring clia number. Since: v2.14.10. EDI: REF02*F4."
+    type: "string"
+    x-edi-elt-designators:
+    - "REF02"
+    x-edi-qualifiers:
+    - "F4"
+    x-since: "2.14.10"
+  immunizationBatchNumber:
+    description: "Immunization batch number. Since: v2.14.10. EDI: REF02*BT."
+    type: "string"
+    x-edi-elt-designators:
+    - "REF02"
+    x-edi-qualifiers:
+    - "BT"
+    x-since: "2.14.10"
   referralNumber:
     description: "Referral number. EDI: REF02*9F."
     type: "string"
@@ -76,6 +108,15 @@ properties:
     - "AMT02"
     x-edi-qualifiers:
     - "T"
+  postageClaimedAmount:
+    description: "Postage claimed amount. Since: v2.14.10. EDI: AMT02*F4."
+    type: "number"
+    format: "float"
+    x-edi-elt-designators:
+    - "AMT02"
+    x-edi-qualifiers:
+    - "F4"
+    x-since: "2.14.10"
   purchasedServiceProviderIdentifier:
     description: "Purchased service provider identifier. Since: v2.14.9. EDI: PS101."
     type: "string"
@@ -154,6 +195,15 @@ properties:
     x-edi-qualifiers:
     - "738"
     - "739"
+  shippedDate:
+    description: "Shipped date. Since: v2.14.10. EDI: DTP03*011."
+    type: "string"
+    format: "date"
+    x-edi-elt-designators:
+    - "DTP03"
+    x-edi-qualifiers:
+    - "011"
+    x-since: "2.14.10"
   lastXRayDate:
     description: "Last xray date. EDI: DTP03*455."
     type: "string"
@@ -189,6 +239,15 @@ properties:
     - "QTY02"
     x-edi-qualifiers:
     - "PT"
+  obstetricAdditionalUnitCount:
+    description: "Obstetric additional unit count. Since: v2.14.10. EDI: QTY02*FL."
+    type: "number"
+    format: "float"
+    x-edi-elt-designators:
+    - "QTY02"
+    x-edi-qualifiers:
+    - "FL"
+    x-since: "2.14.10"
   drug:
     description: "Drug code (NDC). EDI: LIN03."
     $ref: "./Code.yaml"
@@ -207,14 +266,24 @@ properties:
     - "CTP05-1"
     x-enum-name: "UnitType"
   prescriptionNumber:
-    description: "Prescription number. EDI: REF02*XZ."
+    description: "Prescription number. EDI: REF02*XZ, REF02*VY."
     type: "string"
     x-edi-elt-designators:
     - "REF02"
     x-edi-qualifiers:
     - "XZ"
+    - "VY"
+  prescriptionNumberType:
+    description: "Prescription number type. Since: v2.14.10."
+    type: "string"
+    enum:
+    - "PHARMACY_PRESCRIPTION_NUMBER"
+    - "LINK_SEQUENCE_NUMBER"
+    x-since: "2.14.10"
+    x-enum-name: "ReferenceType"
   lineNote:
-    description: "Line note. EDI: NTE02*ADD, NTE02*DCP."
+    description: "Line note. Deprecated: Use list of note objects instead. EDI: NTE02*ADD, NTE02*DCP."
+    deprecated: true
     type: "string"
     x-edi-elt-designators:
     - "NTE02"
@@ -222,12 +291,21 @@ properties:
     - "ADD"
     - "DCP"
   thirdPartyNote:
-    description: "Third party note. EDI: NTE02*TPO."
+    description: "Third party note. Deprecated: Use list of note objects instead. EDI: NTE02*TPO."
+    deprecated: true
     type: "string"
     x-edi-elt-designators:
     - "NTE02"
     x-edi-qualifiers:
     - "TPO"
+  notes:
+    description: "Notes. Since: v2.14.10. EDI: NTE."
+    type: "array"
+    items:
+      $ref: "./Note.yaml"
+    x-edi-seg-ids:
+    - "NTE"
+    x-since: "2.14.10"
   procedure:
     description: "Procedure. EDI: SV101*HC, SV101*AD, SV101*WK, SV101*IV."
     $ref: "./Procedure.yaml"

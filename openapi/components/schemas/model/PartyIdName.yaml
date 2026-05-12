@@ -39,6 +39,15 @@ properties:
     - "TJ"
     - "SY"
     - "EI"
+  taxIdType:
+    description: "Type of taxId. Since: v2.14.10."
+    type: "string"
+    enum:
+    - "SSN"
+    - "EIN"
+    - "TAX_ID"
+    x-since: "2.14.10"
+    x-enum-name: "ReferenceType"
   lastNameOrOrgName:
     description: "Organization name or person last name. EDI: NM103, N102."
     type: "string"
@@ -55,6 +64,12 @@ properties:
     type: "string"
     x-edi-elt-designators:
     - "NM105"
+  nameSuffix:
+    description: "Name suffix. Since: v2.14.10. EDI: NM107."
+    type: "string"
+    x-edi-elt-designators:
+    - "NM107"
+    x-since: "2.14.10"
 required:
 - "entityRole"
 - "entityType"

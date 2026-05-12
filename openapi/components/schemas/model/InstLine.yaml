@@ -79,13 +79,30 @@ properties:
     format: "float"
     x-edi-elt-designators:
     - "SV205"
+  prescriptionNumberType:
+    description: "Prescription number type. Since: v2.14.10."
+    type: "string"
+    enum:
+    - "PHARMACY_PRESCRIPTION_NUMBER"
+    - "LINK_SEQUENCE_NUMBER"
+    x-since: "2.14.10"
+    x-enum-name: "ReferenceType"
   thirdPartyNote:
-    description: "Third party note. EDI: NTE02*TPO."
+    description: "Third party note. Deprecated: Use list of note objects instead. EDI: NTE02*TPO."
+    deprecated: true
     type: "string"
     x-edi-elt-designators:
     - "NTE02"
     x-edi-qualifiers:
     - "TPO"
+  notes:
+    description: "Notes. Since: v2.14.10. EDI: NTE."
+    type: "array"
+    items:
+      $ref: "./Note.yaml"
+    x-edi-seg-ids:
+    - "NTE"
+    x-since: "2.14.10"
   procedure:
     description: "Procedure. EDI: SV202*HC, SV202*AD, SV202*WK, SV202*IV."
     $ref: "./Procedure.yaml"

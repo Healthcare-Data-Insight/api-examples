@@ -89,6 +89,14 @@ properties:
     $ref: "./Code.yaml"
     x-edi-elt-designators:
     - "SVC01"
+  prescriptionNumberType:
+    description: "Prescription number type. Since: v2.14.10."
+    type: "string"
+    enum:
+    - "PHARMACY_PRESCRIPTION_NUMBER"
+    - "LINK_SEQUENCE_NUMBER"
+    x-since: "2.14.10"
+    x-enum-name: "ReferenceType"
   procedure:
     description: "Procedure. EDI: SVC01*HC, SVC01*AD, SVC01*WK, SVC01*IV."
     $ref: "./Procedure.yaml"
