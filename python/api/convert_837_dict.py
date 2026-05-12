@@ -1,11 +1,17 @@
 import json
+
 import edi_converter
 
 """
+This example does not use the object model, it relies on the raw JSON response and Python dictionaries.
+Use it only if you want to avoid dependency on the object model and want to build your own logic.
+See convert_837.py for an example that uses the object model.
+
 Converts 837 files using multipart request.
 The response is an array of JSON objects or a line-delimited JSON (ndjson)
 This example uses ndjson as it is more convenient for streaming.
 If you want to use well-formed JSON, make sure that your logic can handle large arrays if you have large EDI files.
+
 API documentation:
 https://datainsight.health/docs/ediconvert-api/reference/#tag/EDI-to-JSON
 Schemas:

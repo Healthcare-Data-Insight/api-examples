@@ -73,6 +73,11 @@ properties:
     items:
       $ref: "./InstLine.yaml"
     x-edi-loop-id: "2400"
+  validationIssues:
+    description: "Validation issues."
+    type: "array"
+    items:
+      $ref: "./ValidationIssue.yaml"
   transaction:
     description: "Parent EDI transaction for this object. EDI: ST."
     $ref: "./Transaction837.yaml"

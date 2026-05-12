@@ -79,6 +79,11 @@ properties:
     items:
       $ref: "./PaymentLine.yaml"
     x-edi-loop-id: "2110"
+  validationIssues:
+    description: "Validation issues."
+    type: "array"
+    items:
+      $ref: "./ValidationIssue.yaml"
   transaction:
     description: "Parent EDI transaction for this object. EDI: ST."
     $ref: "./Transaction835.yaml"
@@ -105,7 +110,7 @@ properties:
     - "TERTIARY_FORWARDED"
     x-edi-elt-designators:
     - "CLP02"
-    x-enum-name: "ClaimStatus"
+    x-enum-name: "AdjudicatedClaimStatus"
   patientResponsibilityAmount:
     description: "Patient responsibility amount. EDI: CLP05."
     type: "number"

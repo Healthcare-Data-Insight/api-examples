@@ -1,7 +1,12 @@
 import json
+
 import edi_converter
 
 """
+This example does not use the object model, it relies on the raw JSON response and Python dictionaries.
+Use it only if you want to avoid dependency on the object model and want to build your own logic.
+See convert_834.py for an example that uses the object model.
+
 Converts 834 X220 (benefit enrollment and maintenance) file. 
 The response is an array of JSON objects or a line-delimited JSON (ndjson).
 Each object represents a member with nested sponsor, payer, subscriber and health coverage objects.

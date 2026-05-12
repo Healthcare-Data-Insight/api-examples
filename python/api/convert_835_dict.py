@@ -1,8 +1,13 @@
 import json
+
 import edi_converter
 from edi_converter import ObjectType
 
 """
+This example does not use the object model, it relies on the raw JSON response and Python dictionaries.
+Use it only if you want to avoid dependency on the object model and want to build your own logic.
+See convert_835.py for an example that uses the object model.
+
 Converts 835 files using multipart request or by posting the file's content.
 The response is an array of JSON objects or a line-delimited JSON (ndjson)
 This example uses ndjson as it is more convenient for streaming.
@@ -26,7 +31,7 @@ for response_line_str in response.iter_lines():
     # Object types: PAYMENT (paid claim), PROVIDER_ADJUSTMENT (provider-level adjustment), WARNING (parser's warning)
     obj = json.loads(response_line_str)
     object_type = ObjectType(obj['objectType'])
-    if object_type in {ObjectType.ERROR, ObjectType.WARNING}:
+    if object_type in {ObjectType.ERROR, ObjectType.VALIDATION}:
         edi_converter.handle_warning_error(obj)
         continue
     # All objects contain transaction info

@@ -14,18 +14,23 @@ edi_837_dir = '../../edi_files/837'
 # Convert a single file by posting its content
 file_to_convert = edi_837_dir + '/837P-all-fields.dat'
 print('** Converting ' + file_to_convert)
-response = edi_converter.convert_file(file_to_convert, False)
+response = edi_converter.convert_file(file_to_convert)
 # Serialize the response into an array of objects
 # Note: this requires large memory size for large files; consider a streaming parser instead
 claims = response.json()
 for claim_json in claims:
     # we can have parser warnings in the same array
     object_type = ObjectType(claim_json['objectType'])
-    if object_type in {ObjectType.ERROR, ObjectType.WARNING}:
+    if object_type in {ObjectType.ERROR, ObjectType.VALIDATION}:
         edi_converter.handle_warning_error(claim_json)
         continue
     # Create a ProfClaim object from the JSON
     claim = ProfClaim.model_validate(claim_json)
+    # print validation issues for this claim
+    if claim.validation_issues:
+        print(f'Validation issues for claim {claim.patient_control_number}:')
+        for issue in claim.validation_issues:
+            print(issue)
 
     pcn = claim.patient_control_number
     charge = claim.charge_amount

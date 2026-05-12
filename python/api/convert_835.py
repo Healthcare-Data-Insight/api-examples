@@ -23,7 +23,8 @@ file_names_to_convert = ['835-validation-issues.dat']
 files_to_convert = [edi_835_dir + '/' + file_name for file_name in file_names_to_convert]
 print('** Converting files:')
 print(*files_to_convert)
-response = edi_converter.convert_files_with_multipart(files_to_convert, True)
+# We always convert with full validation, so we can get validation issues
+response = edi_converter.convert_files_with_multipart(files_to_convert, is_ndjson=True)
 cur_transaction_id = None
 for response_line_str in response.iter_lines():
     # each line is an object
@@ -35,6 +36,11 @@ for response_line_str in response.iter_lines():
         continue
     if object_type == ObjectType.PAYMENT:
         claim_payment = Payment.model_validate(obj)
+        # print validation issues for this claim
+        if claim_payment.validation_issues:
+            print(f'Validation issues for claim {claim_payment.patient_control_number}:')
+            for issue in claim_payment.validation_issues:
+                print(issue)
         pcn = claim_payment.patient_control_number
         charge = claim_payment.charge_amount
         paid = claim_payment.payment_amount

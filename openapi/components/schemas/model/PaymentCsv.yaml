@@ -26,7 +26,7 @@ properties:
   claimStatus:
     description: "Claim status."
     type: "string"
-    x-enum-name: "ClaimStatus"
+    x-enum-name: "AdjudicatedClaimStatus"
   chargeAmount:
     description: "Charge amount. EDI: CLP03."
     type: "number"
