@@ -1,6 +1,6 @@
 [
  {
-  "id" : "69e82c68836d7d05c9a04cb7",
+  "id" : "6a04cb3b618f76c4f7b18b68",
   "objectType" : "CLAIM",
   "patientControlNumber" : "153829140",
   "chargeAmount" : 827.00,
@@ -56,6 +56,7 @@
     "identificationType" : "NPI",
     "identifier" : "2366554859",
     "taxId" : "756473826",
+    "taxIdType" : "EIN",
     "lastNameOrOrgName" : "PROVIDER MEDICAL GROUP",
     "address" : {
       "line" : "1234 WESTEND AVE",
@@ -163,7 +164,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "69e82c68836d7d05c9a04c90",
+    "id" : "6a04cb3b618f76c4f7b18b41",
     "controlNumber" : "0001",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",

@@ -1,6 +1,6 @@
 [
  {
-  "id" : "69e82c68836d7d05c9a04ad0",
+  "id" : "6a04cb3b618f76c4f7b18981",
   "objectType" : "CLAIM",
   "patientControlNumber" : "125WILL",
   "chargeAmount" : 145.50,
@@ -60,6 +60,7 @@
     "identificationType" : "NPI",
     "identifier" : "1234567890",
     "taxId" : "987654321",
+    "taxIdType" : "EIN",
     "lastNameOrOrgName" : "GREENE",
     "firstName" : "DAVID",
     "middleName" : "M",
@@ -108,7 +109,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "69e82c68836d7d05c9a04aac",
+    "id" : "6a04cb3b618f76c4f7b1895d",
     "controlNumber" : "3701",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",

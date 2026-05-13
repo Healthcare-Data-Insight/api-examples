@@ -1,6 +1,6 @@
 [
  {
-  "id" : "69e82c67836d7d05c9a02bda",
+  "id" : "6a04cb39618f76c4f7b16a8b",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26403774",
   "chargeAmount" : 150.00,
@@ -28,6 +28,7 @@
       "identificationType" : "MEMBER_ID",
       "identifier" : "111223333",
       "taxId" : "123450000",
+      "taxIdType" : "SSN",
       "lastNameOrOrgName" : "SMITH",
       "firstName" : "JANE",
       "birthDate" : "1943-05-01",
@@ -45,6 +46,7 @@
       "identificationType" : "PAYOR_ID",
       "identifier" : "66783JJT",
       "taxId" : "435261708",
+      "taxIdType" : "EIN",
       "lastNameOrOrgName" : "INSURANCE COMPANY XYZ",
       "address" : {
         "line" : "P.O. BOX 569008",
@@ -143,6 +145,7 @@
       "identificationType" : "PAYOR_ID",
       "identifier" : "OtherPayerPredeterminationOfBenefitsID",
       "taxId" : "OtherPayerTin",
+      "taxIdType" : "EIN",
       "lastNameOrOrgName" : "OTHER PAYER",
       "address" : {
         "line" : "PO BOX 7901",
@@ -243,12 +246,22 @@
   "predeterminationOfBenefitsIdentifier" : "PredeterminationOfBenefitsId",
   "fixedFormatRecords" : [ "Record1", "Record2" ],
   "claimNote" : "Note1\nNote2",
+  "notes" : [ {
+    "qualifierCode" : "ADD",
+    "type" : "ADDITIONAL_INFORMATION",
+    "text" : "Note1"
+  }, {
+    "qualifierCode" : "ADD",
+    "type" : "ADDITIONAL_INFORMATION",
+    "text" : "Note2"
+  } ],
   "billingProvider" : {
     "entityRole" : "BILLING_PROVIDER",
     "entityType" : "BUSINESS",
     "identificationType" : "NPI",
     "identifier" : "1234567890",
     "taxId" : "587654321",
+    "taxIdType" : "EIN",
     "lastNameOrOrgName" : "DENTAL ASSOCIATES",
     "address" : {
       "line" : "234 SEAWAY ST",
@@ -583,7 +596,7 @@
     }
   } ],
   "transaction" : {
-    "id" : "69e82c67836d7d05c9a02b44",
+    "id" : "6a04cb39618f76c4f7b169f5",
     "controlNumber" : "3456",
     "transactionType" : "DENTAL",
     "hierarchicalStructureCode" : "0019",
@@ -626,7 +639,7 @@
   }
 }
 , {
-  "id" : "69e82c67836d7d05c9a02c22",
+  "id" : "6a04cb39618f76c4f7b16ad3",
   "objectType" : "CLAIM",
   "patientControlNumber" : "051068",
   "chargeAmount" : 766.50,
@@ -695,6 +708,7 @@
     "identificationType" : "NPI",
     "identifier" : "2366554859",
     "taxId" : "376985369",
+    "taxIdType" : "EIN",
     "lastNameOrOrgName" : "AAA AMBULANCE SERVICE",
     "address" : {
       "line" : "12202 AIRPORT WAY",
@@ -770,6 +784,11 @@
     "unitCount" : 1,
     "ambulancePatientCount" : 2,
     "lineNote" : "CARDIAC EMERGENCY",
+    "notes" : [ {
+      "qualifierCode" : "ADD",
+      "type" : "ADDITIONAL_INFORMATION",
+      "text" : "CARDIAC EMERGENCY"
+    } ],
     "procedure" : {
       "subType" : "HCPCS",
       "code" : "A0427",
@@ -930,7 +949,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "69e82c67836d7d05c9a02bdf",
+    "id" : "6a04cb39618f76c4f7b16a90",
     "controlNumber" : "000017712",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -944,7 +963,7 @@
     "fileInfo" : {
       "name" : "ambulance.dat",
       "url" : "file:/edi-samples/edi_files/837/ambulance.dat",
-      "lastModifiedDateTime" : "2026-02-22T16:05:15.378-05:00",
+      "lastModifiedDateTime" : "2026-05-05T11:21:04.937-04:00",
       "fileType" : "EDI"
     },
     "sender" : {
@@ -973,7 +992,7 @@
   }
 }
 , {
-  "id" : "69e82c67836d7d05c9a02c52",
+  "id" : "6a04cb39618f76c4f7b16b03",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26462967",
   "chargeAmount" : 100.00,
@@ -1032,6 +1051,7 @@
     "identificationType" : "NPI",
     "identifier" : "9876543210",
     "taxId" : "587654321",
+    "taxIdType" : "EIN",
     "lastNameOrOrgName" : "BEN KILDARE SERVICE",
     "address" : {
       "line" : "234 SEAWAY ST",
@@ -1149,7 +1169,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "69e82c67836d7d05c9a02c26",
+    "id" : "6a04cb39618f76c4f7b16ad7",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -1195,7 +1215,7 @@
   }
 }
 , {
-  "id" : "69e82c67836d7d05c9a02cf4",
+  "id" : "6a04cb39618f76c4f7b16ba5",
   "objectType" : "CLAIM",
   "patientControlNumber" : "ABC0002",
   "chargeAmount" : 89.93,
@@ -1246,6 +1266,7 @@
       "identificationType" : "PAYOR_ID",
       "identifier" : "PAYERID1234",
       "taxId" : "123456789",
+      "taxIdType" : "EIN",
       "lastNameOrOrgName" : "BEST PLAN SERVICE",
       "address" : {
         "line" : "3394 JACKSON DR",
@@ -1427,6 +1448,8 @@
     "payerPaidAmount" : 8852.72,
     "nonCoveredAmount" : 780.00,
     "remainingPatientLiabilityAmount" : 60.00,
+    "assignmentCertificationIndicator" : "Y",
+    "releaseOfInformationCode" : "Y",
     "outpatientAdjudication" : {
       "reimbursementRate" : 85,
       "hcpcsPayableAmount" : 158.58,
@@ -1510,6 +1533,7 @@
       "identificationType" : "PAYOR_ID",
       "identifier" : "12345",
       "taxId" : "987654321",
+      "taxIdType" : "EIN",
       "lastNameOrOrgName" : "OTHER PAYER",
       "address" : {
         "line" : "PO BOX 7901",
@@ -1599,12 +1623,22 @@
   "patientStatusCode" : "01",
   "claimNote" : "PATIENT ALLERGIC TO PENICILLIN",
   "billingNote" : "Billing Note",
+  "notes" : [ {
+    "qualifierCode" : "ALG",
+    "type" : "ALLERGIES",
+    "text" : "PATIENT ALLERGIC TO PENICILLIN"
+  }, {
+    "qualifierCode" : "ADD",
+    "type" : "ADDITIONAL_INFORMATION",
+    "text" : "Billing Note"
+  } ],
   "billingProvider" : {
     "entityRole" : "BILLING_PROVIDER",
     "entityType" : "BUSINESS",
     "identificationType" : "NPI",
     "identifier" : "0123456789",
     "taxId" : "123401234",
+    "taxIdType" : "EIN",
     "lastNameOrOrgName" : "BEST MEDICAL ASSOCIATES LLC",
     "address" : {
       "line" : "222 HEALTHY STREET",
@@ -2117,7 +2151,13 @@
     "drugQuantity" : 1.01,
     "drugUnitType" : "UNIT",
     "prescriptionNumber" : "123456",
+    "prescriptionNumberType" : "PHARMACY_PRESCRIPTION_NUMBER",
     "thirdPartyNote" : "state regulation 123 was applied during the pricing of this claim",
+    "notes" : [ {
+      "qualifierCode" : "TPO",
+      "type" : "THIRD_PARTY_ORGANIZATION_NOTES",
+      "text" : "state regulation 123 was applied during the pricing of this claim"
+    } ],
     "procedure" : {
       "subType" : "CPT",
       "code" : "81099",
@@ -2307,6 +2347,7 @@
     "drugQuantity" : 5,
     "drugUnitType" : "UNIT",
     "prescriptionNumber" : "945632",
+    "prescriptionNumberType" : "PHARMACY_PRESCRIPTION_NUMBER",
     "procedure" : {
       "subType" : "CPT",
       "code" : "00842",
@@ -2481,7 +2522,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "69e82c67836d7d05c9a02c57",
+    "id" : "6a04cb39618f76c4f7b16b08",
     "controlNumber" : "00000024",
     "transactionType" : "INST",
     "hierarchicalStructureCode" : "0019",
@@ -2524,7 +2565,7 @@
   }
 }
 , {
-  "id" : "69e82c67836d7d05c9a02d1d",
+  "id" : "6a04cb39618f76c4f7b16bce",
   "objectType" : "CLAIM",
   "patientControlNumber" : "125WILL",
   "chargeAmount" : 145.50,
@@ -2584,6 +2625,7 @@
     "identificationType" : "NPI",
     "identifier" : "1234567890",
     "taxId" : "987654321",
+    "taxIdType" : "EIN",
     "lastNameOrOrgName" : "GREENE",
     "firstName" : "DAVID",
     "middleName" : "M",
@@ -2632,7 +2674,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "69e82c67836d7d05c9a02cf9",
+    "id" : "6a04cb39618f76c4f7b16baa",
     "controlNumber" : "3701",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -2675,7 +2717,7 @@
   }
 }
 , {
-  "id" : "69e82c67836d7d05c9a02d65",
+  "id" : "6a04cb39618f76c4f7b16c16",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26407789",
   "chargeAmount" : 79.04,
@@ -2781,6 +2823,9 @@
     "payerPaidAmount" : 39.15,
     "nonCoveredAmount" : 20.01,
     "remainingPatientLiabilityAmount" : 36.89,
+    "assignmentCertificationIndicator" : "Y",
+    "patientSignatureSourceCode" : "P",
+    "releaseOfInformationCode" : "Y",
     "payer" : {
       "entityRole" : "PAYER",
       "entityType" : "BUSINESS",
@@ -2809,6 +2854,7 @@
     "identificationType" : "NPI",
     "identifier" : "1999996666",
     "taxId" : "123456789",
+    "taxIdType" : "EIN",
     "lastNameOrOrgName" : "KILDARE",
     "firstName" : "BEN",
     "address" : {
@@ -3050,7 +3096,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "69e82c67836d7d05c9a02d20",
+    "id" : "6a04cb39618f76c4f7b16bd1",
     "controlNumber" : "0024",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -3093,7 +3139,7 @@
   }
 }
 , {
-  "id" : "69e82c67836d7d05c9a02d9c",
+  "id" : "6a04cb39618f76c4f7b16c4d",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26463774",
   "chargeAmount" : 100.00,
@@ -3198,6 +3244,7 @@
     "identificationType" : "NPI",
     "identifier" : "9876543210",
     "taxId" : "587654321",
+    "taxIdType" : "EIN",
     "lastNameOrOrgName" : "PHYSICIAN CLINIC",
     "address" : {
       "line" : "234 SEAWAY ST",
@@ -3302,7 +3349,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "69e82c67836d7d05c9a02d68",
+    "id" : "6a04cb39618f76c4f7b16c19",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -3348,7 +3395,7 @@
   }
 }
 , {
-  "id" : "69e82c67836d7d05c9a02dd2",
+  "id" : "6a04cb39618f76c4f7b16c83",
   "objectType" : "CLAIM",
   "patientControlNumber" : "756048Q",
   "chargeAmount" : 89.93,
@@ -3424,6 +3471,8 @@
         "zipCode" : "17111"
       }
     },
+    "assignmentCertificationIndicator" : "Y",
+    "releaseOfInformationCode" : "Y",
     "payer" : {
       "entityRole" : "PAYER",
       "entityType" : "BUSINESS",
@@ -3443,6 +3492,7 @@
     "identificationType" : "NPI",
     "identifier" : "9876540809",
     "taxId" : "567891234",
+    "taxIdType" : "EIN",
     "lastNameOrOrgName" : "JONES HOSPITAL",
     "address" : {
       "line" : "225 MAIN STREET BARKLEY BUILDING",
@@ -3551,7 +3601,7 @@
     }
   } ],
   "transaction" : {
-    "id" : "69e82c67836d7d05c9a02da1",
+    "id" : "6a04cb39618f76c4f7b16c52",
     "controlNumber" : "0021",
     "transactionType" : "INST",
     "hierarchicalStructureCode" : "0019",
@@ -3565,7 +3615,7 @@
     "fileInfo" : {
       "name" : "837I-minimal.dat",
       "url" : "file:/edi-samples/edi_files/837/837I-minimal.dat",
-      "lastModifiedDateTime" : "2026-04-21T10:40:50.236-04:00",
+      "lastModifiedDateTime" : "2026-05-05T11:21:04.936-04:00",
       "fileType" : "EDI"
     },
     "sender" : {
@@ -3594,7 +3644,7 @@
   }
 }
 , {
-  "id" : "69e82c67836d7d05c9a02e00",
+  "id" : "6a04cb39618f76c4f7b16cb1",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26463774",
   "chargeAmount" : 100.00,
@@ -3667,6 +3717,7 @@
     "identificationType" : "NPI",
     "identifier" : "9876543210",
     "taxId" : "587654321",
+    "taxIdType" : "EIN",
     "lastNameOrOrgName" : "Ben Kildare Service",
     "address" : {
       "line" : "234 SEAWAY ST",
@@ -3754,7 +3805,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "69e82c67836d7d05c9a02dd6",
+    "id" : "6a04cb39618f76c4f7b16c87",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -3768,7 +3819,7 @@
     "fileInfo" : {
       "name" : "commercial.dat",
       "url" : "file:/edi-samples/edi_files/837/commercial.dat",
-      "lastModifiedDateTime" : "2024-01-31T20:06:16.189-05:00",
+      "lastModifiedDateTime" : "2026-05-05T11:21:04.937-04:00",
       "fileType" : "EDI"
     },
     "sender" : {
@@ -3800,7 +3851,7 @@
   }
 }
 , {
-  "id" : "69e82c67836d7d05c9a02e74",
+  "id" : "6a04cb39618f76c4f7b16d25",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26462967",
   "chargeAmount" : 100.00,
@@ -3859,6 +3910,7 @@
     "identificationType" : "NPI",
     "identifier" : "9876543210",
     "taxId" : "587654321",
+    "taxIdType" : "EIN",
     "lastNameOrOrgName" : "BEN KILDARE SERVICE",
     "address" : {
       "line" : "234 SEAWAY ST",
@@ -3976,7 +4028,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "69e82c67836d7d05c9a02e03",
+    "id" : "6a04cb39618f76c4f7b16cb4",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -4022,7 +4074,7 @@
   }
 }
 , {
-  "id" : "69e82c67836d7d05c9a02e75",
+  "id" : "6a04cb39618f76c4f7b16d26",
   "objectType" : "CLAIM",
   "patientControlNumber" : "125WILL",
   "chargeAmount" : 145.50,
@@ -4082,6 +4134,7 @@
     "identificationType" : "NPI",
     "identifier" : "1234567890",
     "taxId" : "987654321",
+    "taxIdType" : "EIN",
     "lastNameOrOrgName" : "GREENE",
     "firstName" : "DAVID",
     "middleName" : "M",
@@ -4130,7 +4183,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "69e82c67836d7d05c9a02e30",
+    "id" : "6a04cb39618f76c4f7b16ce1",
     "controlNumber" : "3701",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -4173,7 +4226,7 @@
   }
 }
 , {
-  "id" : "69e82c67836d7d05c9a02e76",
+  "id" : "6a04cb39618f76c4f7b16d27",
   "objectType" : "CLAIM",
   "patientControlNumber" : "153829140",
   "chargeAmount" : 827.00,
@@ -4229,6 +4282,7 @@
     "identificationType" : "NPI",
     "identifier" : "2366554859",
     "taxId" : "756473826",
+    "taxIdType" : "EIN",
     "lastNameOrOrgName" : "PROVIDER MEDICAL GROUP",
     "address" : {
       "line" : "1234 WESTEND AVE",
@@ -4336,7 +4390,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "69e82c67836d7d05c9a02e51",
+    "id" : "6a04cb39618f76c4f7b16d02",
     "controlNumber" : "0001",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -4382,7 +4436,7 @@
   }
 }
 , {
-  "id" : "69e82c67836d7d05c9a02ea6",
+  "id" : "6a04cb39618f76c4f7b16d57",
   "objectType" : "CLAIM",
   "patientControlNumber" : "756048Q",
   "chargeAmount" : 89.93,
@@ -4457,6 +4511,8 @@
         "zipCode" : "17111"
       }
     },
+    "assignmentCertificationIndicator" : "Y",
+    "releaseOfInformationCode" : "Y",
     "payer" : {
       "entityRole" : "PAYER",
       "entityType" : "BUSINESS",
@@ -4476,6 +4532,7 @@
     "identificationType" : "NPI",
     "identifier" : "9876540809",
     "taxId" : "567891234",
+    "taxIdType" : "EIN",
     "lastNameOrOrgName" : "JONES HOSPITAL",
     "address" : {
       "line" : "225 MAIN STREET BARKLEY BUILDING",
@@ -4584,7 +4641,7 @@
     }
   } ],
   "transaction" : {
-    "id" : "69e82c67836d7d05c9a02e79",
+    "id" : "6a04cb39618f76c4f7b16d2a",
     "controlNumber" : "987654",
     "transactionType" : "INST",
     "hierarchicalStructureCode" : "0019",
@@ -4627,7 +4684,7 @@
   }
 }
 , {
-  "id" : "69e82c67836d7d05c9a02ed8",
+  "id" : "6a04cb39618f76c4f7b16d89",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26463774",
   "chargeAmount" : 100.00,
@@ -4700,6 +4757,7 @@
     "identificationType" : "NPI",
     "identifier" : "9876543210",
     "taxId" : "587654321",
+    "taxIdType" : "EIN",
     "lastNameOrOrgName" : "BEN KILDARE SERVICE",
     "address" : {
       "line" : "234 SEAWAY ST",
@@ -4804,7 +4862,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "69e82c67836d7d05c9a02ea9",
+    "id" : "6a04cb39618f76c4f7b16d5a",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -4850,7 +4908,7 @@
   }
 }
 , {
-  "id" : "69e82c67836d7d05c9a02f04",
+  "id" : "6a04cb39618f76c4f7b16db5",
   "objectType" : "CLAIM",
   "patientControlNumber" : "153829140",
   "chargeAmount" : 827.00,
@@ -4906,6 +4964,7 @@
     "identificationType" : "NPI",
     "identifier" : "2366554859",
     "taxId" : "756473826",
+    "taxIdType" : "EIN",
     "lastNameOrOrgName" : "PROVIDER MEDICAL GROUP",
     "address" : {
       "line" : "1234 WESTEND AVE",
@@ -5013,7 +5072,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "69e82c67836d7d05c9a02edd",
+    "id" : "6a04cb39618f76c4f7b16d8e",
     "controlNumber" : "0001",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -5059,7 +5118,7 @@
   }
 }
 , {
-  "id" : "69e82c67836d7d05c9a02f3e",
+  "id" : "6a04cb39618f76c4f7b16def",
   "objectType" : "CLAIM",
   "patientControlNumber" : "SMI123",
   "chargeAmount" : 75.00,
@@ -5116,6 +5175,7 @@
     "identificationType" : "NPI",
     "identifier" : "7778889999",
     "taxId" : "123567989",
+    "taxIdType" : "EIN",
     "lastNameOrOrgName" : "XYZ WHEELCHAIR INC",
     "address" : {
       "line" : "1440 NORTH STREET",
@@ -5267,7 +5327,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "69e82c67836d7d05c9a02f09",
+    "id" : "6a04cb39618f76c4f7b16dba",
     "controlNumber" : "112233",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -5281,7 +5341,7 @@
     "fileInfo" : {
       "name" : "wheelchair.dat",
       "url" : "file:/edi-samples/edi_files/837/wheelchair.dat",
-      "lastModifiedDateTime" : "2026-02-22T16:05:15.379-05:00",
+      "lastModifiedDateTime" : "2026-05-05T11:21:04.937-04:00",
       "fileType" : "EDI"
     },
     "sender" : {
@@ -5310,7 +5370,7 @@
   }
 }
 , {
-  "id" : "69e82c67836d7d05c9a02f6d",
+  "id" : "6a04cb39618f76c4f7b16e1e",
   "objectType" : "CLAIM",
   "patientControlNumber" : "ABC123-RI",
   "chargeAmount" : 28.75,
@@ -5371,6 +5431,7 @@
     "identificationType" : "NPI",
     "identifier" : "1234567890",
     "taxId" : "555512345",
+    "taxIdType" : "EIN",
     "lastNameOrOrgName" : "HAPPY DOCTORS GROUP PRACTICE",
     "address" : {
       "line" : "P O BOX 123",
@@ -5484,7 +5545,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "69e82c67836d7d05c9a02f41",
+    "id" : "6a04cb39618f76c4f7b16df2",
     "controlNumber" : "1002",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -5527,7 +5588,7 @@
   }
 }
 , {
-  "id" : "69e82c67836d7d05c9a02fa7",
+  "id" : "6a04cb39618f76c4f7b16e58",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26407789",
   "chargeAmount" : 79.04,
@@ -5611,6 +5672,9 @@
         "zipCode" : "33111"
       }
     },
+    "assignmentCertificationIndicator" : "Y",
+    "patientSignatureSourceCode" : "P",
+    "releaseOfInformationCode" : "Y",
     "payer" : {
       "entityRole" : "PAYER",
       "entityType" : "BUSINESS",
@@ -5630,6 +5694,7 @@
     "identificationType" : "NPI",
     "identifier" : "1999996666",
     "taxId" : "123456789",
+    "taxIdType" : "EIN",
     "lastNameOrOrgName" : "KILDARE",
     "firstName" : "BEN",
     "address" : {
@@ -5776,7 +5841,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "69e82c67836d7d05c9a02f70",
+    "id" : "6a04cb39618f76c4f7b16e21",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -5819,7 +5884,7 @@
   }
 }
 , {
-  "id" : "69e82c67836d7d05c9a02fca",
+  "id" : "6a04cb39618f76c4f7b16e7b",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26463774",
   "chargeAmount" : 100.00,
@@ -5879,6 +5944,7 @@
     "identificationType" : "NPI",
     "identifier" : "9876543210",
     "taxId" : "587654321",
+    "taxIdType" : "EIN",
     "lastNameOrOrgName" : "Ben Kildare Service",
     "address" : {
       "line" : "234 SEAWAY ST",
@@ -5917,7 +5983,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "69e82c67836d7d05c9a02fac",
+    "id" : "6a04cb39618f76c4f7b16e5d",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -5931,7 +5997,7 @@
     "fileInfo" : {
       "name" : "837P-minimal.dat",
       "url" : "file:/edi-samples/edi_files/837/837P-minimal.dat",
-      "lastModifiedDateTime" : "2026-04-21T10:40:50.236-04:00",
+      "lastModifiedDateTime" : "2026-05-05T11:21:04.936-04:00",
       "fileType" : "EDI"
     },
     "sender" : {
@@ -5963,7 +6029,7 @@
   }
 }
 , {
-  "id" : "69e82c67836d7d05c9a03011",
+  "id" : "6a04cb39618f76c4f7b16ec2",
   "objectType" : "CLAIM",
   "patientControlNumber" : "CLMNO12345",
   "chargeAmount" : 2232.93,
@@ -6021,6 +6087,7 @@
     "identificationType" : "NPI",
     "identifier" : "1234567893",
     "taxId" : "10-1234567",
+    "taxIdType" : "EIN",
     "lastNameOrOrgName" : "Professional Home IV, LLC",
     "address" : {
       "line" : "1500 Industrial Drive",
@@ -6089,6 +6156,7 @@
     "drugQuantity" : 7,
     "drugUnitType" : "UNIT",
     "prescriptionNumber" : "2530001",
+    "prescriptionNumberType" : "PHARMACY_PRESCRIPTION_NUMBER",
     "procedure" : {
       "subType" : "HCPCS",
       "code" : "S5001",
@@ -6127,6 +6195,7 @@
     "drugQuantity" : 14,
     "drugUnitType" : "UNIT",
     "prescriptionNumber" : "2530001",
+    "prescriptionNumberType" : "PHARMACY_PRESCRIPTION_NUMBER",
     "procedure" : {
       "subType" : "HCPCS",
       "code" : "S5000",
@@ -6165,6 +6234,7 @@
     "drugQuantity" : 7,
     "drugUnitType" : "UNIT",
     "prescriptionNumber" : "2530001",
+    "prescriptionNumberType" : "PHARMACY_PRESCRIPTION_NUMBER",
     "procedure" : {
       "subType" : "HCPCS",
       "code" : "S5000",
@@ -6203,6 +6273,7 @@
     "drugQuantity" : 14,
     "drugUnitType" : "UNIT",
     "prescriptionNumber" : "2530002",
+    "prescriptionNumberType" : "PHARMACY_PRESCRIPTION_NUMBER",
     "procedure" : {
       "subType" : "HCPCS",
       "code" : "S5000",
@@ -6241,6 +6312,7 @@
     "drugQuantity" : 7,
     "drugUnitType" : "UNIT",
     "prescriptionNumber" : "2530003",
+    "prescriptionNumberType" : "PHARMACY_PRESCRIPTION_NUMBER",
     "procedure" : {
       "subType" : "HCPCS",
       "code" : "S5000",
@@ -6263,7 +6335,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "69e82c67836d7d05c9a02fcd",
+    "id" : "6a04cb39618f76c4f7b16e7e",
     "controlNumber" : "0711",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -6306,7 +6378,7 @@
   }
 }
 , {
-  "id" : "69e82c67836d7d05c9a030ce",
+  "id" : "6a04cb39618f76c4f7b16f7f",
   "objectType" : "CLAIM",
   "patientControlNumber" : "36463774",
   "chargeAmount" : 100.00,
@@ -6335,6 +6407,7 @@
       "identificationType" : "MEMBER_ID",
       "identifier" : "JS00111223333",
       "taxId" : "123450000",
+      "taxIdType" : "SSN",
       "lastNameOrOrgName" : "SMITH",
       "firstName" : "JANE",
       "birthDate" : "1943-05-01",
@@ -6355,6 +6428,7 @@
       "identificationType" : "PAYOR_ID",
       "identifier" : "999996666",
       "taxId" : "435261708",
+      "taxIdType" : "EIN",
       "lastNameOrOrgName" : "KEY INSURANCECOMPANY",
       "address" : {
         "line" : "P.O. BOX 569008",
@@ -6552,6 +6626,9 @@
     "payerPaidAmount" : 59.19,
     "nonCoveredAmount" : 273.00,
     "remainingPatientLiabilityAmount" : 14.83,
+    "assignmentCertificationIndicator" : "Y",
+    "patientSignatureSourceCode" : "P",
+    "releaseOfInformationCode" : "Y",
     "payerPriorAuthorizationNumber" : "AB333-Y5",
     "payerReferralNumber" : "12345",
     "payerClaimControlNumber" : "CLAIM99",
@@ -6561,6 +6638,7 @@
       "identificationType" : "PAYOR_ID",
       "identifier" : "OTP",
       "taxId" : "987654321",
+      "taxIdType" : "EIN",
       "lastNameOrOrgName" : "OTHER PAYER",
       "address" : {
         "line" : "PO BOX 7901",
@@ -6632,14 +6710,19 @@
   "specialProgramCode" : "05",
   "delayReasonCode" : "4",
   "serviceAuthorizationExceptionCode" : "7",
+  "medicareSection4081Indicator" : "N",
+  "mammographyCertificationNumber" : "Unmapped-MammogCertNumber",
   "referralNumber" : "ReferralNum",
   "priorAuthorizationNumber" : "PriorAuth",
   "originalReferenceNumber" : "PayerClaimControlNum",
+  "cliaNumber" : "Unmapped-Clia",
   "repricedReferenceNumber" : "Repriced",
   "adjustedRepricedReferenceNumber" : "AdjRepriced",
+  "investigationalDeviceExemptionNumber" : "Unmapped-InvDeviceExemp",
   "clearinghouseTraceNumber" : "ClaimIdForTransm",
   "medicalRecordNumber" : "MedicalRecordNum",
   "demonstrationProjectIdentifier" : "DemonstrProjectId",
+  "carePlanOversightNumber" : "Unmapped-CarePlanOversight",
   "onsetOfCurrentIllnessOrInjuryDate" : "2018-03-12",
   "initialTreatmentDate" : "2018-03-01",
   "lastSeenDate" : "2005-01-08",
@@ -6656,12 +6739,18 @@
   "relinquishedCareDate" : "2005-06-08",
   "repricerReceivedDate" : "2005-10-30",
   "claimNote" : "SURGERY WAS UNUSUALLY LONG",
+  "notes" : [ {
+    "qualifierCode" : "ADD",
+    "type" : "ADDITIONAL_INFORMATION",
+    "text" : "SURGERY WAS UNUSUALLY LONG"
+  } ],
   "billingProvider" : {
     "entityRole" : "BILLING_PROVIDER",
     "entityType" : "BUSINESS",
     "identificationType" : "NPI",
     "identifier" : "9876543210",
     "taxId" : "587654321",
+    "taxIdType" : "EIN",
     "lastNameOrOrgName" : "BEN KILDARE SERVICE",
     "address" : {
       "line" : "234 SEAWAY ST",
@@ -6706,6 +6795,7 @@
     "identificationType" : "CMS_PLAN_ID",
     "identifier" : "PTP123",
     "taxId" : "587654321",
+    "taxIdType" : "EIN",
     "lastNameOrOrgName" : "PLAN TO PAY TO",
     "address" : {
       "line" : "236 SEAWAY ST",
@@ -6823,6 +6913,10 @@
     "repricedReferenceNumber" : "Repriced",
     "adjustedRepricedReferenceNumber" : "AdjRepriced",
     "priorAuthorization" : "PriorAuthorization",
+    "mammographyCertificationNumber" : "Mammog",
+    "cliaNumber" : "CLIA-Amend",
+    "referringCliaNumber" : "CLIA-Fac",
+    "immunizationBatchNumber" : "Immune",
     "referralNumber" : "ReferralNumber",
     "chargeAmount" : 40.00,
     "purchasedServiceProviderIdentifier" : "PN222222",
@@ -6837,6 +6931,7 @@
     "initialTreatmentDate" : "2005-01-08",
     "unitType" : "UNIT",
     "unitCount" : 1,
+    "obstetricAdditionalUnitCount" : 3,
     "drug" : {
       "subType" : "NDC",
       "code" : "00002143481",
@@ -6846,8 +6941,18 @@
     "drugQuantity" : 1.01,
     "drugUnitType" : "UNIT",
     "prescriptionNumber" : "123456",
+    "prescriptionNumberType" : "PHARMACY_PRESCRIPTION_NUMBER",
     "lineNote" : "PATIENT GOAL TO BE OFF OXYGEN BY END OF MONTH",
     "thirdPartyNote" : "STATE REGULATION 123 WAS APPLIED DURING THE PRICING OF THIS PROF CLAIM",
+    "notes" : [ {
+      "qualifierCode" : "ADD",
+      "type" : "ADDITIONAL_INFORMATION",
+      "text" : "PATIENT GOAL TO BE OFF OXYGEN BY END OF MONTH"
+    }, {
+      "qualifierCode" : "TPO",
+      "type" : "THIRD_PARTY_ORGANIZATION_NOTES",
+      "text" : "STATE REGULATION 123 WAS APPLIED DURING THE PRICING OF THIS PROF CLAIM"
+    } ],
     "procedure" : {
       "subType" : "CPT",
       "code" : "99299",
@@ -7070,7 +7175,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "69e82c67836d7d05c9a03016",
+    "id" : "6a04cb39618f76c4f7b16ec7",
     "controlNumber" : "0031",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -7084,7 +7189,7 @@
     "fileInfo" : {
       "name" : "837P-all-fields.dat",
       "url" : "file:/edi-samples/edi_files/837/837P-all-fields.dat",
-      "lastModifiedDateTime" : "2026-04-21T10:52:26.193-04:00",
+      "lastModifiedDateTime" : "2026-05-05T11:21:04.936-04:00",
       "fileType" : "EDI"
     },
     "sender" : {
@@ -7116,7 +7221,7 @@
   }
 }
 , {
-  "id" : "69e82c67836d7d05c9a03109",
+  "id" : "6a04cb39618f76c4f7b16fba",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26463774",
   "chargeAmount" : 100.00,
@@ -7224,6 +7329,7 @@
     "identificationType" : "NPI",
     "identifier" : "9876543210",
     "taxId" : "587654321",
+    "taxIdType" : "EIN",
     "lastNameOrOrgName" : "ABC HOSPITAL",
     "address" : {
       "line" : "234 SEAWAY ST",
@@ -7332,7 +7438,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "69e82c67836d7d05c9a030d1",
+    "id" : "6a04cb39618f76c4f7b16f82",
     "controlNumber" : "0021",
     "transactionType" : "INST",
     "hierarchicalStructureCode" : "0019",

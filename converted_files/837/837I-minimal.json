@@ -1,6 +1,6 @@
 [
  {
-  "id" : "69e82c68836d7d05c9a04b85",
+  "id" : "6a04cb3b618f76c4f7b18a36",
   "objectType" : "CLAIM",
   "patientControlNumber" : "756048Q",
   "chargeAmount" : 89.93,
@@ -76,6 +76,8 @@
         "zipCode" : "17111"
       }
     },
+    "assignmentCertificationIndicator" : "Y",
+    "releaseOfInformationCode" : "Y",
     "payer" : {
       "entityRole" : "PAYER",
       "entityType" : "BUSINESS",
@@ -95,6 +97,7 @@
     "identificationType" : "NPI",
     "identifier" : "9876540809",
     "taxId" : "567891234",
+    "taxIdType" : "EIN",
     "lastNameOrOrgName" : "JONES HOSPITAL",
     "address" : {
       "line" : "225 MAIN STREET BARKLEY BUILDING",
@@ -203,7 +206,7 @@
     }
   } ],
   "transaction" : {
-    "id" : "69e82c68836d7d05c9a04b54",
+    "id" : "6a04cb3b618f76c4f7b18a05",
     "controlNumber" : "0021",
     "transactionType" : "INST",
     "hierarchicalStructureCode" : "0019",
@@ -217,7 +220,7 @@
     "fileInfo" : {
       "name" : "837I-minimal.dat",
       "url" : "file:/edi-samples/edi_files/837/837I-minimal.dat",
-      "lastModifiedDateTime" : "2026-04-21T10:40:50.236-04:00",
+      "lastModifiedDateTime" : "2026-05-05T11:21:04.936-04:00",
       "fileType" : "EDI"
     },
     "sender" : {

@@ -1,6 +1,6 @@
 [
  {
-  "id" : "69e82c68836d7d05c9a04c27",
+  "id" : "6a04cb3b618f76c4f7b18ad8",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26462967",
   "chargeAmount" : 100.00,
@@ -59,6 +59,7 @@
     "identificationType" : "NPI",
     "identifier" : "9876543210",
     "taxId" : "587654321",
+    "taxIdType" : "EIN",
     "lastNameOrOrgName" : "BEN KILDARE SERVICE",
     "address" : {
       "line" : "234 SEAWAY ST",
@@ -176,7 +177,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "69e82c68836d7d05c9a04bb6",
+    "id" : "6a04cb3b618f76c4f7b18a67",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -222,7 +223,7 @@
   }
 }
 , {
-  "id" : "69e82c68836d7d05c9a04c28",
+  "id" : "6a04cb3b618f76c4f7b18ad9",
   "objectType" : "CLAIM",
   "patientControlNumber" : "125WILL",
   "chargeAmount" : 145.50,
@@ -282,6 +283,7 @@
     "identificationType" : "NPI",
     "identifier" : "1234567890",
     "taxId" : "987654321",
+    "taxIdType" : "EIN",
     "lastNameOrOrgName" : "GREENE",
     "firstName" : "DAVID",
     "middleName" : "M",
@@ -330,7 +332,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "69e82c68836d7d05c9a04be3",
+    "id" : "6a04cb3b618f76c4f7b18a94",
     "controlNumber" : "3701",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -373,7 +375,7 @@
   }
 }
 , {
-  "id" : "69e82c68836d7d05c9a04c29",
+  "id" : "6a04cb3b618f76c4f7b18ada",
   "objectType" : "CLAIM",
   "patientControlNumber" : "153829140",
   "chargeAmount" : 827.00,
@@ -429,6 +431,7 @@
     "identificationType" : "NPI",
     "identifier" : "2366554859",
     "taxId" : "756473826",
+    "taxIdType" : "EIN",
     "lastNameOrOrgName" : "PROVIDER MEDICAL GROUP",
     "address" : {
       "line" : "1234 WESTEND AVE",
@@ -536,7 +539,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "69e82c68836d7d05c9a04c04",
+    "id" : "6a04cb3b618f76c4f7b18ab5",
     "controlNumber" : "0001",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",

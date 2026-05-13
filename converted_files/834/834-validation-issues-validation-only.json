@@ -1,0 +1,62 @@
+[
+ {
+  "objectType" : "VALIDATION",
+  "issueType" : "REQUIRED",
+  "fieldName" : "transaction_set_reference_number",
+  "sourceLocation" : {
+    "fileName" : "834-validation-issues.edi",
+    "lineNumber" : 4,
+    "segmentNumber" : 4
+  },
+  "loop" : "0000",
+  "segment" : "BGN",
+  "element" : "BGN02",
+  "ediString" : "BGN*00**20020601*1200****2~",
+  "message" : "Required element is missing"
+}
+, {
+  "objectType" : "VALIDATION",
+  "issueType" : "CONTROL",
+  "fieldName" : "number_of_included_segments",
+  "sourceLocation" : {
+    "fileName" : "834-validation-issues.edi",
+    "lineNumber" : 13,
+    "segmentNumber" : 13
+  },
+  "loop" : "0000",
+  "segment" : "SE",
+  "value" : "12",
+  "message" : "Count  '12' in the closing segment does not match actual count '11'"
+}
+, {
+  "objectType" : "VALIDATION",
+  "issueType" : "VALUE_NOT_IN_ENUM_LIST",
+  "issueObjectClass" : "MemberCoverage",
+  "fieldName" : "maintenanceReasonCode",
+  "sourceLocation" : {
+    "fileName" : "834-validation-issues.edi",
+    "lineNumber" : 8,
+    "segmentNumber" : 8
+  },
+  "loop" : "2000",
+  "segment" : "INS",
+  "element" : "INS04",
+  "value" : "XXX",
+  "ediString" : "INS*Y*18*001*XXX*A***FT~",
+  "message" : "Value 'XXX' is not in the allowed values list",
+  "allowedValues" : [ "22", "01", "02", "03", "25", "04", "26", "05", "27", "06", "28", "07", "29", "08", "09", "31", "EC", "10", "32", "11", "33", "AA", "AB", "AC", "14", "AD", "15", "37", "59", "AE", "16", "38", "AF", "17", "39", "AG", "18", "AH", "AI", "AJ", "AL", "XN", "40", "XT", "41", "20", "21", "43" ]
+}
+, {
+  "objectType" : "VALIDATION",
+  "issueType" : "REQUIRED",
+  "fieldName" : "member_level_detail",
+  "sourceLocation" : {
+    "fileName" : "834-validation-issues.edi",
+    "lineNumber" : 8,
+    "segmentNumber" : 8
+  },
+  "loop" : "2000",
+  "segment" : "INS",
+  "message" : "Required segment REF (subscriber_identifier) is missing in loop 2000"
+}
+ ]

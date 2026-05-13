@@ -1,6 +1,6 @@
 [
  {
-  "id" : "69e82c67836d7d05c9a026c1",
+  "id" : "6a04cbecb80b363c8541f581",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "5554555444",
   "chargeAmount" : 800.00,
@@ -69,6 +69,7 @@
     "identificationType" : "NPI",
     "identifier" : "5544667733",
     "taxId" : "777667755",
+    "taxIdType" : "TAX_ID",
     "lastNameOrOrgName" : "ACME MEDICAL CENTER"
   },
   "serviceLines" : [ {
@@ -97,7 +98,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "69e82c67836d7d05c9a02696",
+    "id" : "6a04cbecb80b363c8541f556",
     "controlNumber" : "112233",
     "transactionType" : "PAYMENT",
     "productionDate" : "2019-03-14",
@@ -124,7 +125,7 @@
   }
 }
 , {
-  "id" : "69e82c67836d7d05c9a026c2",
+  "id" : "6a04cbecb80b363c8541f582",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "8765432112",
   "chargeAmount" : 1200.00,
@@ -193,6 +194,7 @@
     "identificationType" : "NPI",
     "identifier" : "5544667733",
     "taxId" : "777667755",
+    "taxIdType" : "TAX_ID",
     "lastNameOrOrgName" : "ACME MEDICAL CENTER"
   },
   "serviceLines" : [ {
@@ -220,7 +222,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "69e82c67836d7d05c9a02696",
+    "id" : "6a04cbecb80b363c8541f556",
     "controlNumber" : "112233",
     "transactionType" : "PAYMENT",
     "productionDate" : "2019-03-14",

@@ -1,0 +1,98 @@
+[
+ {
+  "objectType" : "VALIDATION",
+  "issueType" : "REQUIRED",
+  "fieldName" : "transaction_set_header",
+  "sourceLocation" : {
+    "fileName" : "835-validation-issues.dat",
+    "lineNumber" : 3,
+    "segmentNumber" : 3
+  },
+  "loop" : "0000",
+  "segment" : "ST",
+  "message" : "Required segment TRN (reassociation_trace_number) is missing in loop 0000"
+}
+, {
+  "objectType" : "VALIDATION",
+  "issueType" : "REQUIRED",
+  "fieldName" : "payer_identification",
+  "sourceLocation" : {
+    "fileName" : "835-validation-issues.dat",
+    "lineNumber" : 7,
+    "segmentNumber" : 7
+  },
+  "loop" : "1000A",
+  "segment" : "N1",
+  "message" : "Required segment PER (payer_technical_contact_information) is missing in loop 1000A"
+}
+, {
+  "objectType" : "VALIDATION",
+  "issueType" : "CONTROL",
+  "fieldName" : "transition_segment_count",
+  "sourceLocation" : {
+    "fileName" : "835-validation-issues.dat",
+    "lineNumber" : 26,
+    "segmentNumber" : 24
+  },
+  "loop" : "0000",
+  "segment" : "SE",
+  "value" : "18",
+  "message" : "Count  '18' in the closing segment does not match actual count '22'"
+}
+, {
+  "objectType" : "VALIDATION",
+  "issueType" : "INVALID",
+  "fieldName" : "",
+  "sourceLocation" : {
+    "fileName" : "835-validation-issues.dat",
+    "lineNumber" : 24,
+    "segmentNumber" : 23
+  },
+  "loop" : "2110",
+  "segment" : "XX",
+  "ediString" : "XX*B6*800~",
+  "message" : "Unknown segment 'XX' for the transaction set 835"
+}
+, {
+  "objectType" : "VALIDATION",
+  "issueType" : "BALANCE",
+  "issueObjectClass" : "ServiceLine",
+  "fieldName" : "paymentAmount",
+  "sourceLocation" : {
+    "fileName" : "835-validation-issues.dat",
+    "lineNumber" : 20,
+    "segmentNumber" : 19
+  },
+  "loop" : "2110",
+  "segment" : "SVC",
+  "message" : "Claim 5554555444, line 1: Paid amount 400.00 does not match the charge amount 800.00 minus the sum of adjustments 300.00"
+}
+, {
+  "objectType" : "VALIDATION",
+  "issueType" : "BALANCE",
+  "issueObjectClass" : "Payment",
+  "fieldName" : "chargeAmount",
+  "sourceLocation" : {
+    "fileName" : "835-validation-issues.dat",
+    "lineNumber" : 18,
+    "segmentNumber" : 17
+  },
+  "loop" : "2100",
+  "segment" : "CLP",
+  "message" : "Claim 5554555444: The sum of line charge amounts 800.00 does not match the claim charge amount 700.00"
+}
+, {
+  "objectType" : "VALIDATION",
+  "issueType" : "BALANCE",
+  "issueObjectClass" : "Payment",
+  "fieldName" : "paymentAmount",
+  "sourceLocation" : {
+    "fileName" : "835-validation-issues.dat",
+    "lineNumber" : 18,
+    "segmentNumber" : 17
+  },
+  "loop" : "2100",
+  "segment" : "CLP",
+  "message" : "Claim 5554555444: The sum of line paid amounts 400.00 does not match the claim paid amount 500.00"
+}
+ ]

@@ -1,6 +1,6 @@
 [
  {
-  "id" : "69e82c67836d7d05c9a02639",
+  "id" : "6a04cbecb80b363c8541f4f9",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "PATACCT",
   "chargeAmount" : 40000.00,
@@ -91,6 +91,7 @@
     "identificationType" : "NPI",
     "identifier" : "1123454567",
     "taxId" : "123456789",
+    "taxIdType" : "TAX_ID",
     "lastNameOrOrgName" : "PROVIDER",
     "address" : {
       "line" : "2255 ANY ROAD",
@@ -131,7 +132,7 @@
   } ],
   "serviceLines" : [ ],
   "transaction" : {
-    "id" : "69e82c67836d7d05c9a02612",
+    "id" : "6a04cbecb80b363c8541f4d2",
     "controlNumber" : "10060875",
     "transactionType" : "PAYMENT",
     "productionDate" : "2019-08-27",

@@ -1,6 +1,6 @@
 [
  {
-  "id" : "69e82c68836d7d05c9a04d20",
+  "id" : "6a04cb3b618f76c4f7b18bd1",
   "objectType" : "CLAIM",
   "patientControlNumber" : "ABC123-RI",
   "chargeAmount" : 28.75,
@@ -61,6 +61,7 @@
     "identificationType" : "NPI",
     "identifier" : "1234567890",
     "taxId" : "555512345",
+    "taxIdType" : "EIN",
     "lastNameOrOrgName" : "HAPPY DOCTORS GROUP PRACTICE",
     "address" : {
       "line" : "P O BOX 123",
@@ -174,7 +175,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "69e82c68836d7d05c9a04cf4",
+    "id" : "6a04cb3b618f76c4f7b18ba5",
     "controlNumber" : "1002",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",

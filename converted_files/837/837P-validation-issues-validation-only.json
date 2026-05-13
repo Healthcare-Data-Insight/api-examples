@@ -1,0 +1,149 @@
+[
+ {
+  "objectType" : "VALIDATION",
+  "issueType" : "CONTROL",
+  "fieldName" : "transaction_segment_count",
+  "sourceLocation" : {
+    "fileName" : "837P-validation-issues.dat",
+    "lineNumber" : 31,
+    "segmentNumber" : 31
+  },
+  "loop" : "0000",
+  "segment" : "SE",
+  "value" : "25",
+  "message" : "Count  '25' in the closing segment does not match actual count '29'"
+}
+, {
+  "objectType" : "VALIDATION",
+  "issueType" : "LENGTH_EXCEEDED",
+  "fieldName" : "facility_type_code",
+  "sourceLocation" : {
+    "fileName" : "837P-validation-issues.dat",
+    "lineNumber" : 19,
+    "segmentNumber" : 19
+  },
+  "loop" : "2300",
+  "segment" : "CLM",
+  "element" : "CLM05-1",
+  "length" : 2,
+  "actualLength" : 3,
+  "value" : "111",
+  "ediString" : "CLM*26463774*100***111:B:1*V*A*Y*I~",
+  "message" : "Length of '111' is greater than the maximum length 2"
+}
+, {
+  "objectType" : "VALIDATION",
+  "issueType" : "VALUE_NOT_IN_ENUM_LIST",
+  "issueObjectClass" : "Claim",
+  "fieldName" : "providerSignatureIndicator",
+  "sourceLocation" : {
+    "fileName" : "837P-validation-issues.dat",
+    "lineNumber" : 19,
+    "segmentNumber" : 19
+  },
+  "loop" : "2300",
+  "segment" : "CLM",
+  "element" : "CLM06",
+  "value" : "V",
+  "ediString" : "CLM*26463774*100***111:B:1*V*A*Y*I~",
+  "message" : "Value 'V' is not in the allowed values list",
+  "allowedValues" : [ "Y", "N" ]
+}
+, {
+  "objectType" : "VALIDATION",
+  "issueType" : "WRONG_TYPE",
+  "fieldName" : "disability_date_to",
+  "sourceLocation" : {
+    "fileName" : "837P-validation-issues.dat",
+    "lineNumber" : 20,
+    "segmentNumber" : 20
+  },
+  "loop" : "2300",
+  "segment" : "DTP",
+  "ediCode" : "314",
+  "dataType" : "DATE",
+  "actualDataType" : "STR",
+  "value" : "20051309",
+  "ediString" : "DTP*314*RD8*20051208-20051309~",
+  "message" : "Invalid date or time value '20051309'"
+}
+, {
+  "objectType" : "VALIDATION",
+  "issueType" : "WRONG_TYPE",
+  "fieldName" : "prescription_date",
+  "sourceLocation" : {
+    "fileName" : "837P-validation-issues.dat",
+    "lineNumber" : 21,
+    "segmentNumber" : 21
+  },
+  "loop" : "2300",
+  "segment" : "DTP",
+  "ediCode" : "471",
+  "dataType" : "DATE",
+  "actualDataType" : "STR",
+  "value" : "20051301",
+  "ediString" : "DTP*471*D8*20051301~",
+  "message" : "Invalid date or time value '20051301'"
+}
+, {
+  "objectType" : "VALIDATION",
+  "issueType" : "NOT_ALLOWED",
+  "fieldName" : "address",
+  "sourceLocation" : {
+    "fileName" : "837P-validation-issues.dat",
+    "lineNumber" : 25,
+    "segmentNumber" : 25
+  },
+  "loop" : "2310A",
+  "segment" : "N3",
+  "ediString" : "N3*234 SEAWAY ST~",
+  "message" : "Segment 'N3' is not allowed in loop 2310A"
+}
+, {
+  "objectType" : "VALIDATION",
+  "issueType" : "NOT_ALLOWED",
+  "fieldName" : "city_state_zip_code",
+  "sourceLocation" : {
+    "fileName" : "837P-validation-issues.dat",
+    "lineNumber" : 26,
+    "segmentNumber" : 26
+  },
+  "loop" : "2310A",
+  "segment" : "N4",
+  "ediString" : "N4*MIAMI*FL*33111~",
+  "message" : "Segment 'N4' is not allowed in loop 2310A"
+}
+, {
+  "objectType" : "VALIDATION",
+  "issueType" : "VALUE_NOT_IN_ENUM_LIST",
+  "issueObjectClass" : "Reference",
+  "fieldName" : "type",
+  "sourceLocation" : {
+    "fileName" : "837P-validation-issues.dat",
+    "lineNumber" : 27,
+    "segmentNumber" : 27
+  },
+  "loop" : "2310A",
+  "segment" : "REF",
+  "element" : "REF01",
+  "ediCode" : "X2",
+  "value" : "X2",
+  "ediString" : "REF*X2*12345~",
+  "message" : "Value 'X2' is not in the allowed values list",
+  "allowedValues" : [ "0B", "1G", "G2" ]
+}
+, {
+  "objectType" : "VALIDATION",
+  "issueType" : "BALANCE",
+  "issueObjectClass" : "Claim",
+  "fieldName" : "chargeAmount",
+  "sourceLocation" : {
+    "fileName" : "837P-validation-issues.dat",
+    "lineNumber" : 19,
+    "segmentNumber" : 19
+  },
+  "loop" : "2300",
+  "segment" : "CLM",
+  "message" : "Claim 26463774: The sum of line charge amounts 99.00 does not match the claim charge amount 100.00"
+}
+ ]
