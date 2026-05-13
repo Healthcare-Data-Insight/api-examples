@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6a04cb3b618f76c4f7b18ba2",
+  "id" : "6a04cc5b1ef26d534baf3722",
   "objectType" : "CLAIM",
   "patientControlNumber" : "SMI123",
   "chargeAmount" : 75.00,
@@ -209,7 +209,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a04cb3b618f76c4f7b18b6d",
+    "id" : "6a04cc5b1ef26d534baf36ed",
     "controlNumber" : "112233",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",

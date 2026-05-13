@@ -4,7 +4,7 @@
   "issueType" : "REQUIRED",
   "fieldName" : "transaction_set_header",
   "sourceLocation" : {
-    "fileName" : "835-validation-issues.dat",
+    "fileName" : "835-validation-issues.edi",
     "lineNumber" : 3,
     "segmentNumber" : 3
   },
@@ -17,7 +17,7 @@
   "issueType" : "REQUIRED",
   "fieldName" : "payer_identification",
   "sourceLocation" : {
-    "fileName" : "835-validation-issues.dat",
+    "fileName" : "835-validation-issues.edi",
     "lineNumber" : 7,
     "segmentNumber" : 7
   },
@@ -26,7 +26,7 @@
   "message" : "Required segment PER (payer_technical_contact_information) is missing in loop 1000A"
 }
 , {
-  "id" : "6a04c6e9934e03308a91ba24",
+  "id" : "6a04cc571ef26d534baef78e",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "5554555444",
   "chargeAmount" : 700.00,
@@ -126,7 +126,7 @@
     "issueType" : "INVALID",
     "fieldName" : "",
     "sourceLocation" : {
-      "fileName" : "835-validation-issues.dat",
+      "fileName" : "835-validation-issues.edi",
       "lineNumber" : 24,
       "segmentNumber" : 23
     },
@@ -140,7 +140,7 @@
     "issueObjectClass" : "ServiceLine",
     "fieldName" : "paymentAmount",
     "sourceLocation" : {
-      "fileName" : "835-validation-issues.dat",
+      "fileName" : "835-validation-issues.edi",
       "lineNumber" : 20,
       "segmentNumber" : 19
     },
@@ -153,7 +153,7 @@
     "issueObjectClass" : "Payment",
     "fieldName" : "chargeAmount",
     "sourceLocation" : {
-      "fileName" : "835-validation-issues.dat",
+      "fileName" : "835-validation-issues.edi",
       "lineNumber" : 18,
       "segmentNumber" : 17
     },
@@ -166,7 +166,7 @@
     "issueObjectClass" : "Payment",
     "fieldName" : "paymentAmount",
     "sourceLocation" : {
-      "fileName" : "835-validation-issues.dat",
+      "fileName" : "835-validation-issues.edi",
       "lineNumber" : 18,
       "segmentNumber" : 17
     },
@@ -175,7 +175,7 @@
     "message" : "Claim 5554555444: The sum of line paid amounts 400.00 does not match the claim paid amount 500.00"
   } ],
   "transaction" : {
-    "id" : "6a04c6e9934e03308a91ba03",
+    "id" : "6a04cc571ef26d534baef76d",
     "controlNumber" : "0002",
     "transactionType" : "PAYMENT",
     "productionDate" : "2024-12-23",
@@ -188,8 +188,8 @@
     "receiverIdentifier" : "CLEARINGHOUSE_ID",
     "transactionSetIdentifierCode" : "835",
     "fileInfo" : {
-      "name" : "835-validation-issues.dat",
-      "url" : "file:/edi-samples/edi_files/835/835-validation-issues.dat",
+      "name" : "835-validation-issues.edi",
+      "url" : "file:/edi-samples/edi_files/835/835-validation-issues.edi",
       "lastModifiedDateTime" : "2026-05-11T21:38:34.785-04:00",
       "fileType" : "EDI"
     }
@@ -200,7 +200,7 @@
   "issueType" : "CONTROL",
   "fieldName" : "transition_segment_count",
   "sourceLocation" : {
-    "fileName" : "835-validation-issues.dat",
+    "fileName" : "835-validation-issues.edi",
     "lineNumber" : 26,
     "segmentNumber" : 24
   },

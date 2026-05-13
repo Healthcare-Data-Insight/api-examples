@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6a04cb3b618f76c4f7b188b6",
+  "id" : "6a04cc5b1ef26d534baf346d",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26462967",
   "chargeAmount" : 100.00,
@@ -177,7 +177,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a04cb3b618f76c4f7b1888a",
+    "id" : "6a04cc5b1ef26d534baf3441",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",

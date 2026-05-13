@@ -1,6 +1,6 @@
 [
  {
-  "id" : "69e82c65836d7d05c9a00c5b",
+  "id" : "6a04cc571ef26d534baef61b",
   "objectType" : "CLAIM_STATUS",
   "patient" : {
     "entityRole" : "PATIENT",
@@ -59,7 +59,8 @@
     "identifier" : "5365432101",
     "lastNameOrOrgName" : "KING",
     "firstName" : "EWELL",
-    "middleName" : "B"
+    "middleName" : "B",
+    "nameSuffix" : "MD"
   },
   "providerBatchStatus" : {
     "traceIdentifier" : "00098765432",
@@ -80,7 +81,7 @@
     "rejectedAmount" : 150.00
   },
   "transaction" : {
-    "id" : "69e82c65836d7d05c9a00c3d",
+    "id" : "6a04cc571ef26d534baef5fd",
     "controlNumber" : "0004",
     "transactionType" : "CLAIM_ACK",
     "hierarchicalStructureCode" : "0085",
@@ -110,7 +111,7 @@
   }
 }
 , {
-  "id" : "69e82c65836d7d05c9a00c63",
+  "id" : "6a04cc571ef26d534baef623",
   "objectType" : "CLAIM_STATUS",
   "patient" : {
     "entityRole" : "PATIENT",
@@ -171,7 +172,8 @@
     "identifier" : "5365432101",
     "lastNameOrOrgName" : "KING",
     "firstName" : "EWELL",
-    "middleName" : "B"
+    "middleName" : "B",
+    "nameSuffix" : "MD"
   },
   "providerBatchStatus" : {
     "traceIdentifier" : "00098765432",
@@ -192,7 +194,7 @@
     "rejectedAmount" : 150.00
   },
   "transaction" : {
-    "id" : "69e82c65836d7d05c9a00c3d",
+    "id" : "6a04cc571ef26d534baef5fd",
     "controlNumber" : "0004",
     "transactionType" : "CLAIM_ACK",
     "hierarchicalStructureCode" : "0085",
@@ -222,7 +224,7 @@
   }
 }
 , {
-  "id" : "69e82c65836d7d05c9a00c6a",
+  "id" : "6a04cc571ef26d534baef62a",
   "objectType" : "CLAIM_STATUS",
   "patient" : {
     "entityRole" : "PATIENT",
@@ -280,7 +282,8 @@
     "identifier" : "5365432101",
     "lastNameOrOrgName" : "KING",
     "firstName" : "EWELL",
-    "middleName" : "B"
+    "middleName" : "B",
+    "nameSuffix" : "MD"
   },
   "providerBatchStatus" : {
     "traceIdentifier" : "00098765432",
@@ -301,7 +304,7 @@
     "rejectedAmount" : 150.00
   },
   "transaction" : {
-    "id" : "69e82c65836d7d05c9a00c3d",
+    "id" : "6a04cc571ef26d534baef5fd",
     "controlNumber" : "0004",
     "transactionType" : "CLAIM_ACK",
     "hierarchicalStructureCode" : "0085",
@@ -331,7 +334,7 @@
   }
 }
 , {
-  "id" : "69e82c65836d7d05c9a00c71",
+  "id" : "6a04cc571ef26d534baef631",
   "objectType" : "CLAIM_STATUS",
   "patient" : {
     "entityRole" : "PATIENT",
@@ -390,7 +393,8 @@
     "identifier" : "5365432101",
     "lastNameOrOrgName" : "KING",
     "firstName" : "EWELL",
-    "middleName" : "B"
+    "middleName" : "B",
+    "nameSuffix" : "MD"
   },
   "providerBatchStatus" : {
     "traceIdentifier" : "00098765432",
@@ -411,7 +415,7 @@
     "rejectedAmount" : 150.00
   },
   "transaction" : {
-    "id" : "69e82c65836d7d05c9a00c3d",
+    "id" : "6a04cc571ef26d534baef5fd",
     "controlNumber" : "0004",
     "transactionType" : "CLAIM_ACK",
     "hierarchicalStructureCode" : "0085",
@@ -441,7 +445,7 @@
   }
 }
 , {
-  "id" : "69e82c65836d7d05c9a00c79",
+  "id" : "6a04cc571ef26d534baef639",
   "objectType" : "CLAIM_STATUS",
   "patient" : {
     "entityRole" : "PATIENT",
@@ -500,7 +504,8 @@
     "identifier" : "5365432101",
     "lastNameOrOrgName" : "KING",
     "firstName" : "EWELL",
-    "middleName" : "B"
+    "middleName" : "B",
+    "nameSuffix" : "MD"
   },
   "providerBatchStatus" : {
     "traceIdentifier" : "00098765432",
@@ -521,7 +526,7 @@
     "rejectedAmount" : 150.00
   },
   "transaction" : {
-    "id" : "69e82c65836d7d05c9a00c3d",
+    "id" : "6a04cc571ef26d534baef5fd",
     "controlNumber" : "0004",
     "transactionType" : "CLAIM_ACK",
     "hierarchicalStructureCode" : "0085",
@@ -552,14 +557,15 @@
 }
 , {
   "objectType" : "PROVIDER_STATUS",
-  "id" : "69e82c65836d7d05c9a00c7f",
+  "id" : "6a04cc571ef26d534baef63f",
   "provider" : {
     "entityRole" : "BILLING_PROVIDER",
     "entityType" : "INDIVIDUAL",
     "identificationType" : "NPI",
     "identifier" : "1222334499",
     "lastNameOrOrgName" : "REED",
-    "firstName" : "IVAN"
+    "firstName" : "IVAN",
+    "nameSuffix" : "MD"
   },
   "batchStatus" : {
     "traceIdentifier" : "00023456789",
@@ -579,7 +585,7 @@
     "rejectedAmount" : 150.00
   },
   "transaction" : {
-    "id" : "69e82c65836d7d05c9a00c3d",
+    "id" : "6a04cc571ef26d534baef5fd",
     "controlNumber" : "0004",
     "transactionType" : "CLAIM_ACK",
     "hierarchicalStructureCode" : "0085",

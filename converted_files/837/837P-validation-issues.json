@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6a04c6e9934e03308a91baa1",
+  "id" : "6a04cc581ef26d534baef80b",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26463774",
   "chargeAmount" : 100.00,
@@ -118,7 +118,7 @@
     "issueType" : "LENGTH_EXCEEDED",
     "fieldName" : "facility_type_code",
     "sourceLocation" : {
-      "fileName" : "837P-validation-issues.dat",
+      "fileName" : "837P-validation-issues.edi",
       "lineNumber" : 19,
       "segmentNumber" : 19
     },
@@ -136,7 +136,7 @@
     "issueObjectClass" : "Claim",
     "fieldName" : "providerSignatureIndicator",
     "sourceLocation" : {
-      "fileName" : "837P-validation-issues.dat",
+      "fileName" : "837P-validation-issues.edi",
       "lineNumber" : 19,
       "segmentNumber" : 19
     },
@@ -152,7 +152,7 @@
     "issueType" : "WRONG_TYPE",
     "fieldName" : "disability_date_to",
     "sourceLocation" : {
-      "fileName" : "837P-validation-issues.dat",
+      "fileName" : "837P-validation-issues.edi",
       "lineNumber" : 20,
       "segmentNumber" : 20
     },
@@ -169,7 +169,7 @@
     "issueType" : "WRONG_TYPE",
     "fieldName" : "prescription_date",
     "sourceLocation" : {
-      "fileName" : "837P-validation-issues.dat",
+      "fileName" : "837P-validation-issues.edi",
       "lineNumber" : 21,
       "segmentNumber" : 21
     },
@@ -186,7 +186,7 @@
     "issueType" : "NOT_ALLOWED",
     "fieldName" : "address",
     "sourceLocation" : {
-      "fileName" : "837P-validation-issues.dat",
+      "fileName" : "837P-validation-issues.edi",
       "lineNumber" : 25,
       "segmentNumber" : 25
     },
@@ -199,7 +199,7 @@
     "issueType" : "NOT_ALLOWED",
     "fieldName" : "city_state_zip_code",
     "sourceLocation" : {
-      "fileName" : "837P-validation-issues.dat",
+      "fileName" : "837P-validation-issues.edi",
       "lineNumber" : 26,
       "segmentNumber" : 26
     },
@@ -213,7 +213,7 @@
     "issueObjectClass" : "Reference",
     "fieldName" : "type",
     "sourceLocation" : {
-      "fileName" : "837P-validation-issues.dat",
+      "fileName" : "837P-validation-issues.edi",
       "lineNumber" : 27,
       "segmentNumber" : 27
     },
@@ -231,7 +231,7 @@
     "issueObjectClass" : "Claim",
     "fieldName" : "chargeAmount",
     "sourceLocation" : {
-      "fileName" : "837P-validation-issues.dat",
+      "fileName" : "837P-validation-issues.edi",
       "lineNumber" : 19,
       "segmentNumber" : 19
     },
@@ -240,7 +240,7 @@
     "message" : "Claim 26463774: The sum of line charge amounts 99.00 does not match the claim charge amount 100.00"
   } ],
   "transaction" : {
-    "id" : "6a04c6e9934e03308a91ba7d",
+    "id" : "6a04cc581ef26d534baef7e7",
     "controlNumber" : "   1",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -252,8 +252,8 @@
     "transactionSetIdentifierCode" : "837",
     "implementationConventionReference" : "005010X222A2",
     "fileInfo" : {
-      "name" : "837P-validation-issues.dat",
-      "url" : "file:/edi-samples/edi_files/837/837P-validation-issues.dat",
+      "name" : "837P-validation-issues.edi",
+      "url" : "file:/edi-samples/edi_files/837/837P-validation-issues.edi",
       "lastModifiedDateTime" : "2026-05-13T14:45:36.663-04:00",
       "fileType" : "EDI"
     },
@@ -286,7 +286,7 @@
   "issueType" : "CONTROL",
   "fieldName" : "transaction_segment_count",
   "sourceLocation" : {
-    "fileName" : "837P-validation-issues.dat",
+    "fileName" : "837P-validation-issues.edi",
     "lineNumber" : 31,
     "segmentNumber" : 31
   },

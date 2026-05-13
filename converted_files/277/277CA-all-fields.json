@@ -1,14 +1,15 @@
 [
  {
   "objectType" : "PROVIDER_STATUS",
-  "id" : "69e82c65836d7d05c9a00b9d",
+  "id" : "6a04cc571ef26d534baef55d",
   "provider" : {
     "entityRole" : "BILLING_PROVIDER",
     "entityType" : "INDIVIDUAL",
     "identificationType" : "NPI",
     "identifier" : "1222334499",
     "lastNameOrOrgName" : "REED",
-    "firstName" : "IVAN"
+    "firstName" : "IVAN",
+    "nameSuffix" : "MD"
   },
   "batchStatus" : {
     "traceIdentifier" : "00023456789",
@@ -28,7 +29,7 @@
     "rejectedAmount" : 150.00
   },
   "transaction" : {
-    "id" : "69e82c65836d7d05c9a00b8b",
+    "id" : "6a04cc571ef26d534baef54b",
     "controlNumber" : "0004",
     "transactionType" : "CLAIM_ACK",
     "hierarchicalStructureCode" : "0085",
@@ -44,7 +45,7 @@
     "fileInfo" : {
       "name" : "277CA-all-fields.edi",
       "url" : "file:/edi-samples/edi_files/277/277CA-all-fields.edi",
-      "lastModifiedDateTime" : "2026-04-21T10:40:50.234-04:00",
+      "lastModifiedDateTime" : "2026-04-29T09:35:55.714-04:00",
       "fileType" : "EDI"
     },
     "sender" : {
@@ -86,7 +87,7 @@
   }
 }
 , {
-  "id" : "69e82c65836d7d05c9a00bb1",
+  "id" : "6a04cc571ef26d534baef571",
   "objectType" : "CLAIM_STATUS",
   "patient" : {
     "entityRole" : "PATIENT",
@@ -150,7 +151,8 @@
     "identifier" : "5365432101",
     "lastNameOrOrgName" : "KING",
     "firstName" : "EWELL",
-    "middleName" : "B"
+    "middleName" : "B",
+    "nameSuffix" : "MD"
   },
   "providerBatchStatus" : {
     "traceIdentifier" : "00098765432",
@@ -234,7 +236,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "69e82c65836d7d05c9a00b8b",
+    "id" : "6a04cc571ef26d534baef54b",
     "controlNumber" : "0004",
     "transactionType" : "CLAIM_ACK",
     "hierarchicalStructureCode" : "0085",
@@ -250,7 +252,7 @@
     "fileInfo" : {
       "name" : "277CA-all-fields.edi",
       "url" : "file:/edi-samples/edi_files/277/277CA-all-fields.edi",
-      "lastModifiedDateTime" : "2026-04-21T10:40:50.234-04:00",
+      "lastModifiedDateTime" : "2026-04-29T09:35:55.714-04:00",
       "fileType" : "EDI"
     },
     "sender" : {
@@ -264,7 +266,7 @@
   }
 }
 , {
-  "id" : "69e82c65836d7d05c9a00bc3",
+  "id" : "6a04cc571ef26d534baef583",
   "objectType" : "CLAIM_STATUS",
   "patient" : {
     "entityRole" : "PATIENT",
@@ -325,7 +327,8 @@
     "identifier" : "5365432101",
     "lastNameOrOrgName" : "KING",
     "firstName" : "EWELL",
-    "middleName" : "B"
+    "middleName" : "B",
+    "nameSuffix" : "MD"
   },
   "providerBatchStatus" : {
     "traceIdentifier" : "00098765432",
@@ -346,7 +349,7 @@
     "rejectedAmount" : 150.00
   },
   "transaction" : {
-    "id" : "69e82c65836d7d05c9a00b8b",
+    "id" : "6a04cc571ef26d534baef54b",
     "controlNumber" : "0004",
     "transactionType" : "CLAIM_ACK",
     "hierarchicalStructureCode" : "0085",
@@ -362,7 +365,7 @@
     "fileInfo" : {
       "name" : "277CA-all-fields.edi",
       "url" : "file:/edi-samples/edi_files/277/277CA-all-fields.edi",
-      "lastModifiedDateTime" : "2026-04-21T10:40:50.234-04:00",
+      "lastModifiedDateTime" : "2026-04-29T09:35:55.714-04:00",
       "fileType" : "EDI"
     },
     "sender" : {
@@ -376,7 +379,7 @@
   }
 }
 , {
-  "id" : "69e82c65836d7d05c9a00bca",
+  "id" : "6a04cc571ef26d534baef58a",
   "objectType" : "CLAIM_STATUS",
   "patient" : {
     "entityRole" : "PATIENT",
@@ -434,7 +437,8 @@
     "identifier" : "5365432101",
     "lastNameOrOrgName" : "KING",
     "firstName" : "EWELL",
-    "middleName" : "B"
+    "middleName" : "B",
+    "nameSuffix" : "MD"
   },
   "providerBatchStatus" : {
     "traceIdentifier" : "00098765432",
@@ -455,7 +459,7 @@
     "rejectedAmount" : 150.00
   },
   "transaction" : {
-    "id" : "69e82c65836d7d05c9a00b8b",
+    "id" : "6a04cc571ef26d534baef54b",
     "controlNumber" : "0004",
     "transactionType" : "CLAIM_ACK",
     "hierarchicalStructureCode" : "0085",
@@ -471,7 +475,7 @@
     "fileInfo" : {
       "name" : "277CA-all-fields.edi",
       "url" : "file:/edi-samples/edi_files/277/277CA-all-fields.edi",
-      "lastModifiedDateTime" : "2026-04-21T10:40:50.234-04:00",
+      "lastModifiedDateTime" : "2026-04-29T09:35:55.714-04:00",
       "fileType" : "EDI"
     },
     "sender" : {
@@ -485,7 +489,7 @@
   }
 }
 , {
-  "id" : "69e82c65836d7d05c9a00bd1",
+  "id" : "6a04cc571ef26d534baef591",
   "objectType" : "CLAIM_STATUS",
   "patient" : {
     "entityRole" : "PATIENT",
@@ -544,7 +548,8 @@
     "identifier" : "5365432101",
     "lastNameOrOrgName" : "KING",
     "firstName" : "EWELL",
-    "middleName" : "B"
+    "middleName" : "B",
+    "nameSuffix" : "MD"
   },
   "providerBatchStatus" : {
     "traceIdentifier" : "00098765432",
@@ -565,7 +570,7 @@
     "rejectedAmount" : 150.00
   },
   "transaction" : {
-    "id" : "69e82c65836d7d05c9a00b8b",
+    "id" : "6a04cc571ef26d534baef54b",
     "controlNumber" : "0004",
     "transactionType" : "CLAIM_ACK",
     "hierarchicalStructureCode" : "0085",
@@ -581,7 +586,7 @@
     "fileInfo" : {
       "name" : "277CA-all-fields.edi",
       "url" : "file:/edi-samples/edi_files/277/277CA-all-fields.edi",
-      "lastModifiedDateTime" : "2026-04-21T10:40:50.234-04:00",
+      "lastModifiedDateTime" : "2026-04-29T09:35:55.714-04:00",
       "fileType" : "EDI"
     },
     "sender" : {
@@ -595,7 +600,7 @@
   }
 }
 , {
-  "id" : "69e82c65836d7d05c9a00bd9",
+  "id" : "6a04cc571ef26d534baef599",
   "objectType" : "CLAIM_STATUS",
   "patient" : {
     "entityRole" : "PATIENT",
@@ -654,7 +659,8 @@
     "identifier" : "5365432101",
     "lastNameOrOrgName" : "KING",
     "firstName" : "EWELL",
-    "middleName" : "B"
+    "middleName" : "B",
+    "nameSuffix" : "MD"
   },
   "providerBatchStatus" : {
     "traceIdentifier" : "00098765432",
@@ -675,7 +681,7 @@
     "rejectedAmount" : 150.00
   },
   "transaction" : {
-    "id" : "69e82c65836d7d05c9a00b8b",
+    "id" : "6a04cc571ef26d534baef54b",
     "controlNumber" : "0004",
     "transactionType" : "CLAIM_ACK",
     "hierarchicalStructureCode" : "0085",
@@ -691,7 +697,7 @@
     "fileInfo" : {
       "name" : "277CA-all-fields.edi",
       "url" : "file:/edi-samples/edi_files/277/277CA-all-fields.edi",
-      "lastModifiedDateTime" : "2026-04-21T10:40:50.234-04:00",
+      "lastModifiedDateTime" : "2026-04-29T09:35:55.714-04:00",
       "fileType" : "EDI"
     },
     "sender" : {
@@ -705,7 +711,7 @@
   }
 }
 , {
-  "id" : "69e82c65836d7d05c9a00beb",
+  "id" : "6a04cc571ef26d534baef5ab",
   "objectType" : "CLAIM_STATUS",
   "patient" : {
     "entityRole" : "PATIENT",
@@ -769,7 +775,8 @@
     "identifier" : "9365432101",
     "lastNameOrOrgName" : "QUEEN",
     "firstName" : "EWELL",
-    "middleName" : "B"
+    "middleName" : "B",
+    "nameSuffix" : "MD"
   },
   "providerBatchStatus" : {
     "traceIdentifier" : "00098765433",
@@ -790,7 +797,7 @@
     "rejectedAmount" : 150.00
   },
   "transaction" : {
-    "id" : "69e82c65836d7d05c9a00b8b",
+    "id" : "6a04cc571ef26d534baef54b",
     "controlNumber" : "0004",
     "transactionType" : "CLAIM_ACK",
     "hierarchicalStructureCode" : "0085",
@@ -806,7 +813,7 @@
     "fileInfo" : {
       "name" : "277CA-all-fields.edi",
       "url" : "file:/edi-samples/edi_files/277/277CA-all-fields.edi",
-      "lastModifiedDateTime" : "2026-04-21T10:40:50.234-04:00",
+      "lastModifiedDateTime" : "2026-04-29T09:35:55.714-04:00",
       "fileType" : "EDI"
     },
     "sender" : {

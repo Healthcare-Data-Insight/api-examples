@@ -1,6 +1,6 @@
 [
  {
-  "id" : "69e82c65836d7d05c9a00b6c",
+  "id" : "6a04cc571ef26d534baef52c",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26403774",
   "chargeAmount" : 150.00,
@@ -28,6 +28,7 @@
       "identificationType" : "MEMBER_ID",
       "identifier" : "111223333",
       "taxId" : "123450000",
+      "taxIdType" : "SSN",
       "lastNameOrOrgName" : "SMITH",
       "firstName" : "JANE",
       "birthDate" : "1943-05-01",
@@ -45,6 +46,7 @@
       "identificationType" : "PAYOR_ID",
       "identifier" : "66783JJT",
       "taxId" : "435261708",
+      "taxIdType" : "EIN",
       "lastNameOrOrgName" : "INSURANCE COMPANY XYZ",
       "address" : {
         "line" : "P.O. BOX 569008",
@@ -143,6 +145,7 @@
       "identificationType" : "PAYOR_ID",
       "identifier" : "OtherPayerPredeterminationOfBenefitsID",
       "taxId" : "OtherPayerTin",
+      "taxIdType" : "EIN",
       "lastNameOrOrgName" : "OTHER PAYER",
       "address" : {
         "line" : "PO BOX 7901",
@@ -243,12 +246,22 @@
   "predeterminationOfBenefitsIdentifier" : "PredeterminationOfBenefitsId",
   "fixedFormatRecords" : [ "Record1", "Record2" ],
   "claimNote" : "Note1\nNote2",
+  "notes" : [ {
+    "qualifierCode" : "ADD",
+    "type" : "ADDITIONAL_INFORMATION",
+    "text" : "Note1"
+  }, {
+    "qualifierCode" : "ADD",
+    "type" : "ADDITIONAL_INFORMATION",
+    "text" : "Note2"
+  } ],
   "billingProvider" : {
     "entityRole" : "BILLING_PROVIDER",
     "entityType" : "BUSINESS",
     "identificationType" : "NPI",
     "identifier" : "1234567890",
     "taxId" : "587654321",
+    "taxIdType" : "EIN",
     "lastNameOrOrgName" : "DENTAL ASSOCIATES",
     "address" : {
       "line" : "234 SEAWAY ST",
@@ -583,7 +596,7 @@
     }
   } ],
   "transaction" : {
-    "id" : "69e82c65836d7d05c9a00ad6",
+    "id" : "6a04cc571ef26d534baef496",
     "controlNumber" : "3456",
     "transactionType" : "DENTAL",
     "hierarchicalStructureCode" : "0019",

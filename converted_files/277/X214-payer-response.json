@@ -1,6 +1,6 @@
 [
  {
-  "id" : "69e82c65836d7d05c9a00c11",
+  "id" : "6a04cc571ef26d534baef5d1",
   "objectType" : "CLAIM_STATUS",
   "patient" : {
     "entityRole" : "PATIENT",
@@ -59,10 +59,11 @@
     "identifier" : "234567894",
     "lastNameOrOrgName" : "JONES",
     "firstName" : "HARRY",
-    "middleName" : "B"
+    "middleName" : "B",
+    "nameSuffix" : "MD"
   },
   "transaction" : {
-    "id" : "69e82c65836d7d05c9a00bf9",
+    "id" : "6a04cc571ef26d534baef5b9",
     "controlNumber" : "0003",
     "transactionType" : "CLAIM_ACK",
     "hierarchicalStructureCode" : "0085",
@@ -92,7 +93,7 @@
   }
 }
 , {
-  "id" : "69e82c65836d7d05c9a00c19",
+  "id" : "6a04cc571ef26d534baef5d9",
   "objectType" : "CLAIM_STATUS",
   "patient" : {
     "entityRole" : "PATIENT",
@@ -153,10 +154,11 @@
     "identifier" : "234567894",
     "lastNameOrOrgName" : "JONES",
     "firstName" : "HARRY",
-    "middleName" : "B"
+    "middleName" : "B",
+    "nameSuffix" : "MD"
   },
   "transaction" : {
-    "id" : "69e82c65836d7d05c9a00bf9",
+    "id" : "6a04cc571ef26d534baef5b9",
     "controlNumber" : "0003",
     "transactionType" : "CLAIM_ACK",
     "hierarchicalStructureCode" : "0085",
@@ -186,7 +188,7 @@
   }
 }
 , {
-  "id" : "69e82c65836d7d05c9a00c20",
+  "id" : "6a04cc571ef26d534baef5e0",
   "objectType" : "CLAIM_STATUS",
   "patient" : {
     "entityRole" : "PATIENT",
@@ -247,10 +249,11 @@
     "identifier" : "234567894",
     "lastNameOrOrgName" : "JONES",
     "firstName" : "HARRY",
-    "middleName" : "B"
+    "middleName" : "B",
+    "nameSuffix" : "MD"
   },
   "transaction" : {
-    "id" : "69e82c65836d7d05c9a00bf9",
+    "id" : "6a04cc571ef26d534baef5b9",
     "controlNumber" : "0003",
     "transactionType" : "CLAIM_ACK",
     "hierarchicalStructureCode" : "0085",
@@ -280,7 +283,7 @@
   }
 }
 , {
-  "id" : "69e82c65836d7d05c9a00c27",
+  "id" : "6a04cc571ef26d534baef5e7",
   "objectType" : "CLAIM_STATUS",
   "patient" : {
     "entityRole" : "PATIENT",
@@ -339,10 +342,11 @@
     "identifier" : "234567894",
     "lastNameOrOrgName" : "JONES",
     "firstName" : "HARRY",
-    "middleName" : "B"
+    "middleName" : "B",
+    "nameSuffix" : "MD"
   },
   "transaction" : {
-    "id" : "69e82c65836d7d05c9a00bf9",
+    "id" : "6a04cc571ef26d534baef5b9",
     "controlNumber" : "0003",
     "transactionType" : "CLAIM_ACK",
     "hierarchicalStructureCode" : "0085",
@@ -372,7 +376,7 @@
   }
 }
 , {
-  "id" : "69e82c65836d7d05c9a00c2f",
+  "id" : "6a04cc571ef26d534baef5ef",
   "objectType" : "CLAIM_STATUS",
   "patient" : {
     "entityRole" : "PATIENT",
@@ -431,10 +435,11 @@
     "identifier" : "234567894",
     "lastNameOrOrgName" : "JONES",
     "firstName" : "HARRY",
-    "middleName" : "B"
+    "middleName" : "B",
+    "nameSuffix" : "MD"
   },
   "transaction" : {
-    "id" : "69e82c65836d7d05c9a00bf9",
+    "id" : "6a04cc571ef26d534baef5b9",
     "controlNumber" : "0003",
     "transactionType" : "CLAIM_ACK",
     "hierarchicalStructureCode" : "0085",

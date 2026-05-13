@@ -4,7 +4,7 @@
   "issueType" : "CONTROL",
   "fieldName" : "transaction_segment_count",
   "sourceLocation" : {
-    "fileName" : "837P-validation-issues.dat",
+    "fileName" : "837P-validation-issues.edi",
     "lineNumber" : 31,
     "segmentNumber" : 31
   },
@@ -18,7 +18,7 @@
   "issueType" : "LENGTH_EXCEEDED",
   "fieldName" : "facility_type_code",
   "sourceLocation" : {
-    "fileName" : "837P-validation-issues.dat",
+    "fileName" : "837P-validation-issues.edi",
     "lineNumber" : 19,
     "segmentNumber" : 19
   },
@@ -37,7 +37,7 @@
   "issueObjectClass" : "Claim",
   "fieldName" : "providerSignatureIndicator",
   "sourceLocation" : {
-    "fileName" : "837P-validation-issues.dat",
+    "fileName" : "837P-validation-issues.edi",
     "lineNumber" : 19,
     "segmentNumber" : 19
   },
@@ -54,7 +54,7 @@
   "issueType" : "WRONG_TYPE",
   "fieldName" : "disability_date_to",
   "sourceLocation" : {
-    "fileName" : "837P-validation-issues.dat",
+    "fileName" : "837P-validation-issues.edi",
     "lineNumber" : 20,
     "segmentNumber" : 20
   },
@@ -72,7 +72,7 @@
   "issueType" : "WRONG_TYPE",
   "fieldName" : "prescription_date",
   "sourceLocation" : {
-    "fileName" : "837P-validation-issues.dat",
+    "fileName" : "837P-validation-issues.edi",
     "lineNumber" : 21,
     "segmentNumber" : 21
   },
@@ -90,7 +90,7 @@
   "issueType" : "NOT_ALLOWED",
   "fieldName" : "address",
   "sourceLocation" : {
-    "fileName" : "837P-validation-issues.dat",
+    "fileName" : "837P-validation-issues.edi",
     "lineNumber" : 25,
     "segmentNumber" : 25
   },
@@ -104,7 +104,7 @@
   "issueType" : "NOT_ALLOWED",
   "fieldName" : "city_state_zip_code",
   "sourceLocation" : {
-    "fileName" : "837P-validation-issues.dat",
+    "fileName" : "837P-validation-issues.edi",
     "lineNumber" : 26,
     "segmentNumber" : 26
   },
@@ -119,7 +119,7 @@
   "issueObjectClass" : "Reference",
   "fieldName" : "type",
   "sourceLocation" : {
-    "fileName" : "837P-validation-issues.dat",
+    "fileName" : "837P-validation-issues.edi",
     "lineNumber" : 27,
     "segmentNumber" : 27
   },
@@ -138,7 +138,7 @@
   "issueObjectClass" : "Claim",
   "fieldName" : "chargeAmount",
   "sourceLocation" : {
-    "fileName" : "837P-validation-issues.dat",
+    "fileName" : "837P-validation-issues.edi",
     "lineNumber" : 19,
     "segmentNumber" : 19
   },

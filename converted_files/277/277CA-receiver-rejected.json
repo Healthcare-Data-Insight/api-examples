@@ -1,7 +1,7 @@
 [
  {
   "objectType" : "RECEIVER_STATUS",
-  "id" : "69e82c65836d7d05c9a00b79",
+  "id" : "6a04cc571ef26d534baef539",
   "receiver" : {
     "entityRole" : "SUBMITTER",
     "entityType" : "INDIVIDUAL",
@@ -31,7 +31,7 @@
     "rejectedAmount" : 300.00
   },
   "transaction" : {
-    "id" : "69e82c65836d7d05c9a00b71",
+    "id" : "6a04cc571ef26d534baef531",
     "controlNumber" : "0004",
     "transactionType" : "CLAIM_ACK",
     "hierarchicalStructureCode" : "0085",
