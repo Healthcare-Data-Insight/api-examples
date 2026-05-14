@@ -18,8 +18,7 @@ https://datainsight.health/docs/schemas/835/
 # ** 835
 # Convert multiple 835 files using multi-part request
 edi_835_dir = '../../edi_files/835'
-# file_names_to_convert = ['claim_adj_reason.dat', '835-all-fields.dat', '835-provider-level-adjustment.dat', '835-validation.dat']
-file_names_to_convert = ['835-validation-issues.dat']
+file_names_to_convert = ['claim_adj_reason.dat', '835-all-fields.dat', '835-provider-level-adjustment.dat', '835-validation-issues.edi']
 files_to_convert = [edi_835_dir + '/' + file_name for file_name in file_names_to_convert]
 print('** Converting files:')
 print(*files_to_convert)
