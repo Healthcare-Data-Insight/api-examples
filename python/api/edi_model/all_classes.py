@@ -132,6 +132,14 @@ class BatchStatus(EdiConverterModel):
     'Rejected quantity. EDI: QTY02*QC.'
     rejected_amount: float | None = Field(default=None, description='Rejected amount. EDI: AMT02*YY.')
     'Rejected amount. EDI: AMT02*YY.'
+class ChangeReason(EdiConverterModel):
+    'Segment: PLA.'
+    action_code: str | None = Field(default=None, description='Action code. EDI: PLA01.')
+    'Action code. EDI: PLA01.'
+    effective_date: dt.date | None = Field(default=None, description='Effective date. EDI: PLA03.')
+    'Effective date. EDI: PLA03.'
+    reason_code: str | None = Field(default=None, description='Reason code. EDI: PLA05.')
+    'Reason code. EDI: PLA05.'
 class ClaimStatus(EdiConverterModel):
     'Status of a single claim. Also contains patient, provider and receiver information. Loop: 2200D.'
     id: str | None = Field(default=None, description='Unique payment identifier assigned by the converter.')
@@ -520,10 +528,22 @@ class HealthCoverage(EdiConverterModel):
     'Group or policy numbers. EDI: REF.'
     prior_coverage_month_count: str | None = Field(default=None, description='Prior coverage month count. EDI: REF02*QQ.')
     'Prior coverage month count. EDI: REF02*QQ.'
-    providers: list[Party] = Field(default_factory=list, description='Providers.')
-    'Providers.'
+    id_cards: list[IdCard] = Field(default_factory=list, description='Id cards.')
+    'Id cards.'
+    providers: list[ProviderWithChangeReason] = Field(default_factory=list, description='Providers. EDI: Loop: 2310.')
+    'Providers. EDI: Loop: 2310.'
     cobs: list[CoordinationOfBenefits] = Field(default_factory=list, description='Coordination of Benefits.')
     'Coordination of Benefits.'
+class IdCard(EdiConverterModel):
+    'Segment: IDC.'
+    plan_desc: str | None = Field(default=None, description='Plan desc. EDI: IDC01.')
+    'Plan desc. EDI: IDC01.'
+    type_code: str | None = Field(default=None, description='Type code. EDI: IDC02.')
+    'Type code. EDI: IDC02.'
+    count: int | None = Field(default=None, description='Count. EDI: IDC03.')
+    'Count. EDI: IDC03.'
+    action_code: str | None = Field(default=None, description='Action code. EDI: IDC04.')
+    'Action code. EDI: IDC04.'
 class InpatientAdjudication(EdiConverterModel):
     'Contains Remittance Advice Remark Codes at the claim level and/or Medicare or Medicaid-specific amounts for inpatient institutional claims. Segment: MIA.'
     covered_days_or_visits_count: int | None = Field(default=None, description='Covered days or visits count. EDI: MIA01.')
@@ -2354,6 +2374,10 @@ class Provider(Party):
     'OpenAPI schema for Provider.'
     provider_taxonomy: Code | None = Field(default=None, description="Provider's specialty information (taxonomy). Populated only for billing, rendering, operating providers. EDI: PRV.")
     "Provider's specialty information (taxonomy). Populated only for billing, rendering, operating providers. EDI: PRV."
+class ProviderWithChangeReason(Party):
+    'OpenAPI schema for ProviderWithChangeReason.'
+    change_reason: ChangeReason | None = Field(default=None, description='Change reason.')
+    'Change reason.'
 class Tpa(Party):
     'Loop: 1100C, 1000C.'
     account_number: str | None = Field(default=None, description='Account number. EDI: ACT01.')
@@ -2402,6 +2426,7 @@ Attachment.model_rebuild()
 AwsInOutKey.model_rebuild()
 AwsRequest.model_rebuild()
 BatchStatus.model_rebuild()
+ChangeReason.model_rebuild()
 ClaimStatus.model_rebuild()
 Code.model_rebuild()
 CodeAndAmount.model_rebuild()
@@ -2424,6 +2449,7 @@ FormQuestionResponse.model_rebuild()
 FormResponse.model_rebuild()
 FunctionalGroup.model_rebuild()
 HealthCoverage.model_rebuild()
+IdCard.model_rebuild()
 InpatientAdjudication.model_rebuild()
 InstClaim.model_rebuild()
 InstClaimCsv.model_rebuild()
@@ -2475,6 +2501,7 @@ ValidationIssue.model_rebuild()
 Party.model_rebuild()
 PersonWithDemographic.model_rebuild()
 Provider.model_rebuild()
+ProviderWithChangeReason.model_rebuild()
 Tpa.model_rebuild()
 Member.model_rebuild()
 
@@ -2513,6 +2540,7 @@ __all__ = [
     'AwsInOutKey',
     'AwsRequest',
     'BatchStatus',
+    'ChangeReason',
     'ClaimStatus',
     'Code',
     'CodeAndAmount',
@@ -2535,6 +2563,7 @@ __all__ = [
     'FormResponse',
     'FunctionalGroup',
     'HealthCoverage',
+    'IdCard',
     'InpatientAdjudication',
     'InstClaim',
     'InstClaimCsv',
@@ -2586,6 +2615,7 @@ __all__ = [
     'Party',
     'PersonWithDemographic',
     'Provider',
+    'ProviderWithChangeReason',
     'Tpa',
     'Member',
 ]

@@ -22,7 +22,7 @@ edi_834_dir = '../../edi_files/834'
 # Convert by posting the file's content
 file_to_convert = edi_834_dir + '/834-all-fields.edi'
 
-response = edi_converter.convert_file(file_to_convert, True)
+response = edi_converter.convert_file(file_to_convert, is_ndjson=True)
 for member_coverage_str in response.iter_lines():
     obj = json.loads(member_coverage_str)
     if edi_converter.handle_warning_error(obj):

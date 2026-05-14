@@ -1,0 +1,26 @@
+---
+type: "object"
+description: "Segment: IDC."
+properties:
+  planDesc:
+    description: "Plan desc. EDI: IDC01."
+    type: "string"
+    x-edi-elt-designators:
+    - "IDC01"
+  typeCode:
+    description: "Type code. EDI: IDC02."
+    type: "string"
+    x-edi-elt-designators:
+    - "IDC02"
+  count:
+    description: "Count. EDI: IDC03."
+    type: "integer"
+    x-edi-elt-designators:
+    - "IDC03"
+  actionCode:
+    description: "Action code. EDI: IDC04."
+    type: "string"
+    x-edi-elt-designators:
+    - "IDC04"
+x-edi-seg-ids:
+- "IDC"

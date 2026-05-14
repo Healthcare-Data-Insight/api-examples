@@ -49,11 +49,17 @@ properties:
     - "REF02"
     x-edi-qualifiers:
     - "QQ"
-  providers:
-    description: "Providers."
+  idCards:
+    description: "Id cards."
     type: "array"
     items:
-      $ref: "./Party.yaml"
+      $ref: "./IdCard.yaml"
+  providers:
+    description: "Providers. EDI: Loop: 2310."
+    type: "array"
+    items:
+      $ref: "./ProviderWithChangeReason.yaml"
+    x-edi-loop-id: "2310"
   cobs:
     description: "Coordination of Benefits."
     type: "array"

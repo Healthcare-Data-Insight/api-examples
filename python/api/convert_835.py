@@ -34,27 +34,27 @@ for response_line_str in response.iter_lines():
         edi_converter.handle_warning_error(obj)
         continue
     if object_type == ObjectType.PAYMENT:
-        claim_payment = Payment.model_validate(obj)
+        paid_claim = Payment.model_validate(obj)
         # print validation issues for this claim
-        if claim_payment.validation_issues:
-            print(f'Validation issues for claim {claim_payment.patient_control_number}:')
-            for issue in claim_payment.validation_issues:
+        if paid_claim.validation_issues:
+            print(f'Validation issues for claim {paid_claim.patient_control_number}:')
+            for issue in paid_claim.validation_issues:
                 print(issue)
-        pcn = claim_payment.patient_control_number
-        charge = claim_payment.charge_amount
-        paid = claim_payment.payment_amount
-        payer_name = claim_payment.payer.last_name_or_org_name
+        pcn = paid_claim.patient_control_number
+        charge = paid_claim.charge_amount
+        paid = paid_claim.payment_amount
+        payer_name = paid_claim.payer.last_name_or_org_name
         print(f'Payment from {payer_name} for claim {pcn} for the amount {paid}; Billed: {charge}')
-        if drg := claim_payment.drg:
-            print(f"DRG: {drg.code} DRG weight: {claim_payment.drg_weight}")
+        if drg := paid_claim.drg:
+            print(f"DRG: {drg.code} DRG weight: {paid_claim.drg_weight}")
         # Remark codes from outpatient adjudication (inpatient is similar)
-        if outpatient_adjudication := claim_payment.outpatient_adjudication:
+        if outpatient_adjudication := paid_claim.outpatient_adjudication:
             for remark in outpatient_adjudication.remarks:
                 remark_code = remark.code
                 remark_desc = remark.desc
                 print(f'Outpatient adjudication remark: {remark_code} {remark_desc}')
 
-        for i, line in enumerate(claim_payment.service_lines):
+        for i, line in enumerate(paid_claim.service_lines):
             line_control_number = line.source_line_id or i + 1
             line_charge = line.charge_amount
             line_paid = line.paid_amount
