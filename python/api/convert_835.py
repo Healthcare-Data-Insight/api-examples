@@ -2,7 +2,7 @@ import json
 
 import edi_converter
 from edi_converter import ObjectType
-from edi_model.all_classes import Payment, Code
+from edi_model.all_classes import Payment, Code, ProviderAdjustment
 
 """
 Converts 835 files using multipart request.
@@ -72,3 +72,13 @@ for response_line_str in response.iter_lines():
                 remark_code = remark.code
                 remark_desc = remark.desc
                 print(f'Remark: {remark_code} {remark_desc}')
+
+    elif object_type == ObjectType.PROVIDER_ADJUSTMENT:
+        provider_adjustment = ProviderAdjustment.model_validate(obj)
+        payer_name = provider_adjustment.payer.last_name_or_org_name
+        fiscal_period = provider_adjustment.fiscal_period_date
+        print(f'Provider adjustment from {payer_name} for fiscal period: {fiscal_period}')
+        for adj in provider_adjustment.adjustments:
+            reason_code = adj.reason.code
+            amount = adj.amount
+            print(f'Provider adjustment Reason code: {reason_code} Amount: {amount}')
