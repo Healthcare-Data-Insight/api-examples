@@ -50,9 +50,10 @@ public class Claim837ParsingExample implements ParsingExampleHelper {
                 for (var claim : claims) {
                     processClaim(claim);
                 }
+                // Validation issues at the transaction level
                 var issues = parsingResults.validationIssues();
                 for (var issue : issues) {
-                    log.warn(issue.toString());
+                    log.warn("Validation issue: {}", issue);
                 }
                 isDone = parsingResults.isDone();
             }
@@ -115,6 +116,11 @@ public class Claim837ParsingExample implements ParsingExampleHelper {
             log.info("Line: {} Code: {} {} Dates: {}-{} Billed: {} Quantity: {}", lineId, revenueCode, procedureCode, serviceDateFrom, line.serviceDateTo(), lineChargeAmount, unitCount);
 
             assertNotNull(procedureCode, serviceDateFrom, unitCount, unitType, lineChargeAmount);
+        }
+        // Validation issues for this claim
+        var issues = claim.validationIssues();
+        for (var issue : issues) {
+            log.warn("Validation issue: {}", issue);
         }
 
     }
