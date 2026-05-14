@@ -1,6 +1,10 @@
 import edi_converter
 from edi_converter import ObjectType
 """
+This example does not use the object model, it relies on the raw JSON response and Python dictionaries.
+Use it only if you want to avoid dependency on the object model and want to build your own logic.
+See convert_837_single_file.py for an example that uses the object model.
+
 Converts an 837 file by posting the file's content.
 The response is an array of JSON objects.
 API documentation:

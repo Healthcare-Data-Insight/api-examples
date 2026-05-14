@@ -69,18 +69,3 @@ for claim_str in response.iter_lines():
             print(f"Procedure: {procedure['code']} Quantity: {line['unitCount']}")
         if rev_code:
             print(f"Revenue code: {rev_code['code']} {rev_code.get('desc')}")
-
-# Convert a single file by posting its content
-file_to_convert = edi_837_dir + '/prof-encounter.dat'
-print('** Converting ' + file_to_convert)
-response = edi_converter.convert_file(file_to_convert, True)
-for claim_str in response.iter_lines():
-    # each line is a claim object or could be an error/warning
-    claim = json.loads(claim_str)
-    if edi_converter.handle_warning_error(claim):
-        continue
-    pcn = claim['patientControlNumber']
-    charge = claim['chargeAmount']
-    billing_npi = claim['billingProvider']['identifier']
-
-    print(f'Claim {pcn} from {billing_npi} for the amount {charge}')

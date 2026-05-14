@@ -24,11 +24,11 @@ file_names_to_convert = ['claim_adj_reason.dat', '835-all-fields.dat', '835-prov
 files_to_convert = [edi_835_dir + '/' + file_name for file_name in file_names_to_convert]
 print('** Converting files:')
 print(*files_to_convert)
-response = edi_converter.convert_files_with_multipart(files_to_convert, True)
+response = edi_converter.convert_files_with_multipart(files_to_convert, is_ndjson=True)
 cur_transaction_id = None
 for response_line_str in response.iter_lines():
     # each line is an object
-    # Object types: PAYMENT (paid claim), PROVIDER_ADJUSTMENT (provider-level adjustment), WARNING (parser's warning)
+    # Object types: PAYMENT (paid claim), PROVIDER_ADJUSTMENT (provider-level adjustment), VALIDATION
     obj = json.loads(response_line_str)
     object_type = ObjectType(obj['objectType'])
     if object_type in {ObjectType.ERROR, ObjectType.VALIDATION}:

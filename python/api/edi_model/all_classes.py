@@ -2334,7 +2334,7 @@ class ValidationIssue(EdiConverterModel):
     'Value that caused the issue.'
     message: str | None = Field(default=None, description='Additional message describing the issue.')
     'Additional message describing the issue.'
-    allowed_values: list[str] = Field(default_factory=list, description='Allowed values.')
+    allowed_values: list[str] = Field(default=None, description='Allowed values.')
     'Allowed values.'
 class Party(PartyIdName):
     'OpenAPI schema for Party.'
