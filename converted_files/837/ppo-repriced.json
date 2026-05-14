@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6a04cc5b1ef26d534baf3751",
+  "id" : "6a0614ddf8d6a2fc743485a3",
   "objectType" : "CLAIM",
   "patientControlNumber" : "ABC123-RI",
   "chargeAmount" : 28.75,
@@ -175,7 +175,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a04cc5b1ef26d534baf3725",
+    "id" : "6a0614ddf8d6a2fc74348577",
     "controlNumber" : "1002",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",

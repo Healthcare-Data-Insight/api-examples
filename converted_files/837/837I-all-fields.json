@@ -1,9 +1,9 @@
 [
  {
-  "id" : "6a04cc5b1ef26d534baf350f",
+  "id" : "6a0614ddf8d6a2fc74348361",
   "objectType" : "CLAIM",
   "patientControlNumber" : "ABC0002",
-  "chargeAmount" : 89.93,
+  "chargeAmount" : 259.96,
   "facilityCode" : {
     "subType" : "FACILITY_TYPE",
     "code" : "11",
@@ -83,8 +83,7 @@
         "stateCode" : "MO",
         "zipCode" : "64108"
       }
-    },
-    "propertyCasualtyClaimNumber" : "4445555"
+    }
   },
   "otherSubscribers" : [ {
     "payerResponsibilitySequence" : "PRIMARY",
@@ -236,79 +235,63 @@
     "assignmentCertificationIndicator" : "Y",
     "releaseOfInformationCode" : "Y",
     "outpatientAdjudication" : {
-      "reimbursementRate" : 85,
-      "hcpcsPayableAmount" : 158.58,
-      "esrdPaymentAmount" : 82.23,
-      "nonPayableProfessionalComponentAmount" : 12.42,
+      "reimbursementRate" : 0.4,
+      "hcpcsPayableAmount" : 50.00,
+      "esrdPaymentAmount" : 30.00,
+      "nonPayableProfessionalComponentAmount" : 10.01,
       "remarks" : [ {
         "type" : "CARC_RARC",
         "subType" : "RARC",
-        "code" : "M71",
-        "desc" : "Total payment reduced due to overlap of tests billed."
+        "code" : "MA01",
+        "desc" : "If you do not agree with what we approved for these services, you may appeal our decision. To make sure that we are fair to you, we require another individual that did not process your initial claim to conduct the appeal. However, in order to be eligible for an appeal, you must write to us within 120 days of the date you received this notice, unless you have a good reason for being late."
       }, {
         "type" : "CARC_RARC",
         "subType" : "RARC",
-        "code" : "MA54",
-        "desc" : "Physician certification or election consent for hospice care not received timely."
-      }, {
-        "type" : "CARC_RARC",
-        "subType" : "RARC",
-        "code" : "N28",
-        "desc" : "Consent form requirements not fulfilled."
-      }, {
-        "type" : "CARC_RARC",
-        "subType" : "RARC",
-        "code" : "N118",
-        "desc" : "This service is not paid if billed more than once every 28 days."
-      }, {
-        "type" : "CARC_RARC",
-        "subType" : "RARC",
-        "code" : "MA127"
+        "code" : "MA07",
+        "desc" : "The claim information has also been forwarded to Medicaid for review."
       } ]
     },
     "inpatientAdjudication" : {
-      "coveredDaysOrVisitsCount" : 1,
+      "coveredDaysOrVisitsCount" : 0,
       "lifetimePsychiatricDaysCount" : 1,
-      "drgAmount" : 255.05,
-      "disproportionateShareAmount" : 288.08,
-      "mspPassThroughAmount" : 38.88,
-      "ppsCapitalAmount" : 83.03,
-      "ppsCapitalFspDrgAmount" : 15.65,
-      "ppsCapitalHspDrgAmount" : 25.00,
-      "ppsCapitalDshDrgAmount" : 22.99,
-      "oldCapitalAmount" : 46.36,
-      "ppsCapitalImeAmount" : 52.28,
-      "ppsOperatingHospitalSpecificDrgAmount" : 99.99,
-      "costReportDayCount" : 1,
-      "ppsOperatingFederalSpecificDrgAmount" : 71.12,
-      "ppsCapitalOutlierAmount" : 26.55,
-      "indirectTeachingAmount" : 18.08,
-      "nonPayableProfessionalComponentAmount" : 36.00,
+      "drgAmount" : 40.40,
+      "disproportionateShareAmount" : 60.00,
+      "mspPassThroughAmount" : 70.00,
+      "ppsCapitalAmount" : 80.00,
+      "ppsCapitalFspDrgAmount" : 90.00,
+      "ppsCapitalHspDrgAmount" : 100.00,
+      "ppsCapitalDshDrgAmount" : 110.00,
+      "oldCapitalAmount" : 120.00,
+      "ppsCapitalImeAmount" : 130.00,
+      "ppsOperatingHospitalSpecificDrgAmount" : 140.00,
+      "costReportDayCount" : 150,
+      "ppsOperatingFederalSpecificDrgAmount" : 160.00,
+      "ppsCapitalOutlierAmount" : 170.00,
+      "indirectTeachingAmount" : 180.00,
+      "nonPayableProfessionalComponentAmount" : 190.00,
       "ppsCapitalExceptionAmount" : 240.00,
       "remarks" : [ {
         "type" : "CARC_RARC",
         "subType" : "RARC",
-        "code" : "N118",
-        "desc" : "This service is not paid if billed more than once every 28 days."
+        "code" : "M01"
       }, {
         "type" : "CARC_RARC",
         "subType" : "RARC",
-        "code" : "M2",
-        "desc" : "Not paid separately when the patient is an inpatient."
+        "code" : "M20"
       }, {
         "type" : "CARC_RARC",
         "subType" : "RARC",
-        "code" : "MA54",
-        "desc" : "Physician certification or election consent for hospice care not received timely."
+        "code" : "M21",
+        "desc" : "Missing/incomplete/invalid place of residence for this service/item provided in a home."
       }, {
         "type" : "CARC_RARC",
         "subType" : "RARC",
-        "code" : "MA41",
-        "desc" : "Missing/incomplete/invalid admission type."
+        "code" : "M22",
+        "desc" : "Missing/incomplete/invalid number of miles traveled."
       }, {
         "type" : "CARC_RARC",
         "subType" : "RARC",
-        "code" : "M30"
+        "code" : "M23"
       } ]
     },
     "payerClaimControlNumber" : "CLAIM014",
@@ -359,7 +342,7 @@
       } ]
     }, {
       "entityRole" : "SERVICE_FACILITY",
-      "entityType" : "INDIVIDUAL",
+      "entityType" : "BUSINESS",
       "additionalIds" : [ {
         "qualifierCode" : "G2",
         "type" : "PROVIDER_COMMERCIAL_NUMBER",
@@ -383,7 +366,7 @@
       } ]
     }, {
       "entityRole" : "BILLING_PROVIDER",
-      "entityType" : "INDIVIDUAL",
+      "entityType" : "BUSINESS",
       "additionalIds" : [ {
         "qualifierCode" : "G2",
         "type" : "PROVIDER_COMMERCIAL_NUMBER",
@@ -394,6 +377,7 @@
   "assignmentParticipationCode" : "A",
   "assignmentCertificationIndicator" : "Y",
   "releaseOfInformationCode" : "Y",
+  "delayReasonCode" : "4",
   "serviceAuthorizationExceptionCode" : "1",
   "referralNumber" : "2410628868",
   "priorAuthorizationNumber" : "PA00000024",
@@ -406,6 +390,7 @@
   "admissionTypeCode" : "3",
   "admissionSourceCode" : "7",
   "patientStatusCode" : "01",
+  "patientResponsibilityAmount" : 123.00,
   "claimNote" : "PATIENT ALLERGIC TO PENICILLIN",
   "billingNote" : "Billing Note",
   "notes" : [ {
@@ -451,34 +436,6 @@
         "type" : "EMAIL",
         "number" : "ALEX@BESTMED.NET"
       } ]
-    } ]
-  },
-  "payToAddress" : {
-    "entityRole" : "PAY_TO_PROVIDER",
-    "entityType" : "BUSINESS",
-    "address" : {
-      "line" : "P O BOX 22310",
-      "city" : "OKLAHOMA CITY",
-      "stateCode" : "OK",
-      "zipCode" : "799998961"
-    }
-  },
-  "payToPlan" : {
-    "entityRole" : "PAYEE",
-    "entityType" : "BUSINESS",
-    "identificationType" : "NPI",
-    "identifier" : "PTP123",
-    "lastNameOrOrgName" : "PLAN TO PAY TO",
-    "address" : {
-      "line" : "236 SEAWAY ST",
-      "city" : "MIAMI",
-      "stateCode" : "FL",
-      "zipCode" : "33111"
-    },
-    "additionalIds" : [ {
-      "qualifierCode" : "FY",
-      "type" : "CLAIM_OFFICE_NUMBER",
-      "identification" : "587654321"
     } ]
   },
   "providers" : [ {
@@ -848,11 +805,6 @@
     "code" : "55",
     "desc" : "Eligibility Threshold for Charity Care",
     "amount" : 6.99
-  }, {
-    "subType" : "VALUE",
-    "code" : "20",
-    "desc" : "Payer Code;Total PPS Capital Payment Amount",
-    "amount" : 76.54
   } ],
   "conditions" : [ {
     "subType" : "CONDITION",
@@ -921,8 +873,12 @@
   } ],
   "serviceLines" : [ {
     "sourceLineId" : "LX0004-1",
+    "repricedReferenceNumber" : "Repriced",
+    "adjustedRepricedReferenceNumber" : "AdjRepriced",
     "chargeAmount" : 173.42,
     "nonCoveredAmount" : 11.07,
+    "serviceTaxAmount" : 15.00,
+    "facilityTaxAmount" : 22.00,
     "serviceDateFrom" : "2019-03-10",
     "serviceDateTo" : "2019-05-11",
     "unitType" : "UNIT",
@@ -934,7 +890,7 @@
       "formattedCode" : "0002-1434-81"
     },
     "drugQuantity" : 1.01,
-    "drugUnitType" : "UNIT",
+    "drugUnitType" : "GRAM",
     "prescriptionNumber" : "123456",
     "prescriptionNumberType" : "PHARMACY_PRESCRIPTION_NUMBER",
     "thirdPartyNote" : "state regulation 123 was applied during the pricing of this claim",
@@ -970,7 +926,7 @@
     },
     "attachments" : [ {
       "reportTypeCode" : "OZ",
-      "reportTransmissionCode" : "BM",
+      "reportTransmissionCode" : "FT",
       "controlNumber" : "DMN0012"
     } ],
     "providers" : [ {
@@ -1158,8 +1114,8 @@
       "desc" : "EKG/ECG (Electrocardiogram)-General"
     },
     "attachments" : [ {
-      "reportTypeCode" : "ZZ",
-      "reportTransmissionCode" : "BC",
+      "reportTypeCode" : "08",
+      "reportTransmissionCode" : "EL",
       "controlNumber" : "TPM0048"
     } ],
     "providers" : [ {
@@ -1307,7 +1263,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a04cc5b1ef26d534baf3472",
+    "id" : "6a0614ddf8d6a2fc743482c8",
     "controlNumber" : "00000024",
     "transactionType" : "INST",
     "hierarchicalStructureCode" : "0019",
@@ -1321,7 +1277,7 @@
     "fileInfo" : {
       "name" : "837I-all-fields.dat",
       "url" : "file:/edi-samples/edi_files/837/837I-all-fields.dat",
-      "lastModifiedDateTime" : "2025-12-08T15:19:29.99-05:00",
+      "lastModifiedDateTime" : "2026-05-14T09:19:17.915-04:00",
       "fileType" : "EDI"
     },
     "sender" : {

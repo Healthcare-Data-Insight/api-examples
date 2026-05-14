@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6a04cc5a1ef26d534baf1722",
+  "id" : "6a0614dbf8d6a2fc74346588",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26403774",
   "chargeAmount" : 150.00,
@@ -596,7 +596,7 @@
     }
   } ],
   "transaction" : {
-    "id" : "6a04cc5a1ef26d534baf168c",
+    "id" : "6a0614dbf8d6a2fc743464f2",
     "controlNumber" : "3456",
     "transactionType" : "DENTAL",
     "hierarchicalStructureCode" : "0019",
@@ -639,7 +639,7 @@
   }
 }
 , {
-  "id" : "6a04cc5a1ef26d534baf176a",
+  "id" : "6a0614dbf8d6a2fc743465d0",
   "objectType" : "CLAIM",
   "patientControlNumber" : "051068",
   "chargeAmount" : 766.50,
@@ -949,7 +949,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a04cc5a1ef26d534baf1727",
+    "id" : "6a0614dbf8d6a2fc7434658d",
     "controlNumber" : "000017712",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -992,7 +992,7 @@
   }
 }
 , {
-  "id" : "6a04cc5a1ef26d534baf179a",
+  "id" : "6a0614dcf8d6a2fc74346600",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26462967",
   "chargeAmount" : 100.00,
@@ -1169,7 +1169,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a04cc5a1ef26d534baf176e",
+    "id" : "6a0614dcf8d6a2fc743465d4",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -1215,10 +1215,10 @@
   }
 }
 , {
-  "id" : "6a04cc5a1ef26d534baf183c",
+  "id" : "6a0614dcf8d6a2fc7434669e",
   "objectType" : "CLAIM",
   "patientControlNumber" : "ABC0002",
-  "chargeAmount" : 89.93,
+  "chargeAmount" : 259.96,
   "facilityCode" : {
     "subType" : "FACILITY_TYPE",
     "code" : "11",
@@ -1298,8 +1298,7 @@
         "stateCode" : "MO",
         "zipCode" : "64108"
       }
-    },
-    "propertyCasualtyClaimNumber" : "4445555"
+    }
   },
   "otherSubscribers" : [ {
     "payerResponsibilitySequence" : "PRIMARY",
@@ -1451,79 +1450,63 @@
     "assignmentCertificationIndicator" : "Y",
     "releaseOfInformationCode" : "Y",
     "outpatientAdjudication" : {
-      "reimbursementRate" : 85,
-      "hcpcsPayableAmount" : 158.58,
-      "esrdPaymentAmount" : 82.23,
-      "nonPayableProfessionalComponentAmount" : 12.42,
+      "reimbursementRate" : 0.4,
+      "hcpcsPayableAmount" : 50.00,
+      "esrdPaymentAmount" : 30.00,
+      "nonPayableProfessionalComponentAmount" : 10.01,
       "remarks" : [ {
         "type" : "CARC_RARC",
         "subType" : "RARC",
-        "code" : "M71",
-        "desc" : "Total payment reduced due to overlap of tests billed."
+        "code" : "MA01",
+        "desc" : "If you do not agree with what we approved for these services, you may appeal our decision. To make sure that we are fair to you, we require another individual that did not process your initial claim to conduct the appeal. However, in order to be eligible for an appeal, you must write to us within 120 days of the date you received this notice, unless you have a good reason for being late."
       }, {
         "type" : "CARC_RARC",
         "subType" : "RARC",
-        "code" : "MA54",
-        "desc" : "Physician certification or election consent for hospice care not received timely."
-      }, {
-        "type" : "CARC_RARC",
-        "subType" : "RARC",
-        "code" : "N28",
-        "desc" : "Consent form requirements not fulfilled."
-      }, {
-        "type" : "CARC_RARC",
-        "subType" : "RARC",
-        "code" : "N118",
-        "desc" : "This service is not paid if billed more than once every 28 days."
-      }, {
-        "type" : "CARC_RARC",
-        "subType" : "RARC",
-        "code" : "MA127"
+        "code" : "MA07",
+        "desc" : "The claim information has also been forwarded to Medicaid for review."
       } ]
     },
     "inpatientAdjudication" : {
-      "coveredDaysOrVisitsCount" : 1,
+      "coveredDaysOrVisitsCount" : 0,
       "lifetimePsychiatricDaysCount" : 1,
-      "drgAmount" : 255.05,
-      "disproportionateShareAmount" : 288.08,
-      "mspPassThroughAmount" : 38.88,
-      "ppsCapitalAmount" : 83.03,
-      "ppsCapitalFspDrgAmount" : 15.65,
-      "ppsCapitalHspDrgAmount" : 25.00,
-      "ppsCapitalDshDrgAmount" : 22.99,
-      "oldCapitalAmount" : 46.36,
-      "ppsCapitalImeAmount" : 52.28,
-      "ppsOperatingHospitalSpecificDrgAmount" : 99.99,
-      "costReportDayCount" : 1,
-      "ppsOperatingFederalSpecificDrgAmount" : 71.12,
-      "ppsCapitalOutlierAmount" : 26.55,
-      "indirectTeachingAmount" : 18.08,
-      "nonPayableProfessionalComponentAmount" : 36.00,
+      "drgAmount" : 40.40,
+      "disproportionateShareAmount" : 60.00,
+      "mspPassThroughAmount" : 70.00,
+      "ppsCapitalAmount" : 80.00,
+      "ppsCapitalFspDrgAmount" : 90.00,
+      "ppsCapitalHspDrgAmount" : 100.00,
+      "ppsCapitalDshDrgAmount" : 110.00,
+      "oldCapitalAmount" : 120.00,
+      "ppsCapitalImeAmount" : 130.00,
+      "ppsOperatingHospitalSpecificDrgAmount" : 140.00,
+      "costReportDayCount" : 150,
+      "ppsOperatingFederalSpecificDrgAmount" : 160.00,
+      "ppsCapitalOutlierAmount" : 170.00,
+      "indirectTeachingAmount" : 180.00,
+      "nonPayableProfessionalComponentAmount" : 190.00,
       "ppsCapitalExceptionAmount" : 240.00,
       "remarks" : [ {
         "type" : "CARC_RARC",
         "subType" : "RARC",
-        "code" : "N118",
-        "desc" : "This service is not paid if billed more than once every 28 days."
+        "code" : "M01"
       }, {
         "type" : "CARC_RARC",
         "subType" : "RARC",
-        "code" : "M2",
-        "desc" : "Not paid separately when the patient is an inpatient."
+        "code" : "M20"
       }, {
         "type" : "CARC_RARC",
         "subType" : "RARC",
-        "code" : "MA54",
-        "desc" : "Physician certification or election consent for hospice care not received timely."
+        "code" : "M21",
+        "desc" : "Missing/incomplete/invalid place of residence for this service/item provided in a home."
       }, {
         "type" : "CARC_RARC",
         "subType" : "RARC",
-        "code" : "MA41",
-        "desc" : "Missing/incomplete/invalid admission type."
+        "code" : "M22",
+        "desc" : "Missing/incomplete/invalid number of miles traveled."
       }, {
         "type" : "CARC_RARC",
         "subType" : "RARC",
-        "code" : "M30"
+        "code" : "M23"
       } ]
     },
     "payerClaimControlNumber" : "CLAIM014",
@@ -1574,7 +1557,7 @@
       } ]
     }, {
       "entityRole" : "SERVICE_FACILITY",
-      "entityType" : "INDIVIDUAL",
+      "entityType" : "BUSINESS",
       "additionalIds" : [ {
         "qualifierCode" : "G2",
         "type" : "PROVIDER_COMMERCIAL_NUMBER",
@@ -1598,7 +1581,7 @@
       } ]
     }, {
       "entityRole" : "BILLING_PROVIDER",
-      "entityType" : "INDIVIDUAL",
+      "entityType" : "BUSINESS",
       "additionalIds" : [ {
         "qualifierCode" : "G2",
         "type" : "PROVIDER_COMMERCIAL_NUMBER",
@@ -1609,6 +1592,7 @@
   "assignmentParticipationCode" : "A",
   "assignmentCertificationIndicator" : "Y",
   "releaseOfInformationCode" : "Y",
+  "delayReasonCode" : "4",
   "serviceAuthorizationExceptionCode" : "1",
   "referralNumber" : "2410628868",
   "priorAuthorizationNumber" : "PA00000024",
@@ -1621,6 +1605,7 @@
   "admissionTypeCode" : "3",
   "admissionSourceCode" : "7",
   "patientStatusCode" : "01",
+  "patientResponsibilityAmount" : 123.00,
   "claimNote" : "PATIENT ALLERGIC TO PENICILLIN",
   "billingNote" : "Billing Note",
   "notes" : [ {
@@ -1666,34 +1651,6 @@
         "type" : "EMAIL",
         "number" : "ALEX@BESTMED.NET"
       } ]
-    } ]
-  },
-  "payToAddress" : {
-    "entityRole" : "PAY_TO_PROVIDER",
-    "entityType" : "BUSINESS",
-    "address" : {
-      "line" : "P O BOX 22310",
-      "city" : "OKLAHOMA CITY",
-      "stateCode" : "OK",
-      "zipCode" : "799998961"
-    }
-  },
-  "payToPlan" : {
-    "entityRole" : "PAYEE",
-    "entityType" : "BUSINESS",
-    "identificationType" : "NPI",
-    "identifier" : "PTP123",
-    "lastNameOrOrgName" : "PLAN TO PAY TO",
-    "address" : {
-      "line" : "236 SEAWAY ST",
-      "city" : "MIAMI",
-      "stateCode" : "FL",
-      "zipCode" : "33111"
-    },
-    "additionalIds" : [ {
-      "qualifierCode" : "FY",
-      "type" : "CLAIM_OFFICE_NUMBER",
-      "identification" : "587654321"
     } ]
   },
   "providers" : [ {
@@ -2063,11 +2020,6 @@
     "code" : "55",
     "desc" : "Eligibility Threshold for Charity Care",
     "amount" : 6.99
-  }, {
-    "subType" : "VALUE",
-    "code" : "20",
-    "desc" : "Payer Code;Total PPS Capital Payment Amount",
-    "amount" : 76.54
   } ],
   "conditions" : [ {
     "subType" : "CONDITION",
@@ -2136,8 +2088,12 @@
   } ],
   "serviceLines" : [ {
     "sourceLineId" : "LX0004-1",
+    "repricedReferenceNumber" : "Repriced",
+    "adjustedRepricedReferenceNumber" : "AdjRepriced",
     "chargeAmount" : 173.42,
     "nonCoveredAmount" : 11.07,
+    "serviceTaxAmount" : 15.00,
+    "facilityTaxAmount" : 22.00,
     "serviceDateFrom" : "2019-03-10",
     "serviceDateTo" : "2019-05-11",
     "unitType" : "UNIT",
@@ -2149,7 +2105,7 @@
       "formattedCode" : "0002-1434-81"
     },
     "drugQuantity" : 1.01,
-    "drugUnitType" : "UNIT",
+    "drugUnitType" : "GRAM",
     "prescriptionNumber" : "123456",
     "prescriptionNumberType" : "PHARMACY_PRESCRIPTION_NUMBER",
     "thirdPartyNote" : "state regulation 123 was applied during the pricing of this claim",
@@ -2185,7 +2141,7 @@
     },
     "attachments" : [ {
       "reportTypeCode" : "OZ",
-      "reportTransmissionCode" : "BM",
+      "reportTransmissionCode" : "FT",
       "controlNumber" : "DMN0012"
     } ],
     "providers" : [ {
@@ -2373,8 +2329,8 @@
       "desc" : "EKG/ECG (Electrocardiogram)-General"
     },
     "attachments" : [ {
-      "reportTypeCode" : "ZZ",
-      "reportTransmissionCode" : "BC",
+      "reportTypeCode" : "08",
+      "reportTransmissionCode" : "EL",
       "controlNumber" : "TPM0048"
     } ],
     "providers" : [ {
@@ -2522,7 +2478,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a04cc5a1ef26d534baf179f",
+    "id" : "6a0614dcf8d6a2fc74346605",
     "controlNumber" : "00000024",
     "transactionType" : "INST",
     "hierarchicalStructureCode" : "0019",
@@ -2536,7 +2492,7 @@
     "fileInfo" : {
       "name" : "837I-all-fields.dat",
       "url" : "file:/edi-samples/edi_files/837/837I-all-fields.dat",
-      "lastModifiedDateTime" : "2025-12-08T15:19:29.99-05:00",
+      "lastModifiedDateTime" : "2026-05-14T09:19:17.915-04:00",
       "fileType" : "EDI"
     },
     "sender" : {
@@ -2565,7 +2521,7 @@
   }
 }
 , {
-  "id" : "6a04cc5a1ef26d534baf1865",
+  "id" : "6a0614dcf8d6a2fc743466c7",
   "objectType" : "CLAIM",
   "patientControlNumber" : "125WILL",
   "chargeAmount" : 145.50,
@@ -2674,7 +2630,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a04cc5a1ef26d534baf1841",
+    "id" : "6a0614dcf8d6a2fc743466a3",
     "controlNumber" : "3701",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -2717,7 +2673,7 @@
   }
 }
 , {
-  "id" : "6a04cc5a1ef26d534baf18ad",
+  "id" : "6a0614dcf8d6a2fc7434670f",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26407789",
   "chargeAmount" : 79.04,
@@ -3096,7 +3052,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a04cc5a1ef26d534baf1868",
+    "id" : "6a0614dcf8d6a2fc743466ca",
     "controlNumber" : "0024",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -3139,7 +3095,7 @@
   }
 }
 , {
-  "id" : "6a04cc5a1ef26d534baf18e4",
+  "id" : "6a0614dcf8d6a2fc74346746",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26463774",
   "chargeAmount" : 100.00,
@@ -3349,7 +3305,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a04cc5a1ef26d534baf18b0",
+    "id" : "6a0614dcf8d6a2fc74346712",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -3395,7 +3351,7 @@
   }
 }
 , {
-  "id" : "6a04cc5a1ef26d534baf191a",
+  "id" : "6a0614dcf8d6a2fc7434677c",
   "objectType" : "CLAIM",
   "patientControlNumber" : "756048Q",
   "chargeAmount" : 89.93,
@@ -3601,7 +3557,7 @@
     }
   } ],
   "transaction" : {
-    "id" : "6a04cc5a1ef26d534baf18e9",
+    "id" : "6a0614dcf8d6a2fc7434674b",
     "controlNumber" : "0021",
     "transactionType" : "INST",
     "hierarchicalStructureCode" : "0019",
@@ -3644,7 +3600,7 @@
   }
 }
 , {
-  "id" : "6a04cc5a1ef26d534baf1948",
+  "id" : "6a0614dcf8d6a2fc743467aa",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26463774",
   "chargeAmount" : 100.00,
@@ -3805,7 +3761,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a04cc5a1ef26d534baf191e",
+    "id" : "6a0614dcf8d6a2fc74346780",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -3851,7 +3807,7 @@
   }
 }
 , {
-  "id" : "6a04cc5a1ef26d534baf19bc",
+  "id" : "6a0614dcf8d6a2fc7434681e",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26462967",
   "chargeAmount" : 100.00,
@@ -4028,7 +3984,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a04cc5a1ef26d534baf194b",
+    "id" : "6a0614dcf8d6a2fc743467ad",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -4074,7 +4030,7 @@
   }
 }
 , {
-  "id" : "6a04cc5a1ef26d534baf19bd",
+  "id" : "6a0614dcf8d6a2fc7434681f",
   "objectType" : "CLAIM",
   "patientControlNumber" : "125WILL",
   "chargeAmount" : 145.50,
@@ -4183,7 +4139,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a04cc5a1ef26d534baf1978",
+    "id" : "6a0614dcf8d6a2fc743467da",
     "controlNumber" : "3701",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -4226,7 +4182,7 @@
   }
 }
 , {
-  "id" : "6a04cc5a1ef26d534baf19be",
+  "id" : "6a0614dcf8d6a2fc74346820",
   "objectType" : "CLAIM",
   "patientControlNumber" : "153829140",
   "chargeAmount" : 827.00,
@@ -4390,7 +4346,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a04cc5a1ef26d534baf1999",
+    "id" : "6a0614dcf8d6a2fc743467fb",
     "controlNumber" : "0001",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -4436,7 +4392,7 @@
   }
 }
 , {
-  "id" : "6a04cc5a1ef26d534baf19ee",
+  "id" : "6a0614dcf8d6a2fc74346850",
   "objectType" : "CLAIM",
   "patientControlNumber" : "756048Q",
   "chargeAmount" : 89.93,
@@ -4641,7 +4597,7 @@
     }
   } ],
   "transaction" : {
-    "id" : "6a04cc5a1ef26d534baf19c1",
+    "id" : "6a0614dcf8d6a2fc74346823",
     "controlNumber" : "987654",
     "transactionType" : "INST",
     "hierarchicalStructureCode" : "0019",
@@ -4684,7 +4640,7 @@
   }
 }
 , {
-  "id" : "6a04cc5a1ef26d534baf1a20",
+  "id" : "6a0614dcf8d6a2fc74346882",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26463774",
   "chargeAmount" : 100.00,
@@ -4862,7 +4818,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a04cc5a1ef26d534baf19f1",
+    "id" : "6a0614dcf8d6a2fc74346853",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -4908,7 +4864,7 @@
   }
 }
 , {
-  "id" : "6a04cc5a1ef26d534baf1a4c",
+  "id" : "6a0614dcf8d6a2fc743468ae",
   "objectType" : "CLAIM",
   "patientControlNumber" : "153829140",
   "chargeAmount" : 827.00,
@@ -5072,7 +5028,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a04cc5a1ef26d534baf1a25",
+    "id" : "6a0614dcf8d6a2fc74346887",
     "controlNumber" : "0001",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -5118,7 +5074,7 @@
   }
 }
 , {
-  "id" : "6a04cc5a1ef26d534baf1a86",
+  "id" : "6a0614dcf8d6a2fc743468e8",
   "objectType" : "CLAIM",
   "patientControlNumber" : "SMI123",
   "chargeAmount" : 75.00,
@@ -5327,7 +5283,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a04cc5a1ef26d534baf1a51",
+    "id" : "6a0614dcf8d6a2fc743468b3",
     "controlNumber" : "112233",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -5370,7 +5326,7 @@
   }
 }
 , {
-  "id" : "6a04cc5a1ef26d534baf1ab5",
+  "id" : "6a0614dcf8d6a2fc74346917",
   "objectType" : "CLAIM",
   "patientControlNumber" : "ABC123-RI",
   "chargeAmount" : 28.75,
@@ -5545,7 +5501,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a04cc5a1ef26d534baf1a89",
+    "id" : "6a0614dcf8d6a2fc743468eb",
     "controlNumber" : "1002",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -5588,7 +5544,7 @@
   }
 }
 , {
-  "id" : "6a04cc5a1ef26d534baf1aef",
+  "id" : "6a0614dcf8d6a2fc74346951",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26407789",
   "chargeAmount" : 79.04,
@@ -5841,7 +5797,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a04cc5a1ef26d534baf1ab8",
+    "id" : "6a0614dcf8d6a2fc7434691a",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -5884,7 +5840,7 @@
   }
 }
 , {
-  "id" : "6a04cc5a1ef26d534baf1b12",
+  "id" : "6a0614dcf8d6a2fc74346974",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26463774",
   "chargeAmount" : 100.00,
@@ -5983,7 +5939,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a04cc5a1ef26d534baf1af4",
+    "id" : "6a0614dcf8d6a2fc74346956",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -6029,7 +5985,7 @@
   }
 }
 , {
-  "id" : "6a04cc5a1ef26d534baf1b59",
+  "id" : "6a0614dcf8d6a2fc743469bb",
   "objectType" : "CLAIM",
   "patientControlNumber" : "CLMNO12345",
   "chargeAmount" : 2232.93,
@@ -6335,7 +6291,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a04cc5a1ef26d534baf1b15",
+    "id" : "6a0614dcf8d6a2fc74346977",
     "controlNumber" : "0711",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -6378,7 +6334,7 @@
   }
 }
 , {
-  "id" : "6a04cc5a1ef26d534baf1c16",
+  "id" : "6a0614dcf8d6a2fc74346a78",
   "objectType" : "CLAIM",
   "patientControlNumber" : "36463774",
   "chargeAmount" : 100.00,
@@ -7175,7 +7131,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a04cc5a1ef26d534baf1b5e",
+    "id" : "6a0614dcf8d6a2fc743469c0",
     "controlNumber" : "0031",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -7221,7 +7177,7 @@
   }
 }
 , {
-  "id" : "6a04cc5a1ef26d534baf1c51",
+  "id" : "6a0614dcf8d6a2fc74346ab3",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26463774",
   "chargeAmount" : 100.00,
@@ -7438,7 +7394,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a04cc5a1ef26d534baf1c19",
+    "id" : "6a0614dcf8d6a2fc74346a7b",
     "controlNumber" : "0021",
     "transactionType" : "INST",
     "hierarchicalStructureCode" : "0019",
