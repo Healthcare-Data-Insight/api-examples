@@ -1,5 +1,5 @@
 import edi_converter
-from edi_converter import ObjectType
+
 """
 This example does not use the object model, it relies on the raw JSON response and Python dictionaries.
 Use it only if you want to avoid dependency on the object model and want to build your own logic.
@@ -23,10 +23,7 @@ response = edi_converter.convert_file(file_to_convert, False)
 # Note: this requires large memory size for large files; consider a streaming parser instead
 claims = response.json()
 for claim in claims:
-    # can have parser warnings in the same array
-    object_type = ObjectType(claim['objectType'])
-    if object_type in {ObjectType.ERROR, ObjectType.WARNING}:
-        edi_converter.handle_warning_error(claim)
+    if edi_converter.handle_warning_error(claim):
         continue
     pcn = claim['patientControlNumber']
     charge = claim['chargeAmount']

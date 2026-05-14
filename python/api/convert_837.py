@@ -1,7 +1,6 @@
 import json
 
 import edi_converter
-from edi_converter import ObjectType
 from edi_model.all_classes import Code, InstClaim, ProfClaim, Transaction837
 
 """
@@ -28,11 +27,9 @@ response = edi_converter.convert_files_with_multipart(files_to_convert, True)
 for claim_str in response.iter_lines():
     # each line is a claim object or could be an error/warning
     claim_json = json.loads(claim_str)
-    object_type = ObjectType(claim_json['objectType'])
-    if object_type in {ObjectType.ERROR, ObjectType.VALIDATION}:
-        edi_converter.handle_warning_error(claim_json)
+    if edi_converter.handle_warning_error(claim_json):
         continue
-
+    # You can skip this if you know your claim type
     transaction_json = claim_json.get('transaction', {})
     # is this an institutional claim?
     is_inst = transaction_json.get('transactionType') == 'INST'

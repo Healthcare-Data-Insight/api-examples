@@ -29,10 +29,9 @@ for response_line_str in response.iter_lines():
     # each line is an object
     # Object types: PAYMENT (paid claim), PROVIDER_ADJUSTMENT (provider-level adjustment), VALIDATION (EDI Validation issue)
     obj = json.loads(response_line_str)
-    object_type = ObjectType(obj['objectType'])
-    if object_type in {ObjectType.ERROR, ObjectType.VALIDATION}:
-        edi_converter.handle_warning_error(obj)
+    if edi_converter.handle_warning_error(obj):
         continue
+    object_type = ObjectType(obj['objectType'])
     if object_type == ObjectType.PAYMENT:
         paid_claim = Payment.model_validate(obj)
         # print validation issues for this claim
