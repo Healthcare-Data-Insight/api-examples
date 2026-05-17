@@ -1,5 +1,4 @@
 import edi_converter
-from edi_converter import ObjectType
 from edi_model.all_classes import ProfClaim, InterchangeControl, FunctionalGroup, EdiGenClaimRequest
 
 """
@@ -26,12 +25,10 @@ functional_group = FunctionalGroup(
 # Parse an existing EDI file
 file_to_convert = edi_837_dir + '/837P-all-fields.dat'
 print('** Transforming claim from ' + file_to_convert)
-response = edi_converter.convert_file(file_to_convert, False)
+response = edi_converter.convert_file(file_to_convert, is_validate=False)
 claims = response.json()
 for claim_json in claims:
-    object_type = ObjectType(claim_json['objectType'])
-    if object_type in {ObjectType.ERROR, ObjectType.WARNING}:
-        edi_converter.handle_warning_error(claim_json)
+    if edi_converter.handle_warning_error(claim_json):
         continue
     # Get the claim object
     claim = ProfClaim.model_validate(claim_json)

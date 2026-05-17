@@ -35,7 +35,8 @@ def convert_files_with_multipart(files, is_ndjson=False, is_validate=True):
     params = {'ndjson': is_ndjson, 'validate': is_validate}
     # Use stream=True to stream the response instead of loading it in memory
     api_response = requests.post(api_url, files=field_and_file_objects, params=params, stream=True)
-    api_response.raise_for_status()
+    if api_response.status_code not in {200}:
+        raise Exception(f'Error converting EDI; Error: {api_response.text}')
 
     return api_response
 
@@ -56,7 +57,8 @@ def convert_file(file, is_ndjson=False, is_validate=True):
         # Note that we're posting the file-like object instead of reading the file into memory
         # This allows for streaming content to the server
         api_response = requests.post(api_url, data=f, params=params, stream=True)
-        api_response.raise_for_status()
+        if api_response.status_code not in {200}:
+            raise Exception(f'Error converting EDI; Error: {api_response.text}')
     return api_response
 
 
@@ -69,7 +71,7 @@ def generate_claim_edi(request):
         timeout=30,
     )
     if api_response.status_code not in {200, 417}:
-        api_response.raise_for_status()
+        raise Exception(f'Error generating EDI; Error: {api_response.text}')
     return api_response
 
 
@@ -78,7 +80,7 @@ def handle_warning_error(obj):
     object_type = ObjectType(obj['objectType'])
     if object_type == ObjectType.ERROR:
         raise Exception(f'Error parsing EDI; Error: {obj}')
-    # since we set warningsInResponse=True, we need to check for warnings too
+    # If we set warningsInResponse=True, we need to check for warnings too
     elif object_type == ObjectType.WARNING:
         file_name = obj['fileName']
         message = obj['message']
