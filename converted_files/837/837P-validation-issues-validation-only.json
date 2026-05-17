@@ -134,6 +134,22 @@
 }
 , {
   "objectType" : "VALIDATION",
+  "issueType" : "INVALID_CODE",
+  "fieldName" : "procedure_code",
+  "sourceLocation" : {
+    "fileName" : "837P-validation-issues.edi",
+    "lineNumber" : 29,
+    "segmentNumber" : 29
+  },
+  "loop" : "2400",
+  "segment" : "SV1",
+  "element" : "SV101-2",
+  "value" : "JXXXX",
+  "ediString" : "SV1*HC:JXXXX*99*UN*1***1~",
+  "message" : "HCPCS Procedure JXXXX is not a valid code"
+}
+, {
+  "objectType" : "VALIDATION",
   "issueType" : "BALANCE",
   "issueObjectClass" : "Claim",
   "fieldName" : "chargeAmount",

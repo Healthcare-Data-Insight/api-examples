@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6a04cc581ef26d534baef80b",
+  "id" : "6a09ccfb262a38d55311f9aa",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26463774",
   "chargeAmount" : 100.00,
@@ -101,9 +101,8 @@
     "unitType" : "UNIT",
     "unitCount" : 1,
     "procedure" : {
-      "subType" : "CPT",
-      "code" : "99213",
-      "desc" : "Office or other outpatient visit for the evaluation and management of an established patient, which requires a medically appropriate history and/or examination and low level of medical decision making. When using total time on the date of the encounter for code selection, 20 minutes must be met or exceeded."
+      "subType" : "HCPCS",
+      "code" : "JXXXX"
     },
     "diagPointers" : [ 1 ],
     "diags" : [ {
@@ -227,6 +226,21 @@
     "allowedValues" : [ "0B", "1G", "G2" ]
   }, {
     "objectType" : "VALIDATION",
+    "issueType" : "INVALID_CODE",
+    "fieldName" : "procedure_code",
+    "sourceLocation" : {
+      "fileName" : "837P-validation-issues.edi",
+      "lineNumber" : 29,
+      "segmentNumber" : 29
+    },
+    "loop" : "2400",
+    "segment" : "SV1",
+    "element" : "SV101-2",
+    "value" : "JXXXX",
+    "ediString" : "SV1*HC:JXXXX*99*UN*1***1~",
+    "message" : "HCPCS Procedure JXXXX is not a valid code"
+  }, {
+    "objectType" : "VALIDATION",
     "issueType" : "BALANCE",
     "issueObjectClass" : "Claim",
     "fieldName" : "chargeAmount",
@@ -240,7 +254,7 @@
     "message" : "Claim 26463774: The sum of line charge amounts 99.00 does not match the claim charge amount 100.00"
   } ],
   "transaction" : {
-    "id" : "6a04cc581ef26d534baef7e7",
+    "id" : "6a09ccfb262a38d55311f986",
     "controlNumber" : "   1",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -253,8 +267,8 @@
     "implementationConventionReference" : "005010X222A2",
     "fileInfo" : {
       "name" : "837P-validation-issues.edi",
-      "url" : "file:/edi-samples/edi_files/837/837P-validation-issues.edi",
-      "lastModifiedDateTime" : "2026-05-13T14:45:36.663-04:00",
+      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/837/837P-validation-issues.edi",
+      "lastModifiedDateTime" : "2026-05-17T10:04:54.775-04:00",
       "fileType" : "EDI"
     },
     "sender" : {

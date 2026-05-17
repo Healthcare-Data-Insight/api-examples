@@ -1,0 +1,43 @@
+ISA*00*          *00*          *ZZ*            123*ZZ*            456*260322*1006*^*00501*000000001*0*T*:~
+GS*HC* 1* 2*20260322*1006*1*X*005010X222A2~
+ST*837*   1*005010X222A2~
+BHT*0019*00*1*20260322*1006*CH~
+NM1*41*2*PREMIER BILLING SERVICE*****46*TGJ23~
+PER*IC**EM*test@test.com~
+NM1*40*2*KEY INSURANCE COMPANY*****46*66783JJT~
+HL*1**20*1~
+NM1*85*2*Ben Kildare Service*****XX*9876543210~
+N3*234 SEAWAY ST~
+N4*MIAMI*FL*33111~
+REF*EI*587654321~
+HL*2*1*22*0~
+SBR*P~
+NM1*IL*1*Smith*Jane****MI*JS00111223333~
+N4*MAIMI*FL*33111~
+NM1*PR*2*KEY INSURANCE COMPANY*****PI*999996666~
+N4*MAIMI*FL*33111~
+CLM*26463774*100***111:B:1*V*A*Y*I~
+!!Loop:2300, Element:CLM05-1, Field: facility_type_code | Length of '111' is greater than the maximum length 2
+!!Loop:2300, Element:CLM06, Field: Claim.providerSignatureIndicator | Value 'V' is not in the allowed values list. Allowed values: [Y, N]
+!!Loop:2300, Segment:CLM, Field: Claim.chargeAmount | Claim 26463774: The sum of line charge amounts 99.00 does not match the claim charge amount 100.00
+DTP*314*RD8*20051208-20051309~
+!!Loop:2300, Segment:DTP, Field: disability_date_to | Invalid date or time value '20051309'
+DTP*471*D8*20051301~
+!!Loop:2300, Segment:DTP, Field: prescription_date | Invalid date or time value '20051301'
+REF*D9*17312345600006351~
+HI*ABK:J020*ABF:Z1159~
+NM1*DN*1*DOE*JONE*C***XX*5234567805~
+N3*234 SEAWAY ST~
+!!Loop:2310A, Segment:N3, Field: address | Segment 'N3' is not allowed in loop 2310A
+N4*MIAMI*FL*33111~
+!!Loop:2310A, Segment:N4, Field: city_state_zip_code | Segment 'N4' is not allowed in loop 2310A
+REF*X2*12345~
+!!Loop:2310A, Element:REF01*X2, Field: Reference.type | Value 'X2' is not in the allowed values list. Allowed values: [0B, 1G, G2]
+LX*1~
+SV1*HC:JXXXX*99*UN*1***1~
+!!Loop:2400, Element:SV101-2, Field: procedure_code | HCPCS Procedure JXXXX is not a valid code
+DTP*472*D8*20061003~
+SE*25*   1~
+!!Loop:0000, Segment:SE, Field: transaction_segment_count | Count  '25' in the closing segment does not match actual count '29'
+GE*1*1~
+IEA*1*000000001~

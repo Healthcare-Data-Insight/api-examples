@@ -41,6 +41,22 @@
 }
 , {
   "objectType" : "VALIDATION",
+  "issueType" : "INVALID_CODE",
+  "fieldName" : "adjustment_reason_code",
+  "sourceLocation" : {
+    "fileName" : "835-validation-issues.edi",
+    "lineNumber" : 22,
+    "segmentNumber" : 21
+  },
+  "loop" : "2110",
+  "segment" : "CAS",
+  "element" : "CAS02",
+  "value" : "XX",
+  "ediString" : "CAS*PR*XX*300~",
+  "message" : "Claim Adjustment Reason Code XX is not a valid code"
+}
+, {
+  "objectType" : "VALIDATION",
   "issueType" : "INVALID",
   "fieldName" : "",
   "sourceLocation" : {

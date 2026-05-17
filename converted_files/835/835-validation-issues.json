@@ -26,7 +26,7 @@
   "message" : "Required segment PER (payer_technical_contact_information) is missing in loop 1000A"
 }
 , {
-  "id" : "6a04cc571ef26d534baef78e",
+  "id" : "6a09ccfb262a38d55311f8f1",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "5554555444",
   "chargeAmount" : 700.00,
@@ -112,16 +112,30 @@
     },
     "adjustments" : [ {
       "group" : "PATIENT_RESPONSIBILITY",
-      "reasonCode" : "1",
+      "reasonCode" : "XX",
       "reason" : {
         "subType" : "CARC",
-        "code" : "1",
-        "desc" : "Deductible Amount"
+        "code" : "XX"
       },
       "amount" : 300.00
     } ]
   } ],
   "validationIssues" : [ {
+    "objectType" : "VALIDATION",
+    "issueType" : "INVALID_CODE",
+    "fieldName" : "adjustment_reason_code",
+    "sourceLocation" : {
+      "fileName" : "835-validation-issues.edi",
+      "lineNumber" : 22,
+      "segmentNumber" : 21
+    },
+    "loop" : "2110",
+    "segment" : "CAS",
+    "element" : "CAS02",
+    "value" : "XX",
+    "ediString" : "CAS*PR*XX*300~",
+    "message" : "Claim Adjustment Reason Code XX is not a valid code"
+  }, {
     "objectType" : "VALIDATION",
     "issueType" : "INVALID",
     "fieldName" : "",
@@ -175,7 +189,7 @@
     "message" : "Claim 5554555444: The sum of line paid amounts 400.00 does not match the claim paid amount 500.00"
   } ],
   "transaction" : {
-    "id" : "6a04cc571ef26d534baef76d",
+    "id" : "6a09ccfb262a38d55311f8d0",
     "controlNumber" : "0002",
     "transactionType" : "PAYMENT",
     "productionDate" : "2024-12-23",
@@ -189,8 +203,8 @@
     "transactionSetIdentifierCode" : "835",
     "fileInfo" : {
       "name" : "835-validation-issues.edi",
-      "url" : "file:/edi-samples/edi_files/835/835-validation-issues.edi",
-      "lastModifiedDateTime" : "2026-05-11T21:38:34.785-04:00",
+      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/835/835-validation-issues.edi",
+      "lastModifiedDateTime" : "2026-05-17T10:06:32.63-04:00",
       "fileType" : "EDI"
     }
   }
