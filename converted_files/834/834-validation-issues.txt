@@ -8,11 +8,12 @@ N1*P5**FI*999888777~
 N1*IN**FI*654456654~
 INS*Y*18*001*XXX*A***FT~
 !!Loop:2000, Element:INS04, Field: MemberCoverage.maintenanceReasonCode | Value 'XXX' is not in the allowed values list. Allowed values: [22, 01, 02, 03, 25, 04, 26, 05, 27, 06, 28, 07, 29, 08, 09, 31, EC, 10, 32, 11, 33, AA, AB, AC, 14, AD, 15, 37, 59, AE, 16, 38, AF, 17, 39, AG, 18, AH, AI, AJ, AL, XN, 40, XT, 41, 20, 21, 43]
+!!Loop:2000, Segment:INS, Field: member_level_detail | Required segment REF (subscriber_identifier) is missing in loop 2000
 REF*1L*123456001~
 NM1*IL*1*SMITH*WILLIAM****ZZ*2024433307~
 HD*021**DEN~
 DTP*348*D8*20020701~
 SE*12*12345~
-!!Loop:0000, Segment:SE, Field: number_of_included_segments | Count  '12' in the closing segment does not match actual count '11'
+!!Loop:0000, Element:SE01, Field: number_of_included_segments | Count  '12' in the closing segment does not match actual count '11'
 GE*1*20213~
 IEA*1*000010216~

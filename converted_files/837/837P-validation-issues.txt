@@ -17,6 +17,7 @@ N4*MAIMI*FL*33111~
 NM1*PR*2*KEY INSURANCE COMPANY*****PI*999996666~
 N4*MAIMI*FL*33111~
 CLM*26463774*100***111:B:1*V*A*Y*I~
+!!Loop:2300, Element:CLM05-1, Field: facility_type_code | Place of Service 111 is not a valid code
 !!Loop:2300, Element:CLM05-1, Field: facility_type_code | Length of '111' is greater than the maximum length 2
 !!Loop:2300, Element:CLM06, Field: Claim.providerSignatureIndicator | Value 'V' is not in the allowed values list. Allowed values: [Y, N]
 !!Loop:2300, Segment:CLM, Field: Claim.chargeAmount | Claim 26463774: The sum of line charge amounts 99.00 does not match the claim charge amount 100.00
@@ -38,6 +39,6 @@ SV1*HC:JXXXX*99*UN*1***1~
 !!Loop:2400, Element:SV101-2, Field: procedure_code | HCPCS Procedure JXXXX is not a valid code
 DTP*472*D8*20061003~
 SE*25*   1~
-!!Loop:0000, Segment:SE, Field: transaction_segment_count | Count  '25' in the closing segment does not match actual count '29'
+!!Loop:0000, Element:SE01, Field: transaction_segment_count | Count  '25' in the closing segment does not match actual count '29'
 GE*1*1~
 IEA*1*000000001~

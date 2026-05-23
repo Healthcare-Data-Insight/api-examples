@@ -26,7 +26,7 @@
   "message" : "Required segment PER (payer_technical_contact_information) is missing in loop 1000A"
 }
 , {
-  "id" : "6a09ccfb262a38d55311f8f1",
+  "id" : "6a1203f78514d9e0d1342983",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "5554555444",
   "chargeAmount" : 700.00,
@@ -122,6 +122,48 @@
   } ],
   "validationIssues" : [ {
     "objectType" : "VALIDATION",
+    "issueType" : "BALANCE",
+    "issueObjectClass" : "Payment",
+    "fieldName" : "chargeAmount",
+    "sourceLocation" : {
+      "fileName" : "835-validation-issues.edi",
+      "lineNumber" : 18,
+      "segmentNumber" : 17
+    },
+    "loop" : "2100",
+    "segment" : "CLP",
+    "ediString" : "CLP*5554555444*1*700*500*300*12*94060555410000*11*1~",
+    "message" : "Claim 5554555444: The sum of line charge amounts 800.00 does not match the claim charge amount 700.00"
+  }, {
+    "objectType" : "VALIDATION",
+    "issueType" : "BALANCE",
+    "issueObjectClass" : "Payment",
+    "fieldName" : "paymentAmount",
+    "sourceLocation" : {
+      "fileName" : "835-validation-issues.edi",
+      "lineNumber" : 18,
+      "segmentNumber" : 17
+    },
+    "loop" : "2100",
+    "segment" : "CLP",
+    "ediString" : "CLP*5554555444*1*700*500*300*12*94060555410000*11*1~",
+    "message" : "Claim 5554555444: The sum of line paid amounts 400.00 does not match the claim paid amount 500.00"
+  }, {
+    "objectType" : "VALIDATION",
+    "issueType" : "BALANCE",
+    "issueObjectClass" : "ServiceLine",
+    "fieldName" : "paymentAmount",
+    "sourceLocation" : {
+      "fileName" : "835-validation-issues.edi",
+      "lineNumber" : 20,
+      "segmentNumber" : 19
+    },
+    "loop" : "2110",
+    "segment" : "SVC",
+    "ediString" : "SVC*HC:99211*800*400~",
+    "message" : "Line 1: Paid amount 400.00 does not match the charge amount 800.00 minus the sum of adjustments 300.00"
+  }, {
+    "objectType" : "VALIDATION",
     "issueType" : "INVALID_CODE",
     "fieldName" : "adjustment_reason_code",
     "sourceLocation" : {
@@ -132,6 +174,7 @@
     "loop" : "2110",
     "segment" : "CAS",
     "element" : "CAS02",
+    "codeSubType" : "CARC",
     "value" : "XX",
     "ediString" : "CAS*PR*XX*300~",
     "message" : "Claim Adjustment Reason Code XX is not a valid code"
@@ -148,48 +191,9 @@
     "segment" : "XX",
     "ediString" : "XX*B6*800~",
     "message" : "Unknown segment 'XX' for the transaction set 835"
-  }, {
-    "objectType" : "VALIDATION",
-    "issueType" : "BALANCE",
-    "issueObjectClass" : "ServiceLine",
-    "fieldName" : "paymentAmount",
-    "sourceLocation" : {
-      "fileName" : "835-validation-issues.edi",
-      "lineNumber" : 20,
-      "segmentNumber" : 19
-    },
-    "loop" : "2110",
-    "segment" : "SVC",
-    "message" : "Claim 5554555444, line 1: Paid amount 400.00 does not match the charge amount 800.00 minus the sum of adjustments 300.00"
-  }, {
-    "objectType" : "VALIDATION",
-    "issueType" : "BALANCE",
-    "issueObjectClass" : "Payment",
-    "fieldName" : "chargeAmount",
-    "sourceLocation" : {
-      "fileName" : "835-validation-issues.edi",
-      "lineNumber" : 18,
-      "segmentNumber" : 17
-    },
-    "loop" : "2100",
-    "segment" : "CLP",
-    "message" : "Claim 5554555444: The sum of line charge amounts 800.00 does not match the claim charge amount 700.00"
-  }, {
-    "objectType" : "VALIDATION",
-    "issueType" : "BALANCE",
-    "issueObjectClass" : "Payment",
-    "fieldName" : "paymentAmount",
-    "sourceLocation" : {
-      "fileName" : "835-validation-issues.edi",
-      "lineNumber" : 18,
-      "segmentNumber" : 17
-    },
-    "loop" : "2100",
-    "segment" : "CLP",
-    "message" : "Claim 5554555444: The sum of line paid amounts 400.00 does not match the claim paid amount 500.00"
   } ],
   "transaction" : {
-    "id" : "6a09ccfb262a38d55311f8d0",
+    "id" : "6a1203f78514d9e0d1342962",
     "controlNumber" : "0002",
     "transactionType" : "PAYMENT",
     "productionDate" : "2024-12-23",
@@ -212,7 +216,7 @@
 , {
   "objectType" : "VALIDATION",
   "issueType" : "CONTROL",
-  "fieldName" : "transition_segment_count",
+  "fieldName" : "transaction_segment_count",
   "sourceLocation" : {
     "fileName" : "835-validation-issues.edi",
     "lineNumber" : 26,
@@ -220,7 +224,9 @@
   },
   "loop" : "0000",
   "segment" : "SE",
+  "element" : "SE01",
   "value" : "18",
+  "ediString" : "SE*18*0002~",
   "message" : "Count  '18' in the closing segment does not match actual count '22'"
 }
  ]

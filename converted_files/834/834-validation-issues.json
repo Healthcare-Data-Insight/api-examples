@@ -15,7 +15,7 @@
   "message" : "Required element is missing"
 }
 , {
-  "id" : "6a09ccfb262a38d55311f949",
+  "id" : "6a1203f78514d9e0d13429db",
   "objectType" : "MEMBER_COVERAGE",
   "masterPolicyNumber" : "ABCD012354",
   "sponsor" : {
@@ -84,7 +84,7 @@
     "message" : "Required segment REF (subscriber_identifier) is missing in loop 2000"
   } ],
   "transaction" : {
-    "id" : "6a09ccfb262a38d55311f941",
+    "id" : "6a1203f78514d9e0d13429d3",
     "controlNumber" : "12345",
     "transactionType" : "MEMBER_COVERAGE",
     "purposeCode" : "00",
@@ -113,7 +113,9 @@
   },
   "loop" : "0000",
   "segment" : "SE",
+  "element" : "SE01",
   "value" : "12",
+  "ediString" : "SE*12*12345~",
   "message" : "Count  '12' in the closing segment does not match actual count '11'"
 }
  ]

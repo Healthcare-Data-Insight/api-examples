@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6a09ccfb262a38d55311f9aa",
+  "id" : "6a1203f78514d9e0d1342a3c",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26463774",
   "chargeAmount" : 100.00,
@@ -114,6 +114,22 @@
   } ],
   "validationIssues" : [ {
     "objectType" : "VALIDATION",
+    "issueType" : "INVALID_CODE",
+    "fieldName" : "facility_type_code",
+    "sourceLocation" : {
+      "fileName" : "837P-validation-issues.edi",
+      "lineNumber" : 19,
+      "segmentNumber" : 19
+    },
+    "loop" : "2300",
+    "segment" : "CLM",
+    "element" : "CLM05-1",
+    "codeSubType" : "PLACE_OF_SERVICE",
+    "value" : "111",
+    "ediString" : "CLM*26463774*100***111:B:1*V*A*Y*I~",
+    "message" : "Place of Service 111 is not a valid code"
+  }, {
+    "objectType" : "VALIDATION",
     "issueType" : "LENGTH_EXCEEDED",
     "fieldName" : "facility_type_code",
     "sourceLocation" : {
@@ -146,6 +162,20 @@
     "ediString" : "CLM*26463774*100***111:B:1*V*A*Y*I~",
     "message" : "Value 'V' is not in the allowed values list",
     "allowedValues" : [ "Y", "N" ]
+  }, {
+    "objectType" : "VALIDATION",
+    "issueType" : "BALANCE",
+    "issueObjectClass" : "Claim",
+    "fieldName" : "chargeAmount",
+    "sourceLocation" : {
+      "fileName" : "837P-validation-issues.edi",
+      "lineNumber" : 19,
+      "segmentNumber" : 19
+    },
+    "loop" : "2300",
+    "segment" : "CLM",
+    "ediString" : "CLM*26463774*100***111:B:1*V*A*Y*I~",
+    "message" : "Claim 26463774: The sum of line charge amounts 99.00 does not match the claim charge amount 100.00"
   }, {
     "objectType" : "VALIDATION",
     "issueType" : "WRONG_TYPE",
@@ -236,25 +266,13 @@
     "loop" : "2400",
     "segment" : "SV1",
     "element" : "SV101-2",
+    "codeSubType" : "HCPCS",
     "value" : "JXXXX",
     "ediString" : "SV1*HC:JXXXX*99*UN*1***1~",
     "message" : "HCPCS Procedure JXXXX is not a valid code"
-  }, {
-    "objectType" : "VALIDATION",
-    "issueType" : "BALANCE",
-    "issueObjectClass" : "Claim",
-    "fieldName" : "chargeAmount",
-    "sourceLocation" : {
-      "fileName" : "837P-validation-issues.edi",
-      "lineNumber" : 19,
-      "segmentNumber" : 19
-    },
-    "loop" : "2300",
-    "segment" : "CLM",
-    "message" : "Claim 26463774: The sum of line charge amounts 99.00 does not match the claim charge amount 100.00"
   } ],
   "transaction" : {
-    "id" : "6a09ccfb262a38d55311f986",
+    "id" : "6a1203f78514d9e0d1342a18",
     "controlNumber" : "   1",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -306,7 +324,9 @@
   },
   "loop" : "0000",
   "segment" : "SE",
+  "element" : "SE01",
   "value" : "25",
+  "ediString" : "SE*25*   1~",
   "message" : "Count  '25' in the closing segment does not match actual count '29'"
 }
  ]

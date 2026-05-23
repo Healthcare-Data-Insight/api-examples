@@ -25,7 +25,9 @@
   },
   "loop" : "0000",
   "segment" : "SE",
+  "element" : "SE01",
   "value" : "12",
+  "ediString" : "SE*12*12345~",
   "message" : "Count  '12' in the closing segment does not match actual count '11'"
 }
 , {

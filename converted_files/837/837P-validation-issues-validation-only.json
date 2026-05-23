@@ -10,8 +10,27 @@
   },
   "loop" : "0000",
   "segment" : "SE",
+  "element" : "SE01",
   "value" : "25",
+  "ediString" : "SE*25*   1~",
   "message" : "Count  '25' in the closing segment does not match actual count '29'"
+}
+, {
+  "objectType" : "VALIDATION",
+  "issueType" : "INVALID_CODE",
+  "fieldName" : "facility_type_code",
+  "sourceLocation" : {
+    "fileName" : "837P-validation-issues.edi",
+    "lineNumber" : 19,
+    "segmentNumber" : 19
+  },
+  "loop" : "2300",
+  "segment" : "CLM",
+  "element" : "CLM05-1",
+  "codeSubType" : "PLACE_OF_SERVICE",
+  "value" : "111",
+  "ediString" : "CLM*26463774*100***111:B:1*V*A*Y*I~",
+  "message" : "Place of Service 111 is not a valid code"
 }
 , {
   "objectType" : "VALIDATION",
@@ -48,6 +67,21 @@
   "ediString" : "CLM*26463774*100***111:B:1*V*A*Y*I~",
   "message" : "Value 'V' is not in the allowed values list",
   "allowedValues" : [ "Y", "N" ]
+}
+, {
+  "objectType" : "VALIDATION",
+  "issueType" : "BALANCE",
+  "issueObjectClass" : "Claim",
+  "fieldName" : "chargeAmount",
+  "sourceLocation" : {
+    "fileName" : "837P-validation-issues.edi",
+    "lineNumber" : 19,
+    "segmentNumber" : 19
+  },
+  "loop" : "2300",
+  "segment" : "CLM",
+  "ediString" : "CLM*26463774*100***111:B:1*V*A*Y*I~",
+  "message" : "Claim 26463774: The sum of line charge amounts 99.00 does not match the claim charge amount 100.00"
 }
 , {
   "objectType" : "VALIDATION",
@@ -144,22 +178,9 @@
   "loop" : "2400",
   "segment" : "SV1",
   "element" : "SV101-2",
+  "codeSubType" : "HCPCS",
   "value" : "JXXXX",
   "ediString" : "SV1*HC:JXXXX*99*UN*1***1~",
   "message" : "HCPCS Procedure JXXXX is not a valid code"
-}
-, {
-  "objectType" : "VALIDATION",
-  "issueType" : "BALANCE",
-  "issueObjectClass" : "Claim",
-  "fieldName" : "chargeAmount",
-  "sourceLocation" : {
-    "fileName" : "837P-validation-issues.edi",
-    "lineNumber" : 19,
-    "segmentNumber" : 19
-  },
-  "loop" : "2300",
-  "segment" : "CLM",
-  "message" : "Claim 26463774: The sum of line charge amounts 99.00 does not match the claim charge amount 100.00"
 }
  ]
