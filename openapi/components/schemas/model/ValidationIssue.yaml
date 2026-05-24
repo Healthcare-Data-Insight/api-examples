@@ -12,6 +12,7 @@ properties:
     - "BALANCE"
     - "CONTROL"
     - "INVALID"
+    - "INVALID_CODE"
     - "LENGTH_EXCEEDED"
     - "LENGTH_TOO_SHORT"
     - "MISMATCH"
@@ -70,6 +71,9 @@ properties:
     - "NUMERIC"
     - "STRING"
     - "TIME"
+  codeSubType:
+    description: "Type of the code that failed validation, such as HCPCS, ProviderTaxonomy, ICD_10."
+    type: "string"
   actualDataType:
     description: "Actual data type."
     type: "string"

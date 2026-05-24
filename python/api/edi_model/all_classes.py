@@ -2348,6 +2348,8 @@ class ValidationIssue(EdiConverterModel):
     'Expected data type.'
     actual_data_type: str | None = Field(default=None, description='Actual data type.')
     'Actual data type.'
+    code_sub_type:  str | None = Field(default=None, description='Type of the code that failed validation, such as HCPCS, ProviderTaxonomy, ICD_10.')
+    'Type of the code that failed validation, such as HCPCS, ProviderTaxonomy, ICD_10.'
     value: str | None = Field(default=None, description='Value with the issue.')
     'Value with the issue.'
     edi_string: str | None = Field(default=None, description='Value that caused the issue.')
