@@ -5,18 +5,18 @@ export API_URL=http://localhost:5080/api
 # get the app version and the license info
 curl $API_URL/about
 echo
-echo -- Upload multiple files and convert to JSON
+echo -- Upload multiple files, validate and convert to JSON
 # Upload multiple files and get json back as ndjson
-curl -F files=@"../edi_files/837/prof-encounter.dat" -F files=@"../edi_files/837/anesthesia.dat" "$API_URL/edi/json?ndjson=true" > 837p.ndjson
+curl -F files=@"../edi_files/837/prof-encounter.dat" -F files=@"../edi_files/837/anesthesia.dat" "$API_URL/edi/json?ndjson=true&validate=true" > 837p.ndjson
 # Or as regular JSON with array of claims
-curl -F files=@"../edi_files/837/prof-encounter.dat" -F files=@"../edi_files/837/anesthesia.dat" "$API_URL/edi/json" > 837p.json
+curl -F files=@"../edi_files/837/prof-encounter.dat" -F files=@"../edi_files/837/anesthesia.dat" "$API_URL/edi/json?validate=true" > 837p.json
 
 echo -- Post single file
 # Post content of 837 as a single file
-curl -H "Content-Type: text/plain" --data-binary @../edi_files/837/prof-encounter.dat "$API_URL/edi/json?ediFileName=prof-encounter.dat"
+curl -H "Content-Type: text/plain" --data-binary @../edi_files/837/prof-encounter.dat "$API_URL/edi/json?ediFileName=prof-encounter.dat&validate=true"
 
 # Post content of 835 as a single file
-curl -H "Content-Type: text/plain" --data-binary @../edi_files/835/835-all-fields.dat "$API_URL/edi/json?ediFileName=835-all-fields.dat" > 835.json
+curl -H "Content-Type: text/plain" --data-binary @../edi_files/835/835-all-fields.dat "$API_URL/edi/json?ediFileName=835-all-fields.dat&validate=true" > 835.json
 
 echo -- Upload multiple files and convert to CSV
 # Same for CSV conversion, upload files and get CSV back
@@ -24,9 +24,14 @@ curl -F files=@"../edi_files/837/prof-encounter.dat" -F files=@"../edi_files/837
 curl -H "Content-Type: text/plain" --data-binary @../edi_files/837/prof-encounter.dat "$API_URL/edi/csv?ediFileName=prof-encounter.dat"
 
 # Convert 277
-curl -H "Content-Type: text/plain" --data-binary @../edi_files/277/277CA-all-fields.edi "$API_URL/edi/json" > 277ca.json
+curl -H "Content-Type: text/plain" --data-binary @../edi_files/277/277CA-all-fields.edi "$API_URL/edi/json?validate=true" > 277ca.json
+
+# Validate various EDI files
+curl -H "Content-Type: text/plain" --data-binary @../edi_files/835/835-validation-issues.edi "$API_URL/edi/validate"
+curl -H "Content-Type: text/plain" --data-binary @../edi_files/837/837P-validation-issues.edi "$API_URL/edi/validate"
+# Validate to EDI text
+curl -H "Content-Type: text/plain" --data-binary @../edi_files/837/837P-validation-issues.edi "$API_URL/edi/validate/text"
 
 # NCPDP
 echo -- Parse NCPDP telco b1 file
 curl -H "Content-Type: text/plain" --data-binary @../edi_files/ncpdp/b1_telco.dat "$API_URL/ncpdp/parse"
-

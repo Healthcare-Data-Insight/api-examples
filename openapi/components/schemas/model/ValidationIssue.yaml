@@ -53,13 +53,26 @@ properties:
     description: "Actual number of items."
     type: "integer"
   length:
-    description: "Expected length of the element's value."
+    description: "Expected length of the element's value (LENGTH_TOO_SHORT, LENGTH_EXCEEDED issue types)."
     type: "integer"
   actualLength:
-    description: "Actual length."
+    description: "Actual length (LENGTH_TOO_SHORT, LENGTH_EXCEEDED issue types)."
     type: "integer"
   dataType:
-    description: "Expected data type."
+    description: "Expected data type (WRONG_TYPE issue type)."
+    type: "string"
+    enum:
+    - "BINARY"
+    - "COMPOSITE"
+    - "DATE"
+    - "DECIMAL"
+    - "ENUM"
+    - "IDENTIFIER"
+    - "NUMERIC"
+    - "STRING"
+    - "TIME"
+  actualDataType:
+    description: "Actual data type (WRONG_TYPE issue type)."
     type: "string"
     enum:
     - "BINARY"
@@ -72,23 +85,10 @@ properties:
     - "STRING"
     - "TIME"
   codeSubType:
-    description: "Type of the code that failed validation, such as HCPCS, ProviderTaxonomy, ICD_10."
+    description: "Type of the code that failed validation (INVALID_CODE issue type), such as HCPCS, ProviderTaxonomy, ICD_10."
     type: "string"
-  actualDataType:
-    description: "Actual data type."
-    type: "string"
-    enum:
-    - "BINARY"
-    - "COMPOSITE"
-    - "DATE"
-    - "DECIMAL"
-    - "ENUM"
-    - "IDENTIFIER"
-    - "NUMERIC"
-    - "STRING"
-    - "TIME"
   value:
-    description: "Value with the issue."
+    description: "The value that caused the validation to fail."
     type: "string"
   ediString:
     description: "Value that caused the issue."
@@ -97,7 +97,7 @@ properties:
     description: "Additional message describing the issue."
     type: "string"
   allowedValues:
-    description: "Allowed values."
+    description: "Allowed values (VALUE_NOT_IN_ENUM_LIST issue type)."
     type: "array"
     items:
       type: "string"
