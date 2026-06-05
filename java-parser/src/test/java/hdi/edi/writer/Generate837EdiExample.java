@@ -7,8 +7,6 @@ import hdi.edi.parser.ParsingExampleHelper;
 import hdi.edi.parser.TransactionType;
 import hdi.model.ServiceLine;
 import hdi.model.claim.Claim;
-import hdi.model.control.FunctionalGroup;
-import hdi.model.control.InterchangeControl;
 import hdi.model.enumtype.IdentificationType;
 import hdi.model.enumtype.UbCodeType;
 import hdi.model.enumtype.UnitType;
@@ -26,14 +24,14 @@ import java.time.LocalDate;
 import java.util.List;
 
 @SuppressWarnings("NewClassNamingConvention")
-public class ClaimToEdiExample implements ParsingExampleHelper {
+public class Generate837EdiExample implements ParsingExampleHelper {
 
     @Test
     public void write837pEdi() throws IOException {
         File ediFile = new File(OUT_EDI_FILES_DIR, "837p-simple.edi");
         try (var fileWriter = new FileWriter(ediFile); var ediWriter = new EdiWriter(fileWriter)) {
-            writeIsaAndGs(ediWriter, TransactionType.PROF);
-            var tran = createEdiTransaction(TransactionType.PROF);
+            GenerateEdiExampleHelper.writeIsaAndGs(ediWriter, TransactionType.PROF);
+            var tran = create837Transaction(TransactionType.PROF);
             ediWriter.writeTransaction(tran);
 
             var claim = createSimpleProfClaim();
@@ -52,8 +50,8 @@ public class ClaimToEdiExample implements ParsingExampleHelper {
     public void write837iEdi() throws IOException {
         File ediFile = new File(OUT_EDI_FILES_DIR, "837i-simple.edi");
         try (var fileWriter = new FileWriter(ediFile); var ediWriter = new EdiWriter(fileWriter)) {
-            writeIsaAndGs(ediWriter, TransactionType.INST);
-            var tran = createEdiTransaction(TransactionType.INST);
+            GenerateEdiExampleHelper.writeIsaAndGs(ediWriter, TransactionType.INST);
+            var tran = create837Transaction(TransactionType.INST);
             ediWriter.writeTransaction(tran);
 
             var claim = createSimpleInstClaim();
@@ -64,15 +62,6 @@ public class ClaimToEdiExample implements ParsingExampleHelper {
         }
         var s = FileUtils.readFileToString(ediFile, Charset.defaultCharset());
         System.out.println(s);
-    }
-
-    private void writeIsaAndGs(EdiWriter ediWriter, TransactionType transactionType) {
-        // EDI writer will assign a unique interchange control number
-        var isa = new InterchangeControl("ZZ", "123", "ZZ", "456");
-        // EDI writer will assign a unique group control number
-        var gs = new FunctionalGroup(transactionType, "1", "2");
-        ediWriter.writeIsa(isa);
-        ediWriter.writeFunctionalGroup(gs);
     }
 
     private Claim createSimpleProfClaim() {
@@ -128,7 +117,7 @@ public class ClaimToEdiExample implements ParsingExampleHelper {
         return billing;
     }
 
-    private EdiTransaction createEdiTransaction(TransactionType tranType) {
+    private EdiTransaction create837Transaction(TransactionType tranType) {
         // The writer will assign a unique Originator Application ID if not set
         var tran = new EdiTransaction(tranType);
         // submitter and receiver are required
