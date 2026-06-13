@@ -1,0 +1,471 @@
+{
+  "interchangeControl": {
+    "objectType": "INTERCHANGE_CONTROL",
+    "senderIdQualifier": "ZZ",
+    "senderId": "123",
+    "receiverIdQualifier": "ZZ",
+    "receiverId": "456",
+    "interchangeDate": "2025-08-09",
+    "interchangeTime": "10:06:00",
+    "controlNumber": 1
+  },
+  "functionalGroup": {
+    "objectType": "FUNCTIONAL_GROUP",
+    "transactionType": "PAYMENT",
+    "senderCode": "1",
+    "receiverCode": "2",
+    "date": "2025-08-09",
+    "time": "10:06:00",
+    "controlNumber": 1
+  },
+  "transaction": {
+    "controlNumber": "35681",
+    "transactionType": "PAYMENT",
+    "productionDate": "2019-03-14",
+    "transactionHandlingType": "INFORMATION_ONLY",
+    "totalPaymentAmount": 132.00,
+    "creditOrDebitFlagCode": "C",
+    "paymentMethodType": "CHECK",
+    "receiverAccountNumber": "456",
+    "paymentDate": "2019-03-31",
+    "checkOrEftTraceNumber": "12345",
+    "payerIdentifier": "1512345678",
+    "receiverIdentifier": "CLEARINGHOUSE",
+    "sender": {
+      "entityRole": "PAYER",
+      "entityType": "BUSINESS",
+      "identificationType": "PAYOR_ID",
+      "identifier": "0101",
+      "lastNameOrOrgName": "DELTA DENTAL OF ABC",
+      "address": {
+        "line": "225 MAIN STREET",
+        "city": "CENTERVILLE",
+        "stateCode": "PA",
+        "zipCode": "17111"
+      },
+      "contacts": [
+        {
+          "functionCode": "BL",
+          "name": "JANE DOE",
+          "contactNumbers": [
+            {
+              "type": "PHONE",
+              "number": "9005555555"
+            },
+            {
+              "type": "EXTENSION",
+              "number": "123"
+            }
+          ]
+        },
+        {
+          "functionCode": "IC",
+          "contactNumbers": [
+            {
+              "type": "URL",
+              "number": "myplan.com/policies"
+            }
+          ]
+        }
+      ],
+      "additionalIds": [
+        {
+          "type": "PAYER_IDENTIFICATION_NUMBER",
+          "identification": "0101"
+        },
+        {
+          "type": "HEALTH_INDUSTRY_NUMBER",
+          "identification": "0202"
+        }
+      ]
+    },
+    "receiver": {
+      "entityRole": "PAYEE",
+      "entityType": "BUSINESS",
+      "identificationType": "EIN",
+      "identifier": "999994703",
+      "taxId": "050595",
+      "taxIdType": "TAX_ID",
+      "lastNameOrOrgName": "BAN DDS LLC",
+      "address": {
+        "line": "225 MAIN STREET",
+        "city": "CENTERVILLE",
+        "stateCode": "PA",
+        "zipCode": "17111"
+      },
+      "additionalIds": [
+        {
+          "qualifierCode": "PQ",
+          "identification": "0505"
+        }
+      ]
+    },
+    "remittanceDeliveryMethod": {
+      "transmissionType": "BY_MAIL",
+      "name": "Name",
+      "communicationNumber": "9618215141"
+    }
+  },
+  "payments": [
+    {
+      "patientControlNumber": "7722337",
+      "chargeAmount": 384.00,
+      "paymentAmount": 238.00,
+      "facilityCode": {
+        "subType": "FACILITY_TYPE",
+        "code": "11"
+      },
+      "frequencyCode": {
+        "code": "1"
+      },
+      "statementDateFrom": "2022-09-15",
+      "statementDateTo": "2022-09-16",
+      "subscriber": {
+        "person": {
+          "identifier": "SJD11111",
+          "lastNameOrOrgName": "DOE",
+          "firstName": "John"
+        }
+      },
+      "patient": {
+        "person": {
+          "lastNameOrOrgName": "DOE",
+          "firstName": "SALLY"
+        }
+      },
+      "otherSubscribers": [
+        {
+          "person": {
+            "lastNameOrOrgName": "Smith",
+            "firstName": "Jane"
+          }
+        }
+      ],
+      "claimStatus": "PRIMARY",
+      "patientResponsibilityAmount": 10.00,
+      "claimFilingIndicatorCode": "12",
+      "insurancePlanType": "PPO",
+      "payerControlNumber": "119932404007801",
+      "drg": {
+        "code": "025"
+      },
+      "drgWeight": 0.50,
+      "dischargeFraction": 0.40,
+      "otherClaimRelatedIds": [
+        {
+          "qualifierCode": "F8",
+          "identification": "12345"
+        },
+        {
+          "type": "MEDICAL_RECORD_NUMBER",
+          "identification": "12345"
+        }
+      ],
+      "supplementalAmounts": [
+        {
+          "type": "COVERAGE_AMOUNT",
+          "amount": 132.00
+        },
+        {
+          "type": "DISCOUNT_AMOUNT",
+          "amount": 100.00
+        }
+      ],
+      "supplementalQuantities": [
+        {
+          "type": "COVERED",
+          "quantity": 4
+        }
+      ],
+      "outpatientAdjudication": {
+        "reimbursementRate": 0.4,
+        "hcpcsPayableAmount": 50.00,
+        "esrdPaymentAmount": 30.00,
+        "nonPayableProfessionalComponentAmount": 10.01,
+        "remarks": [
+          {
+            "code": "MA01"
+          },
+          {
+            "code": "MA07"
+          }
+        ]
+      },
+      "adjustments": [
+        {
+          "group": "CONTRACTUAL",
+          "reasonCode": "197",
+          "amount": 2000.00,
+          "quantity": 1
+        },
+        {
+          "group": "CONTRACTUAL",
+          "reasonCode": "45",
+          "amount": 30000.00
+        },
+        {
+          "group": "PATIENT_RESPONSIBILITY",
+          "reasonCode": "132",
+          "amount": 259.00
+        }
+      ],
+      "coverageExpirationDate": "2022-10-01",
+      "claimReceivedDate": "2022-11-24",
+      "serviceProvider": {
+        "entityType": "INDIVIDUAL",
+        "identifier": "1811901945",
+        "lastNameOrOrgName": "BAN",
+        "firstName": "ERIN",
+        "additionalIds": [
+          {
+            "type": "MEDICARE_PROVIDER_NUMBER",
+            "identification": "12345678"
+          }
+        ]
+      },
+      "crossoverCarrier": {
+        "identificationType": "CMS_PLAN_ID",
+        "identifier": "9876",
+        "lastNameOrOrgName": "ACME INSURANCE"
+      },
+      "correctedPayer": {
+        "identificationType": "CMS_PLAN_ID",
+        "identifier": "8765",
+        "lastNameOrOrgName": "ACME INSURANCE"
+      },
+      "correctedInsured": {
+        "identifier": "SJD999",
+        "lastNameOrOrgName": "Due"
+      },
+      "claimContacts": [
+        {
+          "functionCode": "CX",
+          "contactNumbers": [
+            {
+              "type": "PHONE",
+              "number": "8008889900"
+            }
+          ]
+        }
+      ],
+      "serviceLines": [
+        {
+          "sourceLineId": "A123",
+          "healthcarePolicyIds": [
+            "1234\"5"
+          ],
+          "chargeAmount": 46.00,
+          "paidAmount": 25.00,
+          "supplementalAmounts": [
+            {
+              "type": "ALLOWED_ACTUAL",
+              "amount": 25.00
+            }
+          ],
+          "supplementalQuantities": [
+            {
+              "qualifierCode": "ZL",
+              "quantity": 3.75
+            }
+          ],
+          "serviceDateFrom": "2019-03-24",
+          "unitCount": 3.1,
+          "originalUnitCount": 3.5,
+          "procedure": {
+            "subType": "ADA",
+            "code": "D0120",
+            "modifiers": [
+              {
+                "code": "02"
+              },
+              {
+                "code": "28"
+              }
+            ]
+          },
+          "revenueCode": {
+            "code": "0022"
+          },
+          "originalProcedure": {
+            "subType": "ADA",
+            "code": "D0140",
+            "modifiers": [
+              {
+                "code": "01"
+              }
+            ]
+          },
+          "adjustments": [
+            {
+              "group": "CONTRACTUAL",
+              "reasonCode": "131",
+              "amount": 21.00
+            }
+          ],
+          "remarks": [
+            {
+              "code": "M1"
+            },
+            {
+              "code": "M2"
+            }
+          ],
+          "serviceIds": [
+            {
+              "type": "RATE_CODE_NUMBER",
+              "identification": "100"
+            },
+            {
+              "type": "APG_NUMBER",
+              "identification": "101"
+            },
+            {
+              "type": "AMBULATORY_PAYMENT",
+              "identification": "102"
+            }
+          ],
+          "renderingProviderIds": [
+            {
+              "type": "CMS_NPI",
+              "identification": "P123"
+            },
+            {
+              "type": "MEDICARE_PROVIDER_NUMBER",
+              "identification": "P234"
+            }
+          ]
+        },
+        {
+          "chargeAmount": 25.00,
+          "paidAmount": 14.00,
+          "supplementalAmounts": [
+            {
+              "type": "ALLOWED_ACTUAL",
+              "amount": 14.00
+            }
+          ],
+          "serviceDateFrom": "2019-03-24",
+          "procedure": {
+            "subType": "ADA",
+            "code": "D0220"
+          },
+          "adjustments": [
+            {
+              "group": "CONTRACTUAL",
+              "reasonCode": "131",
+              "amount": 11.00
+            }
+          ]
+        },
+        {
+          "chargeAmount": 22.00,
+          "paidAmount": 10.00,
+          "supplementalAmounts": [
+            {
+              "type": "ALLOWED_ACTUAL",
+              "amount": 10.00
+            }
+          ],
+          "serviceDateFrom": "2019-03-24",
+          "procedure": {
+            "subType": "ADA",
+            "code": "D0230"
+          },
+          "adjustments": [
+            {
+              "group": "CONTRACTUAL",
+              "reasonCode": "131",
+              "amount": 12.00
+            }
+          ]
+        },
+        {
+          "chargeAmount": 60.00,
+          "paidAmount": 34.00,
+          "supplementalAmounts": [
+            {
+              "qualifierCode": "B6",
+              "type": "ALLOWED_ACTUAL",
+              "amount": 34.00
+            }
+          ],
+          "serviceDateFrom": "2019-03-24",
+          "procedure": {
+            "subType": "ADA",
+            "code": "D0274"
+          },
+          "adjustments": [
+            {
+              "group": "CONTRACTUAL",
+              "reasonCode": "131",
+              "amount": 26.00
+            }
+          ]
+        },
+        {
+          "chargeAmount": 99.00,
+          "paidAmount": 99.00,
+          "serviceDateFrom": "2019-03-24",
+          "unitCount": 1,
+          "originalUnitCount": 2,
+          "revenueCode": {
+            "code": "0022"
+          },
+          "originalRevenueCode": {
+            "code": "0023"
+          }
+        },
+        {
+          "chargeAmount": 73.00,
+          "paidAmount": -3.00,
+          "supplementalAmounts": [
+            {
+              "type": "ALLOWED_ACTUAL",
+              "amount": 49.00
+            },
+            {
+              "type": "DEDUCTION",
+              "amount": 50.00
+            }
+          ],
+          "serviceDateFrom": "2019-03-24",
+          "serviceDateTo": "2019-03-25",
+          "procedure": {
+            "subType": "ADA",
+            "code": "D1110"
+          },
+          "adjustments": [
+            {
+              "group": "CONTRACTUAL",
+              "reasonCode": "131",
+              "amount": 24.00
+            },
+            {
+              "group": "CONTRACTUAL",
+              "reasonCode": "3",
+              "amount": 25.00
+            },
+            {
+              "group": "OTHER",
+              "reasonCode": "131",
+              "amount": 27.00
+            }
+          ]
+        },
+        {
+          "chargeAmount": 59.00,
+          "paidAmount": 59.00,
+          "serviceDateFrom": "2019-03-24",
+          "unitCount": 10.5,
+          "originalUnitCount": 9.2,
+          "drug": {
+            "code": "00002143481"
+          },
+          "originalDrug": {
+            "code": "00002143482"
+          }
+        }
+      ]
+    }
+  ]
+}
