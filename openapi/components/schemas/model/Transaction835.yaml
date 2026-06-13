@@ -1,6 +1,9 @@
 ---
 type: "object"
 properties:
+  objectType:
+    description: "Type of this object, always set to 'TRANSACTION' when the transaction is a top-level object."
+    type: "string"
   controlNumber:
     description: "Control number. EDI: ST02."
     type: "string"
@@ -13,11 +16,11 @@ properties:
     - "ST01"
     - "ST03"
   productionDate:
-    description: "Production date. EDI: DTP03*405."
+    description: "Production date. EDI: DTM02*405."
     type: "string"
     format: "date"
     x-edi-elt-designators:
-    - "DTP03"
+      - "DTM02"
     x-edi-qualifiers:
     - "405"
   transactionHandlingType:
@@ -112,9 +115,21 @@ properties:
     type: "string"
     x-edi-elt-designators:
     - "ST03"
+  remittanceDeliveryMethod:
+    description: "Remittance delivery method. Since: v2.15.0. EDI: RDM."
+    $ref: "./RemittanceDeliveryMethod.yaml"
+    x-edi-seg-ids:
+      - "RDM"
+    x-since: "2.15.0"
   fileInfo:
     description: "File info."
     $ref: "./FileInfo.yaml"
+  sender:
+    description: "Payer. This field is populated only when 'transactionTopLevel' is set to true."
+    $ref: "./Party.yaml"
+  receiver:
+    description: "Payee. This field is populated only when 'transactionTopLevel' is set to true."
+    $ref: "./Party.yaml"
 required:
 - "transactionHandlingType"
 - "totalPaymentAmount"

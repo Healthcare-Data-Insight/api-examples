@@ -34,7 +34,7 @@ properties:
     deprecated: true
     type: "boolean"
   isValidate:
-    description: "Perform full EDI validation. Validation messages are written to the response stream as 'VALIDATION' objects. Since: v2.15.0."
+    description: "Perform full EDI validation. Validation messages are written to the response stream as 'VALIDATION' objects. You can also set the 'EDI_VALIDATE' environment variable and set its value to 'True'. Since: v2.15.0."
     type: "boolean"
     x-since: "2.15.0"
   maxWarnings:

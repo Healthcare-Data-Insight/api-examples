@@ -24,12 +24,23 @@ properties:
     x-edi-qualifiers:
     - "9D"
   healthcarePolicyId:
-    description: "Healthcare policy id. EDI: REF02*0K."
+    description: "Healthcare policy id. Deprecated: Use healthcarePolicyIds instead. EDI: REF02*0K."
+    deprecated: true
     type: "string"
+    x-edi-elt-designators:
+      - "REF02"
+    x-edi-qualifiers:
+      - "0K"
+  healthcarePolicyIds:
+    description: "Healthcare policy ids. Since: v2.15.0. EDI: REF02*0K."
+    type: "array"
+    items:
+      type: "string"
     x-edi-elt-designators:
     - "REF02"
     x-edi-qualifiers:
     - "0K"
+    x-since: "2.15.0"
   chargeAmount:
     description: "Charge amount. EDI: SVC02."
     type: "number"
@@ -57,21 +68,21 @@ properties:
     x-edi-seg-ids:
     - "QTY"
   serviceDateFrom:
-    description: "Service date from. EDI: DTP03*472."
+    description: "Service date from. EDI: DTM02*472."
     type: "string"
     format: "date"
     x-edi-elt-designators:
-    - "DTP03"
+      - "DTM02"
     x-edi-qualifiers:
     - "472"
   serviceDateTo:
-    description: "Service date to. EDI: DTP03*472."
+    description: "Service date to. EDI: DTM02*151."
     type: "string"
     format: "date"
     x-edi-elt-designators:
-    - "DTP03"
+      - "DTM02"
     x-edi-qualifiers:
-    - "472"
+      - "151"
   unitCount:
     description: "Unit count. EDI: SVC05."
     type: "number"
@@ -108,11 +119,11 @@ properties:
     - "WK"
     - "IV"
   revenueCode:
-    description: "Revenue code. EDI: SVC01*NU, SVC04*NU."
+    description: "Revenue code. EDI: SVC04*NU, SVC01*NU."
     $ref: "./Code.yaml"
     x-edi-elt-designators:
-    - "SVC01"
     - "SVC04"
+    - "SVC01"
     x-edi-qualifiers:
     - "NU"
   originalProcedure:

@@ -14,11 +14,11 @@ properties:
     x-edi-elt-designators:
     - "CLP01"
   chargeAmount:
-    description: "Charge amount. EDI: CLP02."
+    description: "Charge amount. EDI: CLP03."
     type: "number"
     format: "float"
     x-edi-elt-designators:
-    - "CLP02"
+      - "CLP03"
   paymentAmount:
     description: "Payment amount. EDI: CLP04."
     type: "number"
@@ -36,19 +36,19 @@ properties:
     x-edi-elt-designators:
     - "CLP09"
   statementDateFrom:
-    description: "Statement date from. EDI: DTP03*232."
+    description: "Statement date from. EDI: DTM02*232."
     type: "string"
     format: "date"
     x-edi-elt-designators:
-    - "DTP03"
+      - "DTM02"
     x-edi-qualifiers:
     - "232"
   statementDateTo:
-    description: "Statement date to. EDI: DTP03*233."
+    description: "Statement date to. EDI: DTM02*233."
     type: "string"
     format: "date"
     x-edi-elt-designators:
-    - "DTP03"
+      - "DTM02"
     x-edi-qualifiers:
     - "233"
   serviceDateFrom:
@@ -223,19 +223,19 @@ properties:
     x-edi-seg-ids:
     - "CAS"
   coverageExpirationDate:
-    description: "Coverage expiration date. EDI: DTP03*036."
+    description: "Coverage expiration date. EDI: DTM02*036."
     type: "string"
     format: "date"
     x-edi-elt-designators:
-    - "DTP03"
+      - "DTM02"
     x-edi-qualifiers:
     - "036"
   claimReceivedDate:
-    description: "Claim received date. EDI: DTP03*050."
+    description: "Claim received date. EDI: DTM02*050."
     type: "string"
     format: "date"
     x-edi-elt-designators:
-    - "DTP03"
+      - "DTM02"
     x-edi-qualifiers:
     - "050"
   serviceProvider:

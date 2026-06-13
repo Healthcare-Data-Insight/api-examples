@@ -1,6 +1,6 @@
 ---
 type: "object"
-description: "Request for EDI generation API to generate 837 transaction with claims."
+description: "Request for EDI generation API to generate 835 transaction with payments."
 properties:
   interchangeControl:
     description: "Interchange control."
@@ -10,11 +10,9 @@ properties:
     $ref: "./FunctionalGroup.yaml"
   transaction:
     description: "Transaction."
-    $ref: "./Transaction837.yaml"
-  claims:
-    description: "List of professional or institutional claims."
+    $ref: "./Transaction835.yaml"
+  payments:
+    description: "List of payments."
     type: "array"
     items:
-      oneOf:
-        - $ref: ./ProfClaim.yaml
-        - $ref: ./InstClaim.yaml
+      $ref: "./Payment.yaml"

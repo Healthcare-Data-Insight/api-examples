@@ -2,12 +2,19 @@
 type: "object"
 description: "Segment: GS."
 properties:
+  id:
+    description: "Unique object identifier assigned by the converter."
+    type: "string"
+  objectType:
+    description: "Type of this object, always set to 'FUNCTIONAL_GROUP'."
+    type: "string"
   transactionType:
     description: "Transaction type as enum for EDI generator; if not provided, GS01, GS08 must be populated."
     type: "string"
     enum:
     - "PROF"
     - "INST"
+    - "PAYMENT"
   functionalIdentifierCode:
     description: "Functional identifier code. EDI: GS01."
     type: "string"

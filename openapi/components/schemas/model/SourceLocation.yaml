@@ -9,5 +9,5 @@ properties:
     description: "Line number in the file."
     type: "integer"
   segmentNumber:
-    description: "Segment number in the file."
+    description: "Global segment number in the file, starting from 1."
     type: "integer"

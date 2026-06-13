@@ -1,6 +1,9 @@
 ---
 type: "object"
 properties:
+  objectType:
+    description: "Type of this object, always set to 'TRANSACTION' when the transaction is a top-level object."
+    type: "string"
   controlNumber:
     description: "Control number. EDI: ST02."
     type: "string"
@@ -63,4 +66,4 @@ properties:
     $ref: "./Party.yaml"
   receiver:
     description: "Receiver of this transaction."
-    $ref: "./PartyIdName.yaml"
+    $ref: "./Party.yaml"
