@@ -6,29 +6,29 @@ properties:
     description: "Code defining timing, transmission method or format by which reports are to be sent. EDI: RDM01."
     type: "string"
     x-edi-elt-designators:
-      - "RDM01"
+    - "RDM01"
   transmissionType:
     description: "Report transmission code expressed as enum (string constant). EDI: RDM01."
     type: "string"
     enum:
-      - "BY_MAIL"
-      - "E_MAIL"
-      - "FILE_TRANSFER"
-      - "ON_LINE"
+    - "BY_MAIL"
+    - "E_MAIL"
+    - "FILE_TRANSFER"
+    - "ON_LINE"
     x-edi-elt-designators:
-      - "RDM01"
+    - "RDM01"
     x-enum-name: "RemittanceTransmissionType"
   name:
     description: "Name of a third party processor if needed, who would be the first recipient of the remittance. EDI: RDM02."
     type: "string"
     x-edi-elt-designators:
-      - "RDM02"
+    - "RDM02"
   communicationNumber:
     description: "Contains the operative communication number for the delivery method specified in RDM01 (URL or email). EDI: RDM03."
     type: "string"
     x-edi-elt-designators:
-      - "RDM03"
+    - "RDM03"
 required:
-  - "reportTransmissionCode"
+- "reportTransmissionCode"
 x-edi-seg-ids:
-  - "RDM"
+- "RDM"

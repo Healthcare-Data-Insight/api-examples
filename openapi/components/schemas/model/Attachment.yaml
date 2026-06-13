@@ -6,7 +6,7 @@ properties:
     description: "Code indicating the title or contents of a document. EDI: PWK01."
     type: "string"
     x-edi-elt-designators:
-      - "PWK01"
+    - "PWK01"
   type:
     description: "Attachment type; 'reportTypeCode' expressed as enum (string constant). Since: v2.15.0. EDI: PWK01."
     type: "string"
@@ -23,18 +23,18 @@ properties:
     description: "Transmission method; transmission code expressed as enum (string constant). Since: v2.15.0. EDI: PWK02."
     type: "string"
     enum:
-      - "AVAILABLE_ON_REQUEST_AT_PROVIDER_SITE"
-      - "BY_MAIL"
-      - "CERTIFICATION_INCLUDED_IN_THIS_CLAIM"
-      - "ELECTRONICALLY_ONLY"
-      - "E_MAIL"
-      - "FILE_TRANSFER"
-      - "NARRATIVE_SEGMENT_INCLUDED_IN_THIS_CLAIM"
-      - "NOT_SPECIFIED"
-      - "NO_DOCUMENTATION_IS_REQUIRED"
-      - "PREVIOUSLY_SUBMITTED_TO_PAYER"
+    - "AVAILABLE_ON_REQUEST_AT_PROVIDER_SITE"
+    - "BY_MAIL"
+    - "CERTIFICATION_INCLUDED_IN_THIS_CLAIM"
+    - "ELECTRONICALLY_ONLY"
+    - "E_MAIL"
+    - "FILE_TRANSFER"
+    - "NARRATIVE_SEGMENT_INCLUDED_IN_THIS_CLAIM"
+    - "NOT_SPECIFIED"
+    - "NO_DOCUMENTATION_IS_REQUIRED"
+    - "PREVIOUSLY_SUBMITTED_TO_PAYER"
     x-edi-elt-designators:
-      - "PWK02"
+    - "PWK02"
     x-since: "2.15.0"
     x-enum-name: "AttachmentTransmissionType"
   controlNumber:

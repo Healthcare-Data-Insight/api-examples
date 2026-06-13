@@ -32,10 +32,10 @@ properties:
     items:
       $ref: "./Code.yaml"
     x-edi-elt-designators:
-      - "MOA03"
-      - "MOA04"
-      - "MOA05"
-      - "MOA06"
-      - "MOA07"
+    - "MOA03"
+    - "MOA04"
+    - "MOA05"
+    - "MOA06"
+    - "MOA07"
 x-edi-seg-ids:
 - "MOA"

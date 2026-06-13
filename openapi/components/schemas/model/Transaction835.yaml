@@ -20,7 +20,7 @@ properties:
     type: "string"
     format: "date"
     x-edi-elt-designators:
-      - "DTM02"
+    - "DTM02"
     x-edi-qualifiers:
     - "405"
   transactionHandlingType:
@@ -119,7 +119,7 @@ properties:
     description: "Remittance delivery method. Since: v2.15.0. EDI: RDM."
     $ref: "./RemittanceDeliveryMethod.yaml"
     x-edi-seg-ids:
-      - "RDM"
+    - "RDM"
     x-since: "2.15.0"
   fileInfo:
     description: "File info."

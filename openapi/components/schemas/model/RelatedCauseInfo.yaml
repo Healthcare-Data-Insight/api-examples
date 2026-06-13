@@ -10,11 +10,11 @@ properties:
     description: "Related cause code expressed as enum (string constant). Since: v2.15.0. EDI: CLM11-1."
     type: "string"
     enum:
-      - "AUTO_ACCIDENT"
-      - "EMPLOYMENT"
-      - "OTHER_ACCIDENT"
+    - "AUTO_ACCIDENT"
+    - "EMPLOYMENT"
+    - "OTHER_ACCIDENT"
     x-edi-elt-designators:
-      - "CLM11-1"
+    - "CLM11-1"
     x-since: "2.15.0"
     x-enum-name: "RelatedCauseType"
   relatedCauseCode2:
@@ -26,11 +26,11 @@ properties:
     description: "Related cause code expressed as enum (string constant). Since: v2.15.0. EDI: CLM11-2."
     type: "string"
     enum:
-      - "AUTO_ACCIDENT"
-      - "EMPLOYMENT"
-      - "OTHER_ACCIDENT"
+    - "AUTO_ACCIDENT"
+    - "EMPLOYMENT"
+    - "OTHER_ACCIDENT"
     x-edi-elt-designators:
-      - "CLM11-2"
+    - "CLM11-2"
     x-since: "2.15.0"
     x-enum-name: "RelatedCauseType"
   stateCode:

@@ -28,9 +28,9 @@ properties:
     deprecated: true
     type: "string"
     x-edi-elt-designators:
-      - "REF02"
+    - "REF02"
     x-edi-qualifiers:
-      - "0K"
+    - "0K"
   healthcarePolicyIds:
     description: "Healthcare policy ids. Since: v2.15.0. EDI: REF02*0K."
     type: "array"
@@ -72,7 +72,7 @@ properties:
     type: "string"
     format: "date"
     x-edi-elt-designators:
-      - "DTM02"
+    - "DTM02"
     x-edi-qualifiers:
     - "472"
   serviceDateTo:
@@ -80,9 +80,9 @@ properties:
     type: "string"
     format: "date"
     x-edi-elt-designators:
-      - "DTM02"
+    - "DTM02"
     x-edi-qualifiers:
-      - "151"
+    - "151"
   unitCount:
     description: "Unit count. EDI: SVC05."
     type: "number"

@@ -18,7 +18,7 @@ properties:
     description: "Claim adjustment reason code. EDI: CAS02."
     type: "string"
     x-edi-elt-designators:
-      - "CAS02"
+    - "CAS02"
   reason:
     description: "Claim adjustment reason code as an object with the code subtype and optional description. EDI: CAS02."
     $ref: "./Code.yaml"

@@ -18,7 +18,7 @@ properties:
     type: "number"
     format: "float"
     x-edi-elt-designators:
-      - "CLP03"
+    - "CLP03"
   paymentAmount:
     description: "Payment amount. EDI: CLP04."
     type: "number"
@@ -40,7 +40,7 @@ properties:
     type: "string"
     format: "date"
     x-edi-elt-designators:
-      - "DTM02"
+    - "DTM02"
     x-edi-qualifiers:
     - "232"
   statementDateTo:
@@ -48,7 +48,7 @@ properties:
     type: "string"
     format: "date"
     x-edi-elt-designators:
-      - "DTM02"
+    - "DTM02"
     x-edi-qualifiers:
     - "233"
   serviceDateFrom:
@@ -227,7 +227,7 @@ properties:
     type: "string"
     format: "date"
     x-edi-elt-designators:
-      - "DTM02"
+    - "DTM02"
     x-edi-qualifiers:
     - "036"
   claimReceivedDate:
@@ -235,7 +235,7 @@ properties:
     type: "string"
     format: "date"
     x-edi-elt-designators:
-      - "DTM02"
+    - "DTM02"
     x-edi-qualifiers:
     - "050"
   serviceProvider:

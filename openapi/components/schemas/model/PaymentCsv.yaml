@@ -238,7 +238,7 @@ properties:
     type: "string"
     format: "date"
     x-edi-elt-designators:
-      - "DTM02"
+    - "DTM02"
     x-edi-qualifiers:
     - "036"
   claimReceivedDate:
@@ -246,7 +246,7 @@ properties:
     type: "string"
     format: "date"
     x-edi-elt-designators:
-      - "DTM02"
+    - "DTM02"
     x-edi-qualifiers:
     - "050"
   coverageAmount:
