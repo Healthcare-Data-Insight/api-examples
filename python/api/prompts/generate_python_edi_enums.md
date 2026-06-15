@@ -1,8 +1,10 @@
 # Generate Python EDI Enums
 
 Generate Python EDI Enums from Java enum.
-Each enum inherits from EdiEnum in the edi_model.base module.
+For each Java enum that extends EdiQualifier, create a corresponding Python enum inheriting from  EdiEnum in the edi_model.base module.
 The value of the enum is the EDI code.
+
+Enums that do not extend EdiQualifier: user string values, unless stated otherwise for the specific enum.
 
 Example:
 
@@ -15,7 +17,7 @@ class MeasurementType(EdiEnum):
     CREATININE = "R4"
 ```
 
-Corrsponging Java enum:
+Corresponding Java enum:
 
 ```java
 public enum MeasurementType implements EdiQualifier {
@@ -105,6 +107,17 @@ RemittanceTransmissionType.java
 ### hdi.model.status
 
 StatusActionType
+
+### hdi.edi.validation
+IssueType
+
+### hdi.edi.parser
+EdiDataType
+TransactionType: use subTypeCode as value, if null, use enum name.
+
+### hdi.model
+ObjectType
+PlaceOfServiceType
 
 ## Acceptance Criteria
 
