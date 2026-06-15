@@ -518,12 +518,16 @@
           "copayStatusCode": "0",
           "repricedReferenceNumber": "Repriced",
           "adjustedRepricedReferenceNumber": "AdjRepriced",
-          "priorAuthorization": "PriorAuthorization",
+          "priorAuthorizationNumbers": [
+            "PriorAuthorization"
+          ],
           "mammographyCertificationNumber": "Mammog",
           "cliaNumber": "CLIA-Amend",
           "referringCliaNumber": "CLIA-Fac",
           "immunizationBatchNumber": "Immune",
-          "referralNumber": "ReferralNumber",
+          "referralNumbers": [
+            "ReferralNumber"
+          ],
           "chargeAmount": 40.00,
           "salesTaxAmount": 101.00,
           "postageClaimedAmount": 8.59,
