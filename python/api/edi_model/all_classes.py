@@ -6,10 +6,10 @@ from pydantic import Field
 
 from .base import EdiConverterModel, to_camel
 from .enums import AdjudicatedClaimStatus, AdjustmentGroup, AmbulanceTransportReason, AmountType, \
-    ClaimOrEncounterIdentifierType, ConditionsIndicatorCategory, DateType, DmeBillingFrequency, EntityRole, EntityType, \
-    GenderType, IdentificationType, InsurancePlanType, MeasurementType, NoteType, PayerRespSequenceType, \
-    PaymentMethodType, QuantityType, ReferenceType, RelationshipType, StatusActionType, TransactionHandlingType, \
-    UnitType
+    ClaimOrEncounterIdentifierType, ConditionsIndicatorCategory, DateType, DelayReasonType, DmeBillingFrequency, \
+    EntityRole, EntityType, GenderType, IdentificationType, InsurancePlanType, MeasurementType, NoteType, \
+    PayerRespSequenceType, PaymentMethodType, QuantityType, ReferenceType, RelatedCauseType, RelationshipType, \
+    SpecialProgramType, StatusActionType, TransactionHandlingType, UnitType
 
 
 class Address(EdiConverterModel):
@@ -54,8 +54,10 @@ class Adjustment(EdiConverterModel):
     'Segment: CAS.'
     group: AdjustmentGroup | None = Field(default=None, description='Claim adjustment group code as a string constant. EDI: CAS01.')
     'Claim adjustment group code as a string constant. EDI: CAS01.'
-    reason: Code | None = Field(default=None, description='Claim adjustment reason code. EDI: CAS02.')
+    reason_code: str | None = Field(default=None, description='Claim adjustment reason code. EDI: CAS02.')
     'Claim adjustment reason code. EDI: CAS02.'
+    reason: Code | None = Field(default=None, description='Claim adjustment reason code as an object with the code subtype and optional description. EDI: CAS02.')
+    'Claim adjustment reason code as an object with the code subtype and optional description. EDI: CAS02.'
     amount: float | None = Field(default=None, description='Adjustment amount. EDI: CAS03.')
     'Adjustment amount. EDI: CAS03.'
     quantity: float | None = Field(default=None, description='Adjustment quantity. EDI: CAS04.')
@@ -84,10 +86,14 @@ class Amount(EdiConverterModel):
     'Amount. EDI: AMT02.'
 class Attachment(EdiConverterModel):
     'Segment: PWK.'
-    report_type_code: str | None = Field(default=None, description='Report type code. EDI: PWK01.')
-    'Report type code. EDI: PWK01.'
-    report_transmission_code: str | None = Field(default=None, description='Report transmission code. EDI: PWK02.')
-    'Report transmission code. EDI: PWK02.'
+    report_type_code: str | None = Field(default=None, description='Code indicating the title or contents of a document. EDI: PWK01.')
+    'Code indicating the title or contents of a document. EDI: PWK01.'
+    type: str | None = Field(default=None, description="Attachment type; 'reportTypeCode' expressed as enum (string constant). Since: v2.15.0. EDI: PWK01.")
+    "Attachment type; 'reportTypeCode' expressed as enum (string constant). Since: v2.15.0. EDI: PWK01."
+    report_transmission_code: str | None = Field(default=None, description='Transmission method or format by which attachments are to be sent. EDI: PWK02.')
+    'Transmission method or format by which attachments are to be sent. EDI: PWK02.'
+    transmission_type: str | None = Field(default=None, description='Transmission method; transmission code expressed as enum (string constant). Since: v2.15.0. EDI: PWK02.')
+    'Transmission method; transmission code expressed as enum (string constant). Since: v2.15.0. EDI: PWK02.'
     control_number: str | None = Field(default=None, description='Control number. EDI: PWK06.')
     'Control number. EDI: PWK06.'
 class AwsInOutKey(EdiConverterModel):
@@ -112,8 +118,10 @@ class AwsRequest(EdiConverterModel):
     "The format to convert EDI files to. The function defaults to JSON. You can also define the 'OUT_FORMAT' environment variable to override the default."
     csv_schema_name: str | None = Field(default=None, description="Name of the <a href='/docs/csv/schemas/#built-in-conversion-schemas'>CSV conversion schema</a>. Defaults to 'lines-with-header-repeat-first-row' (single file schema). You can also define the 'CSV_SCHEMA_NAME' environment variable to override the default.")
     "Name of the <a href='/docs/csv/schemas/#built-in-conversion-schemas'>CSV conversion schema</a>. Defaults to 'lines-with-header-repeat-first-row' (single file schema). You can also define the 'CSV_SCHEMA_NAME' environment variable to override the default."
-    warnings_in_output: bool | None = Field(default=None, description="Include EDI parser warnings in the output files, see <a href='/docs/ediconvert-api/user-guide/#error-handling'>documentation on error handling</a> for more details. You can also define the 'OUTPUT_WARNINGS' environment variable and set its value to 'True'.")
-    "Include EDI parser warnings in the output files, see <a href='/docs/ediconvert-api/user-guide/#error-handling'>documentation on error handling</a> for more details. You can also define the 'OUTPUT_WARNINGS' environment variable and set its value to 'True'."
+    warnings_in_output: bool | None = Field(default=None, description="Include EDI parser warnings in the output files, see <a href='/docs/ediconvert-api/user-guide/#error-handling'>documentation on error handling</a> for more details. You can also define the 'OUTPUT_WARNINGS' environment variable and set its value to 'True'. Deprecated: Use 'isValidate' instead.")
+    "Include EDI parser warnings in the output files, see <a href='/docs/ediconvert-api/user-guide/#error-handling'>documentation on error handling</a> for more details. You can also define the 'OUTPUT_WARNINGS' environment variable and set its value to 'True'. Deprecated: Use 'isValidate' instead."
+    is_validate: bool | None = Field(default=None, description="Perform full EDI validation. Validation messages are written to the response stream as 'VALIDATION' objects. You can also set the 'EDI_VALIDATE' environment variable and set its value to 'True'. Since: v2.15.0.")
+    "Perform full EDI validation. Validation messages are written to the response stream as 'VALIDATION' objects. You can also set the 'EDI_VALIDATE' environment variable and set its value to 'True'. Since: v2.15.0."
     max_warnings: int | None = Field(default=None, description="The maximum number of parsing warnings per file before stopping and raising an error. Defaults to 3000. Set to -1 to suppress raising the 'too many warnings' error; the converter will process the entire file.")
     "The maximum number of parsing warnings per file before stopping and raising an error. Defaults to 3000. Set to -1 to suppress raising the 'too many warnings' error; the converter will process the entire file."
     is_about_only: bool | None = Field(default=None, description="Print the converter's version and license information and exit. All other fields are ignored.")
@@ -300,8 +308,12 @@ class DentClaim(EdiConverterModel):
     'Related cause. EDI: CLM11.'
     special_program_code: str | None = Field(default=None, description='Special program code. EDI: CLM12.')
     'Special program code. EDI: CLM12.'
+    special_program_type: SpecialProgramType | None = Field(default=None, description='Special program code expressed as enum (string constant). Since: v2.15.0. EDI: CLM12.')
+    'Special program code expressed as enum (string constant). Since: v2.15.0. EDI: CLM12.'
     delay_reason_code: str | None = Field(default=None, description='Delay reason code. EDI: CLM20.')
     'Delay reason code. EDI: CLM20.'
+    delay_reason_type: DelayReasonType | None = Field(default=None, description='Delay reason cause code expressed as enum (string constant). Since: v2.15.0. EDI: CLM20.')
+    'Delay reason cause code expressed as enum (string constant). Since: v2.15.0. EDI: CLM20.'
     service_authorization_exception_code: str | None = Field(default=None, description='Service authorization exception code. EDI: REF02*4N.')
     'Service authorization exception code. EDI: REF02*4N.'
     referral_number: str | None = Field(default=None, description='Referral number. EDI: REF02*9F.')
@@ -364,10 +376,14 @@ class DentLine(EdiConverterModel):
     'Repriced reference number. EDI: REF02*9B.'
     adjusted_repriced_reference_number: str | None = Field(default=None, description='Adjusted repriced reference number. EDI: REF02*9D.')
     'Adjusted repriced reference number. EDI: REF02*9D.'
-    prior_authorization: str | None = Field(default=None, description='Prior authorization. EDI: REF02*G1.')
-    'Prior authorization. EDI: REF02*G1.'
-    referral_number: str | None = Field(default=None, description='Referral number. EDI: REF02*9F.')
-    'Referral number. EDI: REF02*9F.'
+    prior_authorization: str | None = Field(default=None, description='Prior authorization. Deprecated: Use priorAuthorizationNumbers instead. EDI: REF02*G1.')
+    'Prior authorization. Deprecated: Use priorAuthorizationNumbers instead. EDI: REF02*G1.'
+    prior_authorization_numbers: list[str] = Field(default_factory=list, description='Prior authorization numbers. Since: v2.15.0. EDI: REF02*G1.')
+    'Prior authorization numbers. Since: v2.15.0. EDI: REF02*G1.'
+    referral_number: str | None = Field(default=None, description='Referral number. Deprecated: Use referralNumbers instead. EDI: REF02*9F.')
+    'Referral number. Deprecated: Use referralNumbers instead. EDI: REF02*9F.'
+    referral_numbers: list[str] = Field(default_factory=list, description='Referral numbers. Since: v2.15.0. EDI: REF02*9F.')
+    'Referral numbers. Since: v2.15.0. EDI: REF02*9F.'
     charge_amount: float | None = Field(default=None, description='Charge amount. EDI: SV302.')
     'Charge amount. EDI: SV302.'
     sales_tax_amount: float | None = Field(default=None, description='Sales tax amount. EDI: AMT02*T.')
@@ -443,15 +459,25 @@ class DmeService(EdiConverterModel):
     billing_frequency: DmeBillingFrequency | None = Field(default=None, description='Frequency at which the rental equipment is billed, expressed as enum (string constant). EDI: SV506.')
     'Frequency at which the rental equipment is billed, expressed as enum (string constant). EDI: SV506.'
 class EdiGenClaimRequest(EdiConverterModel):
-    'Request for EDI writer with interchange and functional group control segments and claims.'
+    'Request for EDI generation API to generate 837 transaction with claims.'
     interchange_control: InterchangeControl | None = Field(default=None, description='Interchange control.')
     'Interchange control.'
     functional_group: FunctionalGroup | None = Field(default=None, description='Functional group.')
     'Functional group.'
     transaction: Transaction837 | None = Field(default=None, description='Transaction.')
     'Transaction.'
-    claims: list[InstClaim | ProfClaim] = Field(default_factory=list, description='Claims.')
-    'Claims.'
+    claims: list[InstClaim | ProfClaim] = Field(default_factory=list, description='List of professional or institutional claims.')
+    'List of professional or institutional claims.'
+class EdiGenPaymentRequest(EdiConverterModel):
+    'Request for EDI generation API to generate 835 transaction with payments.'
+    interchange_control: InterchangeControl | None = Field(default=None, description='Interchange control.')
+    'Interchange control.'
+    functional_group: FunctionalGroup | None = Field(default=None, description='Functional group.')
+    'Functional group.'
+    transaction: Transaction835 | None = Field(default=None, description='Transaction.')
+    'Transaction.'
+    payments: list[Payment] = Field(default_factory=list, description='List of payments.')
+    'List of payments.'
 class ErrorInfo(EdiConverterModel):
     'OpenAPI schema for ErrorInfo.'
     object_type: str | None = Field(default=None, description='Type of error, could be ERROR or WARNING.')
@@ -490,6 +516,10 @@ class FormResponse(EdiConverterModel):
     'Responses. EDI: FRM.'
 class FunctionalGroup(EdiConverterModel):
     'Segment: GS.'
+    id: str | None = Field(default=None, description='Unique object identifier assigned by the converter.')
+    'Unique object identifier assigned by the converter.'
+    object_type: str | None = Field(default=None, description="Type of this object, always set to 'FUNCTIONAL_GROUP'.")
+    "Type of this object, always set to 'FUNCTIONAL_GROUP'."
     transaction_type: str | None = Field(default=None, description='Transaction type as enum for EDI generator; if not provided, GS01, GS08 must be populated.')
     'Transaction type as enum for EDI generator; if not provided, GS01, GS08 must be populated.'
     functional_identifier_code: str | None = Field(default=None, description='Functional identifier code. EDI: GS01.')
@@ -626,8 +656,12 @@ class InstClaim(EdiConverterModel):
     'Assignment certification indicator. EDI: CLM08.'
     release_of_information_code: str | None = Field(default=None, description='Release of information code. EDI: CLM09.')
     'Release of information code. EDI: CLM09.'
+    special_program_type: SpecialProgramType | None = Field(default=None, description='Special program code expressed as enum (string constant). Since: v2.15.0. EDI: CLM12.')
+    'Special program code expressed as enum (string constant). Since: v2.15.0. EDI: CLM12.'
     delay_reason_code: str | None = Field(default=None, description='Delay reason code. EDI: CLM20.')
     'Delay reason code. EDI: CLM20.'
+    delay_reason_type: DelayReasonType | None = Field(default=None, description='Delay reason cause code expressed as enum (string constant). Since: v2.15.0. EDI: CLM20.')
+    'Delay reason cause code expressed as enum (string constant). Since: v2.15.0. EDI: CLM20.'
     service_authorization_exception_code: str | None = Field(default=None, description='Service authorization exception code. EDI: REF02*4N.')
     'Service authorization exception code. EDI: REF02*4N.'
     referral_number: str | None = Field(default=None, description='Referral number. EDI: REF02*9F.')
@@ -920,6 +954,10 @@ class InstLineCsv(EdiConverterModel):
     'Referring provider. EDI: NM1*DN.'
 class InterchangeControl(EdiConverterModel):
     'Segment: ISA.'
+    id: str | None = Field(default=None, description='Unique object identifier assigned by the converter.')
+    'Unique object identifier assigned by the converter.'
+    object_type: str | None = Field(default=None, description="Type of this object, always set to 'INTERCHANGE_CONTROL'.")
+    "Type of this object, always set to 'INTERCHANGE_CONTROL'."
     element_separator: str | None = Field(default=None, description='Element separator character.')
     'Element separator character.'
     segment_terminator: str | None = Field(default=None, description='Segment terminator character.')
@@ -1220,8 +1258,8 @@ class OutpatientAdjudication(EdiConverterModel):
     'Esrd payment amount. EDI: MOA08.'
     non_payable_professional_component_amount: float | None = Field(default=None, description='Nonpayable Professional Component Amount. EDI: MOA09.')
     'Nonpayable Professional Component Amount. EDI: MOA09.'
-    remarks: list[Code] = Field(default_factory=list, description='Remark codes.')
-    'Remark codes.'
+    remarks: list[Code] = Field(default_factory=list, description='Remark codes. EDI: MOA03, MOA04, MOA05, MOA06, MOA07.')
+    'Remark codes. EDI: MOA03, MOA04, MOA05, MOA06, MOA07.'
 class PartyIdName(EdiConverterModel):
     'OpenAPI schema for PartyIdName.'
     entity_role: EntityRole | None = Field(default=None, description='Entity role. EDI: NM101, N101.')
@@ -1268,18 +1306,18 @@ class Payment(EdiConverterModel):
     "Type of this object, set to 'PAYMENT'."
     patient_control_number: str | None = Field(default=None, description='Identifier used to track a claim from creation by the health care provider through payment. EDI: CLP01.')
     'Identifier used to track a claim from creation by the health care provider through payment. EDI: CLP01.'
-    charge_amount: float | None = Field(default=None, description='Charge amount. EDI: CLP02.')
-    'Charge amount. EDI: CLP02.'
+    charge_amount: float | None = Field(default=None, description='Charge amount. EDI: CLP03.')
+    'Charge amount. EDI: CLP03.'
     payment_amount: float | None = Field(default=None, description='Payment amount. EDI: CLP04.')
     'Payment amount. EDI: CLP04.'
     facility_code: Code | None = Field(default=None, description='Place of service code (professional/dental) or UB facility code (institutional) from the original claim. EDI: CLP08.')
     'Place of service code (professional/dental) or UB facility code (institutional) from the original claim. EDI: CLP08.'
     frequency_code: Code | None = Field(default=None, description='Frequency code. EDI: CLP09.')
     'Frequency code. EDI: CLP09.'
-    statement_date_from: dt.date | None = Field(default=None, description='Statement date from. EDI: DTP03*232.')
-    'Statement date from. EDI: DTP03*232.'
-    statement_date_to: dt.date | None = Field(default=None, description='Statement date to. EDI: DTP03*233.')
-    'Statement date to. EDI: DTP03*233.'
+    statement_date_from: dt.date | None = Field(default=None, description='Statement date from. EDI: DTM02*232.')
+    'Statement date from. EDI: DTM02*232.'
+    statement_date_to: dt.date | None = Field(default=None, description='Statement date to. EDI: DTM02*233.')
+    'Statement date to. EDI: DTM02*233.'
     service_date_from: dt.date | None = Field(default=None, description='The earliest service date from service lines.')
     'The earliest service date from service lines.'
     service_date_to: dt.date | None = Field(default=None, description='The latest service date from service lines.')
@@ -1330,10 +1368,10 @@ class Payment(EdiConverterModel):
     'Inpatient adjudication. EDI: MIA.'
     adjustments: list[Adjustment] = Field(default_factory=list, description='Claim adjustments. EDI: CAS.')
     'Claim adjustments. EDI: CAS.'
-    coverage_expiration_date: dt.date | None = Field(default=None, description='Coverage expiration date. EDI: DTP03*036.')
-    'Coverage expiration date. EDI: DTP03*036.'
-    claim_received_date: dt.date | None = Field(default=None, description='Claim received date. EDI: DTP03*050.')
-    'Claim received date. EDI: DTP03*050.'
+    coverage_expiration_date: dt.date | None = Field(default=None, description='Coverage expiration date. EDI: DTM02*036.')
+    'Coverage expiration date. EDI: DTM02*036.'
+    claim_received_date: dt.date | None = Field(default=None, description='Claim received date. EDI: DTM02*050.')
+    'Claim received date. EDI: DTM02*050.'
     service_provider: PartyIdName | None = Field(default=None, description='Service provider. EDI: NM1*SJ.')
     'Service provider. EDI: NM1*SJ.'
     crossover_carrier: PartyIdName | None = Field(default=None, description='Crossover carrier. EDI: NM1*TT.')
@@ -1426,10 +1464,10 @@ class PaymentCsv(EdiConverterModel):
     'Statement date from. EDI: DTP03*232.'
     statement_date_to: dt.date | None = Field(default=None, description='Statement date to. EDI: DTP03*233.')
     'Statement date to. EDI: DTP03*233.'
-    coverage_expiration_date: dt.date | None = Field(default=None, description='Coverage expiration date. EDI: DTP03*036.')
-    'Coverage expiration date. EDI: DTP03*036.'
-    claim_received_date: dt.date | None = Field(default=None, description='Claim received date. EDI: DTP03*050.')
-    'Claim received date. EDI: DTP03*050.'
+    coverage_expiration_date: dt.date | None = Field(default=None, description='Coverage expiration date. EDI: DTM02*036.')
+    'Coverage expiration date. EDI: DTM02*036.'
+    claim_received_date: dt.date | None = Field(default=None, description='Claim received date. EDI: DTM02*050.')
+    'Claim received date. EDI: DTM02*050.'
     coverage_amount: float | None = Field(default=None, description='Coverage amount from the list of supplemental amounts. EDI: AMT02*AU.')
     'Coverage amount from the list of supplemental amounts. EDI: AMT02*AU.'
     supplemental_amts: list[Amount] = Field(default_factory=list, description='Supplemental claim/payment amounts, such as coverage amount, discount amount, etc. EDI: AMT.')
@@ -1446,8 +1484,10 @@ class PaymentLine(EdiConverterModel):
     'Repriced reference number. EDI: REF02*9B.'
     adjusted_repriced_reference_number: str | None = Field(default=None, description='Adjusted repriced reference number. EDI: REF02*9D.')
     'Adjusted repriced reference number. EDI: REF02*9D.'
-    healthcare_policy_id: str | None = Field(default=None, description='Healthcare policy id. EDI: REF02*0K.')
-    'Healthcare policy id. EDI: REF02*0K.'
+    healthcare_policy_id: str | None = Field(default=None, description='Healthcare policy id. Deprecated: Use healthcarePolicyIds instead. EDI: REF02*0K.')
+    'Healthcare policy id. Deprecated: Use healthcarePolicyIds instead. EDI: REF02*0K.'
+    healthcare_policy_ids: list[str] = Field(default_factory=list, description='Healthcare policy ids. Since: v2.15.0. EDI: REF02*0K.')
+    'Healthcare policy ids. Since: v2.15.0. EDI: REF02*0K.'
     charge_amount: float | None = Field(default=None, description='Charge amount. EDI: SVC02.')
     'Charge amount. EDI: SVC02.'
     paid_amount: float | None = Field(default=None, description='Paid amount. EDI: SVC03.')
@@ -1456,10 +1496,10 @@ class PaymentLine(EdiConverterModel):
     'Supplemental amounts, such as allowed amount, deduction amount, etc. EDI: AMT.'
     supplemental_quantities: list[Quantity] = Field(default_factory=list, description='Supplemental quantities. EDI: QTY.')
     'Supplemental quantities. EDI: QTY.'
-    service_date_from: dt.date | None = Field(default=None, description='Service date from. EDI: DTP03*472.')
-    'Service date from. EDI: DTP03*472.'
-    service_date_to: dt.date | None = Field(default=None, description='Service date to. EDI: DTP03*472.')
-    'Service date to. EDI: DTP03*472.'
+    service_date_from: dt.date | None = Field(default=None, description='Service date from. EDI: DTM02*472.')
+    'Service date from. EDI: DTM02*472.'
+    service_date_to: dt.date | None = Field(default=None, description='Service date to. EDI: DTM02*151.')
+    'Service date to. EDI: DTM02*151.'
     unit_count: float | None = Field(default=None, description='Unit count. EDI: SVC05.')
     'Unit count. EDI: SVC05.'
     original_unit_count: float | None = Field(default=None, description='Original unit count. EDI: SVC07.')
@@ -1470,8 +1510,8 @@ class PaymentLine(EdiConverterModel):
     'Prescription number type. Since: v2.14.10.'
     procedure: Procedure | None = Field(default=None, description='Procedure. EDI: SVC01*HC, SVC01*AD, SVC01*WK, SVC01*IV.')
     'Procedure. EDI: SVC01*HC, SVC01*AD, SVC01*WK, SVC01*IV.'
-    revenue_code: Code | None = Field(default=None, description='Revenue code. EDI: SVC01*NU, SVC04*NU.')
-    'Revenue code. EDI: SVC01*NU, SVC04*NU.'
+    revenue_code: Code | None = Field(default=None, description='Revenue code. EDI: SVC04*NU, SVC01*NU.')
+    'Revenue code. EDI: SVC04*NU, SVC01*NU.'
     original_procedure: Procedure | None = Field(default=None, description='Submitted procedure code from the claim if it is different from the adjudicated procedure. EDI: SVC06*HC, SVC06*AD, SVC06*WK, SVC06*IV.')
     'Submitted procedure code from the claim if it is different from the adjudicated procedure. EDI: SVC06*HC, SVC06*AD, SVC06*WK, SVC06*IV.'
     original_revenue_code: Code | None = Field(default=None, description='Submitted revenue code from the claim if it is different from the adjudicated revenue code. EDI: SVC06*NU.')
@@ -1586,8 +1626,12 @@ class ProfClaim(EdiConverterModel):
     'Related cause. EDI: CLM11.'
     special_program_code: str | None = Field(default=None, description='Special program code. EDI: CLM12.')
     'Special program code. EDI: CLM12.'
+    special_program_type: SpecialProgramType | None = Field(default=None, description='Special program code expressed as enum (string constant). Since: v2.15.0. EDI: CLM12.')
+    'Special program code expressed as enum (string constant). Since: v2.15.0. EDI: CLM12.'
     delay_reason_code: str | None = Field(default=None, description='Delay reason code. EDI: CLM20.')
     'Delay reason code. EDI: CLM20.'
+    delay_reason_type: DelayReasonType | None = Field(default=None, description='Delay reason cause code expressed as enum (string constant). Since: v2.15.0. EDI: CLM20.')
+    'Delay reason cause code expressed as enum (string constant). Since: v2.15.0. EDI: CLM20.'
     service_authorization_exception_code: str | None = Field(default=None, description='Service authorization exception code. EDI: REF02*4N.')
     'Service authorization exception code. EDI: REF02*4N.'
     medicare_section4081_indicator: str | None = Field(default=None, description='Medicare section4081indicator. Since: v2.14.10. EDI: REF02*F5.')
@@ -1818,8 +1862,10 @@ class ProfLine(EdiConverterModel):
     'Repriced reference number. EDI: REF02*9B.'
     adjusted_repriced_reference_number: str | None = Field(default=None, description='Adjusted repriced reference number. EDI: REF02*9D.')
     'Adjusted repriced reference number. EDI: REF02*9D.'
-    prior_authorization: str | None = Field(default=None, description='Prior authorization. EDI: REF02*G1.')
-    'Prior authorization. EDI: REF02*G1.'
+    prior_authorization: str | None = Field(default=None, description='Prior authorization. Deprecated: Use priorAuthorizationNumbers instead. EDI: REF02*G1.')
+    'Prior authorization. Deprecated: Use priorAuthorizationNumbers instead. EDI: REF02*G1.'
+    prior_authorization_numbers: list[str] = Field(default_factory=list, description='Prior authorization numbers. Since: v2.15.0. EDI: REF02*G1.')
+    'Prior authorization numbers. Since: v2.15.0. EDI: REF02*G1.'
     mammography_certification_number: str | None = Field(default=None, description='Mammography certification number. Since: v2.14.10. EDI: REF02*EW.')
     'Mammography certification number. Since: v2.14.10. EDI: REF02*EW.'
     clia_number: str | None = Field(default=None, description='Clia number. Since: v2.14.10. EDI: REF02*X4.')
@@ -1828,8 +1874,10 @@ class ProfLine(EdiConverterModel):
     'Referring clia number. Since: v2.14.10. EDI: REF02*F4.'
     immunization_batch_number: str | None = Field(default=None, description='Immunization batch number. Since: v2.14.10. EDI: REF02*BT.')
     'Immunization batch number. Since: v2.14.10. EDI: REF02*BT.'
-    referral_number: str | None = Field(default=None, description='Referral number. EDI: REF02*9F.')
-    'Referral number. EDI: REF02*9F.'
+    referral_number: str | None = Field(default=None, description='Referral number. Deprecated: Use referralNumbers instead. EDI: REF02*9F.')
+    'Referral number. Deprecated: Use referralNumbers instead. EDI: REF02*9F.'
+    referral_numbers: list[str] = Field(default_factory=list, description='Referral numbers. Since: v2.15.0. EDI: REF02*9F.')
+    'Referral numbers. Since: v2.15.0. EDI: REF02*9F.'
     charge_amount: float | None = Field(default=None, description='Charge amount. EDI: SV102.')
     'Charge amount. EDI: SV102.'
     sales_tax_amount: float | None = Field(default=None, description='Sales tax amount. EDI: AMT02*T.')
@@ -1998,8 +2046,8 @@ class ProfLineCsv(EdiConverterModel):
     'Ambulance drop off. EDI: NM1*45.'
 class ProviderAdjustment(EdiConverterModel):
     'Provider level adjustment information for debit or credit transactions such as, accelerated payments, cost report settlements for a fiscal year and timeliness report penalties unrelated to a specific claim or service. Segment: PLB.'
-    id: str | None = Field(default=None, description='Unique payment identifier assigned by the converter.')
-    'Unique payment identifier assigned by the converter.'
+    id: str | None = Field(default=None, description='Unique object identifier assigned by the converter.')
+    'Unique object identifier assigned by the converter.'
     object_type: str | None = Field(default=None, description="Type of this object, always set to 'PROVIDER_ADJUSTMENT'.")
     "Type of this object, always set to 'PROVIDER_ADJUSTMENT'."
     provider_identifier: str | None = Field(default=None, description='Provider identifier. EDI: PLB01.')
@@ -2068,12 +2116,26 @@ class RelatedCauseInfo(EdiConverterModel):
     'OpenAPI schema for RelatedCauseInfo.'
     related_cause_code: str | None = Field(default=None, description='Related cause code. EDI: CLM11-1.')
     'Related cause code. EDI: CLM11-1.'
+    related_cause_type: RelatedCauseType | None = Field(default=None, description='Related cause code expressed as enum (string constant). Since: v2.15.0. EDI: CLM11-1.')
+    'Related cause code expressed as enum (string constant). Since: v2.15.0. EDI: CLM11-1.'
     related_cause_code2: str | None = Field(default=None, description='Related cause code2. EDI: CLM11-2.')
     'Related cause code2. EDI: CLM11-2.'
+    related_cause_type2: RelatedCauseType | None = Field(default=None, description='Related cause code expressed as enum (string constant). Since: v2.15.0. EDI: CLM11-2.')
+    'Related cause code expressed as enum (string constant). Since: v2.15.0. EDI: CLM11-2.'
     state_code: str | None = Field(default=None, description='State code. EDI: CLM11-4.')
     'State code. EDI: CLM11-4.'
     country_code: str | None = Field(default=None, description='Country code. EDI: CLM11-5.')
     'Country code. EDI: CLM11-5.'
+class RemittanceDeliveryMethod(EdiConverterModel):
+    'To identify remittance delivery when remittance is separate from payment. Segment: RDM.'
+    report_transmission_code: str | None = Field(default=None, description='Code defining timing, transmission method or format by which reports are to be sent. EDI: RDM01.')
+    'Code defining timing, transmission method or format by which reports are to be sent. EDI: RDM01.'
+    transmission_type: str | None = Field(default=None, description='Report transmission code expressed as enum (string constant). EDI: RDM01.')
+    'Report transmission code expressed as enum (string constant). EDI: RDM01.'
+    name: str | None = Field(default=None, description='Name of a third party processor if needed, who would be the first recipient of the remittance. EDI: RDM02.')
+    'Name of a third party processor if needed, who would be the first recipient of the remittance. EDI: RDM02.'
+    communication_number: str | None = Field(default=None, description='Contains the operative communication number for the delivery method specified in RDM01 (URL or email). EDI: RDM03.')
+    'Contains the operative communication number for the delivery method specified in RDM01 (URL or email). EDI: RDM03.'
 class ReportingCategory(EdiConverterModel):
     'OpenAPI schema for ReportingCategory.'
     name: str | None = Field(default=None, description='Name. EDI: N102.')
@@ -2114,8 +2176,8 @@ class SourceLocation(EdiConverterModel):
     'File name.'
     line_number: int | None = Field(default=None, description='Line number in the file.')
     'Line number in the file.'
-    segment_number: int | None = Field(default=None, description='Segment number in the file.')
-    'Segment number in the file.'
+    segment_number: int | None = Field(default=None, description='Global segment number in the file, starting from 1.')
+    'Global segment number in the file, starting from 1.'
 class SpinalManipulationInfo(EdiConverterModel):
     'Spinal manipulation service info. Required on chiropractic claims involving spinal manipulation when the information is known to impact the payer’s adjudication process. Segment: CR2.'
     condition_code: str | None = Field(default=None, description='Condition code. EDI: CR208.')
@@ -2186,6 +2248,8 @@ class ToothStatus(EdiConverterModel):
     'Status code. EDI: DN202.'
 class Transaction277(EdiConverterModel):
     'OpenAPI schema for Transaction277.'
+    object_type: str | None = Field(default=None, description="Type of this object, always set to 'TRANSACTION' when the transaction is a top-level object.")
+    "Type of this object, always set to 'TRANSACTION' when the transaction is a top-level object."
     control_number: str | None = Field(default=None, description='Control number. EDI: ST02.')
     'Control number. EDI: ST02.'
     transaction_type: str | None = Field(default=None, description='Transaction type translated to string constant, PROF for 837P, INST for 837I, etc. Required in order for EDI generator to populate defaults. EDI: ST01, ST03.')
@@ -2216,6 +2280,8 @@ class Transaction277(EdiConverterModel):
     'Information source name.'
 class Transaction834(EdiConverterModel):
     'OpenAPI schema for Transaction834.'
+    object_type: str | None = Field(default=None, description="Type of this object, always set to 'TRANSACTION' when the transaction is a top-level object.")
+    "Type of this object, always set to 'TRANSACTION' when the transaction is a top-level object."
     control_number: str | None = Field(default=None, description='Control number. EDI: ST02.')
     'Control number. EDI: ST02.'
     transaction_type: str | None = Field(default=None, description='Transaction type translated to string constant, PROF for 837P, INST for 837I, etc. Required in order for EDI generator to populate defaults. EDI: ST01, ST03.')
@@ -2244,12 +2310,14 @@ class Transaction834(EdiConverterModel):
     'File info.'
 class Transaction835(EdiConverterModel):
     'OpenAPI schema for Transaction835.'
+    object_type: str | None = Field(default=None, description="Type of this object, always set to 'TRANSACTION' when the transaction is a top-level object.")
+    "Type of this object, always set to 'TRANSACTION' when the transaction is a top-level object."
     control_number: str | None = Field(default=None, description='Control number. EDI: ST02.')
     'Control number. EDI: ST02.'
     transaction_type: str | None = Field(default=None, description='Transaction type translated to string constant, PROF for 837P, INST for 837I, etc. Required in order for EDI generator to populate defaults. EDI: ST01, ST03.')
     'Transaction type translated to string constant, PROF for 837P, INST for 837I, etc. Required in order for EDI generator to populate defaults. EDI: ST01, ST03.'
-    production_date: dt.date | None = Field(default=None, description='Production date. EDI: DTP03*405.')
-    'Production date. EDI: DTP03*405.'
+    production_date: dt.date | None = Field(default=None, description='Production date. EDI: DTM02*405.')
+    'Production date. EDI: DTM02*405.'
     transaction_handling_type: TransactionHandlingType | None = Field(default=None, description='Transaction handling type. EDI: BPR01.')
     'Transaction handling type. EDI: BPR01.'
     total_payment_amount: float | None = Field(default=None, description='Total payment amount. EDI: BPR02.')
@@ -2284,10 +2352,18 @@ class Transaction835(EdiConverterModel):
     'Transaction set identifier code. EDI: ST01.'
     implementation_convention_reference: str | None = Field(default=None, description='Implementation convention reference. EDI: ST03.')
     'Implementation convention reference. EDI: ST03.'
+    remittance_delivery_method: RemittanceDeliveryMethod | None = Field(default=None, description='Remittance delivery method. Since: v2.15.0. EDI: RDM.')
+    'Remittance delivery method. Since: v2.15.0. EDI: RDM.'
     file_info: FileInfo | None = Field(default=None, description='File info.')
     'File info.'
+    sender: Party | None = Field(default=None, description="Payer. This field is populated only when 'transactionTopLevel' is set to true.")
+    "Payer. This field is populated only when 'transactionTopLevel' is set to true."
+    receiver: Party | None = Field(default=None, description="Payee. This field is populated only when 'transactionTopLevel' is set to true.")
+    "Payee. This field is populated only when 'transactionTopLevel' is set to true."
 class Transaction837(EdiConverterModel):
     'OpenAPI schema for Transaction837.'
+    object_type: str | None = Field(default=None, description="Type of this object, always set to 'TRANSACTION' when the transaction is a top-level object.")
+    "Type of this object, always set to 'TRANSACTION' when the transaction is a top-level object."
     control_number: str | None = Field(default=None, description='Control number. EDI: ST02.')
     'Control number. EDI: ST02.'
     transaction_type: str | None = Field(default=None, description='Transaction type translated to string constant, PROF for 837P, INST for 837I, etc. Required in order for EDI generator to populate defaults. EDI: ST01, ST03.')
@@ -2312,7 +2388,7 @@ class Transaction837(EdiConverterModel):
     'File info.'
     sender: Party | None = Field(default=None, description='Submitter or sender of this transaction.')
     'Submitter or sender of this transaction.'
-    receiver: PartyIdName | None = Field(default=None, description='Receiver of this transaction.')
+    receiver: Party | None = Field(default=None, description='Receiver of this transaction.')
     'Receiver of this transaction.'
 class ValidationIssue(EdiConverterModel):
     'EDI validation issue details.'
@@ -2340,24 +2416,24 @@ class ValidationIssue(EdiConverterModel):
     'Maximum number of items allowed for the segment, list, or loop.'
     actual_number_of_items: int | None = Field(default=None, description='Actual number of items.')
     'Actual number of items.'
-    length: int | None = Field(default=None, description="Expected length of the element's value.")
-    "Expected length of the element's value."
-    actual_length: int | None = Field(default=None, description='Actual length.')
-    'Actual length.'
-    data_type: str | None = Field(default=None, description='Expected data type.')
-    'Expected data type.'
-    actual_data_type: str | None = Field(default=None, description='Actual data type.')
-    'Actual data type.'
-    code_sub_type:  str | None = Field(default=None, description='Type of the code that failed validation, such as HCPCS, ProviderTaxonomy, ICD_10.')
-    'Type of the code that failed validation, such as HCPCS, ProviderTaxonomy, ICD_10.'
-    value: str | None = Field(default=None, description='Value with the issue.')
-    'Value with the issue.'
+    length: int | None = Field(default=None, description="Expected length of the element's value (LENGTH_TOO_SHORT, LENGTH_EXCEEDED issue types).")
+    "Expected length of the element's value (LENGTH_TOO_SHORT, LENGTH_EXCEEDED issue types)."
+    actual_length: int | None = Field(default=None, description='Actual length (LENGTH_TOO_SHORT, LENGTH_EXCEEDED issue types).')
+    'Actual length (LENGTH_TOO_SHORT, LENGTH_EXCEEDED issue types).'
+    data_type: str | None = Field(default=None, description='Expected data type (WRONG_TYPE issue type).')
+    'Expected data type (WRONG_TYPE issue type).'
+    actual_data_type: str | None = Field(default=None, description='Actual data type (WRONG_TYPE issue type).')
+    'Actual data type (WRONG_TYPE issue type).'
+    code_sub_type: str | None = Field(default=None, description='Type of the code that failed validation (INVALID_CODE issue type), such as HCPCS, ProviderTaxonomy, ICD_10.')
+    'Type of the code that failed validation (INVALID_CODE issue type), such as HCPCS, ProviderTaxonomy, ICD_10.'
+    value: str | None = Field(default=None, description='The value that caused the validation to fail.')
+    'The value that caused the validation to fail.'
     edi_string: str | None = Field(default=None, description='Value that caused the issue.')
     'Value that caused the issue.'
     message: str | None = Field(default=None, description='Additional message describing the issue.')
     'Additional message describing the issue.'
-    allowed_values: list[str] = Field(default=None, description='Allowed values.')
-    'Allowed values.'
+    allowed_values: list[str] = Field(default_factory=list, description='Allowed values (VALUE_NOT_IN_ENUM_LIST issue type).')
+    'Allowed values (VALUE_NOT_IN_ENUM_LIST issue type).'
 class Party(PartyIdName):
     'OpenAPI schema for Party.'
     address: Address | None = Field(default=None, description='Address.')
@@ -2445,6 +2521,7 @@ Disability.model_rebuild()
 DmeCertification.model_rebuild()
 DmeService.model_rebuild()
 EdiGenClaimRequest.model_rebuild()
+EdiGenPaymentRequest.model_rebuild()
 ErrorInfo.model_rebuild()
 FileInfo.model_rebuild()
 FormQuestionResponse.model_rebuild()
@@ -2486,6 +2563,7 @@ Quantity.model_rebuild()
 ReceiverStatus.model_rebuild()
 Reference.model_rebuild()
 RelatedCauseInfo.model_rebuild()
+RemittanceDeliveryMethod.model_rebuild()
 ReportingCategory.model_rebuild()
 ServiceLineStatus.model_rebuild()
 SourceLocation.model_rebuild()
@@ -2517,6 +2595,7 @@ __all__ = [
     'ClaimOrEncounterIdentifierType',
     'ConditionsIndicatorCategory',
     'DateType',
+    'DelayReasonType',
     'DmeBillingFrequency',
     'EntityRole',
     'EntityType',
@@ -2529,7 +2608,9 @@ __all__ = [
     'PaymentMethodType',
     'QuantityType',
     'ReferenceType',
+    'RelatedCauseType',
     'RelationshipType',
+    'SpecialProgramType',
     'StatusActionType',
     'TransactionHandlingType',
     'UnitType',
@@ -2559,6 +2640,7 @@ __all__ = [
     'DmeCertification',
     'DmeService',
     'EdiGenClaimRequest',
+    'EdiGenPaymentRequest',
     'ErrorInfo',
     'FileInfo',
     'FormQuestionResponse',
@@ -2600,6 +2682,7 @@ __all__ = [
     'ReceiverStatus',
     'Reference',
     'RelatedCauseInfo',
+    'RemittanceDeliveryMethod',
     'ReportingCategory',
     'ServiceLineStatus',
     'SourceLocation',

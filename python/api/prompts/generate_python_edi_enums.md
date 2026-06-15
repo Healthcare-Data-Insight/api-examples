@@ -55,6 +55,8 @@ NoteType
 QuantityType
 UnitType
 ClaimOrEncounterIdentifierType
+AttachmentType
+AttachmentTransmissionType
 
 ### hdi.model.claim package
 
@@ -90,13 +92,15 @@ RelationshipType.java
 
 ### hdi.model.payment package
 
+AdjudicatedClaimStatus.java
 AccountNumberQualifier.java
 AdjustmentGroup.java
-ClaimStatus.java
 DfiQualifier.java
 PaymentMethodType.java
 TransactionHandlingType.java
-InsurancePlanType
+InsurancePlanType.java
+PaymentAdjustmentReason.java
+RemittanceTransmissionType.java
 
 ### hdi.model.status
 
