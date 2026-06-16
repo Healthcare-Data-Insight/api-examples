@@ -44,7 +44,7 @@ def build_request() -> EdiGenClaimRequest:
                 )
             ],
         ),
-        receiver=PartyIdName(
+        receiver=Party(
             identifier="66783JJT",
             last_name_or_org_name="KEY INSURANCE COMPANY",
         ),
@@ -75,7 +75,6 @@ def build_request() -> EdiGenClaimRequest:
 
     claim = ProfClaim(
         patient_control_number="26463774",
-        charge_amount=100.00,
         facility_code=Code(code="11"),
         frequency_code=Code(code="1"),
         subscriber=subscriber,
@@ -100,7 +99,6 @@ def build_request() -> EdiGenClaimRequest:
             ProfLine(
                 charge_amount=40.00,
                 service_date_from=date(2006, 10, 3),
-                unit_type=UnitType.UNIT,
                 unit_count=1,
                 procedure=Procedure(code="99213"),
                 diag_pointers=[1],

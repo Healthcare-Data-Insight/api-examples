@@ -19,7 +19,7 @@ edi_837_dir = '../../edi_files/837'
 
 # Convert multiple files using multipart request to NDJSON
 # 837p and 837i have similar response schemas (claim object)
-file_names_to_convert = ['837P-all-fields.dat', '837I-all-fields.dat', '837P-validation-issues.edi']
+file_names_to_convert = ['837P-all-fields.dat', '837I-all-fields.dat']
 files_to_convert = [edi_837_dir + '/' + file_name for file_name in file_names_to_convert]
 print('** Converting files:')
 print(*files_to_convert)

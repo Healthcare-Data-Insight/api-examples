@@ -5,11 +5,8 @@ import datetime as dt
 from pydantic import Field
 
 from .base import EdiConverterModel, to_camel
-from .enums import AdjudicatedClaimStatus, AdjustmentGroup, AmbulanceTransportReason, AmountType, \
-    ClaimOrEncounterIdentifierType, ConditionsIndicatorCategory, DateType, DelayReasonType, DmeBillingFrequency, \
-    EntityRole, EntityType, GenderType, IdentificationType, InsurancePlanType, MeasurementType, NoteType, \
-    PayerRespSequenceType, PaymentMethodType, QuantityType, ReferenceType, RelatedCauseType, RelationshipType, \
-    SpecialProgramType, StatusActionType, TransactionHandlingType, UnitType
+
+from .enums import AdjudicatedClaimStatus, AdjustmentGroup, AmbulanceTransportReason, AmountType, AttachmentTransmissionType, AttachmentType, ClaimOrEncounterIdentifierType, ConditionsIndicatorCategory, DateType, DelayReasonType, DmeBillingFrequency, EntityRole, EntityType, GenderType, IdentificationType, InsurancePlanType, MeasurementType, NoteType, PayerRespSequenceType, PaymentMethodType, QuantityType, ReferenceType, RelatedCauseType, RelationshipType, RemittanceTransmissionType, SpecialProgramType, StatusActionType, TransactionHandlingType, UnitType
 
 
 class Address(EdiConverterModel):
@@ -88,11 +85,11 @@ class Attachment(EdiConverterModel):
     'Segment: PWK.'
     report_type_code: str | None = Field(default=None, description='Code indicating the title or contents of a document. EDI: PWK01.')
     'Code indicating the title or contents of a document. EDI: PWK01.'
-    type: str | None = Field(default=None, description="Attachment type; 'reportTypeCode' expressed as enum (string constant). Since: v2.15.0. EDI: PWK01.")
+    type: AttachmentType | None = Field(default=None, description="Attachment type; 'reportTypeCode' expressed as enum (string constant). Since: v2.15.0. EDI: PWK01.")
     "Attachment type; 'reportTypeCode' expressed as enum (string constant). Since: v2.15.0. EDI: PWK01."
     report_transmission_code: str | None = Field(default=None, description='Transmission method or format by which attachments are to be sent. EDI: PWK02.')
     'Transmission method or format by which attachments are to be sent. EDI: PWK02.'
-    transmission_type: str | None = Field(default=None, description='Transmission method; transmission code expressed as enum (string constant). Since: v2.15.0. EDI: PWK02.')
+    transmission_type: AttachmentTransmissionType | None = Field(default=None, description='Transmission method; transmission code expressed as enum (string constant). Since: v2.15.0. EDI: PWK02.')
     'Transmission method; transmission code expressed as enum (string constant). Since: v2.15.0. EDI: PWK02.'
     control_number: str | None = Field(default=None, description='Control number. EDI: PWK06.')
     'Control number. EDI: PWK06.'
@@ -2130,7 +2127,7 @@ class RemittanceDeliveryMethod(EdiConverterModel):
     'To identify remittance delivery when remittance is separate from payment. Segment: RDM.'
     report_transmission_code: str | None = Field(default=None, description='Code defining timing, transmission method or format by which reports are to be sent. EDI: RDM01.')
     'Code defining timing, transmission method or format by which reports are to be sent. EDI: RDM01.'
-    transmission_type: str | None = Field(default=None, description='Report transmission code expressed as enum (string constant). EDI: RDM01.')
+    transmission_type: RemittanceTransmissionType | None = Field(default=None, description='Report transmission code expressed as enum (string constant). EDI: RDM01.')
     'Report transmission code expressed as enum (string constant). EDI: RDM01.'
     name: str | None = Field(default=None, description='Name of a third party processor if needed, who would be the first recipient of the remittance. EDI: RDM02.')
     'Name of a third party processor if needed, who would be the first recipient of the remittance. EDI: RDM02.'
@@ -2592,6 +2589,8 @@ __all__ = [
     'AdjustmentGroup',
     'AmbulanceTransportReason',
     'AmountType',
+    'AttachmentTransmissionType',
+    'AttachmentType',
     'ClaimOrEncounterIdentifierType',
     'ConditionsIndicatorCategory',
     'DateType',
@@ -2610,6 +2609,7 @@ __all__ = [
     'ReferenceType',
     'RelatedCauseType',
     'RelationshipType',
+    'RemittanceTransmissionType',
     'SpecialProgramType',
     'StatusActionType',
     'TransactionHandlingType',

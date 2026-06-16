@@ -8,7 +8,6 @@ from edi_model.all_classes import Payment, Code, ProviderAdjustment
 Converts 835 files using multipart request.
 The response is an array of JSON objects or a line-delimited JSON (ndjson).
 This example uses ndjson as it is more convenient for streaming.
-We use the Payment object to deserialize the response.
 API documentation:
 https://datainsight.health/docs/ediconvert-api/reference/#tag/EDI-to-JSON
 Schemas:

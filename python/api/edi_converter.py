@@ -64,7 +64,7 @@ def convert_file(file, is_ndjson=False, is_validate=True):
 
 def generate_claim_edi(request):
     """Post an EDI generation request object to /edi/gen/claim and return the response."""
-    api_url = env.api_url + '/edi/gen/claim'
+    api_url = env.api_url + '/edi/gen/837'
     api_response = requests.post(
         api_url,
         json=request.model_dump(by_alias=True, exclude_none=True, mode='json'),
