@@ -1,25 +1,7 @@
-from enum import Enum
-
 import requests
 
 import env
-
-
-class ObjectType(Enum):
-    # 837I/P/D
-    CLAIM = "CLAIM"
-    # 835 paid claims
-    PAYMENT = "PAYMENT"
-    # 835 provider-level adjustment
-    PROVIDER_ADJUSTMENT = "PROVIDER_ADJUSTMENT"
-    # 834
-    MEMBER_COVERAGE = "MEMBER_COVERAGE"
-    # parser's errors
-    ERROR = "ERROR"
-    # Validation issue
-    VALIDATION = "VALIDATION"
-    # parser's warnings -- this is deprecated, use validations instead
-    WARNING = "WARNING"
+from edi_model.enums import ObjectType
 
 
 def convert_files_with_multipart(files, is_ndjson=False, is_validate=True):

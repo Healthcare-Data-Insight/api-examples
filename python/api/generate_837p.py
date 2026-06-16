@@ -22,13 +22,13 @@ def build_request() -> EdiGenClaimRequest:
     )
 
     functional_group = FunctionalGroup(
-        transaction_type="PROF",
+        transaction_type=TransactionType.PROF,
         sender_code="1",
         receiver_code="2",
     )
 
     transaction = Transaction837(
-        transaction_type="PROF",
+        transaction_type=TransactionType.PROF,
         # Sender and receiver are required for 837 claims
         sender=Party(
             identifier="TGJ23",
@@ -37,7 +37,7 @@ def build_request() -> EdiGenClaimRequest:
                 ContactInfo(
                     contact_numbers=[
                         ContactNumber(
-                            type="EMAIL",
+                            type=ContactType.EMAIL,
                             number="test@test.com",
                         )
                     ],

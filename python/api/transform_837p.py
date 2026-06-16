@@ -1,5 +1,6 @@
 import edi_converter
 from edi_model.all_classes import ProfClaim, InterchangeControl, FunctionalGroup, EdiGenClaimRequest
+from edi_model.enums import TransactionType
 
 """
 Example of an 837 claim transformation.
@@ -17,7 +18,7 @@ interchange_control = InterchangeControl(
 )
 
 functional_group = FunctionalGroup(
-    transaction_type="PROF",
+    transaction_type=TransactionType.PROF,
     sender_code="1",
     receiver_code="2",
 )

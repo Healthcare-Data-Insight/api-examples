@@ -1,7 +1,7 @@
 import json
 
 import edi_converter
-from edi_converter import ObjectType
+from edi_model.enums import ObjectType
 
 """
 This example does not use the object model, it relies on the raw JSON response and Python dictionaries.

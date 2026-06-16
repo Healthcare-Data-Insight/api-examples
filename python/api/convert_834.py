@@ -1,7 +1,7 @@
 import json
 
 import edi_converter
-from edi_model.all_classes import MemberCoverage, StatusInfo
+from edi_model.all_classes import MemberCoverage
 
 """
 Converts 834 X220 (benefit enrollment and maintenance) file.
@@ -60,9 +60,7 @@ for member_coverage_str in response.iter_lines():
             print(f"Type: {enum_name(provider.entity_role)}, "
                   f"ID: {provider.identifier}, "
                   f"name: {provider.last_name_or_org_name}")
-            change_reason_json = getattr(provider, 'changeReason', None)
-            if change_reason_json:
-                change_reason = StatusInfo.model_validate(change_reason_json, extra='allow')
-                print(f"Change reason code: {change_reason.reasonCode}, "
-                      f"action code: {change_reason.action_code}, "
-                      f"effective date: {change_reason.effective_date}")
+            if provider.change_reason:
+                print(f"Change reason code: {provider.change_reason.reason_code}, "
+                      f"action code: {provider.change_reason.action_code}, "
+                      f"effective date: {provider.change_reason.effective_date}")

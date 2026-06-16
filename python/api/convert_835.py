@@ -1,8 +1,8 @@
 import json
 
 import edi_converter
-from edi_converter import ObjectType
 from edi_model.all_classes import Payment, Code, ProviderAdjustment
+from edi_model.enums import ObjectType
 
 """
 Converts 835 files using multipart request.
