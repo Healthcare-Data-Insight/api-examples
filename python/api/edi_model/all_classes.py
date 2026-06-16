@@ -7,10 +7,11 @@ from pydantic import Field
 from .base import EdiConverterModel, to_camel
 from .enums import AdjudicatedClaimStatus, AdjustmentGroup, AmbulanceTransportReason, AmountType, \
     AttachmentTransmissionType, AttachmentType, ClaimOrEncounterIdentifierType, ConditionsIndicatorCategory, \
-    ContactType, DateType, DelayReasonType, DmeBillingFrequency, EdiDataType, EntityRole, EntityType, GenderType, \
-    IdentificationType, InsurancePlanType, IssueType, MeasurementType, NoteType, ObjectType, PayerRespSequenceType, \
-    PaymentMethodType, PlaceOfServiceType, QuantityType, ReferenceType, RelatedCauseType, RelationshipType, \
-    RemittanceTransmissionType, SpecialProgramType, StatusActionType, TransactionHandlingType, TransactionType, UnitType
+    ContactType, DataType, DateType, DelayReasonType, DmeBillingFrequency, EdiDataType, EntityRole, EntityType, \
+    GenderType, IdentificationType, InsurancePlanType, IssueType, MeasurementType, NoteType, ObjectType, \
+    PayerRespSequenceType, PaymentMethodType, PlaceOfServiceType, QuantityType, ReferenceType, RelatedCauseType, \
+    RelationshipType, RemittanceTransmissionType, SpecialProgramType, StatusActionType, TransactionHandlingType, \
+    TransactionType, UnitType
 
 
 class Address(EdiConverterModel):
@@ -2423,7 +2424,7 @@ class ValidationIssue(EdiConverterModel):
     'Actual length (LENGTH_TOO_SHORT, LENGTH_EXCEEDED issue types).'
     data_type: EdiDataType | None = Field(default=None, description='Expected data type (WRONG_TYPE issue type).')
     'Expected data type (WRONG_TYPE issue type).'
-    actual_data_type: str | None = Field(default=None, description='Actual data type (WRONG_TYPE issue type).')
+    actual_data_type: DataType | None = Field(default=None, description='Actual data type (WRONG_TYPE issue type).')
     'Actual data type (WRONG_TYPE issue type).'
     code_sub_type: str | None = Field(default=None, description='Type of the code that failed validation (INVALID_CODE issue type), such as HCPCS, ProviderTaxonomy, ICD_10.')
     'Type of the code that failed validation (INVALID_CODE issue type), such as HCPCS, ProviderTaxonomy, ICD_10.'
@@ -2598,6 +2599,7 @@ __all__ = [
     'ClaimOrEncounterIdentifierType',
     'ConditionsIndicatorCategory',
     'ContactType',
+    'DataType',
     'DateType',
     'DelayReasonType',
     'DmeBillingFrequency',

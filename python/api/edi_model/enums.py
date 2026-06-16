@@ -694,6 +694,25 @@ class EdiDataType(EdiEnum):
     COMPOSITE = "COMPOSITE"
 
 
+class DataType(EdiEnum):
+    STR = "STR"
+    FLOAT = "FLOAT"
+    DOUBLE = "DOUBLE"
+    DATE = "DATE"
+    DATE_TIME = "DATE_TIME"
+    TIME = "TIME"
+    BIG_DEC = "BIG_DEC"
+    OBJ = "OBJ"
+    INT = "INT"
+    BOOLEAN = "BOOLEAN"
+    DATE_INTERVAL = "DATE_INTERVAL"
+    ELT_SET = "ELT_SET"
+    LIST = "LIST"
+    QUALIFIER = "QUALIFIER"
+    CODE_ENTITY = "CODE_ENTITY"
+    CODE_ENTITY_LIST = "CODE_ENTITY_LIST"
+
+
 class TransactionType(EdiEnum):
     PROF = "222A2"
     DENTAL = "224A3"
