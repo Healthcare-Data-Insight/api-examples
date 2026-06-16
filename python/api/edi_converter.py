@@ -44,9 +44,9 @@ def convert_file(file, is_ndjson=False, is_validate=True):
     return api_response
 
 
-def generate_claim_edi(request):
-    """Post an EDI generation request object to /edi/gen/claim and return the response."""
-    api_url = env.api_url + '/edi/gen/837'
+def _generate_edi(request, path):
+    """Post an EDI generation request object and return the response."""
+    api_url = env.api_url + path
     api_response = requests.post(
         api_url,
         json=request.model_dump(by_alias=True, exclude_none=True, mode='json'),
@@ -55,6 +55,16 @@ def generate_claim_edi(request):
     if api_response.status_code not in {200, 417}:
         raise Exception(f'Error generating EDI; Error: {api_response.text}')
     return api_response
+
+
+def generate_claim_edi(request):
+    """Post an EDI generation request object to /edi/gen/837 and return the response."""
+    return _generate_edi(request, '/edi/gen/837')
+
+
+def generate_payment_edi(request):
+    """Post an EDI generation request object to /edi/gen/835 and return the response."""
+    return _generate_edi(request, '/edi/gen/835')
 
 
 def handle_warning_error(obj):
