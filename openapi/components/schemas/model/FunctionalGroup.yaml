@@ -8,6 +8,7 @@ properties:
   objectType:
     description: "Type of this object, always set to 'FUNCTIONAL_GROUP'."
     type: "string"
+    x-enum-name: "ObjectType"
   transactionType:
     description: "Transaction type as enum for EDI generator; if not provided, GS01, GS08 must be populated."
     type: "string"
@@ -15,6 +16,7 @@ properties:
     - "PROF"
     - "INST"
     - "PAYMENT"
+    x-enum-name: "TransactionType"
   functionalIdentifierCode:
     description: "Functional identifier code. EDI: GS01."
     type: "string"

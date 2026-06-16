@@ -8,6 +8,7 @@ properties:
   objectType:
     description: "Type of this object, always set to 'PROVIDER_ADJUSTMENT'."
     type: "string"
+    x-enum-name: "ObjectType"
   providerIdentifier:
     description: "Provider identifier. EDI: PLB01."
     type: "string"

@@ -57,6 +57,7 @@ properties:
     type: "string"
     x-edi-elt-designators:
     - "CLM05"
+    x-enum-name: "PlaceOfServiceType"
   facility:
     description: "Place of service code for professional/dental claims or UB facility code for institutional claims. EDI: CLM05-1."
     $ref: "./Code.yaml"

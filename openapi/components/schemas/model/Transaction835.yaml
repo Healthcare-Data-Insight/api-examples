@@ -4,6 +4,7 @@ properties:
   objectType:
     description: "Type of this object, always set to 'TRANSACTION' when the transaction is a top-level object."
     type: "string"
+    x-enum-name: "ObjectType"
   controlNumber:
     description: "Control number. EDI: ST02."
     type: "string"
@@ -15,6 +16,7 @@ properties:
     x-edi-elt-designators:
     - "ST01"
     - "ST03"
+    x-enum-name: "TransactionType"
   productionDate:
     description: "Production date. EDI: DTM02*405."
     type: "string"

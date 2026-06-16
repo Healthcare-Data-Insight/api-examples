@@ -113,6 +113,7 @@ IssueType
 
 ### hdi.edi.parser
 EdiDataType
+DataType
 TransactionType: use subTypeCode as value, if null, use enum name.
 
 ### hdi.model

@@ -8,6 +8,7 @@ properties:
   objectType:
     description: "Type of this object, set to 'PAYMENT'."
     type: "string"
+    x-enum-name: "ObjectType"
   patientControlNumber:
     description: "Identifier used to track a claim from creation by the health care provider through payment. EDI: CLP01."
     type: "string"

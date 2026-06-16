@@ -5,6 +5,7 @@ properties:
   objectType:
     description: "Type of this object, always 'VALIDATION'."
     type: "string"
+    x-enum-name: "ObjectType"
   issueType:
     description: "Issue type."
     type: "string"
@@ -22,6 +23,7 @@ properties:
     - "REQUIRED_CODE"
     - "VALUE_NOT_IN_ENUM_LIST"
     - "WRONG_TYPE"
+    x-enum-name: "IssueType"
   issueObjectClass:
     description: "Class (type) of the object where the issue was detected, such as Claim, ServiceLine, etc."
     type: "string"
@@ -71,6 +73,7 @@ properties:
     - "NUMERIC"
     - "STRING"
     - "TIME"
+    x-enum-name: "EdiDataType"
   actualDataType:
     description: "Actual data type (WRONG_TYPE issue type)."
     type: "string"
@@ -84,6 +87,7 @@ properties:
     - "NUMERIC"
     - "STRING"
     - "TIME"
+    x-enum-name: "DataType"
   codeSubType:
     description: "Type of the code that failed validation (INVALID_CODE issue type), such as HCPCS, ProviderTaxonomy, ICD_10."
     type: "string"

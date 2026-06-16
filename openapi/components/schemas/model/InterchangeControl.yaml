@@ -8,6 +8,7 @@ properties:
   objectType:
     description: "Type of this object, always set to 'INTERCHANGE_CONTROL'."
     type: "string"
+    x-enum-name: "ObjectType"
   elementSeparator:
     description: "Element separator character."
     type: "string"

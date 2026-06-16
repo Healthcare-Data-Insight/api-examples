@@ -56,9 +56,9 @@ properties:
     items:
       type: "string"
     x-edi-elt-designators:
-      - "REF02"
+    - "REF02"
     x-edi-qualifiers:
-      - "G1"
+    - "G1"
     x-since: "2.15.0"
   referralNumber:
     description: "Referral number. Deprecated: Use referralNumbers instead. EDI: REF02*9F."
@@ -74,9 +74,9 @@ properties:
     items:
       type: "string"
     x-edi-elt-designators:
-      - "REF02"
+    - "REF02"
     x-edi-qualifiers:
-      - "9F"
+    - "9F"
     x-since: "2.15.0"
   chargeAmount:
     description: "Charge amount. EDI: SV302."

@@ -8,6 +8,7 @@ properties:
   objectType:
     description: "Type of this object, always set to 'MEMBER_COVERAGE'."
     type: "string"
+    x-enum-name: "ObjectType"
   fileName:
     description: "Converted X12 EDI file name."
     type: "string"

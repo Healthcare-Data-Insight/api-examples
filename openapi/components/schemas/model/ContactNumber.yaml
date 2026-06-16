@@ -21,6 +21,7 @@ properties:
     - "PER03"
     - "PER05"
     - "PER07"
+    x-enum-name: "ContactType"
   number:
     description: "Number. EDI: PER04, PER06, PER08."
     type: "string"
