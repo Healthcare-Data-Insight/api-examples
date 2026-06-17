@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6a0614ddf8d6a2fc74348704",
+  "id" : "6a32cb6397613a0e49908db4",
   "objectType" : "CLAIM",
   "patientControlNumber" : "36463774",
   "chargeAmount" : 100.00,
@@ -330,21 +330,23 @@
   "assignmentCertificationIndicator" : "Y",
   "releaseOfInformationCode" : "Y",
   "specialProgramCode" : "05",
+  "specialProgramType" : "DISABILITY",
   "delayReasonCode" : "4",
+  "delayReasonType" : "DELAY_IN_CERTIFYING_PROVIDER",
   "serviceAuthorizationExceptionCode" : "7",
   "medicareSection4081Indicator" : "N",
-  "mammographyCertificationNumber" : "Unmapped-MammogCertNumber",
+  "mammographyCertificationNumber" : "MammogCertNumber",
   "referralNumber" : "ReferralNum",
   "priorAuthorizationNumber" : "PriorAuth",
   "originalReferenceNumber" : "PayerClaimControlNum",
-  "cliaNumber" : "Unmapped-Clia",
+  "cliaNumber" : "Clia",
   "repricedReferenceNumber" : "Repriced",
   "adjustedRepricedReferenceNumber" : "AdjRepriced",
-  "investigationalDeviceExemptionNumber" : "Unmapped-InvDeviceExemp",
+  "investigationalDeviceExemptionNumber" : "InvDeviceExemp",
   "clearinghouseTraceNumber" : "ClaimIdForTransm",
   "medicalRecordNumber" : "MedicalRecordNum",
   "demonstrationProjectIdentifier" : "DemonstrProjectId",
-  "carePlanOversightNumber" : "Unmapped-CarePlanOversight",
+  "carePlanOversightNumber" : "CarePlanOversight",
   "onsetOfCurrentIllnessOrInjuryDate" : "2018-03-12",
   "initialTreatmentDate" : "2018-03-01",
   "lastSeenDate" : "2005-01-08",
@@ -521,7 +523,9 @@
   } ],
   "attachments" : [ {
     "reportTypeCode" : "OZ",
+    "type" : "SUPPORT_DATA_FOR_CLAIM",
     "reportTransmissionCode" : "BM",
+    "transmissionType" : "BY_MAIL",
     "controlNumber" : "DMN0012"
   } ],
   "serviceLines" : [ {
@@ -535,12 +539,16 @@
     "repricedReferenceNumber" : "Repriced",
     "adjustedRepricedReferenceNumber" : "AdjRepriced",
     "priorAuthorization" : "PriorAuthorization",
+    "priorAuthorizationNumbers" : [ "PriorAuthorization" ],
     "mammographyCertificationNumber" : "Mammog",
     "cliaNumber" : "CLIA-Amend",
     "referringCliaNumber" : "CLIA-Fac",
     "immunizationBatchNumber" : "Immune",
     "referralNumber" : "ReferralNumber",
+    "referralNumbers" : [ "ReferralNumber" ],
     "chargeAmount" : 40.00,
+    "salesTaxAmount" : 101.00,
+    "postageClaimedAmount" : 8.59,
     "purchasedServiceProviderIdentifier" : "PN222222",
     "purchasedServiceChargeAmount" : 110.00,
     "serviceDateFrom" : "2005-03-14",
@@ -549,6 +557,7 @@
     "beginTherapyDate" : "2005-01-12",
     "lastSeenDate" : "2005-01-08",
     "testPerformedDate" : "2005-01-12",
+    "shippedDate" : "2005-01-12",
     "lastXRayDate" : "2005-01-08",
     "initialTreatmentDate" : "2005-01-08",
     "unitType" : "UNIT",
@@ -563,7 +572,7 @@
     "drugQuantity" : 1.01,
     "drugUnitType" : "UNIT",
     "prescriptionNumber" : "123456",
-    "prescriptionNumberType" : "PHARMACY_PRESCRIPTION_NUMBER",
+    "prescriptionNumberType" : "LINK_SEQUENCE_NUMBER",
     "lineNote" : "PATIENT GOAL TO BE OFF OXYGEN BY END OF MONTH",
     "thirdPartyNote" : "STATE REGULATION 123 WAS APPLIED DURING THE PRICING OF THIS PROF CLAIM",
     "notes" : [ {
@@ -594,11 +603,15 @@
     },
     "attachments" : [ {
       "reportTypeCode" : "OZ",
+      "type" : "SUPPORT_DATA_FOR_CLAIM",
       "reportTransmissionCode" : "BM",
+      "transmissionType" : "BY_MAIL",
       "controlNumber" : "Line123"
     }, {
       "reportTypeCode" : "CT",
-      "reportTransmissionCode" : "AB"
+      "type" : "CERTIFICATION",
+      "reportTransmissionCode" : "AB",
+      "transmissionType" : "PREVIOUSLY_SUBMITTED_TO_PAYER"
     } ],
     "measurements" : [ {
       "categoryCode" : "TR",
@@ -797,7 +810,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a0614ddf8d6a2fc7434864c",
+    "id" : "6a32cb6397613a0e49908cf9",
     "controlNumber" : "0031",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -811,7 +824,7 @@
     "fileInfo" : {
       "name" : "837P-all-fields.dat",
       "url" : "file:/edi-samples/edi_files/837/837P-all-fields.dat",
-      "lastModifiedDateTime" : "2026-05-05T11:21:04.936-04:00",
+      "lastModifiedDateTime" : "2026-06-10T22:07:38.468-04:00",
       "fileType" : "EDI"
     },
     "sender" : {

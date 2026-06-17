@@ -15,7 +15,7 @@
   "message" : "Required element is missing"
 }
 , {
-  "id" : "6a1203f78514d9e0d13429db",
+  "id" : "6a32cb6097613a0e49904a2a",
   "objectType" : "MEMBER_COVERAGE",
   "masterPolicyNumber" : "ABCD012354",
   "sponsor" : {
@@ -84,7 +84,7 @@
     "message" : "Required segment REF (subscriber_identifier) is missing in loop 2000"
   } ],
   "transaction" : {
-    "id" : "6a1203f78514d9e0d13429d3",
+    "id" : "6a32cb6097613a0e49904a22",
     "controlNumber" : "12345",
     "transactionType" : "MEMBER_COVERAGE",
     "purposeCode" : "00",
@@ -95,7 +95,7 @@
     "implementationConventionReference" : "005010X220A1",
     "fileInfo" : {
       "name" : "834-validation-issues.edi",
-      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/834/834-validation-issues.edi",
+      "url" : "file:/edi-samples/edi_files/834/834-validation-issues.edi",
       "lastModifiedDateTime" : "2026-05-13T14:35:50.542-04:00",
       "fileType" : "EDI"
     },

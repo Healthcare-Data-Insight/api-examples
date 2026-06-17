@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6a04cc591ef26d534baf04b3",
+  "id" : "6a32cb6297613a0e49905783",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "5554555444",
   "chargeAmount" : 700.00,
@@ -86,17 +86,16 @@
     },
     "adjustments" : [ {
       "group" : "PATIENT_RESPONSIBILITY",
-      "reasonCode" : "1",
+      "reasonCode" : "XX",
       "reason" : {
         "subType" : "CARC",
-        "code" : "1",
-        "desc" : "Deductible Amount"
+        "code" : "XX"
       },
       "amount" : 300.00
     } ]
   } ],
   "transaction" : {
-    "id" : "6a04cc591ef26d534baf0493",
+    "id" : "6a32cb6297613a0e49905763",
     "controlNumber" : "0002",
     "transactionType" : "PAYMENT",
     "productionDate" : "2024-12-23",
@@ -111,13 +110,13 @@
     "fileInfo" : {
       "name" : "835-validation-issues.edi",
       "url" : "file:/edi-samples/edi_files/835/835-validation-issues.edi",
-      "lastModifiedDateTime" : "2026-05-11T21:38:34.785-04:00",
+      "lastModifiedDateTime" : "2026-05-17T10:06:32.63-04:00",
       "fileType" : "EDI"
     }
   }
 }
 , {
-  "id" : "6a04cc591ef26d534baf04cb",
+  "id" : "6a32cb6297613a0e4990579d",
   "objectType" : "PROVIDER_ADJUSTMENT",
   "providerIdentifier" : "PAYEE_ID1",
   "fiscalPeriodDate" : "2024-12-31",
@@ -194,7 +193,7 @@
     } ]
   },
   "transaction" : {
-    "id" : "6a04cc591ef26d534baf04b8",
+    "id" : "6a32cb6297613a0e4990578a",
     "controlNumber" : "0001",
     "transactionType" : "PAYMENT",
     "productionDate" : "2024-12-23",
@@ -217,7 +216,7 @@
   }
 }
 , {
-  "id" : "6a04cc591ef26d534baf04d1",
+  "id" : "6a32cb6297613a0e499057a3",
   "objectType" : "PROVIDER_ADJUSTMENT",
   "providerIdentifier" : "PAYEE_ID99",
   "fiscalPeriodDate" : "2024-12-31",
@@ -294,7 +293,7 @@
     } ]
   },
   "transaction" : {
-    "id" : "6a04cc591ef26d534baf04b8",
+    "id" : "6a32cb6297613a0e4990578a",
     "controlNumber" : "0001",
     "transactionType" : "PAYMENT",
     "productionDate" : "2024-12-23",
@@ -317,7 +316,7 @@
   }
 }
 , {
-  "id" : "6a04cc591ef26d534baf0517",
+  "id" : "6a32cb6297613a0e499057e9",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "5554555444",
   "chargeAmount" : 800.00,
@@ -432,7 +431,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a04cc591ef26d534baf04d6",
+    "id" : "6a32cb6297613a0e499057a8",
     "controlNumber" : "0002",
     "transactionType" : "PAYMENT",
     "productionDate" : "2024-12-23",
@@ -460,7 +459,7 @@
   }
 }
 , {
-  "id" : "6a04cc591ef26d534baf04f7",
+  "id" : "6a32cb6297613a0e499057c9",
   "objectType" : "PROVIDER_ADJUSTMENT",
   "providerIdentifier" : "PAYEE_ID2",
   "fiscalPeriodDate" : "2023-12-31",
@@ -529,7 +528,7 @@
     } ]
   },
   "transaction" : {
-    "id" : "6a04cc591ef26d534baf04d6",
+    "id" : "6a32cb6297613a0e499057a8",
     "controlNumber" : "0002",
     "transactionType" : "PAYMENT",
     "productionDate" : "2024-12-23",
@@ -557,7 +556,7 @@
   }
 }
 , {
-  "id" : "6a04cc591ef26d534baf050f",
+  "id" : "6a32cb6297613a0e499057e1",
   "objectType" : "PROVIDER_ADJUSTMENT",
   "providerIdentifier" : "PAYEE_ID3",
   "fiscalPeriodDate" : "2022-12-31",
@@ -626,7 +625,7 @@
     } ]
   },
   "transaction" : {
-    "id" : "6a04cc591ef26d534baf04fc",
+    "id" : "6a32cb6297613a0e499057ce",
     "controlNumber" : "0003",
     "transactionType" : "PAYMENT",
     "productionDate" : "2024-12-23",
@@ -649,7 +648,7 @@
   }
 }
 , {
-  "id" : "6a04cc591ef26d534baf0548",
+  "id" : "6a32cb6297613a0e4990581c",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "PATACCT",
   "chargeAmount" : 400.00,
@@ -819,7 +818,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a04cc591ef26d534baf051c",
+    "id" : "6a32cb6297613a0e499057f0",
     "controlNumber" : "10060875",
     "transactionType" : "PAYMENT",
     "productionDate" : "2019-08-27",
@@ -841,7 +840,7 @@
   }
 }
 , {
-  "id" : "6a04cc591ef26d534baf0574",
+  "id" : "6a32cb6297613a0e4990584a",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "PATACCT",
   "chargeAmount" : 40000.00,
@@ -973,7 +972,7 @@
   } ],
   "serviceLines" : [ ],
   "transaction" : {
-    "id" : "6a04cc591ef26d534baf054d",
+    "id" : "6a32cb6297613a0e49905823",
     "controlNumber" : "10060875",
     "transactionType" : "PAYMENT",
     "productionDate" : "2019-08-27",
@@ -995,7 +994,7 @@
   }
 }
 , {
-  "id" : "6a04cc591ef26d534baf05cc",
+  "id" : "6a32cb6297613a0e499058a4",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "7722337",
   "chargeAmount" : 226.00,
@@ -1181,6 +1180,7 @@
   "serviceLines" : [ {
     "sourceLineId" : "A123",
     "healthcarePolicyId" : "1234\"5",
+    "healthcarePolicyIds" : [ "1234\"5" ],
     "chargeAmount" : 46.00,
     "paidAmount" : 25.00,
     "supplementalAmounts" : [ {
@@ -1385,7 +1385,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a04cc591ef26d534baf0579",
+    "id" : "6a32cb6297613a0e49905851",
     "controlNumber" : "35681",
     "transactionType" : "PAYMENT",
     "productionDate" : "2019-03-14",
@@ -1399,6 +1399,12 @@
     "payerIdentifier" : "1512345678",
     "receiverIdentifier" : "CLEARINGHOUSE",
     "transactionSetIdentifierCode" : "835",
+    "remittanceDeliveryMethod" : {
+      "reportTransmissionCode" : "BM",
+      "transmissionType" : "BY_MAIL",
+      "name" : "Name",
+      "communicationNumber" : "9618215141"
+    },
     "fileInfo" : {
       "name" : "negotiated_discount.dat",
       "url" : "file:/edi-samples/edi_files/835/negotiated_discount.dat",
@@ -1408,7 +1414,7 @@
   }
 }
 , {
-  "id" : "6a04cc591ef26d534baf05fc",
+  "id" : "6a32cb6297613a0e499058d6",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "5554555444",
   "chargeAmount" : 800.00,
@@ -1506,7 +1512,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a04cc591ef26d534baf05d1",
+    "id" : "6a32cb6297613a0e499058ab",
     "controlNumber" : "112233",
     "transactionType" : "PAYMENT",
     "productionDate" : "2019-03-14",
@@ -1533,7 +1539,7 @@
   }
 }
 , {
-  "id" : "6a04cc591ef26d534baf05fd",
+  "id" : "6a32cb6297613a0e499058d7",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "8765432112",
   "chargeAmount" : 1200.00,
@@ -1630,7 +1636,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a04cc591ef26d534baf05d1",
+    "id" : "6a32cb6297613a0e499058ab",
     "controlNumber" : "112233",
     "transactionType" : "PAYMENT",
     "productionDate" : "2019-03-14",
@@ -1657,7 +1663,145 @@
   }
 }
 , {
-  "id" : "6a04cc591ef26d534baf062a",
+  "id" : "6a32cb6297613a0e49905901",
+  "objectType" : "PAYMENT",
+  "patientControlNumber" : "5554555444",
+  "chargeAmount" : 800.00,
+  "paymentAmount" : 500.00,
+  "facilityCode" : {
+    "subType" : "PLACE_OF_SERVICE",
+    "code" : "11",
+    "desc" : "Office"
+  },
+  "placeOfServiceType" : "OFFICE",
+  "frequencyCode" : {
+    "subType" : "FREQUENCY_CODE",
+    "code" : "1",
+    "desc" : "Original claim"
+  },
+  "serviceDateFrom" : "2024-03-01",
+  "serviceDateTo" : "2024-03-01",
+  "patient" : {
+    "person" : {
+      "entityRole" : "PATIENT",
+      "entityType" : "INDIVIDUAL",
+      "identificationType" : "MEMBER_ID",
+      "identifier" : "33344555510",
+      "lastNameOrOrgName" : "BUDD",
+      "firstName" : "WILLIAM"
+    }
+  },
+  "claimStatusCode" : "1",
+  "claimStatus" : "PRIMARY",
+  "patientResponsibilityAmount" : 300.00,
+  "claimFilingIndicatorCode" : "12",
+  "insurancePlanType" : "PPO",
+  "payerControlNumber" : "94060555410000",
+  "payer" : {
+    "entityRole" : "PAYER",
+    "entityType" : "BUSINESS",
+    "identificationType" : "PAYOR_ID",
+    "identifier" : "ADDNL_PAYER_ID",
+    "lastNameOrOrgName" : "ANY PLAN USA",
+    "address" : {
+      "line" : "1 WALK THIS WAY",
+      "city" : "ANYCITY",
+      "stateCode" : "OH",
+      "zipCode" : "45209"
+    },
+    "contacts" : [ {
+      "functionCode" : "CX",
+      "contactNumbers" : [ {
+        "type" : "PHONE",
+        "number" : "8661112222"
+      } ]
+    }, {
+      "functionCode" : "BL",
+      "name" : "EDI",
+      "contactNumbers" : [ {
+        "type" : "PHONE",
+        "number" : "8002223333"
+      }, {
+        "type" : "EMAIL",
+        "number" : "EDI.SUPPORT@ANYPAYER.COM"
+      } ]
+    } ],
+    "additionalIds" : [ {
+      "qualifierCode" : "2U",
+      "type" : "PAYER_IDENTIFICATION_NUMBER",
+      "identification" : "ADDNL_PAYER_ID"
+    } ]
+  },
+  "payee" : {
+    "entityRole" : "PAYEE",
+    "entityType" : "BUSINESS",
+    "identificationType" : "NPI",
+    "identifier" : "PROVIDER2_NPI",
+    "taxId" : "123456789",
+    "taxIdType" : "TAX_ID",
+    "lastNameOrOrgName" : "PROVIDER",
+    "address" : {
+      "line" : "2255 ANY ROAD",
+      "city" : "ANY CITY",
+      "stateCode" : "CA",
+      "zipCode" : "12211"
+    },
+    "additionalIds" : [ {
+      "qualifierCode" : "PQ",
+      "type" : "PAYEE_IDENTIFICATION_NUMBER",
+      "identification" : "PAYEE_ID2"
+    } ]
+  },
+  "serviceLines" : [ {
+    "chargeAmount" : 800.00,
+    "paidAmount" : 500.00,
+    "supplementalAmounts" : [ {
+      "qualifierCode" : "B6",
+      "type" : "ALLOWED_ACTUAL",
+      "amount" : 800.00
+    } ],
+    "serviceDateFrom" : "2024-03-01",
+    "procedure" : {
+      "subType" : "CPT",
+      "code" : "99211",
+      "desc" : "Office or other outpatient visit for the evaluation and management of an established patient that may not require the presence of a physician or other qualified health care professional"
+    },
+    "adjustments" : [ {
+      "group" : "PATIENT_RESPONSIBILITY",
+      "reasonCode" : "1",
+      "reason" : {
+        "subType" : "CARC",
+        "code" : "1",
+        "desc" : "Deductible Amount"
+      },
+      "amount" : 300.00
+    } ]
+  } ],
+  "transaction" : {
+    "id" : "6a32cb6297613a0e499058de",
+    "controlNumber" : "0002",
+    "transactionType" : "PAYMENT",
+    "productionDate" : "2024-12-23",
+    "transactionHandlingType" : "INFORMATION_ONLY",
+    "totalPaymentAmount" : 132.00,
+    "creditOrDebitFlagCode" : "C",
+    "paymentMethodType" : "CHECK",
+    "receiverAccountNumber" : "456",
+    "paymentDate" : "2019-03-31",
+    "checkOrEftTraceNumber" : "CHECK_1",
+    "payerIdentifier" : "PAYER_ID01",
+    "receiverIdentifier" : "CLEARINGHOUSE_ID",
+    "transactionSetIdentifierCode" : "835",
+    "fileInfo" : {
+      "name" : "835-minimal.dat",
+      "url" : "file:/edi-samples/edi_files/835/835-minimal.dat",
+      "lastModifiedDateTime" : "2026-06-16T10:38:18.088-04:00",
+      "fileType" : "EDI"
+    }
+  }
+}
+, {
+  "id" : "6a32cb6297613a0e49905930",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "PATACCT",
   "chargeAmount" : 150.00,
@@ -1795,7 +1939,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a04cc591ef26d534baf0602",
+    "id" : "6a32cb6297613a0e49905908",
     "controlNumber" : "10060875",
     "transactionType" : "PAYMENT",
     "productionDate" : "2019-08-27",
@@ -1817,11 +1961,11 @@
   }
 }
 , {
-  "id" : "6a04cc591ef26d534baf0696",
+  "id" : "6a32cb6297613a0e49905992",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "7722337",
-  "chargeAmount" : 226.00,
-  "paymentAmount" : 132.00,
+  "chargeAmount" : 384.00,
+  "paymentAmount" : 238.00,
   "facilityCode" : {
     "subType" : "FACILITY_TYPE",
     "code" : "11",
@@ -1883,50 +2027,6 @@
     "qualifierCode" : "EA",
     "type" : "MEDICAL_RECORD_NUMBER",
     "identification" : "12345"
-  }, {
-    "qualifierCode" : "1L",
-    "type" : "GROUP_OR_POLICY_NUMBER",
-    "identification" : "12345678"
-  }, {
-    "qualifierCode" : "1W",
-    "type" : "MEMBER_IDENTIFICATION_NUMBER",
-    "identification" : "12345678"
-  }, {
-    "qualifierCode" : "28",
-    "type" : "EMPLOYEE_IDENTIFICATION_NUMBER",
-    "identification" : "12345678"
-  }, {
-    "qualifierCode" : "6P",
-    "type" : "GROUP_NUMBER",
-    "identification" : "12345678"
-  }, {
-    "qualifierCode" : "9A",
-    "type" : "REPRICED_REFERENCE_NUMBER",
-    "identification" : "12345678"
-  }, {
-    "qualifierCode" : "9C",
-    "type" : "ADJUSTED_REPRICED_REFERENCE_NUMBER",
-    "identification" : "12345678"
-  }, {
-    "qualifierCode" : "BB",
-    "type" : "AUTHORIZATION_NUMBER",
-    "identification" : "12345678"
-  }, {
-    "qualifierCode" : "CE",
-    "type" : "CLASS_OF_CONTRACT_CODE",
-    "identification" : "12345678"
-  }, {
-    "qualifierCode" : "G1",
-    "type" : "PRIOR_AUTHORIZATION_NUMBER",
-    "identification" : "12345678"
-  }, {
-    "qualifierCode" : "G3",
-    "type" : "PREDETERMINATION_OF_BENEFITS_NUMBER",
-    "identification" : "12345678"
-  }, {
-    "qualifierCode" : "SY",
-    "type" : "SSN",
-    "identification" : "12345678"
   } ],
   "supplementalAmounts" : [ {
     "qualifierCode" : "AU",
@@ -2058,15 +2158,11 @@
       "qualifierCode" : "1C",
       "type" : "MEDICARE_PROVIDER_NUMBER",
       "identification" : "12345678"
-    }, {
-      "qualifierCode" : "1G",
-      "type" : "PROVIDER_UPIN_NUMBER",
-      "identification" : "12345678"
     } ]
   },
   "crossoverCarrier" : {
     "entityRole" : "CROSSOVER_CARRIER",
-    "entityType" : "INDIVIDUAL",
+    "entityType" : "BUSINESS",
     "identificationType" : "CMS_PLAN_ID",
     "identifier" : "9876",
     "lastNameOrOrgName" : "ACME INSURANCE"
@@ -2095,6 +2191,7 @@
   "serviceLines" : [ {
     "sourceLineId" : "A123",
     "healthcarePolicyId" : "1234\"5",
+    "healthcarePolicyIds" : [ "1234\"5" ],
     "chargeAmount" : 46.00,
     "paidAmount" : 25.00,
     "supplementalAmounts" : [ {
@@ -2133,7 +2230,7 @@
       "desc" : "LIMITED ORAL EVALUATION - PROBLEM FOCUSED",
       "modifiers" : [ {
         "subType" : "HCPCS_MODIFIER",
-        "code" : "1"
+        "code" : "01"
       } ]
     },
     "adjustments" : [ {
@@ -2252,7 +2349,7 @@
     } ]
   }, {
     "chargeAmount" : 99.00,
-    "paidAmount" : 59.00,
+    "paidAmount" : 99.00,
     "serviceDateFrom" : "2019-03-24",
     "unitCount" : 1,
     "originalUnitCount" : 2,
@@ -2268,7 +2365,7 @@
     }
   }, {
     "chargeAmount" : 73.00,
-    "paidAmount" : 49.00,
+    "paidAmount" : -3.00,
     "supplementalAmounts" : [ {
       "qualifierCode" : "B6",
       "type" : "ALLOWED_ACTUAL",
@@ -2314,7 +2411,7 @@
       "amount" : 27.00
     } ]
   }, {
-    "chargeAmount" : 60.00,
+    "chargeAmount" : 59.00,
     "paidAmount" : 59.00,
     "serviceDateFrom" : "2019-03-24",
     "unitCount" : 10.5,
@@ -2333,29 +2430,30 @@
     }
   } ],
   "transaction" : {
-    "id" : "6a04cc591ef26d534baf062f",
+    "id" : "6a32cb6297613a0e49905937",
     "controlNumber" : "35681",
     "transactionType" : "PAYMENT",
     "productionDate" : "2019-03-14",
     "transactionHandlingType" : "INFORMATION_ONLY",
     "totalPaymentAmount" : 132.00,
     "creditOrDebitFlagCode" : "C",
-    "paymentMethodType" : "ACH",
-    "paymentFormatCode" : "CCP",
-    "senderBankRoutingNumber" : "011900449",
-    "senderAccountNumber" : "0000009999",
-    "originatingCompanyId" : "106609999",
-    "receiverBankRoutingNumber" : "107001235",
-    "receiverAccountNumber" : "2200008888",
-    "paymentDate" : "2025-04-09",
-    "checkOrEftTraceNumber" : "882509401093167",
-    "payerIdentifier" : "106609999",
+    "paymentMethodType" : "CHECK",
+    "receiverAccountNumber" : "456",
+    "paymentDate" : "2019-03-31",
+    "checkOrEftTraceNumber" : "12345",
+    "payerIdentifier" : "1512345678",
     "receiverIdentifier" : "CLEARINGHOUSE",
     "transactionSetIdentifierCode" : "835",
+    "remittanceDeliveryMethod" : {
+      "reportTransmissionCode" : "BM",
+      "transmissionType" : "BY_MAIL",
+      "name" : "Name",
+      "communicationNumber" : "9618215141"
+    },
     "fileInfo" : {
       "name" : "835-all-fields.dat",
       "url" : "file:/edi-samples/edi_files/835/835-all-fields.dat",
-      "lastModifiedDateTime" : "2025-10-17T17:22:31.668-04:00",
+      "lastModifiedDateTime" : "2026-06-10T22:19:35.713-04:00",
       "fileType" : "EDI"
     }
   }

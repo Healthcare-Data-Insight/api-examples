@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6a0614ddf8d6a2fc743485a3",
+  "id" : "6a32cb6397613a0e49908c4c",
   "objectType" : "CLAIM",
   "patientControlNumber" : "ABC123-RI",
   "chargeAmount" : 28.75,
@@ -117,6 +117,7 @@
   } ],
   "serviceLines" : [ {
     "referralNumber" : "V123456",
+    "referralNumbers" : [ "V123456" ],
     "chargeAmount" : 25.00,
     "serviceDateFrom" : "2005-05-14",
     "unitType" : "UNIT",
@@ -175,7 +176,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a0614ddf8d6a2fc74348577",
+    "id" : "6a32cb6397613a0e49908c20",
     "controlNumber" : "1002",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",

@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6a0614ddf8d6a2fc74348361",
+  "id" : "6a32cb6397613a0e499089fe",
   "objectType" : "CLAIM",
   "patientControlNumber" : "ABC0002",
   "chargeAmount" : 259.96,
@@ -378,6 +378,7 @@
   "assignmentCertificationIndicator" : "Y",
   "releaseOfInformationCode" : "Y",
   "delayReasonCode" : "4",
+  "delayReasonType" : "DELAY_IN_CERTIFYING_PROVIDER",
   "serviceAuthorizationExceptionCode" : "1",
   "referralNumber" : "2410628868",
   "priorAuthorizationNumber" : "PA00000024",
@@ -625,64 +626,39 @@
   } ],
   "occurrenceSpans" : [ {
     "subType" : "OCCURRENCE_SPAN",
-    "code" : "01",
+    "code" : "71",
+    "desc" : "PRIOR STAY DATES",
+    "instructionDesc" : "This code and corresponding dates indicate the \"from\" and \"through\" dates provided by the patient for any hospital stay that ended within 60 days of the current hospital or SNF admission.",
     "occurrenceDate" : "2016-01-03",
     "occurrenceEndDate" : "2016-01-08"
   }, {
     "subType" : "OCCURRENCE_SPAN",
-    "code" : "10",
+    "code" : "72",
+    "desc" : "FIRST/LAST VISIT DATES",
+    "instructionDesc" : "This code and corresponding dates indicate the actual from and through dates of outpatient services. It is for use on outpatient bills when the entire billing record is not represented by the actual from and through services dates of Fl 6, Statement Covers Period. AND This code may also be used on inpatient claims to denote the contiguous outpatient hospital services that preceded the inpatient admission. This would represent outpatient services, not included in the inpatient claim, that are counted toward the two-midnight provision.",
     "occurrenceDate" : "2018-01-01",
     "occurrenceEndDate" : "2018-01-10"
   }, {
     "subType" : "OCCURRENCE_SPAN",
-    "code" : "11",
+    "code" : "73",
+    "desc" : "BENEFIT ELIGIBILITY PERIOD",
+    "instructionDesc" : "This code and corresponding dates indicate the period during which CHAMPUS medical benefits are available to a sponsor's beneficiary as shown on the beneficiary's identification card.",
     "occurrenceDate" : "2017-10-10",
     "occurrenceEndDate" : "2017-10-12"
   }, {
     "subType" : "OCCURRENCE_SPAN",
-    "code" : "16",
+    "code" : "74",
+    "desc" : "NON-COVERED LEVEL OF CARE/LEAVE OF ABSENCE DATES",
+    "instructionDesc" : "(This code and corresponding dates indicate the \"from\" and \"through\" dates of a period of noncovered level of care or leave of absence in an otherwise covered stay.  It excludes any period reported with the occurrence span code 76, 77, or 79 listed below.)",
     "occurrenceDate" : "2017-08-10",
     "occurrenceEndDate" : "2017-08-16"
   }, {
     "subType" : "OCCURRENCE_SPAN",
-    "code" : "18",
+    "code" : "75",
+    "desc" : "SNF LEVEL OF CARE DATES",
+    "instructionDesc" : "(This code and corresponding dates indicate the \"from\" and \"through\" dates of a period of SNF level of care during an inpatient hospital stay.)",
     "occurrenceDate" : "2015-12-12",
     "occurrenceEndDate" : "2015-12-22"
-  }, {
-    "subType" : "OCCURRENCE_SPAN",
-    "code" : "17",
-    "occurrenceDate" : "2017-12-24",
-    "occurrenceEndDate" : "2017-12-31"
-  }, {
-    "subType" : "OCCURRENCE_SPAN",
-    "code" : "36",
-    "occurrenceDate" : "2017-10-03",
-    "occurrenceEndDate" : "2017-11-23"
-  }, {
-    "subType" : "OCCURRENCE_SPAN",
-    "code" : "A3",
-    "occurrenceDate" : "2018-04-04",
-    "occurrenceEndDate" : "2018-06-04"
-  }, {
-    "subType" : "OCCURRENCE_SPAN",
-    "code" : "C3",
-    "occurrenceDate" : "2018-04-22",
-    "occurrenceEndDate" : "2018-04-24"
-  }, {
-    "subType" : "OCCURRENCE_SPAN",
-    "code" : "25",
-    "occurrenceDate" : "2018-04-04",
-    "occurrenceEndDate" : "2018-04-14"
-  }, {
-    "subType" : "OCCURRENCE_SPAN",
-    "code" : "22",
-    "occurrenceDate" : "2018-04-30",
-    "occurrenceEndDate" : "2018-05-01"
-  }, {
-    "subType" : "OCCURRENCE_SPAN",
-    "code" : "24",
-    "occurrenceDate" : "2018-05-06",
-    "occurrenceEndDate" : "2018-05-07"
   } ],
   "occurrences" : [ {
     "subType" : "OCCURRENCE",
@@ -868,7 +844,9 @@
   } ],
   "attachments" : [ {
     "reportTypeCode" : "OZ",
+    "type" : "SUPPORT_DATA_FOR_CLAIM",
     "reportTransmissionCode" : "BM",
+    "transmissionType" : "BY_MAIL",
     "controlNumber" : "DMN0012"
   } ],
   "serviceLines" : [ {
@@ -926,7 +904,9 @@
     },
     "attachments" : [ {
       "reportTypeCode" : "OZ",
+      "type" : "SUPPORT_DATA_FOR_CLAIM",
       "reportTransmissionCode" : "FT",
+      "transmissionType" : "FILE_TRANSFER",
       "controlNumber" : "DMN0012"
     } ],
     "providers" : [ {
@@ -1115,7 +1095,9 @@
     },
     "attachments" : [ {
       "reportTypeCode" : "08",
+      "type" : "PLAN_OF_TREATMENT",
       "reportTransmissionCode" : "EL",
+      "transmissionType" : "ELECTRONICALLY_ONLY",
       "controlNumber" : "TPM0048"
     } ],
     "providers" : [ {
@@ -1263,7 +1245,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a0614ddf8d6a2fc743482c8",
+    "id" : "6a32cb6397613a0e49908965",
     "controlNumber" : "00000024",
     "transactionType" : "INST",
     "hierarchicalStructureCode" : "0019",
@@ -1277,7 +1259,7 @@
     "fileInfo" : {
       "name" : "837I-all-fields.dat",
       "url" : "file:/edi-samples/edi_files/837/837I-all-fields.dat",
-      "lastModifiedDateTime" : "2026-05-14T09:19:17.915-04:00",
+      "lastModifiedDateTime" : "2026-06-10T22:07:38.468-04:00",
       "fileType" : "EDI"
     },
     "sender" : {

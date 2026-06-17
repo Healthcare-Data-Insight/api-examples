@@ -1,13 +1,13 @@
 [
  {
-  "id" : "6a0614ddf8d6a2fc74348574",
+  "id" : "6a32cb6397613a0e49908c1d",
   "objectType" : "CLAIM",
   "patientControlNumber" : "SMI123",
   "chargeAmount" : 75.00,
   "facilityCode" : {
     "subType" : "PLACE_OF_SERVICE",
     "code" : "12",
-    "desc" : "Home Health"
+    "desc" : "Home"
   },
   "placeOfServiceType" : "HOME",
   "frequencyCode" : {
@@ -44,7 +44,12 @@
       "entityType" : "BUSINESS",
       "identificationType" : "PAYOR_ID",
       "identifier" : "99999",
-      "lastNameOrOrgName" : "DMERC CARRIER"
+      "lastNameOrOrgName" : "DMERC CARRIER",
+      "address" : {
+        "city" : "LAFAYETTE",
+        "stateCode" : "IN",
+        "zipCode" : "47904"
+      }
     }
   },
   "providerSignatureIndicator" : "Y",
@@ -111,8 +116,22 @@
     },
     "dmeService" : {
       "procedure" : {
+        "type" : "PROCEDURE",
         "subType" : "HCPCS",
-        "code" : "A4631"
+        "code" : "K0001",
+        "desc" : "Standard wheelchair",
+        "startDate" : "1994-01-01",
+        "categories" : [ {
+          "type" : "RBCS_TAXONOMY",
+          "subType" : "RBCS_CATEGORY",
+          "code" : "D",
+          "desc" : "DME"
+        }, {
+          "type" : "RBCS_TAXONOMY",
+          "subType" : "RBCS_SUB_CATEGORY",
+          "code" : "DD",
+          "desc" : "Wheelchairs"
+        } ]
       },
       "durationUnitType" : "DAYS",
       "lengthOfMedicalNecessity" : 30,
@@ -123,7 +142,9 @@
     },
     "attachments" : [ {
       "reportTypeCode" : "CT",
-      "reportTransmissionCode" : "AD"
+      "type" : "CERTIFICATION",
+      "reportTransmissionCode" : "AD",
+      "transmissionType" : "CERTIFICATION_INCLUDED_IN_THIS_CLAIM"
     } ],
     "dmeCertification" : {
       "certificationTypeCode" : "I",
@@ -209,7 +230,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a0614ddf8d6a2fc7434853f",
+    "id" : "6a32cb6397613a0e49908be7",
     "controlNumber" : "112233",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -219,11 +240,11 @@
     "creationTime" : "10:36:00",
     "claimOrEncounterIdentifierType" : "CHARGEABLE",
     "transactionSetIdentifierCode" : "837",
-    "implementationConventionReference" : "005010X222",
+    "implementationConventionReference" : "005010X222A2",
     "fileInfo" : {
       "name" : "wheelchair.dat",
       "url" : "file:/edi-samples/edi_files/837/wheelchair.dat",
-      "lastModifiedDateTime" : "2026-05-05T11:21:04.937-04:00",
+      "lastModifiedDateTime" : "2026-06-14T11:58:52.402-04:00",
       "fileType" : "EDI"
     },
     "sender" : {

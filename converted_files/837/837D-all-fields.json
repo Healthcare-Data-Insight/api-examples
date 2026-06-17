@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6a04cc571ef26d534baef52c",
+  "id" : "6a32cb5f97613a0e49904677",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26403774",
   "chargeAmount" : 150.00,
@@ -366,7 +366,9 @@
   } ],
   "attachments" : [ {
     "reportTypeCode" : "OZ",
+    "type" : "SUPPORT_DATA_FOR_CLAIM",
     "reportTransmissionCode" : "BM",
+    "transmissionType" : "BY_MAIL",
     "controlNumber" : "DENT22"
   } ],
   "serviceLines" : [ {
@@ -379,7 +381,9 @@
     "repricedReferenceNumber" : "LineRepricedClaimNumber",
     "adjustedRepricedReferenceNumber" : "LineAdjustedRepricedClaimNumber",
     "priorAuthorization" : "LinePriorAuth",
+    "priorAuthorizationNumbers" : [ "LinePriorAuth" ],
     "referralNumber" : "LineReferral",
+    "referralNumbers" : [ "LineReferral" ],
     "chargeAmount" : 100.00,
     "salesTaxAmount" : 45.00,
     "priorPlacementDate" : "2023-04-01",
@@ -596,7 +600,7 @@
     }
   } ],
   "transaction" : {
-    "id" : "6a04cc571ef26d534baef496",
+    "id" : "6a32cb5f97613a0e499045e1",
     "controlNumber" : "3456",
     "transactionType" : "DENTAL",
     "hierarchicalStructureCode" : "0019",

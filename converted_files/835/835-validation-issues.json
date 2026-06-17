@@ -26,7 +26,7 @@
   "message" : "Required segment PER (payer_technical_contact_information) is missing in loop 1000A"
 }
 , {
-  "id" : "6a1203f78514d9e0d1342983",
+  "id" : "6a32cb6097613a0e499049cc",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "5554555444",
   "chargeAmount" : 700.00,
@@ -193,7 +193,7 @@
     "message" : "Unknown segment 'XX' for the transaction set 835"
   } ],
   "transaction" : {
-    "id" : "6a1203f78514d9e0d1342962",
+    "id" : "6a32cb6097613a0e499049ab",
     "controlNumber" : "0002",
     "transactionType" : "PAYMENT",
     "productionDate" : "2024-12-23",
@@ -207,7 +207,7 @@
     "transactionSetIdentifierCode" : "835",
     "fileInfo" : {
       "name" : "835-validation-issues.edi",
-      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/835/835-validation-issues.edi",
+      "url" : "file:/edi-samples/edi_files/835/835-validation-issues.edi",
       "lastModifiedDateTime" : "2026-05-17T10:06:32.63-04:00",
       "fileType" : "EDI"
     }

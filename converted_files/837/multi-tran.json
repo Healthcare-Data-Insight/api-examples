@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6a0614ddf8d6a2fc743484aa",
+  "id" : "6a32cb6397613a0e49908b4d",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26462967",
   "chargeAmount" : 100.00,
@@ -177,7 +177,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a0614ddf8d6a2fc74348439",
+    "id" : "6a32cb6397613a0e49908adc",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -223,7 +223,7 @@
   }
 }
 , {
-  "id" : "6a0614ddf8d6a2fc743484ab",
+  "id" : "6a32cb6397613a0e49908b4e",
   "objectType" : "CLAIM",
   "patientControlNumber" : "125WILL",
   "chargeAmount" : 145.50,
@@ -332,7 +332,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a0614ddf8d6a2fc74348466",
+    "id" : "6a32cb6397613a0e49908b09",
     "controlNumber" : "3701",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -375,14 +375,14 @@
   }
 }
 , {
-  "id" : "6a0614ddf8d6a2fc743484ac",
+  "id" : "6a32cb6397613a0e49908b4f",
   "objectType" : "CLAIM",
   "patientControlNumber" : "153829140",
   "chargeAmount" : 827.00,
   "facilityCode" : {
     "subType" : "PLACE_OF_SERVICE",
     "code" : "22",
-    "desc" : "Hospital Outpatient"
+    "desc" : "On Campus-Outpatient Hospital"
   },
   "placeOfServiceType" : "OUTPATIENT",
   "frequencyCode" : {
@@ -539,7 +539,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a0614ddf8d6a2fc74348487",
+    "id" : "6a32cb6397613a0e49908b2a",
     "controlNumber" : "0001",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",

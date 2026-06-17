@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6a0614dbf8d6a2fc74346588",
+  "id" : "6a32cb6297613a0e49906b90",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26403774",
   "chargeAmount" : 150.00,
@@ -366,7 +366,9 @@
   } ],
   "attachments" : [ {
     "reportTypeCode" : "OZ",
+    "type" : "SUPPORT_DATA_FOR_CLAIM",
     "reportTransmissionCode" : "BM",
+    "transmissionType" : "BY_MAIL",
     "controlNumber" : "DENT22"
   } ],
   "serviceLines" : [ {
@@ -379,7 +381,9 @@
     "repricedReferenceNumber" : "LineRepricedClaimNumber",
     "adjustedRepricedReferenceNumber" : "LineAdjustedRepricedClaimNumber",
     "priorAuthorization" : "LinePriorAuth",
+    "priorAuthorizationNumbers" : [ "LinePriorAuth" ],
     "referralNumber" : "LineReferral",
+    "referralNumbers" : [ "LineReferral" ],
     "chargeAmount" : 100.00,
     "salesTaxAmount" : 45.00,
     "priorPlacementDate" : "2023-04-01",
@@ -596,7 +600,7 @@
     }
   } ],
   "transaction" : {
-    "id" : "6a0614dbf8d6a2fc743464f2",
+    "id" : "6a32cb6297613a0e49906afa",
     "controlNumber" : "3456",
     "transactionType" : "DENTAL",
     "hierarchicalStructureCode" : "0019",
@@ -639,13 +643,14 @@
   }
 }
 , {
-  "id" : "6a0614dbf8d6a2fc743465d0",
+  "id" : "6a32cb6297613a0e49906bda",
   "objectType" : "CLAIM",
   "patientControlNumber" : "051068",
   "chargeAmount" : 766.50,
   "facilityCode" : {
     "subType" : "PLACE_OF_SERVICE",
-    "code" : "41"
+    "code" : "41",
+    "desc" : "Ambulance - Land"
   },
   "placeOfServiceType" : "OTHER",
   "frequencyCode" : {
@@ -698,7 +703,9 @@
   "patientSignatureSourceCode" : "P",
   "relatedCause" : {
     "relatedCauseCode" : "AA",
+    "relatedCauseType" : "AUTO_ACCIDENT",
     "relatedCauseCode2" : "OA",
+    "relatedCauseType2" : "OTHER_ACCIDENT",
     "stateCode" : "FL"
   },
   "accidentDate" : "2005-02-08",
@@ -949,7 +956,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a0614dbf8d6a2fc7434658d",
+    "id" : "6a32cb6297613a0e49906b97",
     "controlNumber" : "000017712",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -959,11 +966,11 @@
     "creationTime" : "11:12:00",
     "claimOrEncounterIdentifierType" : "CHARGEABLE",
     "transactionSetIdentifierCode" : "837",
-    "implementationConventionReference" : "005010X222",
+    "implementationConventionReference" : "005010X222A2",
     "fileInfo" : {
       "name" : "ambulance.dat",
       "url" : "file:/edi-samples/edi_files/837/ambulance.dat",
-      "lastModifiedDateTime" : "2026-05-05T11:21:04.937-04:00",
+      "lastModifiedDateTime" : "2026-06-10T22:07:38.47-04:00",
       "fileType" : "EDI"
     },
     "sender" : {
@@ -992,7 +999,7 @@
   }
 }
 , {
-  "id" : "6a0614dcf8d6a2fc74346600",
+  "id" : "6a32cb6297613a0e49906c0b",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26462967",
   "chargeAmount" : 100.00,
@@ -1169,7 +1176,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a0614dcf8d6a2fc743465d4",
+    "id" : "6a32cb6297613a0e49906bdf",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -1215,7 +1222,7 @@
   }
 }
 , {
-  "id" : "6a0614dcf8d6a2fc7434669e",
+  "id" : "6a32cb6297613a0e49906cab",
   "objectType" : "CLAIM",
   "patientControlNumber" : "ABC0002",
   "chargeAmount" : 259.96,
@@ -1593,6 +1600,7 @@
   "assignmentCertificationIndicator" : "Y",
   "releaseOfInformationCode" : "Y",
   "delayReasonCode" : "4",
+  "delayReasonType" : "DELAY_IN_CERTIFYING_PROVIDER",
   "serviceAuthorizationExceptionCode" : "1",
   "referralNumber" : "2410628868",
   "priorAuthorizationNumber" : "PA00000024",
@@ -1840,64 +1848,39 @@
   } ],
   "occurrenceSpans" : [ {
     "subType" : "OCCURRENCE_SPAN",
-    "code" : "01",
+    "code" : "71",
+    "desc" : "PRIOR STAY DATES",
+    "instructionDesc" : "This code and corresponding dates indicate the \"from\" and \"through\" dates provided by the patient for any hospital stay that ended within 60 days of the current hospital or SNF admission.",
     "occurrenceDate" : "2016-01-03",
     "occurrenceEndDate" : "2016-01-08"
   }, {
     "subType" : "OCCURRENCE_SPAN",
-    "code" : "10",
+    "code" : "72",
+    "desc" : "FIRST/LAST VISIT DATES",
+    "instructionDesc" : "This code and corresponding dates indicate the actual from and through dates of outpatient services. It is for use on outpatient bills when the entire billing record is not represented by the actual from and through services dates of Fl 6, Statement Covers Period. AND This code may also be used on inpatient claims to denote the contiguous outpatient hospital services that preceded the inpatient admission. This would represent outpatient services, not included in the inpatient claim, that are counted toward the two-midnight provision.",
     "occurrenceDate" : "2018-01-01",
     "occurrenceEndDate" : "2018-01-10"
   }, {
     "subType" : "OCCURRENCE_SPAN",
-    "code" : "11",
+    "code" : "73",
+    "desc" : "BENEFIT ELIGIBILITY PERIOD",
+    "instructionDesc" : "This code and corresponding dates indicate the period during which CHAMPUS medical benefits are available to a sponsor's beneficiary as shown on the beneficiary's identification card.",
     "occurrenceDate" : "2017-10-10",
     "occurrenceEndDate" : "2017-10-12"
   }, {
     "subType" : "OCCURRENCE_SPAN",
-    "code" : "16",
+    "code" : "74",
+    "desc" : "NON-COVERED LEVEL OF CARE/LEAVE OF ABSENCE DATES",
+    "instructionDesc" : "(This code and corresponding dates indicate the \"from\" and \"through\" dates of a period of noncovered level of care or leave of absence in an otherwise covered stay.  It excludes any period reported with the occurrence span code 76, 77, or 79 listed below.)",
     "occurrenceDate" : "2017-08-10",
     "occurrenceEndDate" : "2017-08-16"
   }, {
     "subType" : "OCCURRENCE_SPAN",
-    "code" : "18",
+    "code" : "75",
+    "desc" : "SNF LEVEL OF CARE DATES",
+    "instructionDesc" : "(This code and corresponding dates indicate the \"from\" and \"through\" dates of a period of SNF level of care during an inpatient hospital stay.)",
     "occurrenceDate" : "2015-12-12",
     "occurrenceEndDate" : "2015-12-22"
-  }, {
-    "subType" : "OCCURRENCE_SPAN",
-    "code" : "17",
-    "occurrenceDate" : "2017-12-24",
-    "occurrenceEndDate" : "2017-12-31"
-  }, {
-    "subType" : "OCCURRENCE_SPAN",
-    "code" : "36",
-    "occurrenceDate" : "2017-10-03",
-    "occurrenceEndDate" : "2017-11-23"
-  }, {
-    "subType" : "OCCURRENCE_SPAN",
-    "code" : "A3",
-    "occurrenceDate" : "2018-04-04",
-    "occurrenceEndDate" : "2018-06-04"
-  }, {
-    "subType" : "OCCURRENCE_SPAN",
-    "code" : "C3",
-    "occurrenceDate" : "2018-04-22",
-    "occurrenceEndDate" : "2018-04-24"
-  }, {
-    "subType" : "OCCURRENCE_SPAN",
-    "code" : "25",
-    "occurrenceDate" : "2018-04-04",
-    "occurrenceEndDate" : "2018-04-14"
-  }, {
-    "subType" : "OCCURRENCE_SPAN",
-    "code" : "22",
-    "occurrenceDate" : "2018-04-30",
-    "occurrenceEndDate" : "2018-05-01"
-  }, {
-    "subType" : "OCCURRENCE_SPAN",
-    "code" : "24",
-    "occurrenceDate" : "2018-05-06",
-    "occurrenceEndDate" : "2018-05-07"
   } ],
   "occurrences" : [ {
     "subType" : "OCCURRENCE",
@@ -2083,7 +2066,9 @@
   } ],
   "attachments" : [ {
     "reportTypeCode" : "OZ",
+    "type" : "SUPPORT_DATA_FOR_CLAIM",
     "reportTransmissionCode" : "BM",
+    "transmissionType" : "BY_MAIL",
     "controlNumber" : "DMN0012"
   } ],
   "serviceLines" : [ {
@@ -2141,7 +2126,9 @@
     },
     "attachments" : [ {
       "reportTypeCode" : "OZ",
+      "type" : "SUPPORT_DATA_FOR_CLAIM",
       "reportTransmissionCode" : "FT",
+      "transmissionType" : "FILE_TRANSFER",
       "controlNumber" : "DMN0012"
     } ],
     "providers" : [ {
@@ -2330,7 +2317,9 @@
     },
     "attachments" : [ {
       "reportTypeCode" : "08",
+      "type" : "PLAN_OF_TREATMENT",
       "reportTransmissionCode" : "EL",
+      "transmissionType" : "ELECTRONICALLY_ONLY",
       "controlNumber" : "TPM0048"
     } ],
     "providers" : [ {
@@ -2478,7 +2467,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a0614dcf8d6a2fc74346605",
+    "id" : "6a32cb6297613a0e49906c12",
     "controlNumber" : "00000024",
     "transactionType" : "INST",
     "hierarchicalStructureCode" : "0019",
@@ -2492,7 +2481,7 @@
     "fileInfo" : {
       "name" : "837I-all-fields.dat",
       "url" : "file:/edi-samples/edi_files/837/837I-all-fields.dat",
-      "lastModifiedDateTime" : "2026-05-14T09:19:17.915-04:00",
+      "lastModifiedDateTime" : "2026-06-10T22:07:38.468-04:00",
       "fileType" : "EDI"
     },
     "sender" : {
@@ -2521,7 +2510,7 @@
   }
 }
 , {
-  "id" : "6a0614dcf8d6a2fc743466c7",
+  "id" : "6a32cb6297613a0e49906cd7",
   "objectType" : "CLAIM",
   "patientControlNumber" : "125WILL",
   "chargeAmount" : 145.50,
@@ -2565,7 +2554,12 @@
       "entityType" : "BUSINESS",
       "identificationType" : "PAYOR_ID",
       "identifier" : "C12345",
-      "lastNameOrOrgName" : "MEDICARE PART B MARYLAND"
+      "lastNameOrOrgName" : "MEDICARE PART B MARYLAND",
+      "address" : {
+        "city" : "BALTIMORE",
+        "stateCode" : "MD",
+        "zipCode" : "21236"
+      }
     }
   },
   "providerSignatureIndicator" : "Y",
@@ -2630,7 +2624,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a0614dcf8d6a2fc743466a3",
+    "id" : "6a32cb6297613a0e49906cb2",
     "controlNumber" : "3701",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -2640,11 +2634,11 @@
     "creationTime" : "07:54:20",
     "claimOrEncounterIdentifierType" : "CHARGEABLE",
     "transactionSetIdentifierCode" : "837",
-    "implementationConventionReference" : "005010X222",
+    "implementationConventionReference" : "005010X222A2",
     "fileInfo" : {
       "name" : "chiro.dat",
       "url" : "file:/edi-samples/edi_files/837/chiro.dat",
-      "lastModifiedDateTime" : "2026-02-22T16:05:15.379-05:00",
+      "lastModifiedDateTime" : "2026-06-14T11:11:21.502-04:00",
       "fileType" : "EDI"
     },
     "sender" : {
@@ -2673,7 +2667,7 @@
   }
 }
 , {
-  "id" : "6a0614dcf8d6a2fc7434670f",
+  "id" : "6a32cb6297613a0e49906d1f",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26407789",
   "chargeAmount" : 79.04,
@@ -3052,7 +3046,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a0614dcf8d6a2fc743466ca",
+    "id" : "6a32cb6297613a0e49906cda",
     "controlNumber" : "0024",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -3095,7 +3089,7 @@
   }
 }
 , {
-  "id" : "6a0614dcf8d6a2fc74346746",
+  "id" : "6a32cb6297613a0e49906d56",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26463774",
   "chargeAmount" : 100.00,
@@ -3305,7 +3299,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a0614dcf8d6a2fc74346712",
+    "id" : "6a32cb6297613a0e49906d22",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -3351,7 +3345,7 @@
   }
 }
 , {
-  "id" : "6a0614dcf8d6a2fc7434677c",
+  "id" : "6a32cb6297613a0e49906d8e",
   "objectType" : "CLAIM",
   "patientControlNumber" : "756048Q",
   "chargeAmount" : 89.93,
@@ -3557,7 +3551,7 @@
     }
   } ],
   "transaction" : {
-    "id" : "6a0614dcf8d6a2fc7434674b",
+    "id" : "6a32cb6297613a0e49906d5d",
     "controlNumber" : "0021",
     "transactionType" : "INST",
     "hierarchicalStructureCode" : "0019",
@@ -3600,7 +3594,7 @@
   }
 }
 , {
-  "id" : "6a0614dcf8d6a2fc743467aa",
+  "id" : "6a32cb6297613a0e49906dbd",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26463774",
   "chargeAmount" : 100.00,
@@ -3761,7 +3755,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a0614dcf8d6a2fc74346780",
+    "id" : "6a32cb6297613a0e49906d93",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -3807,7 +3801,7 @@
   }
 }
 , {
-  "id" : "6a0614dcf8d6a2fc7434681e",
+  "id" : "6a32cb6297613a0e49906e31",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26462967",
   "chargeAmount" : 100.00,
@@ -3984,7 +3978,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a0614dcf8d6a2fc743467ad",
+    "id" : "6a32cb6297613a0e49906dc0",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -4030,7 +4024,7 @@
   }
 }
 , {
-  "id" : "6a0614dcf8d6a2fc7434681f",
+  "id" : "6a32cb6297613a0e49906e32",
   "objectType" : "CLAIM",
   "patientControlNumber" : "125WILL",
   "chargeAmount" : 145.50,
@@ -4139,7 +4133,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a0614dcf8d6a2fc743467da",
+    "id" : "6a32cb6297613a0e49906ded",
     "controlNumber" : "3701",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -4182,14 +4176,14 @@
   }
 }
 , {
-  "id" : "6a0614dcf8d6a2fc74346820",
+  "id" : "6a32cb6297613a0e49906e33",
   "objectType" : "CLAIM",
   "patientControlNumber" : "153829140",
   "chargeAmount" : 827.00,
   "facilityCode" : {
     "subType" : "PLACE_OF_SERVICE",
     "code" : "22",
-    "desc" : "Hospital Outpatient"
+    "desc" : "On Campus-Outpatient Hospital"
   },
   "placeOfServiceType" : "OUTPATIENT",
   "frequencyCode" : {
@@ -4346,7 +4340,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a0614dcf8d6a2fc743467fb",
+    "id" : "6a32cb6297613a0e49906e0e",
     "controlNumber" : "0001",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -4392,7 +4386,7 @@
   }
 }
 , {
-  "id" : "6a0614dcf8d6a2fc74346850",
+  "id" : "6a32cb6297613a0e49906e63",
   "objectType" : "CLAIM",
   "patientControlNumber" : "756048Q",
   "chargeAmount" : 89.93,
@@ -4597,7 +4591,7 @@
     }
   } ],
   "transaction" : {
-    "id" : "6a0614dcf8d6a2fc74346823",
+    "id" : "6a32cb6297613a0e49906e36",
     "controlNumber" : "987654",
     "transactionType" : "INST",
     "hierarchicalStructureCode" : "0019",
@@ -4640,7 +4634,7 @@
   }
 }
 , {
-  "id" : "6a0614dcf8d6a2fc74346882",
+  "id" : "6a32cb6297613a0e49906e95",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26463774",
   "chargeAmount" : 100.00,
@@ -4818,7 +4812,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a0614dcf8d6a2fc74346853",
+    "id" : "6a32cb6297613a0e49906e66",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -4864,14 +4858,14 @@
   }
 }
 , {
-  "id" : "6a0614dcf8d6a2fc743468ae",
+  "id" : "6a32cb6297613a0e49906ec4",
   "objectType" : "CLAIM",
   "patientControlNumber" : "153829140",
-  "chargeAmount" : 827.00,
+  "chargeAmount" : 1654.00,
   "facilityCode" : {
     "subType" : "PLACE_OF_SERVICE",
     "code" : "22",
-    "desc" : "Hospital Outpatient"
+    "desc" : "On Campus-Outpatient Hospital"
   },
   "placeOfServiceType" : "OUTPATIENT",
   "frequencyCode" : {
@@ -4907,7 +4901,12 @@
       "entityType" : "BUSINESS",
       "identificationType" : "PAYOR_ID",
       "identifier" : "05440",
-      "lastNameOrOrgName" : "ABC PAYER"
+      "lastNameOrOrgName" : "ABC PAYER",
+      "address" : {
+        "city" : "NASHVILLE",
+        "stateCode" : "TN",
+        "zipCode" : "37232"
+      }
     }
   },
   "providerSignatureIndicator" : "Y",
@@ -5028,7 +5027,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a0614dcf8d6a2fc74346887",
+    "id" : "6a32cb6297613a0e49906e9c",
     "controlNumber" : "0001",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -5042,7 +5041,7 @@
     "fileInfo" : {
       "name" : "anesthesia.dat",
       "url" : "file:/edi-samples/edi_files/837/anesthesia.dat",
-      "lastModifiedDateTime" : "2026-02-22T16:05:15.379-05:00",
+      "lastModifiedDateTime" : "2026-06-14T11:16:02.168-04:00",
       "fileType" : "EDI"
     },
     "sender" : {
@@ -5074,14 +5073,14 @@
   }
 }
 , {
-  "id" : "6a0614dcf8d6a2fc743468e8",
+  "id" : "6a32cb6297613a0e49906f01",
   "objectType" : "CLAIM",
   "patientControlNumber" : "SMI123",
   "chargeAmount" : 75.00,
   "facilityCode" : {
     "subType" : "PLACE_OF_SERVICE",
     "code" : "12",
-    "desc" : "Home Health"
+    "desc" : "Home"
   },
   "placeOfServiceType" : "HOME",
   "frequencyCode" : {
@@ -5118,7 +5117,12 @@
       "entityType" : "BUSINESS",
       "identificationType" : "PAYOR_ID",
       "identifier" : "99999",
-      "lastNameOrOrgName" : "DMERC CARRIER"
+      "lastNameOrOrgName" : "DMERC CARRIER",
+      "address" : {
+        "city" : "LAFAYETTE",
+        "stateCode" : "IN",
+        "zipCode" : "47904"
+      }
     }
   },
   "providerSignatureIndicator" : "Y",
@@ -5185,8 +5189,22 @@
     },
     "dmeService" : {
       "procedure" : {
+        "type" : "PROCEDURE",
         "subType" : "HCPCS",
-        "code" : "A4631"
+        "code" : "K0001",
+        "desc" : "Standard wheelchair",
+        "startDate" : "1994-01-01",
+        "categories" : [ {
+          "type" : "RBCS_TAXONOMY",
+          "subType" : "RBCS_CATEGORY",
+          "code" : "D",
+          "desc" : "DME"
+        }, {
+          "type" : "RBCS_TAXONOMY",
+          "subType" : "RBCS_SUB_CATEGORY",
+          "code" : "DD",
+          "desc" : "Wheelchairs"
+        } ]
       },
       "durationUnitType" : "DAYS",
       "lengthOfMedicalNecessity" : 30,
@@ -5197,7 +5215,9 @@
     },
     "attachments" : [ {
       "reportTypeCode" : "CT",
-      "reportTransmissionCode" : "AD"
+      "type" : "CERTIFICATION",
+      "reportTransmissionCode" : "AD",
+      "transmissionType" : "CERTIFICATION_INCLUDED_IN_THIS_CLAIM"
     } ],
     "dmeCertification" : {
       "certificationTypeCode" : "I",
@@ -5283,7 +5303,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a0614dcf8d6a2fc743468b3",
+    "id" : "6a32cb6297613a0e49906ecb",
     "controlNumber" : "112233",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -5293,11 +5313,11 @@
     "creationTime" : "10:36:00",
     "claimOrEncounterIdentifierType" : "CHARGEABLE",
     "transactionSetIdentifierCode" : "837",
-    "implementationConventionReference" : "005010X222",
+    "implementationConventionReference" : "005010X222A2",
     "fileInfo" : {
       "name" : "wheelchair.dat",
       "url" : "file:/edi-samples/edi_files/837/wheelchair.dat",
-      "lastModifiedDateTime" : "2026-05-05T11:21:04.937-04:00",
+      "lastModifiedDateTime" : "2026-06-14T11:58:52.402-04:00",
       "fileType" : "EDI"
     },
     "sender" : {
@@ -5326,7 +5346,7 @@
   }
 }
 , {
-  "id" : "6a0614dcf8d6a2fc74346917",
+  "id" : "6a32cb6297613a0e49906f30",
   "objectType" : "CLAIM",
   "patientControlNumber" : "ABC123-RI",
   "chargeAmount" : 28.75,
@@ -5443,6 +5463,7 @@
   } ],
   "serviceLines" : [ {
     "referralNumber" : "V123456",
+    "referralNumbers" : [ "V123456" ],
     "chargeAmount" : 25.00,
     "serviceDateFrom" : "2005-05-14",
     "unitType" : "UNIT",
@@ -5501,7 +5522,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a0614dcf8d6a2fc743468eb",
+    "id" : "6a32cb6297613a0e49906f04",
     "controlNumber" : "1002",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -5544,7 +5565,7 @@
   }
 }
 , {
-  "id" : "6a0614dcf8d6a2fc74346951",
+  "id" : "6a32cb6297613a0e49906f6a",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26407789",
   "chargeAmount" : 79.04,
@@ -5797,7 +5818,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a0614dcf8d6a2fc7434691a",
+    "id" : "6a32cb6297613a0e49906f33",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -5840,7 +5861,7 @@
   }
 }
 , {
-  "id" : "6a0614dcf8d6a2fc74346974",
+  "id" : "6a32cb6297613a0e49906f8f",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26463774",
   "chargeAmount" : 100.00,
@@ -5939,7 +5960,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a0614dcf8d6a2fc74346956",
+    "id" : "6a32cb6297613a0e49906f71",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -5985,14 +6006,14 @@
   }
 }
 , {
-  "id" : "6a0614dcf8d6a2fc743469bb",
+  "id" : "6a32cb6297613a0e49906fd6",
   "objectType" : "CLAIM",
   "patientControlNumber" : "CLMNO12345",
   "chargeAmount" : 2232.93,
   "facilityCode" : {
     "subType" : "PLACE_OF_SERVICE",
     "code" : "12",
-    "desc" : "Home Health"
+    "desc" : "Home"
   },
   "placeOfServiceType" : "HOME",
   "frequencyCode" : {
@@ -6291,7 +6312,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a0614dcf8d6a2fc74346977",
+    "id" : "6a32cb6297613a0e49906f92",
     "controlNumber" : "0711",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -6334,7 +6355,7 @@
   }
 }
 , {
-  "id" : "6a0614dcf8d6a2fc74346a78",
+  "id" : "6a32cb6297613a0e49907098",
   "objectType" : "CLAIM",
   "patientControlNumber" : "36463774",
   "chargeAmount" : 100.00,
@@ -6664,21 +6685,23 @@
   "assignmentCertificationIndicator" : "Y",
   "releaseOfInformationCode" : "Y",
   "specialProgramCode" : "05",
+  "specialProgramType" : "DISABILITY",
   "delayReasonCode" : "4",
+  "delayReasonType" : "DELAY_IN_CERTIFYING_PROVIDER",
   "serviceAuthorizationExceptionCode" : "7",
   "medicareSection4081Indicator" : "N",
-  "mammographyCertificationNumber" : "Unmapped-MammogCertNumber",
+  "mammographyCertificationNumber" : "MammogCertNumber",
   "referralNumber" : "ReferralNum",
   "priorAuthorizationNumber" : "PriorAuth",
   "originalReferenceNumber" : "PayerClaimControlNum",
-  "cliaNumber" : "Unmapped-Clia",
+  "cliaNumber" : "Clia",
   "repricedReferenceNumber" : "Repriced",
   "adjustedRepricedReferenceNumber" : "AdjRepriced",
-  "investigationalDeviceExemptionNumber" : "Unmapped-InvDeviceExemp",
+  "investigationalDeviceExemptionNumber" : "InvDeviceExemp",
   "clearinghouseTraceNumber" : "ClaimIdForTransm",
   "medicalRecordNumber" : "MedicalRecordNum",
   "demonstrationProjectIdentifier" : "DemonstrProjectId",
-  "carePlanOversightNumber" : "Unmapped-CarePlanOversight",
+  "carePlanOversightNumber" : "CarePlanOversight",
   "onsetOfCurrentIllnessOrInjuryDate" : "2018-03-12",
   "initialTreatmentDate" : "2018-03-01",
   "lastSeenDate" : "2005-01-08",
@@ -6855,7 +6878,9 @@
   } ],
   "attachments" : [ {
     "reportTypeCode" : "OZ",
+    "type" : "SUPPORT_DATA_FOR_CLAIM",
     "reportTransmissionCode" : "BM",
+    "transmissionType" : "BY_MAIL",
     "controlNumber" : "DMN0012"
   } ],
   "serviceLines" : [ {
@@ -6869,12 +6894,16 @@
     "repricedReferenceNumber" : "Repriced",
     "adjustedRepricedReferenceNumber" : "AdjRepriced",
     "priorAuthorization" : "PriorAuthorization",
+    "priorAuthorizationNumbers" : [ "PriorAuthorization" ],
     "mammographyCertificationNumber" : "Mammog",
     "cliaNumber" : "CLIA-Amend",
     "referringCliaNumber" : "CLIA-Fac",
     "immunizationBatchNumber" : "Immune",
     "referralNumber" : "ReferralNumber",
+    "referralNumbers" : [ "ReferralNumber" ],
     "chargeAmount" : 40.00,
+    "salesTaxAmount" : 101.00,
+    "postageClaimedAmount" : 8.59,
     "purchasedServiceProviderIdentifier" : "PN222222",
     "purchasedServiceChargeAmount" : 110.00,
     "serviceDateFrom" : "2005-03-14",
@@ -6883,6 +6912,7 @@
     "beginTherapyDate" : "2005-01-12",
     "lastSeenDate" : "2005-01-08",
     "testPerformedDate" : "2005-01-12",
+    "shippedDate" : "2005-01-12",
     "lastXRayDate" : "2005-01-08",
     "initialTreatmentDate" : "2005-01-08",
     "unitType" : "UNIT",
@@ -6897,7 +6927,7 @@
     "drugQuantity" : 1.01,
     "drugUnitType" : "UNIT",
     "prescriptionNumber" : "123456",
-    "prescriptionNumberType" : "PHARMACY_PRESCRIPTION_NUMBER",
+    "prescriptionNumberType" : "LINK_SEQUENCE_NUMBER",
     "lineNote" : "PATIENT GOAL TO BE OFF OXYGEN BY END OF MONTH",
     "thirdPartyNote" : "STATE REGULATION 123 WAS APPLIED DURING THE PRICING OF THIS PROF CLAIM",
     "notes" : [ {
@@ -6928,11 +6958,15 @@
     },
     "attachments" : [ {
       "reportTypeCode" : "OZ",
+      "type" : "SUPPORT_DATA_FOR_CLAIM",
       "reportTransmissionCode" : "BM",
+      "transmissionType" : "BY_MAIL",
       "controlNumber" : "Line123"
     }, {
       "reportTypeCode" : "CT",
-      "reportTransmissionCode" : "AB"
+      "type" : "CERTIFICATION",
+      "reportTransmissionCode" : "AB",
+      "transmissionType" : "PREVIOUSLY_SUBMITTED_TO_PAYER"
     } ],
     "measurements" : [ {
       "categoryCode" : "TR",
@@ -7131,7 +7165,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a0614dcf8d6a2fc743469c0",
+    "id" : "6a32cb6297613a0e49906fdd",
     "controlNumber" : "0031",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -7145,7 +7179,7 @@
     "fileInfo" : {
       "name" : "837P-all-fields.dat",
       "url" : "file:/edi-samples/edi_files/837/837P-all-fields.dat",
-      "lastModifiedDateTime" : "2026-05-05T11:21:04.936-04:00",
+      "lastModifiedDateTime" : "2026-06-10T22:07:38.468-04:00",
       "fileType" : "EDI"
     },
     "sender" : {
@@ -7177,7 +7211,7 @@
   }
 }
 , {
-  "id" : "6a0614dcf8d6a2fc74346ab3",
+  "id" : "6a32cb6297613a0e499070d3",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26463774",
   "chargeAmount" : 100.00,
@@ -7394,7 +7428,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a0614dcf8d6a2fc74346a7b",
+    "id" : "6a32cb6297613a0e4990709b",
     "controlNumber" : "0021",
     "transactionType" : "INST",
     "hierarchicalStructureCode" : "0019",
