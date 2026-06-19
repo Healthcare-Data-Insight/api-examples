@@ -10,7 +10,7 @@ properties:
     type: "string"
     x-enum-name: "ObjectType"
   transactionType:
-    description: "Transaction type as enum for EDI generator; if not provided, GS01, GS08 must be populated."
+    description: "Transaction type as enum for the EDI generator; if not provided, GS01, GS08 must be populated. Not populated by the converter."
     type: "string"
     enum:
     - "PROF"

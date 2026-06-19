@@ -21,7 +21,7 @@ properties:
     x-edi-elt-designators:
     - "CLM02"
   facilityCode:
-    description: "Place of service code (professional/dental) or UB facility code (institutional) from the original claim. EDI: CLM05-1."
+    description: "Facility Code. EDI: CLM05-1."
     $ref: "./Code.yaml"
     x-edi-elt-designators:
     - "CLM05-1"
