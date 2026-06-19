@@ -118,12 +118,12 @@ class AwsRequest(EdiConverterModel):
     "Name of the bucket for converted files. If not defined, the converter will use the value from the 'OUT_BUCKET' environment variable."
     out_format: str | None = Field(default=None, description="The format to convert EDI files to. The function defaults to JSON. You can also define the 'OUT_FORMAT' environment variable to override the default.")
     "The format to convert EDI files to. The function defaults to JSON. You can also define the 'OUT_FORMAT' environment variable to override the default."
+    is_validate: bool | None = Field(default=None, description="Perform full EDI validation. Validation messages are written to the response stream as 'VALIDATION' objects. You can also set the 'EDI_VALIDATE' environment variable and set its value to 'true'. Since: v2.15.0.")
+    "Perform full EDI validation. Validation messages are written to the response stream as 'VALIDATION' objects. You can also set the 'EDI_VALIDATE' environment variable and set its value to 'true'. Since: v2.15.0."
     csv_schema_name: str | None = Field(default=None, description="Name of the <a href='/docs/csv/schemas/#built-in-conversion-schemas'>CSV conversion schema</a>. Defaults to 'lines-with-header-repeat-first-row' (single file schema). You can also define the 'CSV_SCHEMA_NAME' environment variable to override the default.")
     "Name of the <a href='/docs/csv/schemas/#built-in-conversion-schemas'>CSV conversion schema</a>. Defaults to 'lines-with-header-repeat-first-row' (single file schema). You can also define the 'CSV_SCHEMA_NAME' environment variable to override the default."
     warnings_in_output: bool | None = Field(default=None, description="Include EDI parser warnings in the output files, see <a href='/docs/ediconvert-api/user-guide/#error-handling'>documentation on error handling</a> for more details. You can also define the 'OUTPUT_WARNINGS' environment variable and set its value to 'True'. Deprecated: Use 'isValidate' instead.")
     "Include EDI parser warnings in the output files, see <a href='/docs/ediconvert-api/user-guide/#error-handling'>documentation on error handling</a> for more details. You can also define the 'OUTPUT_WARNINGS' environment variable and set its value to 'True'. Deprecated: Use 'isValidate' instead."
-    is_validate: bool | None = Field(default=None, description="Perform full EDI validation. Validation messages are written to the response stream as 'VALIDATION' objects. You can also set the 'EDI_VALIDATE' environment variable and set its value to 'True'. Since: v2.15.0.")
-    "Perform full EDI validation. Validation messages are written to the response stream as 'VALIDATION' objects. You can also set the 'EDI_VALIDATE' environment variable and set its value to 'True'. Since: v2.15.0."
     max_warnings: int | None = Field(default=None, description="The maximum number of parsing warnings per file before stopping and raising an error. Defaults to 3000. Set to -1 to suppress raising the 'too many warnings' error; the converter will process the entire file.")
     "The maximum number of parsing warnings per file before stopping and raising an error. Defaults to 3000. Set to -1 to suppress raising the 'too many warnings' error; the converter will process the entire file."
     is_about_only: bool | None = Field(default=None, description="Print the converter's version and license information and exit. All other fields are ignored.")
@@ -278,8 +278,8 @@ class DentClaim(EdiConverterModel):
     'Charge amount. EDI: CLM02.'
     patient_paid_amount: float | None = Field(default=None, description='Patient paid amount. EDI: AMT02*F5.')
     'Patient paid amount. EDI: AMT02*F5.'
-    facility_code: Code | None = Field(default=None, description='Place of service code (professional/dental) or UB facility code (institutional) from the original claim. EDI: CLM05-1.')
-    'Place of service code (professional/dental) or UB facility code (institutional) from the original claim. EDI: CLM05-1.'
+    facility_code: Code | None = Field(default=None, description='Place of Service Code. EDI: CLM05-1.')
+    'Place of Service Code. EDI: CLM05-1.'
     frequency_code: Code | None = Field(default=None, description='Frequency code. EDI: CLM05-3.')
     'Frequency code. EDI: CLM05-3.'
     service_date_from: dt.date | None = Field(default=None, description='The earliest service date from service lines.')
@@ -522,8 +522,8 @@ class FunctionalGroup(EdiConverterModel):
     'Unique object identifier assigned by the converter.'
     object_type: ObjectType | None = Field(default=None, description="Type of this object, always set to 'FUNCTIONAL_GROUP'.")
     "Type of this object, always set to 'FUNCTIONAL_GROUP'."
-    transaction_type: TransactionType | None = Field(default=None, description='Transaction type as enum for EDI generator; if not provided, GS01, GS08 must be populated.')
-    'Transaction type as enum for EDI generator; if not provided, GS01, GS08 must be populated.'
+    transaction_type: TransactionType | None = Field(default=None, description='Transaction type as enum for the EDI generator; if not provided, GS01, GS08 must be populated. Not populated by the converter.')
+    'Transaction type as enum for the EDI generator; if not provided, GS01, GS08 must be populated. Not populated by the converter.'
     functional_identifier_code: str | None = Field(default=None, description='Functional identifier code. EDI: GS01.')
     'Functional identifier code. EDI: GS01.'
     sender_code: str | None = Field(default=None, description='Sender code. EDI: GS02.')
@@ -628,8 +628,8 @@ class InstClaim(EdiConverterModel):
     'Identifier used to track a claim from creation by the health care provider through payment. EDI: CLM01.'
     charge_amount: float | None = Field(default=None, description='Charge amount. EDI: CLM02.')
     'Charge amount. EDI: CLM02.'
-    facility_code: Code | None = Field(default=None, description='Place of service code (professional/dental) or UB facility code (institutional) from the original claim. EDI: CLM05-1.')
-    'Place of service code (professional/dental) or UB facility code (institutional) from the original claim. EDI: CLM05-1.'
+    facility_code: Code | None = Field(default=None, description='Facility Code. EDI: CLM05-1.')
+    'Facility Code. EDI: CLM05-1.'
     frequency_code: Code | None = Field(default=None, description='Frequency code. EDI: CLM05-3.')
     'Frequency code. EDI: CLM05-3.'
     statement_date_from: dt.date | None = Field(default=None, description='Statement date from. EDI: DTP03*434.')
@@ -1594,8 +1594,8 @@ class ProfClaim(EdiConverterModel):
     'Charge amount. EDI: CLM02.'
     patient_paid_amount: float | None = Field(default=None, description='Patient paid amount. EDI: AMT02*F5.')
     'Patient paid amount. EDI: AMT02*F5.'
-    facility_code: Code | None = Field(default=None, description='Place of service code (professional/dental) or UB facility code (institutional) from the original claim. EDI: CLM05-1.')
-    'Place of service code (professional/dental) or UB facility code (institutional) from the original claim. EDI: CLM05-1.'
+    facility_code: Code | None = Field(default=None, description='Place of Service Code. EDI: CLM05-1.')
+    'Place of Service Code. EDI: CLM05-1.'
     frequency_code: Code | None = Field(default=None, description='Frequency code. EDI: CLM05-3.')
     'Frequency code. EDI: CLM05-3.'
     service_date_from: dt.date | None = Field(default=None, description='The earliest service date from service lines.')
@@ -2434,7 +2434,7 @@ class ValidationIssue(EdiConverterModel):
     'Value that caused the issue.'
     message: str | None = Field(default=None, description='Additional message describing the issue.')
     'Additional message describing the issue.'
-    allowed_values: list[str] = Field(default_factory=list, description='Allowed values (VALUE_NOT_IN_ENUM_LIST issue type).')
+    allowed_values: list[str] = Field(default=None, description='Allowed values (VALUE_NOT_IN_ENUM_LIST issue type).')
     'Allowed values (VALUE_NOT_IN_ENUM_LIST issue type).'
 class Party(PartyIdName):
     'OpenAPI schema for Party.'
