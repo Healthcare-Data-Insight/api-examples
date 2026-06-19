@@ -1,6 +1,6 @@
 services:
   ediconvert:
-    image: myarch/ediconvert:2.15.0-beta
+    image: myarch/ediconvert:2.15.0
     restart: unless-stopped
     environment:
       - SERVER_SSL_CERTIFICATE=./etc/ssl/certificate.crt

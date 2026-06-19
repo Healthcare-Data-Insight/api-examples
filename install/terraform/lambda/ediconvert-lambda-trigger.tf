@@ -16,7 +16,7 @@ resource "aws_lambda_function" "edi_converter_function_trigger" {
 
   # The code is deployed from this public bucket
   s3_bucket     = "ediconverter"
-  s3_key        = "ediconvert-lambda-2.15.0-beta.zip"
+  s3_key        = "ediconvert-lambda-2.15.0.zip"
 
   memory_size = "512"
   package_type = "Zip"
