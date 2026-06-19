@@ -27,12 +27,10 @@ public class Payment835ParsingExample implements ParsingExampleHelper {
 
     public void parse835(File edi835File) {
         log.info("* Parsing EDI 835 file: {}", edi835File.getName());
-        // set "split mode" to parse by chunks of N payments
         try (var parser = new EdiParser(edi835File).isValidationMode(true)) {
-            boolean isDone = false;
-            while (!isDone) {
-                // parse 100 payments or adjustments at a time
-                EdiParsingResults parsingResults = parser.parse(100);
+            EdiParsingResults parsingResults;
+            do {                // parse 100 payments or adjustments at a time
+                parsingResults = parser.parse(100);
                 // parse all transactions from this chunk
                 // Each payment/provider adjustment also has a reference to an EDI transaction
                 for (var ediTransaction : parsingResults.ediTransactions()) {
@@ -53,8 +51,7 @@ public class Payment835ParsingExample implements ParsingExampleHelper {
                 for (var issue : issues) {
                     log.warn("Validation issue: {}", issue);
                 }
-                isDone = parsingResults.isDone();
-            }
+            } while (!parsingResults.isDone());
         }
     }
 
