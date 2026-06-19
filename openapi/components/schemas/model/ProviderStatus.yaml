@@ -8,6 +8,7 @@ properties:
   objectType:
     description: "Type of this object, set to 'PROVIDER_STATUS' or 'RECEIVER_STATUS'."
     type: "string"
+    x-enum-name: "ObjectType"
   batchStatus:
     description: "Batch status."
     $ref: "./BatchStatus.yaml"

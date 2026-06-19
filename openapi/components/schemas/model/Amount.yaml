@@ -12,6 +12,7 @@ properties:
     type: "string"
     x-edi-elt-designators:
     - "AMT01"
+    x-enum-name: "AmountType"
   amount:
     description: "Amount. EDI: AMT02."
     type: "number"

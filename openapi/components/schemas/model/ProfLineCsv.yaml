@@ -30,6 +30,7 @@ properties:
     type: "string"
     x-edi-elt-designators:
     - "SV103"
+    x-enum-name: "UnitType"
   unitCount:
     description: "Unit count. EDI: SV104."
     type: "number"
@@ -41,6 +42,7 @@ properties:
     type: "string"
     x-edi-elt-designators:
     - "SV105"
+    x-enum-name: "PlaceOfServiceType"
   placeOfServiceCode:
     description: "Place of service code. EDI: SV105."
     type: "string"
@@ -198,6 +200,7 @@ properties:
     type: "string"
     x-edi-elt-designators:
     - "CTP05-1"
+    x-enum-name: "UnitType"
   prescriptionNumber:
     description: "Prescription number. EDI: REF02*XZ."
     type: "string"

@@ -8,17 +8,18 @@ properties:
   objectType:
     description: "Type of this object, set to 'PAYMENT'."
     type: "string"
+    x-enum-name: "ObjectType"
   patientControlNumber:
     description: "Identifier used to track a claim from creation by the health care provider through payment. EDI: CLP01."
     type: "string"
     x-edi-elt-designators:
     - "CLP01"
   chargeAmount:
-    description: "Charge amount. EDI: CLP02."
+    description: "Charge amount. EDI: CLP03."
     type: "number"
     format: "float"
     x-edi-elt-designators:
-    - "CLP02"
+    - "CLP03"
   paymentAmount:
     description: "Payment amount. EDI: CLP04."
     type: "number"
@@ -36,19 +37,19 @@ properties:
     x-edi-elt-designators:
     - "CLP09"
   statementDateFrom:
-    description: "Statement date from. EDI: DTP03*232."
+    description: "Statement date from. EDI: DTM02*232."
     type: "string"
     format: "date"
     x-edi-elt-designators:
-    - "DTP03"
+    - "DTM02"
     x-edi-qualifiers:
     - "232"
   statementDateTo:
-    description: "Statement date to. EDI: DTP03*233."
+    description: "Statement date to. EDI: DTM02*233."
     type: "string"
     format: "date"
     x-edi-elt-designators:
-    - "DTP03"
+    - "DTM02"
     x-edi-qualifiers:
     - "233"
   serviceDateFrom:
@@ -79,6 +80,11 @@ properties:
     items:
       $ref: "./PaymentLine.yaml"
     x-edi-loop-id: "2110"
+  validationIssues:
+    description: "Validation issues."
+    type: "array"
+    items:
+      $ref: "./ValidationIssue.yaml"
   transaction:
     description: "Parent EDI transaction for this object. EDI: ST."
     $ref: "./Transaction835.yaml"
@@ -105,6 +111,7 @@ properties:
     - "TERTIARY_FORWARDED"
     x-edi-elt-designators:
     - "CLP02"
+    x-enum-name: "AdjudicatedClaimStatus"
   patientResponsibilityAmount:
     description: "Patient responsibility amount. EDI: CLP05."
     type: "number"
@@ -141,6 +148,7 @@ properties:
     - "WORKERS_COMPENSATION"
     x-edi-elt-designators:
     - "CLP06"
+    x-enum-name: "InsurancePlanType"
   payerControlNumber:
     description: "Payer control number. EDI: CLP07."
     type: "string"
@@ -216,19 +224,19 @@ properties:
     x-edi-seg-ids:
     - "CAS"
   coverageExpirationDate:
-    description: "Coverage expiration date. EDI: DTP03*036."
+    description: "Coverage expiration date. EDI: DTM02*036."
     type: "string"
     format: "date"
     x-edi-elt-designators:
-    - "DTP03"
+    - "DTM02"
     x-edi-qualifiers:
     - "036"
   claimReceivedDate:
-    description: "Claim received date. EDI: DTP03*050."
+    description: "Claim received date. EDI: DTM02*050."
     type: "string"
     format: "date"
     x-edi-elt-designators:
-    - "DTP03"
+    - "DTM02"
     x-edi-qualifiers:
     - "050"
   serviceProvider:

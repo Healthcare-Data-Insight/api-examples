@@ -20,6 +20,7 @@ properties:
     - "UNKNOWN"
     x-edi-elt-designators:
     - "SBR01"
+    x-enum-name: "PayerRespSequenceType"
   relationshipType:
     description: "Relationship type. EDI: SBR02, PAT01."
     type: "string"
@@ -36,6 +37,7 @@ properties:
     x-edi-elt-designators:
     - "SBR02"
     - "PAT01"
+    x-enum-name: "RelationshipType"
   groupOrPolicyNumber:
     description: "Group or policy number. EDI: SBR03."
     type: "string"
@@ -81,6 +83,7 @@ properties:
     - "WORKERS_COMPENSATION"
     x-edi-elt-designators:
     - "SBR09"
+    x-enum-name: "InsurancePlanType"
   person:
     description: "Person. EDI: NM1."
     $ref: "./PersonWithDemographic.yaml"

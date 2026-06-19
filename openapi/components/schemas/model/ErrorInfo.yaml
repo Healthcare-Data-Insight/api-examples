@@ -4,6 +4,7 @@ properties:
   objectType:
     description: "Type of error, could be ERROR or WARNING."
     type: "string"
+    x-enum-name: "ObjectType"
   message:
     description: "Detailed error message."
     type: "string"

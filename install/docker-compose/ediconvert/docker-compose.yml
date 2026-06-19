@@ -1,11 +1,16 @@
 services:
   ediconvert:
-    image: repo.datainsight.health/ediconvert:2.14
+    image: myarch/ediconvert:2.15.0
     restart: unless-stopped
-      # environment:
+    #environment:
       # you can provide your license key as a variable instead of saving the license file to the "etc." volume.
       # Copy the key from edi-license.txt and paste it here
       #- LICENSE_KEY=<your license key>
+      # You can also optionally set the following environment variables:
+      #- EDI_VALIDATE=True
+      #- EDI_CONVERT_CONTROL_SEGMENTS=True
+      #- EDI_TRANSACTION_TOP_LEVEL=True
+      #- EDI_NDJSON=True
     volumes:
       # Copy your license file to the "etc" directory on your host unless you use LICENSE_KEY
       - ./etc:/app/etc

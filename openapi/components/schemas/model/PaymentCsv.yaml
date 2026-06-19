@@ -26,6 +26,7 @@ properties:
   claimStatus:
     description: "Claim status."
     type: "string"
+    x-enum-name: "AdjudicatedClaimStatus"
   chargeAmount:
     description: "Charge amount. EDI: CLP03."
     type: "number"
@@ -97,6 +98,7 @@ properties:
     type: "string"
     x-edi-elt-designators:
     - "BPR04"
+    x-enum-name: "PaymentMethodType"
   receiverAccountNumber:
     description: "Receiver account number. EDI: BPR15."
     type: "string"
@@ -232,19 +234,19 @@ properties:
     x-edi-qualifiers:
     - "233"
   coverageExpirationDate:
-    description: "Coverage expiration date. EDI: DTP03*036."
+    description: "Coverage expiration date. EDI: DTM02*036."
     type: "string"
     format: "date"
     x-edi-elt-designators:
-    - "DTP03"
+    - "DTM02"
     x-edi-qualifiers:
     - "036"
   claimReceivedDate:
-    description: "Claim received date. EDI: DTP03*050."
+    description: "Claim received date. EDI: DTM02*050."
     type: "string"
     format: "date"
     x-edi-elt-designators:
-    - "DTP03"
+    - "DTM02"
     x-edi-qualifiers:
     - "050"
   coverageAmount:

@@ -27,9 +27,15 @@ properties:
     x-edi-elt-designators:
     - "MOA09"
   remarks:
-    description: "Remark codes."
+    description: "Remark codes. EDI: MOA03, MOA04, MOA05, MOA06, MOA07."
     type: "array"
     items:
       $ref: "./Code.yaml"
+    x-edi-elt-designators:
+    - "MOA03"
+    - "MOA04"
+    - "MOA05"
+    - "MOA06"
+    - "MOA07"
 x-edi-seg-ids:
 - "MOA"

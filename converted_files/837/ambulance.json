@@ -1,12 +1,13 @@
 [
  {
-  "id" : "69efef05ad4799caa7f5d728",
+  "id" : "6a32cb6397613a0e4990892d",
   "objectType" : "CLAIM",
   "patientControlNumber" : "051068",
   "chargeAmount" : 766.50,
   "facilityCode" : {
     "subType" : "PLACE_OF_SERVICE",
-    "code" : "41"
+    "code" : "41",
+    "desc" : "Ambulance - Land"
   },
   "placeOfServiceType" : "OTHER",
   "frequencyCode" : {
@@ -59,7 +60,9 @@
   "patientSignatureSourceCode" : "P",
   "relatedCause" : {
     "relatedCauseCode" : "AA",
+    "relatedCauseType" : "AUTO_ACCIDENT",
     "relatedCauseCode2" : "OA",
+    "relatedCauseType2" : "OTHER_ACCIDENT",
     "stateCode" : "FL"
   },
   "accidentDate" : "2005-02-08",
@@ -310,7 +313,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "69efef05ad4799caa7f5d6e5",
+    "id" : "6a32cb6397613a0e499088ea",
     "controlNumber" : "000017712",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -324,7 +327,7 @@
     "fileInfo" : {
       "name" : "ambulance.dat",
       "url" : "file:/edi-samples/edi_files/837/ambulance.dat",
-      "lastModifiedDateTime" : "2026-04-27T19:13:28.798-04:00",
+      "lastModifiedDateTime" : "2026-06-10T22:07:38.47-04:00",
       "fileType" : "EDI"
     },
     "sender" : {

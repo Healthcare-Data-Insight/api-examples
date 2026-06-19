@@ -26,6 +26,7 @@ properties:
     - "HEMOGLOBIN"
     x-edi-elt-designators:
     - "MEA02"
+    x-enum-name: "MeasurementType"
   value:
     description: "The value of the measurement. EDI: MEA03."
     type: "number"

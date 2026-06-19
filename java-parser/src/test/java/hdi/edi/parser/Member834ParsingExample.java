@@ -17,21 +17,22 @@ public class Member834ParsingExample implements ParsingExampleHelper {
     public void parse834() {
         var ediFile834 = new File(EDI_FILES_DIR + "/834/834-all-fields.edi");
         List<MemberCoverage> memberCoverages;
-        try (var parser = new EdiParser(ediFile834)) {
-            EdiParsingResults parsingResults;
-            do {
+        try (var parser = new EdiParser(ediFile834).isValidationMode(true)) {
+            boolean isDone = false;
+            while (!isDone) {
                 // parse 100 members at a time
-                parsingResults = parser.parse(100);
+                EdiParsingResults parsingResults = parser.parse(100);
                 memberCoverages = parsingResults.memberCoverages();
                 for (var memberCoverage : memberCoverages) {
                     processMemberCoverage(memberCoverage);
                 }
-                // Parsing issues
-                var issues = parsingResults.parsingIssues();
+                // Validation issues at the transaction level
+                var issues = parsingResults.validationIssues();
                 for (var issue : issues) {
-                    log.warn("Parsing issue: {}", issue.message());
+                    log.warn("Validation issue: {}", issue);
                 }
-            } while (!parsingResults.isDone());
+                isDone = parsingResults.isDone();
+            }
         }
     }
 
@@ -49,6 +50,11 @@ public class Member834ParsingExample implements ParsingExampleHelper {
         for (var healthCoverage : healthCoverages) {
             // HealthCoverage: HD segment and related segments and loops (2300)
             log.info("Health coverage:\n{}", healthCoverage);
+        }
+        // Validation issues for this member
+        var issues = memberCoverage.validationIssues();
+        for (var issue : issues) {
+            log.warn("Validation issue: {}", issue);
         }
     }
 }

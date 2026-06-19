@@ -1,6 +1,6 @@
 [
  {
-  "id" : "69efef05ad4799caa7f5db86",
+  "id" : "6a32cb6397613a0e49908db4",
   "objectType" : "CLAIM",
   "patientControlNumber" : "36463774",
   "chargeAmount" : 100.00,
@@ -330,7 +330,9 @@
   "assignmentCertificationIndicator" : "Y",
   "releaseOfInformationCode" : "Y",
   "specialProgramCode" : "05",
+  "specialProgramType" : "DISABILITY",
   "delayReasonCode" : "4",
+  "delayReasonType" : "DELAY_IN_CERTIFYING_PROVIDER",
   "serviceAuthorizationExceptionCode" : "7",
   "medicareSection4081Indicator" : "N",
   "mammographyCertificationNumber" : "MammogCertNumber",
@@ -521,7 +523,9 @@
   } ],
   "attachments" : [ {
     "reportTypeCode" : "OZ",
+    "type" : "SUPPORT_DATA_FOR_CLAIM",
     "reportTransmissionCode" : "BM",
+    "transmissionType" : "BY_MAIL",
     "controlNumber" : "DMN0012"
   } ],
   "serviceLines" : [ {
@@ -535,11 +539,13 @@
     "repricedReferenceNumber" : "Repriced",
     "adjustedRepricedReferenceNumber" : "AdjRepriced",
     "priorAuthorization" : "PriorAuthorization",
+    "priorAuthorizationNumbers" : [ "PriorAuthorization" ],
     "mammographyCertificationNumber" : "Mammog",
     "cliaNumber" : "CLIA-Amend",
     "referringCliaNumber" : "CLIA-Fac",
     "immunizationBatchNumber" : "Immune",
     "referralNumber" : "ReferralNumber",
+    "referralNumbers" : [ "ReferralNumber" ],
     "chargeAmount" : 40.00,
     "salesTaxAmount" : 101.00,
     "postageClaimedAmount" : 8.59,
@@ -597,11 +603,15 @@
     },
     "attachments" : [ {
       "reportTypeCode" : "OZ",
+      "type" : "SUPPORT_DATA_FOR_CLAIM",
       "reportTransmissionCode" : "BM",
+      "transmissionType" : "BY_MAIL",
       "controlNumber" : "Line123"
     }, {
       "reportTypeCode" : "CT",
-      "reportTransmissionCode" : "AB"
+      "type" : "CERTIFICATION",
+      "reportTransmissionCode" : "AB",
+      "transmissionType" : "PREVIOUSLY_SUBMITTED_TO_PAYER"
     } ],
     "measurements" : [ {
       "categoryCode" : "TR",
@@ -800,7 +810,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "69efef05ad4799caa7f5dacb",
+    "id" : "6a32cb6397613a0e49908cf9",
     "controlNumber" : "0031",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -814,7 +824,7 @@
     "fileInfo" : {
       "name" : "837P-all-fields.dat",
       "url" : "file:/edi-samples/edi_files/837/837P-all-fields.dat",
-      "lastModifiedDateTime" : "2026-04-27T19:13:28.795-04:00",
+      "lastModifiedDateTime" : "2026-06-10T22:07:38.468-04:00",
       "fileType" : "EDI"
     },
     "sender" : {

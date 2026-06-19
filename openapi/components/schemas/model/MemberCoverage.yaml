@@ -8,6 +8,7 @@ properties:
   objectType:
     description: "Type of this object, always set to 'MEMBER_COVERAGE'."
     type: "string"
+    x-enum-name: "ObjectType"
   fileName:
     description: "Converted X12 EDI file name."
     type: "string"
@@ -203,6 +204,11 @@ properties:
     items:
       $ref: "./HealthCoverage.yaml"
     x-edi-loop-id: "2300"
+  validationIssues:
+    description: "Validation issues."
+    type: "array"
+    items:
+      $ref: "./ValidationIssue.yaml"
   transaction:
     description: "Parent EDI transaction for this object. EDI: ST."
     $ref: "./Transaction834.yaml"

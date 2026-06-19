@@ -167,7 +167,6 @@ print(df.shape)
 # Pandas 3.x no longer allows filling numeric columns with empty strings in-place.
 # Cast to a string-friendly dtype first so the example can print every field consistently.
 df = df.astype('string').fillna('')
-df.fillna('', inplace=True)
 current_claim_id = ''
 for _, csv_row in df.iterrows():
     print_row(csv_row)

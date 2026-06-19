@@ -1,0 +1,109 @@
+---
+type: "object"
+description: "EDI validation issue details."
+properties:
+  objectType:
+    description: "Type of this object, always 'VALIDATION'."
+    type: "string"
+    x-enum-name: "ObjectType"
+  issueType:
+    description: "Issue type."
+    type: "string"
+    enum:
+    - "BALANCE"
+    - "CONTROL"
+    - "INVALID"
+    - "INVALID_CODE"
+    - "LENGTH_EXCEEDED"
+    - "LENGTH_TOO_SHORT"
+    - "MISMATCH"
+    - "NOT_ALLOWED"
+    - "NUMBER_OF_ITEMS"
+    - "REQUIRED"
+    - "REQUIRED_CODE"
+    - "VALUE_NOT_IN_ENUM_LIST"
+    - "WRONG_TYPE"
+    x-enum-name: "IssueType"
+  issueObjectClass:
+    description: "Class (type) of the object where the issue was detected, such as Claim, ServiceLine, etc."
+    type: "string"
+  jsonPath:
+    description: "JSON path for the object where the issue was detected."
+    type: "string"
+  fieldName:
+    description: "Field name or element name."
+    type: "string"
+  sourceLocation:
+    description: "Location of the issue in the EDI file."
+    $ref: "./SourceLocation.yaml"
+  loop:
+    description: "EDI loop where the issue was found."
+    type: "string"
+  segment:
+    description: "EDI segment ID."
+    type: "string"
+  element:
+    description: "EDI element designator."
+    type: "string"
+  ediCode:
+    description: "EDI qualifier or code for the segment if the segment is uniquely identified by the code."
+    type: "string"
+  maxNumberOfItems:
+    description: "Maximum number of items allowed for the segment, list, or loop."
+    type: "integer"
+  actualNumberOfItems:
+    description: "Actual number of items."
+    type: "integer"
+  length:
+    description: "Expected length of the element's value (LENGTH_TOO_SHORT, LENGTH_EXCEEDED issue types)."
+    type: "integer"
+  actualLength:
+    description: "Actual length (LENGTH_TOO_SHORT, LENGTH_EXCEEDED issue types)."
+    type: "integer"
+  dataType:
+    description: "Expected data type (WRONG_TYPE issue type)."
+    type: "string"
+    enum:
+    - "BINARY"
+    - "COMPOSITE"
+    - "DATE"
+    - "DECIMAL"
+    - "ENUM"
+    - "IDENTIFIER"
+    - "NUMERIC"
+    - "STRING"
+    - "TIME"
+    x-enum-name: "EdiDataType"
+  actualDataType:
+    description: "Actual data type (WRONG_TYPE issue type)."
+    type: "string"
+    enum:
+    - "BINARY"
+    - "COMPOSITE"
+    - "DATE"
+    - "DECIMAL"
+    - "ENUM"
+    - "IDENTIFIER"
+    - "NUMERIC"
+    - "STRING"
+    - "TIME"
+    x-enum-name: "DataType"
+  codeSubType:
+    description: "Type of the code that failed validation (INVALID_CODE issue type), such as HCPCS, ProviderTaxonomy, ICD_10."
+    type: "string"
+  value:
+    description: "The value that caused the validation to fail."
+    type: "string"
+  ediString:
+    description: "Value that caused the issue."
+    type: "string"
+  message:
+    description: "Additional message describing the issue."
+    type: "string"
+  allowedValues:
+    description: "Allowed values (VALUE_NOT_IN_ENUM_LIST issue type)."
+    type: "array"
+    items:
+      type: "string"
+required:
+- "issueType"

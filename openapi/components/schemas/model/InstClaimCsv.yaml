@@ -40,6 +40,7 @@ properties:
     type: "string"
     x-edi-elt-designators:
     - "BHT06"
+    x-enum-name: "ClaimOrEncounterIdentifierType"
   patientControlNumber:
     description: "Patient control number. EDI: CLM01."
     type: "string"

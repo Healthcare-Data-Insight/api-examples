@@ -1,23 +1,28 @@
 ---
 type: "object"
 properties:
+  objectType:
+    description: "Type of this object, always set to 'TRANSACTION' when the transaction is a top-level object."
+    type: "string"
+    x-enum-name: "ObjectType"
   controlNumber:
     description: "Control number. EDI: ST02."
     type: "string"
     x-edi-elt-designators:
     - "ST02"
   transactionType:
-    description: "Transaction type translated to string constant, PROF for 837P, INST for 837I, etc. EDI: ST01, ST03."
+    description: "Transaction type translated to string constant, PROF for 837P, INST for 837I, etc. Required in order for EDI generator to populate defaults. EDI: ST01, ST03."
     type: "string"
     x-edi-elt-designators:
     - "ST01"
     - "ST03"
+    x-enum-name: "TransactionType"
   productionDate:
-    description: "Production date. EDI: DTP03*405."
+    description: "Production date. EDI: DTM02*405."
     type: "string"
     format: "date"
     x-edi-elt-designators:
-    - "DTP03"
+    - "DTM02"
     x-edi-qualifiers:
     - "405"
   transactionHandlingType:
@@ -25,6 +30,7 @@ properties:
     type: "string"
     x-edi-elt-designators:
     - "BPR01"
+    x-enum-name: "TransactionHandlingType"
   totalPaymentAmount:
     description: "Total payment amount. EDI: BPR02."
     type: "number"
@@ -41,6 +47,7 @@ properties:
     type: "string"
     x-edi-elt-designators:
     - "BPR04"
+    x-enum-name: "PaymentMethodType"
   paymentFormatCode:
     description: "Payment format code. EDI: BPR05."
     type: "string"
@@ -110,9 +117,21 @@ properties:
     type: "string"
     x-edi-elt-designators:
     - "ST03"
+  remittanceDeliveryMethod:
+    description: "Remittance delivery method. Since: v2.15.0. EDI: RDM."
+    $ref: "./RemittanceDeliveryMethod.yaml"
+    x-edi-seg-ids:
+    - "RDM"
+    x-since: "2.15.0"
   fileInfo:
     description: "File info."
     $ref: "./FileInfo.yaml"
+  sender:
+    description: "Payer. This field is populated only when 'transactionTopLevel' is set to true."
+    $ref: "./Party.yaml"
+  receiver:
+    description: "Payee. This field is populated only when 'transactionTopLevel' is set to true."
+    $ref: "./Party.yaml"
 required:
 - "transactionHandlingType"
 - "totalPaymentAmount"

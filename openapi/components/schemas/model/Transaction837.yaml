@@ -1,17 +1,22 @@
 ---
 type: "object"
 properties:
+  objectType:
+    description: "Type of this object, always set to 'TRANSACTION' when the transaction is a top-level object."
+    type: "string"
+    x-enum-name: "ObjectType"
   controlNumber:
     description: "Control number. EDI: ST02."
     type: "string"
     x-edi-elt-designators:
     - "ST02"
   transactionType:
-    description: "Transaction type translated to string constant, PROF for 837P, INST for 837I, etc. EDI: ST01, ST03."
+    description: "Transaction type translated to string constant, PROF for 837P, INST for 837I, etc. Required in order for EDI generator to populate defaults. EDI: ST01, ST03."
     type: "string"
     x-edi-elt-designators:
     - "ST01"
     - "ST03"
+    x-enum-name: "TransactionType"
   hierarchicalStructureCode:
     description: "Hierarchical structure code. EDI: BHT01."
     type: "string"
@@ -44,6 +49,7 @@ properties:
     type: "string"
     x-edi-elt-designators:
     - "BHT06"
+    x-enum-name: "ClaimOrEncounterIdentifierType"
   transactionSetIdentifierCode:
     description: "Transaction set identifier code. EDI: ST01."
     type: "string"
@@ -59,7 +65,7 @@ properties:
     $ref: "./FileInfo.yaml"
   sender:
     description: "Submitter or sender of this transaction."
-    $ref: "./PartyIdName.yaml"
+    $ref: "./Party.yaml"
   receiver:
     description: "Receiver of this transaction."
-    $ref: "./PartyIdName.yaml"
+    $ref: "./Party.yaml"

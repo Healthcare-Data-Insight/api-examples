@@ -1,13 +1,13 @@
 [
  {
-  "id" : "69efef05ad4799caa7f5d9db",
+  "id" : "6a32cb6397613a0e49908be0",
   "objectType" : "CLAIM",
   "patientControlNumber" : "153829140",
-  "chargeAmount" : 827.00,
+  "chargeAmount" : 1654.00,
   "facilityCode" : {
     "subType" : "PLACE_OF_SERVICE",
     "code" : "22",
-    "desc" : "Hospital Outpatient"
+    "desc" : "On Campus-Outpatient Hospital"
   },
   "placeOfServiceType" : "OUTPATIENT",
   "frequencyCode" : {
@@ -43,7 +43,12 @@
       "entityType" : "BUSINESS",
       "identificationType" : "PAYOR_ID",
       "identifier" : "05440",
-      "lastNameOrOrgName" : "ABC PAYER"
+      "lastNameOrOrgName" : "ABC PAYER",
+      "address" : {
+        "city" : "NASHVILLE",
+        "stateCode" : "TN",
+        "zipCode" : "37232"
+      }
     }
   },
   "providerSignatureIndicator" : "Y",
@@ -164,7 +169,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "69efef05ad4799caa7f5d9b4",
+    "id" : "6a32cb6397613a0e49908bb8",
     "controlNumber" : "0001",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -178,7 +183,7 @@
     "fileInfo" : {
       "name" : "anesthesia.dat",
       "url" : "file:/edi-samples/edi_files/837/anesthesia.dat",
-      "lastModifiedDateTime" : "2026-02-22T16:05:15.379-05:00",
+      "lastModifiedDateTime" : "2026-06-14T11:16:02.168-04:00",
       "fileType" : "EDI"
     },
     "sender" : {

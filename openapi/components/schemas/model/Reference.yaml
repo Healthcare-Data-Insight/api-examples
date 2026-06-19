@@ -12,6 +12,7 @@ properties:
     type: "string"
     x-edi-elt-designators:
     - "REF01"
+    x-enum-name: "ReferenceType"
   identification:
     description: "Reference identification. EDI: REF02."
     type: "string"

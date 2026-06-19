@@ -21,6 +21,7 @@ properties:
     - "VISION_SPECTACLE_LENSES"
     x-edi-elt-designators:
     - "CRC01"
+    x-enum-name: "ConditionsIndicatorCategory"
   yesOrNoCondition:
     description: "Yes or no condition. EDI: CRC02."
     type: "string"

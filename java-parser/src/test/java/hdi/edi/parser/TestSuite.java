@@ -2,7 +2,8 @@ package hdi.edi.parser;
 
 
 import hdi.edi.parser.edi810.Edi810ParsingExample;
-import hdi.edi.writer.ClaimToEdiExample;
+import hdi.edi.writer.Generate835EdiExample;
+import hdi.edi.writer.Generate837EdiExample;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
@@ -15,7 +16,8 @@ import org.junit.runners.Suite;
         ClaimStatus277CAParsingExample.class,
         SegmentParsingExample.class,
         Edi810ParsingExample.class,
-        ClaimToEdiExample.class
+        Generate837EdiExample.class,
+        Generate835EdiExample.class
 })
 
 public class TestSuite {

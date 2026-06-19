@@ -30,6 +30,7 @@ properties:
     - "UPDATED_INFORMATION"
     x-edi-elt-designators:
     - "NTE01"
+    x-enum-name: "NoteType"
   text:
     description: "Text. EDI: NTE02."
     type: "string"

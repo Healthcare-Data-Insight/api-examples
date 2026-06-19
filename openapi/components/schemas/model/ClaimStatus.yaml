@@ -8,6 +8,7 @@ properties:
   objectType:
     description: "Type of this object, always set to 'CLAIM_STATUS'."
     type: "string"
+    x-enum-name: "ObjectType"
   patient:
     description: "The insured (subscriber) or patient as stated on 837 claim. EDI: Loop: 2100D, NM1*QC."
     $ref: "./PartyIdName.yaml"

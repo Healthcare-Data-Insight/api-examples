@@ -8,6 +8,7 @@ properties:
   objectType:
     description: "Type of this object, set to 'CLAIM'."
     type: "string"
+    x-enum-name: "ObjectType"
   patientControlNumber:
     description: "Identifier used to track a claim from creation by the health care provider through payment. EDI: CLM01."
     type: "string"
@@ -20,7 +21,7 @@ properties:
     x-edi-elt-designators:
     - "CLM02"
   facilityCode:
-    description: "Place of service code (professional/dental) or UB facility code (institutional) from the original claim. EDI: CLM05-1."
+    description: "Facility Code. EDI: CLM05-1."
     $ref: "./Code.yaml"
     x-edi-elt-designators:
     - "CLM05-1"
@@ -73,6 +74,11 @@ properties:
     items:
       $ref: "./InstLine.yaml"
     x-edi-loop-id: "2400"
+  validationIssues:
+    description: "Validation issues."
+    type: "array"
+    items:
+      $ref: "./ValidationIssue.yaml"
   transaction:
     description: "Parent EDI transaction for this object. EDI: ST."
     $ref: "./Transaction837.yaml"
@@ -93,11 +99,43 @@ properties:
     type: "string"
     x-edi-elt-designators:
     - "CLM09"
+  specialProgramType:
+    description: "Special program code expressed as enum (string constant). Since: v2.15.0. EDI: CLM12."
+    type: "string"
+    enum:
+    - "DISABILITY"
+    - "HANDICAPPED_CHILDRENS_PROGRAM"
+    - "SECOND_OPINION_OR_SURGERY"
+    - "SPECIAL_FEDERAL_FUNDING"
+    x-edi-elt-designators:
+    - "CLM12"
+    x-since: "2.15.0"
+    x-enum-name: "SpecialProgramType"
   delayReasonCode:
     description: "Delay reason code. EDI: CLM20."
     type: "string"
     x-edi-elt-designators:
     - "CLM20"
+  delayReasonType:
+    description: "Delay reason cause code expressed as enum (string constant). Since: v2.15.0. EDI: CLM20."
+    type: "string"
+    enum:
+    - "ADMINISTRATION_DELAY"
+    - "AUTHORIZATION_DELAYS"
+    - "CLAIM_REJECTED_OR_DENIED"
+    - "DELAY_IN_CERTIFYING_PROVIDER"
+    - "DELAY_IN_DELIVERY_OF_APPLIANCES"
+    - "DELAY_IN_ELIGIBILITY_DETERMINATION"
+    - "DELAY_IN_SUPPLYING_BILLING_FORMS"
+    - "LITIGATION"
+    - "NATURAL_DISASTER"
+    - "OTHER"
+    - "PROOF_OF_ELIGIBILITY_UNKNOWN"
+    - "THIRD_PARTY_PROCESSING_DELAY"
+    x-edi-elt-designators:
+    - "CLM20"
+    x-since: "2.15.0"
+    x-enum-name: "DelayReasonType"
   serviceAuthorizationExceptionCode:
     description: "Service authorization exception code. EDI: REF02*4N."
     type: "string"

@@ -1,6 +1,6 @@
 [
  {
-  "id" : "69efef05ad4799caa7f5ba27",
+  "id" : "6a32cb6297613a0e49906b90",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26403774",
   "chargeAmount" : 150.00,
@@ -366,7 +366,9 @@
   } ],
   "attachments" : [ {
     "reportTypeCode" : "OZ",
+    "type" : "SUPPORT_DATA_FOR_CLAIM",
     "reportTransmissionCode" : "BM",
+    "transmissionType" : "BY_MAIL",
     "controlNumber" : "DENT22"
   } ],
   "serviceLines" : [ {
@@ -379,7 +381,9 @@
     "repricedReferenceNumber" : "LineRepricedClaimNumber",
     "adjustedRepricedReferenceNumber" : "LineAdjustedRepricedClaimNumber",
     "priorAuthorization" : "LinePriorAuth",
+    "priorAuthorizationNumbers" : [ "LinePriorAuth" ],
     "referralNumber" : "LineReferral",
+    "referralNumbers" : [ "LineReferral" ],
     "chargeAmount" : 100.00,
     "salesTaxAmount" : 45.00,
     "priorPlacementDate" : "2023-04-01",
@@ -596,7 +600,7 @@
     }
   } ],
   "transaction" : {
-    "id" : "69efef04ad4799caa7f5b991",
+    "id" : "6a32cb6297613a0e49906afa",
     "controlNumber" : "3456",
     "transactionType" : "DENTAL",
     "hierarchicalStructureCode" : "0019",
@@ -639,13 +643,14 @@
   }
 }
 , {
-  "id" : "69efef05ad4799caa7f5ba6f",
+  "id" : "6a32cb6297613a0e49906bda",
   "objectType" : "CLAIM",
   "patientControlNumber" : "051068",
   "chargeAmount" : 766.50,
   "facilityCode" : {
     "subType" : "PLACE_OF_SERVICE",
-    "code" : "41"
+    "code" : "41",
+    "desc" : "Ambulance - Land"
   },
   "placeOfServiceType" : "OTHER",
   "frequencyCode" : {
@@ -698,7 +703,9 @@
   "patientSignatureSourceCode" : "P",
   "relatedCause" : {
     "relatedCauseCode" : "AA",
+    "relatedCauseType" : "AUTO_ACCIDENT",
     "relatedCauseCode2" : "OA",
+    "relatedCauseType2" : "OTHER_ACCIDENT",
     "stateCode" : "FL"
   },
   "accidentDate" : "2005-02-08",
@@ -949,7 +956,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "69efef05ad4799caa7f5ba2c",
+    "id" : "6a32cb6297613a0e49906b97",
     "controlNumber" : "000017712",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -963,7 +970,7 @@
     "fileInfo" : {
       "name" : "ambulance.dat",
       "url" : "file:/edi-samples/edi_files/837/ambulance.dat",
-      "lastModifiedDateTime" : "2026-04-27T19:13:28.798-04:00",
+      "lastModifiedDateTime" : "2026-06-10T22:07:38.47-04:00",
       "fileType" : "EDI"
     },
     "sender" : {
@@ -992,7 +999,7 @@
   }
 }
 , {
-  "id" : "69efef05ad4799caa7f5ba9f",
+  "id" : "6a32cb6297613a0e49906c0b",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26462967",
   "chargeAmount" : 100.00,
@@ -1169,7 +1176,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "69efef05ad4799caa7f5ba73",
+    "id" : "6a32cb6297613a0e49906bdf",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -1215,10 +1222,10 @@
   }
 }
 , {
-  "id" : "69efef05ad4799caa7f5bb41",
+  "id" : "6a32cb6297613a0e49906cab",
   "objectType" : "CLAIM",
   "patientControlNumber" : "ABC0002",
-  "chargeAmount" : 89.93,
+  "chargeAmount" : 259.96,
   "facilityCode" : {
     "subType" : "FACILITY_TYPE",
     "code" : "11",
@@ -1298,8 +1305,7 @@
         "stateCode" : "MO",
         "zipCode" : "64108"
       }
-    },
-    "propertyCasualtyClaimNumber" : "4445555"
+    }
   },
   "otherSubscribers" : [ {
     "payerResponsibilitySequence" : "PRIMARY",
@@ -1451,79 +1457,63 @@
     "assignmentCertificationIndicator" : "Y",
     "releaseOfInformationCode" : "Y",
     "outpatientAdjudication" : {
-      "reimbursementRate" : 85,
-      "hcpcsPayableAmount" : 158.58,
-      "esrdPaymentAmount" : 82.23,
-      "nonPayableProfessionalComponentAmount" : 12.42,
+      "reimbursementRate" : 0.4,
+      "hcpcsPayableAmount" : 50.00,
+      "esrdPaymentAmount" : 30.00,
+      "nonPayableProfessionalComponentAmount" : 10.01,
       "remarks" : [ {
         "type" : "CARC_RARC",
         "subType" : "RARC",
-        "code" : "M71",
-        "desc" : "Total payment reduced due to overlap of tests billed."
+        "code" : "MA01",
+        "desc" : "If you do not agree with what we approved for these services, you may appeal our decision. To make sure that we are fair to you, we require another individual that did not process your initial claim to conduct the appeal. However, in order to be eligible for an appeal, you must write to us within 120 days of the date you received this notice, unless you have a good reason for being late."
       }, {
         "type" : "CARC_RARC",
         "subType" : "RARC",
-        "code" : "MA54",
-        "desc" : "Physician certification or election consent for hospice care not received timely."
-      }, {
-        "type" : "CARC_RARC",
-        "subType" : "RARC",
-        "code" : "N28",
-        "desc" : "Consent form requirements not fulfilled."
-      }, {
-        "type" : "CARC_RARC",
-        "subType" : "RARC",
-        "code" : "N118",
-        "desc" : "This service is not paid if billed more than once every 28 days."
-      }, {
-        "type" : "CARC_RARC",
-        "subType" : "RARC",
-        "code" : "MA127"
+        "code" : "MA07",
+        "desc" : "The claim information has also been forwarded to Medicaid for review."
       } ]
     },
     "inpatientAdjudication" : {
-      "coveredDaysOrVisitsCount" : 1,
+      "coveredDaysOrVisitsCount" : 0,
       "lifetimePsychiatricDaysCount" : 1,
-      "drgAmount" : 255.05,
-      "disproportionateShareAmount" : 288.08,
-      "mspPassThroughAmount" : 38.88,
-      "ppsCapitalAmount" : 83.03,
-      "ppsCapitalFspDrgAmount" : 15.65,
-      "ppsCapitalHspDrgAmount" : 25.00,
-      "ppsCapitalDshDrgAmount" : 22.99,
-      "oldCapitalAmount" : 46.36,
-      "ppsCapitalImeAmount" : 52.28,
-      "ppsOperatingHospitalSpecificDrgAmount" : 99.99,
-      "costReportDayCount" : 1,
-      "ppsOperatingFederalSpecificDrgAmount" : 71.12,
-      "ppsCapitalOutlierAmount" : 26.55,
-      "indirectTeachingAmount" : 18.08,
-      "nonPayableProfessionalComponentAmount" : 36.00,
+      "drgAmount" : 40.40,
+      "disproportionateShareAmount" : 60.00,
+      "mspPassThroughAmount" : 70.00,
+      "ppsCapitalAmount" : 80.00,
+      "ppsCapitalFspDrgAmount" : 90.00,
+      "ppsCapitalHspDrgAmount" : 100.00,
+      "ppsCapitalDshDrgAmount" : 110.00,
+      "oldCapitalAmount" : 120.00,
+      "ppsCapitalImeAmount" : 130.00,
+      "ppsOperatingHospitalSpecificDrgAmount" : 140.00,
+      "costReportDayCount" : 150,
+      "ppsOperatingFederalSpecificDrgAmount" : 160.00,
+      "ppsCapitalOutlierAmount" : 170.00,
+      "indirectTeachingAmount" : 180.00,
+      "nonPayableProfessionalComponentAmount" : 190.00,
       "ppsCapitalExceptionAmount" : 240.00,
       "remarks" : [ {
         "type" : "CARC_RARC",
         "subType" : "RARC",
-        "code" : "N118",
-        "desc" : "This service is not paid if billed more than once every 28 days."
+        "code" : "M01"
       }, {
         "type" : "CARC_RARC",
         "subType" : "RARC",
-        "code" : "M2",
-        "desc" : "Not paid separately when the patient is an inpatient."
+        "code" : "M20"
       }, {
         "type" : "CARC_RARC",
         "subType" : "RARC",
-        "code" : "MA54",
-        "desc" : "Physician certification or election consent for hospice care not received timely."
+        "code" : "M21",
+        "desc" : "Missing/incomplete/invalid place of residence for this service/item provided in a home."
       }, {
         "type" : "CARC_RARC",
         "subType" : "RARC",
-        "code" : "MA41",
-        "desc" : "Missing/incomplete/invalid admission type."
+        "code" : "M22",
+        "desc" : "Missing/incomplete/invalid number of miles traveled."
       }, {
         "type" : "CARC_RARC",
         "subType" : "RARC",
-        "code" : "M30"
+        "code" : "M23"
       } ]
     },
     "payerClaimControlNumber" : "CLAIM014",
@@ -1574,7 +1564,7 @@
       } ]
     }, {
       "entityRole" : "SERVICE_FACILITY",
-      "entityType" : "INDIVIDUAL",
+      "entityType" : "BUSINESS",
       "additionalIds" : [ {
         "qualifierCode" : "G2",
         "type" : "PROVIDER_COMMERCIAL_NUMBER",
@@ -1598,7 +1588,7 @@
       } ]
     }, {
       "entityRole" : "BILLING_PROVIDER",
-      "entityType" : "INDIVIDUAL",
+      "entityType" : "BUSINESS",
       "additionalIds" : [ {
         "qualifierCode" : "G2",
         "type" : "PROVIDER_COMMERCIAL_NUMBER",
@@ -1609,6 +1599,8 @@
   "assignmentParticipationCode" : "A",
   "assignmentCertificationIndicator" : "Y",
   "releaseOfInformationCode" : "Y",
+  "delayReasonCode" : "4",
+  "delayReasonType" : "DELAY_IN_CERTIFYING_PROVIDER",
   "serviceAuthorizationExceptionCode" : "1",
   "referralNumber" : "2410628868",
   "priorAuthorizationNumber" : "PA00000024",
@@ -1621,6 +1613,7 @@
   "admissionTypeCode" : "3",
   "admissionSourceCode" : "7",
   "patientStatusCode" : "01",
+  "patientResponsibilityAmount" : 123.00,
   "claimNote" : "PATIENT ALLERGIC TO PENICILLIN",
   "billingNote" : "Billing Note",
   "notes" : [ {
@@ -1666,34 +1659,6 @@
         "type" : "EMAIL",
         "number" : "ALEX@BESTMED.NET"
       } ]
-    } ]
-  },
-  "payToAddress" : {
-    "entityRole" : "PAY_TO_PROVIDER",
-    "entityType" : "BUSINESS",
-    "address" : {
-      "line" : "P O BOX 22310",
-      "city" : "OKLAHOMA CITY",
-      "stateCode" : "OK",
-      "zipCode" : "799998961"
-    }
-  },
-  "payToPlan" : {
-    "entityRole" : "PAYEE",
-    "entityType" : "BUSINESS",
-    "identificationType" : "NPI",
-    "identifier" : "PTP123",
-    "lastNameOrOrgName" : "PLAN TO PAY TO",
-    "address" : {
-      "line" : "236 SEAWAY ST",
-      "city" : "MIAMI",
-      "stateCode" : "FL",
-      "zipCode" : "33111"
-    },
-    "additionalIds" : [ {
-      "qualifierCode" : "FY",
-      "type" : "CLAIM_OFFICE_NUMBER",
-      "identification" : "587654321"
     } ]
   },
   "providers" : [ {
@@ -1883,64 +1848,39 @@
   } ],
   "occurrenceSpans" : [ {
     "subType" : "OCCURRENCE_SPAN",
-    "code" : "01",
+    "code" : "71",
+    "desc" : "PRIOR STAY DATES",
+    "instructionDesc" : "This code and corresponding dates indicate the \"from\" and \"through\" dates provided by the patient for any hospital stay that ended within 60 days of the current hospital or SNF admission.",
     "occurrenceDate" : "2016-01-03",
     "occurrenceEndDate" : "2016-01-08"
   }, {
     "subType" : "OCCURRENCE_SPAN",
-    "code" : "10",
+    "code" : "72",
+    "desc" : "FIRST/LAST VISIT DATES",
+    "instructionDesc" : "This code and corresponding dates indicate the actual from and through dates of outpatient services. It is for use on outpatient bills when the entire billing record is not represented by the actual from and through services dates of Fl 6, Statement Covers Period. AND This code may also be used on inpatient claims to denote the contiguous outpatient hospital services that preceded the inpatient admission. This would represent outpatient services, not included in the inpatient claim, that are counted toward the two-midnight provision.",
     "occurrenceDate" : "2018-01-01",
     "occurrenceEndDate" : "2018-01-10"
   }, {
     "subType" : "OCCURRENCE_SPAN",
-    "code" : "11",
+    "code" : "73",
+    "desc" : "BENEFIT ELIGIBILITY PERIOD",
+    "instructionDesc" : "This code and corresponding dates indicate the period during which CHAMPUS medical benefits are available to a sponsor's beneficiary as shown on the beneficiary's identification card.",
     "occurrenceDate" : "2017-10-10",
     "occurrenceEndDate" : "2017-10-12"
   }, {
     "subType" : "OCCURRENCE_SPAN",
-    "code" : "16",
+    "code" : "74",
+    "desc" : "NON-COVERED LEVEL OF CARE/LEAVE OF ABSENCE DATES",
+    "instructionDesc" : "(This code and corresponding dates indicate the \"from\" and \"through\" dates of a period of noncovered level of care or leave of absence in an otherwise covered stay.  It excludes any period reported with the occurrence span code 76, 77, or 79 listed below.)",
     "occurrenceDate" : "2017-08-10",
     "occurrenceEndDate" : "2017-08-16"
   }, {
     "subType" : "OCCURRENCE_SPAN",
-    "code" : "18",
+    "code" : "75",
+    "desc" : "SNF LEVEL OF CARE DATES",
+    "instructionDesc" : "(This code and corresponding dates indicate the \"from\" and \"through\" dates of a period of SNF level of care during an inpatient hospital stay.)",
     "occurrenceDate" : "2015-12-12",
     "occurrenceEndDate" : "2015-12-22"
-  }, {
-    "subType" : "OCCURRENCE_SPAN",
-    "code" : "17",
-    "occurrenceDate" : "2017-12-24",
-    "occurrenceEndDate" : "2017-12-31"
-  }, {
-    "subType" : "OCCURRENCE_SPAN",
-    "code" : "36",
-    "occurrenceDate" : "2017-10-03",
-    "occurrenceEndDate" : "2017-11-23"
-  }, {
-    "subType" : "OCCURRENCE_SPAN",
-    "code" : "A3",
-    "occurrenceDate" : "2018-04-04",
-    "occurrenceEndDate" : "2018-06-04"
-  }, {
-    "subType" : "OCCURRENCE_SPAN",
-    "code" : "C3",
-    "occurrenceDate" : "2018-04-22",
-    "occurrenceEndDate" : "2018-04-24"
-  }, {
-    "subType" : "OCCURRENCE_SPAN",
-    "code" : "25",
-    "occurrenceDate" : "2018-04-04",
-    "occurrenceEndDate" : "2018-04-14"
-  }, {
-    "subType" : "OCCURRENCE_SPAN",
-    "code" : "22",
-    "occurrenceDate" : "2018-04-30",
-    "occurrenceEndDate" : "2018-05-01"
-  }, {
-    "subType" : "OCCURRENCE_SPAN",
-    "code" : "24",
-    "occurrenceDate" : "2018-05-06",
-    "occurrenceEndDate" : "2018-05-07"
   } ],
   "occurrences" : [ {
     "subType" : "OCCURRENCE",
@@ -2063,11 +2003,6 @@
     "code" : "55",
     "desc" : "Eligibility Threshold for Charity Care",
     "amount" : 6.99
-  }, {
-    "subType" : "VALUE",
-    "code" : "20",
-    "desc" : "Payer Code;Total PPS Capital Payment Amount",
-    "amount" : 76.54
   } ],
   "conditions" : [ {
     "subType" : "CONDITION",
@@ -2131,13 +2066,19 @@
   } ],
   "attachments" : [ {
     "reportTypeCode" : "OZ",
+    "type" : "SUPPORT_DATA_FOR_CLAIM",
     "reportTransmissionCode" : "BM",
+    "transmissionType" : "BY_MAIL",
     "controlNumber" : "DMN0012"
   } ],
   "serviceLines" : [ {
     "sourceLineId" : "LX0004-1",
+    "repricedReferenceNumber" : "Repriced",
+    "adjustedRepricedReferenceNumber" : "AdjRepriced",
     "chargeAmount" : 173.42,
     "nonCoveredAmount" : 11.07,
+    "serviceTaxAmount" : 15.00,
+    "facilityTaxAmount" : 22.00,
     "serviceDateFrom" : "2019-03-10",
     "serviceDateTo" : "2019-05-11",
     "unitType" : "UNIT",
@@ -2149,7 +2090,7 @@
       "formattedCode" : "0002-1434-81"
     },
     "drugQuantity" : 1.01,
-    "drugUnitType" : "UNIT",
+    "drugUnitType" : "GRAM",
     "prescriptionNumber" : "123456",
     "prescriptionNumberType" : "PHARMACY_PRESCRIPTION_NUMBER",
     "thirdPartyNote" : "state regulation 123 was applied during the pricing of this claim",
@@ -2185,7 +2126,9 @@
     },
     "attachments" : [ {
       "reportTypeCode" : "OZ",
-      "reportTransmissionCode" : "BM",
+      "type" : "SUPPORT_DATA_FOR_CLAIM",
+      "reportTransmissionCode" : "FT",
+      "transmissionType" : "FILE_TRANSFER",
       "controlNumber" : "DMN0012"
     } ],
     "providers" : [ {
@@ -2373,8 +2316,10 @@
       "desc" : "EKG/ECG (Electrocardiogram)-General"
     },
     "attachments" : [ {
-      "reportTypeCode" : "ZZ",
-      "reportTransmissionCode" : "BC",
+      "reportTypeCode" : "08",
+      "type" : "PLAN_OF_TREATMENT",
+      "reportTransmissionCode" : "EL",
+      "transmissionType" : "ELECTRONICALLY_ONLY",
       "controlNumber" : "TPM0048"
     } ],
     "providers" : [ {
@@ -2522,7 +2467,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "69efef05ad4799caa7f5baa4",
+    "id" : "6a32cb6297613a0e49906c12",
     "controlNumber" : "00000024",
     "transactionType" : "INST",
     "hierarchicalStructureCode" : "0019",
@@ -2536,7 +2481,7 @@
     "fileInfo" : {
       "name" : "837I-all-fields.dat",
       "url" : "file:/edi-samples/edi_files/837/837I-all-fields.dat",
-      "lastModifiedDateTime" : "2025-12-08T15:19:29.99-05:00",
+      "lastModifiedDateTime" : "2026-06-10T22:07:38.468-04:00",
       "fileType" : "EDI"
     },
     "sender" : {
@@ -2565,7 +2510,7 @@
   }
 }
 , {
-  "id" : "69efef05ad4799caa7f5bb6a",
+  "id" : "6a32cb6297613a0e49906cd7",
   "objectType" : "CLAIM",
   "patientControlNumber" : "125WILL",
   "chargeAmount" : 145.50,
@@ -2609,7 +2554,12 @@
       "entityType" : "BUSINESS",
       "identificationType" : "PAYOR_ID",
       "identifier" : "C12345",
-      "lastNameOrOrgName" : "MEDICARE PART B MARYLAND"
+      "lastNameOrOrgName" : "MEDICARE PART B MARYLAND",
+      "address" : {
+        "city" : "BALTIMORE",
+        "stateCode" : "MD",
+        "zipCode" : "21236"
+      }
     }
   },
   "providerSignatureIndicator" : "Y",
@@ -2674,7 +2624,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "69efef05ad4799caa7f5bb46",
+    "id" : "6a32cb6297613a0e49906cb2",
     "controlNumber" : "3701",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -2684,11 +2634,11 @@
     "creationTime" : "07:54:20",
     "claimOrEncounterIdentifierType" : "CHARGEABLE",
     "transactionSetIdentifierCode" : "837",
-    "implementationConventionReference" : "005010X222",
+    "implementationConventionReference" : "005010X222A2",
     "fileInfo" : {
       "name" : "chiro.dat",
       "url" : "file:/edi-samples/edi_files/837/chiro.dat",
-      "lastModifiedDateTime" : "2026-02-22T16:05:15.379-05:00",
+      "lastModifiedDateTime" : "2026-06-14T11:11:21.502-04:00",
       "fileType" : "EDI"
     },
     "sender" : {
@@ -2717,7 +2667,7 @@
   }
 }
 , {
-  "id" : "69efef05ad4799caa7f5bbb2",
+  "id" : "6a32cb6297613a0e49906d1f",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26407789",
   "chargeAmount" : 79.04,
@@ -3096,7 +3046,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "69efef05ad4799caa7f5bb6d",
+    "id" : "6a32cb6297613a0e49906cda",
     "controlNumber" : "0024",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -3139,7 +3089,7 @@
   }
 }
 , {
-  "id" : "69efef05ad4799caa7f5bbe9",
+  "id" : "6a32cb6297613a0e49906d56",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26463774",
   "chargeAmount" : 100.00,
@@ -3349,7 +3299,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "69efef05ad4799caa7f5bbb5",
+    "id" : "6a32cb6297613a0e49906d22",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -3395,7 +3345,256 @@
   }
 }
 , {
-  "id" : "69efef05ad4799caa7f5bc1e",
+  "id" : "6a32cb6297613a0e49906d8e",
+  "objectType" : "CLAIM",
+  "patientControlNumber" : "756048Q",
+  "chargeAmount" : 89.93,
+  "facilityCode" : {
+    "subType" : "FACILITY_TYPE",
+    "code" : "14",
+    "desc" : "Hospital; laboratory services provided to nonpatients"
+  },
+  "placeOfServiceType" : "OUTPATIENT",
+  "frequencyCode" : {
+    "subType" : "FREQUENCY_CODE",
+    "code" : "1",
+    "desc" : "Original claim"
+  },
+  "statementDateFrom" : "2016-09-11",
+  "statementDateTo" : "2016-09-13",
+  "serviceDateFrom" : "2016-09-11",
+  "serviceDateTo" : "2016-09-11",
+  "subscriber" : {
+    "payerResponsibilitySequence" : "PRIMARY",
+    "relationshipType" : "SELF",
+    "claimFilingIndicatorCode" : "MB",
+    "insurancePlanType" : "MEDICARE_B",
+    "person" : {
+      "entityRole" : "INSURED_SUBSCRIBER",
+      "entityType" : "INDIVIDUAL",
+      "identificationType" : "MEMBER_ID",
+      "identifier" : "030005074A",
+      "lastNameOrOrgName" : "DOE",
+      "firstName" : "JOHN",
+      "middleName" : "T",
+      "birthDate" : "1926-11-11",
+      "gender" : "MALE",
+      "address" : {
+        "line" : "125 CITY AVENUE",
+        "city" : "CENTERVILLE",
+        "stateCode" : "PA",
+        "zipCode" : "17111"
+      }
+    },
+    "payer" : {
+      "entityRole" : "PAYER",
+      "entityType" : "BUSINESS",
+      "identificationType" : "PAYOR_ID",
+      "identifier" : "00435",
+      "lastNameOrOrgName" : "MEDICARE B",
+      "additionalIds" : [ {
+        "qualifierCode" : "G2",
+        "type" : "PROVIDER_COMMERCIAL_NUMBER",
+        "identification" : "330127"
+      } ]
+    }
+  },
+  "otherSubscribers" : [ {
+    "payerResponsibilitySequence" : "SECONDARY",
+    "relationshipType" : "SPOUSE",
+    "groupOrPolicyNumber" : "351630",
+    "groupName" : "STATE TEACHERS",
+    "claimFilingIndicatorCode" : "CI",
+    "insurancePlanType" : "COMMERCIAL",
+    "person" : {
+      "entityRole" : "INSURED_SUBSCRIBER",
+      "entityType" : "INDIVIDUAL",
+      "identificationType" : "MEMBER_ID",
+      "identifier" : "222004433",
+      "lastNameOrOrgName" : "DOE",
+      "firstName" : "JANE",
+      "middleName" : "S",
+      "address" : {
+        "line" : "125 CITY AVENUE",
+        "city" : "CENTERVILLE",
+        "stateCode" : "PA",
+        "zipCode" : "17111"
+      }
+    },
+    "assignmentCertificationIndicator" : "Y",
+    "releaseOfInformationCode" : "Y",
+    "payer" : {
+      "entityRole" : "PAYER",
+      "entityType" : "BUSINESS",
+      "identificationType" : "PAYOR_ID",
+      "identifier" : "1135",
+      "lastNameOrOrgName" : "STATE TEACHERS"
+    }
+  } ],
+  "assignmentParticipationCode" : "A",
+  "assignmentCertificationIndicator" : "Y",
+  "releaseOfInformationCode" : "Y",
+  "admissionTypeCode" : "3",
+  "patientStatusCode" : "01",
+  "billingProvider" : {
+    "entityRole" : "BILLING_PROVIDER",
+    "entityType" : "BUSINESS",
+    "identificationType" : "NPI",
+    "identifier" : "9876540809",
+    "taxId" : "567891234",
+    "taxIdType" : "EIN",
+    "lastNameOrOrgName" : "JONES HOSPITAL",
+    "address" : {
+      "line" : "225 MAIN STREET BARKLEY BUILDING",
+      "city" : "CENTERVILLE",
+      "stateCode" : "PA",
+      "zipCode" : "17111"
+    },
+    "providerTaxonomy" : {
+      "subType" : "PROVIDER_TAXONOMY",
+      "code" : "282N00000X",
+      "desc" : "General Acute Care Hospital"
+    }
+  },
+  "providers" : [ {
+    "entityRole" : "ATTENDING",
+    "entityType" : "INDIVIDUAL",
+    "identificationType" : "NPI",
+    "identifier" : "1122334455",
+    "lastNameOrOrgName" : "JONES",
+    "firstName" : "JOHN",
+    "middleName" : "J",
+    "additionalIds" : [ {
+      "qualifierCode" : "1G",
+      "type" : "PROVIDER_UPIN_NUMBER",
+      "identification" : "B99937"
+    } ]
+  } ],
+  "diags" : [ {
+    "subType" : "ICD_10_PRINCIPAL",
+    "code" : "H269",
+    "desc" : "Unspecified cataract",
+    "formattedCode" : "H26.9"
+  }, {
+    "subType" : "ICD_10",
+    "code" : "I10",
+    "desc" : "Essential (primary) hypertension",
+    "formattedCode" : "I10"
+  }, {
+    "subType" : "ICD_10",
+    "code" : "R9431",
+    "desc" : "Abnormal electrocardiogram [ECG] [EKG]",
+    "formattedCode" : "R94.31"
+  } ],
+  "occurrences" : [ {
+    "subType" : "OCCURRENCE",
+    "code" : "A1",
+    "desc" : "BIRTH DATE-INSURED A",
+    "occurrenceDate" : "1926-11-11"
+  }, {
+    "subType" : "OCCURRENCE",
+    "code" : "A2",
+    "desc" : "EFFECTIVE DATE-INSURED A POLICY",
+    "occurrenceDate" : "1991-11-01"
+  }, {
+    "subType" : "OCCURRENCE",
+    "code" : "B1",
+    "desc" : "BIRTH DATE-INSURED B",
+    "occurrenceDate" : "1926-11-11"
+  }, {
+    "subType" : "OCCURRENCE",
+    "code" : "B2",
+    "desc" : "EFFECTIVE DATE-INSURED B POLICY",
+    "occurrenceDate" : "1987-01-01"
+  } ],
+  "valueInfos" : [ {
+    "subType" : "VALUE",
+    "code" : "A2",
+    "desc" : "Coinsurance Payer A (reportable only on paper claims)",
+    "amount" : 15.31
+  } ],
+  "conditions" : [ {
+    "subType" : "CONDITION",
+    "code" : "09",
+    "desc" : "NEITHER PATIENT NOR SPOUSE IS EMPLOYED",
+    "instructionDesc" : "This code indicates that the patient and spouse have denied having any employment in response to MSP development questions."
+  } ],
+  "serviceLines" : [ {
+    "chargeAmount" : 13.39,
+    "serviceDateFrom" : "2016-09-11",
+    "unitType" : "UNIT",
+    "unitCount" : 1,
+    "procedure" : {
+      "subType" : "CPT",
+      "code" : "85025",
+      "desc" : "Blood count; complete (CBC), automated (Hgb, Hct, RBC, WBC and platelet count) and automated differential WBC count"
+    },
+    "revenueCode" : {
+      "subType" : "REVENUE_CODE",
+      "code" : "0305",
+      "desc" : "Laboratory-Hematology"
+    }
+  }, {
+    "chargeAmount" : 76.54,
+    "serviceDateFrom" : "2016-09-11",
+    "unitType" : "UNIT",
+    "unitCount" : 3,
+    "procedure" : {
+      "subType" : "CPT",
+      "code" : "93005",
+      "desc" : "Electrocardiogram, routine ECG with at least 12 leads; tracing only, without interpretation and report"
+    },
+    "revenueCode" : {
+      "subType" : "REVENUE_CODE",
+      "code" : "0730",
+      "desc" : "EKG/ECG (Electrocardiogram)-General"
+    }
+  } ],
+  "transaction" : {
+    "id" : "6a32cb6297613a0e49906d5d",
+    "controlNumber" : "0021",
+    "transactionType" : "INST",
+    "hierarchicalStructureCode" : "0019",
+    "purposeCode" : "00",
+    "originatorApplicationTransactionId" : "0123",
+    "creationDate" : "2016-09-18",
+    "creationTime" : "09:32:00",
+    "claimOrEncounterIdentifierType" : "CHARGEABLE",
+    "transactionSetIdentifierCode" : "837",
+    "implementationConventionReference" : "005010X223A3",
+    "fileInfo" : {
+      "name" : "837I-minimal.dat",
+      "url" : "file:/edi-samples/edi_files/837/837I-minimal.dat",
+      "lastModifiedDateTime" : "2026-05-05T11:21:04.936-04:00",
+      "fileType" : "EDI"
+    },
+    "sender" : {
+      "entityRole" : "SUBMITTER",
+      "entityType" : "BUSINESS",
+      "identificationType" : "ETIN",
+      "identifier" : "12345",
+      "lastNameOrOrgName" : "JONES HOSPITAL",
+      "contacts" : [ {
+        "functionCode" : "IC",
+        "name" : "JANE DOE",
+        "contactNumbers" : [ {
+          "type" : "PHONE",
+          "number" : "9005555555"
+        } ]
+      } ]
+    },
+    "receiver" : {
+      "entityRole" : "RECEIVER",
+      "entityType" : "BUSINESS",
+      "identificationType" : "ETIN",
+      "identifier" : "00120",
+      "lastNameOrOrgName" : "MEDICARE"
+    },
+    "creationDateTime" : "2016-09-18T09:32:00"
+  }
+}
+, {
+  "id" : "6a32cb6297613a0e49906dbd",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26463774",
   "chargeAmount" : 100.00,
@@ -3425,12 +3624,7 @@
       "lastNameOrOrgName" : "Smith",
       "firstName" : "Jane",
       "birthDate" : "1943-05-01",
-      "gender" : "FEMALE",
-      "address" : {
-        "city" : "MAIMI",
-        "stateCode" : "FL",
-        "zipCode" : "33111"
-      }
+      "gender" : "FEMALE"
     },
     "payer" : {
       "entityRole" : "PAYER",
@@ -3438,11 +3632,6 @@
       "identificationType" : "PAYOR_ID",
       "identifier" : "999996666",
       "lastNameOrOrgName" : "KEY INSURANCE COMPANY",
-      "address" : {
-        "city" : "MAIMI",
-        "stateCode" : "FL",
-        "zipCode" : "33111"
-      },
       "additionalIds" : [ {
         "qualifierCode" : "G2",
         "type" : "PROVIDER_COMMERCIAL_NUMBER",
@@ -3566,7 +3755,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "69efef05ad4799caa7f5bbee",
+    "id" : "6a32cb6297613a0e49906d93",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -3580,7 +3769,7 @@
     "fileInfo" : {
       "name" : "commercial.dat",
       "url" : "file:/edi-samples/edi_files/837/commercial.dat",
-      "lastModifiedDateTime" : "2026-04-27T19:13:28.798-04:00",
+      "lastModifiedDateTime" : "2026-05-05T11:21:04.937-04:00",
       "fileType" : "EDI"
     },
     "sender" : {
@@ -3612,7 +3801,7 @@
   }
 }
 , {
-  "id" : "69efef05ad4799caa7f5bc92",
+  "id" : "6a32cb6297613a0e49906e31",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26462967",
   "chargeAmount" : 100.00,
@@ -3789,7 +3978,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "69efef05ad4799caa7f5bc21",
+    "id" : "6a32cb6297613a0e49906dc0",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -3835,7 +4024,7 @@
   }
 }
 , {
-  "id" : "69efef05ad4799caa7f5bc93",
+  "id" : "6a32cb6297613a0e49906e32",
   "objectType" : "CLAIM",
   "patientControlNumber" : "125WILL",
   "chargeAmount" : 145.50,
@@ -3944,7 +4133,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "69efef05ad4799caa7f5bc4e",
+    "id" : "6a32cb6297613a0e49906ded",
     "controlNumber" : "3701",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -3987,14 +4176,14 @@
   }
 }
 , {
-  "id" : "69efef05ad4799caa7f5bc94",
+  "id" : "6a32cb6297613a0e49906e33",
   "objectType" : "CLAIM",
   "patientControlNumber" : "153829140",
   "chargeAmount" : 827.00,
   "facilityCode" : {
     "subType" : "PLACE_OF_SERVICE",
     "code" : "22",
-    "desc" : "Hospital Outpatient"
+    "desc" : "On Campus-Outpatient Hospital"
   },
   "placeOfServiceType" : "OUTPATIENT",
   "frequencyCode" : {
@@ -4151,7 +4340,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "69efef05ad4799caa7f5bc6f",
+    "id" : "6a32cb6297613a0e49906e0e",
     "controlNumber" : "0001",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -4197,7 +4386,7 @@
   }
 }
 , {
-  "id" : "69efef05ad4799caa7f5bcc4",
+  "id" : "6a32cb6297613a0e49906e63",
   "objectType" : "CLAIM",
   "patientControlNumber" : "756048Q",
   "chargeAmount" : 89.93,
@@ -4402,7 +4591,7 @@
     }
   } ],
   "transaction" : {
-    "id" : "69efef05ad4799caa7f5bc97",
+    "id" : "6a32cb6297613a0e49906e36",
     "controlNumber" : "987654",
     "transactionType" : "INST",
     "hierarchicalStructureCode" : "0019",
@@ -4445,7 +4634,7 @@
   }
 }
 , {
-  "id" : "69efef05ad4799caa7f5bcf6",
+  "id" : "6a32cb6297613a0e49906e95",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26463774",
   "chargeAmount" : 100.00,
@@ -4623,7 +4812,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "69efef05ad4799caa7f5bcc7",
+    "id" : "6a32cb6297613a0e49906e66",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -4669,14 +4858,14 @@
   }
 }
 , {
-  "id" : "69efef05ad4799caa7f5bd22",
+  "id" : "6a32cb6297613a0e49906ec4",
   "objectType" : "CLAIM",
   "patientControlNumber" : "153829140",
-  "chargeAmount" : 827.00,
+  "chargeAmount" : 1654.00,
   "facilityCode" : {
     "subType" : "PLACE_OF_SERVICE",
     "code" : "22",
-    "desc" : "Hospital Outpatient"
+    "desc" : "On Campus-Outpatient Hospital"
   },
   "placeOfServiceType" : "OUTPATIENT",
   "frequencyCode" : {
@@ -4712,7 +4901,12 @@
       "entityType" : "BUSINESS",
       "identificationType" : "PAYOR_ID",
       "identifier" : "05440",
-      "lastNameOrOrgName" : "ABC PAYER"
+      "lastNameOrOrgName" : "ABC PAYER",
+      "address" : {
+        "city" : "NASHVILLE",
+        "stateCode" : "TN",
+        "zipCode" : "37232"
+      }
     }
   },
   "providerSignatureIndicator" : "Y",
@@ -4833,7 +5027,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "69efef05ad4799caa7f5bcfb",
+    "id" : "6a32cb6297613a0e49906e9c",
     "controlNumber" : "0001",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -4847,7 +5041,7 @@
     "fileInfo" : {
       "name" : "anesthesia.dat",
       "url" : "file:/edi-samples/edi_files/837/anesthesia.dat",
-      "lastModifiedDateTime" : "2026-02-22T16:05:15.379-05:00",
+      "lastModifiedDateTime" : "2026-06-14T11:16:02.168-04:00",
       "fileType" : "EDI"
     },
     "sender" : {
@@ -4879,14 +5073,14 @@
   }
 }
 , {
-  "id" : "69efef05ad4799caa7f5bd5d",
+  "id" : "6a32cb6297613a0e49906f01",
   "objectType" : "CLAIM",
   "patientControlNumber" : "SMI123",
   "chargeAmount" : 75.00,
   "facilityCode" : {
     "subType" : "PLACE_OF_SERVICE",
     "code" : "12",
-    "desc" : "Home Health"
+    "desc" : "Home"
   },
   "placeOfServiceType" : "HOME",
   "frequencyCode" : {
@@ -4995,8 +5189,22 @@
     },
     "dmeService" : {
       "procedure" : {
+        "type" : "PROCEDURE",
         "subType" : "HCPCS",
-        "code" : "A4631"
+        "code" : "K0001",
+        "desc" : "Standard wheelchair",
+        "startDate" : "1994-01-01",
+        "categories" : [ {
+          "type" : "RBCS_TAXONOMY",
+          "subType" : "RBCS_CATEGORY",
+          "code" : "D",
+          "desc" : "DME"
+        }, {
+          "type" : "RBCS_TAXONOMY",
+          "subType" : "RBCS_SUB_CATEGORY",
+          "code" : "DD",
+          "desc" : "Wheelchairs"
+        } ]
       },
       "durationUnitType" : "DAYS",
       "lengthOfMedicalNecessity" : 30,
@@ -5007,7 +5215,9 @@
     },
     "attachments" : [ {
       "reportTypeCode" : "CT",
-      "reportTransmissionCode" : "AD"
+      "type" : "CERTIFICATION",
+      "reportTransmissionCode" : "AD",
+      "transmissionType" : "CERTIFICATION_INCLUDED_IN_THIS_CLAIM"
     } ],
     "dmeCertification" : {
       "certificationTypeCode" : "I",
@@ -5093,7 +5303,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "69efef05ad4799caa7f5bd27",
+    "id" : "6a32cb6297613a0e49906ecb",
     "controlNumber" : "112233",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -5107,7 +5317,7 @@
     "fileInfo" : {
       "name" : "wheelchair.dat",
       "url" : "file:/edi-samples/edi_files/837/wheelchair.dat",
-      "lastModifiedDateTime" : "2026-04-27T19:13:28.798-04:00",
+      "lastModifiedDateTime" : "2026-06-14T11:58:52.402-04:00",
       "fileType" : "EDI"
     },
     "sender" : {
@@ -5136,7 +5346,7 @@
   }
 }
 , {
-  "id" : "69efef05ad4799caa7f5bd8c",
+  "id" : "6a32cb6297613a0e49906f30",
   "objectType" : "CLAIM",
   "patientControlNumber" : "ABC123-RI",
   "chargeAmount" : 28.75,
@@ -5253,6 +5463,7 @@
   } ],
   "serviceLines" : [ {
     "referralNumber" : "V123456",
+    "referralNumbers" : [ "V123456" ],
     "chargeAmount" : 25.00,
     "serviceDateFrom" : "2005-05-14",
     "unitType" : "UNIT",
@@ -5311,7 +5522,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "69efef05ad4799caa7f5bd60",
+    "id" : "6a32cb6297613a0e49906f04",
     "controlNumber" : "1002",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -5354,7 +5565,7 @@
   }
 }
 , {
-  "id" : "69efef05ad4799caa7f5bdc6",
+  "id" : "6a32cb6297613a0e49906f6a",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26407789",
   "chargeAmount" : 79.04,
@@ -5607,7 +5818,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "69efef05ad4799caa7f5bd8f",
+    "id" : "6a32cb6297613a0e49906f33",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -5650,14 +5861,159 @@
   }
 }
 , {
-  "id" : "69efef05ad4799caa7f5be0d",
+  "id" : "6a32cb6297613a0e49906f8f",
+  "objectType" : "CLAIM",
+  "patientControlNumber" : "26463774",
+  "chargeAmount" : 100.00,
+  "facilityCode" : {
+    "subType" : "PLACE_OF_SERVICE",
+    "code" : "11",
+    "desc" : "Office"
+  },
+  "placeOfServiceType" : "OFFICE",
+  "frequencyCode" : {
+    "subType" : "FREQUENCY_CODE",
+    "code" : "1",
+    "desc" : "Original claim"
+  },
+  "serviceDateFrom" : "2006-10-03",
+  "serviceDateTo" : "2006-10-03",
+  "subscriber" : {
+    "payerResponsibilitySequence" : "PRIMARY",
+    "relationshipType" : "SELF",
+    "groupOrPolicyNumber" : "2222",
+    "claimFilingIndicatorCode" : "CI",
+    "insurancePlanType" : "COMMERCIAL",
+    "person" : {
+      "entityRole" : "INSURED_SUBSCRIBER",
+      "entityType" : "INDIVIDUAL",
+      "identificationType" : "MEMBER_ID",
+      "identifier" : "JS00111223333",
+      "lastNameOrOrgName" : "Smith",
+      "firstName" : "Jane",
+      "address" : {
+        "city" : "MAIMI",
+        "stateCode" : "FL",
+        "zipCode" : "33111"
+      }
+    },
+    "payer" : {
+      "entityRole" : "PAYER",
+      "entityType" : "BUSINESS",
+      "identificationType" : "PAYOR_ID",
+      "identifier" : "999996666",
+      "lastNameOrOrgName" : "KEY INSURANCE COMPANY",
+      "address" : {
+        "city" : "MAIMI",
+        "stateCode" : "FL",
+        "zipCode" : "33111"
+      }
+    }
+  },
+  "providerSignatureIndicator" : "Y",
+  "assignmentParticipationCode" : "A",
+  "assignmentCertificationIndicator" : "Y",
+  "releaseOfInformationCode" : "I",
+  "clearinghouseTraceNumber" : "17312345600006351",
+  "billingProvider" : {
+    "entityRole" : "BILLING_PROVIDER",
+    "entityType" : "BUSINESS",
+    "identificationType" : "NPI",
+    "identifier" : "9876543210",
+    "taxId" : "587654321",
+    "taxIdType" : "EIN",
+    "lastNameOrOrgName" : "Ben Kildare Service",
+    "address" : {
+      "line" : "234 SEAWAY ST",
+      "city" : "MIAMI",
+      "stateCode" : "FL",
+      "zipCode" : "33111"
+    }
+  },
+  "diags" : [ {
+    "subType" : "ICD_10_PRINCIPAL",
+    "code" : "J020",
+    "desc" : "Streptococcal pharyngitis",
+    "formattedCode" : "J02.0"
+  }, {
+    "subType" : "ICD_10",
+    "code" : "Z1159",
+    "desc" : "Encounter for screening for other viral diseases",
+    "formattedCode" : "Z11.59"
+  } ],
+  "serviceLines" : [ {
+    "chargeAmount" : 40.00,
+    "serviceDateFrom" : "2006-10-03",
+    "unitType" : "UNIT",
+    "unitCount" : 1,
+    "procedure" : {
+      "subType" : "CPT",
+      "code" : "99213",
+      "desc" : "Office or other outpatient visit for the evaluation and management of an established patient, which requires a medically appropriate history and/or examination and low level of medical decision making. When using total time on the date of the encounter for code selection, 20 minutes must be met or exceeded."
+    },
+    "diagPointers" : [ 1 ],
+    "diags" : [ {
+      "subType" : "ICD_10_PRINCIPAL",
+      "code" : "J020",
+      "desc" : "Streptococcal pharyngitis",
+      "formattedCode" : "J02.0"
+    } ]
+  } ],
+  "transaction" : {
+    "id" : "6a32cb6297613a0e49906f71",
+    "controlNumber" : "0021",
+    "transactionType" : "PROF",
+    "hierarchicalStructureCode" : "0019",
+    "purposeCode" : "00",
+    "originatorApplicationTransactionId" : "244579",
+    "creationDate" : "2006-10-15",
+    "creationTime" : "10:23:00",
+    "claimOrEncounterIdentifierType" : "CHARGEABLE",
+    "transactionSetIdentifierCode" : "837",
+    "implementationConventionReference" : "005010X222A2",
+    "fileInfo" : {
+      "name" : "837P-minimal.dat",
+      "url" : "file:/edi-samples/edi_files/837/837P-minimal.dat",
+      "lastModifiedDateTime" : "2026-05-05T11:21:04.936-04:00",
+      "fileType" : "EDI"
+    },
+    "sender" : {
+      "entityRole" : "SUBMITTER",
+      "entityType" : "BUSINESS",
+      "identificationType" : "ETIN",
+      "identifier" : "TGJ23",
+      "lastNameOrOrgName" : "PREMIER BILLING SERVICE",
+      "contacts" : [ {
+        "functionCode" : "IC",
+        "name" : "JERRY",
+        "contactNumbers" : [ {
+          "type" : "PHONE",
+          "number" : "3055552222"
+        }, {
+          "type" : "EXTENSION",
+          "number" : "231"
+        } ]
+      } ]
+    },
+    "receiver" : {
+      "entityRole" : "RECEIVER",
+      "entityType" : "BUSINESS",
+      "identificationType" : "ETIN",
+      "identifier" : "66783JJT",
+      "lastNameOrOrgName" : "KEY INSURANCE COMPANY"
+    },
+    "creationDateTime" : "2006-10-15T10:23:00"
+  }
+}
+, {
+  "id" : "6a32cb6297613a0e49906fd6",
   "objectType" : "CLAIM",
   "patientControlNumber" : "CLMNO12345",
   "chargeAmount" : 2232.93,
   "facilityCode" : {
     "subType" : "PLACE_OF_SERVICE",
     "code" : "12",
-    "desc" : "Home Health"
+    "desc" : "Home"
   },
   "placeOfServiceType" : "HOME",
   "frequencyCode" : {
@@ -5956,7 +6312,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "69efef05ad4799caa7f5bdc9",
+    "id" : "6a32cb6297613a0e49906f92",
     "controlNumber" : "0711",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -5999,7 +6355,7 @@
   }
 }
 , {
-  "id" : "69efef05ad4799caa7f5becd",
+  "id" : "6a32cb6297613a0e49907098",
   "objectType" : "CLAIM",
   "patientControlNumber" : "36463774",
   "chargeAmount" : 100.00,
@@ -6329,7 +6685,9 @@
   "assignmentCertificationIndicator" : "Y",
   "releaseOfInformationCode" : "Y",
   "specialProgramCode" : "05",
+  "specialProgramType" : "DISABILITY",
   "delayReasonCode" : "4",
+  "delayReasonType" : "DELAY_IN_CERTIFYING_PROVIDER",
   "serviceAuthorizationExceptionCode" : "7",
   "medicareSection4081Indicator" : "N",
   "mammographyCertificationNumber" : "MammogCertNumber",
@@ -6520,7 +6878,9 @@
   } ],
   "attachments" : [ {
     "reportTypeCode" : "OZ",
+    "type" : "SUPPORT_DATA_FOR_CLAIM",
     "reportTransmissionCode" : "BM",
+    "transmissionType" : "BY_MAIL",
     "controlNumber" : "DMN0012"
   } ],
   "serviceLines" : [ {
@@ -6534,11 +6894,13 @@
     "repricedReferenceNumber" : "Repriced",
     "adjustedRepricedReferenceNumber" : "AdjRepriced",
     "priorAuthorization" : "PriorAuthorization",
+    "priorAuthorizationNumbers" : [ "PriorAuthorization" ],
     "mammographyCertificationNumber" : "Mammog",
     "cliaNumber" : "CLIA-Amend",
     "referringCliaNumber" : "CLIA-Fac",
     "immunizationBatchNumber" : "Immune",
     "referralNumber" : "ReferralNumber",
+    "referralNumbers" : [ "ReferralNumber" ],
     "chargeAmount" : 40.00,
     "salesTaxAmount" : 101.00,
     "postageClaimedAmount" : 8.59,
@@ -6596,11 +6958,15 @@
     },
     "attachments" : [ {
       "reportTypeCode" : "OZ",
+      "type" : "SUPPORT_DATA_FOR_CLAIM",
       "reportTransmissionCode" : "BM",
+      "transmissionType" : "BY_MAIL",
       "controlNumber" : "Line123"
     }, {
       "reportTypeCode" : "CT",
-      "reportTransmissionCode" : "AB"
+      "type" : "CERTIFICATION",
+      "reportTransmissionCode" : "AB",
+      "transmissionType" : "PREVIOUSLY_SUBMITTED_TO_PAYER"
     } ],
     "measurements" : [ {
       "categoryCode" : "TR",
@@ -6799,7 +7165,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "69efef05ad4799caa7f5be12",
+    "id" : "6a32cb6297613a0e49906fdd",
     "controlNumber" : "0031",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -6813,7 +7179,7 @@
     "fileInfo" : {
       "name" : "837P-all-fields.dat",
       "url" : "file:/edi-samples/edi_files/837/837P-all-fields.dat",
-      "lastModifiedDateTime" : "2026-04-27T19:13:28.795-04:00",
+      "lastModifiedDateTime" : "2026-06-10T22:07:38.468-04:00",
       "fileType" : "EDI"
     },
     "sender" : {
@@ -6845,7 +7211,7 @@
   }
 }
 , {
-  "id" : "69efef05ad4799caa7f5bf08",
+  "id" : "6a32cb6297613a0e499070d3",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26463774",
   "chargeAmount" : 100.00,
@@ -7062,7 +7428,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "69efef05ad4799caa7f5bed0",
+    "id" : "6a32cb6297613a0e4990709b",
     "controlNumber" : "0021",
     "transactionType" : "INST",
     "hierarchicalStructureCode" : "0019",

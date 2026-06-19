@@ -1,0 +1,232 @@
+[
+ {
+  "objectType" : "VALIDATION",
+  "issueType" : "REQUIRED",
+  "fieldName" : "transaction_set_header",
+  "sourceLocation" : {
+    "fileName" : "835-validation-issues.edi",
+    "lineNumber" : 3,
+    "segmentNumber" : 3
+  },
+  "loop" : "0000",
+  "segment" : "ST",
+  "message" : "Required segment TRN (reassociation_trace_number) is missing in loop 0000"
+}
+, {
+  "objectType" : "VALIDATION",
+  "issueType" : "REQUIRED",
+  "fieldName" : "payer_identification",
+  "sourceLocation" : {
+    "fileName" : "835-validation-issues.edi",
+    "lineNumber" : 7,
+    "segmentNumber" : 7
+  },
+  "loop" : "1000A",
+  "segment" : "N1",
+  "message" : "Required segment PER (payer_technical_contact_information) is missing in loop 1000A"
+}
+, {
+  "id" : "6a32cb6097613a0e499049cc",
+  "objectType" : "PAYMENT",
+  "patientControlNumber" : "5554555444",
+  "chargeAmount" : 700.00,
+  "paymentAmount" : 500.00,
+  "facilityCode" : {
+    "subType" : "PLACE_OF_SERVICE",
+    "code" : "11",
+    "desc" : "Office"
+  },
+  "placeOfServiceType" : "OFFICE",
+  "frequencyCode" : {
+    "subType" : "FREQUENCY_CODE",
+    "code" : "1",
+    "desc" : "Original claim"
+  },
+  "serviceDateFrom" : "2024-03-01",
+  "serviceDateTo" : "2024-03-01",
+  "patient" : {
+    "person" : {
+      "entityRole" : "PATIENT",
+      "entityType" : "INDIVIDUAL",
+      "identificationType" : "MEMBER_ID",
+      "identifier" : "33344555510",
+      "lastNameOrOrgName" : "BUDD",
+      "firstName" : "WILLIAM"
+    }
+  },
+  "claimStatusCode" : "1",
+  "claimStatus" : "PRIMARY",
+  "patientResponsibilityAmount" : 300.00,
+  "claimFilingIndicatorCode" : "12",
+  "insurancePlanType" : "PPO",
+  "payerControlNumber" : "94060555410000",
+  "payer" : {
+    "entityRole" : "PAYER",
+    "entityType" : "BUSINESS",
+    "lastNameOrOrgName" : "DELTA DENTAL OF ABC",
+    "address" : {
+      "line" : "225 MAIN STREET",
+      "city" : "CENTERVILLE",
+      "stateCode" : "PA",
+      "zipCode" : "17111"
+    },
+    "additionalIds" : [ {
+      "qualifierCode" : "2U",
+      "type" : "PAYER_IDENTIFICATION_NUMBER",
+      "identification" : "0101"
+    } ]
+  },
+  "payee" : {
+    "entityRole" : "PAYEE",
+    "entityType" : "BUSINESS",
+    "identificationType" : "NPI",
+    "identifier" : "PROVIDER2_NPI",
+    "taxId" : "123456789",
+    "taxIdType" : "TAX_ID",
+    "lastNameOrOrgName" : "PROVIDER",
+    "address" : {
+      "line" : "2255 ANY ROAD",
+      "city" : "ANY CITY",
+      "stateCode" : "CA",
+      "zipCode" : "12211"
+    },
+    "additionalIds" : [ {
+      "qualifierCode" : "PQ",
+      "type" : "PAYEE_IDENTIFICATION_NUMBER",
+      "identification" : "PAYEE_ID2"
+    } ]
+  },
+  "serviceLines" : [ {
+    "chargeAmount" : 800.00,
+    "paidAmount" : 400.00,
+    "supplementalAmounts" : [ {
+      "qualifierCode" : "B6",
+      "type" : "ALLOWED_ACTUAL",
+      "amount" : 800.00
+    } ],
+    "serviceDateFrom" : "2024-03-01",
+    "procedure" : {
+      "subType" : "CPT",
+      "code" : "99211",
+      "desc" : "Office or other outpatient visit for the evaluation and management of an established patient that may not require the presence of a physician or other qualified health care professional"
+    },
+    "adjustments" : [ {
+      "group" : "PATIENT_RESPONSIBILITY",
+      "reasonCode" : "XX",
+      "reason" : {
+        "subType" : "CARC",
+        "code" : "XX"
+      },
+      "amount" : 300.00
+    } ]
+  } ],
+  "validationIssues" : [ {
+    "objectType" : "VALIDATION",
+    "issueType" : "BALANCE",
+    "issueObjectClass" : "Payment",
+    "fieldName" : "chargeAmount",
+    "sourceLocation" : {
+      "fileName" : "835-validation-issues.edi",
+      "lineNumber" : 18,
+      "segmentNumber" : 17
+    },
+    "loop" : "2100",
+    "segment" : "CLP",
+    "ediString" : "CLP*5554555444*1*700*500*300*12*94060555410000*11*1~",
+    "message" : "Claim 5554555444: The sum of line charge amounts 800.00 does not match the claim charge amount 700.00"
+  }, {
+    "objectType" : "VALIDATION",
+    "issueType" : "BALANCE",
+    "issueObjectClass" : "Payment",
+    "fieldName" : "paymentAmount",
+    "sourceLocation" : {
+      "fileName" : "835-validation-issues.edi",
+      "lineNumber" : 18,
+      "segmentNumber" : 17
+    },
+    "loop" : "2100",
+    "segment" : "CLP",
+    "ediString" : "CLP*5554555444*1*700*500*300*12*94060555410000*11*1~",
+    "message" : "Claim 5554555444: The sum of line paid amounts 400.00 does not match the claim paid amount 500.00"
+  }, {
+    "objectType" : "VALIDATION",
+    "issueType" : "BALANCE",
+    "issueObjectClass" : "ServiceLine",
+    "fieldName" : "paymentAmount",
+    "sourceLocation" : {
+      "fileName" : "835-validation-issues.edi",
+      "lineNumber" : 20,
+      "segmentNumber" : 19
+    },
+    "loop" : "2110",
+    "segment" : "SVC",
+    "ediString" : "SVC*HC:99211*800*400~",
+    "message" : "Line 1: Paid amount 400.00 does not match the charge amount 800.00 minus the sum of adjustments 300.00"
+  }, {
+    "objectType" : "VALIDATION",
+    "issueType" : "INVALID_CODE",
+    "fieldName" : "adjustment_reason_code",
+    "sourceLocation" : {
+      "fileName" : "835-validation-issues.edi",
+      "lineNumber" : 22,
+      "segmentNumber" : 21
+    },
+    "loop" : "2110",
+    "segment" : "CAS",
+    "element" : "CAS02",
+    "codeSubType" : "CARC",
+    "value" : "XX",
+    "ediString" : "CAS*PR*XX*300~",
+    "message" : "Claim Adjustment Reason Code XX is not a valid code"
+  }, {
+    "objectType" : "VALIDATION",
+    "issueType" : "INVALID",
+    "fieldName" : "",
+    "sourceLocation" : {
+      "fileName" : "835-validation-issues.edi",
+      "lineNumber" : 24,
+      "segmentNumber" : 23
+    },
+    "loop" : "2110",
+    "segment" : "XX",
+    "ediString" : "XX*B6*800~",
+    "message" : "Unknown segment 'XX' for the transaction set 835"
+  } ],
+  "transaction" : {
+    "id" : "6a32cb6097613a0e499049ab",
+    "controlNumber" : "0002",
+    "transactionType" : "PAYMENT",
+    "productionDate" : "2024-12-23",
+    "transactionHandlingType" : "INFORMATION_ONLY",
+    "totalPaymentAmount" : 132.00,
+    "creditOrDebitFlagCode" : "C",
+    "paymentMethodType" : "CHECK",
+    "receiverAccountNumber" : "456",
+    "paymentDate" : "2019-03-31",
+    "receiverIdentifier" : "CLEARINGHOUSE_ID",
+    "transactionSetIdentifierCode" : "835",
+    "fileInfo" : {
+      "name" : "835-validation-issues.edi",
+      "url" : "file:/edi-samples/edi_files/835/835-validation-issues.edi",
+      "lastModifiedDateTime" : "2026-05-17T10:06:32.63-04:00",
+      "fileType" : "EDI"
+    }
+  }
+}
+, {
+  "objectType" : "VALIDATION",
+  "issueType" : "CONTROL",
+  "fieldName" : "transaction_segment_count",
+  "sourceLocation" : {
+    "fileName" : "835-validation-issues.edi",
+    "lineNumber" : 26,
+    "segmentNumber" : 24
+  },
+  "loop" : "0000",
+  "segment" : "SE",
+  "element" : "SE01",
+  "value" : "18",
+  "ediString" : "SE*18*0002~",
+  "message" : "Count  '18' in the closing segment does not match actual count '22'"
+}
+ ]

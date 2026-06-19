@@ -18,3 +18,4 @@ allOf:
       - "UNKNOWN"
       x-edi-elt-designators:
       - "DMG03"
+      x-enum-name: "GenderType"

@@ -1,0 +1,22 @@
+---
+type: "object"
+description: "Segment: PLA."
+properties:
+  actionCode:
+    description: "Action code. EDI: PLA01."
+    type: "string"
+    x-edi-elt-designators:
+    - "PLA01"
+  effectiveDate:
+    description: "Effective date. EDI: PLA03."
+    type: "string"
+    format: "date"
+    x-edi-elt-designators:
+    - "PLA03"
+  reasonCode:
+    description: "Reason code. EDI: PLA05."
+    type: "string"
+    x-edi-elt-designators:
+    - "PLA05"
+x-edi-seg-ids:
+- "PLA"

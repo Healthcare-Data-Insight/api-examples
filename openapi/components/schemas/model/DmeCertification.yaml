@@ -12,6 +12,7 @@ properties:
     type: "string"
     x-edi-elt-designators:
     - "CR302"
+    x-enum-name: "UnitType"
   duration:
     description: "Length of time DME equipment is needed. EDI: CR303."
     type: "number"

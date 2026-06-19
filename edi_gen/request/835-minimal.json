@@ -1,0 +1,110 @@
+{
+  "interchangeControl": {
+    "senderIdQualifier": "ZZ",
+    "senderId": "123",
+    "receiverIdQualifier": "ZZ",
+    "receiverId": "456",
+    "interchangeDate": "2025-08-09",
+    "interchangeTime": "10:06:00",
+    "controlNumber": 1
+  },
+  "functionalGroup": {
+    "transactionType": "PAYMENT",
+    "senderCode": "1",
+    "receiverCode": "2",
+    "date": "2025-08-09",
+    "time": "10:06:00",
+    "controlNumber": 1
+  },
+  "transaction": {
+    "transactionType": "PAYMENT",
+    "productionDate": "2026-06-01",
+    "originatorApplicationTransactionId": "tran1",
+    "creationDate": "2025-08-09",
+    "creationTime": "10:06:00",
+    "transactionHandlingType": "INFORMATION_ONLY",
+    "totalPaymentAmount": 1000.00,
+    "creditOrDebitFlagCode": "C",
+    "paymentMethodType": "CHECK",
+    "receiverAccountNumber": "456",
+    "paymentDate": "2026-06-01",
+    "checkOrEftTraceNumber": "CHECK_1",
+    "payerIdentifier": "PAYER_ID01",
+    "receiverIdentifier": "CLEARINGHOUSE_ID",
+    "sender": {
+      "lastNameOrOrgName": "ANY PLAN USA",
+      "address": {
+        "line": "1 WALK THIS WAY",
+        "city": "ANYCITY",
+        "stateCode": "OH",
+        "zipCode": "45209"
+      },
+      "contacts": [
+        {
+          "functionCode": "BL",
+          "name": "EDI",
+          "contactNumbers": [
+            {
+              "type": "EMAIL",
+              "number": "test@test.com"
+            }
+          ]
+        }
+      ]
+    },
+    "receiver": {
+      "identifier": "PROVIDER2_NPI",
+      "lastNameOrOrgName": "PROVIDER"
+    }
+  },
+  "payments": [
+    {
+      "patientControlNumber": "5554555444",
+      "chargeAmount": 800.00,
+      "paymentAmount": 500.00,
+      "facilityCode": {
+        "subType": "PLACE_OF_SERVICE",
+        "code": "11"
+      },
+      "frequencyCode": {
+        "code": "1"
+      },
+      "patient": {
+        "person": {
+          "identifier": "33344555510",
+          "lastNameOrOrgName": "BUDD",
+          "firstName": "WILLIAM"
+        }
+      },
+      "claimStatusCode": "1",
+      "patientResponsibilityAmount": 300.00,
+      "claimFilingIndicatorCode": "12",
+      "insurancePlanType": "PPO",
+      "payerControlNumber": "94060555410000",
+      "serviceLines": [
+        {
+          "chargeAmount": 800.00,
+          "paidAmount": 500.00,
+          "supplementalAmounts": [
+            {
+              "qualifierCode": "B6",
+              "amount": 800.00
+            }
+          ],
+          "serviceDateFrom": "2024-03-01",
+          "procedure": {
+            "subType": "CPT",
+            "code": "99211"
+          },
+          "adjustments": [
+            {
+              "group": "PATIENT_RESPONSIBILITY",
+              "reasonCode": "1",
+              "amount": 300.00
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

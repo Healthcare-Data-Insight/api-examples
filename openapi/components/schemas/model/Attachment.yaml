@@ -3,15 +3,40 @@ type: "object"
 description: "Segment: PWK."
 properties:
   reportTypeCode:
-    description: "Report type code. EDI: PWK01."
+    description: "Code indicating the title or contents of a document. EDI: PWK01."
     type: "string"
     x-edi-elt-designators:
     - "PWK01"
+  type:
+    description: "Attachment type; 'reportTypeCode' expressed as enum (string constant). Since: v2.15.0. EDI: PWK01."
+    type: "string"
+    x-edi-elt-designators:
+    - "PWK01"
+    x-since: "2.15.0"
+    x-enum-name: "AttachmentType"
   reportTransmissionCode:
-    description: "Report transmission code. EDI: PWK02."
+    description: "Transmission method or format by which attachments are to be sent. EDI: PWK02."
     type: "string"
     x-edi-elt-designators:
     - "PWK02"
+  transmissionType:
+    description: "Transmission method; transmission code expressed as enum (string constant). Since: v2.15.0. EDI: PWK02."
+    type: "string"
+    enum:
+    - "AVAILABLE_ON_REQUEST_AT_PROVIDER_SITE"
+    - "BY_MAIL"
+    - "CERTIFICATION_INCLUDED_IN_THIS_CLAIM"
+    - "ELECTRONICALLY_ONLY"
+    - "E_MAIL"
+    - "FILE_TRANSFER"
+    - "NARRATIVE_SEGMENT_INCLUDED_IN_THIS_CLAIM"
+    - "NOT_SPECIFIED"
+    - "NO_DOCUMENTATION_IS_REQUIRED"
+    - "PREVIOUSLY_SUBMITTED_TO_PAYER"
+    x-edi-elt-designators:
+    - "PWK02"
+    x-since: "2.15.0"
+    x-enum-name: "AttachmentTransmissionType"
   controlNumber:
     description: "Control number. EDI: PWK06."
     type: "string"

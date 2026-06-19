@@ -23,7 +23,9 @@ public class ConverterExample implements ParsingExampleHelper {
     @Test
     public void convertSingleFileToJson() {
         var ediFile = new File(EDI_FILES_DIR, "/837/prof-encounter.dat");
-        var converter = new EdiFileConverter(OutputFormat.JSON);
+        var converter = new EdiFileConverter(OutputFormat.JSON)
+                .isSerializeParsingIssues(true)
+                .isValidationMode(true);
         converter.convertFile(ediFile, OUT_DIR);
     }
 
