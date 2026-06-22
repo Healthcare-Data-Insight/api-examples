@@ -126,12 +126,6 @@ properties:
     x-edi-elt-designators:
     - "OI03"
     x-since: "2.14.10"
-  patientSignatureSourceCode:
-    description: "Patient signature source code. Since: v2.14.10. EDI: OI04."
-    type: "string"
-    x-edi-elt-designators:
-    - "OI04"
-    x-since: "2.14.10"
   releaseOfInformationCode:
     description: "Release of information code. Since: v2.14.10. EDI: OI06."
     type: "string"
@@ -143,6 +137,11 @@ properties:
     $ref: "./OutpatientAdjudication.yaml"
     x-edi-seg-ids:
     - "MOA"
+  inpatientAdjudication:
+    description: "Inpatient adjudication. EDI: MIA."
+    $ref: "./InpatientAdjudication.yaml"
+    x-edi-seg-ids:
+    - "MIA"
   payerPriorAuthorizationNumber:
     description: "Payer prior authorization number. EDI: REF02*G1."
     type: "string"
@@ -164,6 +163,13 @@ properties:
     - "REF02"
     x-edi-qualifiers:
     - "F8"
+  payerAdjudicatedDrg:
+    description: "Adjudicated DRG code; post-adjudicated claims only. EDI: REF02*1N."
+    type: "string"
+    x-edi-elt-designators:
+    - "REF02"
+    x-edi-qualifiers:
+    - "1N"
   payer:
     description: "Payer. EDI: Loop: 2330B, NM1*PR."
     $ref: "./Party.yaml"

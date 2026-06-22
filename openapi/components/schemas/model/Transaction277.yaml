@@ -80,4 +80,4 @@ properties:
     $ref: "./FileInfo.yaml"
   sender:
     description: "Information source name."
-    $ref: "./Party.yaml"
+    $ref: "./PartyIdName.yaml"

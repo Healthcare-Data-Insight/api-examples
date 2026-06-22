@@ -65,7 +65,7 @@ properties:
     $ref: "./FileInfo.yaml"
   sender:
     description: "Submitter or sender of this transaction."
-    $ref: "./Party.yaml"
+    $ref: "./PartyIdName.yaml"
   receiver:
     description: "Receiver of this transaction."
-    $ref: "./Party.yaml"
+    $ref: "./PartyIdName.yaml"

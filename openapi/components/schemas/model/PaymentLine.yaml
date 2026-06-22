@@ -148,11 +148,6 @@ properties:
     $ref: "./Code.yaml"
     x-edi-elt-designators:
     - "SVC06"
-  providers:
-    description: "Providers for this service line."
-    type: "array"
-    items:
-      $ref: "./Provider.yaml"
   adjustments:
     description: "Line adjustments. EDI: CAS."
     type: "array"

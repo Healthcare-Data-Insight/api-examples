@@ -118,16 +118,20 @@ class AwsRequest(EdiConverterModel):
     "Name of the bucket for converted files. If not defined, the converter will use the value from the 'OUT_BUCKET' environment variable."
     out_format: str | None = Field(default=None, description="The format to convert EDI files to. The function defaults to JSON. You can also define the 'OUT_FORMAT' environment variable to override the default.")
     "The format to convert EDI files to. The function defaults to JSON. You can also define the 'OUT_FORMAT' environment variable to override the default."
-    is_validate: bool | None = Field(default=None, description="Perform full EDI validation. Validation messages are written to the response stream as 'VALIDATION' objects. You can also set the 'EDI_VALIDATE' environment variable and set its value to 'true'. Since: v2.15.0.")
-    "Perform full EDI validation. Validation messages are written to the response stream as 'VALIDATION' objects. You can also set the 'EDI_VALIDATE' environment variable and set its value to 'true'. Since: v2.15.0."
+    is_validate: bool | None = Field(default=None, description="Perform full EDI validation. Validation messages are written to the output as 'VALIDATION' objects. You can also set the 'EDI_VALIDATE' environment variable and set its value to 'true'. Since: v2.15.0.")
+    "Perform full EDI validation. Validation messages are written to the output as 'VALIDATION' objects. You can also set the 'EDI_VALIDATE' environment variable and set its value to 'true'. Since: v2.15.0."
+    is_transaction_top_level: bool | None = Field(default=None, description="Write EDI transactions to the root level of the output as `TRANSACTION` objects. If not set, the EDI transaction is repeated in each claim, payment, or member object. Setting this option will reduce the size of the output. Defaults to 'false' or to the value of the 'EDI_CONVERT_CONTROL_SEGMENTS' environment variable. JSON/JSONL format only. Since: v2.15.0.")
+    "Write EDI transactions to the root level of the output as `TRANSACTION` objects. If not set, the EDI transaction is repeated in each claim, payment, or member object. Setting this option will reduce the size of the output. Defaults to 'false' or to the value of the 'EDI_CONVERT_CONTROL_SEGMENTS' environment variable. JSON/JSONL format only. Since: v2.15.0."
+    is_serialize_control_segments: bool | None = Field(default=None, description="Write control segments (ISA/GS) to the output file as JSON objects. Defaults to 'false' or to the value of the 'EDI_CONVERT_CONTROL_SEGMENTS' environment variable. JSON/JSONL format only. Since: v2.15.0.")
+    "Write control segments (ISA/GS) to the output file as JSON objects. Defaults to 'false' or to the value of the 'EDI_CONVERT_CONTROL_SEGMENTS' environment variable. JSON/JSONL format only. Since: v2.15.0."
     csv_schema_name: str | None = Field(default=None, description="Name of the <a href='/docs/csv/schemas/#built-in-conversion-schemas'>CSV conversion schema</a>. Defaults to 'lines-with-header-repeat-first-row' (single file schema). You can also define the 'CSV_SCHEMA_NAME' environment variable to override the default.")
     "Name of the <a href='/docs/csv/schemas/#built-in-conversion-schemas'>CSV conversion schema</a>. Defaults to 'lines-with-header-repeat-first-row' (single file schema). You can also define the 'CSV_SCHEMA_NAME' environment variable to override the default."
-    warnings_in_output: bool | None = Field(default=None, description="Include EDI parser warnings in the output files, see <a href='/docs/ediconvert-api/user-guide/#error-handling'>documentation on error handling</a> for more details. You can also define the 'OUTPUT_WARNINGS' environment variable and set its value to 'True'. Deprecated: Use 'isValidate' instead.")
-    "Include EDI parser warnings in the output files, see <a href='/docs/ediconvert-api/user-guide/#error-handling'>documentation on error handling</a> for more details. You can also define the 'OUTPUT_WARNINGS' environment variable and set its value to 'True'. Deprecated: Use 'isValidate' instead."
-    max_warnings: int | None = Field(default=None, description="The maximum number of parsing warnings per file before stopping and raising an error. Defaults to 3000. Set to -1 to suppress raising the 'too many warnings' error; the converter will process the entire file.")
-    "The maximum number of parsing warnings per file before stopping and raising an error. Defaults to 3000. Set to -1 to suppress raising the 'too many warnings' error; the converter will process the entire file."
     is_about_only: bool | None = Field(default=None, description="Print the converter's version and license information and exit. All other fields are ignored.")
     "Print the converter's version and license information and exit. All other fields are ignored."
+    warnings_in_output: bool | None = Field(default=None, description="Include EDI parser warnings in the output files, see <a href='/docs/ediconvert-api/user-guide/#error-handling'>documentation on error handling</a> for more details. You can also define the 'OUTPUT_WARNINGS' environment variable and set its value to 'True'. Deprecated: Use 'isValidate' instead.")
+    "Include EDI parser warnings in the output files, see <a href='/docs/ediconvert-api/user-guide/#error-handling'>documentation on error handling</a> for more details. You can also define the 'OUTPUT_WARNINGS' environment variable and set its value to 'True'. Deprecated: Use 'isValidate' instead."
+    max_warnings: int | None = Field(default=None, description="The maximum number of parsing warnings per file before stopping and raising an error. Defaults to 3000. Set to -1 to suppress raising the 'too many warnings' error; the converter will process the entire file. Deprecated: Use 'isValidate' property to get all validation issues in the output file..")
+    "The maximum number of parsing warnings per file before stopping and raising an error. Defaults to 3000. Set to -1 to suppress raising the 'too many warnings' error; the converter will process the entire file. Deprecated: Use 'isValidate' property to get all validation issues in the output file.."
 class BatchStatus(EdiConverterModel):
     'Status of multiple claims provided at a provider or a receiver level. At the receiver level, this is a status of all claims in the transaction.'
     trace_identifier: str | None = Field(default=None, description='Transaction control number from 837 for the status at the receiver level. It is a dummy number for the provider-level status; should be ignored. EDI: TRN02.')
@@ -1184,10 +1188,6 @@ class MemberCoverageCsv(EdiConverterModel):
     'Reporting categories. EDI: Loop: 2750.'
     health_coverages: list[HealthCoverage] = Field(default_factory=list, description='Health coverages. EDI: Loop: 2300.')
     'Health coverages. EDI: Loop: 2300.'
-    validation_issues: list[ValidationIssue] = Field(default_factory=list, description='Validation issues.')
-    'Validation issues.'
-    transaction: Transaction834 | None = Field(default=None, description='Parent EDI transaction for this object. EDI: ST.')
-    'Parent EDI transaction for this object. EDI: ST.'
 class Note(EdiConverterModel):
     'Segment: NTE.'
     qualifier_code: str | None = Field(default=None, description='Code identifying the functional area or purpose for which the note applies. EDI: NTE01.')
@@ -1232,18 +1232,20 @@ class OtherSubscriber(EdiConverterModel):
     'Remaining patient liability amount. EDI: AMT02*EAF.'
     assignment_certification_indicator: str | None = Field(default=None, description='Assignment certification indicator. Since: v2.14.10. EDI: OI03.')
     'Assignment certification indicator. Since: v2.14.10. EDI: OI03.'
-    patient_signature_source_code: str | None = Field(default=None, description='Patient signature source code. Since: v2.14.10. EDI: OI04.')
-    'Patient signature source code. Since: v2.14.10. EDI: OI04.'
     release_of_information_code: str | None = Field(default=None, description='Release of information code. Since: v2.14.10. EDI: OI06.')
     'Release of information code. Since: v2.14.10. EDI: OI06.'
     outpatient_adjudication: OutpatientAdjudication | None = Field(default=None, description='Outpatient adjudication. EDI: MOA.')
     'Outpatient adjudication. EDI: MOA.'
+    inpatient_adjudication: InpatientAdjudication | None = Field(default=None, description='Inpatient adjudication. EDI: MIA.')
+    'Inpatient adjudication. EDI: MIA.'
     payer_prior_authorization_number: str | None = Field(default=None, description='Payer prior authorization number. EDI: REF02*G1.')
     'Payer prior authorization number. EDI: REF02*G1.'
     payer_referral_number: str | None = Field(default=None, description='Payer referral number. EDI: REF02*9F.')
     'Payer referral number. EDI: REF02*9F.'
     payer_claim_control_number: str | None = Field(default=None, description='Payer claim control number. EDI: REF02*F8.')
     'Payer claim control number. EDI: REF02*F8.'
+    payer_adjudicated_drg: str | None = Field(default=None, description='Adjudicated DRG code; post-adjudicated claims only. EDI: REF02*1N.')
+    'Adjudicated DRG code; post-adjudicated claims only. EDI: REF02*1N.'
     payer: Party | None = Field(default=None, description='Payer. EDI: Loop: 2330B, NM1*PR.')
     'Payer. EDI: Loop: 2330B, NM1*PR.'
     patient: Party | None = Field(default=None, description="Patient's information; post-adjudicated claims only. EDI: Loop: 2330C, NM1*QC.")
@@ -1520,8 +1522,6 @@ class PaymentLine(EdiConverterModel):
     'Submitted revenue code from the claim if it is different from the adjudicated revenue code. EDI: SVC06*NU.'
     original_drug: Code | None = Field(default=None, description='Submitted drug (NDC) code from the claim if it is different from the adjudicated drug code. EDI: SVC06.')
     'Submitted drug (NDC) code from the claim if it is different from the adjudicated drug code. EDI: SVC06.'
-    providers: list[Provider] = Field(default_factory=list, description='Providers for this service line.')
-    'Providers for this service line.'
     adjustments: list[Adjustment] = Field(default_factory=list, description='Line adjustments. EDI: CAS.')
     'Line adjustments. EDI: CAS.'
     remark_codes: list[str] = Field(default_factory=list, description='Remark codes. EDI: LQ.')
@@ -2278,7 +2278,7 @@ class Transaction277(EdiConverterModel):
     'Process date. EDI: DTP03*009.'
     file_info: FileInfo | None = Field(default=None, description='File info.')
     'File info.'
-    sender: Party | None = Field(default=None, description='Information source name.')
+    sender: PartyIdName | None = Field(default=None, description='Information source name.')
     'Information source name.'
 class Transaction834(EdiConverterModel):
     'OpenAPI schema for Transaction834.'
@@ -2388,9 +2388,9 @@ class Transaction837(EdiConverterModel):
     'Implementation convention reference. EDI: ST03.'
     file_info: FileInfo | None = Field(default=None, description='File info.')
     'File info.'
-    sender: Party | None = Field(default=None, description='Submitter or sender of this transaction.')
+    sender: PartyIdName | None = Field(default=None, description='Submitter or sender of this transaction.')
     'Submitter or sender of this transaction.'
-    receiver: Party | None = Field(default=None, description='Receiver of this transaction.')
+    receiver: PartyIdName | None = Field(default=None, description='Receiver of this transaction.')
     'Receiver of this transaction.'
 class ValidationIssue(EdiConverterModel):
     'EDI validation issue details.'
@@ -2434,7 +2434,7 @@ class ValidationIssue(EdiConverterModel):
     'Value that caused the issue.'
     message: str | None = Field(default=None, description='Additional message describing the issue.')
     'Additional message describing the issue.'
-    allowed_values: list[str] = Field(default=None, description='Allowed values (VALUE_NOT_IN_ENUM_LIST issue type).')
+    allowed_values: list[str] = Field(default_factory=list, description='Allowed values (VALUE_NOT_IN_ENUM_LIST issue type).')
     'Allowed values (VALUE_NOT_IN_ENUM_LIST issue type).'
 class Party(PartyIdName):
     'OpenAPI schema for Party.'
