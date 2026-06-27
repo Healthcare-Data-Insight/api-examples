@@ -1,9 +1,12 @@
 [
  {
+  "objectType" : "SEGMENT",
   "segment_id" : "ISA",
   "loop_id" : "0000",
   "authorization_information_qualifier" : "00",
+  "authorization_information" : "          ",
   "security_information_qualifier" : "00",
+  "security_information" : "          ",
   "interchange_id_qualifier" : "ZZ",
   "interchange_sender_id" : "123456789012345",
   "interchange_id_qualifier_2" : "ZZ",
@@ -18,6 +21,7 @@
   "component_element_separator" : ":"
 }
 , {
+  "objectType" : "SEGMENT",
   "segment_id" : "GS",
   "loop_id" : "0000",
   "functional_identifier_code" : "HB",
@@ -30,6 +34,7 @@
   "version_identifier_code" : "005010X279"
 }
 , {
+  "objectType" : "SEGMENT",
   "segment_id" : "ST",
   "loop_id" : "0000",
   "transaction_set_identifier_code" : {
@@ -264,17 +269,19 @@
   "transaction_set_trailer" : {
     "segment_id" : "SE",
     "loop_id" : "0000",
-    "number_of_included_segments" : 22,
+    "number_of_included_segments" : 23,
     "transaction_set_control_number" : "4321"
   }
 }
 , {
+  "objectType" : "SEGMENT",
   "segment_id" : "GE",
   "loop_id" : "0000",
   "number_of_transaction_sets_included" : 1,
   "group_control_number" : 20213
 }
 , {
+  "objectType" : "SEGMENT",
   "segment_id" : "IEA",
   "loop_id" : "0000",
   "number_of_included_functional_groups" : 1,

@@ -1,6 +1,6 @@
 [
  {
-  "id" : "694461d5260639adee2d0e05",
+  "id" : "6a32cb6397613a0e49908a2a",
   "objectType" : "CLAIM",
   "patientControlNumber" : "125WILL",
   "chargeAmount" : 145.50,
@@ -44,7 +44,12 @@
       "entityType" : "BUSINESS",
       "identificationType" : "PAYOR_ID",
       "identifier" : "C12345",
-      "lastNameOrOrgName" : "MEDICARE PART B MARYLAND"
+      "lastNameOrOrgName" : "MEDICARE PART B MARYLAND",
+      "address" : {
+        "city" : "BALTIMORE",
+        "stateCode" : "MD",
+        "zipCode" : "21236"
+      }
     }
   },
   "providerSignatureIndicator" : "Y",
@@ -60,6 +65,7 @@
     "identificationType" : "NPI",
     "identifier" : "1234567890",
     "taxId" : "987654321",
+    "taxIdType" : "EIN",
     "lastNameOrOrgName" : "GREENE",
     "firstName" : "DAVID",
     "middleName" : "M",
@@ -108,7 +114,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "694461d5260639adee2d0de5",
+    "id" : "6a32cb6397613a0e49908a05",
     "controlNumber" : "3701",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -118,11 +124,11 @@
     "creationTime" : "07:54:20",
     "claimOrEncounterIdentifierType" : "CHARGEABLE",
     "transactionSetIdentifierCode" : "837",
-    "implementationConventionReference" : "005010X222",
+    "implementationConventionReference" : "005010X222A2",
     "fileInfo" : {
       "name" : "chiro.dat",
       "url" : "file:/edi-samples/edi_files/837/chiro.dat",
-      "lastModifiedDateTime" : "2024-01-31T20:06:16.189-05:00",
+      "lastModifiedDateTime" : "2026-06-14T11:11:21.502-04:00",
       "fileType" : "EDI"
     },
     "sender" : {

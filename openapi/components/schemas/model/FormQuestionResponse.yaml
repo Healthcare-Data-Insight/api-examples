@@ -1,0 +1,39 @@
+---
+type: "object"
+description: "Response to a question on a form. Segment: FRM."
+properties:
+  questionIdentifier:
+    description: "Question identifier. EDI: FRM01."
+    type: "string"
+    x-edi-elt-designators:
+    - "FRM01"
+  yesOrNoResponse:
+    description: "Yes or no response. EDI: FRM02."
+    type: "string"
+    enum:
+    - "Y"
+    - "N"
+    - "W"
+    x-edi-elt-designators:
+    - "FRM02"
+  textResponse:
+    description: "Text response. EDI: FRM03."
+    type: "string"
+    x-edi-elt-designators:
+    - "FRM03"
+  dateResponse:
+    description: "Date response. EDI: FRM04."
+    type: "string"
+    format: "date"
+    x-edi-elt-designators:
+    - "FRM04"
+  numberResponse:
+    description: "Number response. EDI: FRM05."
+    type: "number"
+    format: "float"
+    x-edi-elt-designators:
+    - "FRM05"
+required:
+- "questionIdentifier"
+x-edi-seg-ids:
+- "FRM"

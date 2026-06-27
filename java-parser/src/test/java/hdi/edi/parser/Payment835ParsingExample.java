@@ -27,12 +27,10 @@ public class Payment835ParsingExample implements ParsingExampleHelper {
 
     public void parse835(File edi835File) {
         log.info("* Parsing EDI 835 file: {}", edi835File.getName());
-        // set "split mode" to parse by chunks of N payments
-        try (var parser = new EdiParser(edi835File)) {
-            boolean isDone = false;
-            while (!isDone) {
-                // parse 100 payments or adjustments at a time
-                EdiParsingResults parsingResults = parser.parse(100);
+        try (var parser = new EdiParser(edi835File).isValidationMode(true)) {
+            EdiParsingResults parsingResults;
+            do {                // parse 100 payments or adjustments at a time
+                parsingResults = parser.parse(100);
                 // parse all transactions from this chunk
                 // Each payment/provider adjustment also has a reference to an EDI transaction
                 for (var ediTransaction : parsingResults.ediTransactions()) {
@@ -48,13 +46,12 @@ public class Payment835ParsingExample implements ParsingExampleHelper {
                 for (var providerAdjustment : providerAdjustments) {
                     processProviderAdjustment(providerAdjustment);
                 }
-                // Parsing issues
-                var issues = parsingResults.parsingIssues();
+                // Validation issues at the transaction level
+                var issues = parsingResults.validationIssues();
                 for (var issue : issues) {
-                    log.warn("Parsing issue: {}", issue.message());
+                    log.warn("Validation issue: {}", issue);
                 }
-                isDone = parsingResults.isDone();
-            }
+            } while (!parsingResults.isDone());
         }
     }
 
@@ -75,7 +72,7 @@ public class Payment835ParsingExample implements ParsingExampleHelper {
         String patientControlNumber = payment.patientControlNumber();
         BigDecimal chargeAmount = payment.chargeAmount();
         BigDecimal paidAmount = payment.paymentAmount();
-        ClaimStatus status = payment.claimStatus();
+        AdjudicatedClaimStatus status = payment.claimStatus();
         OrgOrPerson payer = payment.payer();
         log.info("Transaction ID: {} Payment: {} {} {} {} {} {}",
                 payment.transaction().id(), payer.identifier(), payerControlNumber, patientControlNumber, chargeAmount, paidAmount, status);
@@ -133,6 +130,11 @@ public class Payment835ParsingExample implements ParsingExampleHelper {
                 assertNotNull(remark.code());
                 log.info("Line remark: {}", remark.code());
             }
+        }
+        // Validation issues for this claim
+        var issues = payment.validationIssues();
+        for (var issue : issues) {
+            log.warn("Validation issue: {}", issue);
         }
     }
 

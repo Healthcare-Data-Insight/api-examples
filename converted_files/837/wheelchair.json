@@ -1,13 +1,13 @@
 [
  {
-  "id" : "694461d5260639adee2d0fac",
+  "id" : "6a32cb6397613a0e49908c1d",
   "objectType" : "CLAIM",
   "patientControlNumber" : "SMI123",
   "chargeAmount" : 75.00,
   "facilityCode" : {
     "subType" : "PLACE_OF_SERVICE",
     "code" : "12",
-    "desc" : "Home Health"
+    "desc" : "Home"
   },
   "placeOfServiceType" : "HOME",
   "frequencyCode" : {
@@ -44,7 +44,12 @@
       "entityType" : "BUSINESS",
       "identificationType" : "PAYOR_ID",
       "identifier" : "99999",
-      "lastNameOrOrgName" : "DMERC CARRIER"
+      "lastNameOrOrgName" : "DMERC CARRIER",
+      "address" : {
+        "city" : "LAFAYETTE",
+        "stateCode" : "IN",
+        "zipCode" : "47904"
+      }
     }
   },
   "providerSignatureIndicator" : "Y",
@@ -57,6 +62,7 @@
     "identificationType" : "NPI",
     "identifier" : "7778889999",
     "taxId" : "123567989",
+    "taxIdType" : "EIN",
     "lastNameOrOrgName" : "XYZ WHEELCHAIR INC",
     "address" : {
       "line" : "1440 NORTH STREET",
@@ -85,7 +91,8 @@
     "chargeAmount" : 75.00,
     "serviceDateFrom" : "2005-03-21",
     "serviceDateTo" : "2005-03-21",
-    "lastCertificationDate" : "2005-03-21",
+    "lastCertificationDate" : "2005-03-25",
+    "certificationRevisionDate" : "2005-03-26",
     "beginTherapyDate" : "2004-03-21",
     "unitType" : "UNIT",
     "unitCount" : 1,
@@ -107,14 +114,55 @@
         "desc" : "The beneficiary has been informed of the purchase and rental options and has elected to rent the item"
       } ]
     },
+    "dmeService" : {
+      "procedure" : {
+        "type" : "PROCEDURE",
+        "subType" : "HCPCS",
+        "code" : "K0001",
+        "desc" : "Standard wheelchair",
+        "startDate" : "1994-01-01",
+        "categories" : [ {
+          "type" : "RBCS_TAXONOMY",
+          "subType" : "RBCS_CATEGORY",
+          "code" : "D",
+          "desc" : "DME"
+        }, {
+          "type" : "RBCS_TAXONOMY",
+          "subType" : "RBCS_SUB_CATEGORY",
+          "code" : "DD",
+          "desc" : "Wheelchairs"
+        } ]
+      },
+      "durationUnitType" : "DAYS",
+      "lengthOfMedicalNecessity" : 30,
+      "rentalPrice" : 50.00,
+      "purchasePrice" : 5000.00,
+      "billingFrequencyCode" : "4",
+      "billingFrequency" : "MONTHLY"
+    },
     "attachments" : [ {
       "reportTypeCode" : "CT",
-      "reportTransmissionCode" : "AD"
+      "type" : "CERTIFICATION",
+      "reportTransmissionCode" : "AD",
+      "transmissionType" : "CERTIFICATION_INCLUDED_IN_THIS_CLAIM"
     } ],
     "dmeCertification" : {
       "certificationTypeCode" : "I",
+      "durationUnitType" : "MONTH",
       "duration" : 99
     },
+    "conditionsIndicators" : [ {
+      "categoryCode" : "09",
+      "category" : "DME_CERTIFICATION",
+      "yesOrNoCondition" : "N",
+      "conditionCodes" : [ "ZV" ]
+    } ],
+    "measurements" : [ {
+      "categoryCode" : "TR",
+      "qualifierCode" : "HT",
+      "type" : "HEIGHT",
+      "value" : 70
+    } ],
     "providers" : [ {
       "entityRole" : "ORDERING",
       "entityType" : "INDIVIDUAL",
@@ -142,6 +190,32 @@
         "identification" : "M12345"
       } ]
     } ],
+    "forms" : [ {
+      "formTypeCode" : "UT",
+      "formIdentifier" : "02.03B",
+      "responses" : [ {
+        "questionIdentifier" : "1",
+        "yesOrNoResponse" : "Y"
+      }, {
+        "questionIdentifier" : "2",
+        "yesOrNoResponse" : "N"
+      }, {
+        "questionIdentifier" : "3",
+        "yesOrNoResponse" : "N"
+      }, {
+        "questionIdentifier" : "4",
+        "yesOrNoResponse" : "N"
+      }, {
+        "questionIdentifier" : "5",
+        "textResponse" : "8"
+      }, {
+        "questionIdentifier" : "8",
+        "yesOrNoResponse" : "N"
+      }, {
+        "questionIdentifier" : "9",
+        "yesOrNoResponse" : "Y"
+      } ]
+    } ],
     "diagPointers" : [ 1, 2 ],
     "diags" : [ {
       "subType" : "ICD_10_PRINCIPAL",
@@ -156,7 +230,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "694461d5260639adee2d0f7e",
+    "id" : "6a32cb6397613a0e49908be7",
     "controlNumber" : "112233",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -166,11 +240,11 @@
     "creationTime" : "10:36:00",
     "claimOrEncounterIdentifierType" : "CHARGEABLE",
     "transactionSetIdentifierCode" : "837",
-    "implementationConventionReference" : "005010X222",
+    "implementationConventionReference" : "005010X222A2",
     "fileInfo" : {
       "name" : "wheelchair.dat",
       "url" : "file:/edi-samples/edi_files/837/wheelchair.dat",
-      "lastModifiedDateTime" : "2024-01-31T20:06:16.19-05:00",
+      "lastModifiedDateTime" : "2026-06-14T11:58:52.402-04:00",
       "fileType" : "EDI"
     },
     "sender" : {

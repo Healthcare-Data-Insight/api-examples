@@ -1,13 +1,13 @@
 [
  {
-  "id" : "694461d5260639adee2d105c",
+  "id" : "6a32cb6397613a0e49908cf2",
   "objectType" : "CLAIM",
   "patientControlNumber" : "CLMNO12345",
   "chargeAmount" : 2232.93,
   "facilityCode" : {
     "subType" : "PLACE_OF_SERVICE",
     "code" : "12",
-    "desc" : "Home Health"
+    "desc" : "Home"
   },
   "placeOfServiceType" : "HOME",
   "frequencyCode" : {
@@ -58,6 +58,7 @@
     "identificationType" : "NPI",
     "identifier" : "1234567893",
     "taxId" : "10-1234567",
+    "taxIdType" : "EIN",
     "lastNameOrOrgName" : "Professional Home IV, LLC",
     "address" : {
       "line" : "1500 Industrial Drive",
@@ -126,6 +127,7 @@
     "drugQuantity" : 7,
     "drugUnitType" : "UNIT",
     "prescriptionNumber" : "2530001",
+    "prescriptionNumberType" : "PHARMACY_PRESCRIPTION_NUMBER",
     "procedure" : {
       "subType" : "HCPCS",
       "code" : "S5001",
@@ -164,6 +166,7 @@
     "drugQuantity" : 14,
     "drugUnitType" : "UNIT",
     "prescriptionNumber" : "2530001",
+    "prescriptionNumberType" : "PHARMACY_PRESCRIPTION_NUMBER",
     "procedure" : {
       "subType" : "HCPCS",
       "code" : "S5000",
@@ -202,6 +205,7 @@
     "drugQuantity" : 7,
     "drugUnitType" : "UNIT",
     "prescriptionNumber" : "2530001",
+    "prescriptionNumberType" : "PHARMACY_PRESCRIPTION_NUMBER",
     "procedure" : {
       "subType" : "HCPCS",
       "code" : "S5000",
@@ -240,6 +244,7 @@
     "drugQuantity" : 14,
     "drugUnitType" : "UNIT",
     "prescriptionNumber" : "2530002",
+    "prescriptionNumberType" : "PHARMACY_PRESCRIPTION_NUMBER",
     "procedure" : {
       "subType" : "HCPCS",
       "code" : "S5000",
@@ -278,6 +283,7 @@
     "drugQuantity" : 7,
     "drugUnitType" : "UNIT",
     "prescriptionNumber" : "2530003",
+    "prescriptionNumberType" : "PHARMACY_PRESCRIPTION_NUMBER",
     "procedure" : {
       "subType" : "HCPCS",
       "code" : "S5000",
@@ -300,7 +306,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "694461d5260639adee2d1018",
+    "id" : "6a32cb6397613a0e49908cae",
     "controlNumber" : "0711",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",

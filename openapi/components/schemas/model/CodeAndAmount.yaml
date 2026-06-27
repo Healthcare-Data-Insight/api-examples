@@ -4,6 +4,8 @@ allOf:
 - type: "object"
   properties:
     amount:
-      description: "Amount. EDI: HI01-5"
+      description: "Amount. EDI: HI01-5."
       type: "number"
       format: "float"
+      x-edi-elt-designators:
+      - "HI01-5"

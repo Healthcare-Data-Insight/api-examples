@@ -1,0 +1,125 @@
+# Generate Python EDI Enums
+
+Generate Python EDI Enums from Java enum.
+For each Java enum that extends EdiQualifier, create a corresponding Python enum inheriting from  EdiEnum in the edi_model.base module.
+The value of the enum is the EDI code.
+
+Enums that do not extend EdiQualifier: user string values, unless stated otherwise for the specific enum.
+
+Example:
+
+```python
+class MeasurementType(EdiEnum):
+    HEIGHT = "HT"
+    HEMOGLOBIN = "R1"
+    HEMATOCRIT = "R2"
+    EPOETIN = "R3"
+    CREATININE = "R4"
+```
+
+Corresponding Java enum:
+
+```java
+public enum MeasurementType implements EdiQualifier {
+
+    HEIGHT("HT", null),
+    HEMOGLOBIN("R1", null),
+    HEMATOCRIT("R2", null),
+    EPOETIN("R3", null),
+    CREATININE("R4", null),
+    NONE("99999", "None"),
+    ;
+
+    final String ediValue;
+    final String desc;
+```
+
+Take each Java enum and create a corresponding Python enum in the edi_model.enums module.
+
+Ignore descriptions in the Java enum, transfer only the ediValue.
+Do not create a Python enum for the NONE enum.
+
+Java code base: ~/myarchdev/healthcaredata/claiminsight/clinsight/src
+
+## List of enums to generate
+
+Each section is a package in the Java code base.
+
+### hdi.model.enumtype package
+
+AmountType
+DateType
+ReferenceType
+DrugIdentificationType
+IdentificationType
+MeasurementType
+NoteType
+QuantityType
+UnitType
+ClaimOrEncounterIdentifierType
+AttachmentType
+AttachmentTransmissionType
+
+### hdi.model.claim package
+
+PatientSignatureSourceType.java
+AssignmentCertificationType.java
+AssignmentParticipationType.java
+DelayReasonType.java
+RelatedCauseType.java
+ReleaseOfInformationType.java
+SpecialProgramType.java
+ConditionsIndicatorCategory
+
+### hdi.model.claim.dme
+
+DmeBillingFrequency
+
+### hdi.model.claim.ambulance
+
+AmbulanceConditionCode
+AmbulanceTransportationReason
+
+### hdi.model.orgperson package
+
+ContactType.java
+EntityRole.java
+EntityType.java
+GenderType.java
+
+### hdi.model.patientsubscriber package
+
+PayerRespSequenceType.java
+RelationshipType.java
+
+### hdi.model.payment package
+
+AdjudicatedClaimStatus.java
+AccountNumberQualifier.java
+AdjustmentGroup.java
+DfiQualifier.java
+PaymentMethodType.java
+TransactionHandlingType.java
+InsurancePlanType.java
+PaymentAdjustmentReason.java
+RemittanceTransmissionType.java
+
+### hdi.model.status
+
+StatusActionType
+
+### hdi.edi.validation
+IssueType
+
+### hdi.edi.parser
+EdiDataType
+DataType
+TransactionType: use subTypeCode as value, if null, use enum name.
+
+### hdi.model
+ObjectType
+PlaceOfServiceType
+
+## Acceptance Criteria
+
+Run py_compile for all generated/updated files.

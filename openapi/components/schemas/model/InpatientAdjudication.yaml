@@ -1,87 +1,130 @@
 ---
 type: "object"
-description: "<div class='obj-desc'>Contains Remittance Advice Remark Codes at the\
-  \ claim level and/or Medicare or Medicaid-specific amounts for inpatient institutional\
-  \ claims</div>\n<div class='obj-edi-examples'>Segment: MIA</div>\n"
+description: "Contains Remittance Advice Remark Codes at the claim level and/or Medicare or Medicaid-specific amounts for inpatient institutional claims. Segment: MIA."
 properties:
   coveredDaysOrVisitsCount:
-    description: "Covered days or visits count. EDI: MIA01"
+    description: "Covered days or visits count. EDI: MIA01."
     type: "integer"
+    x-edi-elt-designators:
+    - "MIA01"
   ppsOperatingOutlierAmount:
-    description: "Pps operating outlier amount. EDI: MIA02"
+    description: "Pps operating outlier amount. EDI: MIA02."
     type: "number"
     format: "float"
+    x-edi-elt-designators:
+    - "MIA02"
   lifetimePsychiatricDaysCount:
-    description: "Lifetime psychiatric days count. EDI: MIA03"
+    description: "Lifetime psychiatric days count. EDI: MIA03."
     type: "integer"
+    x-edi-elt-designators:
+    - "MIA03"
   drgAmount:
-    description: "Drg amount. EDI: MIA04"
+    description: "Drg amount. EDI: MIA04."
     type: "number"
     format: "float"
+    x-edi-elt-designators:
+    - "MIA04"
   disproportionateShareAmount:
-    description: "Disproportionate share amount. EDI: MIA06"
+    description: "Disproportionate share amount. EDI: MIA06."
     type: "number"
     format: "float"
+    x-edi-elt-designators:
+    - "MIA06"
   mspPassThroughAmount:
-    description: "Msp pass through amount. EDI: MIA07"
+    description: "Msp pass through amount. EDI: MIA07."
     type: "number"
     format: "float"
+    x-edi-elt-designators:
+    - "MIA07"
   ppsCapitalAmount:
-    description: "Pps capital amount. EDI: MIA08"
+    description: "Pps capital amount. EDI: MIA08."
     type: "number"
     format: "float"
+    x-edi-elt-designators:
+    - "MIA08"
   ppsCapitalFspDrgAmount:
-    description: "Pps capital fsp drg amount. EDI: MIA09"
+    description: "Pps capital fsp drg amount. EDI: MIA09."
     type: "number"
     format: "float"
+    x-edi-elt-designators:
+    - "MIA09"
   ppsCapitalHspDrgAmount:
-    description: "Pps capital hsp drg amount. EDI: MIA10"
+    description: "Pps capital hsp drg amount. EDI: MIA10."
     type: "number"
     format: "float"
+    x-edi-elt-designators:
+    - "MIA10"
   ppsCapitalDshDrgAmount:
-    description: "Pps capital dsh drg amount. EDI: MIA11"
+    description: "Pps capital dsh drg amount. EDI: MIA11."
     type: "number"
     format: "float"
+    x-edi-elt-designators:
+    - "MIA11"
   oldCapitalAmount:
-    description: "Old capital amount. EDI: MIA12"
+    description: "Old capital amount. EDI: MIA12."
     type: "number"
     format: "float"
+    x-edi-elt-designators:
+    - "MIA12"
   ppsCapitalImeAmount:
-    description: "Pps capital ime amount. EDI: MIA13"
+    description: "Pps capital ime amount. EDI: MIA13."
     type: "number"
     format: "float"
+    x-edi-elt-designators:
+    - "MIA13"
   ppsOperatingHospitalSpecificDrgAmount:
-    description: "Pps operating hospital specific drg amount. EDI: MIA14"
+    description: "Pps operating hospital specific drg amount. EDI: MIA14."
     type: "number"
     format: "float"
+    x-edi-elt-designators:
+    - "MIA14"
   costReportDayCount:
-    description: "Cost report day count. EDI: MIA15"
+    description: "Cost report day count. EDI: MIA15."
     type: "integer"
+    x-edi-elt-designators:
+    - "MIA15"
   ppsOperatingFederalSpecificDrgAmount:
-    description: "Pps operating federal specific drg amount. EDI: MIA16"
+    description: "Pps operating federal specific drg amount. EDI: MIA16."
     type: "number"
     format: "float"
+    x-edi-elt-designators:
+    - "MIA16"
   ppsCapitalOutlierAmount:
-    description: "Pps capital outlier amount. EDI: MIA17"
+    description: "Pps capital outlier amount. EDI: MIA17."
     type: "number"
     format: "float"
+    x-edi-elt-designators:
+    - "MIA17"
   indirectTeachingAmount:
-    description: "Indirect teaching amount. EDI: MIA18"
+    description: "Indirect teaching amount. EDI: MIA18."
     type: "number"
     format: "float"
+    x-edi-elt-designators:
+    - "MIA18"
   nonPayableProfessionalComponentAmount:
-    description: "Non payable professional component amount. EDI: MIA19"
+    description: "Non payable professional component amount. EDI: MIA19."
     type: "number"
     format: "float"
+    x-edi-elt-designators:
+    - "MIA19"
   ppsCapitalExceptionAmount:
-    description: "Pps capital exception amount. EDI: MIA24"
+    description: "Pps capital exception amount. EDI: MIA24."
     type: "number"
     format: "float"
+    x-edi-elt-designators:
+    - "MIA24"
   remarks:
-    description: "Remark codes<br/><a href='https://datainsight.health/code-lookup/?type=REMITTANCE_ADVICE_REMARK_CODE'\
-      \ target='_blank'>View codes and descriptions</a>. EDI: MIA3"
+    description: "Remark codes. EDI: MIA05, MIA20, MIA21, MIA22, MIA23."
     type: "array"
     items:
       $ref: "./Code.yaml"
+    x-edi-elt-designators:
+    - "MIA05"
+    - "MIA20"
+    - "MIA21"
+    - "MIA22"
+    - "MIA23"
 required:
 - "coveredDaysOrVisitsCount"
+x-edi-seg-ids:
+- "MIA"

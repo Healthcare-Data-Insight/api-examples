@@ -1,15 +1,15 @@
 ---
 type: "object"
-description: "<div class='obj-desc'>Code and description</div>\n"
+description: "Code and description."
 properties:
   subType:
-    description: "Healthcare code subtype, such as CPT, HCPCS, ICD_10, NDC"
+    description: "Healthcare code subtype, such as CPT, HCPCS, ICD_10, NDC."
     type: "string"
   code:
-    description: "Healthcare code"
+    description: "Healthcare code."
     type: "string"
   desc:
-    description: "Code description"
+    description: "Code description."
     type: "string"
 required:
 - "code"

@@ -1,0 +1,29 @@
+---
+type: "object"
+description: "Response to a standardized paper form, such as DMERC CMN. Segment: LQ."
+properties:
+  formTypeCode:
+    description: "Form type. EDI: LQ01."
+    type: "string"
+    enum:
+    - "AS"
+    - "UT"
+    x-edi-elt-designators:
+    - "LQ01"
+  formIdentifier:
+    description: "Specific form number. EDI: LQ02."
+    type: "string"
+    x-edi-elt-designators:
+    - "LQ02"
+  responses:
+    description: "Responses. EDI: FRM."
+    type: "array"
+    items:
+      $ref: "./FormQuestionResponse.yaml"
+    x-edi-seg-ids:
+    - "FRM"
+required:
+- "formTypeCode"
+- "formIdentifier"
+x-edi-seg-ids:
+- "LQ"

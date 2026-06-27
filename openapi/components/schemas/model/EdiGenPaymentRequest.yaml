@@ -1,0 +1,18 @@
+---
+type: "object"
+description: "Request for EDI generation API to generate 835 transaction with payments."
+properties:
+  interchangeControl:
+    description: "Interchange control."
+    $ref: "./InterchangeControl.yaml"
+  functionalGroup:
+    description: "Functional group."
+    $ref: "./FunctionalGroup.yaml"
+  transaction:
+    description: "Transaction."
+    $ref: "./Transaction835.yaml"
+  payments:
+    description: "List of payments."
+    type: "array"
+    items:
+      $ref: "./Payment.yaml"

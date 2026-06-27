@@ -1,0 +1,332 @@
+[
+ {
+  "id" : "6a32cb6097613a0e49904a91",
+  "objectType" : "CLAIM",
+  "patientControlNumber" : "26463774",
+  "chargeAmount" : 100.00,
+  "facilityCode" : {
+    "subType" : "PLACE_OF_SERVICE",
+    "code" : "111"
+  },
+  "placeOfServiceType" : "OTHER",
+  "frequencyCode" : {
+    "subType" : "FREQUENCY_CODE",
+    "code" : "1",
+    "desc" : "Original claim"
+  },
+  "serviceDateFrom" : "2006-10-03",
+  "serviceDateTo" : "2006-10-03",
+  "subscriber" : {
+    "payerResponsibilitySequence" : "PRIMARY",
+    "person" : {
+      "entityRole" : "INSURED_SUBSCRIBER",
+      "entityType" : "INDIVIDUAL",
+      "identificationType" : "MEMBER_ID",
+      "identifier" : "JS00111223333",
+      "lastNameOrOrgName" : "Smith",
+      "firstName" : "Jane",
+      "address" : {
+        "city" : "MAIMI",
+        "stateCode" : "FL",
+        "zipCode" : "33111"
+      }
+    },
+    "payer" : {
+      "entityRole" : "PAYER",
+      "entityType" : "BUSINESS",
+      "identificationType" : "PAYOR_ID",
+      "identifier" : "999996666",
+      "lastNameOrOrgName" : "KEY INSURANCE COMPANY",
+      "address" : {
+        "city" : "MAIMI",
+        "stateCode" : "FL",
+        "zipCode" : "33111"
+      }
+    }
+  },
+  "providerSignatureIndicator" : "V",
+  "assignmentParticipationCode" : "A",
+  "assignmentCertificationIndicator" : "Y",
+  "releaseOfInformationCode" : "I",
+  "clearinghouseTraceNumber" : "17312345600006351",
+  "disabilityDateFrom" : "2005-12-08",
+  "billingProvider" : {
+    "entityRole" : "BILLING_PROVIDER",
+    "entityType" : "BUSINESS",
+    "identificationType" : "NPI",
+    "identifier" : "9876543210",
+    "taxId" : "587654321",
+    "taxIdType" : "EIN",
+    "lastNameOrOrgName" : "Ben Kildare Service",
+    "address" : {
+      "line" : "234 SEAWAY ST",
+      "city" : "MIAMI",
+      "stateCode" : "FL",
+      "zipCode" : "33111"
+    }
+  },
+  "providers" : [ {
+    "entityRole" : "REFERRING",
+    "entityType" : "INDIVIDUAL",
+    "identificationType" : "NPI",
+    "identifier" : "5234567805",
+    "lastNameOrOrgName" : "DOE",
+    "firstName" : "JONE",
+    "middleName" : "C",
+    "address" : {
+      "line" : "234 SEAWAY ST",
+      "city" : "MIAMI",
+      "stateCode" : "FL",
+      "zipCode" : "33111"
+    },
+    "additionalIds" : [ {
+      "qualifierCode" : "X2",
+      "identification" : "12345"
+    } ]
+  } ],
+  "diags" : [ {
+    "subType" : "ICD_10_PRINCIPAL",
+    "code" : "J020",
+    "desc" : "Streptococcal pharyngitis",
+    "formattedCode" : "J02.0"
+  }, {
+    "subType" : "ICD_10",
+    "code" : "Z1159",
+    "desc" : "Encounter for screening for other viral diseases",
+    "formattedCode" : "Z11.59"
+  } ],
+  "serviceLines" : [ {
+    "chargeAmount" : 99.00,
+    "serviceDateFrom" : "2006-10-03",
+    "unitType" : "UNIT",
+    "unitCount" : 1,
+    "procedure" : {
+      "subType" : "HCPCS",
+      "code" : "JXXXX"
+    },
+    "diagPointers" : [ 1 ],
+    "diags" : [ {
+      "subType" : "ICD_10_PRINCIPAL",
+      "code" : "J020",
+      "desc" : "Streptococcal pharyngitis",
+      "formattedCode" : "J02.0"
+    } ]
+  } ],
+  "validationIssues" : [ {
+    "objectType" : "VALIDATION",
+    "issueType" : "INVALID_CODE",
+    "fieldName" : "facility_type_code",
+    "sourceLocation" : {
+      "fileName" : "837P-validation-issues.edi",
+      "lineNumber" : 19,
+      "segmentNumber" : 19
+    },
+    "loop" : "2300",
+    "segment" : "CLM",
+    "element" : "CLM05-1",
+    "codeSubType" : "PLACE_OF_SERVICE",
+    "value" : "111",
+    "ediString" : "CLM*26463774*100***111:B:1*V*A*Y*I~",
+    "message" : "Place of Service 111 is not a valid code"
+  }, {
+    "objectType" : "VALIDATION",
+    "issueType" : "LENGTH_EXCEEDED",
+    "fieldName" : "facility_type_code",
+    "sourceLocation" : {
+      "fileName" : "837P-validation-issues.edi",
+      "lineNumber" : 19,
+      "segmentNumber" : 19
+    },
+    "loop" : "2300",
+    "segment" : "CLM",
+    "element" : "CLM05-1",
+    "length" : 2,
+    "actualLength" : 3,
+    "value" : "111",
+    "ediString" : "CLM*26463774*100***111:B:1*V*A*Y*I~",
+    "message" : "Length of '111' is greater than the maximum length 2"
+  }, {
+    "objectType" : "VALIDATION",
+    "issueType" : "VALUE_NOT_IN_ENUM_LIST",
+    "issueObjectClass" : "Claim",
+    "fieldName" : "providerSignatureIndicator",
+    "sourceLocation" : {
+      "fileName" : "837P-validation-issues.edi",
+      "lineNumber" : 19,
+      "segmentNumber" : 19
+    },
+    "loop" : "2300",
+    "segment" : "CLM",
+    "element" : "CLM06",
+    "value" : "V",
+    "ediString" : "CLM*26463774*100***111:B:1*V*A*Y*I~",
+    "message" : "Value 'V' is not in the allowed values list",
+    "allowedValues" : [ "Y", "N" ]
+  }, {
+    "objectType" : "VALIDATION",
+    "issueType" : "BALANCE",
+    "issueObjectClass" : "Claim",
+    "fieldName" : "chargeAmount",
+    "sourceLocation" : {
+      "fileName" : "837P-validation-issues.edi",
+      "lineNumber" : 19,
+      "segmentNumber" : 19
+    },
+    "loop" : "2300",
+    "segment" : "CLM",
+    "ediString" : "CLM*26463774*100***111:B:1*V*A*Y*I~",
+    "message" : "Claim 26463774: The sum of line charge amounts 99.00 does not match the claim charge amount 100.00"
+  }, {
+    "objectType" : "VALIDATION",
+    "issueType" : "WRONG_TYPE",
+    "fieldName" : "disability_date_to",
+    "sourceLocation" : {
+      "fileName" : "837P-validation-issues.edi",
+      "lineNumber" : 20,
+      "segmentNumber" : 20
+    },
+    "loop" : "2300",
+    "segment" : "DTP",
+    "ediCode" : "314",
+    "dataType" : "DATE",
+    "actualDataType" : "STR",
+    "value" : "20051309",
+    "ediString" : "DTP*314*RD8*20051208-20051309~",
+    "message" : "Invalid date or time value '20051309'"
+  }, {
+    "objectType" : "VALIDATION",
+    "issueType" : "WRONG_TYPE",
+    "fieldName" : "prescription_date",
+    "sourceLocation" : {
+      "fileName" : "837P-validation-issues.edi",
+      "lineNumber" : 21,
+      "segmentNumber" : 21
+    },
+    "loop" : "2300",
+    "segment" : "DTP",
+    "ediCode" : "471",
+    "dataType" : "DATE",
+    "actualDataType" : "STR",
+    "value" : "20051301",
+    "ediString" : "DTP*471*D8*20051301~",
+    "message" : "Invalid date or time value '20051301'"
+  }, {
+    "objectType" : "VALIDATION",
+    "issueType" : "NOT_ALLOWED",
+    "fieldName" : "address",
+    "sourceLocation" : {
+      "fileName" : "837P-validation-issues.edi",
+      "lineNumber" : 25,
+      "segmentNumber" : 25
+    },
+    "loop" : "2310A",
+    "segment" : "N3",
+    "ediString" : "N3*234 SEAWAY ST~",
+    "message" : "Segment 'N3' is not allowed in loop 2310A"
+  }, {
+    "objectType" : "VALIDATION",
+    "issueType" : "NOT_ALLOWED",
+    "fieldName" : "city_state_zip_code",
+    "sourceLocation" : {
+      "fileName" : "837P-validation-issues.edi",
+      "lineNumber" : 26,
+      "segmentNumber" : 26
+    },
+    "loop" : "2310A",
+    "segment" : "N4",
+    "ediString" : "N4*MIAMI*FL*33111~",
+    "message" : "Segment 'N4' is not allowed in loop 2310A"
+  }, {
+    "objectType" : "VALIDATION",
+    "issueType" : "VALUE_NOT_IN_ENUM_LIST",
+    "issueObjectClass" : "Reference",
+    "fieldName" : "type",
+    "sourceLocation" : {
+      "fileName" : "837P-validation-issues.edi",
+      "lineNumber" : 27,
+      "segmentNumber" : 27
+    },
+    "loop" : "2310A",
+    "segment" : "REF",
+    "element" : "REF01",
+    "ediCode" : "X2",
+    "value" : "X2",
+    "ediString" : "REF*X2*12345~",
+    "message" : "Value 'X2' is not in the allowed values list",
+    "allowedValues" : [ "0B", "1G", "G2" ]
+  }, {
+    "objectType" : "VALIDATION",
+    "issueType" : "INVALID_CODE",
+    "fieldName" : "procedure_code",
+    "sourceLocation" : {
+      "fileName" : "837P-validation-issues.edi",
+      "lineNumber" : 29,
+      "segmentNumber" : 29
+    },
+    "loop" : "2400",
+    "segment" : "SV1",
+    "element" : "SV101-2",
+    "codeSubType" : "HCPCS",
+    "value" : "JXXXX",
+    "ediString" : "SV1*HC:JXXXX*99*UN*1***1~",
+    "message" : "HCPCS Procedure JXXXX is not a valid code"
+  } ],
+  "transaction" : {
+    "id" : "6a32cb6097613a0e49904a6d",
+    "controlNumber" : "   1",
+    "transactionType" : "PROF",
+    "hierarchicalStructureCode" : "0019",
+    "purposeCode" : "00",
+    "originatorApplicationTransactionId" : "1",
+    "creationDate" : "2026-03-22",
+    "creationTime" : "10:06:00",
+    "claimOrEncounterIdentifierType" : "CHARGEABLE",
+    "transactionSetIdentifierCode" : "837",
+    "implementationConventionReference" : "005010X222A2",
+    "fileInfo" : {
+      "name" : "837P-validation-issues.edi",
+      "url" : "file:/edi-samples/edi_files/837/837P-validation-issues.edi",
+      "lastModifiedDateTime" : "2026-05-17T10:04:54.775-04:00",
+      "fileType" : "EDI"
+    },
+    "sender" : {
+      "entityRole" : "SUBMITTER",
+      "entityType" : "BUSINESS",
+      "identificationType" : "ETIN",
+      "identifier" : "TGJ23",
+      "lastNameOrOrgName" : "PREMIER BILLING SERVICE",
+      "contacts" : [ {
+        "functionCode" : "IC",
+        "contactNumbers" : [ {
+          "type" : "EMAIL",
+          "number" : "test@test.com"
+        } ]
+      } ]
+    },
+    "receiver" : {
+      "entityRole" : "RECEIVER",
+      "entityType" : "BUSINESS",
+      "identificationType" : "ETIN",
+      "identifier" : "66783JJT",
+      "lastNameOrOrgName" : "KEY INSURANCE COMPANY"
+    },
+    "creationDateTime" : "2026-03-22T10:06:00"
+  }
+}
+, {
+  "objectType" : "VALIDATION",
+  "issueType" : "CONTROL",
+  "fieldName" : "transaction_segment_count",
+  "sourceLocation" : {
+    "fileName" : "837P-validation-issues.edi",
+    "lineNumber" : 31,
+    "segmentNumber" : 31
+  },
+  "loop" : "0000",
+  "segment" : "SE",
+  "element" : "SE01",
+  "value" : "25",
+  "ediString" : "SE*25*   1~",
+  "message" : "Count  '25' in the closing segment does not match actual count '29'"
+}
+ ]

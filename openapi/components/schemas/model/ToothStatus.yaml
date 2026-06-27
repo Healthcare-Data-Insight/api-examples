@@ -1,10 +1,16 @@
 ---
 type: "object"
-description: "<div class='obj-edi-examples'>Segment: DN2</div>\n"
+description: "Segment: DN2."
 properties:
   toothNumber:
-    description: "Tooth number. EDI: DN201"
+    description: "Tooth number. EDI: DN201."
     type: "string"
+    x-edi-elt-designators:
+    - "DN201"
   statusCode:
-    description: "Status code. EDI: DN202"
+    description: "Status code. EDI: DN202."
     type: "string"
+    x-edi-elt-designators:
+    - "DN202"
+x-edi-seg-ids:
+- "DN2"

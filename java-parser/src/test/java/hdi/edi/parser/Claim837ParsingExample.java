@@ -34,6 +34,7 @@ public class Claim837ParsingExample implements ParsingExampleHelper {
         parse837(new File(EDI_FILES_DIR, "/837/837p-all-fields.dat"));
     }
 
+
     @Test
     public void parseAllFields837i() {
         parse837(new File(EDI_FILES_DIR, "/837/837i-all-fields.dat"));
@@ -41,20 +42,20 @@ public class Claim837ParsingExample implements ParsingExampleHelper {
 
     public void parse837(File edi837File) {
         log.info("* Parsing EDI 837 file: {}", edi837File.getName());
-        try (var parser = new EdiParser(edi837File)) {
-            boolean isDone = false;
-            while (!isDone) {
-                EdiParsingResults parsingResults = parser.parse(100);
+        try (var parser = new EdiParser(edi837File).isValidationMode(true)) {
+            EdiParsingResults parsingResults;
+            do {
+                parsingResults = parser.parse(100);
                 List<Claim> claims = parsingResults.claims();
                 for (var claim : claims) {
                     processClaim(claim);
                 }
-                var issues = parsingResults.parsingIssues();
+                // Validation issues at the transaction level
+                var issues = parsingResults.validationIssues();
                 for (var issue : issues) {
-                    log.warn("Parsing issue: {}", issue.message());
+                    log.warn("Validation issue: {}", issue);
                 }
-                isDone = parsingResults.isDone();
-            }
+            } while (!parsingResults.isDone());
         }
     }
 
@@ -115,6 +116,11 @@ public class Claim837ParsingExample implements ParsingExampleHelper {
 
             assertNotNull(procedureCode, serviceDateFrom, unitCount, unitType, lineChargeAmount);
         }
+        // Validation issues for this claim
+        var issues = claim.validationIssues();
+        for (var issue : issues) {
+            log.warn("Validation issue: {}", issue);
+        }
 
     }
 
@@ -147,5 +153,12 @@ public class Claim837ParsingExample implements ParsingExampleHelper {
 
         GenderType genderType = patient.person().gender();
         assertThat(genderType).isEqualTo(GenderType.MALE);
+    }
+
+    @Test
+    public void printParserVersionAndLicenseInfo() {
+        System.out.println(EdiParser.getVersion());
+        var licenseInfo = EdiParser.getLicenseInfo();
+        System.out.println(licenseInfo);
     }
 }

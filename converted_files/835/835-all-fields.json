@@ -1,10 +1,10 @@
 [
  {
-  "id" : "69446374c1a6b3ab024f4b57",
+  "id" : "6a32cb6297613a0e499066b3",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "7722337",
-  "chargeAmount" : 226.00,
-  "paymentAmount" : 132.00,
+  "chargeAmount" : 384.00,
+  "paymentAmount" : 238.00,
   "facilityCode" : {
     "subType" : "FACILITY_TYPE",
     "code" : "11",
@@ -66,50 +66,6 @@
     "qualifierCode" : "EA",
     "type" : "MEDICAL_RECORD_NUMBER",
     "identification" : "12345"
-  }, {
-    "qualifierCode" : "1L",
-    "type" : "GROUP_OR_POLICY_NUMBER",
-    "identification" : "12345678"
-  }, {
-    "qualifierCode" : "1W",
-    "type" : "MEMBER_IDENTIFICATION_NUMBER",
-    "identification" : "12345678"
-  }, {
-    "qualifierCode" : "28",
-    "type" : "EMPLOYEE_IDENTIFICATION_NUMBER",
-    "identification" : "12345678"
-  }, {
-    "qualifierCode" : "6P",
-    "type" : "GROUP_NUMBER",
-    "identification" : "12345678"
-  }, {
-    "qualifierCode" : "9A",
-    "type" : "REPRICED_REFERENCE_NUMBER",
-    "identification" : "12345678"
-  }, {
-    "qualifierCode" : "9C",
-    "type" : "ADJUSTED_REPRICED_REFERENCE_NUMBER",
-    "identification" : "12345678"
-  }, {
-    "qualifierCode" : "BB",
-    "type" : "AUTHORIZATION_NUMBER",
-    "identification" : "12345678"
-  }, {
-    "qualifierCode" : "CE",
-    "type" : "CLASS_OF_CONTRACT_CODE",
-    "identification" : "12345678"
-  }, {
-    "qualifierCode" : "G1",
-    "type" : "PRIOR_AUTHORIZATION_NUMBER",
-    "identification" : "12345678"
-  }, {
-    "qualifierCode" : "G3",
-    "type" : "PREDETERMINATION_OF_BENEFITS_NUMBER",
-    "identification" : "12345678"
-  }, {
-    "qualifierCode" : "SY",
-    "type" : "SSN",
-    "identification" : "12345678"
   } ],
   "supplementalAmounts" : [ {
     "qualifierCode" : "AU",
@@ -170,6 +126,7 @@
     "identificationType" : "EIN",
     "identifier" : "999994703",
     "taxId" : "050595",
+    "taxIdType" : "TAX_ID",
     "lastNameOrOrgName" : "BAN DDS LLC",
     "address" : {
       "line" : "225 MAIN STREET",
@@ -240,15 +197,11 @@
       "qualifierCode" : "1C",
       "type" : "MEDICARE_PROVIDER_NUMBER",
       "identification" : "12345678"
-    }, {
-      "qualifierCode" : "1G",
-      "type" : "PROVIDER_UPIN_NUMBER",
-      "identification" : "12345678"
     } ]
   },
   "crossoverCarrier" : {
     "entityRole" : "CROSSOVER_CARRIER",
-    "entityType" : "INDIVIDUAL",
+    "entityType" : "BUSINESS",
     "identificationType" : "CMS_PLAN_ID",
     "identifier" : "9876",
     "lastNameOrOrgName" : "ACME INSURANCE"
@@ -277,6 +230,7 @@
   "serviceLines" : [ {
     "sourceLineId" : "A123",
     "healthcarePolicyId" : "1234\"5",
+    "healthcarePolicyIds" : [ "1234\"5" ],
     "chargeAmount" : 46.00,
     "paidAmount" : 25.00,
     "supplementalAmounts" : [ {
@@ -315,7 +269,7 @@
       "desc" : "LIMITED ORAL EVALUATION - PROBLEM FOCUSED",
       "modifiers" : [ {
         "subType" : "HCPCS_MODIFIER",
-        "code" : "1"
+        "code" : "01"
       } ]
     },
     "adjustments" : [ {
@@ -434,7 +388,7 @@
     } ]
   }, {
     "chargeAmount" : 99.00,
-    "paidAmount" : 59.00,
+    "paidAmount" : 99.00,
     "serviceDateFrom" : "2019-03-24",
     "unitCount" : 1,
     "originalUnitCount" : 2,
@@ -450,7 +404,7 @@
     }
   }, {
     "chargeAmount" : 73.00,
-    "paidAmount" : 49.00,
+    "paidAmount" : -3.00,
     "supplementalAmounts" : [ {
       "qualifierCode" : "B6",
       "type" : "ALLOWED_ACTUAL",
@@ -496,7 +450,7 @@
       "amount" : 27.00
     } ]
   }, {
-    "chargeAmount" : 60.00,
+    "chargeAmount" : 59.00,
     "paidAmount" : 59.00,
     "serviceDateFrom" : "2019-03-24",
     "unitCount" : 10.5,
@@ -515,29 +469,30 @@
     }
   } ],
   "transaction" : {
-    "id" : "69446374c1a6b3ab024f4af0",
+    "id" : "6a32cb6297613a0e49906658",
     "controlNumber" : "35681",
     "transactionType" : "PAYMENT",
     "productionDate" : "2019-03-14",
     "transactionHandlingType" : "INFORMATION_ONLY",
     "totalPaymentAmount" : 132.00,
     "creditOrDebitFlagCode" : "C",
-    "paymentMethodType" : "ACH",
-    "paymentFormatCode" : "CCP",
-    "senderBankRoutingNumber" : "011900449",
-    "senderAccountNumber" : "0000009999",
-    "originatingCompanyId" : "106609999",
-    "receiverBankRoutingNumber" : "107001235",
-    "receiverAccountNumber" : "2200008888",
-    "paymentDate" : "2025-04-09",
-    "checkOrEftTraceNumber" : "882509401093167",
-    "payerIdentifier" : "106609999",
+    "paymentMethodType" : "CHECK",
+    "receiverAccountNumber" : "456",
+    "paymentDate" : "2019-03-31",
+    "checkOrEftTraceNumber" : "12345",
+    "payerIdentifier" : "1512345678",
     "receiverIdentifier" : "CLEARINGHOUSE",
     "transactionSetIdentifierCode" : "835",
+    "remittanceDeliveryMethod" : {
+      "reportTransmissionCode" : "BM",
+      "transmissionType" : "BY_MAIL",
+      "name" : "Name",
+      "communicationNumber" : "9618215141"
+    },
     "fileInfo" : {
       "name" : "835-all-fields.dat",
       "url" : "file:/edi-samples/edi_files/835/835-all-fields.dat",
-      "lastModifiedDateTime" : "2025-10-17T17:22:31.668-04:00",
+      "lastModifiedDateTime" : "2026-06-10T22:19:35.713-04:00",
       "fileType" : "EDI"
     }
   }

@@ -1,9 +1,9 @@
 [
  {
-  "id" : "694461d5260639adee2d0de2",
+  "id" : "6a32cb6397613a0e499089fe",
   "objectType" : "CLAIM",
   "patientControlNumber" : "ABC0002",
-  "chargeAmount" : 89.93,
+  "chargeAmount" : 259.96,
   "facilityCode" : {
     "subType" : "FACILITY_TYPE",
     "code" : "11",
@@ -51,6 +51,7 @@
       "identificationType" : "PAYOR_ID",
       "identifier" : "PAYERID1234",
       "taxId" : "123456789",
+      "taxIdType" : "EIN",
       "lastNameOrOrgName" : "BEST PLAN SERVICE",
       "address" : {
         "line" : "3394 JACKSON DR",
@@ -82,8 +83,7 @@
         "stateCode" : "MO",
         "zipCode" : "64108"
       }
-    },
-    "propertyCasualtyClaimNumber" : "4445555"
+    }
   },
   "otherSubscribers" : [ {
     "payerResponsibilitySequence" : "PRIMARY",
@@ -232,80 +232,66 @@
     "payerPaidAmount" : 8852.72,
     "nonCoveredAmount" : 780.00,
     "remainingPatientLiabilityAmount" : 60.00,
+    "assignmentCertificationIndicator" : "Y",
+    "releaseOfInformationCode" : "Y",
     "outpatientAdjudication" : {
-      "reimbursementRate" : 85,
-      "hcpcsPayableAmount" : 158.58,
-      "esrdPaymentAmount" : 82.23,
-      "nonPayableProfessionalComponentAmount" : 12.42,
+      "reimbursementRate" : 0.4,
+      "hcpcsPayableAmount" : 50.00,
+      "esrdPaymentAmount" : 30.00,
+      "nonPayableProfessionalComponentAmount" : 10.01,
       "remarks" : [ {
         "type" : "CARC_RARC",
         "subType" : "RARC",
-        "code" : "M71",
-        "desc" : "Total payment reduced due to overlap of tests billed."
+        "code" : "MA01",
+        "desc" : "If you do not agree with what we approved for these services, you may appeal our decision. To make sure that we are fair to you, we require another individual that did not process your initial claim to conduct the appeal. However, in order to be eligible for an appeal, you must write to us within 120 days of the date you received this notice, unless you have a good reason for being late."
       }, {
         "type" : "CARC_RARC",
         "subType" : "RARC",
-        "code" : "MA54",
-        "desc" : "Physician certification or election consent for hospice care not received timely."
-      }, {
-        "type" : "CARC_RARC",
-        "subType" : "RARC",
-        "code" : "N28",
-        "desc" : "Consent form requirements not fulfilled."
-      }, {
-        "type" : "CARC_RARC",
-        "subType" : "RARC",
-        "code" : "N118",
-        "desc" : "This service is not paid if billed more than once every 28 days."
-      }, {
-        "type" : "CARC_RARC",
-        "subType" : "RARC",
-        "code" : "MA127"
+        "code" : "MA07",
+        "desc" : "The claim information has also been forwarded to Medicaid for review."
       } ]
     },
     "inpatientAdjudication" : {
-      "coveredDaysOrVisitsCount" : 1,
+      "coveredDaysOrVisitsCount" : 0,
       "lifetimePsychiatricDaysCount" : 1,
-      "drgAmount" : 255.05,
-      "disproportionateShareAmount" : 288.08,
-      "mspPassThroughAmount" : 38.88,
-      "ppsCapitalAmount" : 83.03,
-      "ppsCapitalFspDrgAmount" : 15.65,
-      "ppsCapitalHspDrgAmount" : 25.00,
-      "ppsCapitalDshDrgAmount" : 22.99,
-      "oldCapitalAmount" : 46.36,
-      "ppsCapitalImeAmount" : 52.28,
-      "ppsOperatingHospitalSpecificDrgAmount" : 99.99,
-      "costReportDayCount" : 1,
-      "ppsOperatingFederalSpecificDrgAmount" : 71.12,
-      "ppsCapitalOutlierAmount" : 26.55,
-      "indirectTeachingAmount" : 18.08,
-      "nonPayableProfessionalComponentAmount" : 36.00,
+      "drgAmount" : 40.40,
+      "disproportionateShareAmount" : 60.00,
+      "mspPassThroughAmount" : 70.00,
+      "ppsCapitalAmount" : 80.00,
+      "ppsCapitalFspDrgAmount" : 90.00,
+      "ppsCapitalHspDrgAmount" : 100.00,
+      "ppsCapitalDshDrgAmount" : 110.00,
+      "oldCapitalAmount" : 120.00,
+      "ppsCapitalImeAmount" : 130.00,
+      "ppsOperatingHospitalSpecificDrgAmount" : 140.00,
+      "costReportDayCount" : 150,
+      "ppsOperatingFederalSpecificDrgAmount" : 160.00,
+      "ppsCapitalOutlierAmount" : 170.00,
+      "indirectTeachingAmount" : 180.00,
+      "nonPayableProfessionalComponentAmount" : 190.00,
       "ppsCapitalExceptionAmount" : 240.00,
       "remarks" : [ {
         "type" : "CARC_RARC",
         "subType" : "RARC",
-        "code" : "N118",
-        "desc" : "This service is not paid if billed more than once every 28 days."
+        "code" : "M01"
       }, {
         "type" : "CARC_RARC",
         "subType" : "RARC",
-        "code" : "M2",
-        "desc" : "Not paid separately when the patient is an inpatient."
+        "code" : "M20"
       }, {
         "type" : "CARC_RARC",
         "subType" : "RARC",
-        "code" : "MA54",
-        "desc" : "Physician certification or election consent for hospice care not received timely."
+        "code" : "M21",
+        "desc" : "Missing/incomplete/invalid place of residence for this service/item provided in a home."
       }, {
         "type" : "CARC_RARC",
         "subType" : "RARC",
-        "code" : "MA41",
-        "desc" : "Missing/incomplete/invalid admission type."
+        "code" : "M22",
+        "desc" : "Missing/incomplete/invalid number of miles traveled."
       }, {
         "type" : "CARC_RARC",
         "subType" : "RARC",
-        "code" : "M30"
+        "code" : "M23"
       } ]
     },
     "payerClaimControlNumber" : "CLAIM014",
@@ -315,6 +301,7 @@
       "identificationType" : "PAYOR_ID",
       "identifier" : "12345",
       "taxId" : "987654321",
+      "taxIdType" : "EIN",
       "lastNameOrOrgName" : "OTHER PAYER",
       "address" : {
         "line" : "PO BOX 7901",
@@ -355,7 +342,7 @@
       } ]
     }, {
       "entityRole" : "SERVICE_FACILITY",
-      "entityType" : "INDIVIDUAL",
+      "entityType" : "BUSINESS",
       "additionalIds" : [ {
         "qualifierCode" : "G2",
         "type" : "PROVIDER_COMMERCIAL_NUMBER",
@@ -379,7 +366,7 @@
       } ]
     }, {
       "entityRole" : "BILLING_PROVIDER",
-      "entityType" : "INDIVIDUAL",
+      "entityType" : "BUSINESS",
       "additionalIds" : [ {
         "qualifierCode" : "G2",
         "type" : "PROVIDER_COMMERCIAL_NUMBER",
@@ -390,6 +377,8 @@
   "assignmentParticipationCode" : "A",
   "assignmentCertificationIndicator" : "Y",
   "releaseOfInformationCode" : "Y",
+  "delayReasonCode" : "4",
+  "delayReasonType" : "DELAY_IN_CERTIFYING_PROVIDER",
   "serviceAuthorizationExceptionCode" : "1",
   "referralNumber" : "2410628868",
   "priorAuthorizationNumber" : "PA00000024",
@@ -402,14 +391,25 @@
   "admissionTypeCode" : "3",
   "admissionSourceCode" : "7",
   "patientStatusCode" : "01",
+  "patientResponsibilityAmount" : 123.00,
   "claimNote" : "PATIENT ALLERGIC TO PENICILLIN",
   "billingNote" : "Billing Note",
+  "notes" : [ {
+    "qualifierCode" : "ALG",
+    "type" : "ALLERGIES",
+    "text" : "PATIENT ALLERGIC TO PENICILLIN"
+  }, {
+    "qualifierCode" : "ADD",
+    "type" : "ADDITIONAL_INFORMATION",
+    "text" : "Billing Note"
+  } ],
   "billingProvider" : {
     "entityRole" : "BILLING_PROVIDER",
     "entityType" : "BUSINESS",
     "identificationType" : "NPI",
     "identifier" : "0123456789",
     "taxId" : "123401234",
+    "taxIdType" : "EIN",
     "lastNameOrOrgName" : "BEST MEDICAL ASSOCIATES LLC",
     "address" : {
       "line" : "222 HEALTHY STREET",
@@ -437,34 +437,6 @@
         "type" : "EMAIL",
         "number" : "ALEX@BESTMED.NET"
       } ]
-    } ]
-  },
-  "payToAddress" : {
-    "entityRole" : "PAY_TO_PROVIDER",
-    "entityType" : "BUSINESS",
-    "address" : {
-      "line" : "P O BOX 22310",
-      "city" : "OKLAHOMA CITY",
-      "stateCode" : "OK",
-      "zipCode" : "799998961"
-    }
-  },
-  "payToPlan" : {
-    "entityRole" : "PAYEE",
-    "entityType" : "BUSINESS",
-    "identificationType" : "NPI",
-    "identifier" : "PTP123",
-    "lastNameOrOrgName" : "PLAN TO PAY TO",
-    "address" : {
-      "line" : "236 SEAWAY ST",
-      "city" : "MIAMI",
-      "stateCode" : "FL",
-      "zipCode" : "33111"
-    },
-    "additionalIds" : [ {
-      "qualifierCode" : "FY",
-      "type" : "CLAIM_OFFICE_NUMBER",
-      "identification" : "587654321"
     } ]
   },
   "providers" : [ {
@@ -654,64 +626,39 @@
   } ],
   "occurrenceSpans" : [ {
     "subType" : "OCCURRENCE_SPAN",
-    "code" : "01",
+    "code" : "71",
+    "desc" : "PRIOR STAY DATES",
+    "instructionDesc" : "This code and corresponding dates indicate the \"from\" and \"through\" dates provided by the patient for any hospital stay that ended within 60 days of the current hospital or SNF admission.",
     "occurrenceDate" : "2016-01-03",
     "occurrenceEndDate" : "2016-01-08"
   }, {
     "subType" : "OCCURRENCE_SPAN",
-    "code" : "10",
+    "code" : "72",
+    "desc" : "FIRST/LAST VISIT DATES",
+    "instructionDesc" : "This code and corresponding dates indicate the actual from and through dates of outpatient services. It is for use on outpatient bills when the entire billing record is not represented by the actual from and through services dates of Fl 6, Statement Covers Period. AND This code may also be used on inpatient claims to denote the contiguous outpatient hospital services that preceded the inpatient admission. This would represent outpatient services, not included in the inpatient claim, that are counted toward the two-midnight provision.",
     "occurrenceDate" : "2018-01-01",
     "occurrenceEndDate" : "2018-01-10"
   }, {
     "subType" : "OCCURRENCE_SPAN",
-    "code" : "11",
+    "code" : "73",
+    "desc" : "BENEFIT ELIGIBILITY PERIOD",
+    "instructionDesc" : "This code and corresponding dates indicate the period during which CHAMPUS medical benefits are available to a sponsor's beneficiary as shown on the beneficiary's identification card.",
     "occurrenceDate" : "2017-10-10",
     "occurrenceEndDate" : "2017-10-12"
   }, {
     "subType" : "OCCURRENCE_SPAN",
-    "code" : "16",
+    "code" : "74",
+    "desc" : "NON-COVERED LEVEL OF CARE/LEAVE OF ABSENCE DATES",
+    "instructionDesc" : "(This code and corresponding dates indicate the \"from\" and \"through\" dates of a period of noncovered level of care or leave of absence in an otherwise covered stay.  It excludes any period reported with the occurrence span code 76, 77, or 79 listed below.)",
     "occurrenceDate" : "2017-08-10",
     "occurrenceEndDate" : "2017-08-16"
   }, {
     "subType" : "OCCURRENCE_SPAN",
-    "code" : "18",
+    "code" : "75",
+    "desc" : "SNF LEVEL OF CARE DATES",
+    "instructionDesc" : "(This code and corresponding dates indicate the \"from\" and \"through\" dates of a period of SNF level of care during an inpatient hospital stay.)",
     "occurrenceDate" : "2015-12-12",
     "occurrenceEndDate" : "2015-12-22"
-  }, {
-    "subType" : "OCCURRENCE_SPAN",
-    "code" : "17",
-    "occurrenceDate" : "2017-12-24",
-    "occurrenceEndDate" : "2017-12-31"
-  }, {
-    "subType" : "OCCURRENCE_SPAN",
-    "code" : "36",
-    "occurrenceDate" : "2017-10-03",
-    "occurrenceEndDate" : "2017-11-23"
-  }, {
-    "subType" : "OCCURRENCE_SPAN",
-    "code" : "A3",
-    "occurrenceDate" : "2018-04-04",
-    "occurrenceEndDate" : "2018-06-04"
-  }, {
-    "subType" : "OCCURRENCE_SPAN",
-    "code" : "C3",
-    "occurrenceDate" : "2018-04-22",
-    "occurrenceEndDate" : "2018-04-24"
-  }, {
-    "subType" : "OCCURRENCE_SPAN",
-    "code" : "25",
-    "occurrenceDate" : "2018-04-04",
-    "occurrenceEndDate" : "2018-04-14"
-  }, {
-    "subType" : "OCCURRENCE_SPAN",
-    "code" : "22",
-    "occurrenceDate" : "2018-04-30",
-    "occurrenceEndDate" : "2018-05-01"
-  }, {
-    "subType" : "OCCURRENCE_SPAN",
-    "code" : "24",
-    "occurrenceDate" : "2018-05-06",
-    "occurrenceEndDate" : "2018-05-07"
   } ],
   "occurrences" : [ {
     "subType" : "OCCURRENCE",
@@ -834,11 +781,6 @@
     "code" : "55",
     "desc" : "Eligibility Threshold for Charity Care",
     "amount" : 6.99
-  }, {
-    "subType" : "VALUE",
-    "code" : "20",
-    "desc" : "Payer Code;Total PPS Capital Payment Amount",
-    "amount" : 76.54
   } ],
   "conditions" : [ {
     "subType" : "CONDITION",
@@ -902,13 +844,19 @@
   } ],
   "attachments" : [ {
     "reportTypeCode" : "OZ",
+    "type" : "SUPPORT_DATA_FOR_CLAIM",
     "reportTransmissionCode" : "BM",
+    "transmissionType" : "BY_MAIL",
     "controlNumber" : "DMN0012"
   } ],
   "serviceLines" : [ {
     "sourceLineId" : "LX0004-1",
+    "repricedReferenceNumber" : "Repriced",
+    "adjustedRepricedReferenceNumber" : "AdjRepriced",
     "chargeAmount" : 173.42,
     "nonCoveredAmount" : 11.07,
+    "serviceTaxAmount" : 15.00,
+    "facilityTaxAmount" : 22.00,
     "serviceDateFrom" : "2019-03-10",
     "serviceDateTo" : "2019-05-11",
     "unitType" : "UNIT",
@@ -920,9 +868,15 @@
       "formattedCode" : "0002-1434-81"
     },
     "drugQuantity" : 1.01,
-    "drugUnitType" : "UNIT",
+    "drugUnitType" : "GRAM",
     "prescriptionNumber" : "123456",
+    "prescriptionNumberType" : "PHARMACY_PRESCRIPTION_NUMBER",
     "thirdPartyNote" : "state regulation 123 was applied during the pricing of this claim",
+    "notes" : [ {
+      "qualifierCode" : "TPO",
+      "type" : "THIRD_PARTY_ORGANIZATION_NOTES",
+      "text" : "state regulation 123 was applied during the pricing of this claim"
+    } ],
     "procedure" : {
       "subType" : "CPT",
       "code" : "81099",
@@ -950,7 +904,9 @@
     },
     "attachments" : [ {
       "reportTypeCode" : "OZ",
-      "reportTransmissionCode" : "BM",
+      "type" : "SUPPORT_DATA_FOR_CLAIM",
+      "reportTransmissionCode" : "FT",
+      "transmissionType" : "FILE_TRANSFER",
       "controlNumber" : "DMN0012"
     } ],
     "providers" : [ {
@@ -1112,6 +1068,7 @@
     "drugQuantity" : 5,
     "drugUnitType" : "UNIT",
     "prescriptionNumber" : "945632",
+    "prescriptionNumberType" : "PHARMACY_PRESCRIPTION_NUMBER",
     "procedure" : {
       "subType" : "CPT",
       "code" : "00842",
@@ -1137,8 +1094,10 @@
       "desc" : "EKG/ECG (Electrocardiogram)-General"
     },
     "attachments" : [ {
-      "reportTypeCode" : "ZZ",
-      "reportTransmissionCode" : "BC",
+      "reportTypeCode" : "08",
+      "type" : "PLAN_OF_TREATMENT",
+      "reportTransmissionCode" : "EL",
+      "transmissionType" : "ELECTRONICALLY_ONLY",
       "controlNumber" : "TPM0048"
     } ],
     "providers" : [ {
@@ -1286,7 +1245,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "694461d5260639adee2d0d45",
+    "id" : "6a32cb6397613a0e49908965",
     "controlNumber" : "00000024",
     "transactionType" : "INST",
     "hierarchicalStructureCode" : "0019",
@@ -1300,7 +1259,7 @@
     "fileInfo" : {
       "name" : "837I-all-fields.dat",
       "url" : "file:/edi-samples/edi_files/837/837I-all-fields.dat",
-      "lastModifiedDateTime" : "2025-12-08T15:19:29.99-05:00",
+      "lastModifiedDateTime" : "2026-06-10T22:07:38.468-04:00",
       "fileType" : "EDI"
     },
     "sender" : {

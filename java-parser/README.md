@@ -1,7 +1,11 @@
 # EDI Parser Examples
 
-Our [X12 EDI parser](https://datainsight.health/tools/java-parser/) is easy to use; it provides an intuitive object model abstracting away the complexity of X12 EDI.
+See [our website](https://datainsight.health/products/edi-convert/) for more information about the parser.
+
+Other resources:
+
+* [Documentation](https://datainsight.health/docs/edi-parser/).
+* [Schemas and Object Model](https://datainsight.health/docs/schemas/intro/).
+* [Request trial license](https://datainsight.health/products/edi-converter-signup/)
 
 This repository contains examples of the parser's usage.
-
-Please register on [our website](https://datainsight.health/tools/java-parser/) to get access to the evaluation version of the parser.

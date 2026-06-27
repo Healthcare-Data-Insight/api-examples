@@ -1,12 +1,13 @@
 [
  {
-  "id" : "694461d5260639adee2d0d10",
+  "id" : "6a32cb6397613a0e4990892d",
   "objectType" : "CLAIM",
   "patientControlNumber" : "051068",
   "chargeAmount" : 766.50,
   "facilityCode" : {
     "subType" : "PLACE_OF_SERVICE",
-    "code" : "41"
+    "code" : "41",
+    "desc" : "Ambulance - Land"
   },
   "placeOfServiceType" : "OTHER",
   "frequencyCode" : {
@@ -59,7 +60,9 @@
   "patientSignatureSourceCode" : "P",
   "relatedCause" : {
     "relatedCauseCode" : "AA",
+    "relatedCauseType" : "AUTO_ACCIDENT",
     "relatedCauseCode2" : "OA",
+    "relatedCauseType2" : "OTHER_ACCIDENT",
     "stateCode" : "FL"
   },
   "accidentDate" : "2005-02-08",
@@ -69,6 +72,7 @@
     "identificationType" : "NPI",
     "identifier" : "2366554859",
     "taxId" : "376985369",
+    "taxIdType" : "EIN",
     "lastNameOrOrgName" : "AAA AMBULANCE SERVICE",
     "address" : {
       "line" : "12202 AIRPORT WAY",
@@ -144,6 +148,11 @@
     "unitCount" : 1,
     "ambulancePatientCount" : 2,
     "lineNote" : "CARDIAC EMERGENCY",
+    "notes" : [ {
+      "qualifierCode" : "ADD",
+      "type" : "ADDITIONAL_INFORMATION",
+      "text" : "CARDIAC EMERGENCY"
+    } ],
     "procedure" : {
       "subType" : "HCPCS",
       "code" : "A0427",
@@ -153,6 +162,19 @@
         "code" : "RH"
       } ]
     },
+    "ambulanceTransportInfo" : {
+      "patientWeight" : 275,
+      "reasonCode" : "A",
+      "reason" : "NEAREST_FACILITY",
+      "transportDistance" : 10,
+      "roundTripPurposeDescription" : "Roundtrip Desc"
+    },
+    "conditionsIndicators" : [ {
+      "categoryCode" : "07",
+      "category" : "AMBULANCE_CERTIFICATION",
+      "yesOrNoCondition" : "N",
+      "conditionCodes" : [ "05", "07" ]
+    } ],
     "providers" : [ {
       "entityRole" : "PICKUP_ADDRESS",
       "entityType" : "BUSINESS",
@@ -291,7 +313,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "694461d5260639adee2d0ccf",
+    "id" : "6a32cb6397613a0e499088ea",
     "controlNumber" : "000017712",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -301,11 +323,11 @@
     "creationTime" : "11:12:00",
     "claimOrEncounterIdentifierType" : "CHARGEABLE",
     "transactionSetIdentifierCode" : "837",
-    "implementationConventionReference" : "005010X222",
+    "implementationConventionReference" : "005010X222A2",
     "fileInfo" : {
       "name" : "ambulance.dat",
       "url" : "file:/edi-samples/edi_files/837/ambulance.dat",
-      "lastModifiedDateTime" : "2025-11-15T20:37:53.929-05:00",
+      "lastModifiedDateTime" : "2026-06-10T22:07:38.47-04:00",
       "fileType" : "EDI"
     },
     "sender" : {

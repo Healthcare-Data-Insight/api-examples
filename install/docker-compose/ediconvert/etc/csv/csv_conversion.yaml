@@ -69,11 +69,15 @@
         - "*coverageDates"
         - "*groupOrPolicyNumbers"
         - MemberEmploymentClassCodes
+        - "*CoordinationOfBenefitsCodes"
       numberOfColumnRepeats: 5
     - names:
         - "*Contacts"
         - HealthCoverageIdCards
       numberOfColumnRepeats: 1
+    - names:
+        - MemberEthnicityCodes
+      numberOfColumnRepeats: 3
     - names:
         - "*ContactNumbers"
         - "*Cob*AdditionalIdentifiers"

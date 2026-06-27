@@ -4,15 +4,17 @@ allOf:
 - type: "object"
   properties:
     address:
-      description: "Address"
+      description: "Address."
       $ref: "./Address.yaml"
     contacts:
-      description: "Contacts"
+      description: "Contacts."
       type: "array"
       items:
         $ref: "./ContactInfo.yaml"
     additionalIds:
-      description: "Other identifications. EDI: REF"
+      description: "Other identifications. EDI: REF."
       type: "array"
       items:
         $ref: "./Reference.yaml"
+      x-edi-seg-ids:
+      - "REF"

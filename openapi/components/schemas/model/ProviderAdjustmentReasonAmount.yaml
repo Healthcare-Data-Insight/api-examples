@@ -1,19 +1,23 @@
 ---
 type: "object"
-description: "<div class='obj-desc'>Provider-level payment adjustment containing the\
-  \ reason code and the amount</div>\n"
+description: "Provider-level payment adjustment containing the reason code and the amount."
 properties:
   reason:
-    description: "Provider adjustment reason code<br/><a href='https://datainsight.health/code-lookup/?type=PROVIDER_ADJUSTMENT_REASON_CODE'\
-      \ target='_blank'>View codes and descriptions</a>. EDI: PLB03-1"
+    description: "Provider adjustment reason code. EDI: PLB03-1."
     $ref: "./Code.yaml"
+    x-edi-elt-designators:
+    - "PLB03-1"
   referenceIdentification:
-    description: "Reference identification. EDI: PLB03-2"
+    description: "Reference identification. EDI: PLB03-2."
     type: "string"
+    x-edi-elt-designators:
+    - "PLB03-2"
   amount:
-    description: "Amount. EDI: PLB04"
+    description: "Amount. EDI: PLB04."
     type: "number"
     format: "float"
+    x-edi-elt-designators:
+    - "PLB04"
 required:
 - "reason"
 - "amount"

@@ -1,0 +1,182 @@
+[
+ {
+  "id" : "6a32cb6097613a0e499046a4",
+  "objectType" : "INTERCHANGE_CONTROL",
+  "elementSeparator" : "*",
+  "segmentTerminator" : "~",
+  "authorizationInformationQualifier" : "00",
+  "authorizationInformation" : "          ",
+  "securityInformationQualifier" : "00",
+  "securityInformation" : "          ",
+  "senderIdQualifier" : "ZZ",
+  "senderId" : "ABCPAYER       ",
+  "receiverIdQualifier" : "ZZ",
+  "receiverId" : "ABCPAYER       ",
+  "interchangeDate" : "2019-08-27",
+  "interchangeTime" : "02:12:00",
+  "repetitionSeparator" : "^",
+  "interchangeControlVersionNumber" : "00501",
+  "controlNumber" : 191511902,
+  "acknowledgmentRequested" : "0",
+  "interchangeUsageIndicator" : "P",
+  "componentElementSeparator" : ":"
+}
+, {
+  "id" : "6a32cb6097613a0e499046a6",
+  "objectType" : "FUNCTIONAL_GROUP",
+  "functionalIdentifierCode" : "HP",
+  "senderCode" : "ABCD",
+  "receiverCode" : "ABCD",
+  "date" : "2019-08-27",
+  "time" : "12:34:00",
+  "controlNumber" : 12345678,
+  "responsibleAgencyCode" : "X",
+  "version" : "005010X222A2"
+}
+, {
+  "id" : "6a32cb6097613a0e499046a8",
+  "objectType" : "TRANSACTION",
+  "controlNumber" : "0021",
+  "transactionType" : "PROF",
+  "hierarchicalStructureCode" : "0019",
+  "purposeCode" : "00",
+  "originatorApplicationTransactionId" : "244579",
+  "creationDate" : "2006-10-15",
+  "creationTime" : "10:23:00",
+  "claimOrEncounterIdentifierType" : "CHARGEABLE",
+  "transactionSetIdentifierCode" : "837",
+  "implementationConventionReference" : "005010X222A2",
+  "fileInfo" : {
+    "name" : "837P-minimal.dat",
+    "url" : "file:/edi-samples/edi_files/837/837P-minimal.dat",
+    "lastModifiedDateTime" : "2026-05-05T11:21:04.936-04:00",
+    "fileType" : "EDI"
+  },
+  "sender" : {
+    "entityRole" : "SUBMITTER",
+    "entityType" : "BUSINESS",
+    "identificationType" : "ETIN",
+    "identifier" : "TGJ23",
+    "lastNameOrOrgName" : "PREMIER BILLING SERVICE",
+    "contacts" : [ {
+      "functionCode" : "IC",
+      "name" : "JERRY",
+      "contactNumbers" : [ {
+        "type" : "PHONE",
+        "number" : "3055552222"
+      }, {
+        "type" : "EXTENSION",
+        "number" : "231"
+      } ]
+    } ]
+  },
+  "receiver" : {
+    "entityRole" : "RECEIVER",
+    "entityType" : "BUSINESS",
+    "identificationType" : "ETIN",
+    "identifier" : "66783JJT",
+    "lastNameOrOrgName" : "KEY INSURANCE COMPANY"
+  },
+  "creationDateTime" : "2006-10-15T10:23:00"
+}
+, {
+  "id" : "6a32cb6097613a0e499046c6",
+  "objectType" : "CLAIM",
+  "patientControlNumber" : "26463774",
+  "chargeAmount" : 100.00,
+  "facilityCode" : {
+    "subType" : "PLACE_OF_SERVICE",
+    "code" : "11",
+    "desc" : "Office"
+  },
+  "placeOfServiceType" : "OFFICE",
+  "frequencyCode" : {
+    "subType" : "FREQUENCY_CODE",
+    "code" : "1",
+    "desc" : "Original claim"
+  },
+  "serviceDateFrom" : "2006-10-03",
+  "serviceDateTo" : "2006-10-03",
+  "subscriber" : {
+    "payerResponsibilitySequence" : "PRIMARY",
+    "relationshipType" : "SELF",
+    "groupOrPolicyNumber" : "2222",
+    "claimFilingIndicatorCode" : "CI",
+    "insurancePlanType" : "COMMERCIAL",
+    "person" : {
+      "entityRole" : "INSURED_SUBSCRIBER",
+      "entityType" : "INDIVIDUAL",
+      "identificationType" : "MEMBER_ID",
+      "identifier" : "JS00111223333",
+      "lastNameOrOrgName" : "Smith",
+      "firstName" : "Jane",
+      "address" : {
+        "city" : "MAIMI",
+        "stateCode" : "FL",
+        "zipCode" : "33111"
+      }
+    },
+    "payer" : {
+      "entityRole" : "PAYER",
+      "entityType" : "BUSINESS",
+      "identificationType" : "PAYOR_ID",
+      "identifier" : "999996666",
+      "lastNameOrOrgName" : "KEY INSURANCE COMPANY",
+      "address" : {
+        "city" : "MAIMI",
+        "stateCode" : "FL",
+        "zipCode" : "33111"
+      }
+    }
+  },
+  "providerSignatureIndicator" : "Y",
+  "assignmentParticipationCode" : "A",
+  "assignmentCertificationIndicator" : "Y",
+  "releaseOfInformationCode" : "I",
+  "clearinghouseTraceNumber" : "17312345600006351",
+  "billingProvider" : {
+    "entityRole" : "BILLING_PROVIDER",
+    "entityType" : "BUSINESS",
+    "identificationType" : "NPI",
+    "identifier" : "9876543210",
+    "taxId" : "587654321",
+    "taxIdType" : "EIN",
+    "lastNameOrOrgName" : "Ben Kildare Service",
+    "address" : {
+      "line" : "234 SEAWAY ST",
+      "city" : "MIAMI",
+      "stateCode" : "FL",
+      "zipCode" : "33111"
+    }
+  },
+  "diags" : [ {
+    "subType" : "ICD_10_PRINCIPAL",
+    "code" : "J020",
+    "desc" : "Streptococcal pharyngitis",
+    "formattedCode" : "J02.0"
+  }, {
+    "subType" : "ICD_10",
+    "code" : "Z1159",
+    "desc" : "Encounter for screening for other viral diseases",
+    "formattedCode" : "Z11.59"
+  } ],
+  "serviceLines" : [ {
+    "chargeAmount" : 40.00,
+    "serviceDateFrom" : "2006-10-03",
+    "unitType" : "UNIT",
+    "unitCount" : 1,
+    "procedure" : {
+      "subType" : "CPT",
+      "code" : "99213",
+      "desc" : "Office or other outpatient visit for the evaluation and management of an established patient, which requires a medically appropriate history and/or examination and low level of medical decision making. When using total time on the date of the encounter for code selection, 20 minutes must be met or exceeded."
+    },
+    "diagPointers" : [ 1 ],
+    "diags" : [ {
+      "subType" : "ICD_10_PRINCIPAL",
+      "code" : "J020",
+      "desc" : "Streptococcal pharyngitis",
+      "formattedCode" : "J02.0"
+    } ]
+  } ]
+}
+ ]

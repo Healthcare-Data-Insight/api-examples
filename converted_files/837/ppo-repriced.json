@@ -1,6 +1,6 @@
 [
  {
-  "id" : "694461d5260639adee2d0fdb",
+  "id" : "6a32cb6397613a0e49908c4c",
   "objectType" : "CLAIM",
   "patientControlNumber" : "ABC123-RI",
   "chargeAmount" : 28.75,
@@ -61,6 +61,7 @@
     "identificationType" : "NPI",
     "identifier" : "1234567890",
     "taxId" : "555512345",
+    "taxIdType" : "EIN",
     "lastNameOrOrgName" : "HAPPY DOCTORS GROUP PRACTICE",
     "address" : {
       "line" : "P O BOX 123",
@@ -116,6 +117,7 @@
   } ],
   "serviceLines" : [ {
     "referralNumber" : "V123456",
+    "referralNumbers" : [ "V123456" ],
     "chargeAmount" : 25.00,
     "serviceDateFrom" : "2005-05-14",
     "unitType" : "UNIT",
@@ -174,7 +176,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "694461d5260639adee2d0faf",
+    "id" : "6a32cb6397613a0e49908c20",
     "controlNumber" : "1002",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",

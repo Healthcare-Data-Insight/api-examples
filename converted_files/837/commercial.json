@@ -1,6 +1,6 @@
 [
  {
-  "id" : "694461d5260639adee2d0e7b",
+  "id" : "6a32cb6397613a0e49908ad9",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26463774",
   "chargeAmount" : 100.00,
@@ -73,6 +73,7 @@
     "identificationType" : "NPI",
     "identifier" : "9876543210",
     "taxId" : "587654321",
+    "taxIdType" : "EIN",
     "lastNameOrOrgName" : "Ben Kildare Service",
     "address" : {
       "line" : "234 SEAWAY ST",
@@ -160,7 +161,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "694461d5260639adee2d0e51",
+    "id" : "6a32cb6397613a0e49908aaf",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -174,7 +175,7 @@
     "fileInfo" : {
       "name" : "commercial.dat",
       "url" : "file:/edi-samples/edi_files/837/commercial.dat",
-      "lastModifiedDateTime" : "2024-01-31T20:06:16.189-05:00",
+      "lastModifiedDateTime" : "2026-05-05T11:21:04.937-04:00",
       "fileType" : "EDI"
     },
     "sender" : {

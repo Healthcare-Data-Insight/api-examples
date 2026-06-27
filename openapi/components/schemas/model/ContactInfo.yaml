@@ -1,17 +1,23 @@
 ---
 type: "object"
-description: "<div class='obj-edi-examples'>Segment: PER</div>\n"
+description: "Segment: PER."
 properties:
   functionCode:
-    description: "Function code. EDI: PER01"
+    description: "Function code. EDI: PER01."
     type: "string"
+    x-edi-elt-designators:
+    - "PER01"
   name:
-    description: "Name. EDI: PER02"
+    description: "Name. EDI: PER02."
     type: "string"
+    x-edi-elt-designators:
+    - "PER02"
   contactNumbers:
-    description: "Contact numbers"
+    description: "Contact numbers."
     type: "array"
     items:
       $ref: "./ContactNumber.yaml"
 required:
 - "functionCode"
+x-edi-seg-ids:
+- "PER"

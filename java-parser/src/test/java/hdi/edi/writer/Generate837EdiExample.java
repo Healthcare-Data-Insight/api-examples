@@ -7,8 +7,6 @@ import hdi.edi.parser.ParsingExampleHelper;
 import hdi.edi.parser.TransactionType;
 import hdi.model.ServiceLine;
 import hdi.model.claim.Claim;
-import hdi.model.control.FunctionalGroup;
-import hdi.model.control.Isa;
 import hdi.model.enumtype.IdentificationType;
 import hdi.model.enumtype.UbCodeType;
 import hdi.model.enumtype.UnitType;
@@ -26,54 +24,48 @@ import java.time.LocalDate;
 import java.util.List;
 
 @SuppressWarnings("NewClassNamingConvention")
-public class ClaimToEdiExample implements ParsingExampleHelper {
+public class Generate837EdiExample implements ParsingExampleHelper {
 
     @Test
     public void write837pEdi() throws IOException {
         File ediFile = new File(OUT_EDI_FILES_DIR, "837p-simple.edi");
         try (var fileWriter = new FileWriter(ediFile); var ediWriter = new EdiWriter(fileWriter)) {
-            writeIsaAndGs(ediWriter, TransactionType.PROF);
-            var tran = createEdiTransaction(TransactionType.PROF);
+            GenerateEdiExampleHelper.writeIsaAndGs(ediWriter, TransactionType.PROF);
+            var tran = create837Transaction(TransactionType.PROF);
             ediWriter.writeTransaction(tran);
 
             var claim = createSimpleProfClaim();
             claim.billingProvider(createBillingProv());
             claim.subscriber(createSubscriber());
-            ediWriter.writeClaim(claim);
+            // The writer will perform full validation of the claim
+            var validationIssues = ediWriter.writeClaim(claim);
+            printValidationIssues(validationIssues);
             // Closing segments will be written automatically when the writer is closed
         }
         var s = FileUtils.readFileToString(ediFile, Charset.defaultCharset());
-        System.err.println(s);
+        System.out.println(s);
     }
 
     @Test
     public void write837iEdi() throws IOException {
         File ediFile = new File(OUT_EDI_FILES_DIR, "837i-simple.edi");
         try (var fileWriter = new FileWriter(ediFile); var ediWriter = new EdiWriter(fileWriter)) {
-            writeIsaAndGs(ediWriter, TransactionType.INST);
-            var tran = createEdiTransaction(TransactionType.INST);
+            GenerateEdiExampleHelper.writeIsaAndGs(ediWriter, TransactionType.INST);
+            var tran = create837Transaction(TransactionType.INST);
             ediWriter.writeTransaction(tran);
 
             var claim = createSimpleInstClaim();
             claim.billingProvider(createBillingProv());
             claim.subscriber(createSubscriber());
-            ediWriter.writeClaim(claim);
+            var validationIssues = ediWriter.writeClaim(claim);
+            printValidationIssues(validationIssues);
         }
         var s = FileUtils.readFileToString(ediFile, Charset.defaultCharset());
-        System.err.println(s);
-    }
-
-    private void writeIsaAndGs(EdiWriter ediWriter, TransactionType transactionType) {
-        // EDI writer will assign a unique interchange control number
-        var isa = new Isa("ZZ", "123", "ZZ", "456");
-        // EDI writer will assign a unique group control number
-        var gs = new FunctionalGroup(transactionType, "1", "2");
-        ediWriter.writeIsa(isa);
-        ediWriter.writeFunctionalGroup(gs);
+        System.out.println(s);
     }
 
     private Claim createSimpleProfClaim() {
-        var claim = Claim.createProfClaim("1234567890", new BigDecimal("100"), "11");
+        var claim = Claim.createProfClaim("1234567890", "11");
         claim.addDiagCodes(List.of("J0300", "Z1159"));
         var renderingProv = new OrgOrPerson(EntityRole.RENDERING, EntityType.INDIVIDUAL, IdentificationType.NPI, "1234567890", "Rendering", "Provider");
         claim.addProvider(renderingProv);
@@ -88,7 +80,7 @@ public class ClaimToEdiExample implements ParsingExampleHelper {
     }
 
     private Claim createSimpleInstClaim() {
-        var claim = Claim.createInstClaim("1234567890", new BigDecimal("100"), "11", "01", LocalDate.of(2025, 1, 1), LocalDate.of(2025, 1, 31));
+        var claim = Claim.createInstClaim("1234567890", "11", "1", "01", LocalDate.of(2025, 1, 1), LocalDate.of(2025, 1, 31));
         // The first diagnosis code is the principal code
         claim.addDiagCodes(List.of("M24562", "E8359", "Z1159"));
         // The first diagnosis was present on admission
@@ -125,7 +117,7 @@ public class ClaimToEdiExample implements ParsingExampleHelper {
         return billing;
     }
 
-    private EdiTransaction createEdiTransaction(TransactionType tranType) {
+    private EdiTransaction create837Transaction(TransactionType tranType) {
         // The writer will assign a unique Originator Application ID if not set
         var tran = new EdiTransaction(tranType);
         // submitter and receiver are required

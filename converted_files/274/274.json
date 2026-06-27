@@ -1,9 +1,12 @@
 [
  {
+  "objectType" : "SEGMENT",
   "segment_id" : "ISA",
   "loop_id" : "0000",
   "authorization_information_qualifier" : "00",
+  "authorization_information" : "          ",
   "security_information_qualifier" : "00",
+  "security_information" : "          ",
   "interchange_id_qualifier" : "ZZ",
   "interchange_sender_id" : "SENDERID       ",
   "interchange_id_qualifier_2" : "ZZ",
@@ -18,6 +21,7 @@
   "component_element_separator" : ":"
 }
 , {
+  "objectType" : "SEGMENT",
   "segment_id" : "GS",
   "loop_id" : "0000",
   "functional_identifier_code" : "HR",
@@ -30,6 +34,7 @@
   "version_identifier_code" : "004010X092A1"
 }
 , {
+  "objectType" : "SEGMENT",
   "segment_id" : "ST",
   "loop_id" : "0000",
   "transaction_set_identifier_code" : {
@@ -176,12 +181,14 @@
   }
 }
 , {
+  "objectType" : "SEGMENT",
   "segment_id" : "GE",
   "loop_id" : "0000",
   "number_of_transaction_sets_included" : 1,
   "group_control_number" : 905
 }
 , {
+  "objectType" : "SEGMENT",
   "segment_id" : "IEA",
   "loop_id" : "0000",
   "number_of_included_functional_groups" : 1,

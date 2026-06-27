@@ -217,6 +217,13 @@ function _picocli_ediconvert() {
     COMPREPLY=( $(compgen -W "${flag_opts} ${arg_opts}" -- "${curr_word}") )
   else
     local positionals=""
+    local currIndex
+    currIndex=$(currentPositionalIndex "ediconvert" "${arg_opts}" "${flag_opts}")
+    if (( currIndex >= 0 && currIndex <= 0 )); then
+      local IFS=$'\n'
+      type compopt &>/dev/null && compopt -o filenames
+      positionals=$( compgen -f -- "${curr_word}" ) # files
+    fi
     local IFS=$'\n'
     COMPREPLY=( $(compgen -W "${commands// /$'\n'}${IFS}${positionals}" -- "${curr_word}") )
   fi

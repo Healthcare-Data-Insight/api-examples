@@ -1,11 +1,17 @@
 import json
+
 import edi_converter
 
 """
+This example does not use the object model, it relies on the raw JSON response and Python dictionaries.
+Use it only if you want to avoid dependency on the object model and want to build your own logic.
+See convert_837.py for an example that uses the object model.
+
 Converts 837 files using multipart request.
 The response is an array of JSON objects or a line-delimited JSON (ndjson)
 This example uses ndjson as it is more convenient for streaming.
 If you want to use well-formed JSON, make sure that your logic can handle large arrays if you have large EDI files.
+
 API documentation:
 https://datainsight.health/docs/ediconvert-api/reference/#tag/EDI-to-JSON
 Schemas:
@@ -63,18 +69,3 @@ for claim_str in response.iter_lines():
             print(f"Procedure: {procedure['code']} Quantity: {line['unitCount']}")
         if rev_code:
             print(f"Revenue code: {rev_code['code']} {rev_code.get('desc')}")
-
-# Convert a single file by posting its content
-file_to_convert = edi_837_dir + '/prof-encounter.dat'
-print('** Converting ' + file_to_convert)
-response = edi_converter.convert_file(file_to_convert, True)
-for claim_str in response.iter_lines():
-    # each line is a claim object or could be an error/warning
-    claim = json.loads(claim_str)
-    if edi_converter.handle_warning_error(claim):
-        continue
-    pcn = claim['patientControlNumber']
-    charge = claim['chargeAmount']
-    billing_npi = claim['billingProvider']['identifier']
-
-    print(f'Claim {pcn} from {billing_npi} for the amount {charge}')

@@ -1,14 +1,19 @@
 ---
 type: "object"
-description: "<div class='obj-desc'>Contains sub-elements of the composite healthcare\
-  \ claim status element (STC01,STC10,STC11)</div>\n"
+description: "Contains sub-elements of the composite healthcare claim status element (STC01,STC10,STC11)."
 properties:
   categoryCode:
-    description: "Category code. EDI: STC01-1"
+    description: "Category code. EDI: STC01-1."
     type: "string"
+    x-edi-elt-designators:
+    - "STC01-1"
   statusCode:
-    description: "Status code. EDI: STC01-2"
+    description: "Status code. EDI: STC01-2."
     type: "string"
+    x-edi-elt-designators:
+    - "STC01-2"
   entityCode:
-    description: "Entity code. EDI: STC01-3"
+    description: "Entity code. EDI: STC01-3."
     type: "string"
+    x-edi-elt-designators:
+    - "STC01-3"
