@@ -1,0 +1,103 @@
+openapi: "3.1.1"
+info:
+  title: X12 EDI Conversion and Parsing API
+  description: |-
+    API for converting healthcare X12 EDI transactions to JSON or CSV and generating EDI from JSON.
+
+    - [Installation Guide](https://datainsight.health/docs/ediconvert-api/installation/)
+    - [User Guide](https://datainsight.health/docs/ediconverter/api-usage/)
+    - [JSON schema introduction](https://datainsight.health/posts/edi-json/)
+    - [JSON schemas in tabular format](https://datainsight.health/docs/schemas/), including mappings to X12 EDI segments and elements
+    - [CSV data dictionary](https://datainsight.health/docs/datadict/), including mappings to X12 EDI segments and elements
+    - [Python examples](https://github.com/Healthcare-Data-Insight/api-examples/tree/release/2.15.0/python/api) (GitHub)
+    - [curl examples](https://github.com/Healthcare-Data-Insight/api-examples/blob/main/curl/convert_edi.sh) (GitHub)
+    - [Release notes](https://datainsight.health/docs/ediconvert-api/release-notes/)
+
+    New endpoints in this release:
+    - [EDI validation](#tag/EDI-to-JSON/operation/validate-edi)
+    - [EDI validation as text](#tag/EDI-to-JSON/operation/validate-edi-text)
+    - [Generate 835 EDI](#tag/Generate-EDI/operation/generate-edi-payment)
+    - [Validate 835 EDI generation request](#tag/Generate-EDI/operation/generate-edi-payment-validate)
+
+  version: 2.15.0
+  contact:
+    email: ediconvert@datainsight.health
+    url: https://datainsight.health/products/edi-convert/
+  license:
+    name: Healthcare Data Insight Commercial License
+    url: https://datainsight.health/products/edi-license/
+
+servers:
+  - url: http://127.0.0.1:5080
+    description: Localhost URL for Docker container
+  - url: https://datainsight.health/clinsight
+    description: Public API, EDI validation and code lookup
+tags:
+  - name: EDI-to-JSON
+    description: |-
+      Converts (parses) X12 EDI input to JSON. You can post EDI content as text
+      or upload files with a `multipart/form-data` request.
+      
+      See [Python](https://github.com/Healthcare-Data-Insight/api-examples/tree/release/2.15.0/python/api) and [curl](https://github.com/Healthcare-Data-Insight/api-examples/tree/main/curl) examples in our [GitHub repo](https://github.com/Healthcare-Data-Insight/api-examples).
+      
+      Introduction to the JSON response schema:
+      
+      * [837](https://datainsight.health/posts/edi-json/)
+      * [835](https://datainsight.health/posts/edi-payment-api/)
+      
+      Output examples for all formats are available in the [api-examples repository](https://github.com/Healthcare-Data-Insight/api-examples/tree/release/2.15.0/converted_files).
+
+  - name: NCPDP-to-JSON
+    description: |-
+      Parses text in [NCPDP Telecom format](https://datainsight.health/ncpdp/intro/) and returns JSON with an array of NCPDP transactions.
+      
+      See an [NCPDP transaction and parsing-output example](https://datainsight.health/ncpdp/claim-b1/).
+      
+      Additional examples are available from our [GitHub repo](https://github.com/Healthcare-Data-Insight/api-examples).
+
+  - name: Application Info
+    description: Returns application information, including version and license details.
+
+  - name: EDI-to-CSV
+    description: |-
+      Converts X12 EDI input to CSV. You can post EDI content as text
+      or upload files with a `multipart/form-data` request.
+      
+      See [Python](https://github.com/Healthcare-Data-Insight/api-examples/tree/main/python/api) and [curl](https://github.com/Healthcare-Data-Insight/api-examples/tree/main/curl) examples in our [GitHub repo](https://github.com/Healthcare-Data-Insight/api-examples).  
+      See also the [introduction to the CSV conversion API](https://datainsight.health/posts/edi-csv-announcement/).
+      
+      Output examples for all formats are available in the [api-examples repository](https://github.com/Healthcare-Data-Insight/api-examples/tree/main/converted_files).
+
+  - name: Generate EDI
+    description: |-
+      Generates EDI from JSON claim and payment objects.
+
+paths:
+  /api/ncpdp/parse:
+    $ref: paths/api_ncpdp_parse.yaml
+  /api/edi/json:
+    $ref: paths/api_edi_json.yaml
+  /api/edi/validate:
+    $ref: paths/api_edi_validate.yaml
+  /api/edi/validate/text:
+    $ref: paths/api_edi_validate_text.yaml
+  /api/edi/csv:
+    $ref: paths/api_edi_csv.yaml
+  /api/about:
+    $ref: paths/api_about.yaml
+  /api/edi/gen/837:
+    $ref: paths/api_edi_gen_claim.yaml
+  /api/edi/gen/837/validate:
+    $ref: paths/api_edi_gen_claim_validate.yaml
+  /api/edi/gen/835:
+    $ref: paths/api_edi_gen_payment.yaml
+  /api/edi/gen/835/validate:
+    $ref: paths/api_edi_gen_payment_validate.yaml
+
+
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header # can be "header", "query" or "cookie"
+      name: X-API-Key # name of the header, query parameter or cookie

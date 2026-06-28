@@ -1,0 +1,21 @@
+type: object
+properties:
+  expiration:
+    type: string
+    format: date
+  entitlements:
+    type: array
+    items:
+      type: string
+      enum:
+        - EDI
+        - UI
+        - EDITS
+  isSignatureValid:
+    type: boolean
+  licenseFile:
+    type: string
+  licenseKey:
+    type: string
+  expired:
+    type: boolean

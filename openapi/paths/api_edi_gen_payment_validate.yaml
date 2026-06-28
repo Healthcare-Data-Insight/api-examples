@@ -1,0 +1,41 @@
+post:
+  tags:
+    - Generate EDI
+  summary: Validate an EDI generation request for 835
+  description: |-
+    Validates a JSON request for EDI generation and returns any validation issues.
+  operationId: generate-edi-payment-validate
+  parameters:
+    - name: fileName
+      in: query
+      description: >-
+        The name of the EDI file submitted as text. This name is used in validation warnings and parsing errors. If not set, a randomly generated file name is used.
+      required: false
+      schema:
+        type: string
+  security: [ ]
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/model/EdiGenPaymentRequest.yaml
+        examples:
+          genRequest:
+            summary: Request for 835
+            externalValue: "https://raw.githubusercontent.com/Healthcare-Data-Insight/api-examples/refs/heads/release/2.15.0/edi_gen/request/835-minimal.json"
+
+  responses:
+    '200':
+      description: Validation issues. If none are found, returns an empty array.
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: "../components/schemas/model/ValidationIssue.yaml"
+    '400':
+      description: Input/output error or invalid parameter.
+      content:
+        application/json:
+          schema:
+            $ref: "../components/schemas/model/ErrorInfo.yaml"

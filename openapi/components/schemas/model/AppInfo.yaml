@@ -1,0 +1,9 @@
+type: object
+properties:
+  version:
+    type: string
+  buildDateTime:
+    type: string
+    format: date-time
+  licenseInfo:
+    $ref: ./LicenseInfo.yaml

@@ -1,0 +1,18 @@
+description: Segment hierarchy
+type: object
+required:
+  - segment_id
+  - loop_id
+properties:
+  objectType:
+    type: string
+    description: Type of this object, always set to 'SEGMENT'. This value is only set for top-level segments.
+    const: SEGMENT
+  segment_id:
+    description: X12 EDI segment ID, such as ST, BHT, AMT, NM1
+    type: string
+  loop_id:
+    description: X12 EDI loop id/number, such as 2000, 2100, 2110
+    type: string
+  additionalProperties:
+    $ref: "./EdiElementValue.yaml"

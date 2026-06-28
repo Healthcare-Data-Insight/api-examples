@@ -1,0 +1,22 @@
+get:
+  tags:
+    - Application Info
+  description: Returns application information, including version and license details.
+  summary: Get version and license information
+  operationId: getAppInfo
+  security: [ ]
+  responses:
+    '200':
+      description: Version and license information
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/model/AppInfo.yaml
+          example:
+            $ref: ../components/examples/appInfo.json
+    '400':
+      description: Invalid parameter.
+      content:
+        '*/*':
+          schema:
+            $ref: ../components/schemas/model/ErrorInfo.yaml

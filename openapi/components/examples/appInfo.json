@@ -1,0 +1,13 @@
+{
+  "version": "2.15.0",
+  "buildDateTime": "2026-06-13T18:10:58.786-04:00",
+  "licenseInfo": {
+    "expiration": "2026-06-13",
+    "entitlements": [
+      "EDI"
+    ],
+    "isSignatureValid": true,
+    "licenseFile": "/./etc/edi-license.txt",
+    "expired": false
+  }
+}

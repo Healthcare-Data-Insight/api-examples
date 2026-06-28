@@ -1,0 +1,66 @@
+post:
+  tags:
+    - Generate EDI
+  summary: Generate 837I and 837P EDI from JSON claims
+  description: |-
+    Generates X12 EDI `837I` and `837P` files from the request containing claims in JSON format.
+
+  operationId: generate-edi-claim
+  parameters:
+    - name: failOnValidationErrors
+      in: query
+      description: >-
+        Fail the request if validation errors are found. If not set, validation errors are logged but ignored.
+      required: false
+      schema:
+        type: boolean
+        default: false
+
+    - name: fileName
+      in: query
+      description: >-
+        The name of the EDI file submitted as text. This name is used in validation warnings and parsing errors. If not set, a randomly generated file name is used.
+      required: false
+      schema:
+        type: string
+  security: [ ]
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/model/EdiGenClaimRequest.yaml
+        examples:
+          genRequest:
+            summary: Request for 837P
+            externalValue: "https://raw.githubusercontent.com/Healthcare-Data-Insight/api-examples/refs/heads/release/2.15.0/edi_gen/request/837p-minimal.json"
+
+
+  responses:
+    '200':
+      description: |-
+        Generated EDI file.
+      content:
+        text/plain:
+          schema:
+            description: >-
+              EDI file content.
+            type: string
+          examples:
+            generated837:
+              summary: Generated 837P response
+              externalValue: "https://raw.githubusercontent.com/Healthcare-Data-Insight/api-examples/refs/heads/release/2.15.0/edi_gen/response/837p-minimal.edi"
+
+    '400':
+      description: EDI generation error or invalid parameter.
+      content:
+        application/json:
+          schema:
+            $ref: "../components/schemas/model/ErrorInfo.yaml"
+    '417':
+      description: Validation issues returned when `failOnValidationErrors` is set to `true` and validation issues are found.
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: "../components/schemas/model/ValidationIssue.yaml"

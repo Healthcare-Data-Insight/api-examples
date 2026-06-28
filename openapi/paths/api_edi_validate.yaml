@@ -1,0 +1,84 @@
+post:
+  tags:
+    - EDI-to-JSON
+  summary: Validate EDI
+  description: |-
+    Validates EDI and returns validation issues. See the [EDI validation documentation](https://datainsight.health/docs/ediconvert-api/edi-validation/) for more details.
+  operationId: validate-edi
+  security:
+    - ApiKeyAuth: [ ]
+  parameters:
+    - name: fileName
+      in: query
+      description: >-
+        The name of the EDI file submitted as text. This name is used in validation warnings and parsing errors. If not set, a randomly generated file name is used.
+      required: false
+      schema:
+        type: string
+    - name: ndjson
+      in: query
+      description: >-
+        Use JSON Lines, also known as [NDJSON](https://github.com/ndjson/ndjson-spec). There is no enclosing array; each validation issue object is terminated by a newline. Use this option for large files or streaming.
+      required: false
+      schema:
+        type: boolean
+        default: false
+    - name: chunkSize
+      description:
+        The number of EDI transactions, or claims/payments/members for 837/835/834, to parse at once. This option determines the memory footprint and can be used for fine-tuning. A higher value improves performance but consumes more memory.
+      in: query
+      required: false
+      schema:
+        type: integer
+        format: int32
+        default: 50
+
+  requestBody:
+    content:
+      text/plain:
+        schema:
+          description: >-
+            Text in X12 EDI format
+          type: string
+      multipart/form-data:
+        schema:
+          description: >-
+            List of files encoded as `multipart/form-data`. The name of the
+            parameter must be `files`. Each file name must be unique.
+          type: object
+          required:
+            - files
+          properties:
+            files:
+              type: array
+              items:
+                type: string
+                format: binary
+
+
+  responses:
+    '200':
+      description: Validation issues. If none are found, returns an empty array.
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: "../components/schemas/model/ValidationIssue.yaml"
+          examples:
+            validation835:
+              summary: Response for 835
+              externalValue: "https://raw.githubusercontent.com/Healthcare-Data-Insight/api-examples/refs/heads/release/2.15.0/converted_files/835/835-validation-issues-validation-only.json"
+            validation837P:
+              summary: Response for 837P
+              externalValue: "https://raw.githubusercontent.com/Healthcare-Data-Insight/api-examples/refs/heads/release/2.15.0/converted_files/837/837P-validation-issues-validation-only.json"
+            validation834:
+              summary: Response for 834
+              externalValue: "https://raw.githubusercontent.com/Healthcare-Data-Insight/api-examples/refs/heads/release/2.15.0/converted_files/834/834-validation-issues-validation-only.json"
+
+    '400':
+      description: Input/output error or invalid parameter.
+      content:
+        application/json:
+          schema:
+            $ref: "../components/schemas/model/ErrorInfo.yaml"
