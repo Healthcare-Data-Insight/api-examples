@@ -9,6 +9,9 @@ properties:
     description: "Type of this object, set to 'PROVIDER_STATUS' or 'RECEIVER_STATUS'."
     type: "string"
     x-enum-name: "ObjectType"
+  transactionId:
+    description: "ID of the parent transaction. Populated only if the transaction is converted into a top-level object ('transactionTopLevel=true')."
+    type: "string"
   batchStatus:
     description: "Batch status."
     $ref: "./BatchStatus.yaml"

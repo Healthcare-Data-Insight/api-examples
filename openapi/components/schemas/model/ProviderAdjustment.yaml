@@ -9,6 +9,9 @@ properties:
     description: "Type of this object, always set to 'PROVIDER_ADJUSTMENT'."
     type: "string"
     x-enum-name: "ObjectType"
+  transactionId:
+    description: "ID of the parent transaction. Populated only if the transaction is converted into a top-level object ('transactionTopLevel=true')."
+    type: "string"
   providerIdentifier:
     description: "Provider identifier. EDI: PLB01."
     type: "string"
