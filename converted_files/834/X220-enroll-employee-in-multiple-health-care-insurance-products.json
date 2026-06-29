@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6a32cb6097613a0e49904c3d",
+  "id" : "6a41a5b627d080596ad56d49",
   "objectType" : "MEMBER_COVERAGE",
   "sponsor" : {
     "entityRole" : "PLAN_SPONSOR",
@@ -85,7 +85,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a32cb6097613a0e49904c36",
+    "id" : "6a41a5b627d080596ad56d42",
     "controlNumber" : "12345",
     "transactionType" : "MEMBER_COVERAGE",
     "purposeCode" : "00",
@@ -98,8 +98,7 @@
     "fileInfo" : {
       "name" : "X220-enroll-employee-in-multiple-health-care-insurance-products.edi",
       "url" : "file:/edi-samples/edi_files/834/X220-enroll-employee-in-multiple-health-care-insurance-products.edi",
-      "lastModifiedDateTime" : "2025-05-13T18:22:39.203-04:00",
-      "fileType" : "EDI"
+      "lastModifiedDateTime" : "2025-05-13T18:22:39.203-04:00"
     },
     "creationDateTime" : "1998-05-20T12:00:00"
   }

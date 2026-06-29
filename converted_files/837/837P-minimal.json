@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6a32cb6397613a0e49908cab",
+  "id" : "6a41a47da5f0afda93bdaea3",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26463774",
   "chargeAmount" : 100.00,
@@ -99,7 +99,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a32cb6397613a0e49908c8d",
+    "id" : "6a41a47da5f0afda93bdae85",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -113,8 +113,7 @@
     "fileInfo" : {
       "name" : "837P-minimal.dat",
       "url" : "file:/edi-samples/edi_files/837/837P-minimal.dat",
-      "lastModifiedDateTime" : "2026-05-05T11:21:04.936-04:00",
-      "fileType" : "EDI"
+      "lastModifiedDateTime" : "2026-06-27T09:24:51.834-04:00"
     },
     "sender" : {
       "entityRole" : "SUBMITTER",

@@ -1,7 +1,7 @@
 [
  {
   "objectType" : "RECEIVER_STATUS",
-  "id" : "6a32cb6097613a0e499046eb",
+  "id" : "6a41a47aa5f0afda93bd7999",
   "receiver" : {
     "entityRole" : "SUBMITTER",
     "entityType" : "INDIVIDUAL",
@@ -31,7 +31,7 @@
     "rejectedAmount" : 300.00
   },
   "transaction" : {
-    "id" : "6a32cb6097613a0e499046e3",
+    "id" : "6a41a47aa5f0afda93bd7991",
     "controlNumber" : "0004",
     "transactionType" : "CLAIM_ACK",
     "hierarchicalStructureCode" : "0085",
@@ -47,8 +47,7 @@
     "fileInfo" : {
       "name" : "277CA-receiver-rejected.edi",
       "url" : "file:/edi-samples/edi_files/277/277CA-receiver-rejected.edi",
-      "lastModifiedDateTime" : "2025-06-23T15:02:50.114-04:00",
-      "fileType" : "EDI"
+      "lastModifiedDateTime" : "2025-06-23T15:02:50.114-04:00"
     },
     "sender" : {
       "entityRole" : "PAYER",

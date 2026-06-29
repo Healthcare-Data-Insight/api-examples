@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6a32cb6397613a0e49908c86",
+  "id" : "6a41a47da5f0afda93bdae7e",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26407789",
   "chargeAmount" : 79.04,
@@ -253,7 +253,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a32cb6397613a0e49908c4f",
+    "id" : "6a41a47da5f0afda93bdae47",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -267,8 +267,7 @@
     "fileInfo" : {
       "name" : "cob-prov-payera.dat",
       "url" : "file:/edi-samples/edi_files/837/cob-prov-payera.dat",
-      "lastModifiedDateTime" : "2024-01-31T20:06:16.189-05:00",
-      "fileType" : "EDI"
+      "lastModifiedDateTime" : "2024-01-31T20:06:16.189-05:00"
     },
     "sender" : {
       "entityRole" : "SUBMITTER",

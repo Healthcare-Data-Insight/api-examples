@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6a32cb6097613a0e49904d13",
+  "id" : "6a41a5b627d080596ad56e1f",
   "objectType" : "MEMBER_COVERAGE",
   "masterPolicyNumber" : "ABCD012354",
   "sponsor" : {
@@ -38,7 +38,7 @@
     "middleName" : "E"
   },
   "transaction" : {
-    "id" : "6a32cb6097613a0e49904d0b",
+    "id" : "6a41a5b627d080596ad56e17",
     "controlNumber" : "12345",
     "transactionType" : "MEMBER_COVERAGE",
     "purposeCode" : "00",
@@ -51,8 +51,7 @@
     "fileInfo" : {
       "name" : "X220-reinstate-an-employee.edi",
       "url" : "file:/edi-samples/edi_files/834/X220-reinstate-an-employee.edi",
-      "lastModifiedDateTime" : "2025-05-13T18:22:49.106-04:00",
-      "fileType" : "EDI"
+      "lastModifiedDateTime" : "2025-05-13T18:22:49.106-04:00"
     },
     "creationDateTime" : "1998-05-20T12:00:00"
   }

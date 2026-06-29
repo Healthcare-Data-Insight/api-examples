@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6a32cb6397613a0e49908b7f",
+  "id" : "6a41a47da5f0afda93bdad77",
   "objectType" : "CLAIM",
   "patientControlNumber" : "756048Q",
   "chargeAmount" : 89.93,
@@ -205,7 +205,7 @@
     }
   } ],
   "transaction" : {
-    "id" : "6a32cb6397613a0e49908b52",
+    "id" : "6a41a47da5f0afda93bdad4a",
     "controlNumber" : "987654",
     "transactionType" : "INST",
     "hierarchicalStructureCode" : "0019",
@@ -219,8 +219,7 @@
     "fileInfo" : {
       "name" : "837I-inst-claim.dat",
       "url" : "file:/edi-samples/edi_files/837/837I-inst-claim.dat",
-      "lastModifiedDateTime" : "2023-08-28T03:50:07.198-04:00",
-      "fileType" : "EDI"
+      "lastModifiedDateTime" : "2023-08-28T03:50:07.198-04:00"
     },
     "sender" : {
       "entityRole" : "SUBMITTER",

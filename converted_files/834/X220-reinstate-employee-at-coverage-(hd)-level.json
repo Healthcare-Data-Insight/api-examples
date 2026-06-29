@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6a32cb6097613a0e49904baf",
+  "id" : "6a41a5b627d080596ad56cbb",
   "objectType" : "MEMBER_COVERAGE",
   "masterPolicyNumber" : "ABCD012354",
   "sponsor" : {
@@ -39,7 +39,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a32cb6097613a0e49904ba7",
+    "id" : "6a41a5b627d080596ad56cb3",
     "controlNumber" : "12345",
     "transactionType" : "MEMBER_COVERAGE",
     "purposeCode" : "00",
@@ -52,8 +52,7 @@
     "fileInfo" : {
       "name" : "X220-reinstate-employee-at-coverage-(hd)-level.edi",
       "url" : "file:/edi-samples/edi_files/834/X220-reinstate-employee-at-coverage-(hd)-level.edi",
-      "lastModifiedDateTime" : "2025-05-13T18:23:17.497-04:00",
-      "fileType" : "EDI"
+      "lastModifiedDateTime" : "2025-05-13T18:23:17.497-04:00"
     },
     "creationDateTime" : "2002-06-01T12:00:00"
   }

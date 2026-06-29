@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6a32cb6397613a0e499089fe",
+  "id" : "6a41a47da5f0afda93bdabee",
   "objectType" : "CLAIM",
   "patientControlNumber" : "ABC0002",
   "chargeAmount" : 259.96,
@@ -1245,7 +1245,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a32cb6397613a0e49908965",
+    "id" : "6a41a47da5f0afda93bdab55",
     "controlNumber" : "00000024",
     "transactionType" : "INST",
     "hierarchicalStructureCode" : "0019",
@@ -1259,8 +1259,7 @@
     "fileInfo" : {
       "name" : "837I-all-fields.dat",
       "url" : "file:/edi-samples/edi_files/837/837I-all-fields.dat",
-      "lastModifiedDateTime" : "2026-06-10T22:07:38.468-04:00",
-      "fileType" : "EDI"
+      "lastModifiedDateTime" : "2026-06-27T09:24:51.833-04:00"
     },
     "sender" : {
       "entityRole" : "SUBMITTER",

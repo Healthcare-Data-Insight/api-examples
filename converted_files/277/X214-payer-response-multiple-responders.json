@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6a32cb6097613a0e499047d3",
+  "id" : "6a41a47aa5f0afda93bd7a81",
   "objectType" : "CLAIM_STATUS",
   "patient" : {
     "entityRole" : "PATIENT",
@@ -81,7 +81,7 @@
     "rejectedAmount" : 150.00
   },
   "transaction" : {
-    "id" : "6a32cb6097613a0e499047b5",
+    "id" : "6a41a47aa5f0afda93bd7a63",
     "controlNumber" : "0004",
     "transactionType" : "CLAIM_ACK",
     "hierarchicalStructureCode" : "0085",
@@ -97,8 +97,7 @@
     "fileInfo" : {
       "name" : "X214-payer-response-multiple-responders.edi",
       "url" : "file:/edi-samples/edi_files/277/X214-payer-response-multiple-responders.edi",
-      "lastModifiedDateTime" : "2026-02-09T09:16:31.435-05:00",
-      "fileType" : "EDI"
+      "lastModifiedDateTime" : "2026-06-27T09:24:51.831-04:00"
     },
     "sender" : {
       "entityRole" : "PAYER",
@@ -111,7 +110,7 @@
   }
 }
 , {
-  "id" : "6a32cb6097613a0e499047db",
+  "id" : "6a41a47aa5f0afda93bd7a89",
   "objectType" : "CLAIM_STATUS",
   "patient" : {
     "entityRole" : "PATIENT",
@@ -194,7 +193,7 @@
     "rejectedAmount" : 150.00
   },
   "transaction" : {
-    "id" : "6a32cb6097613a0e499047b5",
+    "id" : "6a41a47aa5f0afda93bd7a63",
     "controlNumber" : "0004",
     "transactionType" : "CLAIM_ACK",
     "hierarchicalStructureCode" : "0085",
@@ -210,8 +209,7 @@
     "fileInfo" : {
       "name" : "X214-payer-response-multiple-responders.edi",
       "url" : "file:/edi-samples/edi_files/277/X214-payer-response-multiple-responders.edi",
-      "lastModifiedDateTime" : "2026-02-09T09:16:31.435-05:00",
-      "fileType" : "EDI"
+      "lastModifiedDateTime" : "2026-06-27T09:24:51.831-04:00"
     },
     "sender" : {
       "entityRole" : "PAYER",
@@ -224,7 +222,7 @@
   }
 }
 , {
-  "id" : "6a32cb6097613a0e499047e2",
+  "id" : "6a41a47aa5f0afda93bd7a90",
   "objectType" : "CLAIM_STATUS",
   "patient" : {
     "entityRole" : "PATIENT",
@@ -304,7 +302,7 @@
     "rejectedAmount" : 150.00
   },
   "transaction" : {
-    "id" : "6a32cb6097613a0e499047b5",
+    "id" : "6a41a47aa5f0afda93bd7a63",
     "controlNumber" : "0004",
     "transactionType" : "CLAIM_ACK",
     "hierarchicalStructureCode" : "0085",
@@ -320,8 +318,7 @@
     "fileInfo" : {
       "name" : "X214-payer-response-multiple-responders.edi",
       "url" : "file:/edi-samples/edi_files/277/X214-payer-response-multiple-responders.edi",
-      "lastModifiedDateTime" : "2026-02-09T09:16:31.435-05:00",
-      "fileType" : "EDI"
+      "lastModifiedDateTime" : "2026-06-27T09:24:51.831-04:00"
     },
     "sender" : {
       "entityRole" : "PAYER",
@@ -334,7 +331,7 @@
   }
 }
 , {
-  "id" : "6a32cb6097613a0e499047e9",
+  "id" : "6a41a47aa5f0afda93bd7a97",
   "objectType" : "CLAIM_STATUS",
   "patient" : {
     "entityRole" : "PATIENT",
@@ -415,7 +412,7 @@
     "rejectedAmount" : 150.00
   },
   "transaction" : {
-    "id" : "6a32cb6097613a0e499047b5",
+    "id" : "6a41a47aa5f0afda93bd7a63",
     "controlNumber" : "0004",
     "transactionType" : "CLAIM_ACK",
     "hierarchicalStructureCode" : "0085",
@@ -431,8 +428,7 @@
     "fileInfo" : {
       "name" : "X214-payer-response-multiple-responders.edi",
       "url" : "file:/edi-samples/edi_files/277/X214-payer-response-multiple-responders.edi",
-      "lastModifiedDateTime" : "2026-02-09T09:16:31.435-05:00",
-      "fileType" : "EDI"
+      "lastModifiedDateTime" : "2026-06-27T09:24:51.831-04:00"
     },
     "sender" : {
       "entityRole" : "PAYER",
@@ -445,7 +441,7 @@
   }
 }
 , {
-  "id" : "6a32cb6097613a0e499047f1",
+  "id" : "6a41a47aa5f0afda93bd7a9f",
   "objectType" : "CLAIM_STATUS",
   "patient" : {
     "entityRole" : "PATIENT",
@@ -526,7 +522,7 @@
     "rejectedAmount" : 150.00
   },
   "transaction" : {
-    "id" : "6a32cb6097613a0e499047b5",
+    "id" : "6a41a47aa5f0afda93bd7a63",
     "controlNumber" : "0004",
     "transactionType" : "CLAIM_ACK",
     "hierarchicalStructureCode" : "0085",
@@ -542,8 +538,7 @@
     "fileInfo" : {
       "name" : "X214-payer-response-multiple-responders.edi",
       "url" : "file:/edi-samples/edi_files/277/X214-payer-response-multiple-responders.edi",
-      "lastModifiedDateTime" : "2026-02-09T09:16:31.435-05:00",
-      "fileType" : "EDI"
+      "lastModifiedDateTime" : "2026-06-27T09:24:51.831-04:00"
     },
     "sender" : {
       "entityRole" : "PAYER",
@@ -557,7 +552,7 @@
 }
 , {
   "objectType" : "PROVIDER_STATUS",
-  "id" : "6a32cb6097613a0e499047f7",
+  "id" : "6a41a47aa5f0afda93bd7aa5",
   "provider" : {
     "entityRole" : "BILLING_PROVIDER",
     "entityType" : "INDIVIDUAL",
@@ -585,7 +580,7 @@
     "rejectedAmount" : 150.00
   },
   "transaction" : {
-    "id" : "6a32cb6097613a0e499047b5",
+    "id" : "6a41a47aa5f0afda93bd7a63",
     "controlNumber" : "0004",
     "transactionType" : "CLAIM_ACK",
     "hierarchicalStructureCode" : "0085",
@@ -601,8 +596,7 @@
     "fileInfo" : {
       "name" : "X214-payer-response-multiple-responders.edi",
       "url" : "file:/edi-samples/edi_files/277/X214-payer-response-multiple-responders.edi",
-      "lastModifiedDateTime" : "2026-02-09T09:16:31.435-05:00",
-      "fileType" : "EDI"
+      "lastModifiedDateTime" : "2026-06-27T09:24:51.831-04:00"
     },
     "sender" : {
       "entityRole" : "PAYER",

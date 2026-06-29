@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6a32cb6097613a0e49904d63",
+  "id" : "6a41a5b627d080596ad56e6f",
   "objectType" : "MEMBER_COVERAGE",
   "masterPolicyNumber" : "ABCD012354",
   "sponsor" : {
@@ -38,7 +38,7 @@
     "gender" : "MALE"
   },
   "transaction" : {
-    "id" : "6a32cb6097613a0e49904d5b",
+    "id" : "6a41a5b627d080596ad56e67",
     "controlNumber" : "12345",
     "transactionType" : "MEMBER_COVERAGE",
     "purposeCode" : "00",
@@ -51,8 +51,7 @@
     "fileInfo" : {
       "name" : "X220-cancel-a-dependent.edi",
       "url" : "file:/edi-samples/edi_files/834/X220-cancel-a-dependent.edi",
-      "lastModifiedDateTime" : "2025-05-13T18:22:08.086-04:00",
-      "fileType" : "EDI"
+      "lastModifiedDateTime" : "2025-05-13T18:22:08.086-04:00"
     },
     "creationDateTime" : "1998-05-20T12:00:00"
   }

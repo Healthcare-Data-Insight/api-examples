@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6a32cb6097613a0e49904787",
+  "id" : "6a41a47aa5f0afda93bd7a35",
   "objectType" : "CLAIM_STATUS",
   "patient" : {
     "entityRole" : "PATIENT",
@@ -63,7 +63,7 @@
     "nameSuffix" : "MD"
   },
   "transaction" : {
-    "id" : "6a32cb6097613a0e4990476f",
+    "id" : "6a41a47aa5f0afda93bd7a1d",
     "controlNumber" : "0003",
     "transactionType" : "CLAIM_ACK",
     "hierarchicalStructureCode" : "0085",
@@ -79,8 +79,7 @@
     "fileInfo" : {
       "name" : "X214-payer-response.edi",
       "url" : "file:/edi-samples/edi_files/277/X214-payer-response.edi",
-      "lastModifiedDateTime" : "2026-02-09T09:16:31.435-05:00",
-      "fileType" : "EDI"
+      "lastModifiedDateTime" : "2026-06-27T09:24:51.831-04:00"
     },
     "sender" : {
       "entityRole" : "PAYER",
@@ -93,7 +92,7 @@
   }
 }
 , {
-  "id" : "6a32cb6097613a0e4990478f",
+  "id" : "6a41a47aa5f0afda93bd7a3d",
   "objectType" : "CLAIM_STATUS",
   "patient" : {
     "entityRole" : "PATIENT",
@@ -158,7 +157,7 @@
     "nameSuffix" : "MD"
   },
   "transaction" : {
-    "id" : "6a32cb6097613a0e4990476f",
+    "id" : "6a41a47aa5f0afda93bd7a1d",
     "controlNumber" : "0003",
     "transactionType" : "CLAIM_ACK",
     "hierarchicalStructureCode" : "0085",
@@ -174,8 +173,7 @@
     "fileInfo" : {
       "name" : "X214-payer-response.edi",
       "url" : "file:/edi-samples/edi_files/277/X214-payer-response.edi",
-      "lastModifiedDateTime" : "2026-02-09T09:16:31.435-05:00",
-      "fileType" : "EDI"
+      "lastModifiedDateTime" : "2026-06-27T09:24:51.831-04:00"
     },
     "sender" : {
       "entityRole" : "PAYER",
@@ -188,7 +186,7 @@
   }
 }
 , {
-  "id" : "6a32cb6097613a0e49904796",
+  "id" : "6a41a47aa5f0afda93bd7a44",
   "objectType" : "CLAIM_STATUS",
   "patient" : {
     "entityRole" : "PATIENT",
@@ -253,7 +251,7 @@
     "nameSuffix" : "MD"
   },
   "transaction" : {
-    "id" : "6a32cb6097613a0e4990476f",
+    "id" : "6a41a47aa5f0afda93bd7a1d",
     "controlNumber" : "0003",
     "transactionType" : "CLAIM_ACK",
     "hierarchicalStructureCode" : "0085",
@@ -269,8 +267,7 @@
     "fileInfo" : {
       "name" : "X214-payer-response.edi",
       "url" : "file:/edi-samples/edi_files/277/X214-payer-response.edi",
-      "lastModifiedDateTime" : "2026-02-09T09:16:31.435-05:00",
-      "fileType" : "EDI"
+      "lastModifiedDateTime" : "2026-06-27T09:24:51.831-04:00"
     },
     "sender" : {
       "entityRole" : "PAYER",
@@ -283,7 +280,7 @@
   }
 }
 , {
-  "id" : "6a32cb6097613a0e4990479d",
+  "id" : "6a41a47aa5f0afda93bd7a4b",
   "objectType" : "CLAIM_STATUS",
   "patient" : {
     "entityRole" : "PATIENT",
@@ -346,7 +343,7 @@
     "nameSuffix" : "MD"
   },
   "transaction" : {
-    "id" : "6a32cb6097613a0e4990476f",
+    "id" : "6a41a47aa5f0afda93bd7a1d",
     "controlNumber" : "0003",
     "transactionType" : "CLAIM_ACK",
     "hierarchicalStructureCode" : "0085",
@@ -362,8 +359,7 @@
     "fileInfo" : {
       "name" : "X214-payer-response.edi",
       "url" : "file:/edi-samples/edi_files/277/X214-payer-response.edi",
-      "lastModifiedDateTime" : "2026-02-09T09:16:31.435-05:00",
-      "fileType" : "EDI"
+      "lastModifiedDateTime" : "2026-06-27T09:24:51.831-04:00"
     },
     "sender" : {
       "entityRole" : "PAYER",
@@ -376,7 +372,7 @@
   }
 }
 , {
-  "id" : "6a32cb6097613a0e499047a5",
+  "id" : "6a41a47aa5f0afda93bd7a53",
   "objectType" : "CLAIM_STATUS",
   "patient" : {
     "entityRole" : "PATIENT",
@@ -439,7 +435,7 @@
     "nameSuffix" : "MD"
   },
   "transaction" : {
-    "id" : "6a32cb6097613a0e4990476f",
+    "id" : "6a41a47aa5f0afda93bd7a1d",
     "controlNumber" : "0003",
     "transactionType" : "CLAIM_ACK",
     "hierarchicalStructureCode" : "0085",
@@ -455,8 +451,7 @@
     "fileInfo" : {
       "name" : "X214-payer-response.edi",
       "url" : "file:/edi-samples/edi_files/277/X214-payer-response.edi",
-      "lastModifiedDateTime" : "2026-02-09T09:16:31.435-05:00",
-      "fileType" : "EDI"
+      "lastModifiedDateTime" : "2026-06-27T09:24:51.831-04:00"
     },
     "sender" : {
       "entityRole" : "PAYER",

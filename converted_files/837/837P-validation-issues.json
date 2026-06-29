@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6a32cb6097613a0e49904a91",
+  "id" : "6a41a47aa5f0afda93bd7d3f",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26463774",
   "chargeAmount" : 100.00,
@@ -272,7 +272,7 @@
     "message" : "HCPCS Procedure JXXXX is not a valid code"
   } ],
   "transaction" : {
-    "id" : "6a32cb6097613a0e49904a6d",
+    "id" : "6a41a47aa5f0afda93bd7d1b",
     "controlNumber" : "   1",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -286,8 +286,7 @@
     "fileInfo" : {
       "name" : "837P-validation-issues.edi",
       "url" : "file:/edi-samples/edi_files/837/837P-validation-issues.edi",
-      "lastModifiedDateTime" : "2026-05-17T10:04:54.775-04:00",
-      "fileType" : "EDI"
+      "lastModifiedDateTime" : "2026-06-27T09:24:51.834-04:00"
     },
     "sender" : {
       "entityRole" : "SUBMITTER",

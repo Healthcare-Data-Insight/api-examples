@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6a32cb5f97613a0e49904677",
+  "id" : "6a41a47aa5f0afda93bd7925",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26403774",
   "chargeAmount" : 150.00,
@@ -600,7 +600,7 @@
     }
   } ],
   "transaction" : {
-    "id" : "6a32cb5f97613a0e499045e1",
+    "id" : "6a41a47aa5f0afda93bd788f",
     "controlNumber" : "3456",
     "transactionType" : "DENTAL",
     "hierarchicalStructureCode" : "0019",
@@ -614,8 +614,7 @@
     "fileInfo" : {
       "name" : "837D-all-fields.dat",
       "url" : "file:/edi-samples/edi_files/837/837D-all-fields.dat",
-      "lastModifiedDateTime" : "2025-05-06T18:45:51.852-04:00",
-      "fileType" : "EDI"
+      "lastModifiedDateTime" : "2025-05-06T18:45:51.852-04:00"
     },
     "sender" : {
       "entityRole" : "SUBMITTER",
