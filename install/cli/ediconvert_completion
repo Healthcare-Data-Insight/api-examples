@@ -169,8 +169,8 @@ function _picocli_ediconvert() {
   local prev_word=${COMP_WORDS[COMP_CWORD-1]}
 
   local commands=""
-  local flag_opts="'-r' '--recurse' '--format-json' '--out-parsing-warnings' '--split-tran' '-q' '--quiet' '--suppress-progress' '--out-segments' '--single-csv' '-h' '--help' '-V' '--version'"
-  local arg_opts="'-p' '--patterns' '-o' '--out' '-m' '--mode' '--max-warnings' '--chunk-size' '--progress-chunk-size' '--csv-schema-name' '--csv-config' '--csv-schema-file' '--tran-type'"
+  local flag_opts="'-r' '--recurse' '--validate' '-q' '--quiet' '--suppress-progress' '--format-json' '--transaction-top-level' '--out-control-segments' '--out-segments' '--single-csv' '-h' '--help' '-V' '--version'"
+  local arg_opts="'-p' '--patterns' '-o' '--out' '-m' '--mode' '--chunk-size' '--progress-chunk-size' '--csv-schema-name' '--csv-config' '--csv-schema-file' '--tran-type'"
   local outputFormat_option_args=("CSV" "EXCEL" "JSON" "JSONL") # --mode values
   local transactionTypeFilter_option_args=("835" "837P" "837I" "837D" "834") # --tran-type values
 
@@ -181,18 +181,12 @@ function _picocli_ediconvert() {
       return
       ;;
     '-o'|'--out')
-      local IFS=$'\n'
-      type compopt &>/dev/null && compopt -o filenames
-      COMPREPLY=( $( compgen -f -- "${curr_word}" ) ) # files
-      return $?
+      return
       ;;
     '-m'|'--mode')
       local IFS=$'\n'
       COMPREPLY=( $( compReplyArray "${outputFormat_option_args[@]}" ) )
       return $?
-      ;;
-    '--max-warnings')
-      return
       ;;
     '--chunk-size')
       return
@@ -217,13 +211,6 @@ function _picocli_ediconvert() {
     COMPREPLY=( $(compgen -W "${flag_opts} ${arg_opts}" -- "${curr_word}") )
   else
     local positionals=""
-    local currIndex
-    currIndex=$(currentPositionalIndex "ediconvert" "${arg_opts}" "${flag_opts}")
-    if (( currIndex >= 0 && currIndex <= 0 )); then
-      local IFS=$'\n'
-      type compopt &>/dev/null && compopt -o filenames
-      positionals=$( compgen -f -- "${curr_word}" ) # files
-    fi
     local IFS=$'\n'
     COMPREPLY=( $(compgen -W "${commands// /$'\n'}${IFS}${positionals}" -- "${curr_word}") )
   fi
