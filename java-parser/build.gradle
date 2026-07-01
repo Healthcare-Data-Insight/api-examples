@@ -14,8 +14,8 @@ repositories {
 java.sourceCompatibility = JavaVersion.VERSION_17
 
 dependencies {
-    implementation 'hdi:edi:2.15.0'
-    implementation 'com.fasterxml.jackson.core:jackson-databind:2.21.1'
+    implementation 'hdi:edi:2.15.1'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.21.4'
 
     // The dependencies below are only for test classes
     testImplementation 'commons-io:commons-io:2.20.0'
