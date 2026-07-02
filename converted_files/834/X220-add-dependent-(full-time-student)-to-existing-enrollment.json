@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6a32cb6097613a0e49904d2c",
+  "id" : "6a41a5b627d080596ad56e38",
   "objectType" : "MEMBER_COVERAGE",
   "masterPolicyNumber" : "ABCD012354",
   "sponsor" : {
@@ -52,7 +52,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a32cb6097613a0e49904d24",
+    "id" : "6a41a5b627d080596ad56e30",
     "controlNumber" : "12345",
     "transactionType" : "MEMBER_COVERAGE",
     "purposeCode" : "00",
@@ -65,8 +65,7 @@
     "fileInfo" : {
       "name" : "X220-add-dependent-(full-time-student)-to-existing-enrollment.edi",
       "url" : "file:/edi-samples/edi_files/834/X220-add-dependent-(full-time-student)-to-existing-enrollment.edi",
-      "lastModifiedDateTime" : "2025-05-13T18:23:17.491-04:00",
-      "fileType" : "EDI"
+      "lastModifiedDateTime" : "2025-05-13T18:23:17.491-04:00"
     },
     "creationDateTime" : "1998-05-20T12:00:00"
   }

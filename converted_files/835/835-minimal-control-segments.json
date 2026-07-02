@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6a32cb6097613a0e4990467a",
+  "id" : "6a41a2f8eeb7b2414b3a30c7",
   "objectType" : "INTERCHANGE_CONTROL",
   "elementSeparator" : "*",
   "segmentTerminator" : "~",
@@ -19,10 +19,15 @@
   "controlNumber" : 191511902,
   "acknowledgmentRequested" : "0",
   "interchangeUsageIndicator" : "P",
-  "componentElementSeparator" : ":"
+  "componentElementSeparator" : ":",
+  "fileInfo" : {
+    "name" : "835-minimal.dat",
+    "url" : "file:/edi-samples/edi_files/835/835-minimal.dat",
+    "lastModifiedDateTime" : "2026-06-27T09:24:51.832-04:00"
+  }
 }
 , {
-  "id" : "6a32cb6097613a0e4990467c",
+  "id" : "6a41a2f8eeb7b2414b3a30c9",
   "objectType" : "FUNCTIONAL_GROUP",
   "functionalIdentifierCode" : "HP",
   "senderCode" : "SENDER CODE",
@@ -34,8 +39,9 @@
   "version" : "005010X221A1"
 }
 , {
-  "id" : "6a32cb6097613a0e4990467e",
+  "id" : "6a41a2f8eeb7b2414b3a30cb",
   "objectType" : "TRANSACTION",
+  "functionalGroupId" : "6a41a2f8eeb7b2414b3a30c9",
   "controlNumber" : "0002",
   "transactionType" : "PAYMENT",
   "productionDate" : "2024-12-23",
@@ -52,8 +58,7 @@
   "fileInfo" : {
     "name" : "835-minimal.dat",
     "url" : "file:/edi-samples/edi_files/835/835-minimal.dat",
-    "lastModifiedDateTime" : "2026-06-16T10:38:18.088-04:00",
-    "fileType" : "EDI"
+    "lastModifiedDateTime" : "2026-06-27T09:24:51.832-04:00"
   },
   "sender" : {
     "entityRole" : "PAYER",
@@ -112,8 +117,9 @@
   }
 }
 , {
-  "id" : "6a32cb6097613a0e499046a1",
+  "id" : "6a41a2f8eeb7b2414b3a30ee",
   "objectType" : "PAYMENT",
+  "transactionId" : "6a41a2f8eeb7b2414b3a30cb",
   "patientControlNumber" : "5554555444",
   "chargeAmount" : 800.00,
   "paymentAmount" : 500.00,

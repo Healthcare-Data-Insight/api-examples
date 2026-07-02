@@ -5,6 +5,9 @@ properties:
     description: "Type of this object, always set to 'TRANSACTION' when the transaction is a top-level object."
     type: "string"
     x-enum-name: "ObjectType"
+  functionalGroupId:
+    description: "ID of the functional group (GS) for this transaction. Populated only if the conversion of control segments is enabled ('convertControlSegments=true')."
+    type: "string"
   controlNumber:
     description: "Control number. EDI: ST02."
     type: "string"

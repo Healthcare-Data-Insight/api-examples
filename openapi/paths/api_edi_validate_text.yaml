@@ -1,0 +1,66 @@
+post:
+  tags:
+    - EDI-to-JSON
+  summary: Validate EDI and return validation messages as text
+  description: |-
+    Validates EDI and returns the entire EDI file with validation messages below each segment.
+    Validation messages are denoted by the prefix `!!` in the EDI file.
+  operationId: validate-edi-text
+  parameters:
+    - name: issueStringPrefix
+      in: query
+      description: >-
+        Prefix for lines that contain validation messages.
+      required: false
+      schema:
+        default: "!!"
+        type: string
+  security:
+    - ApiKeyAuth: [ ]
+  requestBody:
+    content:
+      text/plain:
+        schema:
+          description: >-
+            Text in X12 EDI format
+          type: string
+      multipart/form-data:
+        schema:
+          description: >-
+            List of files encoded as `multipart/form-data`. The name of the
+            parameter must be `files`. Each file name must be unique.
+          type: object
+          required:
+            - files
+          properties:
+            files:
+              type: array
+              items:
+                type: string
+                format: binary
+
+
+  responses:
+    '200':
+      description: EDI and validation issues as text.
+      content:
+        text/plain:
+          schema:
+            type: string
+          examples:
+            validation835:
+              summary: Response for 835
+              externalValue: "https://raw.githubusercontent.com/Healthcare-Data-Insight/api-examples/refs/heads/release/2.15.0/converted_files/835/835-validation-issues.txt"
+            validation837P:
+              summary: Response for 837P
+              externalValue: "https://raw.githubusercontent.com/Healthcare-Data-Insight/api-examples/refs/heads/release/2.15.0/converted_files/837/837P-validation-issues.txt"
+            validation834:
+              summary: Response for 834
+              externalValue: "https://raw.githubusercontent.com/Healthcare-Data-Insight/api-examples/refs/heads/release/2.15.0/converted_files/834/834-validation-issues.txt"
+
+    '400':
+      description: Input/output error or invalid parameter.
+      content:
+        application/json:
+          schema:
+            $ref: "../components/schemas/model/ErrorInfo.yaml"

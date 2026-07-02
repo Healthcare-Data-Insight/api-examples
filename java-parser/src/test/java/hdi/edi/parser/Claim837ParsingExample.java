@@ -45,11 +45,13 @@ public class Claim837ParsingExample implements ParsingExampleHelper {
         try (var parser = new EdiParser(edi837File).isValidationMode(true)) {
             EdiParsingResults parsingResults;
             do {
-                parsingResults = parser.parse(100);
+                parsingResults = parser.parse(20);
                 List<Claim> claims = parsingResults.claims();
                 for (var claim : claims) {
                     processClaim(claim);
                 }
+                // in case if you need info from control segments
+                processControlSegments(parsingResults);
                 // Validation issues at the transaction level
                 var issues = parsingResults.validationIssues();
                 for (var issue : issues) {
@@ -121,9 +123,14 @@ public class Claim837ParsingExample implements ParsingExampleHelper {
         for (var issue : issues) {
             log.warn("Validation issue: {}", issue);
         }
-
     }
 
+    private void processControlSegments(EdiParsingResults parsingResults) {
+        if (parsingResults.interchangeControl() != null)
+            System.out.println(parsingResults.interchangeControl());
+        if (parsingResults.functionalGroup() != null)
+            System.out.println(parsingResults.functionalGroup());
+    }
 
     /**
      * The parser translates EDI qualifiers and some of the codes to Java enums

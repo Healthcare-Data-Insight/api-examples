@@ -1,0 +1,156 @@
+post:
+  tags:
+    - EDI-to-CSV
+  summary: Convert X12 EDI 837/835/834 to CSV
+  description: |-
+    Converts X12 EDI input into comma-separated value (CSV) flat-file
+    format. EDI can be posted as text in the request body or uploaded with a `multipart/form-data` request.
+    
+    The output is streamed as the input is parsed.
+    
+    See the [data dictionary](https://datainsight.health/docs/datadict/) for more details about the response schema, including mappings to X12 EDI elements. 
+    
+    The CSV output is highly customizable. See [this guide](https://datainsight.health/docs/csv/schemas/) for more details.
+    
+    Output examples:
+    * [835](https://github.com/Healthcare-Data-Insight/api-examples/blob/main/converted_files/835/835-all-files.csv)
+    * [837P](https://github.com/Healthcare-Data-Insight/api-examples/blob/main/converted_files/837/837P-all-files.csv)
+    * [837I](https://github.com/Healthcare-Data-Insight/api-examples/blob/main/converted_files/837/837I-all-fields.csv)
+    * [834](https://github.com/Healthcare-Data-Insight/api-examples/blob/main/converted_files/834/834-all-fields.csv)
+
+  operationId: convert-edi-csv
+  x-codeSamples:
+    - lang: 'cURL'
+      label: 'CLI'
+      source: |
+        # Post EDI as text
+        curl -X POST -H "Content-Type: text/plain" \
+        --data-binary  @../edi_files/835/835.edi  \ 
+        "$API_URL/edi/csv?ediFileName=837.edi"
+        
+        # Upload EDI files using a multipart/form-data request
+        curl -F files=@"../edi_files/837/837-1.dat" -F files=@"../edi_files/837/837-2.dat" \
+        $API_URL/edi/csv
+  security: [ ]
+  parameters:
+    - name: schemaFileName
+      in: query
+      description: >-
+        Name of the file containing the CSV conversion schemas. See the [CSV schema documentation](https://datainsight.health/docs/csv/schemas/) for more details.
+      required: false
+      schema:
+        type: string
+        default: csv_conversion.yaml
+    - name: schemaName
+      in: query
+      description: >-
+        Name of the `schema` configuration for CSV conversion in the CSV
+        schema file. See the [CSV schema documentation](https://datainsight.health/docs/csv/schemas/) for more details.
+      required: false
+      schema:
+        type: string
+        default: lines-with-header-repeat-first-row
+
+    - name: ediFileName
+      in: query
+      description: >-
+        The name of the EDI file submitted as text. This name will be propagated to the `fileName` column.
+        Ignored for `multipart/form-data` requests.
+      required: false
+      schema:
+        type: string
+
+    - name: chunkSize
+      description: Number of claims or payments (837/835), or members (834), to parse at a time.
+      in: query
+      required: false
+      schema:
+        type: integer
+        format: int32
+        default: 200
+
+    - name: warningsInResponse
+      in: query
+      description: >-
+        Write EDI parsing warnings to the response stream. Warnings are written into the first column and start with the `WARNING:` prefix. If not set, warnings are only written to logs. See the [User Guide](https://datainsight.health/docs/ediconvert-api/user-guide/#error-handling) for more details.
+        
+        Deprecated: use `/api/edi/validate/text` endpoint to validate your EDI files.
+      required: false
+      deprecated: true
+      schema:
+        type: boolean
+        default: false
+
+    - name: maxWarnings
+      in: query
+      description: >-
+        Maximum number of EDI parsing warnings per file before raising a `Too Many Warnings` error and stopping.
+      required: false
+      deprecated: true
+      schema:
+        type: integer
+        default: 3000
+
+  requestBody:
+    content:
+      multipart/form-data:
+        schema:
+          description: >-
+            List of files encoded as `multipart/form-data`. The name of the
+            parameter must be `files`. Each file name must be unique.
+          type: object
+
+          properties:
+            files:
+              type: array
+              items:
+                type: string
+                format: binary
+          required:
+            - files
+      text/plain:
+        schema:
+          description: >-
+            Text in X12 EDI format
+          type: string
+
+
+  responses:
+    '200':
+      description: |-
+        You can also find schemas in [table format with EDI mappings](https://datainsight.health/docs/datadict/).
+        
+        Returns [claim (`837`)](https://datainsight.health/docs/datadict/837p-claim/), [payment (`835`)](https://datainsight.health/docs/datadict/835-payment/), or [member coverage (`834`)](https://datainsight.health/docs/datadict/834/) objects in CSV format.
+      content:
+        text/plain:
+          schema:
+            oneOf:
+              - $ref: "../components/schemas/model/PaymentCsv.yaml"
+              - $ref: "../components/schemas/model/ProfClaimCsv.yaml"
+              - $ref: "../components/schemas/model/InstClaimCsv.yaml"
+              - $ref: "../components/schemas/model/MemberCoverageCsv.yaml"
+          examples:
+            csvOutput835:
+              summary: CSV output for 835
+              externalValue: "https://raw.githubusercontent.com/Healthcare-Data-Insight/api-examples/refs/heads/main/converted_files/835/835-all-files.csv"
+            csvOutput837P:
+              summary: CSV output for 837P
+              externalValue: "https://raw.githubusercontent.com/Healthcare-Data-Insight/api-examples/refs/heads/main/converted_files/837/837P-all-files.csv"
+            csvOutput837I:
+              summary: CSV output for 837I
+              externalValue: "https://raw.githubusercontent.com/Healthcare-Data-Insight/api-examples/refs/heads/main/converted_files/837/837I-all-fields.csv"
+            csvOutput834:
+              summary: CSV output for 834
+              externalValue: "https://raw.githubusercontent.com/Healthcare-Data-Insight/api-examples/refs/heads/main/converted_files/834/834-all-fields.csv"
+    '400':
+      description: EDI parsing error or invalid parameter. Because the response is streamed, you can receive a `200` response that contains a parsing error. Lines with errors have the `ERROR:` prefix. More details are available in the [User Guide](https://datainsight.health/docs/ediconvert-api/user-guide/#error-handling).
+      content:
+        text/plain:
+          schema:
+            description: >-
+              String with the `ERROR:` prefix.
+            type: string
+          examples:
+            csvOutput835:
+              summary: CSV output for 835
+              externalValue: "https://datainsight.health/docs/ediconvert-api/csvOutputError.csv"

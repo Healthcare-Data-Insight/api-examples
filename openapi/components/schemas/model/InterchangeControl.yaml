@@ -109,6 +109,9 @@ properties:
     x-edi-elt-designators:
     - "ISA16"
     default: ":"
+  fileInfo:
+    description: "File info."
+    $ref: "./FileInfo.yaml"
 required:
 - "senderIdQualifier"
 - "senderId"

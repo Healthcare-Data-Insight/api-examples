@@ -1,0 +1,41 @@
+post:
+  tags:
+    - NCPDP-to-JSON
+  summary: Convert NCPDP input to JSON
+  description: Converts NCPDP Telecom-format input to JSON.
+  operationId: convert-ncpdp-json
+  x-codeSamples:
+    - lang: 'cURL'
+      label: 'CLI'
+      source: |
+        curl -H "Content-Type: text/plain" --data-binary @../edi_files/ncpdp/b1_telco_cob.dat "$API_URL/ncpdp/parse"
+  security: [ ]
+  requestBody:
+    description: Text in NCPDP Telecom format.
+    content:
+      text/plain:
+        schema:
+          type: string
+    required: true
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              transactions:
+                type: array
+                items:
+                  $ref: "../components/schemas/model/EdiSegment.yaml"
+          examples:
+            outputNCPDPB1:
+              summary: Response for NCPDP B1 transaction
+              externalValue: "https://raw.githubusercontent.com/Healthcare-Data-Insight/api-examples/refs/heads/main/converted_files/ncpdp/b1_telco.json"
+    '400':
+      description: NCPDP parsing error
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/model/ErrorInfo.yaml

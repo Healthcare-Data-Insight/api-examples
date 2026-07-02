@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6a32cb6397613a0e49908c1d",
+  "id" : "6a41a47da5f0afda93bdae15",
   "objectType" : "CLAIM",
   "patientControlNumber" : "SMI123",
   "chargeAmount" : 75.00,
@@ -230,7 +230,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a32cb6397613a0e49908be7",
+    "id" : "6a41a47da5f0afda93bdaddf",
     "controlNumber" : "112233",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -244,8 +244,7 @@
     "fileInfo" : {
       "name" : "wheelchair.dat",
       "url" : "file:/edi-samples/edi_files/837/wheelchair.dat",
-      "lastModifiedDateTime" : "2026-06-14T11:58:52.402-04:00",
-      "fileType" : "EDI"
+      "lastModifiedDateTime" : "2026-06-27T09:24:51.836-04:00"
     },
     "sender" : {
       "entityRole" : "SUBMITTER",

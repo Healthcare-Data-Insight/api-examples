@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6a32cb6097613a0e49904bc9",
+  "id" : "6a41a5b627d080596ad56cd5",
   "objectType" : "MEMBER_COVERAGE",
   "masterPolicyNumber" : "ABCD012354",
   "sponsor" : {
@@ -31,7 +31,7 @@
     "firstName" : "WILLIAM"
   },
   "transaction" : {
-    "id" : "6a32cb6097613a0e49904bc1",
+    "id" : "6a41a5b627d080596ad56ccd",
     "controlNumber" : "12345",
     "transactionType" : "MEMBER_COVERAGE",
     "purposeCode" : "00",
@@ -44,8 +44,7 @@
     "fileInfo" : {
       "name" : "X220-reinstate-member-eligibility-(ins).edi",
       "url" : "file:/edi-samples/edi_files/834/X220-reinstate-member-eligibility-(ins).edi",
-      "lastModifiedDateTime" : "2025-05-13T18:23:23.766-04:00",
-      "fileType" : "EDI"
+      "lastModifiedDateTime" : "2025-05-13T18:23:23.766-04:00"
     },
     "creationDateTime" : "2002-06-01T12:00:00"
   }

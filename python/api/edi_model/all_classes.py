@@ -86,6 +86,14 @@ class Amount(EdiConverterModel):
     'Type of amount; qualifier code translated to a mnemonic string constant (enum). EDI: AMT01.'
     amount: float | None = Field(default=None, description='Amount. EDI: AMT02.')
     'Amount. EDI: AMT02.'
+class AppInfo(EdiConverterModel):
+    'OpenAPI schema for AppInfo.'
+    version: str | None = Field(default=None, description='version.')
+    'version.'
+    build_date_time: str | None = Field(default=None, description='buildDateTime.')
+    'buildDateTime.'
+    license_info: LicenseInfo | None = Field(default=None, description='licenseInfo.')
+    'licenseInfo.'
 class Attachment(EdiConverterModel):
     'Segment: PWK.'
     report_type_code: str | None = Field(default=None, description='Code indicating the title or contents of a document. EDI: PWK01.')
@@ -160,6 +168,8 @@ class ClaimStatus(EdiConverterModel):
     'Unique payment identifier assigned by the converter.'
     object_type: ObjectType | None = Field(default=None, description="Type of this object, always set to 'CLAIM_STATUS'.")
     "Type of this object, always set to 'CLAIM_STATUS'."
+    transaction_id: str | None = Field(default=None, description="ID of the parent transaction. Populated only if the transaction is converted into a top-level object ('transactionTopLevel=true').")
+    "ID of the parent transaction. Populated only if the transaction is converted into a top-level object ('transactionTopLevel=true')."
     patient: PartyIdName | None = Field(default=None, description='The insured (subscriber) or patient as stated on 837 claim. EDI: Loop: 2100D, NM1*QC.')
     'The insured (subscriber) or patient as stated on 837 claim. EDI: Loop: 2100D, NM1*QC.'
     patient_control_number: str | None = Field(default=None, description='Patient control number. EDI: TRN02.')
@@ -276,6 +286,8 @@ class DentClaim(EdiConverterModel):
     'Unique payment identifier assigned by the converter.'
     object_type: ObjectType | None = Field(default=None, description="Type of this object, set to 'CLAIM'.")
     "Type of this object, set to 'CLAIM'."
+    transaction_id: str | None = Field(default=None, description="ID of the parent transaction. Populated only if the transaction is converted into a top-level object ('transactionTopLevel=true').")
+    "ID of the parent transaction. Populated only if the transaction is converted into a top-level object ('transactionTopLevel=true')."
     patient_control_number: str | None = Field(default=None, description='Identifier used to track a claim from creation by the health care provider through payment. EDI: CLM01.')
     'Identifier used to track a claim from creation by the health care provider through payment. EDI: CLM01.'
     charge_amount: float | None = Field(default=None, description='Charge amount. EDI: CLM02.')
@@ -464,6 +476,9 @@ class DmeService(EdiConverterModel):
     'Frequency at which the rental equipment is billed. EDI: SV506.'
     billing_frequency: DmeBillingFrequency | None = Field(default=None, description='Frequency at which the rental equipment is billed, expressed as enum (string constant). EDI: SV506.')
     'Frequency at which the rental equipment is billed, expressed as enum (string constant). EDI: SV506.'
+class EdiElementValue(EdiConverterModel):
+    'Value of an EDI element or a reference to another segment/object'
+    pass
 class EdiGenClaimRequest(EdiConverterModel):
     'Request for EDI generation API to generate 837 transaction with claims.'
     interchange_control: InterchangeControl | None = Field(default=None, description='Interchange control.')
@@ -484,6 +499,16 @@ class EdiGenPaymentRequest(EdiConverterModel):
     'Transaction.'
     payments: list[Payment] = Field(default_factory=list, description='List of payments.')
     'List of payments.'
+class EdiSegment(EdiConverterModel):
+    'Segment hierarchy'
+    object_type: str | None = Field(default=None, description="Type of this object, always set to 'SEGMENT'. This value is only set for top-level segments.")
+    "Type of this object, always set to 'SEGMENT'. This value is only set for top-level segments."
+    segment_id: str | None = Field(default=None, description='X12 EDI segment ID, such as ST, BHT, AMT, NM1')
+    'X12 EDI segment ID, such as ST, BHT, AMT, NM1'
+    loop_id: str | None = Field(default=None, description='X12 EDI loop id/number, such as 2000, 2100, 2110')
+    'X12 EDI loop id/number, such as 2000, 2100, 2110'
+    additional_properties: EdiElementValue | None = Field(default=None, description='additionalProperties.')
+    'additionalProperties.'
 class ErrorInfo(EdiConverterModel):
     'OpenAPI schema for ErrorInfo.'
     object_type: ObjectType | None = Field(default=None, description='Type of error, could be ERROR or WARNING.')
@@ -628,6 +653,8 @@ class InstClaim(EdiConverterModel):
     'Unique payment identifier assigned by the converter.'
     object_type: ObjectType | None = Field(default=None, description="Type of this object, set to 'CLAIM'.")
     "Type of this object, set to 'CLAIM'."
+    transaction_id: str | None = Field(default=None, description="ID of the parent transaction. Populated only if the transaction is converted into a top-level object ('transactionTopLevel=true').")
+    "ID of the parent transaction. Populated only if the transaction is converted into a top-level object ('transactionTopLevel=true')."
     patient_control_number: str | None = Field(default=None, description='Identifier used to track a claim from creation by the health care provider through payment. EDI: CLM01.')
     'Identifier used to track a claim from creation by the health care provider through payment. EDI: CLM01.'
     charge_amount: float | None = Field(default=None, description='Charge amount. EDI: CLM02.')
@@ -1000,6 +1027,8 @@ class InterchangeControl(EdiConverterModel):
     'Interchange usage indicator. EDI: ISA15.'
     component_element_separator: str | None = Field(default=None, description='Component element separator. EDI: ISA16.')
     'Component element separator. EDI: ISA16.'
+    file_info: FileInfo | None = Field(default=None, description='File info.')
+    'File info.'
 class LanguageInfo(EdiConverterModel):
     'Segment: LUI.'
     code_qualifier: str | None = Field(default=None, description='Code qualifier. EDI: LUI01.')
@@ -1010,6 +1039,20 @@ class LanguageInfo(EdiConverterModel):
     'Language description. EDI: LUI03.'
     language_use_indicator: str | None = Field(default=None, description='Language use indicator. EDI: LUI04.')
     'Language use indicator. EDI: LUI04.'
+class LicenseInfo(EdiConverterModel):
+    'OpenAPI schema for LicenseInfo.'
+    expiration: dt.date | None = Field(default=None, description='expiration.')
+    'expiration.'
+    entitlements: list[str] = Field(default_factory=list, description='entitlements.')
+    'entitlements.'
+    is_signature_valid: bool | None = Field(default=None, description='isSignatureValid.')
+    'isSignatureValid.'
+    license_file: str | None = Field(default=None, description='licenseFile.')
+    'licenseFile.'
+    license_key: str | None = Field(default=None, description='licenseKey.')
+    'licenseKey.'
+    expired: bool | None = Field(default=None, description='expired.')
+    'expired.'
 class Measurement(EdiConverterModel):
     "Measurement, such as a test result for dialysis service lines or a patient's height for DMERC. Segment: MEA."
     category_code: str | None = Field(default=None, description='Code identifying the broad category to which a measurement applies. EDI: MEA01.')
@@ -1026,6 +1069,8 @@ class MemberCoverage(EdiConverterModel):
     'Unique identifier assigned by the converter.'
     object_type: ObjectType | None = Field(default=None, description="Type of this object, always set to 'MEMBER_COVERAGE'.")
     "Type of this object, always set to 'MEMBER_COVERAGE'."
+    transaction_id: str | None = Field(default=None, description="ID of the parent transaction. Populated only if the transaction is converted into a top-level object ('transactionTopLevel=true').")
+    "ID of the parent transaction. Populated only if the transaction is converted into a top-level object ('transactionTopLevel=true')."
     file_name: str | None = Field(default=None, description='Converted X12 EDI file name.')
     'Converted X12 EDI file name.'
     file_effective_dates: list[Date] = Field(default_factory=list, description='File effective dates. EDI: DTP.')
@@ -1308,6 +1353,8 @@ class Payment(EdiConverterModel):
     'Unique payment identifier assigned by the converter.'
     object_type: ObjectType | None = Field(default=None, description="Type of this object, set to 'PAYMENT'.")
     "Type of this object, set to 'PAYMENT'."
+    transaction_id: str | None = Field(default=None, description="ID of the parent transaction. Populated only if the transaction is converted into a top-level object ('transactionTopLevel=true').")
+    "ID of the parent transaction. Populated only if the transaction is converted into a top-level object ('transactionTopLevel=true')."
     patient_control_number: str | None = Field(default=None, description='Identifier used to track a claim from creation by the health care provider through payment. EDI: CLP01.')
     'Identifier used to track a claim from creation by the health care provider through payment. EDI: CLP01.'
     charge_amount: float | None = Field(default=None, description='Charge amount. EDI: CLP03.')
@@ -1588,6 +1635,8 @@ class ProfClaim(EdiConverterModel):
     'Unique payment identifier assigned by the converter.'
     object_type: ObjectType | None = Field(default=None, description="Type of this object, set to 'CLAIM'.")
     "Type of this object, set to 'CLAIM'."
+    transaction_id: str | None = Field(default=None, description="ID of the parent transaction. Populated only if the transaction is converted into a top-level object ('transactionTopLevel=true').")
+    "ID of the parent transaction. Populated only if the transaction is converted into a top-level object ('transactionTopLevel=true')."
     patient_control_number: str | None = Field(default=None, description='Identifier used to track a claim from creation by the health care provider through payment. EDI: CLM01.')
     'Identifier used to track a claim from creation by the health care provider through payment. EDI: CLM01.'
     charge_amount: float | None = Field(default=None, description='Charge amount. EDI: CLM02.')
@@ -2052,6 +2101,8 @@ class ProviderAdjustment(EdiConverterModel):
     'Unique object identifier assigned by the converter.'
     object_type: ObjectType | None = Field(default=None, description="Type of this object, always set to 'PROVIDER_ADJUSTMENT'.")
     "Type of this object, always set to 'PROVIDER_ADJUSTMENT'."
+    transaction_id: str | None = Field(default=None, description="ID of the parent transaction. Populated only if the transaction is converted into a top-level object ('transactionTopLevel=true').")
+    "ID of the parent transaction. Populated only if the transaction is converted into a top-level object ('transactionTopLevel=true')."
     provider_identifier: str | None = Field(default=None, description='Provider identifier. EDI: PLB01.')
     'Provider identifier. EDI: PLB01.'
     fiscal_period_date: dt.date | None = Field(default=None, description='Fiscal period date. EDI: PLB02.')
@@ -2078,6 +2129,8 @@ class ProviderStatus(EdiConverterModel):
     'Unique payment identifier assigned by the converter.'
     object_type: ObjectType | None = Field(default=None, description="Type of this object, set to 'PROVIDER_STATUS' or 'RECEIVER_STATUS'.")
     "Type of this object, set to 'PROVIDER_STATUS' or 'RECEIVER_STATUS'."
+    transaction_id: str | None = Field(default=None, description="ID of the parent transaction. Populated only if the transaction is converted into a top-level object ('transactionTopLevel=true').")
+    "ID of the parent transaction. Populated only if the transaction is converted into a top-level object ('transactionTopLevel=true')."
     batch_status: BatchStatus | None = Field(default=None, description='Batch status.')
     'Batch status.'
     transaction: Transaction277 | None = Field(default=None, description='Parent EDI transaction for this object. EDI: ST.')
@@ -2100,6 +2153,8 @@ class ReceiverStatus(EdiConverterModel):
     'Unique payment identifier assigned by the converter.'
     object_type: ObjectType | None = Field(default=None, description="Type of this object, set to 'PROVIDER_STATUS' or 'RECEIVER_STATUS'.")
     "Type of this object, set to 'PROVIDER_STATUS' or 'RECEIVER_STATUS'."
+    transaction_id: str | None = Field(default=None, description="ID of the parent transaction. Populated only if the transaction is converted into a top-level object ('transactionTopLevel=true').")
+    "ID of the parent transaction. Populated only if the transaction is converted into a top-level object ('transactionTopLevel=true')."
     batch_status: BatchStatus | None = Field(default=None, description='Batch status.')
     'Batch status.'
     transaction: Transaction277 | None = Field(default=None, description='Parent EDI transaction for this object. EDI: ST.')
@@ -2252,6 +2307,8 @@ class Transaction277(EdiConverterModel):
     'OpenAPI schema for Transaction277.'
     object_type: ObjectType | None = Field(default=None, description="Type of this object, always set to 'TRANSACTION' when the transaction is a top-level object.")
     "Type of this object, always set to 'TRANSACTION' when the transaction is a top-level object."
+    functional_group_id: str | None = Field(default=None, description="ID of the functional group (GS) for this transaction. Populated only if the conversion of control segments is enabled ('convertControlSegments=true').")
+    "ID of the functional group (GS) for this transaction. Populated only if the conversion of control segments is enabled ('convertControlSegments=true')."
     control_number: str | None = Field(default=None, description='Control number. EDI: ST02.')
     'Control number. EDI: ST02.'
     transaction_type: TransactionType | None = Field(default=None, description='Transaction type translated to string constant, PROF for 837P, INST for 837I, etc. Required in order for EDI generator to populate defaults. EDI: ST01, ST03.')
@@ -2284,6 +2341,8 @@ class Transaction834(EdiConverterModel):
     'OpenAPI schema for Transaction834.'
     object_type: ObjectType | None = Field(default=None, description="Type of this object, always set to 'TRANSACTION' when the transaction is a top-level object.")
     "Type of this object, always set to 'TRANSACTION' when the transaction is a top-level object."
+    functional_group_id: str | None = Field(default=None, description="ID of the functional group (GS) for this transaction. Populated only if the conversion of control segments is enabled ('convertControlSegments=true').")
+    "ID of the functional group (GS) for this transaction. Populated only if the conversion of control segments is enabled ('convertControlSegments=true')."
     control_number: str | None = Field(default=None, description='Control number. EDI: ST02.')
     'Control number. EDI: ST02.'
     transaction_type: TransactionType | None = Field(default=None, description='Transaction type translated to string constant, PROF for 837P, INST for 837I, etc. Required in order for EDI generator to populate defaults. EDI: ST01, ST03.')
@@ -2314,6 +2373,8 @@ class Transaction835(EdiConverterModel):
     'OpenAPI schema for Transaction835.'
     object_type: ObjectType | None = Field(default=None, description="Type of this object, always set to 'TRANSACTION' when the transaction is a top-level object.")
     "Type of this object, always set to 'TRANSACTION' when the transaction is a top-level object."
+    functional_group_id: str | None = Field(default=None, description="ID of the functional group (GS) for this transaction. Populated only if the conversion of control segments is enabled ('convertControlSegments=true').")
+    "ID of the functional group (GS) for this transaction. Populated only if the conversion of control segments is enabled ('convertControlSegments=true')."
     control_number: str | None = Field(default=None, description='Control number. EDI: ST02.')
     'Control number. EDI: ST02.'
     transaction_type: TransactionType | None = Field(default=None, description='Transaction type translated to string constant, PROF for 837P, INST for 837I, etc. Required in order for EDI generator to populate defaults. EDI: ST01, ST03.')
@@ -2366,6 +2427,8 @@ class Transaction837(EdiConverterModel):
     'OpenAPI schema for Transaction837.'
     object_type: ObjectType | None = Field(default=None, description="Type of this object, always set to 'TRANSACTION' when the transaction is a top-level object.")
     "Type of this object, always set to 'TRANSACTION' when the transaction is a top-level object."
+    functional_group_id: str | None = Field(default=None, description="ID of the functional group (GS) for this transaction. Populated only if the conversion of control segments is enabled ('convertControlSegments=true').")
+    "ID of the functional group (GS) for this transaction. Populated only if the conversion of control segments is enabled ('convertControlSegments=true')."
     control_number: str | None = Field(default=None, description='Control number. EDI: ST02.')
     'Control number. EDI: ST02.'
     transaction_type: TransactionType | None = Field(default=None, description='Transaction type translated to string constant, PROF for 837P, INST for 837I, etc. Required in order for EDI generator to populate defaults. EDI: ST01, ST03.')
@@ -2502,6 +2565,7 @@ Adjudication.model_rebuild()
 Adjustment.model_rebuild()
 AmbulanceTransportInfo.model_rebuild()
 Amount.model_rebuild()
+AppInfo.model_rebuild()
 Attachment.model_rebuild()
 AwsInOutKey.model_rebuild()
 AwsRequest.model_rebuild()
@@ -2522,8 +2586,10 @@ DentLine.model_rebuild()
 Disability.model_rebuild()
 DmeCertification.model_rebuild()
 DmeService.model_rebuild()
+EdiElementValue.model_rebuild()
 EdiGenClaimRequest.model_rebuild()
 EdiGenPaymentRequest.model_rebuild()
+EdiSegment.model_rebuild()
 ErrorInfo.model_rebuild()
 FileInfo.model_rebuild()
 FormQuestionResponse.model_rebuild()
@@ -2539,6 +2605,7 @@ InstLine.model_rebuild()
 InstLineCsv.model_rebuild()
 InterchangeControl.model_rebuild()
 LanguageInfo.model_rebuild()
+LicenseInfo.model_rebuild()
 Measurement.model_rebuild()
 MemberCoverage.model_rebuild()
 MemberCoverageCsv.model_rebuild()
@@ -2631,6 +2698,7 @@ __all__ = [
     'Adjustment',
     'AmbulanceTransportInfo',
     'Amount',
+    'AppInfo',
     'Attachment',
     'AwsInOutKey',
     'AwsRequest',
@@ -2651,8 +2719,10 @@ __all__ = [
     'Disability',
     'DmeCertification',
     'DmeService',
+    'EdiElementValue',
     'EdiGenClaimRequest',
     'EdiGenPaymentRequest',
+    'EdiSegment',
     'ErrorInfo',
     'FileInfo',
     'FormQuestionResponse',
@@ -2668,6 +2738,7 @@ __all__ = [
     'InstLineCsv',
     'InterchangeControl',
     'LanguageInfo',
+    'LicenseInfo',
     'Measurement',
     'MemberCoverage',
     'MemberCoverageCsv',

@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6a32cb6397613a0e49908b4d",
+  "id" : "6a41a47da5f0afda93bdad45",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26462967",
   "chargeAmount" : 100.00,
@@ -177,7 +177,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a32cb6397613a0e49908adc",
+    "id" : "6a41a47da5f0afda93bdacd4",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -191,8 +191,7 @@
     "fileInfo" : {
       "name" : "multi-tran.dat",
       "url" : "file:/edi-samples/edi_files/837/multi-tran.dat",
-      "lastModifiedDateTime" : "2023-12-03T17:43:58.366-05:00",
-      "fileType" : "EDI"
+      "lastModifiedDateTime" : "2023-12-03T17:43:58.366-05:00"
     },
     "sender" : {
       "entityRole" : "SUBMITTER",
@@ -223,7 +222,7 @@
   }
 }
 , {
-  "id" : "6a32cb6397613a0e49908b4e",
+  "id" : "6a41a47da5f0afda93bdad46",
   "objectType" : "CLAIM",
   "patientControlNumber" : "125WILL",
   "chargeAmount" : 145.50,
@@ -332,7 +331,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a32cb6397613a0e49908b09",
+    "id" : "6a41a47da5f0afda93bdad01",
     "controlNumber" : "3701",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -346,8 +345,7 @@
     "fileInfo" : {
       "name" : "multi-tran.dat",
       "url" : "file:/edi-samples/edi_files/837/multi-tran.dat",
-      "lastModifiedDateTime" : "2023-12-03T17:43:58.366-05:00",
-      "fileType" : "EDI"
+      "lastModifiedDateTime" : "2023-12-03T17:43:58.366-05:00"
     },
     "sender" : {
       "entityRole" : "SUBMITTER",
@@ -375,7 +373,7 @@
   }
 }
 , {
-  "id" : "6a32cb6397613a0e49908b4f",
+  "id" : "6a41a47da5f0afda93bdad47",
   "objectType" : "CLAIM",
   "patientControlNumber" : "153829140",
   "chargeAmount" : 827.00,
@@ -539,7 +537,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a32cb6397613a0e49908b2a",
+    "id" : "6a41a47da5f0afda93bdad22",
     "controlNumber" : "0001",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -553,8 +551,7 @@
     "fileInfo" : {
       "name" : "multi-tran.dat",
       "url" : "file:/edi-samples/edi_files/837/multi-tran.dat",
-      "lastModifiedDateTime" : "2023-12-03T17:43:58.366-05:00",
-      "fileType" : "EDI"
+      "lastModifiedDateTime" : "2023-12-03T17:43:58.366-05:00"
     },
     "sender" : {
       "entityRole" : "SUBMITTER",

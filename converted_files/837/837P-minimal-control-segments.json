@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6a32cb6097613a0e499046a4",
+  "id" : "6a41a47aa5f0afda93bd7952",
   "objectType" : "INTERCHANGE_CONTROL",
   "elementSeparator" : "*",
   "segmentTerminator" : "~",
@@ -19,10 +19,15 @@
   "controlNumber" : 191511902,
   "acknowledgmentRequested" : "0",
   "interchangeUsageIndicator" : "P",
-  "componentElementSeparator" : ":"
+  "componentElementSeparator" : ":",
+  "fileInfo" : {
+    "name" : "837P-minimal.dat",
+    "url" : "file:/edi-samples/edi_files/837/837P-minimal.dat",
+    "lastModifiedDateTime" : "2026-06-27T09:24:51.834-04:00"
+  }
 }
 , {
-  "id" : "6a32cb6097613a0e499046a6",
+  "id" : "6a41a47aa5f0afda93bd7954",
   "objectType" : "FUNCTIONAL_GROUP",
   "functionalIdentifierCode" : "HP",
   "senderCode" : "ABCD",
@@ -34,8 +39,9 @@
   "version" : "005010X222A2"
 }
 , {
-  "id" : "6a32cb6097613a0e499046a8",
+  "id" : "6a41a47aa5f0afda93bd7956",
   "objectType" : "TRANSACTION",
+  "functionalGroupId" : "6a41a47aa5f0afda93bd7954",
   "controlNumber" : "0021",
   "transactionType" : "PROF",
   "hierarchicalStructureCode" : "0019",
@@ -49,8 +55,7 @@
   "fileInfo" : {
     "name" : "837P-minimal.dat",
     "url" : "file:/edi-samples/edi_files/837/837P-minimal.dat",
-    "lastModifiedDateTime" : "2026-05-05T11:21:04.936-04:00",
-    "fileType" : "EDI"
+    "lastModifiedDateTime" : "2026-06-27T09:24:51.834-04:00"
   },
   "sender" : {
     "entityRole" : "SUBMITTER",
@@ -80,8 +85,9 @@
   "creationDateTime" : "2006-10-15T10:23:00"
 }
 , {
-  "id" : "6a32cb6097613a0e499046c6",
+  "id" : "6a41a47aa5f0afda93bd7974",
   "objectType" : "CLAIM",
+  "transactionId" : "6a41a47aa5f0afda93bd7956",
   "patientControlNumber" : "26463774",
   "chargeAmount" : 100.00,
   "facilityCode" : {

@@ -1,0 +1,12 @@
+description: Value of an EDI element or a reference to another segment/object
+oneOf:
+  - type: string
+  - type: number
+  - type: integer
+  - type: array
+    items:
+      $ref: "./EdiElementValue.yaml"
+  - type: array
+    items:
+      $ref: "./EdiSegment.yaml"
+  - $ref: "./Code.yaml"

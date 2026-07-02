@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6a32cb6397613a0e49908ad9",
+  "id" : "6a41a47da5f0afda93bdacd1",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26463774",
   "chargeAmount" : 100.00,
@@ -30,7 +30,12 @@
       "lastNameOrOrgName" : "Smith",
       "firstName" : "Jane",
       "birthDate" : "1943-05-01",
-      "gender" : "FEMALE"
+      "gender" : "FEMALE",
+      "address" : {
+        "city" : "MAIMI",
+        "stateCode" : "FL",
+        "zipCode" : "33111"
+      }
     },
     "payer" : {
       "entityRole" : "PAYER",
@@ -38,6 +43,11 @@
       "identificationType" : "PAYOR_ID",
       "identifier" : "999996666",
       "lastNameOrOrgName" : "KEY INSURANCE COMPANY",
+      "address" : {
+        "city" : "MAIMI",
+        "stateCode" : "FL",
+        "zipCode" : "33111"
+      },
       "additionalIds" : [ {
         "qualifierCode" : "G2",
         "type" : "PROVIDER_COMMERCIAL_NUMBER",
@@ -161,7 +171,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a32cb6397613a0e49908aaf",
+    "id" : "6a41a47da5f0afda93bdaca1",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -175,8 +185,7 @@
     "fileInfo" : {
       "name" : "commercial.dat",
       "url" : "file:/edi-samples/edi_files/837/commercial.dat",
-      "lastModifiedDateTime" : "2026-05-05T11:21:04.937-04:00",
-      "fileType" : "EDI"
+      "lastModifiedDateTime" : "2026-06-27T09:24:51.835-04:00"
     },
     "sender" : {
       "entityRole" : "SUBMITTER",

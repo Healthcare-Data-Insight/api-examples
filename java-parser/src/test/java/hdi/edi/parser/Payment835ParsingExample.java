@@ -1,6 +1,7 @@
 package hdi.edi.parser;
 
 import hdi.edi.EdiTransaction;
+import hdi.edi.validation.ValidationIssue;
 import hdi.model.orgperson.OrgOrPerson;
 import hdi.model.payment.*;
 import lombok.extern.slf4j.Slf4j;
@@ -9,7 +10,6 @@ import org.junit.Test;
 import java.io.File;
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.util.List;
 
 @SuppressWarnings("NewClassNamingConvention")
 @Slf4j
@@ -29,33 +29,28 @@ public class Payment835ParsingExample implements ParsingExampleHelper {
         log.info("* Parsing EDI 835 file: {}", edi835File.getName());
         try (var parser = new EdiParser(edi835File).isValidationMode(true)) {
             EdiParsingResults parsingResults;
-            do {                // parse 100 payments or adjustments at a time
-                parsingResults = parser.parse(100);
-                // parse all transactions from this chunk
-                // Each payment/provider adjustment also has a reference to an EDI transaction
-                for (var ediTransaction : parsingResults.ediTransactions()) {
-                    parse835Transaction(ediTransaction);
-                }
-                // Each payment is an adjudicated claim (CLP segment)
-                List<Payment> payments = parsingResults.payments();
-                for (var payment : payments) {
-                    processPayment(payment);
-                }
-                // Provider-level adjustment is unrelated to a specific claim, could be a forwarding balance, accelerated payments, cost report settlements for a fiscal year, etc.
-                List<ProviderAdjustment> providerAdjustments = parsingResults.providerAdjustments();
-                for (var providerAdjustment : providerAdjustments) {
-                    processProviderAdjustment(providerAdjustment);
-                }
-                // Validation issues at the transaction level
-                var issues = parsingResults.validationIssues();
-                for (var issue : issues) {
-                    log.warn("Validation issue: {}", issue);
+            do {                // parse 20 payments or adjustments at a time
+                parsingResults = parser.parse(20);
+                // "rootObjs" contains all objects parsed from EDI in the order they appear in the EDI file
+                // process all transactions, claims, payments, and provider adjustments
+                for (var rootObj : parsingResults.rootObjs()) {
+                    if (rootObj instanceof EdiTransaction transaction && transaction.transactionType() == TransactionType.PAYMENT)
+                        process835Transaction(transaction);
+                        // Each payment is an adjudicated claim (CLP segment)
+                    else if (rootObj instanceof Payment payment)
+                        processPayment(payment);
+                        // Provider-level adjustment is unrelated to a specific claim, could be a forwarding balance, accelerated payments, cost report settlements for a fiscal year, etc.
+                    else if (rootObj instanceof ProviderAdjustment providerAdjustment)
+                        processProviderAdjustment(providerAdjustment);
+                        // Validation issues at the transaction level
+                    else if (rootObj instanceof ValidationIssue validationIssue)
+                        log.warn("Validation issue: {}", validationIssue);
                 }
             } while (!parsingResults.isDone());
         }
     }
 
-    private void parse835Transaction(EdiTransaction transaction) {
+    private void process835Transaction(EdiTransaction transaction) {
         // ACH or check. Can also be NON_PAYMENT in case of denials
         PaymentMethodType paymentMethodType = transaction.paymentMethodType();
         // Fields related to ACH or check payment
@@ -74,8 +69,8 @@ public class Payment835ParsingExample implements ParsingExampleHelper {
         BigDecimal paidAmount = payment.paymentAmount();
         AdjudicatedClaimStatus status = payment.claimStatus();
         OrgOrPerson payer = payment.payer();
-        log.info("Transaction ID: {} Payment: {} {} {} {} {} {}",
-                payment.transaction().id(), payer.identifier(), payerControlNumber, patientControlNumber, chargeAmount, paidAmount, status);
+        log.info("Payment: {} {} {} {} {} {}",
+                payer.identifier(), payerControlNumber, patientControlNumber, chargeAmount, paidAmount, status);
         OrgOrPerson payee = payment.payee();
         String payeeNpi = payee.identifier();
         assertNotNull(payerControlNumber, status, patientControlNumber, chargeAmount, paidAmount, patientControlNumber, payeeNpi, payer.identifier());
@@ -131,7 +126,7 @@ public class Payment835ParsingExample implements ParsingExampleHelper {
                 log.info("Line remark: {}", remark.code());
             }
         }
-        // Validation issues for this claim
+        // Validation issues for this payment
         var issues = payment.validationIssues();
         for (var issue : issues) {
             log.warn("Validation issue: {}", issue);
@@ -141,8 +136,8 @@ public class Payment835ParsingExample implements ParsingExampleHelper {
     private void processProviderAdjustment(ProviderAdjustment providerAdjustment) {
         String providerId = providerAdjustment.providerIdentifier();
         String payerId = providerAdjustment.payer().identifier();
-        log.info("Transaction ID: {} Provider-level adjustments for fiscal year {}; Provider {}; payer {}:",
-                providerAdjustment.transaction().id(), providerAdjustment.fiscalPeriodDate(), providerId, payerId);
+        log.info("Provider-level adjustments for fiscal year {}; Provider {}; payer {}:",
+                providerAdjustment.fiscalPeriodDate(), providerId, payerId);
         for (var adjustment : providerAdjustment.adjustments()) {
             log.info("Adjustment: {} {}", adjustment.reason().code(), adjustment.amount());
         }

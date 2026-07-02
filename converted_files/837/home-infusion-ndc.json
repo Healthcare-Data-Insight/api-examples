@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6a32cb6397613a0e49908cf2",
+  "id" : "6a41a47da5f0afda93bdaeea",
   "objectType" : "CLAIM",
   "patientControlNumber" : "CLMNO12345",
   "chargeAmount" : 2232.93,
@@ -306,7 +306,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a32cb6397613a0e49908cae",
+    "id" : "6a41a47da5f0afda93bdaea6",
     "controlNumber" : "0711",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -320,8 +320,7 @@
     "fileInfo" : {
       "name" : "home-infusion-ndc.dat",
       "url" : "file:/edi-samples/edi_files/837/home-infusion-ndc.dat",
-      "lastModifiedDateTime" : "2024-01-31T20:06:16.189-05:00",
-      "fileType" : "EDI"
+      "lastModifiedDateTime" : "2024-01-31T20:06:16.189-05:00"
     },
     "sender" : {
       "entityRole" : "SUBMITTER",

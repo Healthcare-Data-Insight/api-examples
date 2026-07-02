@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6a32cb5f97613a0e49904677",
+  "id" : "6a46b4715a4983f985c8f8fb",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26403774",
   "chargeAmount" : 150.00,
@@ -135,6 +135,9 @@
     "payerPaidAmount" : 59.19,
     "nonCoveredAmount" : 273.00,
     "remainingPatientLiabilityAmount" : 14.83,
+    "assignmentCertificationIndicator" : "Y",
+    "patientSignatureSourceCode" : "P",
+    "releaseOfInformationCode" : "Y",
     "payerPriorAuthorizationNumber" : "OtherPayerPriorAuthNum",
     "payerReferralNumber" : "OtherPayerReferralNum",
     "payerPredeterminationOfBenefitsIdentifier" : "OtherPayerPredeterminationOfBenefitsID",
@@ -171,6 +174,10 @@
         "qualifierCode" : "G2",
         "type" : "PROVIDER_COMMERCIAL_NUMBER",
         "identification" : "12345"
+      }, {
+        "qualifierCode" : "0B",
+        "type" : "STATE_LICENSE_NUMBER",
+        "identification" : "StateLicenseNumber"
       } ]
     }, {
       "entityRole" : "RENDERING",
@@ -198,7 +205,7 @@
       } ]
     }, {
       "entityRole" : "SERVICE_FACILITY",
-      "entityType" : "INDIVIDUAL",
+      "entityType" : "BUSINESS",
       "additionalIds" : [ {
         "qualifierCode" : "G2",
         "type" : "PROVIDER_COMMERCIAL_NUMBER",
@@ -218,7 +225,7 @@
   "assignmentParticipationCode" : "A",
   "assignmentCertificationIndicator" : "Y",
   "releaseOfInformationCode" : "I",
-  "serviceAuthorizationExceptionCode" : "serviceAuthorizationException",
+  "serviceAuthorizationExceptionCode" : "7",
   "referralNumber" : "Referral",
   "priorAuthorizationNumber" : "priorAuth",
   "originalReferenceNumber" : "payerClaimControlNumber",
@@ -600,7 +607,7 @@
     }
   } ],
   "transaction" : {
-    "id" : "6a32cb5f97613a0e499045e1",
+    "id" : "6a46b4715a4983f985c8f863",
     "controlNumber" : "3456",
     "transactionType" : "DENTAL",
     "hierarchicalStructureCode" : "0019",
@@ -614,8 +621,7 @@
     "fileInfo" : {
       "name" : "837D-all-fields.dat",
       "url" : "file:/edi-samples/edi_files/837/837D-all-fields.dat",
-      "lastModifiedDateTime" : "2025-05-06T18:45:51.852-04:00",
-      "fileType" : "EDI"
+      "lastModifiedDateTime" : "2026-07-02T12:39:02.592-04:00"
     },
     "sender" : {
       "entityRole" : "SUBMITTER",

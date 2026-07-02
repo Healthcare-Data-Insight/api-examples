@@ -1,0 +1,235 @@
+post:
+  tags:
+    - EDI-to-JSON
+  summary: Convert X12 EDI to JSON
+  description: |-
+    Converts X12 EDI input to JSON. EDI can be posted as text in the request body
+    or uploaded with a `multipart/form-data` request.
+    
+    The response is a JSON array or [NDJSON](https://github.com/ndjson/ndjson-spec) (newline-delimited JSON).
+    The output is streamed as the input is parsed.
+    
+    See the [data dictionary](https://datainsight.health/docs/schemas/) for more details about the response schema, including mappings to X12 EDI elements.
+
+  operationId: convert-edi-json
+  x-codeSamples:
+    - lang: 'cURL'
+      label: 'CLI'
+      source: |
+        # Post EDI as text
+        curl -X POST -H "Content-Type: text/plain" \
+        --data-binary  @../edi_files/837/837.edi  \ 
+        "$API_URL/edi/json?ndjson=true&ediFileName=837.edi"
+        
+        # Upload EDI files using a multipart/form-data request
+        curl -F files=@"../edi_files/837/837-1.dat" -F files=@"../edi_files/837/837-2.dat" \
+        "$API_URL/edi/json?ndjson=true"
+  security: [ ]
+  parameters:
+    - name: validate
+      in: query
+      description: |-
+        Perform full EDI validation. Validation messages are written to the response stream as `VALIDATION` objects.
+        See the [EDI validation documentation](https://datainsight.health/docs/ediconvert-api/edi-validation/) for more details.
+        
+        To change the default behavior, set the `EDI_VALIDATE` environment variable to `true`.
+      required: false
+      schema:
+        type: boolean
+        default: false
+
+    - name: ndjson
+      in: query
+      description: |-
+        Use JSON Lines, also known as [NDJSON](https://github.com/ndjson/ndjson-spec). There is no enclosing array; each JSON object is terminated by a newline. Use this option for large files or streaming. If this option is not set, the response can contain a large array of JSON objects.
+        
+        To change the default behavior, set the `EDI_NDJSON` environment variable to `true`.
+      required: false
+      schema:
+        type: boolean
+        default: false
+
+    - name: descriptions
+      in: query
+      description: |-
+        Provide descriptions for all codes (ICD, HCPCS, NDC, CARC/RARC, etc.). Descriptions can
+        increase the size of the response. You can globally suppress descriptions by setting the `codeset_enrichcodes` environment variable to `false`. In that case, this parameter has no effect.
+      required: false
+      schema:
+        type: boolean
+        default: true
+
+    - name: convertControlSegments
+      in: query
+      description: |-
+        Convert `ISA` and `GS` control segments to `INTERCHANGE_CONTROL` and `FUNCTIONAL_GROUP` objects.
+        The objects will appear at the beginning of the response.
+        If not set, control segments are ignored.
+        
+        To change the default behavior, set the `EDI_CONVERT_CONTROL_SEGMENTS` environment variable to `true`.
+      required: false
+      schema:
+        type: boolean
+        default: false
+
+    - name: transactionTopLevel
+      in: query
+      description: |-
+        Write EDI transactions to the root level of the response as `TRANSACTION` objects.
+        If not set, the EDI transaction is repeated in each claim, payment, or member object.
+        Setting this parameter to `true` will reduce the size of the response.
+        
+        To change the default behavior, set the `EDI_TRANSACTION_TOP_LEVEL` environment variable to `true`.
+      required: false
+      schema:
+        type: boolean
+        default: false
+
+    - name: convertToSegments
+      description: Convert to the EDI loop and segment tree instead of returning claims, payments, and other business objects.
+      in: query
+      required: false
+      schema:
+        type: string
+
+    - name: ediFileName
+      in: query
+      description: >-
+        The name of the EDI file submitted as text. This name will be propagated to the `transaction.fileInfo.name` field.
+        Ignored for `multipart/form-data` requests.
+      required: false
+      schema:
+        type: string
+
+
+
+    - name: chunkSize
+      description:
+        The number of EDI transactions, or claims/payments/members for 837/835/834, to parse and convert at once. This option determines the memory footprint and can be used for fine-tuning. A higher value improves performance but consumes more memory.
+      in: query
+      required: false
+      schema:
+        type: integer
+        format: int32
+        default: 50
+
+
+
+    - name: warningsInResponse
+      in: query
+      description: |-
+        Write EDI parsing warnings to the response stream as `warning` objects. If not set, warnings are only written to logs. See the [User Guide](https://datainsight.health/docs/ediconvert-api/user-guide/#error-handling) for more details.
+        
+        This parameter is deprecated as of 2.15 in favor of the `validate` parameter. When `validate` is set, validation warnings are always written to the response stream.
+      required: false
+      deprecated: true
+      schema:
+        type: boolean
+        default: false
+    - name: maxWarnings
+      in: query
+      description: |-
+        Maximum number of EDI validation issues per file before raising a `Too Many Warnings` error and stopping. 
+        
+        This parameter is deprecated as of 2.15; use the `validate` parameter to get all validation issues in the response.
+      required: false
+      deprecated: true
+      schema:
+        type: integer
+        default: 3000
+
+    - name: splitTran
+      in: query
+      description: |-
+        Do not parse the entire transaction. Instead, parse by claims (`CLM` or `CLP` segments, `837`/`835`) or members (`INS` segment, `834`). This is the default for `835`, `837`, and `834` transactions, which can be large. Ignored for all other transaction types. 
+        
+        As of `2.14.4`, the API server automatically detects the transaction type and sets this parameter to `true` for `837`/`835`/`834` and `false` for all other transactions.
+      deprecated: true
+      required: false
+      schema:
+        type: boolean
+        default: true
+
+
+
+  requestBody:
+    content:
+      multipart/form-data:
+        schema:
+          description: >-
+            List of files encoded as `multipart/form-data`. The name of the
+            parameter must be `files`. Each file name must be unique.
+          type: object
+          required:
+            - files
+          properties:
+            files:
+              type: array
+              items:
+                type: string
+                format: binary
+      text/plain:
+        schema:
+          description: >-
+            Text in X12 EDI format
+          type: string
+
+  responses:
+    '200':
+      description: |-
+        You can also find schemas in [table format with EDI mappings](https://datainsight.health/docs/schemas/).
+        
+        Returns a list of [claim (`837`)](https://datainsight.health/docs/schemas/837p/), [payment (`835`)](https://datainsight.health/docs/schemas/835/), [member coverage (`834`)](https://datainsight.health/docs/schemas/834/), and [status (`277`)](https://datainsight.health/docs/schemas/277ca/) objects. In `ndjson` mode, there is no enclosing array; each object ends with a newline.
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              oneOf:
+                - $ref: ../components/schemas/model/Payment.yaml
+                - $ref: "../components/schemas/model/ProviderAdjustment.yaml"
+                - $ref: ../components/schemas/model/ProfClaim.yaml
+                - $ref: ../components/schemas/model/InstClaim.yaml
+                - $ref: "../components/schemas/model/DentClaim.yaml"
+                - $ref: "../components/schemas/model/ClaimStatus.yaml"
+                - $ref: "../components/schemas/model/MemberCoverage.yaml"
+                - $ref: "../components/schemas/model/InterchangeControl.yaml"
+                - $ref: "../components/schemas/model/FunctionalGroup.yaml"
+                - $ref: "../components/schemas/model/ValidationIssue.yaml"
+                - $ref: "../components/schemas/model/EdiSegment.yaml"
+          #              discriminator:
+          #                propertyName: objectType
+          #                mapping:
+          #                  CLAIM: .../components/schemas/ProfClaim.yaml
+          #                  PAYMENT: ../components/schemas/Payment.yaml
+          examples:
+            output835:
+              summary: Response for 835
+              externalValue: "https://raw.githubusercontent.com/Healthcare-Data-Insight/api-examples/refs/heads/main/converted_files/835/835-all-fields.json"
+            output835Validations:
+              summary: Response for 835 with validation issues
+              externalValue: "https://raw.githubusercontent.com/Healthcare-Data-Insight/api-examples/refs/heads/release/2.15.0/converted_files/835/835-validation-issues.json"
+            output837P:
+              summary: Response for 837P
+              externalValue: "https://raw.githubusercontent.com/Healthcare-Data-Insight/api-examples/refs/heads/main/converted_files/837/837P-all-fields.json"
+            output837PValidations:
+              summary: Response for 837P with validation issues
+              externalValue: "https://raw.githubusercontent.com/Healthcare-Data-Insight/api-examples/refs/heads/release/2.15.0/converted_files/837/837P-validation-issues.json"
+            output837I:
+              summary: Response for 837I
+              externalValue: "https://raw.githubusercontent.com/Healthcare-Data-Insight/api-examples/refs/heads/main/converted_files/837/837I-all-fields.json"
+            output277:
+              summary: Response for 277CA
+              externalValue: "https://raw.githubusercontent.com/Healthcare-Data-Insight/api-examples/refs/heads/main/converted_files/277/277CA-all-fields.json"
+            output834:
+              summary: Response for 834
+              externalValue: "https://raw.githubusercontent.com/Healthcare-Data-Insight/api-examples/main/converted_files/834/834-all-fields.json"
+
+    '400':
+      description: EDI parsing error or invalid parameter. Because the response is streamed, you can receive a `200` response that contains a parsing error. Check for `objectType == "ERROR"` in your code. More details are available in the [User Guide](https://datainsight.health/docs/ediconvert-api/user-guide/#error-handling).
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/model/ErrorInfo.yaml
+          example:
+            $ref: ../components/examples/parsingError.json
