@@ -15,6 +15,7 @@ from edi_model.all_classes import (
     EdiGenPaymentRequest,
     ValidationIssue,
 )
+from edi_model.enums import ObjectType
 
 DEFAULT_BASE_URL = "http://localhost:5080/api"
 DEFAULT_API_KEY_ENV = "EDICONVERT_API_KEY"
@@ -439,6 +440,21 @@ class AboutClient:
 
     def get(self) -> AppInfo:
         return AppInfo.model_validate(self._client.get("/about").json())
+
+
+def handle_warning_error(obj: dict[str, Any]) -> bool | None:
+    object_type = ObjectType(obj["objectType"])
+    if object_type == ObjectType.ERROR:
+        raise EdiConverterError(f"Error parsing EDI; Error: {obj}")
+    if object_type == ObjectType.WARNING:
+        file_name = obj["fileName"]
+        message = obj["message"]
+        print(f"Encountered parsing issue with file {file_name}. Warning: {message}")
+        return True
+    if object_type == ObjectType.VALIDATION:
+        print(obj)
+        return True
+    return None
 
 
 def _base_url_already_points_to_api(base_url: str) -> bool:

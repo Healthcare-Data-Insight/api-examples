@@ -4,6 +4,7 @@ from .client import (
     EdiConverterClient,
     EdiConverterError,
     EdiGenerationValidationError,
+    handle_warning_error,
 )
 
 __all__ = [
@@ -12,4 +13,5 @@ __all__ = [
     "EdiConverterClient",
     "EdiConverterError",
     "EdiGenerationValidationError",
+    "handle_warning_error",
 ]

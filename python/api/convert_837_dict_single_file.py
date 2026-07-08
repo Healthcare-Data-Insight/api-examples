@@ -1,4 +1,5 @@
-import edi_converter
+import env
+from ediconvert_sdk import EdiConverterClient, handle_warning_error
 
 """
 This example does not use the object model, it relies on the raw JSON response and Python dictionaries.
@@ -18,12 +19,13 @@ edi_837_dir = '../../edi_files/837'
 # Convert a single file by posting its content
 file_to_convert = edi_837_dir + '/837P-all-fields.dat'
 print('** Converting ' + file_to_convert)
-response = edi_converter.convert_file(file_to_convert, False)
+client = EdiConverterClient(base_url=env.api_url)
+response = client.conversion.to_json_file(file_to_convert, ndjson=False, validate=True)
 # Serialize the response into an array of objects
 # Note: this requires large memory size for large files; consider a streaming parser instead
 claims = response.json()
 for claim in claims:
-    if edi_converter.handle_warning_error(claim):
+    if handle_warning_error(claim):
         continue
     pcn = claim['patientControlNumber']
     charge = claim['chargeAmount']

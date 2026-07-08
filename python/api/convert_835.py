@@ -1,10 +1,9 @@
 import json
 
 import env
-from edi_converter import handle_warning_error
 from edi_model.all_classes import Payment, Code, ProviderAdjustment
 from edi_model.enums import ObjectType
-from ediconvert_sdk import EdiConverterClient
+from ediconvert_sdk import EdiConverterClient, handle_warning_error
 
 """
 Converts 835 files using multipart request.

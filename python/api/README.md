@@ -14,7 +14,6 @@ The scripts are intentionally simple. They show how to:
 ## Project Layout
 
 - `src/ediconvert_sdk/`: reusable SDK client package for conversion, generation, validation, and application-info endpoints.
-- `edi_converter.py`: compatibility helper functions used by older examples.
 - `env.py`: local API base URL configuration.
 - `convert_*.py`: object model examples for converting or parsing EDI files.
 - `convert_*_dict.py`: raw JSON dictionary versions of selected conversion examples.
@@ -76,7 +75,7 @@ If you run a script from a different working directory, the sample file paths wi
 
 ## Object Model vs Raw JSON Dictionaries
 
-The main conversion examples use generated Pydantic classes from `edi_model/`.
+The main conversion examples use generated Pydantic classes from `src/edi_model/`.
 They still receive JSON from the API, but immediately validate it into typed objects such as `ProfClaim`, `InstClaim`, `Payment`, and `MemberCoverage`.
 
 Examples without a suffix use the object model:
@@ -85,7 +84,7 @@ Examples without a suffix use the object model:
 - `convert_837_single_file.py`
 - `convert_835.py`
 - `convert_834.py`
-- `generate_837p.py`
+- `generate_837p_edi.py`
 - `transform_837p.py`
 
 Some examples also have a raw JSON dictionary variant with a `_dict` suffix:
@@ -105,7 +104,7 @@ Use the object model examples first. Use the `_dict` examples only when you spec
 - `convert_837_single_file.py`: converts one 837 file and validates the response as a `ProfClaim` object.
 - `convert_835.py`: converts 835 files to NDJSON and validates claim payments and provider-level adjustments as object model classes.
 - `convert_834.py`: converts 834 enrollment files and validates member coverage objects.
-- `generate_837p.py`: builds an `EdiGenClaimRequest` with object model classes and generates 837P EDI.
+- `generate_837p_edi.py`: builds an `EdiGenClaimRequest` with object model classes and generates 837P EDI.
 - `transform_837p.py`: converts an existing 837P claim into an object model request and posts it back to the generator endpoint.
 
 These scripts use `/edi/json` and demonstrate:
@@ -190,7 +189,6 @@ python generate_837p_edi.py
 - `convert_835_csv_error.py` includes a hardcoded file path outside this project and is best treated as a reference/debug script.
 - `_dict` examples intentionally use raw Python dictionaries; the same examples without `_dict` are the preferred object model versions.
 - Some viewer scripts use fixed search parameters or IDs that may not match your local dataset.
-- `edi_converter.py` remains for backward compatibility. New code should prefer `EdiConverterClient`.
 
 ## Recommended Starting Points
 

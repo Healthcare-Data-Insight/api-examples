@@ -13,8 +13,8 @@ def _root_api_scripts() -> list[Path]:
     """
     Discover only the top-level Python scripts under python/api.
 
-    This intentionally ignores nested packages such as viewer/, edi_model/,
-    and playground/ by looking only one directory deep.
+    This intentionally ignores nested packages and folders such as viewer/,
+    src/, and playground/ by looking only one directory deep.
     """
     return sorted(
         path

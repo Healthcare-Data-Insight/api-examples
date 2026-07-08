@@ -1,9 +1,8 @@
 import json
 
 import env
-from edi_converter import handle_warning_error
 from edi_model.all_classes import Code, InstClaim, ProfClaim, Transaction837
-from ediconvert_sdk import EdiConverterClient
+from ediconvert_sdk import EdiConverterClient, handle_warning_error
 
 """
 Converts 837 files using multipart request.
