@@ -13,12 +13,12 @@ The scripts are intentionally simple. They show how to:
 
 ## Project Layout
 
-- `ediconvert_sdk/`: reusable SDK client package for conversion, generation, validation, and application-info endpoints.
+- `src/ediconvert_sdk/`: reusable SDK client package for conversion, generation, validation, and application-info endpoints.
 - `edi_converter.py`: compatibility helper functions used by older examples.
 - `env.py`: local API base URL configuration.
 - `convert_*.py`: object model examples for converting or parsing EDI files.
 - `convert_*_dict.py`: raw JSON dictionary versions of selected conversion examples.
-- `edi_model/`: generated Pydantic object model classes used by the model-based examples.
+- `src/edi_model/`: generated Pydantic object model classes used by the model-based examples.
 - `out/`: output directory used by CSV streaming examples.
 
 ## Prerequisites
