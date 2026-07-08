@@ -10,6 +10,7 @@ The scripts are intentionally simple. They show how to:
 - inspect parsed claims, payments, eligibility, claim status, and enrollment data
 - work with generated Python object model classes instead of raw JSON dictionaries
 - generate EDI from object model instances
+- validate EDI and inspect both structured JSON and text validation reports
 
 ## Project Layout
 
@@ -105,15 +106,17 @@ Use the object model examples first. Use the `_dict` examples only when you spec
 - `convert_835.py`: converts 835 files to NDJSON and validates claim payments and provider-level adjustments as object model classes.
 - `convert_834.py`: converts 834 enrollment files and validates member coverage objects.
 - `generate_837p_edi.py`: builds an `EdiGenClaimRequest` with object model classes and generates 837P EDI.
+- `validate_835.py`: validates an 835 file with known issues and prints both JSON-model and text reports.
 - `transform_837p.py`: converts an existing 837P claim into an object model request and posts it back to the generator endpoint.
 
-These scripts use `/edi/json` and demonstrate:
+These scripts use `/edi/json`, `/edi/gen/837`, `/edi/gen/835`, `/edi/validate`, and `/edi/validate/text` endpoints and demonstrate:
 
 - multipart upload for multiple files
 - direct streaming of a single file
 - NDJSON processing with `response.iter_lines()`
 - object model validation with generated Pydantic classes
 - parser warning/error handling via `objectType`
+- validation issue handling through `ValidationIssue` objects and text output
 
 ### Raw JSON Dictionary Conversion
 
@@ -174,6 +177,13 @@ Run a CSV example:
 ```bash
 python convert_835_csv.py
 ```
+
+Validate an 835 file with known issues:
+
+```bash
+python validate_835.py
+```
+
 Generate 837P EDI from object model classes:
 
 ```bash
