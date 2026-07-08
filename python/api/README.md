@@ -180,6 +180,12 @@ Generate 837P EDI from object model classes:
 python generate_837p_edi.py
 ```
 
+Build, install, and test the SDK locally:
+
+```bash
+./build_and_test_sdk.sh
+```
+
 ## Notes and Caveats
 
 - `env.py` is a hardcoded local configuration file for examples. The SDK client also accepts a `base_url` argument and the `EDICONVERT_BASE_URL` environment variable.
