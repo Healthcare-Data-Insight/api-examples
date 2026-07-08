@@ -1,8 +1,10 @@
 import json
 
-import edi_converter
+import env
+from edi_converter import handle_warning_error
 from edi_model.all_classes import Payment, Code, ProviderAdjustment
 from edi_model.enums import ObjectType
+from ediconvert_sdk import EdiConverterClient
 
 """
 Converts 835 files using multipart request.
@@ -22,13 +24,14 @@ files_to_convert = [edi_835_dir + '/' + file_name for file_name in file_names_to
 print('** Converting files:')
 print(*files_to_convert)
 # We always convert with full validation, so we can get validation issues
-response = edi_converter.convert_files_with_multipart(files_to_convert, is_ndjson=True)
+client = EdiConverterClient(base_url=env.api_url)
+response = client.conversion.to_json_files(files_to_convert, ndjson=True, validate=True)
 cur_transaction_id = None
 for response_line_str in response.iter_lines():
     # each line is an object
     # Object types: PAYMENT (paid claim), PROVIDER_ADJUSTMENT (provider-level adjustment), VALIDATION (EDI Validation issue)
     obj = json.loads(response_line_str)
-    if edi_converter.handle_warning_error(obj):
+    if handle_warning_error(obj):
         continue
     object_type = ObjectType(obj['objectType'])
     if object_type == ObjectType.PAYMENT:

@@ -1,7 +1,9 @@
 import json
 
-import edi_converter
+import env
+from edi_converter import handle_warning_error
 from edi_model.all_classes import Code, InstClaim, ProfClaim, Transaction837
+from ediconvert_sdk import EdiConverterClient
 
 """
 Converts 837 files using multipart request.
@@ -23,11 +25,12 @@ file_names_to_convert = ['837P-all-fields.dat', '837I-all-fields.dat', '837P-val
 files_to_convert = [edi_837_dir + '/' + file_name for file_name in file_names_to_convert]
 print('** Converting files:')
 print(*files_to_convert)
-response = edi_converter.convert_files_with_multipart(files_to_convert, True)
+client = EdiConverterClient(base_url=env.api_url)
+response = client.conversion.to_json_files(files_to_convert, ndjson=True, validate=True)
 for claim_str in response.iter_lines():
     # each line is a claim object or could be an error/warning
     claim_json = json.loads(claim_str)
-    if edi_converter.handle_warning_error(claim_json):
+    if handle_warning_error(claim_json):
         continue
     # You can skip this if you know your claim type
     transaction_json = claim_json.get('transaction', {})

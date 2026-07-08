@@ -13,7 +13,8 @@ The scripts are intentionally simple. They show how to:
 
 ## Project Layout
 
-- `edi_converter.py`: shared helper functions for posting files to `/edi/json` and handling `ERROR` / `WARNING` objects.
+- `ediconvert_sdk/`: reusable SDK client package for conversion, generation, validation, and application-info endpoints.
+- `edi_converter.py`: compatibility helper functions used by older examples.
 - `env.py`: local API base URL configuration.
 - `convert_*.py`: object model examples for converting or parsing EDI files.
 - `convert_*_dict.py`: raw JSON dictionary versions of selected conversion examples.
@@ -52,6 +53,16 @@ api_url = 'http://localhost:5080/api'
 ```
 
 Update that value if your API is running elsewhere.
+
+New code should create an SDK client explicitly:
+
+```python
+from ediconvert_sdk import EdiConverterClient
+
+client = EdiConverterClient(base_url="http://localhost:5080/api")
+response = client.conversion.to_json_files(["../../edi_files/837/837P-all-fields.dat"], ndjson=True)
+edi_text = client.generation.generate_835(payment_request)
+```
 
 ## Important Runtime Assumptions
 
@@ -167,18 +178,19 @@ python convert_835_csv.py
 Generate 837P EDI from object model classes:
 
 ```bash
-python generate_837p.py
+python generate_837p_edi.py
 ```
 
 ## Notes and Caveats
 
-- `env.py` is a hardcoded local configuration file, not an environment-variable based setup.
+- `env.py` is a hardcoded local configuration file for examples. The SDK client also accepts a `base_url` argument and the `EDICONVERT_BASE_URL` environment variable.
+- Public API calls can pass `api_key` to `EdiConverterClient` or set the `EDICONVERT_API_KEY` environment variable. Local API calls do not require an API key.
 - Several scripts print results directly and are meant as examples, not reusable library code.
 - `parse_in_mem_837.py` and `parse_edi_277_from_users.py` use the deprecated `/edi/parse` endpoint.
 - `convert_835_csv_error.py` includes a hardcoded file path outside this project and is best treated as a reference/debug script.
 - `_dict` examples intentionally use raw Python dictionaries; the same examples without `_dict` are the preferred object model versions.
 - Some viewer scripts use fixed search parameters or IDs that may not match your local dataset.
-- Multipart helpers in `edi_converter.py` open files directly and keep the code minimal; they are optimized for readability, not packaging polish.
+- `edi_converter.py` remains for backward compatibility. New code should prefer `EdiConverterClient`.
 
 ## Recommended Starting Points
 
@@ -186,4 +198,4 @@ If you are new to this folder, start with:
 
 1. `convert_837.py` for streamed NDJSON claim conversion with object model classes.
 2. `convert_835_csv.py` for CSV export and streaming-to-disk patterns.
-3. `generate_837p.py` if you want to generate 837P EDI from object model classes.
+3. `generate_837p_edi.py` if you want to generate 837P EDI from object model classes.
