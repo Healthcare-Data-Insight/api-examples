@@ -1,6 +1,6 @@
 # Python API Examples
 
-This directory contains Python examples for working with the EDI Converter API and the Viewer-style search/upload endpoints exposed by a local API instance.
+This directory contains Python examples for working with the EDI Converter API through the published `ediconvert-sdk` package, plus Viewer-style search/upload examples for a local API instance.
 
 The scripts are intentionally simple. They show how to:
 
@@ -21,27 +21,26 @@ The scripts are intentionally simple. They show how to:
 - `src/edi_model/`: generated Pydantic object model classes used by the model-based examples.
 - `out/`: output directory used by CSV streaming examples.
 
-## Prerequisites
+## Installation
 
-These examples assume:
+Install the SDK from PyPI:
+
+```bash
+python -m pip install ediconvert-sdk
+```
+
+That is the only Python package required for the SDK-based conversion, generation, and validation examples. The SDK includes the `edi_model` object model package and automatically installs its runtime dependencies, including `requests` and `pydantic`.
+
+The examples also assume:
 
 - Python 3.10+.
 - A local EDI Converter API is running and reachable at `http://localhost:5080/api`.
 - Sample EDI files from this repository are available under `../../edi_files` relative to this folder.
 
-The code imports these packages:
-
-- `requests`
-- `pandas`
-- `requests-toolbelt`
-- `pydantic`
-
-Create a virtual environment and install them:
+The optional `convert_835_csv.py` example also uses `pandas` and `requests-toolbelt`. Install them only if you want to run that example:
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install requests pandas requests-toolbelt pydantic
+python -m pip install pandas requests-toolbelt
 ```
 
 ## Configuration
@@ -54,7 +53,7 @@ api_url = 'http://localhost:5080/api'
 
 Update that value if your API is running elsewhere.
 
-New code should create an SDK client explicitly:
+Create an SDK client with the URL of your EDI Converter API:
 
 ```python
 from ediconvert_sdk import EdiConverterClient
@@ -76,7 +75,7 @@ If you run a script from a different working directory, the sample file paths wi
 
 ## Object Model vs Raw JSON Dictionaries
 
-The main conversion examples use generated Pydantic classes from `src/edi_model/`.
+The main conversion examples use generated Pydantic classes from the `edi_model` package bundled with the SDK.
 They still receive JSON from the API, but immediately validate it into typed objects such as `ProfClaim`, `InstClaim`, `Payment`, and `MemberCoverage`.
 
 Examples without a suffix use the object model:
@@ -175,6 +174,7 @@ python convert_834.py
 Run a CSV example:
 
 ```bash
+python -m pip install pandas requests-toolbelt
 python convert_835_csv.py
 ```
 
