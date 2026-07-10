@@ -30,8 +30,8 @@ resource "aws_lambda_function" "edi_converter_function_manual" {
 
   # The code is deployed from this public bucket
   s3_bucket     = "ediconverter"
-  s3_key        = "ediconvert-lambda-2.15.0.zip"
-
+  s3_key        = "ediconvert-lambda-2.15.1.zip"
+  # Set the Lambda’s memory to at least 2048 MB if you expect to process large EDI files. Memory size determines CPU allocation.
   memory_size = "512"
   package_type = "Zip"
   role         = aws_iam_role.lambda_exec_role.arn
