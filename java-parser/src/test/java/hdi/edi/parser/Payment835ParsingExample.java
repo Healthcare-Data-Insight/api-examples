@@ -1,6 +1,9 @@
 package hdi.edi.parser;
 
 import hdi.edi.EdiTransaction;
+import hdi.edi.validation.ValidationIssue;
+import hdi.model.control.FunctionalGroup;
+import hdi.model.control.InterchangeControl;
 import hdi.model.orgperson.OrgOrPerson;
 import hdi.model.payment.*;
 import lombok.extern.slf4j.Slf4j;
@@ -9,6 +12,7 @@ import org.junit.Test;
 import java.io.File;
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.Collection;
 
 @SuppressWarnings("NewClassNamingConvention")
 @Slf4j
@@ -43,6 +47,19 @@ public class Payment835ParsingExample implements ParsingExampleHelper {
                     // Provider-level adjustment (PLB segment) is unrelated to a specific claim, could be a forwarding balance, accelerated payments, cost report settlements for a fiscal year, etc.
                     else if (rootObj instanceof ProviderAdjustment providerAdjustment) {
                         processProviderAdjustment(providerAdjustment);
+                    }
+                    else if (rootObj instanceof InterchangeControl interchangeControl) {
+                        log.info("ISA segment info:\n{}", interchangeControl);
+                    }
+                    else if (rootObj instanceof FunctionalGroup functionalGroup) {
+                        log.info("GS segment info:\n{}", functionalGroup);
+                    }
+                    // validation issue at the transaction level
+                    else if (rootObj instanceof ValidationIssue validationIssue) {
+                        // validation issues are logged by the parser; here you can do additional processing
+                    }
+                    else {
+                        throw new IllegalStateException("Unexpected object for 835 transaction: " + rootObj);
                     }
                 }
             } while (!parsingResults.isDone());
@@ -126,7 +143,7 @@ public class Payment835ParsingExample implements ParsingExampleHelper {
             }
         }
         // Validation issues for this payment
-        logValidationIssues(payment.validationIssues());
+        processValidationIssues(payment, payment.validationIssues());
     }
 
     private void processProviderAdjustment(ProviderAdjustment providerAdjustment) {
@@ -137,5 +154,10 @@ public class Payment835ParsingExample implements ParsingExampleHelper {
         for (var adjustment : providerAdjustment.adjustments()) {
             log.info("Adjustment: {} {}", adjustment.reason().code(), adjustment.amount());
         }
+    }
+
+    // All validations are logged automatically, here you can do additional processing
+    private void processValidationIssues(Payment payment, Collection<ValidationIssue> issues) {
+        // your logic here
     }
 }

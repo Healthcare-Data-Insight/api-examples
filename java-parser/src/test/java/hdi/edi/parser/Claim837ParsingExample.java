@@ -1,9 +1,12 @@
 package hdi.edi.parser;
 
+import hdi.edi.EdiTransaction;
+import hdi.edi.validation.ValidationIssue;
 import hdi.model.PlaceOfServiceType;
 import hdi.model.claim.Claim;
 import hdi.model.control.FunctionalGroup;
 import hdi.model.control.InterchangeControl;
+import hdi.model.enumtype.ClaimOrEncounterIdentifierType;
 import hdi.model.enumtype.UnitType;
 import hdi.model.orgperson.EntityRole;
 import hdi.model.orgperson.EntityType;
@@ -17,6 +20,8 @@ import org.junit.Test;
 import java.io.File;
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.Collection;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -55,13 +60,25 @@ public class Claim837ParsingExample implements ParsingExampleHelper {
                     if (rootObj instanceof Claim claim) {
                         processClaim(claim);
                     }
+                    else if (rootObj instanceof EdiTransaction transaction && transaction.transactionType().isClaim()) {
+                        process837Transaction(transaction);
+                    }
                     else if (rootObj instanceof InterchangeControl interchangeControl) {
                         log.info("ISA segment info:\n{}", interchangeControl);
                     }
                     else if (rootObj instanceof FunctionalGroup functionalGroup) {
                         log.info("GS segment info:\n{}", functionalGroup);
                     }
+                    // validation issue at the transaction level
+                    else if (rootObj instanceof ValidationIssue validationIssue) {
+                        // validation issues are logged by the parser; here you can do additional processing
+                    }
+                    else {
+                        throw new IllegalStateException("Unexpected object for 837 transaction: " + rootObj);
+                    }
                 }
+                // Validation issues at the transaction level
+                processValidationIssues(parsingResults.validationIssues());
             } while (!parsingResults.isDone());
         }
     }
@@ -123,11 +140,21 @@ public class Claim837ParsingExample implements ParsingExampleHelper {
 
             assertNotNull(procedureCode, serviceDateFrom, unitCount, unitType, lineChargeAmount);
         }
-        // Validation issues for this claim
-        var issues = claim.validationIssues();
-        for (var issue : issues) {
-            log.warn("Validation issue: {}", issue);
-        }
+        // Validation issues at the claim level
+        processValidationIssues(claim.validationIssues());
+    }
+
+    private void process837Transaction(EdiTransaction transaction) {
+        String controlNumber = transaction.controlNumber();
+        LocalDateTime transactionDateTime = transaction.getCreationDateTime();
+        ClaimOrEncounterIdentifierType claimOrEncounterIdentifierType = transaction.claimOrEncounterIdentifierType();
+        log.info("Transaction: {} {} {}", controlNumber, transactionDateTime, claimOrEncounterIdentifierType);
+    }
+
+
+    // All validations are logged automatically, here you can do additional processing
+    private void processValidationIssues(Collection<ValidationIssue> issues) {
+        // your logic here
     }
 
     /**
@@ -160,10 +187,4 @@ public class Claim837ParsingExample implements ParsingExampleHelper {
         assertThat(genderType).isEqualTo(GenderType.MALE);
     }
 
-    @Test
-    public void printParserVersionAndLicenseInfo() {
-        System.out.println(EdiParser.getVersion());
-        var licenseInfo = EdiParser.getLicenseInfo();
-        System.out.println(licenseInfo);
-    }
 }

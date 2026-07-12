@@ -17,7 +17,8 @@ import org.junit.runners.Suite;
         SegmentParsingExample.class,
         Edi810ParsingExample.class,
         Generate837EdiExample.class,
-        Generate835EdiExample.class
+        Generate835EdiExample.class,
+        VersionAndLicenseInfoExample.class
 })
 
 public class TestSuite {
