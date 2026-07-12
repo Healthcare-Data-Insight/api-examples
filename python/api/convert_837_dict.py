@@ -1,6 +1,7 @@
 import json
 
-import edi_converter
+import env
+from ediconvert_sdk import EdiConverterClient, handle_warning_error
 
 """
 This example does not use the object model, it relies on the raw JSON response and Python dictionaries.
@@ -26,11 +27,12 @@ file_names_to_convert = ['837P-all-fields.dat', '837I-all-fields.dat']
 files_to_convert = [edi_837_dir + '/' + file_name for file_name in file_names_to_convert]
 print('** Converting files:')
 print(*files_to_convert)
-response = edi_converter.convert_files_with_multipart(files_to_convert, True)
+client = EdiConverterClient(base_url=env.api_url)
+response = client.conversion.to_json_files(files_to_convert, ndjson=True, validate=True)
 for claim_str in response.iter_lines():
     # each line is a claim object or could be an error/warning
     claim = json.loads(claim_str)
-    if edi_converter.handle_warning_error(claim):
+    if handle_warning_error(claim):
         continue
     # is this an institutional claim?
     is_inst = claim['transaction']['transactionType'] == 'INST'

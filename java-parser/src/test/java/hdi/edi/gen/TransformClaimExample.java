@@ -1,4 +1,4 @@
-package hdi.edi.writer;
+package hdi.edi.gen;
 
 import hdi.edi.ediwriter.EdiWriter;
 import hdi.edi.parser.EdiParser;
@@ -53,7 +53,7 @@ public class TransformClaimExample implements ParsingExampleHelper {
                     }
                     claim.chargeAmount(totalChargeAmount);
                     var validationIssues = ediWriter.writeClaim(claim);
-                    printValidationIssues(validationIssues);
+                    logValidationIssues(validationIssues);
 
                 }
                 isDone = parsingResults.isDone();

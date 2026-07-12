@@ -1,0 +1,15 @@
+apis:
+  ediconvert@v2:
+    root: openapi/ediconverter.yaml
+extends:
+  - recommended
+analytics:
+  ga:
+    trackingId: G-MTPCWFWRXR
+
+openapi:
+  expandResponses: "200"
+  sortOperationsAlphabetically: false
+  sortTagsAlphabetically: true
+  sortEnumValuesAlphabetically: true
+#  showObjectSchemaExamples: true

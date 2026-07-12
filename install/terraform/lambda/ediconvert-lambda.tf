@@ -1,5 +1,6 @@
 /*
-EDI Converter Lambda function without an S3 trigger for manual invocation.
+EDI Converter Lambda function without an S3 trigger for direct invocation using custom events.
+See https://datainsight.health/docs/ediconvert-lambda/#request-object
 */
 variable "run_test_events" {
   description = "Set to true to run Lambda test invocations from the events directory"
@@ -25,13 +26,11 @@ resource "aws_lambda_function" "edi_converter_function_manual" {
   }
 
   function_name = "EdiConverter"
-  # Handler for direct/manual invoke
   handler       = "hdi.aws.ConverterEventHandler::handleRequest"
-
   # The code is deployed from this public bucket
   s3_bucket     = "ediconverter"
-  s3_key        = "ediconvert-lambda-2.15.0.zip"
-
+  s3_key        = "ediconvert-lambda-2.15.1.zip"
+  # Set the Lambda’s memory to at least 2048 MB if you expect to process large EDI files. Memory size determines CPU allocation.
   memory_size = "512"
   package_type = "Zip"
   role         = aws_iam_role.lambda_exec_role.arn
@@ -48,9 +47,10 @@ resource "aws_lambda_function" "edi_converter_function_manual" {
 }
 # Run test events, only if run_test_events is True
 resource "aws_lambda_invocation" "edi_converter_manual_test_events" {
-  for_each = var.run_test_events ? {
+  for_each = {
     for idx, event_payload in local.manual_lambda_test_events : idx => event_payload
-  } : {}
+    if var.run_test_events
+  }
 
   function_name = aws_lambda_function.edi_converter_function_manual.function_name
   input         = jsonencode(each.value)

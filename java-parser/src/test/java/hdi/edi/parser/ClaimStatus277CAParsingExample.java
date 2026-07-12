@@ -12,7 +12,7 @@ import java.util.List;
 public class ClaimStatus277CAParsingExample implements ParsingExampleHelper {
 
     @Test
-    public void parseClaimStatuses() {
+    public void parse277CA() {
         var edi277File = new File(EDI_FILES_DIR, "/277/277CA-all-fields.edi");
         EdiParsingResults parsingResults;
         try (var parser = new EdiParser(edi277File)) {

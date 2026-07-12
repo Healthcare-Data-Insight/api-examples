@@ -1,7 +1,8 @@
 import json
 
-import edi_converter
+import env
 from edi_model.all_classes import MemberCoverage
+from ediconvert_sdk import EdiConverterClient, handle_warning_error
 
 """
 Converts 834 X220 (benefit enrollment and maintenance) file.
@@ -26,10 +27,11 @@ def enum_name(value):
 # Convert by posting the file's content
 file_to_convert = edi_834_dir + '/834-all-fields.edi'
 
-response = edi_converter.convert_file(file_to_convert, is_ndjson=True)
+client = EdiConverterClient(base_url=env.api_url)
+response = client.conversion.to_json_file(file_to_convert, ndjson=True, validate=True)
 for member_coverage_str in response.iter_lines():
     obj = json.loads(member_coverage_str)
-    if edi_converter.handle_warning_error(obj):
+    if handle_warning_error(obj):
         continue
     # each line is a member coverage object
     member_coverage = MemberCoverage.model_validate(obj)

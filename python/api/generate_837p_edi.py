@@ -1,7 +1,8 @@
 from datetime import date
 
-import edi_converter
+import env
 from edi_model.all_classes import *
+from ediconvert_sdk import EdiConverterClient, EdiGenerationValidationError
 
 
 def build_request() -> EdiGenClaimRequest:
@@ -116,18 +117,15 @@ def build_request() -> EdiGenClaimRequest:
 
 def main() -> None:
     request = build_request()
-    response = edi_converter.generate_claim_edi(request)
-    # If the API returns a 417, it means there were validation issues
-    if response.status_code == 417:
-        validation_issues = [
-            ValidationIssue.model_validate(issue_json) for issue_json in response.json()
-        ]
+    client = EdiConverterClient(base_url=env.api_url)
+    try:
+        edi_text = client.generation.generate_837(request)
+    except EdiGenerationValidationError as exc:
         print("Validation issues:")
-        for issue in validation_issues:
+        for issue in exc.validation_issues:
             print(issue)
         return
 
-    edi_text = response.text
     if not edi_text.startswith("ISA*00*"):
         raise RuntimeError(
             'Unexpected response body: generated EDI did not start with "ISA*00*".'

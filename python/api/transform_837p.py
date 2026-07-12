@@ -1,6 +1,7 @@
-import edi_converter
+import env
 from edi_model.all_classes import ProfClaim, InterchangeControl, FunctionalGroup, EdiGenClaimRequest
 from edi_model.enums import TransactionType
+from ediconvert_sdk import EdiConverterClient, handle_warning_error
 
 """
 Example of an 837 claim transformation.
@@ -26,10 +27,11 @@ functional_group = FunctionalGroup(
 # Parse an existing EDI file
 file_to_convert = edi_837_dir + '/837P-all-fields.dat'
 print('** Transforming claim from ' + file_to_convert)
-response = edi_converter.convert_file(file_to_convert, is_validate=False)
+client = EdiConverterClient(base_url=env.api_url)
+response = client.conversion.to_json_file(file_to_convert, validate=False)
 claims = response.json()
 for claim_json in claims:
-    if edi_converter.handle_warning_error(claim_json):
+    if handle_warning_error(claim_json):
         continue
     # Get the claim object
     claim = ProfClaim.model_validate(claim_json)
@@ -55,7 +57,7 @@ for claim_json in claims:
         transaction=transaction,
         claims=[claim],
     )
-    response = edi_converter.generate_claim_edi(ed_gen_request)
+    response = client.generation.generate_837_response(ed_gen_request)
     edi_text = response.text
     print("Generated EDI:")
     print(edi_text)

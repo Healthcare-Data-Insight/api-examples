@@ -1,6 +1,6 @@
 # Python API Examples
 
-This directory contains Python examples for working with the EDI Converter API and the Viewer-style search/upload endpoints exposed by a local API instance.
+This directory contains Python examples for working with the EDI Converter API through the published `ediconvert-sdk` package, plus Viewer-style search/upload examples for a local API instance.
 
 The scripts are intentionally simple. They show how to:
 
@@ -10,37 +10,37 @@ The scripts are intentionally simple. They show how to:
 - inspect parsed claims, payments, eligibility, claim status, and enrollment data
 - work with generated Python object model classes instead of raw JSON dictionaries
 - generate EDI from object model instances
+- validate EDI and inspect both structured JSON and text validation reports
 
 ## Project Layout
 
-- `edi_converter.py`: shared helper functions for posting files to `/edi/json` and handling `ERROR` / `WARNING` objects.
+- `src/ediconvert_sdk/`: reusable SDK client package for conversion, generation, validation, and application-info endpoints.
 - `env.py`: local API base URL configuration.
 - `convert_*.py`: object model examples for converting or parsing EDI files.
 - `convert_*_dict.py`: raw JSON dictionary versions of selected conversion examples.
-- `edi_model/`: generated Pydantic object model classes used by the model-based examples.
+- `src/edi_model/`: generated Pydantic object model classes used by the model-based examples.
 - `out/`: output directory used by CSV streaming examples.
 
-## Prerequisites
+## Installation
 
-These examples assume:
+Install the SDK from PyPI:
+
+```bash
+python -m pip install ediconvert-sdk
+```
+
+That is the only Python package required for the SDK-based conversion, generation, and validation examples. The SDK includes the `edi_model` object model package and automatically installs its runtime dependencies, including `requests` and `pydantic`.
+
+The examples also assume:
 
 - Python 3.10+.
 - A local EDI Converter API is running and reachable at `http://localhost:5080/api`.
 - Sample EDI files from this repository are available under `../../edi_files` relative to this folder.
 
-The code imports these packages:
-
-- `requests`
-- `pandas`
-- `requests-toolbelt`
-- `pydantic`
-
-Create a virtual environment and install them:
+The optional `convert_835_csv.py` example also uses `pandas` and `requests-toolbelt`. Install them only if you want to run that example:
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install requests pandas requests-toolbelt pydantic
+python -m pip install pandas requests-toolbelt
 ```
 
 ## Configuration
@@ -52,6 +52,16 @@ api_url = 'http://localhost:5080/api'
 ```
 
 Update that value if your API is running elsewhere.
+
+Create an SDK client with the URL of your EDI Converter API:
+
+```python
+from ediconvert_sdk import EdiConverterClient
+
+client = EdiConverterClient(base_url="http://localhost:5080/api")
+response = client.conversion.to_json_files(["../../edi_files/837/837P-all-fields.dat"], ndjson=True)
+edi_text = client.generation.generate_835(payment_request)
+```
 
 ## Important Runtime Assumptions
 
@@ -65,7 +75,7 @@ If you run a script from a different working directory, the sample file paths wi
 
 ## Object Model vs Raw JSON Dictionaries
 
-The main conversion examples use generated Pydantic classes from `edi_model/`.
+The main conversion examples use generated Pydantic classes from the `edi_model` package bundled with the SDK.
 They still receive JSON from the API, but immediately validate it into typed objects such as `ProfClaim`, `InstClaim`, `Payment`, and `MemberCoverage`.
 
 Examples without a suffix use the object model:
@@ -74,7 +84,7 @@ Examples without a suffix use the object model:
 - `convert_837_single_file.py`
 - `convert_835.py`
 - `convert_834.py`
-- `generate_837p.py`
+- `generate_837p_edi.py`
 - `transform_837p.py`
 
 Some examples also have a raw JSON dictionary variant with a `_dict` suffix:
@@ -94,16 +104,18 @@ Use the object model examples first. Use the `_dict` examples only when you spec
 - `convert_837_single_file.py`: converts one 837 file and validates the response as a `ProfClaim` object.
 - `convert_835.py`: converts 835 files to NDJSON and validates claim payments and provider-level adjustments as object model classes.
 - `convert_834.py`: converts 834 enrollment files and validates member coverage objects.
-- `generate_837p.py`: builds an `EdiGenClaimRequest` with object model classes and generates 837P EDI.
+- `generate_837p_edi.py`: builds an `EdiGenClaimRequest` with object model classes and generates 837P EDI.
+- `validate_835.py`: validates an 835 file with known issues and prints both JSON-model and text reports.
 - `transform_837p.py`: converts an existing 837P claim into an object model request and posts it back to the generator endpoint.
 
-These scripts use `/edi/json` and demonstrate:
+These scripts use `/edi/json`, `/edi/gen/837`, `/edi/gen/835`, `/edi/validate`, and `/edi/validate/text` endpoints and demonstrate:
 
 - multipart upload for multiple files
 - direct streaming of a single file
 - NDJSON processing with `response.iter_lines()`
 - object model validation with generated Pydantic classes
 - parser warning/error handling via `objectType`
+- validation issue handling through `ValidationIssue` objects and text output
 
 ### Raw JSON Dictionary Conversion
 
@@ -162,23 +174,37 @@ python convert_834.py
 Run a CSV example:
 
 ```bash
+python -m pip install pandas requests-toolbelt
 python convert_835_csv.py
 ```
+
+Validate an 835 file with known issues:
+
+```bash
+python validate_835.py
+```
+
 Generate 837P EDI from object model classes:
 
 ```bash
-python generate_837p.py
+python generate_837p_edi.py
+```
+
+Build, install, and test the SDK locally:
+
+```bash
+./build_and_test_sdk.sh
 ```
 
 ## Notes and Caveats
 
-- `env.py` is a hardcoded local configuration file, not an environment-variable based setup.
+- `env.py` is a hardcoded local configuration file for examples. The SDK client also accepts a `base_url` argument and the `EDICONVERT_BASE_URL` environment variable.
+- Public API calls can pass `api_key` to `EdiConverterClient` or set the `EDICONVERT_API_KEY` environment variable. Local API calls do not require an API key.
 - Several scripts print results directly and are meant as examples, not reusable library code.
 - `parse_in_mem_837.py` and `parse_edi_277_from_users.py` use the deprecated `/edi/parse` endpoint.
 - `convert_835_csv_error.py` includes a hardcoded file path outside this project and is best treated as a reference/debug script.
 - `_dict` examples intentionally use raw Python dictionaries; the same examples without `_dict` are the preferred object model versions.
 - Some viewer scripts use fixed search parameters or IDs that may not match your local dataset.
-- Multipart helpers in `edi_converter.py` open files directly and keep the code minimal; they are optimized for readability, not packaging polish.
 
 ## Recommended Starting Points
 
@@ -186,4 +212,4 @@ If you are new to this folder, start with:
 
 1. `convert_837.py` for streamed NDJSON claim conversion with object model classes.
 2. `convert_835_csv.py` for CSV export and streaming-to-disk patterns.
-3. `generate_837p.py` if you want to generate 837P EDI from object model classes.
+3. `generate_837p_edi.py` if you want to generate 837P EDI from object model classes.

@@ -1,8 +1,9 @@
 from datetime import date
 from pathlib import Path
 
-import edi_converter
+import env
 from edi_model.all_classes import *
+from ediconvert_sdk import EdiConverterClient, EdiGenerationValidationError
 
 OUTPUT_FILE = Path(__file__).parent / "out" / "835-minimal-generated.edi"
 
@@ -130,22 +131,15 @@ def build_request() -> EdiGenPaymentRequest:
 
 def main() -> None:
     request = build_request()
-    response = edi_converter.generate_payment_edi(request)
-    if response.status_code == 417:
-        validation_issues = [
-            ValidationIssue.model_validate(issue_json) for issue_json in response.json()
-        ]
+    client = EdiConverterClient(base_url=env.api_url)
+    try:
+        edi_text = client.generation.generate_835(request)
+    except EdiGenerationValidationError as exc:
         print("Validation issues:")
-        for issue in validation_issues:
+        for issue in exc.validation_issues:
             print(issue)
         return
 
-    if response.status_code != 200:
-        raise RuntimeError(
-            f"Unexpected response status {response.status_code}: {response.text}"
-        )
-
-    edi_text = response.text
     if not edi_text.startswith("ISA*00*"):
         raise RuntimeError(
             'Unexpected response body: generated EDI did not start with "ISA*00*".'

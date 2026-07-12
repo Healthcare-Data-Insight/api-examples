@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ediconvert-sdk"
+version = "2.15.1"
+description = "Python SDK for the Healthcare Data Insight EDI Converter and EDI Generator API"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "LicenseRef-Healthcare-Data-Insight-Commercial"
+authors = [
+    { name = "Healthcare Data Insight", email = "ediconvert@datainsight.health" },
+]
+keywords = ["edi", "x12", "healthcare", "835", "837", "api", "sdk"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "pydantic>=2",
+    "requests>=2.31",
+]
+
+[project.urls]
+Homepage = "https://datainsight.health/"
+Documentation = "https://datainsight.health/docs/ediconvert-api/"
+Source = "https://github.com/Healthcare-Data-Insight/api-examples"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["ediconvert_sdk*", "edi_model*"]
