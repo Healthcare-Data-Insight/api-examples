@@ -1,9 +1,9 @@
 package hdi.edi.parser;
 
 
+import hdi.edi.gen.Generate835EdiExample;
+import hdi.edi.gen.Generate837EdiExample;
 import hdi.edi.parser.edi810.Edi810ParsingExample;
-import hdi.edi.writer.Generate835EdiExample;
-import hdi.edi.writer.Generate837EdiExample;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 

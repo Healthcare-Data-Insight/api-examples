@@ -1,4 +1,4 @@
-package hdi.edi.writer;
+package hdi.edi.gen;
 
 import hdi.codeent.CodeEntity;
 import hdi.edi.EdiTransaction;
@@ -19,35 +19,41 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.math.BigDecimal;
-import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.time.LocalDate;
 import java.util.List;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 @SuppressWarnings("NewClassNamingConvention")
 public class Generate837EdiExample implements ParsingExampleHelper {
 
     @Test
-    public void write837pEdi() throws IOException {
+    public void generate837pEdi() throws IOException {
         File ediFile = new File(OUT_EDI_FILES_DIR, "837p-simple.edi");
-        try (var fileWriter = new FileWriter(ediFile); var ediWriter = new EdiWriter(fileWriter)) {
+        try (var fileWriter = new FileWriter(ediFile);
+             var ediWriter = new EdiWriter(fileWriter)) {
+
             GenerateEdiExampleHelper.writeIsaAndGs(ediWriter, TransactionType.PROF);
             var tran = create837Transaction(TransactionType.PROF);
-            ediWriter.writeTransaction(tran);
+            var validationIssues = ediWriter.writeTransaction(tran);
 
             var claim = createSimpleProfClaim();
             claim.billingProvider(createBillingProv());
             claim.subscriber(createSubscriber());
             // The writer will perform full validation of the claim
-            var validationIssues = ediWriter.writeClaim(claim);
-            printValidationIssues(validationIssues);
+            validationIssues = ediWriter.writeClaim(claim);
+            logValidationIssues(validationIssues);
             // Closing segments will be written automatically when the writer is closed
         }
-        var s = FileUtils.readFileToString(ediFile, Charset.defaultCharset());
+        var s = FileUtils.readFileToString(ediFile, StandardCharsets.UTF_8);
         System.out.println(s);
+        assertThat(s).startsWith("ISA*00*").contains("SBR*", "CLM*", "HI*ABK", "SV1*HC:99213:25");
+
     }
 
     @Test
-    public void write837iEdi() throws IOException {
+    public void generate837iEdi() throws IOException {
         File ediFile = new File(OUT_EDI_FILES_DIR, "837i-simple.edi");
         try (var fileWriter = new FileWriter(ediFile); var ediWriter = new EdiWriter(fileWriter)) {
             GenerateEdiExampleHelper.writeIsaAndGs(ediWriter, TransactionType.INST);
@@ -58,10 +64,11 @@ public class Generate837EdiExample implements ParsingExampleHelper {
             claim.billingProvider(createBillingProv());
             claim.subscriber(createSubscriber());
             var validationIssues = ediWriter.writeClaim(claim);
-            printValidationIssues(validationIssues);
+            logValidationIssues(validationIssues);
         }
-        var s = FileUtils.readFileToString(ediFile, Charset.defaultCharset());
+        var s = FileUtils.readFileToString(ediFile, StandardCharsets.UTF_8);
         System.out.println(s);
+        assertThat(s).startsWith("ISA*00*").contains("SBR*", "CLM*", "HI*ABK", "SV2*300");
     }
 
     private Claim createSimpleProfClaim() {
@@ -72,7 +79,7 @@ public class Generate837EdiExample implements ParsingExampleHelper {
         var serviceFacility = new OrgOrPerson(EntityRole.SERVICE_FACILITY, IdentificationType.NPI, "1234567890", "Facility");
         serviceFacility.address(new Address("987 Main St", null, "Anytown", "CA", "12345"));
         claim.addProvider(serviceFacility);
-        // Create a line with required fields
+        // Create a line with required fields: procedure code, charge amount, quantity, service date, and diagnosis pointers
         var line1 = ServiceLine.createProfLine("99213", new BigDecimal("100.00"), BigDecimal.ONE, LocalDate.of(2025, 1, 1), List.of(1, 2));
         line1.procedure().addModifier("25");
         claim.addLine(line1);

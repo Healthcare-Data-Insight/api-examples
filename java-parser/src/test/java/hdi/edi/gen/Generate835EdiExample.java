@@ -1,4 +1,4 @@
-package hdi.edi.writer;
+package hdi.edi.gen;
 
 import hdi.codeent.CodeEntity;
 import hdi.codeent.PrimaryCodeType;
@@ -22,7 +22,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.math.BigDecimal;
-import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -30,9 +30,11 @@ import java.util.List;
 public class Generate835EdiExample implements ParsingExampleHelper {
 
     @Test
-    public void write835Edi() throws IOException {
+    public void generate835Edi() throws IOException {
         File ediFile = new File(OUT_EDI_FILES_DIR, "835-simple.edi");
-        try (var fileWriter = new FileWriter(ediFile); var ediWriter = new EdiWriter(fileWriter)) {
+        try (var fileWriter = new FileWriter(ediFile);
+             var ediWriter = new EdiWriter(fileWriter)) {
+
             GenerateEdiExampleHelper.writeIsaAndGs(ediWriter, TransactionType.PAYMENT);
             var tran = create835Transaction();
             ediWriter.writeTransaction(tran);
@@ -40,10 +42,10 @@ public class Generate835EdiExample implements ParsingExampleHelper {
             var payment = createPayment();
             // The writer will perform full validation of the claim
             var validationIssues = ediWriter.writePayment(payment);
-            printValidationIssues(validationIssues);
+            logValidationIssues(validationIssues);
             // Closing segments will be written automatically when the writer is closed
         }
-        var s = FileUtils.readFileToString(ediFile, Charset.defaultCharset());
+        var s = FileUtils.readFileToString(ediFile, StandardCharsets.UTF_8);
         System.out.println(s);
     }
 

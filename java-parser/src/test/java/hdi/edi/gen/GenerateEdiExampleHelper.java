@@ -1,4 +1,4 @@
-package hdi.edi.writer;
+package hdi.edi.gen;
 
 import hdi.edi.ediwriter.EdiWriter;
 import hdi.edi.parser.TransactionType;

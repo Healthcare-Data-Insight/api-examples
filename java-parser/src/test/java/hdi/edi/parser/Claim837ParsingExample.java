@@ -2,6 +2,8 @@ package hdi.edi.parser;
 
 import hdi.model.PlaceOfServiceType;
 import hdi.model.claim.Claim;
+import hdi.model.control.FunctionalGroup;
+import hdi.model.control.InterchangeControl;
 import hdi.model.enumtype.UnitType;
 import hdi.model.orgperson.EntityRole;
 import hdi.model.orgperson.EntityType;
@@ -30,32 +32,35 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class Claim837ParsingExample implements ParsingExampleHelper {
 
     @Test
-    public void parseAllFields837p() {
+    public void parse837p() {
         parse837(new File(EDI_FILES_DIR, "/837/837p-all-fields.dat"));
     }
 
-
     @Test
-    public void parseAllFields837i() {
+    public void parse837i() {
         parse837(new File(EDI_FILES_DIR, "/837/837i-all-fields.dat"));
     }
 
     public void parse837(File edi837File) {
         log.info("* Parsing EDI 837 file: {}", edi837File.getName());
-        try (var parser = new EdiParser(edi837File).isValidationMode(true)) {
+        try (var parser = new EdiParser(edi837File)
+                // enable validation mode
+                .isValidationMode(true)) {
             EdiParsingResults parsingResults;
             do {
-                parsingResults = parser.parse(20);
-                List<Claim> claims = parsingResults.claims();
-                for (var claim : claims) {
-                    processClaim(claim);
-                }
-                // in case if you need info from control segments
-                processControlSegments(parsingResults);
-                // Validation issues at the transaction level
-                var issues = parsingResults.validationIssues();
-                for (var issue : issues) {
-                    log.warn("Validation issue: {}", issue);
+                parsingResults = parser.parse(DEFAULT_CHUNK_SIZE);
+                // "rootObjs" contains all objects parsed from EDI in the order they appear in the EDI file
+                // process all transactions, claims, and control segments
+                for (var rootObj : parsingResults.rootObjs()) {
+                    if (rootObj instanceof Claim claim) {
+                        processClaim(claim);
+                    }
+                    else if (rootObj instanceof InterchangeControl interchangeControl) {
+                        log.info("ISA segment info:\n{}", interchangeControl);
+                    }
+                    else if (rootObj instanceof FunctionalGroup functionalGroup) {
+                        log.info("GS segment info:\n{}", functionalGroup);
+                    }
                 }
             } while (!parsingResults.isDone());
         }
@@ -123,13 +128,6 @@ public class Claim837ParsingExample implements ParsingExampleHelper {
         for (var issue : issues) {
             log.warn("Validation issue: {}", issue);
         }
-    }
-
-    private void processControlSegments(EdiParsingResults parsingResults) {
-        if (parsingResults.interchangeControl() != null)
-            System.out.println(parsingResults.interchangeControl());
-        if (parsingResults.functionalGroup() != null)
-            System.out.println(parsingResults.functionalGroup());
     }
 
     /**

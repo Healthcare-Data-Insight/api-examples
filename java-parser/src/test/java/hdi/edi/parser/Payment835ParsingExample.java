@@ -1,7 +1,6 @@
 package hdi.edi.parser;
 
 import hdi.edi.EdiTransaction;
-import hdi.edi.validation.ValidationIssue;
 import hdi.model.orgperson.OrgOrPerson;
 import hdi.model.payment.*;
 import lombok.extern.slf4j.Slf4j;
@@ -30,21 +29,21 @@ public class Payment835ParsingExample implements ParsingExampleHelper {
         try (var parser = new EdiParser(edi835File).isValidationMode(true)) {
             EdiParsingResults parsingResults;
             do {                // parse 20 payments or adjustments at a time
-                parsingResults = parser.parse(20);
+                parsingResults = parser.parse(DEFAULT_CHUNK_SIZE);
                 // "rootObjs" contains all objects parsed from EDI in the order they appear in the EDI file
                 // process all transactions, claims, payments, and provider adjustments
                 for (var rootObj : parsingResults.rootObjs()) {
-                    if (rootObj instanceof EdiTransaction transaction && transaction.transactionType() == TransactionType.PAYMENT)
+                    if (rootObj instanceof EdiTransaction transaction && transaction.transactionType() == TransactionType.PAYMENT) {
                         process835Transaction(transaction);
-                        // Each payment is an adjudicated claim (CLP segment)
-                    else if (rootObj instanceof Payment payment)
+                    }
+                    // Each payment is an adjudicated claim (CLP segment)
+                    else if (rootObj instanceof Payment payment) {
                         processPayment(payment);
-                        // Provider-level adjustment is unrelated to a specific claim, could be a forwarding balance, accelerated payments, cost report settlements for a fiscal year, etc.
-                    else if (rootObj instanceof ProviderAdjustment providerAdjustment)
+                    }
+                    // Provider-level adjustment (PLB segment) is unrelated to a specific claim, could be a forwarding balance, accelerated payments, cost report settlements for a fiscal year, etc.
+                    else if (rootObj instanceof ProviderAdjustment providerAdjustment) {
                         processProviderAdjustment(providerAdjustment);
-                        // Validation issues at the transaction level
-                    else if (rootObj instanceof ValidationIssue validationIssue)
-                        log.warn("Validation issue: {}", validationIssue);
+                    }
                 }
             } while (!parsingResults.isDone());
         }
@@ -127,10 +126,7 @@ public class Payment835ParsingExample implements ParsingExampleHelper {
             }
         }
         // Validation issues for this payment
-        var issues = payment.validationIssues();
-        for (var issue : issues) {
-            log.warn("Validation issue: {}", issue);
-        }
+        logValidationIssues(payment.validationIssues());
     }
 
     private void processProviderAdjustment(ProviderAdjustment providerAdjustment) {
