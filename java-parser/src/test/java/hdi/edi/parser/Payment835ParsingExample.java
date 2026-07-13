@@ -19,7 +19,7 @@ import java.util.Collection;
 public class Payment835ParsingExample implements ParsingExampleHelper {
 
     @Test
-    public void parseAllFields835() {
+    public void parseRegular835() {
         parse835(new File(EDI_FILES_DIR, "/835/835-all-fields.dat"));
     }
 
@@ -30,7 +30,9 @@ public class Payment835ParsingExample implements ParsingExampleHelper {
 
     public void parse835(File edi835File) {
         log.info("* Parsing EDI 835 file: {}", edi835File.getName());
-        try (var parser = new EdiParser(edi835File).isValidationMode(true)) {
+        try (var parser = new EdiParser(edi835File)
+                // Turn validation mode on
+                .isValidationMode(true)) {
             EdiParsingResults parsingResults;
             do {                // parse 20 payments or adjustments at a time
                 parsingResults = parser.parse(DEFAULT_CHUNK_SIZE);

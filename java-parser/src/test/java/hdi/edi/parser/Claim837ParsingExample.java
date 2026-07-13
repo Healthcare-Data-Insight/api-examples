@@ -79,6 +79,7 @@ public class Claim837ParsingExample implements ParsingExampleHelper {
                 }
                 // Validation issues at the transaction level
                 processValidationIssues(parsingResults.validationIssues());
+
             } while (!parsingResults.isDone());
         }
     }
