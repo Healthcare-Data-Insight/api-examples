@@ -15,6 +15,14 @@ public class ClaimStatus277CAParsingExample implements ParsingExampleHelper {
         parse277CA(new File(EDI_FILES_DIR, "/277/277CA-all-fields.edi"));
     }
 
+    /**
+     * In some cases the entire transaction can be rejected, so we will not get any claim-level statuses.
+     */
+    @Test
+    public void parse277CAReceiverStatus() {
+        parse277CA(new File(EDI_FILES_DIR, "/277/277CA-receiver-rejected.edi"));
+    }
+
     public void parse277CA(File edi277File) {
         log.info("* Parsing 277CA file: {}", edi277File.getName());
         try (var parser = new EdiParser(edi277File)
@@ -23,7 +31,6 @@ public class ClaimStatus277CAParsingExample implements ParsingExampleHelper {
             EdiParsingResults parsingResults;
             do {                // parse 20 transactions at a time
                 parsingResults = parser.parse(DEFAULT_CHUNK_SIZE);
-
                 for (var receiverProviderClaimStatus : parsingResults.rootObjs()) {
 
                     // statuses can be reported at a claim, provider or receiver level
@@ -73,50 +80,21 @@ public class ClaimStatus277CAParsingExample implements ParsingExampleHelper {
                             }
                         }
                     }
+                    // If the transaction was rejected, we need to check for receiver status
                     else if (receiverProviderClaimStatus instanceof ReceiverStatus receiverStatus) {
-                        // see the example below
+                        log.info("** Status for receiver: {}", receiverStatus.party().lastNameOrOrgName());
+                        String rejectedTransaction = receiverStatus.traceIdentifier();
+                        log.info("Rejected transaction: {}", rejectedTransaction);
+                        // iterate over statuses
+                        for (var statusInfo : receiverStatus.statusInfos()) {
+                            log.info("Action type: {}", statusInfo.actionType());
+                            for (StatusCodeInfo statusCodeInfo : statusInfo.statusCodeInfos()) {
+                                log.info("Receiver status code: {}: {}", statusCodeInfo.categoryCode(), statusCodeInfo.statusCode());
+                            }
+                        }
                     }
                 }
             } while (!parsingResults.isDone());
-        }
-    }
-
-    /**
-     * In some cases the entire transaction can be rejected, so we will not get any claim-level statuses.
-     * So we need to check for receiver status
-     */
-    @Test
-    public void parseReceiverStatus() {
-        var edi277File = new File(EDI_FILES_DIR, "/277/277CA-receiver-rejected.edi");
-
-        EdiParsingResults parsingResults;
-        try (var parser = new EdiParser(edi277File)) {
-            // parse all
-            parsingResults = parser.parse(-1);
-        }
-        // Get all statuses from this file
-        List<ReceiverProviderClaimStatus> allStatuses = parsingResults.statuses();
-        for (var receiverProviderClaimStatus : allStatuses) {
-            if (receiverProviderClaimStatus instanceof ClaimStatus claimStatus) {
-                // process claim status, see above
-                continue;
-            }
-            else if (receiverProviderClaimStatus instanceof ProviderStatus providerStatus) {
-                // process provider status see above
-                continue;
-            }
-            else if (receiverProviderClaimStatus instanceof ReceiverStatus receiverStatus) {
-                log.info("** Status for receiver: {}", receiverStatus.party().lastNameOrOrgName());
-                String rejectedTransaction = receiverStatus.traceIdentifier();
-                log.info("Rejected transaction: {}", rejectedTransaction);
-                // iterate over statuses
-                for (var statusInfo : receiverStatus.statusInfos()) {
-                    log.info("Action type: {}", statusInfo.actionType());
-                    for (StatusCodeInfo statusCodeInfo : statusInfo.statusCodeInfos()) {
-                        log.info("Receiver status code: {}: {}", statusCodeInfo.categoryCode(), statusCodeInfo.statusCode());
-                    }
-                }
-            }
         }
     }
 
