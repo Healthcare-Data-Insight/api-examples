@@ -56,7 +56,6 @@ public class SqlOutputMgrCust implements Closeable, OutputMgr {
     Long generatedKey = null;
 
     /**
-     * Added by Keyun
      * Revised by M365 Copilot
      * This stores CI_CLAIM_FILE_TRANSACTION.id
      * and will be inserted into TransactionID column for header rows.
@@ -64,7 +63,6 @@ public class SqlOutputMgrCust implements Closeable, OutputMgr {
     private final Long transactionId;
 
     /**
-     * Added by Keyun
      * Revised by M365 Copilot
      * This stores source manager id and will be inserted into EtlSourceID for header rows.
      */
@@ -84,7 +82,6 @@ public class SqlOutputMgrCust implements Closeable, OutputMgr {
      }
      **/
 
-    // New - Added by Keyun to bring EtlSourceID and TransactionID
 
     /**
      * Revised by M365 Copilot
@@ -149,7 +146,6 @@ public class SqlOutputMgrCust implements Closeable, OutputMgr {
     }
 
     /**
-     * TO-DO: Keyun update file name column -> database column (for lz_claim )
      * Creates a list of database column names from the schema headers for a given list.
      * Applies special transformations, such as renaming "Id" to "converterClaimId".
      *
@@ -171,7 +167,6 @@ public class SqlOutputMgrCust implements Closeable, OutputMgr {
                 columnName = "TransactionID"; // database column name (Case sensitive)
             }
             */
-            // Added by Keyun - All columns should match with Parser vs Database
 
             if (columnName.equalsIgnoreCase("Id")) {
                 columnName = "Id";
@@ -900,7 +895,6 @@ public class SqlOutputMgrCust implements Closeable, OutputMgr {
 
 
     /**
-     * TO-DO: Keyun update file name column -> database column (for  lz_claim_lines)
      * Creates a list of database column names from the schema headers for a given list.
      * Applies special transformations, such as renaming "Id" to "converterClaimId".
      *
@@ -1305,7 +1299,6 @@ public class SqlOutputMgrCust implements Closeable, OutputMgr {
     public void writeRow(String listName, List<Object> row) {
         log.debug("Writing row for list: " + listName);
 
-        // Added by Keyun to include TransactionID & EtlSourceID In Header Table = lz_claim
         if (listName.equalsIgnoreCase(HEADER_LIST_NAME)) {
             row.add(etlSourceId);
             row.add(transactionId);
@@ -1403,7 +1396,6 @@ public class SqlOutputMgrCust implements Closeable, OutputMgr {
 //    }
 
     /**
-     * Added by Keyun
      * Revised by M365 Copilot
      * Returns the last generated lz_claim.id value.
      */
@@ -1412,7 +1404,6 @@ public class SqlOutputMgrCust implements Closeable, OutputMgr {
     }
 
     /**
-     * added by Keyun
      * Revised by M365 Copilot
      * Returns CI_CLAIM_FILE_TRANSACTION.id passed into this manager.
      */
@@ -1421,7 +1412,6 @@ public class SqlOutputMgrCust implements Closeable, OutputMgr {
     }
 
     /**
-     * added by Keyun
      * Revised by M365 Copilot
      * Returns EtlSourceID passed into this manager.
      */

@@ -22,10 +22,7 @@ import java.util.List;
 public class Claim837ParserYear2026 /*extends AbstractClaimParser implements IEDIDocumentEvaluator*/ {
 
 
-    String OUT_EDI_FILES_DIR = "../out_edi_files";
-
     final SchemaHolder schemaHolder = SchemaHolder.loadSchemas();
-//    final SchemaHolder schemaHolder = SchemaHolder.loadSchemas("csv_conversion_sql.yaml");
 
     public void parse837(File edi837File, Long etlSourceId, Long transactionId) throws Exception {
         log.info("* Parsing EDI 837 file: " + edi837File.getName());
@@ -34,10 +31,6 @@ public class Claim837ParserYear2026 /*extends AbstractClaimParser implements IED
         String user = "SA";
         String password = "SAStrong@Passw0rd";
 
-        // String url =
-        // "jdbc:sqlserver://localhost;databaseName=claims;trustServerCertificate=true;";
-        // String user = "SA";
-        // String password = "SAStrong@Passw0rd";
         log.debug("Connecting to database: " + url + " user: " + user);
 
         var schema = schemaHolder.findSchema(ConversionSchema.DEFAULT_SCHEMA_NAME, TransactionType.PROF);
