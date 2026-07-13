@@ -1,5 +1,6 @@
 package hdi.edi.parser;
 
+import hdi.edi.validation.ValidationIssue;
 import hdi.model.coverage.HealthCoverage;
 import hdi.model.coverage.Member;
 import hdi.model.coverage.MemberCoverage;
@@ -7,6 +8,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 
 import java.io.File;
+import java.util.Collection;
 import java.util.List;
 
 @SuppressWarnings("NewClassNamingConvention")
@@ -52,9 +54,11 @@ public class Member834ParsingExample implements ParsingExampleHelper {
             log.info("Health coverage:\n{}", healthCoverage);
         }
         // Validation issues for this member
-        var issues = memberCoverage.validationIssues();
-        for (var issue : issues) {
-            log.warn("Validation issue: {}", issue);
-        }
+        processValidationIssues(memberCoverage, memberCoverage.validationIssues());
+    }
+
+    // All validations are logged automatically, here you can do additional processing
+    private void processValidationIssues(MemberCoverage memberCoverage, Collection<ValidationIssue> issues) {
+        // your logic here
     }
 }
