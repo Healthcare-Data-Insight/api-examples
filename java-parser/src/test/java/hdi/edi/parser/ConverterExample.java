@@ -24,16 +24,13 @@ public class ConverterExample implements ParsingExampleHelper {
     public void convertSingleFileToJson() {
         var ediFile = new File(EDI_FILES_DIR, "/837/prof-encounter.dat");
         var converter = new EdiFileConverter(OutputFormat.JSON)
-                .isSerializeParsingIssues(true)
                 .isValidationMode(true);
         converter.convertFile(ediFile, OUT_DIR);
     }
 
     @Test
     public void convertMultipleFilesToJsonLines() {
-        var converter = new EdiFileConverter(OutputFormat.JSONL)
-                // Write parsing warnings to the output, see https://datainsight.health/docs/ediconvert-api/user-guide/#error-handling for more details
-                .isSerializeParsingIssues(true);
+        var converter = new EdiFileConverter(OutputFormat.JSONL);
 
         // Convert each file into a corresponding JSON file. If the output file is an existing directory, each file will be converted individually
         converter.convertFiles(new File(EDI_FILES_DIR + "/837"), "*.dat", false, OUT_DIR);
@@ -45,11 +42,7 @@ public class ConverterExample implements ParsingExampleHelper {
 
     @Test
     public void convertMultipleFilesToCsv() {
-        var converter = new EdiFileConverter(OutputFormat.CSV)
-                // name of the schema for a given transaction type
-                .csvConversionSchemaName("default")
-                // path to the schema file if you want to use a custom schema
-                .csvConversionSchemaFileName("../install/docker-compose/ediconvert/etc/csv/csv_conversion.yaml");
+        var converter = new EdiFileConverter(OutputFormat.CSV);
 
         // Convert all files into a single CSV file. By default, the converter creates two files, one for claims and one for lines (*-Lines.csv)
         var outFile = new File(OUT_DIR, "all-837.csv");
