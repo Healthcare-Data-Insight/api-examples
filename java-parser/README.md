@@ -22,6 +22,7 @@ The included [Gradle build](build.gradle) already configures the Healthcare Data
 - Set the `EDI_LICENSE_FILE` environment variable to the license file's absolute path.
 - Set the `EDI_LICENSE_KEY` environment variable to the contents of the license file.
 - Use the equivalent Java system properties: `edi-license-file` or `edi-license-key`.
+- Linux/macOS: you can also copy the license file to `~/.ediconvert`
 
 Do not commit your license key to source control.
 
