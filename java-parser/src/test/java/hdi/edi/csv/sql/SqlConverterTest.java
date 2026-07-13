@@ -32,6 +32,14 @@ public class SqlConverterTest implements ParsingExampleHelper {
         parseAndInsert(new File(EDI_FILES_DIR, "/837/837p-all-fields.dat"));
     }
 
+    @SneakyThrows
+    @Test
+    public void insertClaimsCust() {
+        var f = new File(EDI_FILES_DIR, "/837/837p-all-fields.dat");
+        var custProcessor = new Claim837ParserYear2026();
+        custProcessor.parse837(f, 1L, 1L);
+    }
+
     @SneakyThrows({SQLException.class, IOException.class})
     public void parseAndInsert(File edi837File) {
         String url = "jdbc:sqlserver://localhost;databaseName=claims;trustServerCertificate=true;";
