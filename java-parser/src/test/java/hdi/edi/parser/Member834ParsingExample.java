@@ -17,11 +17,12 @@ public class Member834ParsingExample implements ParsingExampleHelper {
     public void parse834() {
         var ediFile834 = new File(EDI_FILES_DIR + "/834/834-all-fields.edi");
         List<MemberCoverage> memberCoverages;
-        try (var parser = new EdiParser(ediFile834).isValidationMode(true)) {
+        try (var parser = new EdiParser(ediFile834)
+                .isValidationMode(true)) {
             EdiParsingResults parsingResults;
             do {
-                // parse 100 members at a time
-                parsingResults = parser.parse(100);
+                // parse 20 members at a time
+                parsingResults = parser.parse(DEFAULT_CHUNK_SIZE);
                 memberCoverages = parsingResults.memberCoverages();
                 for (var memberCoverage : memberCoverages) {
                     processMemberCoverage(memberCoverage);
