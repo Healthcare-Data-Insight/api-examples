@@ -1,0 +1,36 @@
+loaders:
+  - type: python
+    search_path:
+      - src
+    modules:
+      - ediconvert_sdk.client
+
+processors:
+  - type: filter
+    documented_only: true
+    exclude_private: true
+    exclude_special: true
+  - type: smart
+  - type: crossref
+
+renderer:
+  type: markdown
+  render_page_title: false
+  render_module_header: false
+  render_toc: false
+  descriptive_class_title: false
+  add_module_prefix: false
+  add_method_class_prefix: true
+  code_headers: true
+  classdef_code_block: true
+  signature_code_block: true
+  signature_with_def: true
+  use_fixed_header_levels: true
+  header_level_by_type:
+    Module: 1
+    Class: 2
+    Method: 3
+    Function: 2
+    Variable: 3
+  format_code: true
+  format_code_style: pep8
