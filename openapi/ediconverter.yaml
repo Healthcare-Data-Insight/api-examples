@@ -1,25 +1,24 @@
 openapi: "3.1.1"
 info:
-  title: X12 EDI Conversion and Parsing API
+  title: X12 EDI Conversion, Generation and Validation API
   description: |-
-    API for converting healthcare X12 EDI transactions to JSON or CSV and generating EDI from JSON.
+    API for converting healthcare X12 EDI transactions to JSON or CSV and [generating EDI from JSON](https://datainsight.health/docs/ediconvert-api/edi-generation/). Also supports [validation of EDI transactions](https://datainsight.health/docs/ediconvert-api/edi-validation/).
 
+    - [Quick Start](https://datainsight.health/docs/ediconvert-api/quick-start/)
     - [Installation Guide](https://datainsight.health/docs/ediconvert-api/installation/)
-    - [User Guide](https://datainsight.health/docs/ediconverter/api-usage/)
-    - [JSON schema introduction](https://datainsight.health/posts/edi-json/)
+    - [User Guide](https://datainsight.health/docs/ediconvert-api/user-guide/)
     - [JSON schemas in tabular format](https://datainsight.health/docs/schemas/), including mappings to X12 EDI segments and elements
     - [CSV data dictionary](https://datainsight.health/docs/datadict/), including mappings to X12 EDI segments and elements
-    - [Python examples](https://github.com/Healthcare-Data-Insight/api-examples/tree/release/2.15.0/python/api) (GitHub)
-    - [curl examples](https://github.com/Healthcare-Data-Insight/api-examples/blob/main/curl/convert_edi.sh) (GitHub)
-    - [Release notes](https://datainsight.health/docs/ediconvert-api/release-notes/)
+    - [Python examples](https://github.com/Healthcare-Data-Insight/api-examples/blob/main/python/api/README.md)
+    - [curl examples](https://github.com/Healthcare-Data-Insight/api-examples/tree/main/curl)
 
     New endpoints in this release:
+    - [Generate 835 EDI](#tag/Generate-EDI/operation/generate-edi-payment)
+    - [Generate 837 EDI](#tag/Generate-EDI/operation/generate-edi-claim)
     - [EDI validation](#tag/EDI-to-JSON/operation/validate-edi)
     - [EDI validation as text](#tag/EDI-to-JSON/operation/validate-edi-text)
-    - [Generate 835 EDI](#tag/Generate-EDI/operation/generate-edi-payment)
-    - [Validate 835 EDI generation request](#tag/Generate-EDI/operation/generate-edi-payment-validate)
 
-  version: 2.15.0
+  version: 2.15.1
   contact:
     email: ediconvert@datainsight.health
     url: https://datainsight.health/products/edi-convert/
