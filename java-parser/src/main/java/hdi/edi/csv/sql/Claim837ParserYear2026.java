@@ -10,6 +10,7 @@ import lombok.extern.slf4j.Slf4j;
 
 import java.io.File;
 import java.sql.DriverManager;
+import java.time.LocalDate;
 import java.util.List;
 
 /**
@@ -43,12 +44,38 @@ public class Claim837ParserYear2026 /*extends AbstractClaimParser implements IED
 
             boolean isDone = false;
 
+
             var converter = new CsvConverter(outputMgr.getSchema(), outputMgr);
+            int batchI = 0;
+            String interchangeSenderId = null;
+            String interchangeReceiverId = null;
+            Integer interchangeControlNum = null;
+            LocalDate transmissionDate = null;
+            String fileType = null;
+            String fileVersion = null;
             while (!isDone) {
                 log.info("Parsing EDI 837 file: " + edi837File.getName() + " next 100 records");
 
                 EdiParsingResults parsingResults = parser.parse(100);
-
+                if (batchI == 0) {
+                    var isa = parsingResults.interchangeControl();
+                    var gs = parsingResults.functionalGroup();
+                    if (isa != null) {
+                        interchangeSenderId = isa.senderId();
+                        interchangeReceiverId = isa.receiverId();
+                        interchangeControlNum = isa.controlNumber();
+                        transmissionDate = isa.interchangeDate();
+                    }
+                    var transaction = parsingResults.curTransaction();
+                    if (transaction != null) {
+                        var transactionType = transaction.transactionType();
+                        // 837P or 837I
+                        fileType = transactionType.ediCode();
+                        //222A2
+                        fileVersion = transactionType.subTypeCode();
+                    }
+                    // Do something with control segment values
+                }
                 List<hdi.model.claim.Claim> claims = parsingResults.claims();
                 converter.convert(claims);
 
@@ -61,6 +88,7 @@ public class Claim837ParserYear2026 /*extends AbstractClaimParser implements IED
                 // Commit each chunk
                 // connection.commit();
                 isDone = parsingResults.isDone();
+                batchI++;
             }
 
             log.info("Insert counts: " + outputMgr.getCounts());
