@@ -196,6 +196,17 @@ Build, install, and test the SDK locally:
 ./build_and_test_sdk.sh
 ```
 
+Generate the Python SDK API reference for the Hugo documentation site:
+
+```bash
+python -m pip install -e '.[docs]'
+./generate_python_sdk_reference.sh
+```
+
+By default, the script writes `python-sdk-reference.md` to the sibling
+`content/website/content/docs/ediconvert-api` checkout. Pass another output
+path as the first argument when the website repository is located elsewhere.
+
 ## Notes and Caveats
 
 - `env.py` is a hardcoded local configuration file for examples. The SDK client also accepts a `base_url` argument and the `EDICONVERT_BASE_URL` environment variable.

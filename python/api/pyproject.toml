@@ -26,6 +26,11 @@ dependencies = [
     "requests>=2.31",
 ]
 
+[project.optional-dependencies]
+docs = [
+    "pydoc-markdown==4.8.2",
+]
+
 [project.urls]
 Homepage = "https://datainsight.health/"
 Documentation = "https://datainsight.health/docs/ediconvert-api/"

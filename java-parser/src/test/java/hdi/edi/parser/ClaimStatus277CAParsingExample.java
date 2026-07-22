@@ -1,10 +1,15 @@
 package hdi.edi.parser;
 
+import hdi.edi.EdiTransaction;
+import hdi.edi.validation.ValidationIssue;
+import hdi.model.control.FunctionalGroup;
+import hdi.model.control.InterchangeControl;
 import hdi.model.status.*;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 
 import java.io.File;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @SuppressWarnings("NewClassNamingConvention")
@@ -31,12 +36,11 @@ public class ClaimStatus277CAParsingExample implements ParsingExampleHelper {
             EdiParsingResults parsingResults;
             do {                // parse 20 transactions at a time
                 parsingResults = parser.parse(DEFAULT_CHUNK_SIZE);
-                for (var receiverProviderClaimStatus : parsingResults.rootObjs()) {
-
+                for (var rootObj : parsingResults.rootObjs()) {
                     // statuses can be reported at a claim, provider or receiver level
                     // Receiver status is provided when the entire transaction is rejected
                     // normally, each claim will have a corresponding status
-                    if (receiverProviderClaimStatus instanceof ClaimStatus claimStatus) {
+                    if (rootObj instanceof ClaimStatus claimStatus) {
                         // Each claim status contains its patient and billing provider
                         // claim identifier
                         var pcn = claimStatus.patientControlNumber();
@@ -71,7 +75,7 @@ public class ClaimStatus277CAParsingExample implements ParsingExampleHelper {
                         }
                     }
                     // some payers can report statuses at the provider level
-                    else if (receiverProviderClaimStatus instanceof ProviderStatus providerStatus) {
+                    else if (rootObj instanceof ProviderStatus providerStatus) {
                         log.info("** Status for provider: {}", providerStatus.party().identifier());
                         for (var statusInfo : providerStatus.statusInfos()) {
                             log.info("Action type: {}", statusInfo.actionType());
@@ -81,7 +85,7 @@ public class ClaimStatus277CAParsingExample implements ParsingExampleHelper {
                         }
                     }
                     // If the transaction was rejected, we need to check for receiver status
-                    else if (receiverProviderClaimStatus instanceof ReceiverStatus receiverStatus) {
+                    else if (rootObj instanceof ReceiverStatus receiverStatus) {
                         log.info("** Status for receiver: {}", receiverStatus.party().lastNameOrOrgName());
                         String rejectedTransaction = receiverStatus.traceIdentifier();
                         log.info("Rejected transaction: {}", rejectedTransaction);
@@ -93,9 +97,30 @@ public class ClaimStatus277CAParsingExample implements ParsingExampleHelper {
                             }
                         }
                     }
+                    else if (rootObj instanceof EdiTransaction transaction && transaction.transactionType() == TransactionType.CLAIM_ACK) {
+                        process277CATransaction(transaction);
+                    }
+                    else if (rootObj instanceof InterchangeControl interchangeControl) {
+                        log.info("ISA segment info:\n{}", interchangeControl);
+                    }
+                    else if (rootObj instanceof FunctionalGroup functionalGroup) {
+                        log.info("GS segment info:\n{}", functionalGroup);
+                    }
+                    // validation issue at the transaction level
+                    else if (rootObj instanceof ValidationIssue validationIssue) {
+                        // validation issues are logged by the parser; here you can do additional processing
+                    }
+                    else {
+                        throw new IllegalStateException("Unexpected object for 277 transaction: " + rootObj);
+                    }
                 }
             } while (!parsingResults.isDone());
         }
     }
 
+    private void process277CATransaction(EdiTransaction transaction) {
+        String controlNumber = transaction.controlNumber();
+        LocalDateTime transactionDateTime = transaction.getCreationDateTime();
+        log.info("Transaction: {} {}", controlNumber, transactionDateTime);
+    }
 }
