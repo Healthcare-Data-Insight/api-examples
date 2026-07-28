@@ -155,6 +155,22 @@
       # Create a list of lines in a separate file
       strategy: ROWS
 
+    # Schema for the transaction list
+    - names: [ Transactions ]
+      strategy: ROWS
+
+    # provider adjustments: transaction and provider fields repeat for each adjustment
+    - names: [ ProviderAdjustmentMain ]
+      output: False
+      # Repeat these fields on the first line for child lists
+      repeatFields: [ "*" ]
+      # Repeat these fields from the repeatFields on every row for child lists
+      repeatEachRow: [ "*" ]
+      strategy: ROWS
+
+    - names: [ ProviderAdjustments ]
+      strategy: ROWS
+
     - names: [ LineAdjs, Adjs, LineRemarkCodes ]
       numberOfColumnRepeats: 5
 
@@ -185,6 +201,15 @@
       # Repeat these fields from the repeatFields on every row for child lists
       repeatEachRow: [ Id, PatientControlNumber, PayerControlNumber ]
 
+    # Schema for the line list
+    - names: [ Lines ]
+      # Create a list of lines in a separate file
+      strategy: ROWS
+      fileSuffix: ""
+
+
+
+
 # Single file; all fields from lines; only IDs from the header
 - transactionTypes: [ "837P", "837I", "837D", "835" ]
   name: lines-only
@@ -212,7 +237,10 @@
       repeatFields: [ "*" ]
       # Repeat these fields from the repeatFields on every row for child lists
       repeatEachRow: [ "*" ]
-
+    - names: [ Lines ]
+      # Create a list of lines in a separate file
+      strategy: ROWS
+      fileSuffix: ""
 
 # Only header fields, no lines
 - transactionTypes: [ "837P", "837I", "837D", "835" ]
@@ -274,6 +302,10 @@
 
     - names: [ LineRemarkCodes ]
       numberOfColumnRepeats: 3
+
+    - names: [ Transactions, ProviderAdjustments ]
+      output: False
+
 
 - transactionTypes: [ "837P" ]
   name: key-fields
@@ -358,3 +390,47 @@
       repeatFields: [ "*" ]
       # Repeat these fields from the repeatFields on every row for child lists
       repeatEachRow: [ Id, FileName, PatientControlNumber ]
+
+# Only 835 transactions
+- transactionTypes: [ "835" ]
+  name: transactions-only
+  baseName: default
+
+  listSchemas:
+    - names: [ Main, Lines, ProviderAdjustments ]
+      output: False
+
+# Only provider adjustments
+- transactionTypes: [ "835" ]
+  name: provider-adjustments-only
+  baseName: default
+
+  listSchemas:
+    - names: [ Main, Lines, Transactions ]
+      output: False
+
+
+# Schemas that exclude transactions and provider adjustments
+- transactionTypes: [ "837P", "837I", "837D", "835" ]
+  name: claim-lines-only
+  baseName: default
+
+  listSchemas:
+    - names: [ Transactions, ProviderAdjustments ]
+      output: False
+
+- transactionTypes: [ "837P", "837I", "837D", "835" ]
+  name: lines-with-header-repeat-first-row-only
+  baseName: lines-with-header-repeat-first-row
+
+  listSchemas:
+    - names: [ Transactions, ProviderAdjustments ]
+      output: False
+
+- transactionTypes: [ "837P", "837I", "837D", "835" ]
+  name: lines-with-header-repeat-each-row-only
+  baseName: lines-with-header-repeat-each-row
+
+  listSchemas:
+    - names: [ Transactions, ProviderAdjustments ]
+      output: False
