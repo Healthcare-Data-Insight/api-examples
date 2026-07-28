@@ -1,0 +1,90 @@
+---
+type: "object"
+description: "Loop: 0000; Segment: BPR."
+properties:
+  id:
+    description: "Unique payment identifier assigned by the converter."
+    type: "string"
+  transactionType:
+    description: "Transaction set identifier code. EDI: ST01."
+    type: "string"
+    x-edi-elt-designators:
+    - "ST01"
+  fileName:
+    description: "Converted X12 EDI file name."
+    type: "string"
+  transactionControlNumber:
+    description: "Transaction set control number. EDI: ST02."
+    type: "string"
+    x-edi-elt-designators:
+    - "ST02"
+  totalPaymentAmount:
+    description: "Total payment amount. EDI: BPR02."
+    type: "number"
+    format: "float"
+    x-edi-elt-designators:
+    - "BPR02"
+  creditOrDebitFlagCode:
+    description: "Credit or debit flag code. EDI: BPR03."
+    type: "string"
+    x-edi-elt-designators:
+    - "BPR03"
+  paymentMethodType:
+    description: "Payment method type. EDI: BPR04."
+    type: "string"
+    x-edi-elt-designators:
+    - "BPR04"
+    x-enum-name: "PaymentMethodType"
+  receiverAccountNumber:
+    description: "Receiver account number. EDI: BPR15."
+    type: "string"
+    x-edi-elt-designators:
+    - "BPR15"
+  paymentDate:
+    description: "Payment date. EDI: BPR16."
+    type: "string"
+    format: "date"
+    x-edi-elt-designators:
+    - "BPR16"
+  checkOrEftTraceNumber:
+    description: "Check or eft trace number. EDI: TRN02."
+    type: "string"
+    x-edi-elt-designators:
+    - "TRN02"
+  payerEin:
+    description: "Payer identifier. This must be a '1' followed by the payer EIN. This field is also copied to the payerIdentifier field if it wasn't provided in N104. EDI: TRN03."
+    type: "string"
+    x-edi-elt-designators:
+    - "TRN03"
+  productionDate:
+    description: "Production date. EDI: DTP03*405."
+    type: "string"
+    format: "date"
+    x-edi-elt-designators:
+    - "DTP03"
+    x-edi-qualifiers:
+    - "405"
+  payer:
+    description: "Payer. EDI: N1*PR."
+    $ref: "./Party.yaml"
+    x-edi-seg-ids:
+    - "N1"
+    x-edi-qualifiers:
+    - "PR"
+  payee:
+    description: "Payee. EDI: N1*PE."
+    $ref: "./Party.yaml"
+    x-edi-seg-ids:
+    - "N1"
+    x-edi-qualifiers:
+    - "PE"
+  remittanceDeliveryMethod:
+    description: "Remittance delivery method. Since: v2.15.0. EDI: RDM."
+    $ref: "./RemittanceDeliveryMethod.yaml"
+    x-edi-seg-ids:
+    - "RDM"
+    x-since: "2.15.0"
+x-edi-loop-ids:
+- "0000"
+x-edi-seg-ids:
+- "BPR"

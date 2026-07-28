@@ -126,6 +126,8 @@ post:
           schema:
             oneOf:
               - $ref: "../components/schemas/model/PaymentCsv.yaml"
+              - $ref: "../components/schemas/model/Transaction835Csv.yaml"
+              - $ref: "../components/schemas/model/ProviderAdjustmentCsv.yaml"
               - $ref: "../components/schemas/model/ProfClaimCsv.yaml"
               - $ref: "../components/schemas/model/InstClaimCsv.yaml"
               - $ref: "../components/schemas/model/MemberCoverageCsv.yaml"

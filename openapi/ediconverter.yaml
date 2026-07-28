@@ -18,7 +18,7 @@ info:
     - [EDI validation](#tag/EDI-to-JSON/operation/validate-edi)
     - [EDI validation as text](#tag/EDI-to-JSON/operation/validate-edi-text)
 
-  version: 2.15.1
+  version: 2.15.2
   contact:
     email: ediconvert@datainsight.health
     url: https://datainsight.health/products/edi-convert/
