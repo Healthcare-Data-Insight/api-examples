@@ -12,7 +12,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.release>17</maven.compiler.release>
 
-        <edi.version>2.15.1</edi.version>
+        <edi.version>2.15.2</edi.version>
         <jackson.version>2.21.4</jackson.version>
         <commons-io.version>2.20.0</commons-io.version>
         <junit.version>4.13.2</junit.version>
