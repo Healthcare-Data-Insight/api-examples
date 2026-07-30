@@ -1,7 +1,7 @@
 # Docker compose file to run claimn insight image against local Mongo version
 services:
   app:
-    image: repo.datainsight.health/claim-insight:2.14
+    image: myarch/ediconvert:2.15.2
     restart: unless-stopped
     volumes:
       - ./uploads:/app/uploads
