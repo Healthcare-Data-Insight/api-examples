@@ -15,11 +15,12 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * Advanced example of extracting claim segments from EDI 837 files.
+ * Advanced example to demostrate how to find EDI segments in the parsed EDI file.
+ * Could be used if raw EDI is needed for auditing purposes.
  */
 @SuppressWarnings("NewClassNamingConvention")
 @Slf4j
-public class ClaimSegmentExtractionExample implements ParsingExampleHelper {
+public class ClaimWithSegmentsExample implements ParsingExampleHelper {
 
     @Test
     public void parse837p() {
@@ -44,7 +45,7 @@ public class ClaimSegmentExtractionExample implements ParsingExampleHelper {
                     processClaim(claim);
                 }
                 // Extract HI segments from the parsed EDI file
-                var claimSegsList = extractSegments(parsingResults, claims, SegmentType.HI);
+                var claimSegsList = findSegments(parsingResults, claims, SegmentType.HI);
                 for (var claimSegs : claimSegsList) {
                     System.out.println(claimSegs.claim.patientControlNumber());
                     System.out.println(claimSegs.segsToEdiStr());
@@ -53,7 +54,7 @@ public class ClaimSegmentExtractionExample implements ParsingExampleHelper {
         }
     }
 
-    private List<ClaimSegs> extractSegments(EdiParsingResults parsingResults, List<Claim> claims, SegmentType segmentType) {
+    private List<ClaimSegs> findSegments(EdiParsingResults parsingResults, List<Claim> claims, SegmentType segmentType) {
         List<ClaimSegs> claimSegs = new ArrayList<>();
         int claimI = 0;
         for (var seg : parsingResults.segs()) {
