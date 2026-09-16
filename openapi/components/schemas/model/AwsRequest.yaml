@@ -31,7 +31,7 @@ properties:
     type: "boolean"
     x-since: "2.15.0"
   isTransactionTopLevel:
-    description: "Write EDI transactions to the root level of the output as `TRANSACTION` objects. If not set, the EDI transaction is repeated in each claim, payment, or member object. Setting this option will reduce the size of the output. Defaults to 'false' or to the value of the 'EDI_CONVERT_CONTROL_SEGMENTS' environment variable. JSON/JSONL format only. Since: v2.15.0."
+    description: "Write EDI transactions to the root level of the output as 'TRANSACTION' objects. If not set, the EDI transaction is repeated in each claim, payment, or member object. Setting this option will reduce the size of the output. Defaults to 'false' or to the value of the 'EDI_CONVERT_CONTROL_SEGMENTS' environment variable. JSON/JSONL format only. Since: v2.15.0."
     type: "boolean"
     x-since: "2.15.0"
   isSerializeControlSegments:

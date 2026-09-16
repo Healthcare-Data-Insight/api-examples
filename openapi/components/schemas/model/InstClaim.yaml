@@ -367,6 +367,15 @@ properties:
     - "HI"
     x-edi-qualifiers:
     - "BG"
+  treatments:
+    description: "Treatments. EDI: HI*TC."
+    type: "array"
+    items:
+      $ref: "./Code.yaml"
+    x-edi-seg-ids:
+    - "HI"
+    x-edi-qualifiers:
+    - "TC"
   attachments:
     description: "Attachments. EDI: PWK."
     type: "array"

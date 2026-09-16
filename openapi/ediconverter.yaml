@@ -12,13 +12,7 @@ info:
     - [Python examples](https://github.com/Healthcare-Data-Insight/api-examples/blob/main/python/api/README.md)
     - [curl examples](https://github.com/Healthcare-Data-Insight/api-examples/tree/main/curl)
 
-    New endpoints in this release:
-    - [Generate 835 EDI](#tag/Generate-EDI/operation/generate-edi-payment)
-    - [Generate 837 EDI](#tag/Generate-EDI/operation/generate-edi-claim)
-    - [EDI validation](#tag/EDI-to-JSON/operation/validate-edi)
-    - [EDI validation as text](#tag/EDI-to-JSON/operation/validate-edi-text)
-
-  version: 2.15.2
+  version: 2.15.5
   contact:
     email: ediconvert@datainsight.health
     url: https://datainsight.health/products/edi-convert/
@@ -80,6 +74,8 @@ paths:
     $ref: paths/api_edi_validate.yaml
   /api/edi/validate/text:
     $ref: paths/api_edi_validate_text.yaml
+  /api/edi/parse:
+    $ref: paths/api_edi_parse.yaml
   /api/edi/csv:
     $ref: paths/api_edi_csv.yaml
   /api/about:
