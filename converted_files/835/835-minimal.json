@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6a32cb6297613a0e49906622",
+  "id" : "6aaac751fd84853fa5df7d0b",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "5554555444",
   "chargeAmount" : 800.00,
@@ -115,7 +115,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a32cb6297613a0e499065ff",
+    "id" : "6aaac751fd84853fa5df7ce8",
     "controlNumber" : "0002",
     "transactionType" : "PAYMENT",
     "productionDate" : "2024-12-23",
@@ -132,8 +132,7 @@
     "fileInfo" : {
       "name" : "835-minimal.dat",
       "url" : "file:/edi-samples/edi_files/835/835-minimal.dat",
-      "lastModifiedDateTime" : "2026-06-16T10:38:18.088-04:00",
-      "fileType" : "EDI"
+      "lastModifiedDateTime" : "2026-08-24T09:55:04.097-04:00"
     }
   }
 }

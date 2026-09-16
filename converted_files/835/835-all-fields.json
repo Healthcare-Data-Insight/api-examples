@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6a32cb6297613a0e499066b3",
+  "id" : "6aaac751fd84853fa5df7d9c",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "7722337",
   "chargeAmount" : 384.00,
@@ -469,7 +469,7 @@
     }
   } ],
   "transaction" : {
-    "id" : "6a32cb6297613a0e49906658",
+    "id" : "6aaac751fd84853fa5df7d41",
     "controlNumber" : "35681",
     "transactionType" : "PAYMENT",
     "productionDate" : "2019-03-14",
@@ -492,8 +492,7 @@
     "fileInfo" : {
       "name" : "835-all-fields.dat",
       "url" : "file:/edi-samples/edi_files/835/835-all-fields.dat",
-      "lastModifiedDateTime" : "2026-06-10T22:19:35.713-04:00",
-      "fileType" : "EDI"
+      "lastModifiedDateTime" : "2026-08-24T09:55:04.097-04:00"
     }
   }
 }

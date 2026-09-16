@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6a41a47da5f0afda93bdabee",
+  "id" : "6aaaca95b439338235b48be6",
   "objectType" : "CLAIM",
   "patientControlNumber" : "ABC0002",
   "chargeAmount" : 259.96,
@@ -842,6 +842,13 @@
     "desc" : "TRICARE EXTERNAL PARTNERSHIP PROGRAM",
     "instructionDesc" : "External partnership program"
   } ],
+  "treatments" : [ {
+    "subType" : "TREATMENT",
+    "code" : "A01"
+  }, {
+    "subType" : "TREATMENT",
+    "code" : "A02"
+  } ],
   "attachments" : [ {
     "reportTypeCode" : "OZ",
     "type" : "SUPPORT_DATA_FOR_CLAIM",
@@ -1245,7 +1252,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a41a47da5f0afda93bdab55",
+    "id" : "6aaaca95b439338235b48b4c",
     "controlNumber" : "00000024",
     "transactionType" : "INST",
     "hierarchicalStructureCode" : "0019",
@@ -1259,7 +1266,7 @@
     "fileInfo" : {
       "name" : "837I-all-fields.dat",
       "url" : "file:/edi-samples/edi_files/837/837I-all-fields.dat",
-      "lastModifiedDateTime" : "2026-06-27T09:24:51.833-04:00"
+      "lastModifiedDateTime" : "2026-09-16T12:51:16.684-04:00"
     },
     "sender" : {
       "entityRole" : "SUBMITTER",

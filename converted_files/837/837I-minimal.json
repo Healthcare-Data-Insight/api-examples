@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6a41a47da5f0afda93bdac9a",
+  "id" : "6aaaca95b439338235b48c1e",
   "objectType" : "CLAIM",
   "patientControlNumber" : "756048Q",
   "chargeAmount" : 89.93,
@@ -206,7 +206,7 @@
     }
   } ],
   "transaction" : {
-    "id" : "6a41a47da5f0afda93bdac69",
+    "id" : "6aaaca95b439338235b48bed",
     "controlNumber" : "0021",
     "transactionType" : "INST",
     "hierarchicalStructureCode" : "0019",
@@ -220,7 +220,7 @@
     "fileInfo" : {
       "name" : "837I-minimal.dat",
       "url" : "file:/edi-samples/edi_files/837/837I-minimal.dat",
-      "lastModifiedDateTime" : "2026-06-27T09:24:51.833-04:00"
+      "lastModifiedDateTime" : "2026-08-24T09:55:04.099-04:00"
     },
     "sender" : {
       "entityRole" : "SUBMITTER",

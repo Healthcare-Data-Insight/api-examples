@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6a32cb6297613a0e49906651",
+  "id" : "6aaac751fd84853fa5df7d3a",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "PATACCT",
   "chargeAmount" : 150.00,
@@ -138,7 +138,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a32cb6297613a0e49906629",
+    "id" : "6aaac751fd84853fa5df7d12",
     "controlNumber" : "10060875",
     "transactionType" : "PAYMENT",
     "productionDate" : "2019-08-27",
@@ -154,8 +154,7 @@
     "fileInfo" : {
       "name" : "835-denial.dat",
       "url" : "file:/edi-samples/edi_files/835/835-denial.dat",
-      "lastModifiedDateTime" : "2025-09-22T10:36:36.673-04:00",
-      "fileType" : "EDI"
+      "lastModifiedDateTime" : "2025-09-22T10:36:36.673-04:00"
     }
   }
 }

@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6a32cb6297613a0e499064be",
+  "id" : "6aaac751fd84853fa5df7ba3",
   "objectType" : "PROVIDER_ADJUSTMENT",
   "providerIdentifier" : "PAYEE_ID1",
   "fiscalPeriodDate" : "2024-12-31",
@@ -77,7 +77,7 @@
     } ]
   },
   "transaction" : {
-    "id" : "6a32cb6297613a0e499064ab",
+    "id" : "6aaac751fd84853fa5df7b90",
     "controlNumber" : "0001",
     "transactionType" : "PAYMENT",
     "productionDate" : "2024-12-23",
@@ -88,19 +88,18 @@
     "originatingCompanySupplementalCode" : "SUPPL_CDE",
     "paymentDate" : "2024-12-24",
     "checkOrEftTraceNumber" : "TRN1",
-    "payerIdentifier" : "PAYER_ID",
+    "payerIdentifier" : "PAYER_ID_1",
     "receiverIdentifier" : "CLEARINGHOUSE_ID",
     "transactionSetIdentifierCode" : "835",
     "fileInfo" : {
       "name" : "835-provider-level-adjustment.dat",
       "url" : "file:/edi-samples/edi_files/835/835-provider-level-adjustment.dat",
-      "lastModifiedDateTime" : "2025-10-12T13:27:35.454-04:00",
-      "fileType" : "EDI"
+      "lastModifiedDateTime" : "2026-08-24T09:55:04.098-04:00"
     }
   }
 }
 , {
-  "id" : "6a32cb6297613a0e499064c4",
+  "id" : "6aaac751fd84853fa5df7baa",
   "objectType" : "PROVIDER_ADJUSTMENT",
   "providerIdentifier" : "PAYEE_ID99",
   "fiscalPeriodDate" : "2024-12-31",
@@ -177,7 +176,7 @@
     } ]
   },
   "transaction" : {
-    "id" : "6a32cb6297613a0e499064ab",
+    "id" : "6aaac751fd84853fa5df7b90",
     "controlNumber" : "0001",
     "transactionType" : "PAYMENT",
     "productionDate" : "2024-12-23",
@@ -188,19 +187,18 @@
     "originatingCompanySupplementalCode" : "SUPPL_CDE",
     "paymentDate" : "2024-12-24",
     "checkOrEftTraceNumber" : "TRN1",
-    "payerIdentifier" : "PAYER_ID",
+    "payerIdentifier" : "PAYER_ID_1",
     "receiverIdentifier" : "CLEARINGHOUSE_ID",
     "transactionSetIdentifierCode" : "835",
     "fileInfo" : {
       "name" : "835-provider-level-adjustment.dat",
       "url" : "file:/edi-samples/edi_files/835/835-provider-level-adjustment.dat",
-      "lastModifiedDateTime" : "2025-10-12T13:27:35.454-04:00",
-      "fileType" : "EDI"
+      "lastModifiedDateTime" : "2026-08-24T09:55:04.098-04:00"
     }
   }
 }
 , {
-  "id" : "6a32cb6297613a0e4990650a",
+  "id" : "6aaac751fd84853fa5df7bf3",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "5554555444",
   "chargeAmount" : 800.00,
@@ -315,7 +313,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a32cb6297613a0e499064c9",
+    "id" : "6aaac751fd84853fa5df7bb0",
     "controlNumber" : "0002",
     "transactionType" : "PAYMENT",
     "productionDate" : "2024-12-23",
@@ -323,27 +321,26 @@
     "totalPaymentAmount" : 500.00,
     "creditOrDebitFlagCode" : "C",
     "paymentMethodType" : "CHECK",
-    "paymentFormatCode" : "5",
-    "senderBankRoutingNumber" : "7",
-    "senderAccountNumber" : "9",
+    "paymentFormatCode" : "CCP",
+    "senderBankRoutingNumber" : "123",
+    "senderAccountNumber" : "345",
     "originatingCompanyId" : "PAYERACTID",
     "originatingCompanySupplementalCode" : "SUPPL_CDE",
     "receiverAccountNumber" : "RECEIVER_ACCT_1",
     "paymentDate" : "2024-12-25",
     "checkOrEftTraceNumber" : "CHECK_1",
-    "payerIdentifier" : "PAYER_ID",
+    "payerIdentifier" : "PAYER_ID_1",
     "receiverIdentifier" : "CLEARINGHOUSE_ID",
     "transactionSetIdentifierCode" : "835",
     "fileInfo" : {
       "name" : "835-provider-level-adjustment.dat",
       "url" : "file:/edi-samples/edi_files/835/835-provider-level-adjustment.dat",
-      "lastModifiedDateTime" : "2025-10-12T13:27:35.454-04:00",
-      "fileType" : "EDI"
+      "lastModifiedDateTime" : "2026-08-24T09:55:04.098-04:00"
     }
   }
 }
 , {
-  "id" : "6a32cb6297613a0e499064ea",
+  "id" : "6aaac751fd84853fa5df7bd1",
   "objectType" : "PROVIDER_ADJUSTMENT",
   "providerIdentifier" : "PAYEE_ID2",
   "fiscalPeriodDate" : "2023-12-31",
@@ -412,7 +409,7 @@
     } ]
   },
   "transaction" : {
-    "id" : "6a32cb6297613a0e499064c9",
+    "id" : "6aaac751fd84853fa5df7bb0",
     "controlNumber" : "0002",
     "transactionType" : "PAYMENT",
     "productionDate" : "2024-12-23",
@@ -420,27 +417,26 @@
     "totalPaymentAmount" : 500.00,
     "creditOrDebitFlagCode" : "C",
     "paymentMethodType" : "CHECK",
-    "paymentFormatCode" : "5",
-    "senderBankRoutingNumber" : "7",
-    "senderAccountNumber" : "9",
+    "paymentFormatCode" : "CCP",
+    "senderBankRoutingNumber" : "123",
+    "senderAccountNumber" : "345",
     "originatingCompanyId" : "PAYERACTID",
     "originatingCompanySupplementalCode" : "SUPPL_CDE",
     "receiverAccountNumber" : "RECEIVER_ACCT_1",
     "paymentDate" : "2024-12-25",
     "checkOrEftTraceNumber" : "CHECK_1",
-    "payerIdentifier" : "PAYER_ID",
+    "payerIdentifier" : "PAYER_ID_1",
     "receiverIdentifier" : "CLEARINGHOUSE_ID",
     "transactionSetIdentifierCode" : "835",
     "fileInfo" : {
       "name" : "835-provider-level-adjustment.dat",
       "url" : "file:/edi-samples/edi_files/835/835-provider-level-adjustment.dat",
-      "lastModifiedDateTime" : "2025-10-12T13:27:35.454-04:00",
-      "fileType" : "EDI"
+      "lastModifiedDateTime" : "2026-08-24T09:55:04.098-04:00"
     }
   }
 }
 , {
-  "id" : "6a32cb6297613a0e49906502",
+  "id" : "6aaac751fd84853fa5df7bea",
   "objectType" : "PROVIDER_ADJUSTMENT",
   "providerIdentifier" : "PAYEE_ID3",
   "fiscalPeriodDate" : "2022-12-31",
@@ -509,7 +505,7 @@
     } ]
   },
   "transaction" : {
-    "id" : "6a32cb6297613a0e499064ef",
+    "id" : "6aaac751fd84853fa5df7bd7",
     "controlNumber" : "0003",
     "transactionType" : "PAYMENT",
     "productionDate" : "2024-12-23",
@@ -520,14 +516,13 @@
     "originatingCompanySupplementalCode" : "SUPPL_CODE",
     "paymentDate" : "2024-12-24",
     "checkOrEftTraceNumber" : "TRN3",
-    "payerIdentifier" : "PAYER_ID",
+    "payerIdentifier" : "PAYER_ID_1",
     "receiverIdentifier" : "CLEARINGHOUSE_ID",
     "transactionSetIdentifierCode" : "835",
     "fileInfo" : {
       "name" : "835-provider-level-adjustment.dat",
       "url" : "file:/edi-samples/edi_files/835/835-provider-level-adjustment.dat",
-      "lastModifiedDateTime" : "2025-10-12T13:27:35.454-04:00",
-      "fileType" : "EDI"
+      "lastModifiedDateTime" : "2026-08-24T09:55:04.098-04:00"
     }
   }
 }

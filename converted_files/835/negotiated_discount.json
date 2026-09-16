@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6a32cb6297613a0e499065c5",
+  "id" : "6aaac751fd84853fa5df7cae",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "7722337",
   "chargeAmount" : 226.00,
@@ -391,7 +391,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a32cb6297613a0e49906572",
+    "id" : "6aaac751fd84853fa5df7c5b",
     "controlNumber" : "35681",
     "transactionType" : "PAYMENT",
     "productionDate" : "2019-03-14",
@@ -414,8 +414,7 @@
     "fileInfo" : {
       "name" : "negotiated_discount.dat",
       "url" : "file:/edi-samples/edi_files/835/negotiated_discount.dat",
-      "lastModifiedDateTime" : "2025-07-03T18:09:16.075-04:00",
-      "fileType" : "EDI"
+      "lastModifiedDateTime" : "2025-07-03T18:09:16.075-04:00"
     }
   }
 }

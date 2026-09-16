@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6a32cb6297613a0e49905783",
+  "id" : "6aaac750fd84853fa5df7044",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "5554555444",
   "chargeAmount" : 700.00,
@@ -95,7 +95,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a32cb6297613a0e49905763",
+    "id" : "6aaac750fd84853fa5df7024",
     "controlNumber" : "0002",
     "transactionType" : "PAYMENT",
     "productionDate" : "2024-12-23",
@@ -110,13 +110,12 @@
     "fileInfo" : {
       "name" : "835-validation-issues.edi",
       "url" : "file:/edi-samples/edi_files/835/835-validation-issues.edi",
-      "lastModifiedDateTime" : "2026-05-17T10:06:32.63-04:00",
-      "fileType" : "EDI"
+      "lastModifiedDateTime" : "2026-08-24T09:55:04.098-04:00"
     }
   }
 }
 , {
-  "id" : "6a32cb6297613a0e4990579d",
+  "id" : "6aaac750fd84853fa5df705e",
   "objectType" : "PROVIDER_ADJUSTMENT",
   "providerIdentifier" : "PAYEE_ID1",
   "fiscalPeriodDate" : "2024-12-31",
@@ -193,7 +192,7 @@
     } ]
   },
   "transaction" : {
-    "id" : "6a32cb6297613a0e4990578a",
+    "id" : "6aaac750fd84853fa5df704b",
     "controlNumber" : "0001",
     "transactionType" : "PAYMENT",
     "productionDate" : "2024-12-23",
@@ -204,19 +203,18 @@
     "originatingCompanySupplementalCode" : "SUPPL_CDE",
     "paymentDate" : "2024-12-24",
     "checkOrEftTraceNumber" : "TRN1",
-    "payerIdentifier" : "PAYER_ID",
+    "payerIdentifier" : "PAYER_ID_1",
     "receiverIdentifier" : "CLEARINGHOUSE_ID",
     "transactionSetIdentifierCode" : "835",
     "fileInfo" : {
       "name" : "835-provider-level-adjustment.dat",
       "url" : "file:/edi-samples/edi_files/835/835-provider-level-adjustment.dat",
-      "lastModifiedDateTime" : "2025-10-12T13:27:35.454-04:00",
-      "fileType" : "EDI"
+      "lastModifiedDateTime" : "2026-08-24T09:55:04.098-04:00"
     }
   }
 }
 , {
-  "id" : "6a32cb6297613a0e499057a3",
+  "id" : "6aaac750fd84853fa5df7065",
   "objectType" : "PROVIDER_ADJUSTMENT",
   "providerIdentifier" : "PAYEE_ID99",
   "fiscalPeriodDate" : "2024-12-31",
@@ -293,7 +291,7 @@
     } ]
   },
   "transaction" : {
-    "id" : "6a32cb6297613a0e4990578a",
+    "id" : "6aaac750fd84853fa5df704b",
     "controlNumber" : "0001",
     "transactionType" : "PAYMENT",
     "productionDate" : "2024-12-23",
@@ -304,19 +302,18 @@
     "originatingCompanySupplementalCode" : "SUPPL_CDE",
     "paymentDate" : "2024-12-24",
     "checkOrEftTraceNumber" : "TRN1",
-    "payerIdentifier" : "PAYER_ID",
+    "payerIdentifier" : "PAYER_ID_1",
     "receiverIdentifier" : "CLEARINGHOUSE_ID",
     "transactionSetIdentifierCode" : "835",
     "fileInfo" : {
       "name" : "835-provider-level-adjustment.dat",
       "url" : "file:/edi-samples/edi_files/835/835-provider-level-adjustment.dat",
-      "lastModifiedDateTime" : "2025-10-12T13:27:35.454-04:00",
-      "fileType" : "EDI"
+      "lastModifiedDateTime" : "2026-08-24T09:55:04.098-04:00"
     }
   }
 }
 , {
-  "id" : "6a32cb6297613a0e499057e9",
+  "id" : "6aaac750fd84853fa5df70ae",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "5554555444",
   "chargeAmount" : 800.00,
@@ -431,7 +428,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a32cb6297613a0e499057a8",
+    "id" : "6aaac750fd84853fa5df706b",
     "controlNumber" : "0002",
     "transactionType" : "PAYMENT",
     "productionDate" : "2024-12-23",
@@ -439,27 +436,26 @@
     "totalPaymentAmount" : 500.00,
     "creditOrDebitFlagCode" : "C",
     "paymentMethodType" : "CHECK",
-    "paymentFormatCode" : "5",
-    "senderBankRoutingNumber" : "7",
-    "senderAccountNumber" : "9",
+    "paymentFormatCode" : "CCP",
+    "senderBankRoutingNumber" : "123",
+    "senderAccountNumber" : "345",
     "originatingCompanyId" : "PAYERACTID",
     "originatingCompanySupplementalCode" : "SUPPL_CDE",
     "receiverAccountNumber" : "RECEIVER_ACCT_1",
     "paymentDate" : "2024-12-25",
     "checkOrEftTraceNumber" : "CHECK_1",
-    "payerIdentifier" : "PAYER_ID",
+    "payerIdentifier" : "PAYER_ID_1",
     "receiverIdentifier" : "CLEARINGHOUSE_ID",
     "transactionSetIdentifierCode" : "835",
     "fileInfo" : {
       "name" : "835-provider-level-adjustment.dat",
       "url" : "file:/edi-samples/edi_files/835/835-provider-level-adjustment.dat",
-      "lastModifiedDateTime" : "2025-10-12T13:27:35.454-04:00",
-      "fileType" : "EDI"
+      "lastModifiedDateTime" : "2026-08-24T09:55:04.098-04:00"
     }
   }
 }
 , {
-  "id" : "6a32cb6297613a0e499057c9",
+  "id" : "6aaac750fd84853fa5df708c",
   "objectType" : "PROVIDER_ADJUSTMENT",
   "providerIdentifier" : "PAYEE_ID2",
   "fiscalPeriodDate" : "2023-12-31",
@@ -528,7 +524,7 @@
     } ]
   },
   "transaction" : {
-    "id" : "6a32cb6297613a0e499057a8",
+    "id" : "6aaac750fd84853fa5df706b",
     "controlNumber" : "0002",
     "transactionType" : "PAYMENT",
     "productionDate" : "2024-12-23",
@@ -536,27 +532,26 @@
     "totalPaymentAmount" : 500.00,
     "creditOrDebitFlagCode" : "C",
     "paymentMethodType" : "CHECK",
-    "paymentFormatCode" : "5",
-    "senderBankRoutingNumber" : "7",
-    "senderAccountNumber" : "9",
+    "paymentFormatCode" : "CCP",
+    "senderBankRoutingNumber" : "123",
+    "senderAccountNumber" : "345",
     "originatingCompanyId" : "PAYERACTID",
     "originatingCompanySupplementalCode" : "SUPPL_CDE",
     "receiverAccountNumber" : "RECEIVER_ACCT_1",
     "paymentDate" : "2024-12-25",
     "checkOrEftTraceNumber" : "CHECK_1",
-    "payerIdentifier" : "PAYER_ID",
+    "payerIdentifier" : "PAYER_ID_1",
     "receiverIdentifier" : "CLEARINGHOUSE_ID",
     "transactionSetIdentifierCode" : "835",
     "fileInfo" : {
       "name" : "835-provider-level-adjustment.dat",
       "url" : "file:/edi-samples/edi_files/835/835-provider-level-adjustment.dat",
-      "lastModifiedDateTime" : "2025-10-12T13:27:35.454-04:00",
-      "fileType" : "EDI"
+      "lastModifiedDateTime" : "2026-08-24T09:55:04.098-04:00"
     }
   }
 }
 , {
-  "id" : "6a32cb6297613a0e499057e1",
+  "id" : "6aaac750fd84853fa5df70a5",
   "objectType" : "PROVIDER_ADJUSTMENT",
   "providerIdentifier" : "PAYEE_ID3",
   "fiscalPeriodDate" : "2022-12-31",
@@ -625,7 +620,7 @@
     } ]
   },
   "transaction" : {
-    "id" : "6a32cb6297613a0e499057ce",
+    "id" : "6aaac750fd84853fa5df7092",
     "controlNumber" : "0003",
     "transactionType" : "PAYMENT",
     "productionDate" : "2024-12-23",
@@ -636,19 +631,18 @@
     "originatingCompanySupplementalCode" : "SUPPL_CODE",
     "paymentDate" : "2024-12-24",
     "checkOrEftTraceNumber" : "TRN3",
-    "payerIdentifier" : "PAYER_ID",
+    "payerIdentifier" : "PAYER_ID_1",
     "receiverIdentifier" : "CLEARINGHOUSE_ID",
     "transactionSetIdentifierCode" : "835",
     "fileInfo" : {
       "name" : "835-provider-level-adjustment.dat",
       "url" : "file:/edi-samples/edi_files/835/835-provider-level-adjustment.dat",
-      "lastModifiedDateTime" : "2025-10-12T13:27:35.454-04:00",
-      "fileType" : "EDI"
+      "lastModifiedDateTime" : "2026-08-24T09:55:04.098-04:00"
     }
   }
 }
 , {
-  "id" : "6a32cb6297613a0e4990581c",
+  "id" : "6aaac750fd84853fa5df70e1",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "PATACCT",
   "chargeAmount" : 400.00,
@@ -818,7 +812,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a32cb6297613a0e499057f0",
+    "id" : "6aaac750fd84853fa5df70b5",
     "controlNumber" : "10060875",
     "transactionType" : "PAYMENT",
     "productionDate" : "2019-08-27",
@@ -834,13 +828,12 @@
     "fileInfo" : {
       "name" : "claim_adj_reason.dat",
       "url" : "file:/edi-samples/edi_files/835/claim_adj_reason.dat",
-      "lastModifiedDateTime" : "2023-08-28T03:50:07.198-04:00",
-      "fileType" : "EDI"
+      "lastModifiedDateTime" : "2023-08-28T03:50:07.198-04:00"
     }
   }
 }
 , {
-  "id" : "6a32cb6297613a0e4990584a",
+  "id" : "6aaac750fd84853fa5df710f",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "PATACCT",
   "chargeAmount" : 40000.00,
@@ -972,7 +965,7 @@
   } ],
   "serviceLines" : [ ],
   "transaction" : {
-    "id" : "6a32cb6297613a0e49905823",
+    "id" : "6aaac750fd84853fa5df70e8",
     "controlNumber" : "10060875",
     "transactionType" : "PAYMENT",
     "productionDate" : "2019-08-27",
@@ -988,13 +981,12 @@
     "fileInfo" : {
       "name" : "not_covered_inpatient.dat",
       "url" : "file:/edi-samples/edi_files/835/not_covered_inpatient.dat",
-      "lastModifiedDateTime" : "2023-08-28T03:50:07.199-04:00",
-      "fileType" : "EDI"
+      "lastModifiedDateTime" : "2023-08-28T03:50:07.199-04:00"
     }
   }
 }
 , {
-  "id" : "6a32cb6297613a0e499058a4",
+  "id" : "6aaac750fd84853fa5df7169",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "7722337",
   "chargeAmount" : 226.00,
@@ -1385,7 +1377,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a32cb6297613a0e49905851",
+    "id" : "6aaac750fd84853fa5df7116",
     "controlNumber" : "35681",
     "transactionType" : "PAYMENT",
     "productionDate" : "2019-03-14",
@@ -1408,13 +1400,12 @@
     "fileInfo" : {
       "name" : "negotiated_discount.dat",
       "url" : "file:/edi-samples/edi_files/835/negotiated_discount.dat",
-      "lastModifiedDateTime" : "2025-07-03T18:09:16.075-04:00",
-      "fileType" : "EDI"
+      "lastModifiedDateTime" : "2025-07-03T18:09:16.075-04:00"
     }
   }
 }
 , {
-  "id" : "6a32cb6297613a0e499058d6",
+  "id" : "6aaac750fd84853fa5df719b",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "5554555444",
   "chargeAmount" : 800.00,
@@ -1512,7 +1503,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a32cb6297613a0e499058ab",
+    "id" : "6aaac750fd84853fa5df7170",
     "controlNumber" : "112233",
     "transactionType" : "PAYMENT",
     "productionDate" : "2019-03-14",
@@ -1533,13 +1524,12 @@
     "fileInfo" : {
       "name" : "dollars_data_separate.dat",
       "url" : "file:/edi-samples/edi_files/835/dollars_data_separate.dat",
-      "lastModifiedDateTime" : "2023-08-28T03:50:07.198-04:00",
-      "fileType" : "EDI"
+      "lastModifiedDateTime" : "2023-08-28T03:50:07.198-04:00"
     }
   }
 }
 , {
-  "id" : "6a32cb6297613a0e499058d7",
+  "id" : "6aaac750fd84853fa5df719c",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "8765432112",
   "chargeAmount" : 1200.00,
@@ -1636,7 +1626,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a32cb6297613a0e499058ab",
+    "id" : "6aaac750fd84853fa5df7170",
     "controlNumber" : "112233",
     "transactionType" : "PAYMENT",
     "productionDate" : "2019-03-14",
@@ -1657,13 +1647,12 @@
     "fileInfo" : {
       "name" : "dollars_data_separate.dat",
       "url" : "file:/edi-samples/edi_files/835/dollars_data_separate.dat",
-      "lastModifiedDateTime" : "2023-08-28T03:50:07.198-04:00",
-      "fileType" : "EDI"
+      "lastModifiedDateTime" : "2023-08-28T03:50:07.198-04:00"
     }
   }
 }
 , {
-  "id" : "6a32cb6297613a0e49905901",
+  "id" : "6aaac750fd84853fa5df71c6",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "5554555444",
   "chargeAmount" : 800.00,
@@ -1778,7 +1767,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a32cb6297613a0e499058de",
+    "id" : "6aaac750fd84853fa5df71a3",
     "controlNumber" : "0002",
     "transactionType" : "PAYMENT",
     "productionDate" : "2024-12-23",
@@ -1795,13 +1784,12 @@
     "fileInfo" : {
       "name" : "835-minimal.dat",
       "url" : "file:/edi-samples/edi_files/835/835-minimal.dat",
-      "lastModifiedDateTime" : "2026-06-16T10:38:18.088-04:00",
-      "fileType" : "EDI"
+      "lastModifiedDateTime" : "2026-08-24T09:55:04.097-04:00"
     }
   }
 }
 , {
-  "id" : "6a32cb6297613a0e49905930",
+  "id" : "6aaac750fd84853fa5df71f5",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "PATACCT",
   "chargeAmount" : 150.00,
@@ -1939,7 +1927,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a32cb6297613a0e49905908",
+    "id" : "6aaac750fd84853fa5df71cd",
     "controlNumber" : "10060875",
     "transactionType" : "PAYMENT",
     "productionDate" : "2019-08-27",
@@ -1955,13 +1943,12 @@
     "fileInfo" : {
       "name" : "835-denial.dat",
       "url" : "file:/edi-samples/edi_files/835/835-denial.dat",
-      "lastModifiedDateTime" : "2025-09-22T10:36:36.673-04:00",
-      "fileType" : "EDI"
+      "lastModifiedDateTime" : "2025-09-22T10:36:36.673-04:00"
     }
   }
 }
 , {
-  "id" : "6a32cb6297613a0e49905992",
+  "id" : "6aaac750fd84853fa5df7257",
   "objectType" : "PAYMENT",
   "patientControlNumber" : "7722337",
   "chargeAmount" : 384.00,
@@ -2430,7 +2417,7 @@
     }
   } ],
   "transaction" : {
-    "id" : "6a32cb6297613a0e49905937",
+    "id" : "6aaac750fd84853fa5df71fc",
     "controlNumber" : "35681",
     "transactionType" : "PAYMENT",
     "productionDate" : "2019-03-14",
@@ -2453,8 +2440,7 @@
     "fileInfo" : {
       "name" : "835-all-fields.dat",
       "url" : "file:/edi-samples/edi_files/835/835-all-fields.dat",
-      "lastModifiedDateTime" : "2026-06-10T22:19:35.713-04:00",
-      "fileType" : "EDI"
+      "lastModifiedDateTime" : "2026-08-24T09:55:04.097-04:00"
     }
   }
 }
