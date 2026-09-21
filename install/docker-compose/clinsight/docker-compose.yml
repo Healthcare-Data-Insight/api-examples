@@ -1,6 +1,7 @@
 # ClaimInsight app with MongoDB
 services:
   mongo:
+#    Note: use mongo:7 if your linux kernel is between than 6.19 and 7.13
     image: mongo:8.3
     restart: unless-stopped
     volumes:
