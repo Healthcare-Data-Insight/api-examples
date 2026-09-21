@@ -759,6 +759,8 @@ class InstClaim(EdiConverterModel):
     'Value infos. EDI: HI*BE.'
     conditions: list[Code] = Field(default_factory=list, description='Conditions. EDI: HI*BG.')
     'Conditions. EDI: HI*BG.'
+    treatments: list[Code] = Field(default_factory=list, description='Treatment codes. EDI: HI*TC.')
+    'Treatment codes. EDI: HI*TC.'
     attachments: list[Attachment] = Field(default_factory=list, description='Attachments. EDI: PWK.')
     'Attachments. EDI: PWK.'
     contract_info: ContractInfo | None = Field(default=None, description='Contract info. EDI: CN1.')

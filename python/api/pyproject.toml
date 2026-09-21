@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "ediconvert-sdk"
-version = "2.15.1"
+version = "2.15.5"
 description = "Python SDK for the Healthcare Data Insight EDI Converter and EDI Generator API"
 readme = "README.md"
 requires-python = ">=3.10"
