@@ -1,7 +1,7 @@
 # ClaimInsight app with MongoDB
 services:
   mongo:
-    image: mongo:8
+    image: mongo:8.3
     restart: unless-stopped
     volumes:
       - ./mongo_data:/data/db
@@ -9,7 +9,7 @@ services:
 #    ports:
 #      - "27017:27017"
   app:
-    image: myarch/ediconvert:2.15.2
+    image: myarch/claim-insight:2.15.5
     restart: unless-stopped
     depends_on:
       - mongo
