@@ -15,6 +15,8 @@
       repeatFields: [ Id, PatientControlNumber ]
       # Repeat these fields from the repeatFields on every row for child lists
       repeatEachRow: [ "*" ]
+      excelSheetName: "Claims"
+
       # By default, the claim-level list doesn't have a suffix, but you can override it here
       #fileSuffix: "-Claims"
 
@@ -22,6 +24,8 @@
     - names: [ Lines ]
       # Create a list of lines in a separate file
       strategy: ROWS
+      excelSheetName: "Service Lines"
+
 
     - names: [ Diags ]
       # How many times to repeat the column (3 is the default)
@@ -60,6 +64,8 @@
 
     - names: [ healthCoverages ]
       strategy: ROWS
+      excelSheetName: "Members"
+
 
     # How many times to repeat these lists (the default is 3)
     - names:
@@ -104,11 +110,15 @@
       # Repeat these fields from the repeatFields on every row for child lists
       repeatEachRow: [ "*" ]
       #fileSuffix: "-Claims"
+      excelSheetName: "Claims"
+
 
     # Schema for the service line list
     - names: [ Lines ]
       # Create a list of lines in a separate file
       strategy: ROWS
+      excelSheetName: "Service Lines"
+
 
     - names: [ OtherDiags ]
       numberOfColumnRepeats: 5
@@ -149,16 +159,21 @@
       repeatFields: [ Id, PatientControlNumber, PayerControlNumber ]
       # Repeat these fields from the repeatFields on every row for child lists
       repeatEachRow: [ "*" ]
+      excelSheetName: "Claims"
+
       #fileSuffix: "-Payments"
 
     # Schema for the line list
     - names: [ Lines ]
       # Create a list of lines in a separate file
       strategy: ROWS
+      excelSheetName: "Service Lines"
+
 
     # Schema for the transaction list
     - names: [ Transactions ]
       strategy: ROWS
+      excelSheetName: "Remittances"
 
     # provider adjustments: transaction and provider fields repeat for each adjustment
     - names: [ ProviderAdjustmentMain ]
@@ -170,8 +185,10 @@
       strategy: ROWS
       excludedFields: [ "RemittanceDelivery*" ]
 
+
     - names: [ ProviderAdjustments ]
       strategy: ROWS
+      excelSheetName: "Provider Adjustments"
 
     - names: [ LineAdjs, Adjs, LineRemarkCodes ]
       numberOfColumnRepeats: 5
@@ -208,6 +225,7 @@
       # Create a list of lines in a separate file
       strategy: ROWS
       fileSuffix: ""
+      excelSheetName: "Claims and Service Lines"
 
 # Single file; all fields from lines; only IDs from the header
 - transactionTypes: [ "837P", "837I", "837D", "835" ]
@@ -236,10 +254,13 @@
       repeatFields: [ "*" ]
       # Repeat these fields from the repeatFields on every row for child lists
       repeatEachRow: [ "*" ]
+
     - names: [ Lines ]
       # Create a list of lines in a separate file
       strategy: ROWS
       fileSuffix: ""
+      excelSheetName: "Claims and Service Lines"
+
 
 # Only header fields, no lines
 - transactionTypes: [ "837P", "837I", "837D", "835" ]
@@ -252,7 +273,9 @@
 # Only key fields
 - transactionTypes: [ "835" ]
   name: key-fields
-  baseName: default
+  baseName: lines-with-header-repeat-first-row
+  downloadFileName: payments-key-fields
+
   includedFields:
     - Id
     - FileName
@@ -291,6 +314,12 @@
     - LineRemarkCode*
 
   listSchemas:
+    - names: [ LineRemarkCodes ]
+      numberOfColumnRepeats: 3
+
+    - names: [ Transactions, ProviderAdjustments ]
+      output: False
+
     - names: [ Main ]
       # Suppress writing header to the output as a separate file
       output: False
@@ -299,16 +328,13 @@
       # Repeat these fields from the repeatFields on every row for child lists
       repeatEachRow: [ Id, FileName, PatientControlNumber ]
 
-    - names: [ LineRemarkCodes ]
-      numberOfColumnRepeats: 3
-
-    - names: [ Transactions, ProviderAdjustments ]
-      output: False
 
 
 - transactionTypes: [ "837P" ]
   name: key-fields
-  baseName: default
+  baseName: lines-with-header-repeat-first-row
+  downloadFileName: claims-key-fields
+
   includedFields:
     - Id
     - FileName
@@ -347,7 +373,9 @@
 
 - transactionTypes: [ "837I" ]
   name: key-fields
-  baseName: default
+  baseName: lines-with-header-repeat-first-row
+  downloadFileName: claims-key-fields
+
   includedFields:
     - Id
     - FileName
@@ -394,6 +422,7 @@
 - transactionTypes: [ "835" ]
   name: transactions-only
   baseName: default
+  downloadFileName: remittances
 
   listSchemas:
     - names: [ Main, Lines, ProviderAdjustments ]
@@ -403,6 +432,7 @@
 - transactionTypes: [ "835" ]
   name: provider-adjustments-only
   baseName: default
+  downloadFileName: provider-adjustments
 
   listSchemas:
     - names: [ Main, Lines, Transactions ]
