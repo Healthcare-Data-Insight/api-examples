@@ -438,6 +438,16 @@
     - names: [ Main, Lines, Transactions ]
       output: False
 
+# 835 transactions and  provider adjustments
+- transactionTypes: [ "835" ]
+  name: transactions-provider-adjustments
+  baseName: default
+  downloadFileName: remittances
+
+  listSchemas:
+    - names: [ Main, Lines ]
+      output: False
+
 
 # Schemas that exclude transactions and provider adjustments
 - transactionTypes: [ "837P", "837I", "837D", "835" ]
