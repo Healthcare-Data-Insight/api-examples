@@ -3,94 +3,123 @@
 ────────────────────────────────────┼────────────────────┼───────
  SparseBitSet                       │ 1.3                │ maven 
  accessors-smart                    │ 2.6.0              │ maven 
+ annotations                        │ 2.57.0             │ maven 
+ apache5-client                     │ 2.57.0             │ maven 
+ arns                               │ 2.57.0             │ maven 
  asm                                │ 9.7.1              │ maven 
  asm                                │ 9.7.1              │ maven 
  atmosphere-runtime                 │ 3.0.5.slf4jvaadin1 │ maven 
- azure-core                         │ 1.59.0             │ maven 
- azure-core-http-netty              │ 1.16.6             │ maven 
+ auth                               │ 2.57.0             │ maven 
+ aws                                │ 2.15.6             │ maven 
+ aws-core                           │ 2.57.0             │ maven 
+ aws-crt                            │ 0.49.0             │ maven 
+ aws-lambda-java-core               │ 1.4.1              │ maven 
+ aws-lambda-java-events             │ 3.16.1             │ maven 
+ aws-query-protocol                 │ 2.57.0             │ maven 
+ aws-xml-protocol                   │ 2.57.0             │ maven 
+ azure-core                         │ 1.60.0             │ maven 
+ azure-core-http-netty              │ 1.16.8             │ maven 
  azure-json                         │ 1.5.1              │ maven 
- azure-storage-blob                 │ 12.35.1            │ maven 
- azure-storage-common               │ 12.34.1            │ maven 
- azure-storage-internal-avro        │ 12.20.1            │ maven 
+ azure-storage-blob                 │ 12.36.0            │ maven 
+ azure-storage-common               │ 12.35.0            │ maven 
+ azure-storage-internal-avro        │ 12.21.0            │ maven 
  azure-xml                          │ 1.2.1              │ maven 
- bson                               │ 5.6.5              │ maven 
- bson                               │ 5.6.5              │ maven 
- bson-record-codec                  │ 5.8.1              │ maven 
- bson-record-codec                  │ 5.8.1              │ maven 
- busybox                            │ 1.38.0-r2          │ apk   
- busybox-binsh                      │ 1.38.0-r2          │ apk   
+ bson                               │ 5.13.0             │ maven 
+ bson                               │ 5.13.0             │ maven 
+ bson-record-codec                  │ 5.13.0             │ maven 
+ bson-record-codec                  │ 5.13.0             │ maven 
+ busybox                            │ 1.38.0-r5          │ apk   
+ busybox-binsh                      │ 1.38.0-r5          │ apk   
+ checksums                          │ 2.57.0             │ maven 
+ checksums-spi                      │ 2.57.0             │ maven 
  classmate                          │ 1.7.3              │ maven 
  collaboration-engine               │ 7.0.0              │ maven 
  commons-codec                      │ 1.21.0             │ maven 
- commons-collections4               │ 4.5.0              │ maven 
+ commons-collections4               │ 4.6.0              │ maven 
  commons-compress                   │ 1.28.0             │ maven 
- commons-io                         │ 2.20.0             │ maven 
- commons-lang3                      │ 3.20.0             │ maven 
+ commons-io                         │ 2.22.0             │ maven 
+ commons-lang3                      │ 3.21.0             │ maven 
  commons-logging                    │ 1.3.6              │ maven 
  commons-math3                      │ 3.6.1              │ maven 
  commons-text                       │ 1.15.0             │ maven 
  content-type                       │ 2.3                │ maven 
+ crt-core                           │ 2.57.0             │ maven 
  curvesapi                          │ 1.08               │ maven 
  distro-base                        │ 25-r2              │ apk   
  distro-baselayout                  │ 3.7.2-r1           │ apk   
  distro-baselayout-data             │ 3.7.2-r1           │ apk   
- edi                                │ 2.15.5             │ maven 
- ediconvert                         │ 2.15.5             │ maven 
- flatlaf                            │ 3.7.1              │ maven 
- flatlaf                            │ 3.7.1              │ maven 
- flow-client                        │ 25.2.8             │ maven 
- flow-data                          │ 25.2.8             │ maven 
- flow-dnd                           │ 25.2.8             │ maven 
- flow-html-components               │ 25.2.8             │ maven 
- flow-lit-template                  │ 25.2.8             │ maven 
- flow-push                          │ 25.2.8             │ maven 
- flow-react                         │ 25.2.8             │ maven 
- flow-server                        │ 25.2.8             │ maven 
+ edi                                │ 2.15.6             │ maven 
+ ediconvert                         │ 2.15.6             │ maven 
+ endpoints-spi                      │ 2.57.0             │ maven 
+ eventstream                        │ 2.57.0             │ maven 
+ flatlaf                            │ 3.7.2              │ maven 
+ flatlaf                            │ 3.7.2              │ maven 
+ flow-client                        │ 25.2.13            │ maven 
+ flow-data                          │ 25.2.13            │ maven 
+ flow-dnd                           │ 25.2.13            │ maven 
+ flow-html-components               │ 25.2.13            │ maven 
+ flow-lit-template                  │ 25.2.13            │ maven 
+ flow-push                          │ 25.2.13            │ maven 
+ flow-react                         │ 25.2.13            │ maven 
+ flow-server                        │ 25.2.13            │ maven 
+ fontbox                            │ 3.0.8              │ maven 
  gentyref                           │ 1.2.0.vaadin1      │ maven 
- glibc                              │ 2.43.0-r7          │ apk   
- glibc-utils                        │ 2.43.0-r7          │ apk   
+ glibc                              │ 2.43.0-r11         │ apk   
+ glibc-utils                        │ 2.43.0-r11         │ apk   
  gson                               │ 2.13.1             │ maven 
  hardened-release                   │ 25-r2              │ apk   
  hibernate-validator                │ 9.1.3.Final        │ maven 
- jackson-annotations                │ 2.21               │ maven 
- jackson-core                       │ 2.21.6             │ maven 
- jackson-core                       │ 3.1.5              │ maven 
- jackson-databind                   │ 2.21.6             │ maven 
- jackson-databind                   │ 3.1.5              │ maven 
- jackson-dataformat-csv             │ 2.21.6             │ maven 
- jackson-dataformat-yaml            │ 2.21.6             │ maven 
- jackson-datatype-jdk8              │ 2.21.4             │ maven 
- jackson-datatype-jsr310            │ 2.21.6             │ maven 
- jackson-module-blackbird           │ 2.21.6             │ maven 
- jackson-module-parameter-names     │ 2.21.4             │ maven 
+ http-auth                          │ 2.57.0             │ maven 
+ http-auth-aws                      │ 2.57.0             │ maven 
+ http-auth-aws-eventstream          │ 2.57.0             │ maven 
+ http-auth-spi                      │ 2.57.0             │ maven 
+ http-client-spi                    │ 2.57.0             │ maven 
+ httpclient5                        │ 5.6.4              │ maven 
+ httpcore5                          │ 5.4.3              │ maven 
+ httpcore5-h2                       │ 5.4.3              │ maven 
+ identity-spi                       │ 2.57.0             │ maven 
+ jackson-annotations                │ 2.22               │ maven 
+ jackson-core                       │ 3.1.7              │ maven 
+ jackson-core                       │ 2.22.4             │ maven 
+ jackson-databind                   │ 3.1.7              │ maven 
+ jackson-databind                   │ 2.22.4             │ maven 
+ jackson-dataformat-csv             │ 2.22.4             │ maven 
+ jackson-dataformat-yaml            │ 2.22.4             │ maven 
+ jackson-datatype-jdk8              │ 2.22.4             │ maven 
+ jackson-datatype-jsr310            │ 2.22.4             │ maven 
+ jackson-module-blackbird           │ 2.22.4             │ maven 
+ jackson-module-parameter-names     │ 2.22.4             │ maven 
  jakarta.annotation-api             │ 3.0.0              │ maven 
  jakarta.validation-api             │ 3.1.1              │ maven 
  java-common                        │ 1.0-r3             │ apk   
  jboss-logging                      │ 3.6.3.Final        │ maven 
  jcip-annotations                   │ 1.0-1              │ maven 
  jctools-core                       │ 4.0.6              │ maven 
+ joda-time                          │ 2.10.8             │ maven 
  jrt-fs                             │ 25.0.4.1           │ maven 
  json-smart                         │ 2.6.0              │ maven 
- jsoup                              │ 1.23.1             │ maven 
+ json-utils                         │ 2.57.0             │ maven 
+ jsoup                              │ 1.23.2             │ maven 
  jspecify                           │ 1.0.1              │ maven 
  jspecify                           │ 1.0.1              │ maven 
- jul-to-slf4j                       │ 2.0.17             │ maven 
+ jul-to-slf4j                       │ 2.0.20             │ maven 
  lang-tag                           │ 1.7                │ maven 
  liberica25-container-jre           │ 25.0.4.1_p1-r0     │ apk   
  libxcrypt                          │ 4.5.2-r0           │ apk   
- license3j                          │ 3.2.0              │ maven 
- log4j-api                          │ 2.25.5             │ maven 
- log4j-to-slf4j                     │ 2.25.5             │ maven 
- logback-classic                    │ 1.5.35             │ maven 
- logback-core                       │ 1.5.35             │ maven 
+ license3j                          │ 3.3.0              │ maven 
+ log4j-api                          │ 2.26.1             │ maven 
+ log4j-to-slf4j                     │ 2.26.1             │ maven 
+ logback-classic                    │ 1.6.5              │ maven 
+ logback-core                       │ 1.6.5              │ maven 
+ metrics-spi                        │ 2.57.0             │ maven 
  micrometer-commons                 │ 1.17.1             │ maven 
  micrometer-observation             │ 1.17.1             │ maven 
- mongodb-driver-core                │ 5.8.1              │ maven 
- mongodb-driver-core                │ 5.8.1              │ maven 
- mongodb-driver-reactivestreams     │ 5.8.1              │ maven 
- mongodb-driver-reactivestreams     │ 5.8.1              │ maven 
- mongodb-driver-sync                │ 5.8.1              │ maven 
- mongodb-driver-sync                │ 5.8.1              │ maven 
+ mongodb-driver-core                │ 5.13.0             │ maven 
+ mongodb-driver-core                │ 5.13.0             │ maven 
+ mongodb-driver-reactivestreams     │ 5.13.0             │ maven 
+ mongodb-driver-reactivestreams     │ 5.13.0             │ maven 
+ mongodb-driver-sync                │ 5.13.0             │ maven 
+ mongodb-driver-sync                │ 5.13.0             │ maven 
  netty-buffer                       │ 4.2.17.Final       │ maven 
  netty-codec                        │ 4.2.17.Final       │ maven 
  netty-codec-base                   │ 4.2.17.Final       │ maven 
@@ -107,6 +136,7 @@
  netty-common                       │ 4.2.17.Final       │ maven 
  netty-handler                      │ 4.2.17.Final       │ maven 
  netty-handler-proxy                │ 4.2.17.Final       │ maven 
+ netty-nio-client                   │ 2.57.0             │ maven 
  netty-resolver                     │ 4.2.17.Final       │ maven 
  netty-resolver-dns                 │ 4.2.17.Final       │ maven 
  netty-resolver-dns-classes-macos   │ 4.2.17.Final       │ maven 
@@ -121,17 +151,27 @@
  netty-transport-native-unix-common │ 4.2.17.Final       │ maven 
  nimbus-jose-jwt                    │ 10.9.1             │ maven 
  oauth2-oidc-sdk                    │ 11.38.2            │ maven 
+ pdfbox                             │ 3.0.8              │ maven 
+ pdfbox-io                          │ 3.0.8              │ maven 
  picocli                            │ 4.7.7              │ maven 
  picocli                            │ 4.7.7              │ maven 
  poi                                │ 5.5.1              │ maven 
  poi-ooxml                          │ 5.5.1              │ maven 
  poi-ooxml-lite                     │ 5.5.1              │ maven 
+ profiles                           │ 2.57.0             │ maven 
+ protocol-core                      │ 2.57.0             │ maven 
  reactive-streams                   │ 1.0.4              │ maven 
  reactor-core                       │ 3.8.7              │ maven 
  reactor-core                       │ 3.8.7              │ maven 
  reactor-netty-core                 │ 1.3.7              │ maven 
  reactor-netty-http                 │ 1.3.7              │ maven 
- slf4j-api                          │ 2.0.17             │ maven 
+ regions                            │ 2.57.0             │ maven 
+ retries                            │ 2.57.0             │ maven 
+ retries-spi                        │ 2.57.0             │ maven 
+ s3                                 │ 2.57.0             │ maven 
+ s3-transfer-manager                │ 2.57.0             │ maven 
+ sdk-core                           │ 2.57.0             │ maven 
+ slf4j-api                          │ 2.0.20             │ maven 
  snakeyaml                          │ 2.6                │ maven 
  spring-aop                         │ 7.0.9              │ maven 
  spring-beans                       │ 7.0.9              │ maven 
@@ -185,58 +225,61 @@
  spring-web                         │ 7.0.9              │ maven 
  spring-webmvc                      │ 7.0.9              │ maven 
  spring-websocket                   │ 7.0.9              │ maven 
- swagger-annotations                │ 2.2.19             │ maven 
- tomcat-embed-core                  │ 11.0.25            │ maven 
- tomcat-embed-el                    │ 11.0.25            │ maven 
- tomcat-embed-websocket             │ 11.0.25            │ maven 
- vaadin-accordion-flow              │ 25.2.7             │ maven 
- vaadin-ai-components-flow          │ 25.2.7             │ maven 
- vaadin-app-layout-flow             │ 25.2.7             │ maven 
- vaadin-aura-theme                  │ 25.2.7             │ maven 
- vaadin-avatar-flow                 │ 25.2.7             │ maven 
- vaadin-badge-flow                  │ 25.2.7             │ maven 
- vaadin-breadcrumbs-flow            │ 25.2.7             │ maven 
- vaadin-button-flow                 │ 25.2.7             │ maven 
- vaadin-card-flow                   │ 25.2.7             │ maven 
- vaadin-checkbox-flow               │ 25.2.7             │ maven 
- vaadin-combo-box-flow              │ 25.2.7             │ maven 
- vaadin-confirm-dialog-flow         │ 25.2.7             │ maven 
- vaadin-context-menu-flow           │ 25.2.7             │ maven 
- vaadin-core-components             │ 25.2.7             │ maven 
- vaadin-core-internal               │ 25.2.7             │ maven 
- vaadin-custom-field-flow           │ 25.2.7             │ maven 
- vaadin-date-picker-flow            │ 25.2.7             │ maven 
- vaadin-date-time-picker-flow       │ 25.2.7             │ maven 
- vaadin-details-flow                │ 25.2.7             │ maven 
- vaadin-dialog-flow                 │ 25.2.7             │ maven 
- vaadin-field-highlighter-flow      │ 25.2.7             │ maven 
- vaadin-flow-components-base        │ 25.2.7             │ maven 
- vaadin-form-layout-flow            │ 25.2.7             │ maven 
- vaadin-grid-flow                   │ 25.2.7             │ maven 
- vaadin-icons-flow                  │ 25.2.7             │ maven 
- vaadin-list-box-flow               │ 25.2.7             │ maven 
- vaadin-login-flow                  │ 25.2.7             │ maven 
- vaadin-lumo-theme                  │ 25.2.7             │ maven 
- vaadin-markdown-flow               │ 25.2.7             │ maven 
- vaadin-master-detail-layout-flow   │ 25.2.7             │ maven 
- vaadin-menu-bar-flow               │ 25.2.7             │ maven 
- vaadin-messages-flow               │ 25.2.7             │ maven 
- vaadin-notification-flow           │ 25.2.7             │ maven 
- vaadin-ordered-layout-flow         │ 25.2.7             │ maven 
- vaadin-popover-flow                │ 25.2.7             │ maven 
- vaadin-progress-bar-flow           │ 25.2.7             │ maven 
- vaadin-radio-button-flow           │ 25.2.7             │ maven 
- vaadin-renderer-flow               │ 25.2.7             │ maven 
- vaadin-select-flow                 │ 25.2.7             │ maven 
- vaadin-side-nav-flow               │ 25.2.7             │ maven 
- vaadin-slider-flow                 │ 25.2.7             │ maven 
- vaadin-split-layout-flow           │ 25.2.7             │ maven 
- vaadin-spring                      │ 25.2.8             │ maven 
- vaadin-spring-boot-starter         │ 25.2.7             │ maven 
- vaadin-tabs-flow                   │ 25.2.7             │ maven 
- vaadin-text-field-flow             │ 25.2.7             │ maven 
- vaadin-time-picker-flow            │ 25.2.7             │ maven 
- vaadin-upload-flow                 │ 25.2.7             │ maven 
- vaadin-virtual-list-flow           │ 25.2.7             │ maven 
+ swagger-annotations                │ 2.2.55             │ maven 
+ third-party-jackson-core           │ 2.57.0             │ maven 
+ tomcat-embed-core                  │ 11.0.27            │ maven 
+ tomcat-embed-el                    │ 11.0.27            │ maven 
+ tomcat-embed-websocket             │ 11.0.27            │ maven 
+ utils                              │ 2.57.0             │ maven 
+ utils-lite                         │ 2.57.0             │ maven 
+ vaadin-accordion-flow              │ 25.2.11            │ maven 
+ vaadin-ai-components-flow          │ 25.2.11            │ maven 
+ vaadin-app-layout-flow             │ 25.2.11            │ maven 
+ vaadin-aura-theme                  │ 25.2.11            │ maven 
+ vaadin-avatar-flow                 │ 25.2.11            │ maven 
+ vaadin-badge-flow                  │ 25.2.11            │ maven 
+ vaadin-breadcrumbs-flow            │ 25.2.11            │ maven 
+ vaadin-button-flow                 │ 25.2.11            │ maven 
+ vaadin-card-flow                   │ 25.2.11            │ maven 
+ vaadin-checkbox-flow               │ 25.2.11            │ maven 
+ vaadin-combo-box-flow              │ 25.2.11            │ maven 
+ vaadin-confirm-dialog-flow         │ 25.2.11            │ maven 
+ vaadin-context-menu-flow           │ 25.2.11            │ maven 
+ vaadin-core-components             │ 25.2.11            │ maven 
+ vaadin-core-internal               │ 25.2.11            │ maven 
+ vaadin-custom-field-flow           │ 25.2.11            │ maven 
+ vaadin-date-picker-flow            │ 25.2.11            │ maven 
+ vaadin-date-time-picker-flow       │ 25.2.11            │ maven 
+ vaadin-details-flow                │ 25.2.11            │ maven 
+ vaadin-dialog-flow                 │ 25.2.11            │ maven 
+ vaadin-field-highlighter-flow      │ 25.2.11            │ maven 
+ vaadin-flow-components-base        │ 25.2.11            │ maven 
+ vaadin-form-layout-flow            │ 25.2.11            │ maven 
+ vaadin-grid-flow                   │ 25.2.11            │ maven 
+ vaadin-icons-flow                  │ 25.2.11            │ maven 
+ vaadin-list-box-flow               │ 25.2.11            │ maven 
+ vaadin-login-flow                  │ 25.2.11            │ maven 
+ vaadin-lumo-theme                  │ 25.2.11            │ maven 
+ vaadin-markdown-flow               │ 25.2.11            │ maven 
+ vaadin-master-detail-layout-flow   │ 25.2.11            │ maven 
+ vaadin-menu-bar-flow               │ 25.2.11            │ maven 
+ vaadin-messages-flow               │ 25.2.11            │ maven 
+ vaadin-notification-flow           │ 25.2.11            │ maven 
+ vaadin-ordered-layout-flow         │ 25.2.11            │ maven 
+ vaadin-popover-flow                │ 25.2.11            │ maven 
+ vaadin-progress-bar-flow           │ 25.2.11            │ maven 
+ vaadin-radio-button-flow           │ 25.2.11            │ maven 
+ vaadin-renderer-flow               │ 25.2.11            │ maven 
+ vaadin-select-flow                 │ 25.2.11            │ maven 
+ vaadin-side-nav-flow               │ 25.2.11            │ maven 
+ vaadin-slider-flow                 │ 25.2.11            │ maven 
+ vaadin-split-layout-flow           │ 25.2.11            │ maven 
+ vaadin-spring                      │ 25.2.13            │ maven 
+ vaadin-spring-boot-starter         │ 25.2.11            │ maven 
+ vaadin-tabs-flow                   │ 25.2.11            │ maven 
+ vaadin-text-field-flow             │ 25.2.11            │ maven 
+ vaadin-time-picker-flow            │ 25.2.11            │ maven 
+ vaadin-upload-flow                 │ 25.2.11            │ maven 
+ vaadin-virtual-list-flow           │ 25.2.11            │ maven 
  xmlbeans                           │ 5.3.0              │ maven 
- zlib                               │ 1.3.2-r0           │ apk   
+ zlib                               │ 1.3.2-r1           │ apk   

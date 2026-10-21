@@ -1,14 +1,14 @@
 # Docker Scout quick view
 
-Image: `myarch/ediconvert:2.15.5`
+Image: `myarch/ediconvert:2.15.6`
 
 Policy configuration excludes copyleft-license and supply-chain-attestations checks.
 
 ```text
 
 
- Target   │  myarch/ediconvert:2.15.5  │    0C     0H     0M     0L  
-   digest │  e45445771099              │                             
+ Target   │  myarch/ediconvert:2.15.6  │    0C     0H     0M     0L  
+   digest │  e1e66d089bbc              │                             
 
 Policy status  SUCCESS  (5/5 policies met)
 Health score  A  (100%)
@@ -22,8 +22,8 @@ Health score  A  (100%)
  ✓      │ No unapproved base images                   │    0 deviations             
 
 What's next:
-    View policy violations → docker scout policy myarch/ediconvert:2.15.5
-    Compare with the latest in the registry → docker scout compare --to-latest myarch/ediconvert:2.15.5
+    View policy violations → docker scout policy myarch/ediconvert:2.15.6
+    Compare with the latest in the registry → docker scout compare --to-latest myarch/ediconvert:2.15.6
 
 
 ```
