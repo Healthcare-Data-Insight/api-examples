@@ -10,7 +10,7 @@ services:
 #    ports:
 #      - "27017:27017"
   app:
-    image: myarch/claim-insight:2.15.5
+    image: myarch/claim-insight:2.15.6
     restart: unless-stopped
     depends_on:
       - mongo
