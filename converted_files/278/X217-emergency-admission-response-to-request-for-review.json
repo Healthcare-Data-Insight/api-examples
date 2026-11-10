@@ -1,0 +1,128 @@
+[
+ {
+  "id" : "6af3758cd261aba0a16b1d23",
+  "objectType" : "HEALTHCARE_REVIEW",
+  "reviewer" : {
+    "entityRole" : "UTILIZATION_MANAGEMENT_ORGANIZATION",
+    "entityType" : "BUSINESS",
+    "identificationType" : "ETIN",
+    "identifier" : "789312",
+    "lastNameOrOrgName" : "CAPITAL INSURANCE COMPANY",
+    "contacts" : [ {
+      "functionCode" : "IC",
+      "contactNumbers" : [ {
+        "type" : "PHONE",
+        "number" : "3936533000"
+      } ]
+    } ]
+  },
+  "requester" : {
+    "entityRole" : "FACILITY",
+    "entityType" : "BUSINESS",
+    "identificationType" : "ETIN",
+    "identifier" : "8189991234",
+    "lastNameOrOrgName" : "GENERAL HOSPITAL"
+  },
+  "patientReviews" : [ {
+    "subscriber" : {
+      "person" : {
+        "entityRole" : "INSURED_SUBSCRIBER",
+        "entityType" : "INDIVIDUAL",
+        "identificationType" : "MEMBER_ID",
+        "identifier" : "12345678901",
+        "lastNameOrOrgName" : "SMITH",
+        "firstName" : "MARY"
+      }
+    },
+    "patientEvents" : [ {
+      "serviceReviewInformation" : {
+        "requestCategoryCode" : "AR",
+        "certificationTypeCode" : "I",
+        "serviceTypeCode" : "A4",
+        "levelOfServiceCode" : "03",
+        "serviceLocation" : {
+          "type" : "FACILITY_TYPE",
+          "subType" : "PLACE_OF_SERVICE",
+          "code" : "21"
+        }
+      },
+      "reviewDetermination" : {
+        "actionCode" : "A4",
+        "decisionReasonCodes" : [ "0U" ]
+      },
+      "administrativeReferenceNumber" : "P20030216001",
+      "trackingNumbers" : [ {
+        "traceTypeCode" : "2",
+        "traceNumber" : "YZZ099",
+        "originatingCompanyId" : "9876543210"
+      } ],
+      "diags" : [ {
+        "subType" : "ICD_9",
+        "code" : "29603",
+        "occurrenceDate" : "2005-04-29"
+      } ],
+      "attachments" : [ {
+        "reportTypeCode" : "AS",
+        "type" : "ADMISSION_SUMMARY",
+        "reportTransmissionCode" : "VO"
+      } ],
+      "providers" : [ {
+        "entityRole" : "FACILITY",
+        "entityType" : "BUSINESS",
+        "identificationType" : "ETIN",
+        "identifier" : "987654321",
+        "lastNameOrOrgName" : "GENERAL HOSPITAL"
+      }, {
+        "entityRole" : "ATTENDING",
+        "entityType" : "INDIVIDUAL",
+        "identificationType" : "EMPLOYER_ID",
+        "identifier" : "453667654",
+        "lastNameOrOrgName" : "JONES",
+        "firstName" : "MARCUS"
+      }, {
+        "entityRole" : "SERVICE_PROVIDER",
+        "entityType" : "INDIVIDUAL",
+        "identificationType" : "EMPLOYER_ID",
+        "identifier" : "123454545",
+        "lastNameOrOrgName" : "BROWN",
+        "firstName" : "JACOB"
+      } ]
+    } ]
+  } ],
+  "transaction" : {
+    "id" : "6af3758cd261aba0a16b1d20",
+    "controlNumber" : "0001",
+    "transactionType" : "HEALTHCARE_REVIEW_REQUEST_RESPONSE",
+    "hierarchicalStructureCode" : "0007",
+    "purposeCode" : "11",
+    "creationDate" : "2005-05-02",
+    "creationTime" : "11:02:00",
+    "typeCode" : "EdiQualifierEnt(ediValue=19)",
+    "transactionSetIdentifierCode" : "278",
+    "implementationConventionReference" : "005010X217",
+    "fileInfo" : {
+      "name" : "X217-emergency-admission-response-to-request-for-review.edi",
+      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/278/X217-emergency-admission-response-to-request-for-review.edi",
+      "lastModifiedDateTime" : "2026-11-08T11:13:53.28-05:00"
+    },
+    "creationDateTime" : "2005-05-02T11:02:00"
+  }
+}
+, {
+  "objectType" : "VALIDATION",
+  "issueType" : "INVALID_CODE",
+  "fieldName" : "industry_code",
+  "sourceLocation" : {
+    "fileName" : "X217-emergency-admission-response-to-request-for-review.edi",
+    "lineNumber" : 1,
+    "segmentNumber" : 17
+  },
+  "loop" : "2000E-2",
+  "segment" : "HI",
+  "element" : "HI01-2",
+  "codeSubType" : "ICD_9",
+  "value" : "29603",
+  "ediString" : "HI*BF:29603:D8:20050429~",
+  "message" : "ICD-9-CM Diagnosis 29603 is not a valid code"
+}
+ ]

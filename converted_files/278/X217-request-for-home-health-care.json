@@ -1,0 +1,184 @@
+[
+ {
+  "id" : "6af3758bd261aba0a16b1be3",
+  "objectType" : "HEALTHCARE_REVIEW",
+  "reviewer" : {
+    "entityRole" : "UTILIZATION_MANAGEMENT_ORGANIZATION",
+    "entityType" : "BUSINESS",
+    "identificationType" : "ETIN",
+    "identifier" : "789312",
+    "lastNameOrOrgName" : "MARYLAND CAPITAL INSURANCE COMPANY"
+  },
+  "requester" : {
+    "entityRole" : "PROVIDER",
+    "entityType" : "INDIVIDUAL",
+    "identificationType" : "SSN",
+    "identifier" : "98765432",
+    "lastNameOrOrgName" : "WATSON",
+    "firstName" : "SUSAN",
+    "contacts" : [ {
+      "functionCode" : "IC",
+      "contactNumbers" : [ {
+        "type" : "PHONE",
+        "number" : "4029993456"
+      } ]
+    } ]
+  },
+  "patientReviews" : [ {
+    "subscriber" : {
+      "person" : {
+        "entityRole" : "INSURED_SUBSCRIBER",
+        "entityType" : "INDIVIDUAL",
+        "identificationType" : "MEMBER_ID",
+        "identifier" : "12345678901",
+        "lastNameOrOrgName" : "SMITH",
+        "firstName" : "JOE"
+      }
+    },
+    "patientEvents" : [ {
+      "serviceReviewInformation" : {
+        "requestCategoryCode" : "HS",
+        "certificationTypeCode" : "I",
+        "releaseOfInformationCode" : "Y",
+        "serviceLocation" : {
+          "type" : "FACILITY_TYPE",
+          "subType" : "PLACE_OF_SERVICE",
+          "code" : "12"
+        }
+      },
+      "serviceDelivery" : {
+        "quantityType" : "VISITS",
+        "quantity" : 3.00,
+        "unitType" : "WEEKS",
+        "timePeriodQualifier" : "34",
+        "periodCount" : 2
+      },
+      "serviceReviews" : [ {
+        "procedure" : {
+          "type" : "PROCEDURE",
+          "subType" : "HCPCS",
+          "code" : "G0154",
+          "desc" : "Direct skilled nursing services of a licensed nurse (lpn or rn) in the home health or hospice setting, each 15 minutes",
+          "shortDesc" : "Hhcp-svs of rn,ea 15 min ",
+          "startDate" : "1999-07-01",
+          "endDate" : "2016-02-29",
+          "categories" : [ {
+            "type" : "RBCS_TAXONOMY",
+            "subType" : "RBCS_CATEGORY",
+            "code" : "E",
+            "desc" : "E&M"
+          }, {
+            "type" : "RBCS_TAXONOMY",
+            "subType" : "RBCS_SUB_CATEGORY",
+            "code" : "EH",
+            "desc" : "Home Services"
+          } ]
+        }
+      }, {
+        "procedure" : {
+          "subType" : "HCPCS",
+          "code" : "B4184"
+        }
+      } ],
+      "diags" : [ {
+        "subType" : "ICD_9",
+        "code" : "1831"
+      }, {
+        "subType" : "ICD_9",
+        "code" : "2630"
+      } ],
+      "providers" : [ {
+        "entityRole" : "SERVICE_PROVIDER",
+        "entityType" : "BUSINESS",
+        "identificationType" : "EMPLOYER_ID",
+        "identifier" : "345678912",
+        "lastNameOrOrgName" : "CARING HANDS HOME HEALTH AGENCY"
+      } ]
+    } ]
+  } ],
+  "transaction" : {
+    "id" : "6af3758bd261aba0a16b1be0",
+    "controlNumber" : "0001",
+    "transactionType" : "HEALTHCARE_REVIEW_REQUEST_RESPONSE",
+    "hierarchicalStructureCode" : "0007",
+    "purposeCode" : "13",
+    "creationDate" : "2005-05-02",
+    "creationTime" : "14:30:00",
+    "transactionSetIdentifierCode" : "278",
+    "implementationConventionReference" : "005010X217",
+    "fileInfo" : {
+      "name" : "X217-request-for-home-health-care.edi",
+      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/278/X217-request-for-home-health-care.edi",
+      "lastModifiedDateTime" : "2026-11-08T11:13:53.281-05:00"
+    },
+    "creationDateTime" : "2005-05-02T14:30:00"
+  }
+}
+, {
+  "objectType" : "VALIDATION",
+  "issueType" : "CONTROL",
+  "fieldName" : "number_of_included_segments",
+  "sourceLocation" : {
+    "fileName" : "X217-request-for-home-health-care.edi",
+    "lineNumber" : 1,
+    "segmentNumber" : 22
+  },
+  "loop" : "0000",
+  "segment" : "SE",
+  "element" : "SE01",
+  "value" : "19",
+  "ediString" : "SE*19*0001~",
+  "message" : "Count  '19' in the closing segment does not match actual count '20'"
+}
+, {
+  "objectType" : "VALIDATION",
+  "issueType" : "INVALID_CODE",
+  "fieldName" : "industry_code",
+  "sourceLocation" : {
+    "fileName" : "X217-request-for-home-health-care.edi",
+    "lineNumber" : 1,
+    "segmentNumber" : 14
+  },
+  "loop" : "2000E",
+  "segment" : "HI",
+  "element" : "HI01-2",
+  "codeSubType" : "ICD_9",
+  "value" : "1831",
+  "ediString" : "HI*BF:1831*BF:2630~",
+  "message" : "ICD-9-CM Diagnosis 1831 is not a valid code"
+}
+, {
+  "objectType" : "VALIDATION",
+  "issueType" : "INVALID_CODE",
+  "fieldName" : "industry_code",
+  "sourceLocation" : {
+    "fileName" : "X217-request-for-home-health-care.edi",
+    "lineNumber" : 1,
+    "segmentNumber" : 14
+  },
+  "loop" : "2000E",
+  "segment" : "HI",
+  "element" : "HI02-2",
+  "codeSubType" : "ICD_9",
+  "value" : "2630",
+  "ediString" : "HI*BF:1831*BF:2630~",
+  "message" : "ICD-9-CM Diagnosis 2630 is not a valid code"
+}
+, {
+  "objectType" : "VALIDATION",
+  "issueType" : "INVALID_CODE",
+  "fieldName" : "procedure_code",
+  "sourceLocation" : {
+    "fileName" : "X217-request-for-home-health-care.edi",
+    "lineNumber" : 1,
+    "segmentNumber" : 21
+  },
+  "loop" : "2000F",
+  "segment" : "SV1",
+  "element" : "SV101-2",
+  "codeSubType" : "HCPCS",
+  "value" : "B4184",
+  "ediString" : "SV1*HC:B4184~",
+  "message" : "HCPCS Procedure B4184 is not a valid code"
+}
+ ]

@@ -1,0 +1,90 @@
+[
+ {
+  "id" : "6af3758cd261aba0a16b1d43",
+  "objectType" : "HEALTHCARE_REVIEW",
+  "reviewer" : {
+    "entityRole" : "UTILIZATION_MANAGEMENT_ORGANIZATION",
+    "entityType" : "BUSINESS",
+    "identificationType" : "PAYOR_ID",
+    "identifier" : "1234560010",
+    "lastNameOrOrgName" : "ABC PAYER"
+  },
+  "requester" : {
+    "entityRole" : "PROVIDER",
+    "entityType" : "INDIVIDUAL",
+    "identificationType" : "EMPLOYER_ID",
+    "identifier" : "0010102364",
+    "lastNameOrOrgName" : "GARDNER",
+    "firstName" : "JAMES"
+  },
+  "patientReviews" : [ {
+    "subscriber" : {
+      "person" : {
+        "entityRole" : "INSURED_SUBSCRIBER",
+        "entityType" : "INDIVIDUAL",
+        "identificationType" : "MEMBER_ID",
+        "identifier" : "12345689001",
+        "lastNameOrOrgName" : "SMITH",
+        "firstName" : "JOE",
+        "birthDate" : "1958-03-22",
+        "gender" : "MALE"
+      }
+    },
+    "patientEvents" : [ {
+      "serviceReviewInformation" : {
+        "requestCategoryCode" : "IN",
+        "certificationTypeCode" : "I",
+        "serviceTypeCode" : "1",
+        "serviceLocation" : {
+          "type" : "FACILITY_TYPE",
+          "subType" : "PLACE_OF_SERVICE",
+          "code" : "11"
+        }
+      },
+      "serviceReviews" : [ {
+        "serviceDateFrom" : "2005-05-10",
+        "unitType" : "UNIT",
+        "unitCount" : 1,
+        "procedure" : {
+          "type" : "PROCEDURE",
+          "subType" : "CPT",
+          "code" : "99212",
+          "desc" : "Office or other outpatient visit for the evaluation and management of an established patient, which requires a medically appropriate history and/or examination and straightforward medical decision making. When using total time on the date of the encounter for code selection, 10 minutes must be met or exceeded.",
+          "fullDesc" : "Office or other outpatient visit for the evaluation and management of an established patient, which requires a medically appropriate history and/or examination and straightforward medical decision making. When using total time on the date of the encounter for code selection, 10 minutes must be met or exceeded.",
+          "shortDesc" : "OFFICE O/P EST SF 10 MIN",
+          "startDate" : "1993-01-01",
+          "categories" : [ {
+            "type" : "RBCS_TAXONOMY",
+            "subType" : "RBCS_CATEGORY",
+            "code" : "E",
+            "desc" : "E&M"
+          }, {
+            "type" : "RBCS_TAXONOMY",
+            "subType" : "RBCS_SUB_CATEGORY",
+            "code" : "EV",
+            "desc" : "Office/Outpatient Services"
+          } ]
+        }
+      } ]
+    } ]
+  } ],
+  "transaction" : {
+    "id" : "6af3758cd261aba0a16b1d40",
+    "controlNumber" : "0001",
+    "transactionType" : "HEALTHCARE_REVIEW_REQUEST_RESPONSE",
+    "hierarchicalStructureCode" : "0007",
+    "purposeCode" : "13",
+    "creationDate" : "2005-05-02",
+    "creationTime" : "22:43:00",
+    "typeCode" : "EdiQualifierEnt(ediValue=RU)",
+    "transactionSetIdentifierCode" : "278",
+    "implementationConventionReference" : "005010X217",
+    "fileInfo" : {
+      "name" : "X217-request-for-medical-services-reservation.edi",
+      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/278/X217-request-for-medical-services-reservation.edi",
+      "lastModifiedDateTime" : "2026-11-08T11:13:53.281-05:00"
+    },
+    "creationDateTime" : "2005-05-02T22:43:00"
+  }
+}
+ ]

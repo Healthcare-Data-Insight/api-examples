@@ -1,0 +1,207 @@
+[
+ {
+  "id" : "6af3758cd261aba0a16b1d7e",
+  "objectType" : "HEALTHCARE_REVIEW",
+  "reviewer" : {
+    "entityRole" : "UTILIZATION_MANAGEMENT_ORGANIZATION",
+    "entityType" : "BUSINESS",
+    "identificationType" : "PAYOR_ID",
+    "identifier" : "1234560010",
+    "lastNameOrOrgName" : "ABC PAYER"
+  },
+  "requester" : {
+    "entityRole" : "PROVIDER",
+    "entityType" : "INDIVIDUAL",
+    "identificationType" : "EMPLOYER_ID",
+    "identifier" : "7759621873",
+    "lastNameOrOrgName" : "XYZ AMBULANCE SVC"
+  },
+  "patientReviews" : [ {
+    "subscriber" : {
+      "person" : {
+        "entityRole" : "INSURED_SUBSCRIBER",
+        "entityType" : "INDIVIDUAL",
+        "identificationType" : "MEMBER_ID",
+        "identifier" : "12345689001",
+        "lastNameOrOrgName" : "SMITH",
+        "firstName" : "JOE",
+        "birthDate" : "1958-03-22",
+        "gender" : "MALE",
+        "additionalIds" : [ {
+          "qualifierCode" : "EJ",
+          "identification" : "6532214A76"
+        } ]
+      }
+    },
+    "patientEvents" : [ {
+      "serviceReviewInformation" : {
+        "requestCategoryCode" : "HS",
+        "certificationTypeCode" : "I",
+        "serviceTypeCode" : "56",
+        "serviceLocation" : {
+          "type" : "FACILITY_TYPE",
+          "subType" : "PLACE_OF_SERVICE",
+          "code" : "41"
+        }
+      },
+      "reviewDetermination" : {
+        "actionCode" : "A1",
+        "reviewIdentificationNumber" : "2005010796321"
+      },
+      "eventDate" : {
+        "qualifierCode" : "AAH",
+        "type" : "EVENT",
+        "date" : "2005-05-10"
+      },
+      "ambulanceTransportInfo" : {
+        "transportCode" : "X",
+        "transportDistance" : 27
+      },
+      "serviceReviews" : [ {
+        "unitType" : "UNIT",
+        "unitCount" : 5,
+        "procedure" : {
+          "type" : "PROCEDURE",
+          "subType" : "HCPCS",
+          "code" : "A0428",
+          "desc" : "Ambulance service, basic life support, non-emergency transport, (bls)",
+          "shortDesc" : "Bls",
+          "startDate" : "2001-01-01",
+          "modifiers" : [ {
+            "type" : "MODIFIER",
+            "subType" : "HCPCS_MODIFIER",
+            "code" : "RX"
+          } ],
+          "categories" : [ {
+            "type" : "RBCS_TAXONOMY",
+            "subType" : "RBCS_CATEGORY",
+            "code" : "O",
+            "desc" : "Other"
+          }, {
+            "type" : "RBCS_TAXONOMY",
+            "subType" : "RBCS_SUB_CATEGORY",
+            "code" : "OA",
+            "desc" : "Ambulance"
+          } ]
+        }
+      }, {
+        "unitType" : "UNIT",
+        "unitCount" : 8,
+        "procedure" : {
+          "type" : "PROCEDURE",
+          "subType" : "HCPCS",
+          "code" : "A0428",
+          "desc" : "Ambulance service, basic life support, non-emergency transport, (bls)",
+          "shortDesc" : "Bls",
+          "startDate" : "2001-01-01",
+          "modifiers" : [ {
+            "type" : "MODIFIER",
+            "subType" : "HCPCS_MODIFIER",
+            "code" : "PD",
+            "desc" : "Diagnostic or related non diagnostic item or service provided in a wholly owned or operated entity to a patient who is admitted as an inpatient within 3 days",
+            "shortDesc" : "Inp admit w/in 3 days ",
+            "startDate" : "2012-01-01"
+          } ],
+          "categories" : [ {
+            "type" : "RBCS_TAXONOMY",
+            "subType" : "RBCS_CATEGORY",
+            "code" : "O",
+            "desc" : "Other"
+          }, {
+            "type" : "RBCS_TAXONOMY",
+            "subType" : "RBCS_SUB_CATEGORY",
+            "code" : "OA",
+            "desc" : "Ambulance"
+          } ]
+        }
+      }, {
+        "unitType" : "UNIT",
+        "unitCount" : 14,
+        "procedure" : {
+          "type" : "PROCEDURE",
+          "subType" : "HCPCS",
+          "code" : "A0428",
+          "desc" : "Ambulance service, basic life support, non-emergency transport, (bls)",
+          "shortDesc" : "Bls",
+          "startDate" : "2001-01-01",
+          "modifiers" : [ {
+            "type" : "MODIFIER",
+            "subType" : "HCPCS_MODIFIER",
+            "code" : "DR"
+          } ],
+          "categories" : [ {
+            "type" : "RBCS_TAXONOMY",
+            "subType" : "RBCS_CATEGORY",
+            "code" : "O",
+            "desc" : "Other"
+          }, {
+            "type" : "RBCS_TAXONOMY",
+            "subType" : "RBCS_SUB_CATEGORY",
+            "code" : "OA",
+            "desc" : "Ambulance"
+          } ]
+        }
+      } ],
+      "transportLocations" : [ {
+        "entityRole" : "PICKUP_ADDRESS",
+        "entityType" : "BUSINESS",
+        "lastNameOrOrgName" : "HOME",
+        "address" : {
+          "line" : "8652 Starwood Lane",
+          "city" : "SACRAMENTO",
+          "stateCode" : "CA",
+          "zipCode" : "95826"
+        }
+      }, {
+        "entityRole" : "NEXT_DESTINATION",
+        "entityType" : "BUSINESS",
+        "lastNameOrOrgName" : "DR. GARDNER OFFICE",
+        "address" : {
+          "line" : "1921 FULTON AVENUE",
+          "city" : "SACRAMENTO",
+          "stateCode" : "CA",
+          "zipCode" : "95624"
+        }
+      }, {
+        "entityRole" : "NEXT_SCHEDULED_DESTINATION",
+        "entityType" : "BUSINESS",
+        "lastNameOrOrgName" : "XYZ DIALYSIS CENTER",
+        "address" : {
+          "line" : "7622 MORSETOWN ROAD",
+          "city" : "SACRAMENTO",
+          "stateCode" : "CA",
+          "zipCode" : "95826"
+        }
+      }, {
+        "entityRole" : "FINAL_SCHEDULED_DESTINATION",
+        "entityType" : "BUSINESS",
+        "lastNameOrOrgName" : "HOME",
+        "address" : {
+          "line" : "8652 Starwood Lane",
+          "city" : "SACRAMENTO",
+          "stateCode" : "CA",
+          "zipCode" : "95826"
+        }
+      } ]
+    } ]
+  } ],
+  "transaction" : {
+    "id" : "6af3758cd261aba0a16b1d7b",
+    "controlNumber" : "0001",
+    "transactionType" : "HEALTHCARE_REVIEW_REQUEST_RESPONSE",
+    "hierarchicalStructureCode" : "0007",
+    "purposeCode" : "11",
+    "creationDate" : "2005-05-02",
+    "creationTime" : "08:15:00",
+    "typeCode" : "EdiQualifierEnt(ediValue=18)",
+    "transactionSetIdentifierCode" : "278",
+    "implementationConventionReference" : "005010X217",
+    "fileInfo" : {
+      "name" : "X217-response-to-non-emergency-transportation.edi",
+      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/278/X217-response-to-non-emergency-transportation.edi",
+      "lastModifiedDateTime" : "2026-11-08T11:13:53.281-05:00"
+    },
+    "creationDateTime" : "2005-05-02T08:15:00"
+  }
+}
+ ]

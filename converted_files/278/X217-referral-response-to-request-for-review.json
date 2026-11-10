@@ -1,0 +1,119 @@
+[
+ {
+  "id" : "6af3758bd261aba0a16b1c1f",
+  "objectType" : "HEALTHCARE_REVIEW",
+  "reviewer" : {
+    "entityRole" : "UTILIZATION_MANAGEMENT_ORGANIZATION",
+    "entityType" : "BUSINESS",
+    "identificationType" : "ETIN",
+    "identifier" : "789312",
+    "lastNameOrOrgName" : "MARYLAND CAPITAL INSURANCE COMPANY"
+  },
+  "requester" : {
+    "entityRole" : "PROVIDER",
+    "entityType" : "INDIVIDUAL",
+    "identificationType" : "ETIN",
+    "identifier" : "8189991234",
+    "lastNameOrOrgName" : "GARDENER",
+    "firstName" : "JAMES"
+  },
+  "patientReviews" : [ {
+    "subscriber" : {
+      "person" : {
+        "entityRole" : "INSURED_SUBSCRIBER",
+        "entityType" : "INDIVIDUAL",
+        "identificationType" : "MEMBER_ID",
+        "identifier" : "12345678901",
+        "lastNameOrOrgName" : "SMITH",
+        "firstName" : "JOE"
+      }
+    },
+    "patientEvents" : [ {
+      "serviceReviewInformation" : {
+        "requestCategoryCode" : "SC",
+        "certificationTypeCode" : "I",
+        "serviceTypeCode" : "3",
+        "serviceLocation" : {
+          "type" : "FACILITY_TYPE",
+          "subType" : "PLACE_OF_SERVICE",
+          "code" : "11"
+        }
+      },
+      "reviewDetermination" : {
+        "actionCode" : "A1",
+        "reviewIdentificationNumber" : "AUTH0001"
+      },
+      "serviceDelivery" : {
+        "quantityType" : "VISITS",
+        "quantity" : 1.00
+      },
+      "eventDate" : {
+        "qualifierCode" : "AAH",
+        "type" : "EVENT",
+        "date" : "2005-05-02",
+        "dateTo" : "2005-06-02"
+      },
+      "trackingNumbers" : [ {
+        "traceTypeCode" : "2",
+        "traceNumber" : "111099",
+        "originatingCompanyId" : "9012345678"
+      } ],
+      "diags" : [ {
+        "subType" : "ICD_9",
+        "code" : "41090",
+        "occurrenceDate" : "2005-04-30"
+      } ],
+      "providers" : [ {
+        "entityRole" : "SERVICE_PROVIDER",
+        "entityType" : "INDIVIDUAL",
+        "identificationType" : "SSN",
+        "identifier" : "987654321",
+        "lastNameOrOrgName" : "WATSON",
+        "firstName" : "SUSAN",
+        "contacts" : [ {
+          "functionCode" : "IC",
+          "contactNumbers" : [ {
+            "type" : "PHONE",
+            "number" : "4029993456"
+          } ]
+        } ]
+      } ]
+    } ]
+  } ],
+  "transaction" : {
+    "id" : "6af3758bd261aba0a16b1c1c",
+    "controlNumber" : "0001",
+    "transactionType" : "HEALTHCARE_REVIEW_REQUEST_RESPONSE",
+    "hierarchicalStructureCode" : "0007",
+    "purposeCode" : "11",
+    "creationDate" : "2005-05-02",
+    "creationTime" : "11:02:00",
+    "typeCode" : "EdiQualifierEnt(ediValue=18)",
+    "transactionSetIdentifierCode" : "278",
+    "implementationConventionReference" : "005010X217",
+    "fileInfo" : {
+      "name" : "X217-referral-response-to-request-for-review.edi",
+      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/278/X217-referral-response-to-request-for-review.edi",
+      "lastModifiedDateTime" : "2026-11-09T14:39:45.836-05:00"
+    },
+    "creationDateTime" : "2005-05-02T11:02:00"
+  }
+}
+, {
+  "objectType" : "VALIDATION",
+  "issueType" : "INVALID_CODE",
+  "fieldName" : "industry_code",
+  "sourceLocation" : {
+    "fileName" : "X217-referral-response-to-request-for-review.edi",
+    "lineNumber" : 16,
+    "segmentNumber" : 16
+  },
+  "loop" : "2000E-2",
+  "segment" : "HI",
+  "element" : "HI01-2",
+  "codeSubType" : "ICD_9",
+  "value" : "41090",
+  "ediString" : "HI*BF:41090:D8:20050430~",
+  "message" : "ICD-9-CM Diagnosis 41090 is not a valid code"
+}
+ ]

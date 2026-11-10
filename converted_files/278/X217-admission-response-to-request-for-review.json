@@ -1,0 +1,178 @@
+[
+ {
+  "id" : "6af3758cd261aba0a16b1dac",
+  "objectType" : "HEALTHCARE_REVIEW",
+  "reviewer" : {
+    "entityRole" : "UTILIZATION_MANAGEMENT_ORGANIZATION",
+    "entityType" : "BUSINESS",
+    "identificationType" : "ETIN",
+    "identifier" : "7893122",
+    "lastNameOrOrgName" : "MARYLAND CAPITAL INSURANCE COMPANY"
+  },
+  "requester" : {
+    "entityRole" : "PROVIDER",
+    "entityType" : "INDIVIDUAL",
+    "identificationType" : "SSN",
+    "identifier" : "987654",
+    "lastNameOrOrgName" : "WATSON",
+    "firstName" : "SUSAN"
+  },
+  "patientReviews" : [ {
+    "subscriber" : {
+      "person" : {
+        "entityRole" : "INSURED_SUBSCRIBER",
+        "entityType" : "INDIVIDUAL",
+        "identificationType" : "MEMBER_ID",
+        "identifier" : "123456789011",
+        "lastNameOrOrgName" : "SMITH",
+        "firstName" : "JOE"
+      }
+    },
+    "patientEvents" : [ {
+      "serviceReviewInformation" : {
+        "requestCategoryCode" : "AR",
+        "certificationTypeCode" : "I",
+        "serviceTypeCode" : "2",
+        "serviceLocation" : {
+          "type" : "FACILITY_TYPE",
+          "subType" : "PLACE_OF_SERVICE",
+          "code" : "21"
+        }
+      },
+      "reviewDetermination" : {
+        "actionCode" : "A6",
+        "reviewIdentificationNumber" : "AUTH0002"
+      },
+      "serviceDelivery" : {
+        "quantityType" : "DAYS",
+        "quantity" : 5.00
+      },
+      "admissionDate" : {
+        "qualifierCode" : "435",
+        "type" : "ADMISSION",
+        "date" : "2005-05-16"
+      },
+      "serviceReviews" : [ {
+        "serviceDateFrom" : "2005-05-16",
+        "procedure" : {
+          "type" : "PROCEDURE",
+          "subType" : "CPT",
+          "code" : "33510",
+          "desc" : "Coronary artery bypass, vein only; single coronary venous graft",
+          "fullDesc" : "Coronary artery bypass, vein only; single coronary venous graft",
+          "shortDesc" : "CABG VEIN SINGLE",
+          "startDate" : "1993-01-01",
+          "categories" : [ {
+            "type" : "RBCS_TAXONOMY",
+            "subType" : "RBCS_CATEGORY",
+            "code" : "P",
+            "desc" : "Procedure"
+          }, {
+            "type" : "RBCS_TAXONOMY",
+            "subType" : "RBCS_SUB_CATEGORY",
+            "code" : "PC",
+            "desc" : "Cardiovascular"
+          } ]
+        },
+        "providers" : [ {
+          "entityRole" : "SERVICE_PROVIDER",
+          "entityType" : "INDIVIDUAL",
+          "identificationType" : "SSN",
+          "identifier" : "987654321",
+          "lastNameOrOrgName" : "WATSON",
+          "firstName" : "SUSAN",
+          "providerTaxonomy" : {
+            "subType" : "PROVIDER_TAXONOMY",
+            "code" : "203BS0133X"
+          }
+        } ],
+        "serviceReviewInformation" : {
+          "requestCategoryCode" : "HS",
+          "certificationTypeCode" : "I",
+          "serviceTypeCode" : "2"
+        },
+        "reviewDetermination" : {
+          "actionCode" : "A1",
+          "reviewIdentificationNumber" : "AUTH0002"
+        }
+      } ],
+      "trackingNumbers" : [ {
+        "traceTypeCode" : "2",
+        "traceNumber" : "97021001",
+        "originatingCompanyId" : "9012345678"
+      } ],
+      "diags" : [ {
+        "subType" : "ICD_9",
+        "code" : "41090",
+        "occurrenceDate" : "2005-01-25"
+      } ],
+      "providers" : [ {
+        "entityRole" : "FACILITY",
+        "entityType" : "BUSINESS",
+        "identificationType" : "EMPLOYER_ID",
+        "identifier" : "000012121",
+        "lastNameOrOrgName" : "MONTGOMERY HOSPITAL",
+        "address" : {
+          "line" : "475 MAIN STREET",
+          "city" : "ANYTOWN",
+          "stateCode" : "PA",
+          "zipCode" : "19087"
+        }
+      } ]
+    } ]
+  } ],
+  "transaction" : {
+    "id" : "6af3758cd261aba0a16b1da9",
+    "controlNumber" : "0001",
+    "transactionType" : "HEALTHCARE_REVIEW_REQUEST_RESPONSE",
+    "hierarchicalStructureCode" : "0007",
+    "purposeCode" : "11",
+    "creationDate" : "2005-05-02",
+    "creationTime" : "14:31:00",
+    "typeCode" : "EdiQualifierEnt(ediValue=18)",
+    "transactionSetIdentifierCode" : "278",
+    "implementationConventionReference" : "005010X217",
+    "fileInfo" : {
+      "name" : "X217-admission-response-to-request-for-review.edi",
+      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/278/X217-admission-response-to-request-for-review.edi",
+      "lastModifiedDateTime" : "2026-11-09T14:39:45.835-05:00"
+    },
+    "creationDateTime" : "2005-05-02T14:31:00"
+  }
+}
+, {
+  "objectType" : "VALIDATION",
+  "issueType" : "INVALID_CODE",
+  "fieldName" : "industry_code",
+  "sourceLocation" : {
+    "fileName" : "X217-admission-response-to-request-for-review.edi",
+    "lineNumber" : 16,
+    "segmentNumber" : 16
+  },
+  "loop" : "2000E-2",
+  "segment" : "HI",
+  "element" : "HI01-2",
+  "codeSubType" : "ICD_9",
+  "value" : "41090",
+  "ediString" : "HI*BF:41090:D8:20050125~",
+  "message" : "ICD-9-CM Diagnosis 41090 is not a valid code"
+}
+, {
+  "objectType" : "VALIDATION",
+  "issueType" : "INVALID_CODE",
+  "issueObjectClass" : "ReviewParty",
+  "fieldName" : "taxonomyCode",
+  "sourceLocation" : {
+    "fileName" : "X217-admission-response-to-request-for-review.edi",
+    "lineNumber" : 27,
+    "segmentNumber" : 27
+  },
+  "loop" : "2010FA",
+  "segment" : "PRV",
+  "element" : "PRV03",
+  "codeSubType" : "PROVIDER_TAXONOMY",
+  "value" : "203BS0133X",
+  "ediString" : "PRV*PE*PXC*203BS0133X~",
+  "message" : "Health Care Provider Taxonomy Code 203BS0133X is not a valid code"
+}
+ ]

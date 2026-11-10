@@ -1,0 +1,766 @@
+[
+ {
+  "id" : "6af3758bd261aba0a16b1b6b",
+  "objectType" : "HEALTHCARE_REVIEW",
+  "reviewer" : {
+    "entityRole" : "UTILIZATION_MANAGEMENT_ORGANIZATION",
+    "entityType" : "BUSINESS",
+    "identificationType" : "ETIN",
+    "identifier" : "7893122",
+    "lastNameOrOrgName" : "MARYLAND CAPITAL INSURANCE COMPANY"
+  },
+  "requester" : {
+    "entityRole" : "PROVIDER",
+    "entityType" : "INDIVIDUAL",
+    "identificationType" : "SSN",
+    "identifier" : "987654",
+    "taxId" : "REQUESTERTAX",
+    "taxIdType" : "EIN",
+    "lastNameOrOrgName" : "WATSON",
+    "firstName" : "SUSAN",
+    "address" : {
+      "line" : "100 REQUESTER ROAD",
+      "line2" : "SUITE 1",
+      "city" : "BOSTON",
+      "stateCode" : "MA",
+      "zipCode" : "02110",
+      "countryCode" : "US"
+    },
+    "providerTaxonomy" : {
+      "type" : "PROVIDER_TAXONOMY",
+      "subType" : "PROVIDER_TAXONOMY",
+      "code" : "207RC0000X",
+      "desc" : "Cardiovascular Disease Physician",
+      "categories" : [ {
+        "type" : "PROVIDER_TAXONOMY",
+        "subType" : "GROUPING",
+        "code" : "Allopathic & Osteopathic Physicians"
+      }, {
+        "type" : "PROVIDER_TAXONOMY",
+        "subType" : "CLASSIFICATION",
+        "code" : "Internal Medicine"
+      }, {
+        "type" : "PROVIDER_TAXONOMY",
+        "subType" : "SPECIALIZATION",
+        "code" : "Cardiovascular Disease"
+      } ]
+    },
+    "contacts" : [ {
+      "functionCode" : "IC",
+      "name" : "REQUEST DESK",
+      "contactNumbers" : [ {
+        "type" : "PHONE",
+        "number" : "6175550100"
+      } ]
+    } ]
+  },
+  "patientReviews" : [ {
+    "subscriber" : {
+      "person" : {
+        "entityRole" : "INSURED_SUBSCRIBER",
+        "entityType" : "INDIVIDUAL",
+        "identificationType" : "MEMBER_ID",
+        "identifier" : "123456789011",
+        "lastNameOrOrgName" : "SMITH",
+        "firstName" : "JOE",
+        "additionalIds" : [ {
+          "qualifierCode" : "1L",
+          "type" : "GROUP_OR_POLICY_NUMBER",
+          "identification" : "SUBGROUP"
+        }, {
+          "qualifierCode" : "6P",
+          "type" : "GROUP_NUMBER",
+          "identification" : "SUBPLAN"
+        } ]
+      },
+      "memberIndicator" : "Y",
+      "relationshipCode" : "18",
+      "relationshipType" : "SELF",
+      "employmentStatusCode" : "AO"
+    },
+    "dependent" : {
+      "person" : {
+        "entityRole" : "PATIENT",
+        "entityType" : "INDIVIDUAL",
+        "identificationType" : "MEMBER_ID",
+        "identifier" : "DEP123",
+        "taxId" : "123456789",
+        "taxIdType" : "SSN",
+        "lastNameOrOrgName" : "DEPENDENT",
+        "firstName" : "JILL",
+        "birthDate" : "2010-05-06",
+        "gender" : "FEMALE",
+        "address" : {
+          "line" : "40 DEPENDENT ROAD",
+          "line2" : "APT 2",
+          "city" : "BOSTON",
+          "stateCode" : "MA",
+          "zipCode" : "02110",
+          "countryCode" : "US"
+        },
+        "additionalIds" : [ {
+          "qualifierCode" : "EJ",
+          "identification" : "DEPACCOUNT"
+        }, {
+          "qualifierCode" : "SY",
+          "type" : "SSN",
+          "identification" : "123456789"
+        } ]
+      },
+      "memberIndicator" : "N",
+      "relationshipCode" : "19",
+      "relationshipType" : "CHILD",
+      "birthSequenceNumber" : 2
+    },
+    "patientEvents" : [ {
+      "serviceReviewInformation" : {
+        "requestCategoryCode" : "AR",
+        "certificationTypeCode" : "I",
+        "serviceTypeCode" : "2",
+        "levelOfServiceCode" : "U",
+        "relatedCauseInfo" : {
+          "relatedCauseCode" : "AA",
+          "relatedCauseType" : "AUTO_ACCIDENT",
+          "relatedCauseCode2" : "EM",
+          "relatedCauseType2" : "EMPLOYMENT",
+          "relatedCauseCode3" : "AP",
+          "stateCode" : "PA",
+          "countryCode" : "US"
+        },
+        "currentHealthConditionCode" : "1",
+        "prognosisCode" : "2",
+        "releaseOfInformationCode" : "Y",
+        "delayReasonCode" : "10",
+        "serviceLocation" : {
+          "type" : "FACILITY_TYPE",
+          "subType" : "PLACE_OF_SERVICE",
+          "code" : "21"
+        }
+      },
+      "serviceDelivery" : {
+        "quantityType" : "DAYS",
+        "quantity" : 5.00,
+        "unitType" : "DAYS",
+        "sampleSelectionModulus" : 1.00,
+        "timePeriodQualifier" : "7",
+        "periodCount" : 2,
+        "deliveryFrequencyCode" : "D",
+        "deliveryPatternTimeCode" : "A"
+      },
+      "admissionTypeCode" : "3",
+      "admissionSourceCode" : "1",
+      "patientStatusCode" : "01",
+      "message" : "ADDITIONAL RECORDS REQUIRED",
+      "administrativeReferenceNumber" : "ADMIN123",
+      "previousReviewAuthorizationNumber" : "PRIOR456",
+      "accidentDate" : {
+        "qualifierCode" : "439",
+        "type" : "ACCIDENT",
+        "date" : "2005-01-20"
+      },
+      "estimatedBirthDate" : {
+        "qualifierCode" : "ABC",
+        "type" : "ESTIMATED_BIRTH",
+        "date" : "2005-11-30"
+      },
+      "onsetOfCurrentIllnessDate" : {
+        "qualifierCode" : "431",
+        "type" : "ONSET_OF_CURRENT_ILLNESS",
+        "date" : "2005-01-25"
+      },
+      "eventDate" : {
+        "qualifierCode" : "AAH",
+        "type" : "EVENT",
+        "date" : "2005-05-16",
+        "dateTo" : "2005-05-20"
+      },
+      "admissionDate" : {
+        "qualifierCode" : "435",
+        "type" : "ADMISSION",
+        "date" : "2005-05-16"
+      },
+      "dischargeDate" : {
+        "qualifierCode" : "096",
+        "type" : "DISCHARGE",
+        "date" : "2005-05-20"
+      },
+      "ambulanceTransportInfo" : {
+        "transportCode" : "T",
+        "transportDistance" : 28
+      },
+      "spinalManipulationInfo" : {
+        "treatmentSeriesNumber" : 1,
+        "treatmentCount" : 5.00,
+        "subluxationLevelCode" : "C1",
+        "endingSubluxationLevelCode" : "C7",
+        "conditionCode" : "A",
+        "patientConditionIndicator" : "Y"
+      },
+      "conditionsIndicators" : [ {
+        "categoryCode" : "07",
+        "category" : "AMBULANCE_CERTIFICATION",
+        "yesOrNoCondition" : "Y",
+        "conditionCodes" : [ "01", "02", "03", "04", "05" ]
+      }, {
+        "categoryCode" : "08",
+        "category" : "CHIROPRACTIC_CERTIFICATION",
+        "yesOrNoCondition" : "N",
+        "conditionCodes" : [ "11", "12", "14", "24", "25" ]
+      }, {
+        "categoryCode" : "09",
+        "category" : "DME_CERTIFICATION",
+        "yesOrNoCondition" : "Y",
+        "conditionCodes" : [ "01", "02", "03", "04", "05" ]
+      }, {
+        "categoryCode" : "11",
+        "category" : "OXYGEN_THERAPY_CERTIFICATION",
+        "yesOrNoCondition" : "Y",
+        "conditionCodes" : [ "06", "16", "17", "25", "33" ]
+      }, {
+        "categoryCode" : "75",
+        "category" : "FUNCTIONAL_LIMITATIONS",
+        "yesOrNoCondition" : "Y",
+        "conditionCodes" : [ "02", "03", "04", "05", "06" ]
+      }, {
+        "categoryCode" : "76",
+        "category" : "ACTIVITIES_PERMITTED",
+        "yesOrNoCondition" : "Y",
+        "conditionCodes" : [ "10", "13", "19", "21", "22" ]
+      }, {
+        "categoryCode" : "77",
+        "category" : "MENTAL_STATUS",
+        "yesOrNoCondition" : "Y",
+        "conditionCodes" : [ "01", "05", "07", "13", "20" ]
+      } ],
+      "otherReviewOrganizations" : [ {
+        "entityRole" : "ALTERNATE_INSURER",
+        "entityType" : "BUSINESS",
+        "lastNameOrOrgName" : "OTHER INSURER",
+        "denialReasonCode" : "1",
+        "denialDate" : "2005-04-01"
+      } ],
+      "serviceReviews" : [ {
+        "chargeAmount" : 1500.00,
+        "serviceDateFrom" : "2005-08-01",
+        "serviceDateTo" : "2005-08-05",
+        "unitType" : "UNIT",
+        "unitCount" : 2,
+        "procedure" : {
+          "type" : "PROCEDURE",
+          "subType" : "CPT",
+          "code" : "33510",
+          "desc" : "Coronary artery bypass, vein only; single coronary venous graft",
+          "fullDesc" : "Coronary artery bypass, vein only; single coronary venous graft",
+          "shortDesc" : "CABG VEIN SINGLE",
+          "startDate" : "1993-01-01",
+          "descFromClaim" : "BYPASS",
+          "modifiers" : [ {
+            "type" : "MODIFIER",
+            "subType" : "HCPCS_MODIFIER",
+            "code" : "22"
+          }, {
+            "type" : "MODIFIER",
+            "subType" : "HCPCS_MODIFIER",
+            "code" : "51",
+            "desc" : "Multiple procedures: When multiple procedures, other than E/M services, physical medicine and rehabilitation services or provision of supplies (e.g., vaccines), are performed at the same session by the same provider, the primary procedure or service may be reported as listed. The additional procedure(s) or service(s) may be identified by appending the modifier 51 to the additional procedure or service code(s).\n"
+          }, {
+            "type" : "MODIFIER",
+            "subType" : "HCPCS_MODIFIER",
+            "code" : "59",
+            "desc" : "Distinct Procedural Service: Under certain circumstances, it may be necessary to indicate that a procedure or service was distinct or independent from other non-E/M services performed on the same day.\nModifier 59 is used to identify procedures or services, other than E/M services, that are not normally reported together but are appropriate under the circumstances.\n"
+          }, {
+            "type" : "MODIFIER",
+            "subType" : "HCPCS_MODIFIER",
+            "code" : "LT",
+            "desc" : "Left side (used to identify procedures performed on the left side of the body)",
+            "shortDesc" : "Left side",
+            "startDate" : "1984-01-01"
+          } ],
+          "categories" : [ {
+            "type" : "RBCS_TAXONOMY",
+            "subType" : "RBCS_CATEGORY",
+            "code" : "P",
+            "desc" : "Procedure"
+          }, {
+            "type" : "RBCS_TAXONOMY",
+            "subType" : "RBCS_SUB_CATEGORY",
+            "code" : "PC",
+            "desc" : "Cardiovascular"
+          } ]
+        },
+        "revenueCode" : {
+          "type" : "UB04_REVENUE_CODE",
+          "subType" : "REVENUE_CODE",
+          "code" : "0360",
+          "desc" : "Operating Room Services-General",
+          "startDate" : "1989-10-01"
+        },
+        "attachments" : [ {
+          "reportTypeCode" : "AS",
+          "type" : "ADMISSION_SUMMARY",
+          "reportTransmissionCode" : "FX",
+          "controlNumber" : "SERVICEATTACH",
+          "description" : "SERVICE REPORT"
+        }, {
+          "reportTypeCode" : "M1",
+          "type" : "MEDICAL_RECORD_ATTACHMENT",
+          "reportTransmissionCode" : "EL",
+          "transmissionType" : "ELECTRONICALLY_ONLY",
+          "controlNumber" : "SERVICEATTACH2",
+          "description" : "SECOND REPORT"
+        } ],
+        "providers" : [ {
+          "entityRole" : "SERVICE_PROVIDER",
+          "entityType" : "INDIVIDUAL",
+          "identificationType" : "SSN",
+          "identifier" : "987654321",
+          "taxId" : "987654321",
+          "taxIdType" : "EIN",
+          "lastNameOrOrgName" : "SERVICE",
+          "firstName" : "PROVIDER",
+          "address" : {
+            "line" : "20 SERVICE ROAD",
+            "line2" : "SUITE 2",
+            "city" : "SERVICE CITY",
+            "stateCode" : "NY",
+            "zipCode" : "10001",
+            "countryCode" : "US"
+          },
+          "providerTaxonomy" : {
+            "type" : "PROVIDER_TAXONOMY",
+            "subType" : "PROVIDER_TAXONOMY",
+            "code" : "207RC0000X",
+            "desc" : "Cardiovascular Disease Physician",
+            "categories" : [ {
+              "type" : "PROVIDER_TAXONOMY",
+              "subType" : "GROUPING",
+              "code" : "Allopathic & Osteopathic Physicians"
+            }, {
+              "type" : "PROVIDER_TAXONOMY",
+              "subType" : "CLASSIFICATION",
+              "code" : "Internal Medicine"
+            }, {
+              "type" : "PROVIDER_TAXONOMY",
+              "subType" : "SPECIALIZATION",
+              "code" : "Cardiovascular Disease"
+            } ]
+          },
+          "contacts" : [ {
+            "functionCode" : "IC",
+            "name" : "SERVICE CLERK",
+            "contactNumbers" : [ {
+              "type" : "PHONE",
+              "number" : "2125550100"
+            }, {
+              "type" : "EXTENSION",
+              "number" : "22"
+            }, {
+              "type" : "FAX",
+              "number" : "2125550101"
+            } ]
+          } ],
+          "additionalIds" : [ {
+            "qualifierCode" : "0B",
+            "type" : "STATE_LICENSE_NUMBER",
+            "identification" : "SERVICELICENSE",
+            "licenseStateCode" : "NY"
+          } ]
+        } ],
+        "serviceReviewInformation" : {
+          "requestCategoryCode" : "HS",
+          "certificationTypeCode" : "R",
+          "serviceTypeCode" : "3",
+          "serviceLocation" : {
+            "type" : "FACILITY_TYPE",
+            "subType" : "PLACE_OF_SERVICE",
+            "code" : "11"
+          }
+        },
+        "serviceDelivery" : {
+          "quantityType" : "HOURS",
+          "quantity" : 2.50,
+          "unitType" : "WEEKS",
+          "sampleSelectionModulus" : 2.00,
+          "timePeriodQualifier" : "34",
+          "periodCount" : 3,
+          "deliveryFrequencyCode" : "B",
+          "deliveryPatternTimeCode" : "D"
+        },
+        "trackingNumbers" : [ {
+          "traceTypeCode" : "1",
+          "traceNumber" : "SERVICEONLY",
+          "originatingCompanyId" : "9345678901",
+          "originatingCompanyAdditionalId" : "SERVICE"
+        }, {
+          "traceTypeCode" : "1",
+          "traceNumber" : "SERVICESECOND",
+          "originatingCompanyId" : "9456789012",
+          "originatingCompanyAdditionalId" : "SECOND"
+        } ],
+        "message" : "SERVICE RECORDS REQUIRED",
+        "administrativeReferenceNumber" : "SERVICEADMIN",
+        "previousReviewAuthorizationNumber" : "SERVICEPRIOR",
+        "procedureCodeEnd" : "33516",
+        "nursingHomeLevelOfCareCode" : "1",
+        "serviceLineRate" : 750.00
+      }, {
+        "epsdtIndicator" : "Y",
+        "chargeAmount" : 120.00,
+        "unitType" : "UNIT",
+        "unitCount" : 3,
+        "procedure" : {
+          "type" : "PROCEDURE",
+          "subType" : "CPT",
+          "code" : "99211",
+          "desc" : "Office or other outpatient visit for the evaluation and management of an established patient that may not require the presence of a physician or other qualified health care professional",
+          "fullDesc" : "Office or other outpatient visit for the evaluation and management of an established patient that may not require the presence of a physician or other qualified health care professional",
+          "shortDesc" : "OFF/OP EST MAY X REQ PHY/QHP",
+          "startDate" : "1993-01-01",
+          "descFromClaim" : "OFFICE VISIT",
+          "modifiers" : [ {
+            "type" : "MODIFIER",
+            "subType" : "HCPCS_MODIFIER",
+            "code" : "25",
+            "desc" : "Significant, Separately Identifiable Evaluation and Management Service by the Same Physician or Other Qualified Health Care Professional on the Same Day of the Procedure or Other Service\n"
+          }, {
+            "type" : "MODIFIER",
+            "subType" : "HCPCS_MODIFIER",
+            "code" : "59",
+            "desc" : "Distinct Procedural Service: Under certain circumstances, it may be necessary to indicate that a procedure or service was distinct or independent from other non-E/M services performed on the same day.\nModifier 59 is used to identify procedures or services, other than E/M services, that are not normally reported together but are appropriate under the circumstances.\n"
+          }, {
+            "type" : "MODIFIER",
+            "subType" : "HCPCS_MODIFIER",
+            "code" : "LT",
+            "desc" : "Left side (used to identify procedures performed on the left side of the body)",
+            "shortDesc" : "Left side",
+            "startDate" : "1984-01-01"
+          }, {
+            "type" : "MODIFIER",
+            "subType" : "HCPCS_MODIFIER",
+            "code" : "GC",
+            "desc" : "This service has been performed in part by a resident under the direction of a teaching physician",
+            "shortDesc" : "Resident/teaching phys serv ",
+            "startDate" : "1997-01-01"
+          } ],
+          "categories" : [ {
+            "type" : "RBCS_TAXONOMY",
+            "subType" : "RBCS_CATEGORY",
+            "code" : "E",
+            "desc" : "E&M"
+          }, {
+            "type" : "RBCS_TAXONOMY",
+            "subType" : "RBCS_SUB_CATEGORY",
+            "code" : "EV",
+            "desc" : "Office/Outpatient Services"
+          } ]
+        },
+        "serviceReviewInformation" : {
+          "requestCategoryCode" : "HS",
+          "serviceTypeCode" : "3"
+        },
+        "procedureCodeEnd" : "99215",
+        "nursingHomeLevelOfCareCode" : "7"
+      }, {
+        "oralCavityDesignationCodes" : [ "10", "20", "30", "40", "01" ],
+        "prosthesisCrownOrInlayCode" : "I",
+        "chargeAmount" : 80.00,
+        "unitCount" : 1,
+        "procedure" : {
+          "type" : "PROCEDURE",
+          "subType" : "ADA",
+          "code" : "D2150",
+          "desc" : "AMALGAM-TWO SURFACES PRIMARY OR PERMANENT",
+          "fullDesc" : "amalgam - two surfaces, primary or permanent",
+          "shortDesc" : "AMALGAM-TWO SURFACES PRIMARY/PERM",
+          "descFromClaim" : "RESTORATION",
+          "categories" : [ {
+            "type" : "RBCS_TAXONOMY",
+            "subType" : "RBCS_CATEGORY",
+            "code" : "R",
+            "desc" : "Treatment"
+          }, {
+            "type" : "RBCS_TAXONOMY",
+            "subType" : "RBCS_SUB_CATEGORY",
+            "code" : "RX",
+            "desc" : "Treatment - Miscellaneous"
+          } ]
+        },
+        "toothInfos" : [ {
+          "code" : "12",
+          "surfaceCodes" : [ "L", "O", "M", "D", "B" ]
+        }, {
+          "code" : "13",
+          "surfaceCodes" : [ "O" ]
+        } ],
+        "serviceReviewInformation" : {
+          "requestCategoryCode" : "HS",
+          "serviceTypeCode" : "35"
+        },
+        "procedureCodeEnd" : "D2160"
+      } ],
+      "trackingNumbers" : [ {
+        "traceTypeCode" : "1",
+        "traceNumber" : "97021001",
+        "originatingCompanyId" : "9012345678",
+        "originatingCompanyAdditionalId" : "CARDIOLOGY"
+      }, {
+        "traceTypeCode" : "1",
+        "traceNumber" : "CLEARING123",
+        "originatingCompanyId" : "9123456789",
+        "originatingCompanyAdditionalId" : "REGION1"
+      } ],
+      "diags" : [ {
+        "type" : "DIAGNOSIS",
+        "subType" : "ICD_10_PRINCIPAL",
+        "code" : "I219",
+        "desc" : "Acute myocardial infarction, unspecified",
+        "startDate" : "2017-10-01",
+        "formattedCode" : "I21.9",
+        "occurrenceDate" : "2005-01-25"
+      }, {
+        "type" : "DIAGNOSIS",
+        "subType" : "ICD_10_ADMITTING",
+        "code" : "R079",
+        "desc" : "Chest pain, unspecified",
+        "formattedCode" : "R07.9",
+        "occurrenceDate" : "2005-01-27"
+      }, {
+        "type" : "DIAGNOSIS",
+        "subType" : "ICD_10",
+        "code" : "I10",
+        "desc" : "Essential (primary) hypertension",
+        "formattedCode" : "I10",
+        "occurrenceDate" : "2005-01-26"
+      }, {
+        "type" : "DIAGNOSIS",
+        "subType" : "ICD_10_REASON_FOR_VISIT",
+        "code" : "R0602",
+        "desc" : "Shortness of breath",
+        "formattedCode" : "R06.02",
+        "occurrenceDate" : "2005-01-28"
+      }, {
+        "type" : "DIAGNOSIS",
+        "subType" : "ICD_10",
+        "code" : "Z7984",
+        "desc" : "Long term (current) use of oral hypoglycemic drugs",
+        "startDate" : "2016-10-01",
+        "formattedCode" : "Z79.84"
+      }, {
+        "type" : "DIAGNOSIS",
+        "subType" : "ICD_10",
+        "code" : "Z87891",
+        "desc" : "Personal history of nicotine dependence",
+        "formattedCode" : "Z87.891"
+      }, {
+        "type" : "DIAGNOSIS",
+        "subType" : "ICD_10",
+        "code" : "E119",
+        "desc" : "Type 2 diabetes mellitus without complications",
+        "formattedCode" : "E11.9",
+        "occurrenceDate" : "2005-01-29"
+      }, {
+        "type" : "DIAGNOSIS",
+        "subType" : "ICD_10",
+        "code" : "E785",
+        "desc" : "Hyperlipidemia, unspecified",
+        "formattedCode" : "E78.5",
+        "occurrenceDate" : "2005-01-30"
+      }, {
+        "type" : "DIAGNOSIS",
+        "subType" : "ICD_10",
+        "code" : "I2510",
+        "desc" : "Atherosclerotic heart disease of native coronary artery without angina pectoris",
+        "shortDesc" : "Athscl heart disease of native coronary artery w/o ang pctrs",
+        "formattedCode" : "I25.10",
+        "occurrenceDate" : "2005-01-31"
+      }, {
+        "type" : "DIAGNOSIS",
+        "subType" : "ICD_10",
+        "code" : "I4891",
+        "desc" : "Unspecified atrial fibrillation",
+        "formattedCode" : "I48.91",
+        "occurrenceDate" : "2005-02-01"
+      }, {
+        "type" : "DIAGNOSIS",
+        "subType" : "ICD_10",
+        "code" : "I509",
+        "desc" : "Heart failure, unspecified",
+        "formattedCode" : "I50.9",
+        "occurrenceDate" : "2005-02-02"
+      }, {
+        "type" : "DIAGNOSIS",
+        "subType" : "ICD_10",
+        "code" : "J449",
+        "desc" : "Chronic obstructive pulmonary disease, unspecified",
+        "formattedCode" : "J44.9",
+        "occurrenceDate" : "2005-02-03"
+      } ],
+      "attachments" : [ {
+        "reportTypeCode" : "OB",
+        "type" : "OPERATIVE_NOTE",
+        "reportTransmissionCode" : "BM",
+        "transmissionType" : "BY_MAIL",
+        "controlNumber" : "ATTACH001",
+        "description" : "OPERATIVE NOTES REQUESTED"
+      }, {
+        "reportTypeCode" : "M1",
+        "type" : "MEDICAL_RECORD_ATTACHMENT",
+        "reportTransmissionCode" : "EL",
+        "transmissionType" : "ELECTRONICALLY_ONLY",
+        "controlNumber" : "ATTACH002",
+        "description" : "CLINICAL RECORDS REQUESTED"
+      } ],
+      "providers" : [ {
+        "entityRole" : "SERVICE_PROVIDER",
+        "entityType" : "INDIVIDUAL",
+        "identificationType" : "NPI",
+        "identifier" : "1234567893",
+        "taxId" : "123456789",
+        "taxIdType" : "EIN",
+        "lastNameOrOrgName" : "WATSON",
+        "firstName" : "SUSAN",
+        "middleName" : "J",
+        "namePrefix" : "DR",
+        "nameSuffix" : "JR",
+        "address" : {
+          "line" : "475 MAIN STREET",
+          "line2" : "SUITE 100",
+          "city" : "ANYTOWN",
+          "stateCode" : "PA",
+          "zipCode" : "19087",
+          "countryCode" : "US"
+        },
+        "providerTaxonomy" : {
+          "subType" : "PROVIDER_TAXONOMY",
+          "code" : "203BS0133X"
+        },
+        "contacts" : [ {
+          "functionCode" : "IC",
+          "name" : "JANE CLERK",
+          "contactNumbers" : [ {
+            "type" : "PHONE",
+            "number" : "2155550101"
+          }, {
+            "type" : "EXTENSION",
+            "number" : "123"
+          }, {
+            "type" : "FAX",
+            "number" : "2155550102"
+          } ]
+        }, {
+          "functionCode" : "IC",
+          "name" : "RECORDS",
+          "contactNumbers" : [ {
+            "type" : "EMAIL",
+            "number" : "records@example.test"
+          } ]
+        } ],
+        "additionalIds" : [ {
+          "qualifierCode" : "0B",
+          "type" : "STATE_LICENSE_NUMBER",
+          "identification" : "LICENSE123",
+          "licenseStateCode" : "PA"
+        }, {
+          "qualifierCode" : "1G",
+          "type" : "PROVIDER_UPIN_NUMBER",
+          "identification" : "UPIN123"
+        }, {
+          "qualifierCode" : "1J",
+          "type" : "FACILITY_ID",
+          "identification" : "FAC123"
+        }, {
+          "qualifierCode" : "N5",
+          "type" : "PROVIDER_PLAN_NETWORK_IDENTIFICATION_NUMBER",
+          "identification" : "PLAN123"
+        }, {
+          "qualifierCode" : "N7",
+          "type" : "FACILITY_NETWORK_IDENTIFICATION_NUMBER",
+          "identification" : "NETWORK123"
+        }, {
+          "qualifierCode" : "ZH",
+          "type" : "CARRIER_ASSIGNED_REFERENCE_NUMBER",
+          "identification" : "UMOPROV123"
+        } ]
+      }, {
+        "entityRole" : "GROUP_PRACTICE",
+        "entityType" : "BUSINESS",
+        "identificationType" : "NPI",
+        "identifier" : "1234567893",
+        "lastNameOrOrgName" : "EXAMPLE GROUP",
+        "address" : {
+          "line" : "10 GROUP ROAD",
+          "city" : "ANYTOWN",
+          "stateCode" : "PA",
+          "zipCode" : "19088"
+        }
+      } ]
+    }, {
+      "serviceReviewInformation" : {
+        "requestCategoryCode" : "HS",
+        "certificationTypeCode" : "R",
+        "serviceTypeCode" : "69",
+        "levelOfServiceCode" : "E",
+        "serviceLocation" : {
+          "type" : "FACILITY_TYPE",
+          "subType" : "PLACE_OF_SERVICE",
+          "code" : "11"
+        }
+      },
+      "lastMenstrualPeriodDate" : {
+        "qualifierCode" : "484",
+        "type" : "LAST_MENSTRUAL_PERIOD",
+        "date" : "2005-02-01"
+      },
+      "eventDate" : {
+        "qualifierCode" : "AAH",
+        "type" : "EVENT",
+        "date" : "2005-05-21"
+      },
+      "diags" : [ {
+        "type" : "DIAGNOSIS",
+        "subType" : "ICD_10_PRINCIPAL",
+        "code" : "Z3400",
+        "desc" : "Encounter for supervision of normal first pregnancy, unspecified trimester",
+        "shortDesc" : "Encntr for suprvsn of normal first pregnancy, unsp trimester",
+        "formattedCode" : "Z34.00",
+        "occurrenceDate" : "2005-05-21"
+      } ]
+    } ]
+  } ],
+  "transaction" : {
+    "id" : "6af3758bd261aba0a16b1b68",
+    "controlNumber" : "0001",
+    "transactionType" : "HEALTHCARE_REVIEW_REQUEST_RESPONSE",
+    "hierarchicalStructureCode" : "0007",
+    "purposeCode" : "13",
+    "creationDate" : "2005-05-02",
+    "creationTime" : "14:31:00",
+    "transactionSetIdentifierCode" : "278",
+    "implementationConventionReference" : "005010X217",
+    "fileInfo" : {
+      "name" : "X217-request-all-fields.edi",
+      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/278/X217-request-all-fields.edi",
+      "lastModifiedDateTime" : "2026-11-09T15:13:50.509-05:00"
+    },
+    "creationDateTime" : "2005-05-02T14:31:00"
+  }
+}
+, {
+  "objectType" : "VALIDATION",
+  "issueType" : "INVALID_CODE",
+  "issueObjectClass" : "ReviewParty",
+  "fieldName" : "taxonomyCode",
+  "sourceLocation" : {
+    "fileName" : "X217-request-all-fields.edi",
+    "lineNumber" : 60,
+    "segmentNumber" : 60
+  },
+  "loop" : "2010EA",
+  "segment" : "PRV",
+  "element" : "PRV03",
+  "codeSubType" : "PROVIDER_TAXONOMY",
+  "value" : "203BS0133X",
+  "ediString" : "PRV*PE*PXC*203BS0133X~",
+  "message" : "Health Care Provider Taxonomy Code 203BS0133X is not a valid code"
+}
+ ]
