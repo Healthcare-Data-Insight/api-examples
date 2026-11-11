@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6af3758cd261aba0a16b1d43",
+  "id" : "6af4ccba97ae19798c004d82",
   "objectType" : "HEALTHCARE_REVIEW",
   "reviewer" : {
     "entityRole" : "UTILIZATION_MANAGEMENT_ORGANIZATION",
@@ -36,7 +36,6 @@
         "certificationTypeCode" : "I",
         "serviceTypeCode" : "1",
         "serviceLocation" : {
-          "type" : "FACILITY_TYPE",
           "subType" : "PLACE_OF_SERVICE",
           "code" : "11"
         }
@@ -46,37 +45,22 @@
         "unitType" : "UNIT",
         "unitCount" : 1,
         "procedure" : {
-          "type" : "PROCEDURE",
           "subType" : "CPT",
           "code" : "99212",
-          "desc" : "Office or other outpatient visit for the evaluation and management of an established patient, which requires a medically appropriate history and/or examination and straightforward medical decision making. When using total time on the date of the encounter for code selection, 10 minutes must be met or exceeded.",
-          "fullDesc" : "Office or other outpatient visit for the evaluation and management of an established patient, which requires a medically appropriate history and/or examination and straightforward medical decision making. When using total time on the date of the encounter for code selection, 10 minutes must be met or exceeded.",
-          "shortDesc" : "OFFICE O/P EST SF 10 MIN",
-          "startDate" : "1993-01-01",
-          "categories" : [ {
-            "type" : "RBCS_TAXONOMY",
-            "subType" : "RBCS_CATEGORY",
-            "code" : "E",
-            "desc" : "E&M"
-          }, {
-            "type" : "RBCS_TAXONOMY",
-            "subType" : "RBCS_SUB_CATEGORY",
-            "code" : "EV",
-            "desc" : "Office/Outpatient Services"
-          } ]
+          "desc" : "Office or other outpatient visit for the evaluation and management of an established patient, which requires a medically appropriate history and/or examination and straightforward medical decision making. When using total time on the date of the encounter for code selection, 10 minutes must be met or exceeded."
         }
       } ]
     } ]
   } ],
   "transaction" : {
-    "id" : "6af3758cd261aba0a16b1d40",
+    "id" : "6af4ccba97ae19798c004d7f",
     "controlNumber" : "0001",
     "transactionType" : "HEALTHCARE_REVIEW_REQUEST_RESPONSE",
     "hierarchicalStructureCode" : "0007",
     "purposeCode" : "13",
     "creationDate" : "2005-05-02",
     "creationTime" : "22:43:00",
-    "typeCode" : "EdiQualifierEnt(ediValue=RU)",
+    "typeCode" : "RU",
     "transactionSetIdentifierCode" : "278",
     "implementationConventionReference" : "005010X217",
     "fileInfo" : {

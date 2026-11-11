@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6af3758cd261aba0a16b1c3d",
+  "id" : "6af4ccba97ae19798c004c7c",
   "objectType" : "HEALTHCARE_REVIEW",
   "reviewer" : {
     "entityRole" : "UTILIZATION_MANAGEMENT_ORGANIZATION",
@@ -36,48 +36,38 @@
       }
     },
     "patientEvents" : [ {
+      "trackingNumbers" : [ {
+        "traceTypeCode" : "1",
+        "traceNumber" : "97021001",
+        "originatingCompanyId" : "9012345678"
+      } ],
       "serviceReviewInformation" : {
         "requestCategoryCode" : "AR",
         "certificationTypeCode" : "I",
         "serviceTypeCode" : "2",
         "releaseOfInformationCode" : "Y",
         "serviceLocation" : {
-          "type" : "FACILITY_TYPE",
           "subType" : "PLACE_OF_SERVICE",
           "code" : "21"
         }
       },
+      "admissionDateFrom" : "2005-05-16",
+      "diags" : [ {
+        "subType" : "ICD_9",
+        "code" : "41090",
+        "occurrenceDate" : "2005-01-25"
+      } ],
       "serviceDelivery" : {
         "quantityType" : "DAYS",
         "quantity" : 7.00
       },
       "admissionTypeCode" : "2",
-      "admissionDate" : {
-        "qualifierCode" : "435",
-        "type" : "ADMISSION",
-        "date" : "2005-05-16"
-      },
       "serviceReviews" : [ {
         "serviceDateFrom" : "2005-05-16",
         "procedure" : {
-          "type" : "PROCEDURE",
           "subType" : "CPT",
           "code" : "33510",
-          "desc" : "Coronary artery bypass, vein only; single coronary venous graft",
-          "fullDesc" : "Coronary artery bypass, vein only; single coronary venous graft",
-          "shortDesc" : "CABG VEIN SINGLE",
-          "startDate" : "1993-01-01",
-          "categories" : [ {
-            "type" : "RBCS_TAXONOMY",
-            "subType" : "RBCS_CATEGORY",
-            "code" : "P",
-            "desc" : "Procedure"
-          }, {
-            "type" : "RBCS_TAXONOMY",
-            "subType" : "RBCS_SUB_CATEGORY",
-            "code" : "PC",
-            "desc" : "Cardiovascular"
-          } ]
+          "desc" : "Coronary artery bypass, vein only; single coronary venous graft"
         },
         "providers" : [ {
           "entityRole" : "SERVICE_PROVIDER",
@@ -97,16 +87,6 @@
           "serviceTypeCode" : "2"
         }
       } ],
-      "trackingNumbers" : [ {
-        "traceTypeCode" : "1",
-        "traceNumber" : "97021001",
-        "originatingCompanyId" : "9012345678"
-      } ],
-      "diags" : [ {
-        "subType" : "ICD_9",
-        "code" : "41090",
-        "occurrenceDate" : "2005-01-25"
-      } ],
       "providers" : [ {
         "entityRole" : "FACILITY",
         "entityType" : "BUSINESS",
@@ -123,7 +103,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6af3758bd261aba0a16b1c3a",
+    "id" : "6af4ccba97ae19798c004c79",
     "controlNumber" : "0001",
     "transactionType" : "HEALTHCARE_REVIEW_REQUEST_RESPONSE",
     "hierarchicalStructureCode" : "0007",

@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6af3758cd261aba0a16b1d5e",
+  "id" : "6af4ccba97ae19798c004d9d",
   "objectType" : "HEALTHCARE_REVIEW",
   "reviewer" : {
     "entityRole" : "UTILIZATION_MANAGEMENT_ORGANIZATION",
@@ -28,6 +28,11 @@
       }
     },
     "patientEvents" : [ {
+      "trackingNumbers" : [ {
+        "traceTypeCode" : "1",
+        "traceNumber" : "YZZ099",
+        "originatingCompanyId" : "9876543210"
+      } ],
       "serviceReviewInformation" : {
         "requestCategoryCode" : "AR",
         "certificationTypeCode" : "I",
@@ -35,31 +40,21 @@
         "levelOfServiceCode" : "03",
         "releaseOfInformationCode" : "Y",
         "serviceLocation" : {
-          "type" : "FACILITY_TYPE",
           "subType" : "PLACE_OF_SERVICE",
           "code" : "21"
         }
       },
-      "serviceDelivery" : {
-        "quantityType" : "DAYS",
-        "quantity" : 3.00
-      },
-      "admissionTypeCode" : "1",
-      "admissionDate" : {
-        "qualifierCode" : "435",
-        "type" : "ADMISSION",
-        "date" : "2005-05-05"
-      },
-      "trackingNumbers" : [ {
-        "traceTypeCode" : "1",
-        "traceNumber" : "YZZ099",
-        "originatingCompanyId" : "9876543210"
-      } ],
+      "admissionDateFrom" : "2005-05-05",
       "diags" : [ {
         "subType" : "ICD_9",
         "code" : "29603",
         "occurrenceDate" : "2005-04-30"
       } ],
+      "serviceDelivery" : {
+        "quantityType" : "DAYS",
+        "quantity" : 3.00
+      },
+      "admissionTypeCode" : "1",
       "providers" : [ {
         "entityRole" : "FACILITY",
         "entityType" : "BUSINESS",
@@ -91,7 +86,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6af3758cd261aba0a16b1d5b",
+    "id" : "6af4ccba97ae19798c004d9a",
     "controlNumber" : "0001",
     "transactionType" : "HEALTHCARE_REVIEW_REQUEST_RESPONSE",
     "hierarchicalStructureCode" : "0007",

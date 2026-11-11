@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6af3758cd261aba0a16b1cf5",
+  "id" : "6af4ccba97ae19798c004d34",
   "objectType" : "HEALTHCARE_REVIEW",
   "reviewer" : {
     "entityRole" : "UTILIZATION_MANAGEMENT_ORGANIZATION",
@@ -39,16 +39,11 @@
         "certificationTypeCode" : "I",
         "serviceTypeCode" : "56",
         "serviceLocation" : {
-          "type" : "FACILITY_TYPE",
           "subType" : "PLACE_OF_SERVICE",
           "code" : "41"
         }
       },
-      "eventDate" : {
-        "qualifierCode" : "AAH",
-        "type" : "EVENT",
-        "date" : "2005-05-10"
-      },
+      "eventDateFrom" : "2005-05-10",
       "ambulanceTransportInfo" : {
         "transportCode" : "X",
         "reasonCode" : "D",
@@ -66,91 +61,85 @@
         "unitType" : "UNIT",
         "unitCount" : 5,
         "procedure" : {
-          "type" : "PROCEDURE",
           "subType" : "HCPCS",
           "code" : "A0428",
           "desc" : "Ambulance service, basic life support, non-emergency transport, (bls)",
-          "shortDesc" : "Bls",
-          "startDate" : "2001-01-01",
           "modifiers" : [ {
-            "type" : "MODIFIER",
             "subType" : "HCPCS_MODIFIER",
             "code" : "RX"
-          } ],
-          "categories" : [ {
-            "type" : "RBCS_TAXONOMY",
-            "subType" : "RBCS_CATEGORY",
-            "code" : "O",
-            "desc" : "Other"
-          }, {
-            "type" : "RBCS_TAXONOMY",
-            "subType" : "RBCS_SUB_CATEGORY",
-            "code" : "OA",
-            "desc" : "Ambulance"
           } ]
         }
       }, {
         "unitType" : "UNIT",
         "unitCount" : 8,
         "procedure" : {
-          "type" : "PROCEDURE",
           "subType" : "HCPCS",
           "code" : "A0428",
           "desc" : "Ambulance service, basic life support, non-emergency transport, (bls)",
-          "shortDesc" : "Bls",
-          "startDate" : "2001-01-01",
           "modifiers" : [ {
-            "type" : "MODIFIER",
             "subType" : "HCPCS_MODIFIER",
             "code" : "PD",
-            "desc" : "Diagnostic or related non diagnostic item or service provided in a wholly owned or operated entity to a patient who is admitted as an inpatient within 3 days",
-            "shortDesc" : "Inp admit w/in 3 days ",
-            "startDate" : "2012-01-01"
-          } ],
-          "categories" : [ {
-            "type" : "RBCS_TAXONOMY",
-            "subType" : "RBCS_CATEGORY",
-            "code" : "O",
-            "desc" : "Other"
-          }, {
-            "type" : "RBCS_TAXONOMY",
-            "subType" : "RBCS_SUB_CATEGORY",
-            "code" : "OA",
-            "desc" : "Ambulance"
+            "desc" : "Diagnostic or related non diagnostic item or service provided in a wholly owned or operated entity to a patient who is admitted as an inpatient within 3 days"
           } ]
         }
       }, {
         "unitType" : "UNIT",
         "unitCount" : 14,
         "procedure" : {
-          "type" : "PROCEDURE",
           "subType" : "HCPCS",
           "code" : "A0428",
           "desc" : "Ambulance service, basic life support, non-emergency transport, (bls)",
-          "shortDesc" : "Bls",
-          "startDate" : "2001-01-01",
           "modifiers" : [ {
-            "type" : "MODIFIER",
             "subType" : "HCPCS_MODIFIER",
             "code" : "DR"
-          } ],
-          "categories" : [ {
-            "type" : "RBCS_TAXONOMY",
-            "subType" : "RBCS_CATEGORY",
-            "code" : "O",
-            "desc" : "Other"
-          }, {
-            "type" : "RBCS_TAXONOMY",
-            "subType" : "RBCS_SUB_CATEGORY",
-            "code" : "OA",
-            "desc" : "Ambulance"
           } ]
+        }
+      } ],
+      "transportLocations" : [ {
+        "entityRole" : "PICKUP_ADDRESS",
+        "entityType" : "BUSINESS",
+        "lastNameOrOrgName" : "HOME",
+        "address" : {
+          "line" : "8652 Starwood Lane",
+          "city" : "SACRAMENTO",
+          "stateCode" : "CA",
+          "zipCode" : "95826"
+        }
+      }, {
+        "entityRole" : "NEXT_DESTINATION",
+        "entityType" : "BUSINESS",
+        "lastNameOrOrgName" : "DR. GARDNER OFFICE",
+        "address" : {
+          "line" : "1921 FULTON AVENUE",
+          "city" : "SACRAMENTO",
+          "stateCode" : "CA",
+          "zipCode" : "95624"
+        }
+      }, {
+        "entityRole" : "NEXT_SCHEDULED_DESTINATION",
+        "entityType" : "BUSINESS",
+        "lastNameOrOrgName" : "XYZ DIALYSIS CENTER",
+        "address" : {
+          "line" : "7622 MORSETOWN ROAD",
+          "city" : "SACRAMENTO",
+          "stateCode" : "CA",
+          "zipCode" : "95826"
+        }
+      }, {
+        "entityRole" : "FINAL_SCHEDULED_DESTINATION",
+        "entityType" : "BUSINESS",
+        "lastNameOrOrgName" : "HOME",
+        "address" : {
+          "line" : "8652 Starwood Lane",
+          "city" : "SACRAMENTO",
+          "stateCode" : "CA",
+          "zipCode" : "95826"
         }
       } ]
     } ]
   } ],
   "transaction" : {
-    "id" : "6af3758cd261aba0a16b1cf2",
+    "id" : "6af4ccba97ae19798c004d31",
     "controlNumber" : "0001",
     "transactionType" : "HEALTHCARE_REVIEW_REQUEST_RESPONSE",
     "hierarchicalStructureCode" : "0007",

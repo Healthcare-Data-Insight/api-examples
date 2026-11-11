@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6af3758bd261aba0a16b1b6b",
+  "id" : "6af4ccba97ae19798c004baa",
   "objectType" : "HEALTHCARE_REVIEW",
   "reviewer" : {
     "entityRole" : "UTILIZATION_MANAGEMENT_ORGANIZATION",
@@ -27,23 +27,9 @@
       "countryCode" : "US"
     },
     "providerTaxonomy" : {
-      "type" : "PROVIDER_TAXONOMY",
       "subType" : "PROVIDER_TAXONOMY",
       "code" : "207RC0000X",
-      "desc" : "Cardiovascular Disease Physician",
-      "categories" : [ {
-        "type" : "PROVIDER_TAXONOMY",
-        "subType" : "GROUPING",
-        "code" : "Allopathic & Osteopathic Physicians"
-      }, {
-        "type" : "PROVIDER_TAXONOMY",
-        "subType" : "CLASSIFICATION",
-        "code" : "Internal Medicine"
-      }, {
-        "type" : "PROVIDER_TAXONOMY",
-        "subType" : "SPECIALIZATION",
-        "code" : "Cardiovascular Disease"
-      } ]
+      "desc" : "Cardiovascular Disease Physician"
     },
     "contacts" : [ {
       "functionCode" : "IC",
@@ -113,6 +99,17 @@
       "birthSequenceNumber" : 2
     },
     "patientEvents" : [ {
+      "trackingNumbers" : [ {
+        "traceTypeCode" : "1",
+        "traceNumber" : "97021001",
+        "originatingCompanyId" : "9012345678",
+        "originatingCompanyAdditionalId" : "CARDIOLOGY"
+      }, {
+        "traceTypeCode" : "1",
+        "traceNumber" : "CLEARING123",
+        "originatingCompanyId" : "9123456789",
+        "originatingCompanyAdditionalId" : "REGION1"
+      } ],
       "serviceReviewInformation" : {
         "requestCategoryCode" : "AR",
         "certificationTypeCode" : "I",
@@ -132,11 +129,102 @@
         "releaseOfInformationCode" : "Y",
         "delayReasonCode" : "10",
         "serviceLocation" : {
-          "type" : "FACILITY_TYPE",
           "subType" : "PLACE_OF_SERVICE",
           "code" : "21"
         }
       },
+      "administrativeReferenceNumber" : "ADMIN123",
+      "previousReviewAuthorizationNumber" : "PRIOR456",
+      "accidentDate" : "2005-01-20",
+      "estimatedBirthDate" : "2005-11-30",
+      "onsetOfCurrentIllnessOrInjuryDate" : "2005-01-25",
+      "eventDateFrom" : "2005-05-16",
+      "eventDateTo" : "2005-05-20",
+      "admissionDateFrom" : "2005-05-16",
+      "dischargeDate" : "2005-05-20",
+      "ambulanceTransportInfo" : {
+        "transportCode" : "T",
+        "transportDistance" : 28
+      },
+      "spinalManipulationInfo" : {
+        "treatmentSeriesNumber" : 1,
+        "treatmentCount" : 5.00,
+        "subluxationLevelCode" : "C1",
+        "endingSubluxationLevelCode" : "C7",
+        "conditionCode" : "A",
+        "patientConditionIndicator" : "Y"
+      },
+      "diags" : [ {
+        "subType" : "ICD_10_PRINCIPAL",
+        "code" : "I219",
+        "desc" : "Acute myocardial infarction, unspecified",
+        "formattedCode" : "I21.9",
+        "occurrenceDate" : "2005-01-25"
+      }, {
+        "subType" : "ICD_10_ADMITTING",
+        "code" : "R079",
+        "desc" : "Chest pain, unspecified",
+        "formattedCode" : "R07.9",
+        "occurrenceDate" : "2005-01-27"
+      }, {
+        "subType" : "ICD_10",
+        "code" : "I10",
+        "desc" : "Essential (primary) hypertension",
+        "formattedCode" : "I10",
+        "occurrenceDate" : "2005-01-26"
+      }, {
+        "subType" : "ICD_10_REASON_FOR_VISIT",
+        "code" : "R0602",
+        "desc" : "Shortness of breath",
+        "formattedCode" : "R06.02",
+        "occurrenceDate" : "2005-01-28"
+      }, {
+        "subType" : "ICD_10",
+        "code" : "Z7984",
+        "desc" : "Long term (current) use of oral hypoglycemic drugs",
+        "formattedCode" : "Z79.84"
+      }, {
+        "subType" : "ICD_10",
+        "code" : "Z87891",
+        "desc" : "Personal history of nicotine dependence",
+        "formattedCode" : "Z87.891"
+      }, {
+        "subType" : "ICD_10",
+        "code" : "E119",
+        "desc" : "Type 2 diabetes mellitus without complications",
+        "formattedCode" : "E11.9",
+        "occurrenceDate" : "2005-01-29"
+      }, {
+        "subType" : "ICD_10",
+        "code" : "E785",
+        "desc" : "Hyperlipidemia, unspecified",
+        "formattedCode" : "E78.5",
+        "occurrenceDate" : "2005-01-30"
+      }, {
+        "subType" : "ICD_10",
+        "code" : "I2510",
+        "desc" : "Atherosclerotic heart disease of native coronary artery without angina pectoris",
+        "formattedCode" : "I25.10",
+        "occurrenceDate" : "2005-01-31"
+      }, {
+        "subType" : "ICD_10",
+        "code" : "I4891",
+        "desc" : "Unspecified atrial fibrillation",
+        "formattedCode" : "I48.91",
+        "occurrenceDate" : "2005-02-01"
+      }, {
+        "subType" : "ICD_10",
+        "code" : "I509",
+        "desc" : "Heart failure, unspecified",
+        "formattedCode" : "I50.9",
+        "occurrenceDate" : "2005-02-02"
+      }, {
+        "subType" : "ICD_10",
+        "code" : "J449",
+        "desc" : "Chronic obstructive pulmonary disease, unspecified",
+        "formattedCode" : "J44.9",
+        "occurrenceDate" : "2005-02-03"
+      } ],
       "serviceDelivery" : {
         "quantityType" : "DAYS",
         "quantity" : 5.00,
@@ -150,52 +238,6 @@
       "admissionTypeCode" : "3",
       "admissionSourceCode" : "1",
       "patientStatusCode" : "01",
-      "message" : "ADDITIONAL RECORDS REQUIRED",
-      "administrativeReferenceNumber" : "ADMIN123",
-      "previousReviewAuthorizationNumber" : "PRIOR456",
-      "accidentDate" : {
-        "qualifierCode" : "439",
-        "type" : "ACCIDENT",
-        "date" : "2005-01-20"
-      },
-      "estimatedBirthDate" : {
-        "qualifierCode" : "ABC",
-        "type" : "ESTIMATED_BIRTH",
-        "date" : "2005-11-30"
-      },
-      "onsetOfCurrentIllnessDate" : {
-        "qualifierCode" : "431",
-        "type" : "ONSET_OF_CURRENT_ILLNESS",
-        "date" : "2005-01-25"
-      },
-      "eventDate" : {
-        "qualifierCode" : "AAH",
-        "type" : "EVENT",
-        "date" : "2005-05-16",
-        "dateTo" : "2005-05-20"
-      },
-      "admissionDate" : {
-        "qualifierCode" : "435",
-        "type" : "ADMISSION",
-        "date" : "2005-05-16"
-      },
-      "dischargeDate" : {
-        "qualifierCode" : "096",
-        "type" : "DISCHARGE",
-        "date" : "2005-05-20"
-      },
-      "ambulanceTransportInfo" : {
-        "transportCode" : "T",
-        "transportDistance" : 28
-      },
-      "spinalManipulationInfo" : {
-        "treatmentSeriesNumber" : 1,
-        "treatmentCount" : 5.00,
-        "subluxationLevelCode" : "C1",
-        "endingSubluxationLevelCode" : "C7",
-        "conditionCode" : "A",
-        "patientConditionIndicator" : "Y"
-      },
       "conditionsIndicators" : [ {
         "categoryCode" : "07",
         "category" : "AMBULANCE_CERTIFICATION",
@@ -246,54 +288,31 @@
         "unitType" : "UNIT",
         "unitCount" : 2,
         "procedure" : {
-          "type" : "PROCEDURE",
           "subType" : "CPT",
           "code" : "33510",
           "desc" : "Coronary artery bypass, vein only; single coronary venous graft",
-          "fullDesc" : "Coronary artery bypass, vein only; single coronary venous graft",
-          "shortDesc" : "CABG VEIN SINGLE",
-          "startDate" : "1993-01-01",
           "descFromClaim" : "BYPASS",
           "modifiers" : [ {
-            "type" : "MODIFIER",
             "subType" : "HCPCS_MODIFIER",
             "code" : "22"
           }, {
-            "type" : "MODIFIER",
             "subType" : "HCPCS_MODIFIER",
             "code" : "51",
             "desc" : "Multiple procedures: When multiple procedures, other than E/M services, physical medicine and rehabilitation services or provision of supplies (e.g., vaccines), are performed at the same session by the same provider, the primary procedure or service may be reported as listed. The additional procedure(s) or service(s) may be identified by appending the modifier 51 to the additional procedure or service code(s).\n"
           }, {
-            "type" : "MODIFIER",
             "subType" : "HCPCS_MODIFIER",
             "code" : "59",
             "desc" : "Distinct Procedural Service: Under certain circumstances, it may be necessary to indicate that a procedure or service was distinct or independent from other non-E/M services performed on the same day.\nModifier 59 is used to identify procedures or services, other than E/M services, that are not normally reported together but are appropriate under the circumstances.\n"
           }, {
-            "type" : "MODIFIER",
             "subType" : "HCPCS_MODIFIER",
             "code" : "LT",
-            "desc" : "Left side (used to identify procedures performed on the left side of the body)",
-            "shortDesc" : "Left side",
-            "startDate" : "1984-01-01"
-          } ],
-          "categories" : [ {
-            "type" : "RBCS_TAXONOMY",
-            "subType" : "RBCS_CATEGORY",
-            "code" : "P",
-            "desc" : "Procedure"
-          }, {
-            "type" : "RBCS_TAXONOMY",
-            "subType" : "RBCS_SUB_CATEGORY",
-            "code" : "PC",
-            "desc" : "Cardiovascular"
+            "desc" : "Left side (used to identify procedures performed on the left side of the body)"
           } ]
         },
         "revenueCode" : {
-          "type" : "UB04_REVENUE_CODE",
           "subType" : "REVENUE_CODE",
           "code" : "0360",
-          "desc" : "Operating Room Services-General",
-          "startDate" : "1989-10-01"
+          "desc" : "Operating Room Services-General"
         },
         "attachments" : [ {
           "reportTypeCode" : "AS",
@@ -327,23 +346,9 @@
             "countryCode" : "US"
           },
           "providerTaxonomy" : {
-            "type" : "PROVIDER_TAXONOMY",
             "subType" : "PROVIDER_TAXONOMY",
             "code" : "207RC0000X",
-            "desc" : "Cardiovascular Disease Physician",
-            "categories" : [ {
-              "type" : "PROVIDER_TAXONOMY",
-              "subType" : "GROUPING",
-              "code" : "Allopathic & Osteopathic Physicians"
-            }, {
-              "type" : "PROVIDER_TAXONOMY",
-              "subType" : "CLASSIFICATION",
-              "code" : "Internal Medicine"
-            }, {
-              "type" : "PROVIDER_TAXONOMY",
-              "subType" : "SPECIALIZATION",
-              "code" : "Cardiovascular Disease"
-            } ]
+            "desc" : "Cardiovascular Disease Physician"
           },
           "contacts" : [ {
             "functionCode" : "IC",
@@ -371,7 +376,6 @@
           "certificationTypeCode" : "R",
           "serviceTypeCode" : "3",
           "serviceLocation" : {
-            "type" : "FACILITY_TYPE",
             "subType" : "PLACE_OF_SERVICE",
             "code" : "11"
           }
@@ -409,49 +413,26 @@
         "unitType" : "UNIT",
         "unitCount" : 3,
         "procedure" : {
-          "type" : "PROCEDURE",
           "subType" : "CPT",
           "code" : "99211",
           "desc" : "Office or other outpatient visit for the evaluation and management of an established patient that may not require the presence of a physician or other qualified health care professional",
-          "fullDesc" : "Office or other outpatient visit for the evaluation and management of an established patient that may not require the presence of a physician or other qualified health care professional",
-          "shortDesc" : "OFF/OP EST MAY X REQ PHY/QHP",
-          "startDate" : "1993-01-01",
           "descFromClaim" : "OFFICE VISIT",
           "modifiers" : [ {
-            "type" : "MODIFIER",
             "subType" : "HCPCS_MODIFIER",
             "code" : "25",
             "desc" : "Significant, Separately Identifiable Evaluation and Management Service by the Same Physician or Other Qualified Health Care Professional on the Same Day of the Procedure or Other Service\n"
           }, {
-            "type" : "MODIFIER",
             "subType" : "HCPCS_MODIFIER",
             "code" : "59",
             "desc" : "Distinct Procedural Service: Under certain circumstances, it may be necessary to indicate that a procedure or service was distinct or independent from other non-E/M services performed on the same day.\nModifier 59 is used to identify procedures or services, other than E/M services, that are not normally reported together but are appropriate under the circumstances.\n"
           }, {
-            "type" : "MODIFIER",
             "subType" : "HCPCS_MODIFIER",
             "code" : "LT",
-            "desc" : "Left side (used to identify procedures performed on the left side of the body)",
-            "shortDesc" : "Left side",
-            "startDate" : "1984-01-01"
+            "desc" : "Left side (used to identify procedures performed on the left side of the body)"
           }, {
-            "type" : "MODIFIER",
             "subType" : "HCPCS_MODIFIER",
             "code" : "GC",
-            "desc" : "This service has been performed in part by a resident under the direction of a teaching physician",
-            "shortDesc" : "Resident/teaching phys serv ",
-            "startDate" : "1997-01-01"
-          } ],
-          "categories" : [ {
-            "type" : "RBCS_TAXONOMY",
-            "subType" : "RBCS_CATEGORY",
-            "code" : "E",
-            "desc" : "E&M"
-          }, {
-            "type" : "RBCS_TAXONOMY",
-            "subType" : "RBCS_SUB_CATEGORY",
-            "code" : "EV",
-            "desc" : "Office/Outpatient Services"
+            "desc" : "This service has been performed in part by a resident under the direction of a teaching physician"
           } ]
         },
         "serviceReviewInformation" : {
@@ -466,24 +447,10 @@
         "chargeAmount" : 80.00,
         "unitCount" : 1,
         "procedure" : {
-          "type" : "PROCEDURE",
           "subType" : "ADA",
           "code" : "D2150",
           "desc" : "AMALGAM-TWO SURFACES PRIMARY OR PERMANENT",
-          "fullDesc" : "amalgam - two surfaces, primary or permanent",
-          "shortDesc" : "AMALGAM-TWO SURFACES PRIMARY/PERM",
-          "descFromClaim" : "RESTORATION",
-          "categories" : [ {
-            "type" : "RBCS_TAXONOMY",
-            "subType" : "RBCS_CATEGORY",
-            "code" : "R",
-            "desc" : "Treatment"
-          }, {
-            "type" : "RBCS_TAXONOMY",
-            "subType" : "RBCS_SUB_CATEGORY",
-            "code" : "RX",
-            "desc" : "Treatment - Miscellaneous"
-          } ]
+          "descFromClaim" : "RESTORATION"
         },
         "toothInfos" : [ {
           "code" : "12",
@@ -497,103 +464,6 @@
           "serviceTypeCode" : "35"
         },
         "procedureCodeEnd" : "D2160"
-      } ],
-      "trackingNumbers" : [ {
-        "traceTypeCode" : "1",
-        "traceNumber" : "97021001",
-        "originatingCompanyId" : "9012345678",
-        "originatingCompanyAdditionalId" : "CARDIOLOGY"
-      }, {
-        "traceTypeCode" : "1",
-        "traceNumber" : "CLEARING123",
-        "originatingCompanyId" : "9123456789",
-        "originatingCompanyAdditionalId" : "REGION1"
-      } ],
-      "diags" : [ {
-        "type" : "DIAGNOSIS",
-        "subType" : "ICD_10_PRINCIPAL",
-        "code" : "I219",
-        "desc" : "Acute myocardial infarction, unspecified",
-        "startDate" : "2017-10-01",
-        "formattedCode" : "I21.9",
-        "occurrenceDate" : "2005-01-25"
-      }, {
-        "type" : "DIAGNOSIS",
-        "subType" : "ICD_10_ADMITTING",
-        "code" : "R079",
-        "desc" : "Chest pain, unspecified",
-        "formattedCode" : "R07.9",
-        "occurrenceDate" : "2005-01-27"
-      }, {
-        "type" : "DIAGNOSIS",
-        "subType" : "ICD_10",
-        "code" : "I10",
-        "desc" : "Essential (primary) hypertension",
-        "formattedCode" : "I10",
-        "occurrenceDate" : "2005-01-26"
-      }, {
-        "type" : "DIAGNOSIS",
-        "subType" : "ICD_10_REASON_FOR_VISIT",
-        "code" : "R0602",
-        "desc" : "Shortness of breath",
-        "formattedCode" : "R06.02",
-        "occurrenceDate" : "2005-01-28"
-      }, {
-        "type" : "DIAGNOSIS",
-        "subType" : "ICD_10",
-        "code" : "Z7984",
-        "desc" : "Long term (current) use of oral hypoglycemic drugs",
-        "startDate" : "2016-10-01",
-        "formattedCode" : "Z79.84"
-      }, {
-        "type" : "DIAGNOSIS",
-        "subType" : "ICD_10",
-        "code" : "Z87891",
-        "desc" : "Personal history of nicotine dependence",
-        "formattedCode" : "Z87.891"
-      }, {
-        "type" : "DIAGNOSIS",
-        "subType" : "ICD_10",
-        "code" : "E119",
-        "desc" : "Type 2 diabetes mellitus without complications",
-        "formattedCode" : "E11.9",
-        "occurrenceDate" : "2005-01-29"
-      }, {
-        "type" : "DIAGNOSIS",
-        "subType" : "ICD_10",
-        "code" : "E785",
-        "desc" : "Hyperlipidemia, unspecified",
-        "formattedCode" : "E78.5",
-        "occurrenceDate" : "2005-01-30"
-      }, {
-        "type" : "DIAGNOSIS",
-        "subType" : "ICD_10",
-        "code" : "I2510",
-        "desc" : "Atherosclerotic heart disease of native coronary artery without angina pectoris",
-        "shortDesc" : "Athscl heart disease of native coronary artery w/o ang pctrs",
-        "formattedCode" : "I25.10",
-        "occurrenceDate" : "2005-01-31"
-      }, {
-        "type" : "DIAGNOSIS",
-        "subType" : "ICD_10",
-        "code" : "I4891",
-        "desc" : "Unspecified atrial fibrillation",
-        "formattedCode" : "I48.91",
-        "occurrenceDate" : "2005-02-01"
-      }, {
-        "type" : "DIAGNOSIS",
-        "subType" : "ICD_10",
-        "code" : "I509",
-        "desc" : "Heart failure, unspecified",
-        "formattedCode" : "I50.9",
-        "occurrenceDate" : "2005-02-02"
-      }, {
-        "type" : "DIAGNOSIS",
-        "subType" : "ICD_10",
-        "code" : "J449",
-        "desc" : "Chronic obstructive pulmonary disease, unspecified",
-        "formattedCode" : "J44.9",
-        "occurrenceDate" : "2005-02-03"
       } ],
       "attachments" : [ {
         "reportTypeCode" : "OB",
@@ -610,6 +480,7 @@
         "controlNumber" : "ATTACH002",
         "description" : "CLINICAL RECORDS REQUESTED"
       } ],
+      "message" : "ADDITIONAL RECORDS REQUIRED",
       "providers" : [ {
         "entityRole" : "SERVICE_PROVIDER",
         "entityType" : "INDIVIDUAL",
@@ -693,6 +564,17 @@
           "stateCode" : "PA",
           "zipCode" : "19088"
         }
+      } ],
+      "transportLocations" : [ {
+        "entityRole" : "PICKUP_ADDRESS",
+        "entityType" : "BUSINESS",
+        "lastNameOrOrgName" : "SKIPPED TRANSPORT",
+        "address" : {
+          "line" : "50 TRANSPORT ROAD",
+          "city" : "BOSTON",
+          "stateCode" : "MA",
+          "zipCode" : "02110"
+        }
       } ]
     }, {
       "serviceReviewInformation" : {
@@ -701,34 +583,23 @@
         "serviceTypeCode" : "69",
         "levelOfServiceCode" : "E",
         "serviceLocation" : {
-          "type" : "FACILITY_TYPE",
           "subType" : "PLACE_OF_SERVICE",
           "code" : "11"
         }
       },
-      "lastMenstrualPeriodDate" : {
-        "qualifierCode" : "484",
-        "type" : "LAST_MENSTRUAL_PERIOD",
-        "date" : "2005-02-01"
-      },
-      "eventDate" : {
-        "qualifierCode" : "AAH",
-        "type" : "EVENT",
-        "date" : "2005-05-21"
-      },
+      "lastMenstrualPeriodDate" : "2005-02-01",
+      "eventDateFrom" : "2005-05-21",
       "diags" : [ {
-        "type" : "DIAGNOSIS",
         "subType" : "ICD_10_PRINCIPAL",
         "code" : "Z3400",
         "desc" : "Encounter for supervision of normal first pregnancy, unspecified trimester",
-        "shortDesc" : "Encntr for suprvsn of normal first pregnancy, unsp trimester",
         "formattedCode" : "Z34.00",
         "occurrenceDate" : "2005-05-21"
       } ]
     } ]
   } ],
   "transaction" : {
-    "id" : "6af3758bd261aba0a16b1b68",
+    "id" : "6af4ccba97ae19798c004ba7",
     "controlNumber" : "0001",
     "transactionType" : "HEALTHCARE_REVIEW_REQUEST_RESPONSE",
     "hierarchicalStructureCode" : "0007",

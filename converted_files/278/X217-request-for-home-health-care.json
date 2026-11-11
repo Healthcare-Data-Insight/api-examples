@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6af3758bd261aba0a16b1be3",
+  "id" : "6af4ccba97ae19798c004c22",
   "objectType" : "HEALTHCARE_REVIEW",
   "reviewer" : {
     "entityRole" : "UTILIZATION_MANAGEMENT_ORGANIZATION",
@@ -41,11 +41,17 @@
         "certificationTypeCode" : "I",
         "releaseOfInformationCode" : "Y",
         "serviceLocation" : {
-          "type" : "FACILITY_TYPE",
           "subType" : "PLACE_OF_SERVICE",
           "code" : "12"
         }
       },
+      "diags" : [ {
+        "subType" : "ICD_9",
+        "code" : "1831"
+      }, {
+        "subType" : "ICD_9",
+        "code" : "2630"
+      } ],
       "serviceDelivery" : {
         "quantityType" : "VISITS",
         "quantity" : 3.00,
@@ -55,37 +61,15 @@
       },
       "serviceReviews" : [ {
         "procedure" : {
-          "type" : "PROCEDURE",
           "subType" : "HCPCS",
           "code" : "G0154",
-          "desc" : "Direct skilled nursing services of a licensed nurse (lpn or rn) in the home health or hospice setting, each 15 minutes",
-          "shortDesc" : "Hhcp-svs of rn,ea 15 min ",
-          "startDate" : "1999-07-01",
-          "endDate" : "2016-02-29",
-          "categories" : [ {
-            "type" : "RBCS_TAXONOMY",
-            "subType" : "RBCS_CATEGORY",
-            "code" : "E",
-            "desc" : "E&M"
-          }, {
-            "type" : "RBCS_TAXONOMY",
-            "subType" : "RBCS_SUB_CATEGORY",
-            "code" : "EH",
-            "desc" : "Home Services"
-          } ]
+          "desc" : "Direct skilled nursing services of a licensed nurse (lpn or rn) in the home health or hospice setting, each 15 minutes"
         }
       }, {
         "procedure" : {
           "subType" : "HCPCS",
           "code" : "B4184"
         }
-      } ],
-      "diags" : [ {
-        "subType" : "ICD_9",
-        "code" : "1831"
-      }, {
-        "subType" : "ICD_9",
-        "code" : "2630"
       } ],
       "providers" : [ {
         "entityRole" : "SERVICE_PROVIDER",
@@ -97,7 +81,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6af3758bd261aba0a16b1be0",
+    "id" : "6af4ccba97ae19798c004c1f",
     "controlNumber" : "0001",
     "transactionType" : "HEALTHCARE_REVIEW_REQUEST_RESPONSE",
     "hierarchicalStructureCode" : "0007",

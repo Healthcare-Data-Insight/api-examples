@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6af3758cd261aba0a16b1d23",
+  "id" : "6af4ccba97ae19798c004d62",
   "objectType" : "HEALTHCARE_REVIEW",
   "reviewer" : {
     "entityRole" : "UTILIZATION_MANAGEMENT_ORGANIZATION",
@@ -35,13 +35,17 @@
       }
     },
     "patientEvents" : [ {
+      "trackingNumbers" : [ {
+        "traceTypeCode" : "2",
+        "traceNumber" : "YZZ099",
+        "originatingCompanyId" : "9876543210"
+      } ],
       "serviceReviewInformation" : {
         "requestCategoryCode" : "AR",
         "certificationTypeCode" : "I",
         "serviceTypeCode" : "A4",
         "levelOfServiceCode" : "03",
         "serviceLocation" : {
-          "type" : "FACILITY_TYPE",
           "subType" : "PLACE_OF_SERVICE",
           "code" : "21"
         }
@@ -51,11 +55,6 @@
         "decisionReasonCodes" : [ "0U" ]
       },
       "administrativeReferenceNumber" : "P20030216001",
-      "trackingNumbers" : [ {
-        "traceTypeCode" : "2",
-        "traceNumber" : "YZZ099",
-        "originatingCompanyId" : "9876543210"
-      } ],
       "diags" : [ {
         "subType" : "ICD_9",
         "code" : "29603",
@@ -90,14 +89,14 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6af3758cd261aba0a16b1d20",
+    "id" : "6af4ccba97ae19798c004d5f",
     "controlNumber" : "0001",
     "transactionType" : "HEALTHCARE_REVIEW_REQUEST_RESPONSE",
     "hierarchicalStructureCode" : "0007",
     "purposeCode" : "11",
     "creationDate" : "2005-05-02",
     "creationTime" : "11:02:00",
-    "typeCode" : "EdiQualifierEnt(ediValue=19)",
+    "typeCode" : "19",
     "transactionSetIdentifierCode" : "278",
     "implementationConventionReference" : "005010X217",
     "fileInfo" : {

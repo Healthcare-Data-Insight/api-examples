@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6af3758bd261aba0a16b1c03",
+  "id" : "6af4ccba97ae19798c004c42",
   "objectType" : "HEALTHCARE_REVIEW",
   "reviewer" : {
     "entityRole" : "UTILIZATION_MANAGEMENT_ORGANIZATION",
@@ -29,31 +29,30 @@
       }
     },
     "patientEvents" : [ {
+      "trackingNumbers" : [ {
+        "traceTypeCode" : "1",
+        "traceNumber" : "111099",
+        "originatingCompanyId" : "9012345678"
+      } ],
       "serviceReviewInformation" : {
         "requestCategoryCode" : "SC",
         "certificationTypeCode" : "I",
         "serviceTypeCode" : "3",
         "releaseOfInformationCode" : "Y",
         "serviceLocation" : {
-          "type" : "FACILITY_TYPE",
           "subType" : "PLACE_OF_SERVICE",
           "code" : "11"
         }
       },
-      "serviceDelivery" : {
-        "quantityType" : "VISITS",
-        "quantity" : 1.00
-      },
-      "trackingNumbers" : [ {
-        "traceTypeCode" : "1",
-        "traceNumber" : "111099",
-        "originatingCompanyId" : "9012345678"
-      } ],
       "diags" : [ {
         "subType" : "ICD_9",
         "code" : "41090",
         "occurrenceDate" : "2005-04-30"
       } ],
+      "serviceDelivery" : {
+        "quantityType" : "VISITS",
+        "quantity" : 1.00
+      },
       "providers" : [ {
         "entityRole" : "SERVICE_PROVIDER",
         "entityType" : "INDIVIDUAL",
@@ -72,7 +71,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6af3758bd261aba0a16b1c00",
+    "id" : "6af4ccba97ae19798c004c3f",
     "controlNumber" : "0001",
     "transactionType" : "HEALTHCARE_REVIEW_REQUEST_RESPONSE",
     "hierarchicalStructureCode" : "0007",
