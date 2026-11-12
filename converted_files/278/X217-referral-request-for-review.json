@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6af4ccba97ae19798c004c42",
+  "id" : "6af6382cbd7c299f8857e132",
   "objectType" : "HEALTHCARE_REVIEW",
   "reviewer" : {
     "entityRole" : "UTILIZATION_MANAGEMENT_ORGANIZATION",
@@ -71,7 +71,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6af4ccba97ae19798c004c3f",
+    "id" : "6af6382cbd7c299f8857e12f",
     "controlNumber" : "0001",
     "transactionType" : "HEALTHCARE_REVIEW_REQUEST_RESPONSE",
     "hierarchicalStructureCode" : "0007",
@@ -82,27 +82,10 @@
     "implementationConventionReference" : "005010X217",
     "fileInfo" : {
       "name" : "X217-referral-request-for-review.edi",
-      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/278/X217-referral-request-for-review.edi",
-      "lastModifiedDateTime" : "2026-11-09T14:39:45.836-05:00"
+      "url" : "file:/edi-samples/edi_files/278/X217-referral-request-for-review.edi",
+      "lastModifiedDateTime" : "2026-11-12T17:01:04.26-05:00"
     },
     "creationDateTime" : "2005-05-02T11:01:00"
   }
-}
-, {
-  "objectType" : "VALIDATION",
-  "issueType" : "INVALID_CODE",
-  "fieldName" : "industry_code",
-  "sourceLocation" : {
-    "fileName" : "X217-referral-request-for-review.edi",
-    "lineNumber" : 14,
-    "segmentNumber" : 14
-  },
-  "loop" : "2000E",
-  "segment" : "HI",
-  "element" : "HI01-2",
-  "codeSubType" : "ICD_9",
-  "value" : "41090",
-  "ediString" : "HI*BF:41090:D8:20050430~",
-  "message" : "ICD-9-CM Diagnosis 41090 is not a valid code"
 }
  ]

@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6af4ccba97ae19798c004d62",
+  "id" : "6af6382cbd7c299f8857e252",
   "objectType" : "HEALTHCARE_REVIEW",
   "reviewer" : {
     "entityRole" : "UTILIZATION_MANAGEMENT_ORGANIZATION",
@@ -89,7 +89,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6af4ccba97ae19798c004d5f",
+    "id" : "6af6382cbd7c299f8857e24f",
     "controlNumber" : "0001",
     "transactionType" : "HEALTHCARE_REVIEW_REQUEST_RESPONSE",
     "hierarchicalStructureCode" : "0007",
@@ -101,27 +101,10 @@
     "implementationConventionReference" : "005010X217",
     "fileInfo" : {
       "name" : "X217-emergency-admission-response-to-request-for-review.edi",
-      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/278/X217-emergency-admission-response-to-request-for-review.edi",
-      "lastModifiedDateTime" : "2026-11-08T11:13:53.28-05:00"
+      "url" : "file:/edi-samples/edi_files/278/X217-emergency-admission-response-to-request-for-review.edi",
+      "lastModifiedDateTime" : "2026-11-12T17:01:04.26-05:00"
     },
     "creationDateTime" : "2005-05-02T11:02:00"
   }
-}
-, {
-  "objectType" : "VALIDATION",
-  "issueType" : "INVALID_CODE",
-  "fieldName" : "industry_code",
-  "sourceLocation" : {
-    "fileName" : "X217-emergency-admission-response-to-request-for-review.edi",
-    "lineNumber" : 1,
-    "segmentNumber" : 17
-  },
-  "loop" : "2000E-2",
-  "segment" : "HI",
-  "element" : "HI01-2",
-  "codeSubType" : "ICD_9",
-  "value" : "29603",
-  "ediString" : "HI*BF:29603:D8:20050429~",
-  "message" : "ICD-9-CM Diagnosis 29603 is not a valid code"
 }
  ]

@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6af4ccba97ae19798c004deb",
+  "id" : "6af6382cbd7c299f8857e2db",
   "objectType" : "HEALTHCARE_REVIEW",
   "reviewer" : {
     "entityRole" : "UTILIZATION_MANAGEMENT_ORGANIZATION",
@@ -102,7 +102,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6af4ccba97ae19798c004de8",
+    "id" : "6af6382cbd7c299f8857e2d8",
     "controlNumber" : "0001",
     "transactionType" : "HEALTHCARE_REVIEW_REQUEST_RESPONSE",
     "hierarchicalStructureCode" : "0007",
@@ -114,45 +114,10 @@
     "implementationConventionReference" : "005010X217",
     "fileInfo" : {
       "name" : "X217-admission-response-to-request-for-review.edi",
-      "url" : "file:/Users/aananiev/myarchdev/healthcaredata/edi-samples/edi_files/278/X217-admission-response-to-request-for-review.edi",
-      "lastModifiedDateTime" : "2026-11-09T14:39:45.835-05:00"
+      "url" : "file:/edi-samples/edi_files/278/X217-admission-response-to-request-for-review.edi",
+      "lastModifiedDateTime" : "2026-11-12T17:01:04.259-05:00"
     },
     "creationDateTime" : "2005-05-02T14:31:00"
   }
-}
-, {
-  "objectType" : "VALIDATION",
-  "issueType" : "INVALID_CODE",
-  "fieldName" : "industry_code",
-  "sourceLocation" : {
-    "fileName" : "X217-admission-response-to-request-for-review.edi",
-    "lineNumber" : 16,
-    "segmentNumber" : 16
-  },
-  "loop" : "2000E-2",
-  "segment" : "HI",
-  "element" : "HI01-2",
-  "codeSubType" : "ICD_9",
-  "value" : "41090",
-  "ediString" : "HI*BF:41090:D8:20050125~",
-  "message" : "ICD-9-CM Diagnosis 41090 is not a valid code"
-}
-, {
-  "objectType" : "VALIDATION",
-  "issueType" : "INVALID_CODE",
-  "issueObjectClass" : "ReviewParty",
-  "fieldName" : "taxonomyCode",
-  "sourceLocation" : {
-    "fileName" : "X217-admission-response-to-request-for-review.edi",
-    "lineNumber" : 27,
-    "segmentNumber" : 27
-  },
-  "loop" : "2010FA",
-  "segment" : "PRV",
-  "element" : "PRV03",
-  "codeSubType" : "PROVIDER_TAXONOMY",
-  "value" : "203BS0133X",
-  "ediString" : "PRV*PE*PXC*203BS0133X~",
-  "message" : "Health Care Provider Taxonomy Code 203BS0133X is not a valid code"
 }
  ]
