@@ -54,6 +54,8 @@
       "subscriber": {
         "payerResponsibilitySequence": "PRIMARY",
         "groupOrPolicyNumber": "2222-SJ",
+        "groupName": "GroupName",
+        "insuranceTypeCode": "12",
         "claimFilingIndicatorCode": "CI",
         "insurancePlanType": "COMMERCIAL",
         "person": {
@@ -220,8 +222,19 @@
           "assignmentCertificationIndicator": "Y",
           "patientSignatureSourceCode": "P",
           "releaseOfInformationCode": "Y",
+          "outpatientAdjudication": {
+            "remarks": [
+              {
+                "type": "CARC_RARC",
+                "subType": "RARC",
+                "code": "N665"
+              }
+            ]
+          },
+          "checkOrRemittanceDate": "2019-03-10",
           "payerPriorAuthorizationNumber": "AB333-Y5",
           "payerReferralNumber": "12345",
+          "payerClaimAdjustmentIndicator": "Y",
           "payerClaimControlNumber": "CLAIM99",
           "payer": {
             "identifier": "OTP",
