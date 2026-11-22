@@ -225,8 +225,6 @@
           "outpatientAdjudication": {
             "remarks": [
               {
-                "type": "CARC_RARC",
-                "subType": "RARC",
                 "code": "N665"
               }
             ]
@@ -354,6 +352,7 @@
       "assumedCareDate": "2005-06-08",
       "relinquishedCareDate": "2005-06-08",
       "repricerReceivedDate": "2005-10-30",
+      "fixedFormatRecords" : [ "ADDITIONAL CLAIM INFORMATION" ],
       "notes": [
         {
           "type": "ADDITIONAL_INFORMATION",
@@ -513,6 +512,14 @@
           "code": "67"
         }
       ],
+      "contractInfo" : {
+        "contractTypeCode" : "02",
+        "amount" : 550.00,
+        "percentage" : 99.90,
+        "contractCode" : "XX",
+        "termDiscountPercentage" : 2.20,
+        "versionIdentifier" : "V5"
+      },
       "attachments": [
         {
           "reportTypeCode": "OZ",
@@ -523,6 +530,23 @@
       "serviceLines": [
         {
           "sourceLineId": "54321",
+          "repricing": {
+            "pricingMethodologyCode": "03",
+            "allowedAmount": 100,
+            "savingsAmount": 10,
+            "repricingOrganizationIdentifier": "RPO12345"
+          },
+          "contractInfo": {
+            "contractTypeCode": "03",
+            "amount": 35.00,
+            "percentage": 87.50,
+            "contractCode": "LINE1",
+            "termDiscountPercentage": 1.50,
+            "versionIdentifier": "V2"
+          },
+          "fixedFormatRecords": [
+            "ADDITIONAL SERVICE LINE INFORMATION"
+          ],
           "placeOfServiceType": "OFFICE",
           "placeOfServiceCode": "11",
           "emergencyIndicator": "Y",
