@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6a41a47da5f0afda93bdad45",
+  "id" : "6b04885592b5026487901f3f",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26462967",
   "chargeAmount" : 100.00,
@@ -177,7 +177,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a41a47da5f0afda93bdacd4",
+    "id" : "6b04885592b5026487901ece",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -222,7 +222,7 @@
   }
 }
 , {
-  "id" : "6a41a47da5f0afda93bdad46",
+  "id" : "6b04885592b5026487901f40",
   "objectType" : "CLAIM",
   "patientControlNumber" : "125WILL",
   "chargeAmount" : 145.50,
@@ -331,7 +331,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a41a47da5f0afda93bdad01",
+    "id" : "6b04885592b5026487901efb",
     "controlNumber" : "3701",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -373,7 +373,7 @@
   }
 }
 , {
-  "id" : "6a41a47da5f0afda93bdad47",
+  "id" : "6b04885592b5026487901f41",
   "objectType" : "CLAIM",
   "patientControlNumber" : "153829140",
   "chargeAmount" : 827.00,
@@ -537,7 +537,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a41a47da5f0afda93bdad22",
+    "id" : "6b04885592b5026487901f1c",
     "controlNumber" : "0001",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",

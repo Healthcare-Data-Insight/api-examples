@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6aaaca95b439338235b48c89",
+  "id" : "6b04885592b50264879021e6",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26463774",
   "chargeAmount" : 100.00,
@@ -75,6 +75,7 @@
       }
     },
     "payerPaidAmount" : 75.00,
+    "paymentDate" : "2012-03-14",
     "payerClaimControlNumber" : "20121092600001",
     "payerAdjudicatedDrg" : "774",
     "payer" : {
@@ -217,7 +218,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6aaaca95b439338235b48c51",
+    "id" : "6b04885592b50264879021ae",
     "controlNumber" : "0021",
     "transactionType" : "INST",
     "hierarchicalStructureCode" : "0019",

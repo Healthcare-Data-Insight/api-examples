@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6a41a47da5f0afda93bdab1d",
+  "id" : "6b04885592b5026487901d16",
   "objectType" : "CLAIM",
   "patientControlNumber" : "051068",
   "chargeAmount" : 766.50,
@@ -313,7 +313,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a41a47da5f0afda93bdaada",
+    "id" : "6b04885592b5026487901cd3",
     "controlNumber" : "000017712",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -327,7 +327,7 @@
     "fileInfo" : {
       "name" : "ambulance.dat",
       "url" : "file:/edi-samples/edi_files/837/ambulance.dat",
-      "lastModifiedDateTime" : "2026-06-27T09:24:51.834-04:00"
+      "lastModifiedDateTime" : "2026-08-24T09:55:04.1-04:00"
     },
     "sender" : {
       "entityRole" : "SUBMITTER",

@@ -1,0 +1,184 @@
+{
+  "interchangeControl" : {
+    "senderIdQualifier" : "ZZ",
+    "senderId" : "123",
+    "receiverIdQualifier" : "ZZ",
+    "receiverId" : "456",
+    "interchangeDate" : "2025-08-09",
+    "interchangeTime" : "10:06",
+    "controlNumber" : 1
+  },
+  "functionalGroup" : {
+    "transactionType" : "INST",
+    "senderCode" : "1",
+    "receiverCode" : "2",
+    "date" : "2025-08-09",
+    "time" : "10:06",
+    "controlNumber" : 1
+  },
+  "transaction" : {
+    "transactionType" : "INST",
+    "originatorApplicationTransactionId" : "tran1",
+    "creationDate" : "2025-08-09",
+    "creationTime" : "10:06",
+    "sender" : {
+      "identifier" : "TGJ23",
+      "lastNameOrOrgName" : "PREMIER BILLING SERVICE",
+      "contacts" : [ {
+        "contactNumbers" : [ {
+          "type" : "EMAIL",
+          "number" : "test@test.com"
+        } ]
+      } ]
+    },
+    "receiver" : {
+      "identifier" : "66783JJT",
+      "lastNameOrOrgName" : "KEY INSURANCE COMPANY"
+    }
+  },
+  "claims" : [ {
+    "patientControlNumber" : "756048Q",
+    "chargeAmount" : 89.93,
+    "facilityCode" : {
+      "code" : "14"
+    },
+    "frequencyCode" : {
+      "code" : "1"
+    },
+    "statementDateFrom" : "2016-09-11",
+    "statementDateTo" : "2016-09-13",
+    "subscriber" : {
+      "claimFilingIndicatorCode" : "MB",
+      "person" : {
+        "identifier" : "030005074A",
+        "lastNameOrOrgName" : "DOE",
+        "firstName" : "JOHN",
+        "middleName" : "T",
+        "birthDate" : "1926-11-11",
+        "gender" : "MALE",
+        "address" : {
+          "line" : "125 CITY AVENUE",
+          "city" : "CENTERVILLE",
+          "stateCode" : "PA",
+          "zipCode" : "17111"
+        }
+      },
+      "payer" : {
+        "identifier" : "00435",
+        "lastNameOrOrgName" : "MEDICARE B",
+        "additionalIds" : [ {
+          "qualifierCode" : "G2",
+          "identification" : "330127"
+        } ]
+      }
+    },
+    "otherSubscribers" : [ {
+      "payerResponsibilitySequence" : "SECONDARY",
+      "relationshipType" : "SPOUSE",
+      "groupOrPolicyNumber" : "351630",
+      "groupName" : "STATE TEACHERS",
+      "claimFilingIndicatorCode" : "CI",
+      "insurancePlanType" : "COMMERCIAL",
+      "person" : {
+        "identifier" : "222004433",
+        "lastNameOrOrgName" : "DOE",
+        "firstName" : "JANE",
+        "middleName" : "S",
+        "address" : {
+          "line" : "125 CITY AVENUE",
+          "city" : "CENTERVILLE",
+          "stateCode" : "PA",
+          "zipCode" : "17111"
+        }
+      },
+      "assignmentCertificationIndicator" : "Y",
+      "releaseOfInformationCode" : "Y",
+      "payer" : {
+        "entityRole" : "PAYER",
+        "entityType" : "BUSINESS",
+        "identificationType" : "PAYOR_ID",
+        "identifier" : "1135",
+        "lastNameOrOrgName" : "STATE TEACHERS"
+      }
+    } ],
+    "assignmentParticipationCode" : "A",
+    "assignmentCertificationIndicator" : "Y",
+    "releaseOfInformationCode" : "Y",
+    "admissionTypeCode" : "3",
+    "patientStatusCode" : "01",
+    "billingProvider" : {
+      "identifier" : "9876540809",
+      "taxId" : "567891234",
+      "lastNameOrOrgName" : "JONES HOSPITAL",
+      "address" : {
+        "line" : "225 MAIN STREET BARKLEY BUILDING",
+        "city" : "CENTERVILLE",
+        "stateCode" : "PA",
+        "zipCode" : "17111"
+      },
+      "providerTaxonomy" : {
+        "code" : "282N00000X"
+      }
+    },
+    "providers" : [ {
+      "entityRole" : "ATTENDING",
+      "entityType" : "INDIVIDUAL",
+      "identifier" : "1122334455",
+      "lastNameOrOrgName" : "JONES",
+      "firstName" : "JOHN",
+      "middleName" : "J",
+      "additionalIds" : [ {
+        "qualifierCode" : "1G",
+        "identification" : "B99937"
+      } ]
+    } ],
+    "diags" : [ {
+      "code" : "H269"
+    }, {
+      "code" : "I10"
+    }, {
+      "code" : "R9431"
+    } ],
+    "occurrences" : [ {
+      "code" : "A1",
+      "occurrenceDate" : "1926-11-11"
+    }, {
+      "code" : "A2",
+      "occurrenceDate" : "1991-11-01"
+    }, {
+      "code" : "B1",
+      "occurrenceDate" : "1926-11-11"
+    }, {
+      "code" : "B2",
+      "occurrenceDate" : "1987-01-01"
+    } ],
+    "valueInfos" : [ {
+      "code" : "A2",
+      "amount" : 15.31
+    } ],
+    "conditions" : [ {
+      "code" : "09"
+    } ],
+    "serviceLines" : [ {
+      "chargeAmount" : 13.39,
+      "serviceDateFrom" : "2016-09-11",
+      "unitCount" : 1,
+      "procedure" : {
+        "code" : "85025"
+      },
+      "revenueCode" : {
+        "code" : "0305"
+      }
+    }, {
+      "chargeAmount" : 76.54,
+      "serviceDateFrom" : "2016-09-11",
+      "unitCount" : 3,
+      "procedure" : {
+        "code" : "93005"
+      },
+      "revenueCode" : {
+        "code" : "0730"
+      }
+    } ]
+  } ]
+}

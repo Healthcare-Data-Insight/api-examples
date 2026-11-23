@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6aaaca95b439338235b48be6",
+  "id" : "6b04885592b5026487901de8",
   "objectType" : "CLAIM",
   "patientControlNumber" : "ABC0002",
   "chargeAmount" : 259.96,
@@ -294,6 +294,8 @@
         "code" : "M23"
       } ]
     },
+    "paymentDate" : "2019-03-10",
+    "payerClaimAdjustmentIndicator" : "Y",
     "payerClaimControlNumber" : "CLAIM014",
     "payer" : {
       "entityRole" : "PAYER",
@@ -388,6 +390,7 @@
   "medicalRecordNumber" : "44444TH56",
   "admissionDateAndHour" : "2019-03-10T14:02:00",
   "dischargeTime" : "13:00:00",
+  "repricerReceivedDate" : "2019-02-15",
   "admissionTypeCode" : "3",
   "admissionSourceCode" : "7",
   "patientStatusCode" : "01",
@@ -856,6 +859,21 @@
     "transmissionType" : "BY_MAIL",
     "controlNumber" : "DMN0012"
   } ],
+  "repricing" : {
+    "pricingMethodologyCode" : "03",
+    "allowedAmount" : 100.00,
+    "savingsAmount" : 10.00,
+    "repricingOrganizationIdentifier" : "36C79119D0004",
+    "perDiemOrFlatRateAmount" : 20.00,
+    "approvedDrgCode" : "011",
+    "approvedDrgAmount" : 225.50,
+    "approvedRevenueCode" : "0120",
+    "unitType" : "DAYS",
+    "approvedServiceUnitCount" : 2.00,
+    "rejectReasonCode" : "T1",
+    "policyComplianceCode" : "4",
+    "exceptionCode" : "1"
+  },
   "serviceLines" : [ {
     "sourceLineId" : "LX0004-1",
     "repricedReferenceNumber" : "Repriced",
@@ -916,6 +934,25 @@
       "transmissionType" : "FILE_TRANSFER",
       "controlNumber" : "DMN0012"
     } ],
+    "repricing" : {
+      "pricingMethodologyCode" : "03",
+      "allowedAmount" : 100.00,
+      "savingsAmount" : 10.00,
+      "repricingOrganizationIdentifier" : "36C79119D0004",
+      "perDiemOrFlatRateAmount" : 20.00,
+      "approvedDrgCode" : "011",
+      "approvedDrgAmount" : 225.50,
+      "approvedProcedure" : {
+        "subType" : "CPT",
+        "code" : "81099",
+        "desc" : "Unlisted urinalysis procedure"
+      },
+      "unitType" : "UNIT",
+      "approvedServiceUnitCount" : 1.00,
+      "rejectReasonCode" : "T1",
+      "policyComplianceCode" : "4",
+      "exceptionCode" : "1"
+    },
     "providers" : [ {
       "entityRole" : "OPERATING",
       "entityType" : "INDIVIDUAL",
@@ -963,6 +1000,23 @@
         "shortDesc" : "UNLISTED URINALYSIS PX",
         "startDate" : "1993-01-01",
         "descFromClaim" : "UNLISTED URINALYSIS PROCEDURE",
+        "modifiers" : [ {
+          "type" : "MODIFIER",
+          "subType" : "HCPCS_MODIFIER",
+          "code" : "01"
+        }, {
+          "type" : "MODIFIER",
+          "subType" : "HCPCS_MODIFIER",
+          "code" : "02"
+        }, {
+          "type" : "MODIFIER",
+          "subType" : "HCPCS_MODIFIER",
+          "code" : "03"
+        }, {
+          "type" : "MODIFIER",
+          "subType" : "HCPCS_MODIFIER",
+          "code" : "04"
+        } ],
         "categories" : [ {
           "type" : "RBCS_TAXONOMY",
           "subType" : "RBCS_CATEGORY",
@@ -1036,16 +1090,6 @@
         "amount" : 82.22,
         "quantity" : 1
       }, {
-        "group" : "PATIENT_RESPONSIBILITY",
-        "reasonCode" : "2",
-        "reason" : {
-          "subType" : "CARC",
-          "code" : "2",
-          "desc" : "Coinsurance Amount"
-        },
-        "amount" : 35.00,
-        "quantity" : 1
-      }, {
         "group" : "PAYOR_INITIATED",
         "reasonCode" : "1",
         "reason" : {
@@ -1054,6 +1098,16 @@
           "desc" : "Deductible Amount"
         },
         "amount" : 6600.00,
+        "quantity" : 1
+      }, {
+        "group" : "PATIENT_RESPONSIBILITY",
+        "reasonCode" : "2",
+        "reason" : {
+          "subType" : "CARC",
+          "code" : "2",
+          "desc" : "Coinsurance Amount"
+        },
+        "amount" : 35.00,
         "quantity" : 1
       } ],
       "adjudicationOrPaymentDate" : "2019-03-10",
@@ -1154,6 +1208,23 @@
         "shortDesc" : "ELECTROCARDIOGRAM TRACING",
         "startDate" : "1993-01-01",
         "descFromClaim" : "ECG ROUTINE ECG W/LEAST 12 LDS TRCG ONLY W/O I&R",
+        "modifiers" : [ {
+          "type" : "MODIFIER",
+          "subType" : "HCPCS_MODIFIER",
+          "code" : "02"
+        }, {
+          "type" : "MODIFIER",
+          "subType" : "HCPCS_MODIFIER",
+          "code" : "05"
+        }, {
+          "type" : "MODIFIER",
+          "subType" : "HCPCS_MODIFIER",
+          "code" : "07"
+        }, {
+          "type" : "MODIFIER",
+          "subType" : "HCPCS_MODIFIER",
+          "code" : "09"
+        } ],
         "categories" : [ {
           "type" : "RBCS_TAXONOMY",
           "subType" : "RBCS_CATEGORY",
@@ -1227,16 +1298,6 @@
         "amount" : 92.22,
         "quantity" : 1
       }, {
-        "group" : "PATIENT_RESPONSIBILITY",
-        "reasonCode" : "2",
-        "reason" : {
-          "subType" : "CARC",
-          "code" : "2",
-          "desc" : "Coinsurance Amount"
-        },
-        "amount" : 65.00,
-        "quantity" : 1
-      }, {
         "group" : "PAYOR_INITIATED",
         "reasonCode" : "1",
         "reason" : {
@@ -1246,13 +1307,23 @@
         },
         "amount" : 3600.00,
         "quantity" : 1
+      }, {
+        "group" : "PATIENT_RESPONSIBILITY",
+        "reasonCode" : "2",
+        "reason" : {
+          "subType" : "CARC",
+          "code" : "2",
+          "desc" : "Coinsurance Amount"
+        },
+        "amount" : 65.00,
+        "quantity" : 1
       } ],
       "adjudicationOrPaymentDate" : "2019-03-10",
       "remainingPatientLiabilityAmount" : 20.00
     } ]
   } ],
   "transaction" : {
-    "id" : "6aaaca95b439338235b48b4c",
+    "id" : "6b04885592b5026487901d4e",
     "controlNumber" : "00000024",
     "transactionType" : "INST",
     "hierarchicalStructureCode" : "0019",
@@ -1266,7 +1337,7 @@
     "fileInfo" : {
       "name" : "837I-all-fields.dat",
       "url" : "file:/edi-samples/edi_files/837/837I-all-fields.dat",
-      "lastModifiedDateTime" : "2026-09-16T12:51:16.684-04:00"
+      "lastModifiedDateTime" : "2026-11-23T11:20:44.04-05:00"
     },
     "sender" : {
       "entityRole" : "SUBMITTER",

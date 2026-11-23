@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6a41a47da5f0afda93bdadd8",
+  "id" : "6b04885592b5026487901fd2",
   "objectType" : "CLAIM",
   "patientControlNumber" : "153829140",
   "chargeAmount" : 1654.00,
@@ -169,7 +169,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a41a47da5f0afda93bdadb0",
+    "id" : "6b04885592b5026487901faa",
     "controlNumber" : "0001",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -183,7 +183,7 @@
     "fileInfo" : {
       "name" : "anesthesia.dat",
       "url" : "file:/edi-samples/edi_files/837/anesthesia.dat",
-      "lastModifiedDateTime" : "2026-06-27T09:24:51.835-04:00"
+      "lastModifiedDateTime" : "2026-08-24T09:55:04.101-04:00"
     },
     "sender" : {
       "entityRole" : "SUBMITTER",

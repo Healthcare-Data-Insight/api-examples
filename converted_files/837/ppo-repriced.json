@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6a41a47da5f0afda93bdae44",
+  "id" : "6b04885592b502648790203e",
   "objectType" : "CLAIM",
   "patientControlNumber" : "ABC123-RI",
   "chargeAmount" : 28.75,
@@ -115,6 +115,12 @@
     "desc" : "Type 2 diabetes mellitus without complications",
     "formattedCode" : "E11.9"
   } ],
+  "repricing" : {
+    "pricingMethodologyCode" : "03",
+    "allowedAmount" : 26.75,
+    "savingsAmount" : 2.00,
+    "repricingOrganizationIdentifier" : "908231234"
+  },
   "serviceLines" : [ {
     "referralNumber" : "V123456",
     "referralNumbers" : [ "V123456" ],
@@ -131,6 +137,12 @@
         "code" : "RR",
         "desc" : "Rental (use the 'rr' modifier when dme is to be rented)"
       } ]
+    },
+    "repricing" : {
+      "pricingMethodologyCode" : "03",
+      "allowedAmount" : 23.75,
+      "savingsAmount" : 1.25,
+      "repricingOrganizationIdentifier" : "908231234"
     },
     "providers" : [ {
       "entityRole" : "REFERRING",
@@ -167,6 +179,12 @@
         "desc" : "New equipment"
       } ]
     },
+    "repricing" : {
+      "pricingMethodologyCode" : "03",
+      "allowedAmount" : 3.00,
+      "savingsAmount" : 0.75,
+      "repricingOrganizationIdentifier" : "908231234"
+    },
     "diagPointers" : [ 1 ],
     "diags" : [ {
       "subType" : "ICD_10_PRINCIPAL",
@@ -176,7 +194,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a41a47da5f0afda93bdae18",
+    "id" : "6b04885592b5026487902012",
     "controlNumber" : "1002",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",

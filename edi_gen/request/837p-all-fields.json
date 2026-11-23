@@ -229,7 +229,7 @@
               }
             ]
           },
-          "checkOrRemittanceDate": "2019-03-10",
+          "paymentDate": "2019-03-10",
           "payerPriorAuthorizationNumber": "AB333-Y5",
           "payerReferralNumber": "12345",
           "payerClaimAdjustmentIndicator": "Y",

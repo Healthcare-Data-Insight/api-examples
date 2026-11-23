@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6a41a47da5f0afda93bdacd1",
+  "id" : "6b04885592b5026487901ecb",
   "objectType" : "CLAIM",
   "patientControlNumber" : "26463774",
   "chargeAmount" : 100.00,
@@ -171,7 +171,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a41a47da5f0afda93bdaca1",
+    "id" : "6b04885592b5026487901e9b",
     "controlNumber" : "0021",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -185,7 +185,7 @@
     "fileInfo" : {
       "name" : "commercial.dat",
       "url" : "file:/edi-samples/edi_files/837/commercial.dat",
-      "lastModifiedDateTime" : "2026-06-27T09:24:51.835-04:00"
+      "lastModifiedDateTime" : "2026-08-24T09:55:04.101-04:00"
     },
     "sender" : {
       "entityRole" : "SUBMITTER",

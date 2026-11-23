@@ -1,6 +1,6 @@
 [
  {
-  "id" : "6a41a47da5f0afda93bdafac",
+  "id" : "6b04885592b50264879021ab",
   "objectType" : "CLAIM",
   "patientControlNumber" : "36463774",
   "chargeAmount" : 100.00,
@@ -21,6 +21,8 @@
   "subscriber" : {
     "payerResponsibilitySequence" : "PRIMARY",
     "groupOrPolicyNumber" : "2222-SJ",
+    "groupName" : "GroupName",
+    "insuranceTypeCode" : "12",
     "claimFilingIndicatorCode" : "CI",
     "insurancePlanType" : "COMMERCIAL",
     "person" : {
@@ -107,24 +109,6 @@
       }
     },
     "adjustments" : [ {
-      "group" : "PATIENT_RESPONSIBILITY",
-      "reasonCode" : "1",
-      "reason" : {
-        "subType" : "CARC",
-        "code" : "1",
-        "desc" : "Deductible Amount"
-      },
-      "amount" : 21.89
-    }, {
-      "group" : "PATIENT_RESPONSIBILITY",
-      "reasonCode" : "2",
-      "reason" : {
-        "subType" : "CARC",
-        "code" : "2",
-        "desc" : "Coinsurance Amount"
-      },
-      "amount" : 15.00
-    }, {
       "group" : "CORRECTION",
       "reasonCode" : "26",
       "reason" : {
@@ -244,6 +228,24 @@
       },
       "amount" : 62.22,
       "quantity" : 1
+    }, {
+      "group" : "PATIENT_RESPONSIBILITY",
+      "reasonCode" : "1",
+      "reason" : {
+        "subType" : "CARC",
+        "code" : "1",
+        "desc" : "Deductible Amount"
+      },
+      "amount" : 21.89
+    }, {
+      "group" : "PATIENT_RESPONSIBILITY",
+      "reasonCode" : "2",
+      "reason" : {
+        "subType" : "CARC",
+        "code" : "2",
+        "desc" : "Coinsurance Amount"
+      },
+      "amount" : 15.00
     } ],
     "payerPaidAmount" : 59.19,
     "nonCoveredAmount" : 273.00,
@@ -251,8 +253,18 @@
     "assignmentCertificationIndicator" : "Y",
     "patientSignatureSourceCode" : "P",
     "releaseOfInformationCode" : "Y",
+    "outpatientAdjudication" : {
+      "remarks" : [ {
+        "type" : "CARC_RARC",
+        "subType" : "RARC",
+        "code" : "N665",
+        "desc" : "Services by an unlicensed provider are not reimbursable."
+      } ]
+    },
+    "paymentDate" : "2019-03-10",
     "payerPriorAuthorizationNumber" : "AB333-Y5",
     "payerReferralNumber" : "12345",
+    "payerClaimAdjustmentIndicator" : "Y",
     "payerClaimControlNumber" : "CLAIM99",
     "payer" : {
       "entityRole" : "PAYER",
@@ -362,6 +374,7 @@
   "assumedCareDate" : "2005-06-08",
   "relinquishedCareDate" : "2005-06-08",
   "repricerReceivedDate" : "2005-10-30",
+  "fixedFormatRecords" : [ "ADDITIONAL CLAIM INFORMATION" ],
   "claimNote" : "SURGERY WAS UNUSUALLY LONG",
   "notes" : [ {
     "qualifierCode" : "ADD",
@@ -528,6 +541,14 @@
     "transmissionType" : "BY_MAIL",
     "controlNumber" : "DMN0012"
   } ],
+  "contractInfo" : {
+    "contractTypeCode" : "02",
+    "amount" : 550.00,
+    "percentage" : 99.90,
+    "contractCode" : "XX",
+    "termDiscountPercentage" : 2.20,
+    "versionIdentifier" : "V5"
+  },
   "serviceLines" : [ {
     "sourceLineId" : "54321",
     "placeOfServiceType" : "OFFICE",
@@ -613,6 +634,20 @@
       "reportTransmissionCode" : "AB",
       "transmissionType" : "PREVIOUSLY_SUBMITTED_TO_PAYER"
     } ],
+    "contractInfo" : {
+      "contractTypeCode" : "03",
+      "amount" : 35.00,
+      "percentage" : 87.50,
+      "contractCode" : "LINE1",
+      "termDiscountPercentage" : 1.50,
+      "versionIdentifier" : "V2"
+    },
+    "repricing" : {
+      "pricingMethodologyCode" : "03",
+      "allowedAmount" : 100.00,
+      "savingsAmount" : 10.00,
+      "repricingOrganizationIdentifier" : "RPO12345"
+    },
     "measurements" : [ {
       "categoryCode" : "TR",
       "qualifierCode" : "R1",
@@ -651,6 +686,7 @@
         "identification" : "12345"
       } ]
     } ],
+    "fixedFormatRecords" : [ "ADDITIONAL SERVICE LINE INFORMATION" ],
     "forms" : [ {
       "formTypeCode" : "UT",
       "formIdentifier" : "02.03B",
@@ -761,24 +797,6 @@
         } ]
       },
       "adjustments" : [ {
-        "group" : "PATIENT_RESPONSIBILITY",
-        "reasonCode" : "1",
-        "reason" : {
-          "subType" : "CARC",
-          "code" : "1",
-          "desc" : "Deductible Amount"
-        },
-        "amount" : 21.89
-      }, {
-        "group" : "PATIENT_RESPONSIBILITY",
-        "reasonCode" : "2",
-        "reason" : {
-          "subType" : "CARC",
-          "code" : "2",
-          "desc" : "Coinsurance Amount"
-        },
-        "amount" : 15.00
-      }, {
         "group" : "CORRECTION",
         "reasonCode" : "26",
         "reason" : {
@@ -797,6 +815,24 @@
           "desc" : "Ingredient cost adjustment. Usage: To be used for pharmaceuticals only."
         },
         "amount" : 65.55
+      }, {
+        "group" : "PATIENT_RESPONSIBILITY",
+        "reasonCode" : "1",
+        "reason" : {
+          "subType" : "CARC",
+          "code" : "1",
+          "desc" : "Deductible Amount"
+        },
+        "amount" : 21.89
+      }, {
+        "group" : "PATIENT_RESPONSIBILITY",
+        "reasonCode" : "2",
+        "reason" : {
+          "subType" : "CARC",
+          "code" : "2",
+          "desc" : "Coinsurance Amount"
+        },
+        "amount" : 15.00
       } ],
       "adjudicationOrPaymentDate" : "2023-06-03",
       "remainingPatientLiabilityAmount" : 75.00
@@ -810,7 +846,7 @@
     } ]
   } ],
   "transaction" : {
-    "id" : "6a41a47da5f0afda93bdaef1",
+    "id" : "6b04885592b50264879020eb",
     "controlNumber" : "0031",
     "transactionType" : "PROF",
     "hierarchicalStructureCode" : "0019",
@@ -824,7 +860,7 @@
     "fileInfo" : {
       "name" : "837P-all-fields.dat",
       "url" : "file:/edi-samples/edi_files/837/837P-all-fields.dat",
-      "lastModifiedDateTime" : "2026-06-27T09:24:51.834-04:00"
+      "lastModifiedDateTime" : "2026-11-22T12:56:18.909-05:00"
     },
     "sender" : {
       "entityRole" : "SUBMITTER",
